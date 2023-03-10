@@ -1,0 +1,69 @@
+.section-wrapper {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fbfbfb;
+    border: #ccc;
+}
+.form-table {
+    width: initial;
+}
+::placeholder {
+    color: #aaaaaa;
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    color: #aaaaaa;
+}
+::-ms-input-placeholder {
+    color: #aaaaaa;
+}
+
+.color-red {
+    color: red;
+}
+
+.astro_be_wrapper h2 {
+    font-size: 2em;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 40px;
+}
+.astro_be_wrapper h3 {
+    font-size: 1.6em;
+}
+.astro_be_wrapper ul {
+    list-style: inherit;
+    margin-left: 2em;
+}
+.astro_be_wrapper ol {
+    list-style: decimal;
+    margin-left: 2em;
+}
+
+.astro_be_wrapper dd,
+.astro_be_wrapper li {
+    margin-bottom: 6px;
+}
+
+
+/*provider*/
+.description {
+    font-weight: normal;
+}
+th .description {
+    margin-top: 20px;
+}
+.provider-fieldset {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+.provider-fieldset-legend {
+    font-weight: bold;
+}
+.provider-fieldset-row {
+    margin-bottom: 10px;
+}
+.provider-fieldset-label  {
+    display: inline-block;
+    min-width: 70px;
+}
