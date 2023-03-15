@@ -46,6 +46,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                                 $options = array(
                                                 '' => '---',
                                                 'iperbooking' => 'Iperbooking',
+                                                'simplebooking' => 'Simple booking',
                                                 'verticalbooking' => 'Vertical booking',
                                                 );
                                 foreach ($options as $k => $v) {
@@ -71,6 +72,9 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         <?php
         // iperbooking
         include('tab-settings-iperbooking.php');
+
+        //simplebooking
+        include('tab-settings-simplebooking.php');
 
         //verticalbooking
         include('tab-settings-verticalbooking.php');

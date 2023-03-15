@@ -205,6 +205,37 @@ jQuery( document ).ready(function( $ ) {
 
         }
 
+        //simplebooking
+        if($('.box.simplebooking').css('display') == 'block') {
+
+            var astro_be_verticalbooking_hid = $('#astro_be_verticalbooking_hid').val();
+            if (astro_be_verticalbooking_hid == '') {
+                $error_msg += '- hid: the field is required.\n';
+            }
+            if ($('#astro_be_simplebooking_childage_enable').is(':checked')) {
+
+                var astro_be_simplebooking_childage_min = $('#astro_be_simplebooking_childage_min').length;
+                var astro_be_simplebooking_childage_max = $('#astro_be_simplebooking_childage_max').length;
+
+                if (astro_be_simplebooking_childage_min && astro_be_simplebooking_childage_max) {
+                    var astro_be_simplebooking_childage_min_value = parseInt( $("#astro_be_simplebooking_childage_min option:selected").val() );
+                    var astro_be_simplebooking_childage_max_value = parseInt( $("#astro_be_simplebooking_childage_max option:selected").val() );
+
+                    if (astro_be_simplebooking_childage_min_value > astro_be_simplebooking_childage_max_value) {
+                        $error_msg += '- children age: min child age value is greater than max value.\n';
+                    }
+                }
+
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Simple booking fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
 
     });
 

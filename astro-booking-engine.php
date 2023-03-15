@@ -20,10 +20,15 @@ if ( !defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Class file inclusions.
+ */
+require_once(dirname(__FILE__) . '/includes/classes/class-astro-plugin-panel.php');
+require_once(dirname(__FILE__) . '/includes/classes/class-astro-booking-engine-widget.php');
+
+/**
  * File inclusions.
  */
 require_once(dirname(__FILE__) . '/astro-booking-engine-common.php');
-require_once(dirname(__FILE__) . '/includes/classes/class-astro-booking-engine-widget.php');
 
 if ( is_admin() ) {
 	require_once(dirname(__FILE__) . '/astro-booking-engine-admin.php');
@@ -49,19 +54,31 @@ function astro_be_load_textdomain() {
 add_action('init', 'astro_be_enqueue_files');
 function astro_be_enqueue_files() {
 
-	//jQuery UI - ref. https://code.jquery.com/ui/
+	// jQuery UI - ref. https://code.jquery.com/ui/
 	wp_enqueue_script('jquery-ui-datepicker', array( 'jquery' ) );
 
-	//UI theme
+	// UI theme
 	$jquery_ui_theme = get_option(ASTRO_BE_PREFIX.'calendar');
 	if (!$jquery_ui_theme) { $jquery_ui_theme = 'base'; }
 	$jquery_ui_theme_url = plugin_dir_url( __FILE__ ) . 'vendors/jquery-ui-themes/themes/'.$jquery_ui_theme.'/jquery-ui.min.css';
 	wp_enqueue_style('jquery-ui-datepicker', $jquery_ui_theme_url);
 
-	//Main enqueue files
-	wp_register_style( 'astro-booking-engine', plugin_dir_url( __FILE__ ) . 'css/astro-booking-engine.css' );
+	$plugin_version = astro_be_plugin_data('Version');
+
+	// Enqueue main files
+	wp_register_style( 'astro-booking-engine', plugin_dir_url( __FILE__ ) . 'css/astro-booking-engine.css', array(), $plugin_version );
 	wp_enqueue_style( 'astro-booking-engine' );
-	wp_enqueue_script( 'astro-booking-engine', plugin_dir_url( __FILE__ ) . 'js/astro-booking-engine.js', array( 'jquery', 'jquery-ui-datepicker' )  );
+	wp_enqueue_script( 'astro-booking-engine', plugin_dir_url( __FILE__ ) . 'js/astro-booking-engine.js', array( 'jquery', 'jquery-ui-datepicker' ), $plugin_version );
+
+	// Enqueue the Provider files
+	$provider = get_option(ASTRO_BE_PREFIX.'provider');
+	if ($provider) {
+		$provider = sanitize_text_field($provider);
+		$provider_js_path_file = plugin_dir_path( __FILE__ ) . 'js/astro-booking-engine-' . $provider . '.js';
+		if (file_exists($provider_js_path_file)) {
+			wp_enqueue_script( 'astro-booking-engine-' . $provider, plugin_dir_url( __FILE__ ) . 'js/astro-booking-engine-'.$provider.'.js', array( 'jquery', 'jquery-ui-datepicker', 'astro-booking-engine' ), $plugin_version );
+		}
+	}
 
 }
 
@@ -73,7 +90,7 @@ function astro_be_add_plugin_page_settings_link( $links ) {
 	array_unshift(
 		$links,
 		'<a href="' .
-		admin_url('options-general.php?page='. ASTRO_BE_TEXTDOMAIN) .
+		admin_url('admin.php?page=' . ASTRO_BE_TEXTDOMAIN ) .
 		'">' . __('Settings', 'astro-booking-engine' ) . '</a>'
 	);
 	return $links;

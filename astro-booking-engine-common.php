@@ -63,6 +63,33 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'iperbooking_codiceSconto_hide_mobile' => ASTRO_BE_PREFIX . 'iperbooking_codiceSconto_hide_mobile', //enable/disable
 				//ASTRO_BE_PREFIX . 'iperbooking_filtroListini' => ASTRO_BE_PREFIX . 'iperbooking_filtroListini', //TODO
 
+				/**
+				 * Simple booking
+				 */
+				ASTRO_BE_PREFIX . 'simplebooking_form_method' => ASTRO_BE_PREFIX . 'simplebooking_form_method', //required
+				ASTRO_BE_PREFIX . 'simplebooking_form_target' => ASTRO_BE_PREFIX . 'simplebooking_form_target', //required
+				ASTRO_BE_PREFIX . 'simplebooking_hid' => ASTRO_BE_PREFIX . 'simplebooking_hid', //required
+				ASTRO_BE_PREFIX . 'simplebooking_currency' => ASTRO_BE_PREFIX . 'simplebooking_currency', //required
+				ASTRO_BE_PREFIX . 'simplebooking_checkin_date_format' => ASTRO_BE_PREFIX . 'simplebooking_checkin_date_format', //required
+				ASTRO_BE_PREFIX . 'simplebooking_checkout_date_format' => ASTRO_BE_PREFIX . 'simplebooking_checkout_date_format', //required
+				ASTRO_BE_PREFIX . 'simplebooking_checkin_checkout_hide_mobile' => ASTRO_BE_PREFIX . 'simplebooking_checkin_checkout_hide_mobile',
+				ASTRO_BE_PREFIX . 'simplebooking_rooms' => ASTRO_BE_PREFIX . 'simplebooking_rooms', //default value = 1
+				ASTRO_BE_PREFIX . 'simplebooking_adults_enable' => ASTRO_BE_PREFIX . 'simplebooking_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'simplebooking_adults_n_default' => ASTRO_BE_PREFIX . 'simplebooking_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'simplebooking_adults_n_max' => ASTRO_BE_PREFIX . 'simplebooking_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'simplebooking_adults_hide_mobile' => ASTRO_BE_PREFIX . 'simplebooking_adults_hide_mobile', //enable/disable
+				ASTRO_BE_PREFIX . 'simplebooking_children_enable' => ASTRO_BE_PREFIX . 'simplebooking_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'simplebooking_children_n_default' => ASTRO_BE_PREFIX . 'simplebooking_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'simplebooking_children_n_max' => ASTRO_BE_PREFIX . 'simplebooking_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'simplebooking_children_hide_mobile' => ASTRO_BE_PREFIX . 'simplebooking_children_hide_mobile', //enable/disable
+				ASTRO_BE_PREFIX . 'simplebooking_childage_enable' => ASTRO_BE_PREFIX . 'simplebooking_childage_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'simplebooking_childage_min' => ASTRO_BE_PREFIX . 'simplebooking_childage_min', //conditional
+				ASTRO_BE_PREFIX . 'simplebooking_childage_max' => ASTRO_BE_PREFIX . 'simplebooking_childage_max', //conditional
+				ASTRO_BE_PREFIX . 'simplebooking_childage_hide_mobile' => ASTRO_BE_PREFIX . 'simplebooking_childage_hide_mobile', //enable/disable
+				ASTRO_BE_PREFIX . 'simplebooking_coupon' => ASTRO_BE_PREFIX . 'simplebooking_coupon',
+				ASTRO_BE_PREFIX . 'simplebooking_coupon_hide_mobile' => ASTRO_BE_PREFIX . 'simplebooking_coupon_hide_mobile', //enable/disable
+				ASTRO_BE_PREFIX . 'simplebooking_submit_label' => ASTRO_BE_PREFIX . 'simplebooking_submit_label', //optional
+
 
 				/**
 				 * Vertical booking
@@ -137,7 +164,7 @@ function astro_be_option_names($tab = false) {
 }
 
 /**
- * Unregister the option names if the plugin will be delete.
+ * Unregister the option names if the plugin will delete.
  */
 register_uninstall_hook(__FILE__, 'astro_be_unregister_option_names');
 function astro_be_unregister_option_names() {
@@ -225,7 +252,7 @@ function astro_be_get_custom_layout() {
 	$arr = array();
 
 	//Widget
-	/*$widget = array();
+	$widget = array();
 	$widget_background_color = get_option(ASTRO_BE_PREFIX.'widget-background-color');
 	if (!empty($widget_background_color)) {
 		$widget[] = 'background-color:'.$widget_background_color;
@@ -236,8 +263,8 @@ function astro_be_get_custom_layout() {
 	}
 	if (!empty($widget)) {
 		$widget = implode(';', $widget);
-		$arr[] = array('class' => '.astro', 'prop' => $widget);
-	}*/
+		$arr[] = array('class' => '.astro_be', 'prop' => $widget);
+	}
 
 	//Label
 	$label = array();
@@ -340,13 +367,12 @@ function astro_be_get_custom_layout() {
 
 	$str = false;
 	if (!empty($arr) || !empty($custom_css)) {
-		$str = '<style>';
+		$str = '<style type="text/css">';
 		foreach ($arr as $item) {
 			$str .= $item['class'].'{'.$item['prop'].';}';
 		}
 		$str .= $custom_css;
 		$str .= '</style>';
-
 	}
 
 	return $str;
@@ -406,4 +432,55 @@ function astro_return_verticalbooking_language() {
 	}
 
 	return $lang;
+}
+
+
+/**
+ * Return the list of currencies.
+ * Generated from https://www.html-code-generator.com/php/array/currency-names
+ */
+function astro_return_currencies() {
+	$currency_list = array(
+		"EUR","USD","AED","AFA","ALL","AMD","ANG","AOA","ARS","AUD","AWG","AZN","BAM","BBD","BDT","BEF","BGN","BHD","BIF","BMD","BND","BOB","BRL","BSD","BTC","BTN","BWP","BYR","BZD",
+		"CAD","CDF","CHF","CLF","CLP","CNY","COP","CRC","CUC","CVE","CZK","DEM","DJF","DKK","DOP","DZD","EEK","EGP","ERN","ETB","FJD","FKP","GBP","GEL","GHS","GIP","GMD","GNF","GRD",
+		"GTQ","GYD","HKD","HNL","HRK","HTG","HUF","IDR","ILS","INR","IQD","IRR","ISK","ITL","JMD","JOD","JPY","KES","KGS","KHR","KMF","KPW","KRW","KWD","KYD","KZT","LAK","LBP","LKR",
+		"LRD","LSL","LTC","LTL","LVL","LYD","MAD","MDL","MGA","MKD","MMK","MNT","MOP","MRO","MUR","MVR","MWK","MXN","MYR","MZM","NAD","NGN","NIO","NOK","NPR","NZD","OMR","PAB","PEN",
+		"PGK","PHP","PKR","PLN","PYG","QAR","RON","RSD","RUB","RWF","SAR","SBD","SCR","SDG","SEK","SGD","SHP","SKK","SLL","SOS","SRD","SSP","STD","SVC","SYP","SZL","THB","TJS","TMT",
+		"TND","TOP","TRY","TTD","TWD","TZS","UAH","UGX","UYU","UZS","VEF","VND","VUV","WST","XAF","XCD","XDR","XOF","XPF","YER","ZAR","ZMK","ZWL"
+	);
+	return $currency_list;
+}
+
+
+function astro_print_checkin_checkout_datepicker_format() {
+	/*
+
+	formats:
+		01 march 2023 -> dd MM yy
+		2023-03-01 -> yy-mm-dd
+		01/03/2023 -> dd/mm/yy
+		03/01/2023 -> mm/dd/yy
+
+	PHP to JS:
+		Y -> yy
+		m -> mm
+		j -> dd
+		F -> MM
+	*/
+
+	/*
+	Combination for select dropdown:
+	j F Y day Month year
+	Y-m-d year-month-day
+	m/d/Y month/day/year
+	d/m/Y day/month/year
+	*/
+
+	$wp_date_format = get_option('date_format');
+	$wp_date_format = str_replace('F', 'MM', $wp_date_format);
+	$wp_date_format = str_replace('j', 'dd', $wp_date_format);
+	$wp_date_format = str_replace('Y', 'yy', $wp_date_format);
+	$wp_date_format = str_replace('m', 'mm', $wp_date_format);
+
+	return $wp_date_format;
 }

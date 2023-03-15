@@ -3,6 +3,7 @@
  * Vertical booking.
  */
 $provider = esc_attr('verticalbooking');
+
 ?>
 <div class="astro_be <?php echo ASTRO_BE_PREFIX . $provider; ?>">
 
@@ -18,12 +19,12 @@ $provider = esc_attr('verticalbooking');
 
 		<input type="hidden" name="lingua_int" value="<?php echo esc_attr( astro_return_verticalbooking_language() ); ?>" />
 
-        <input name="gg" id="gg" value="" type="hidden">
-        <input name="mm" id="mm" value="" type="hidden">
-        <input name="aa" id="aa" value="" type="hidden">
-        <input name="ggf" id="ggf" value="" type="hidden">
-        <input name="mmf" id="mmf" value="" type="hidden">
-        <input name="aaf" id="aaf" value="" type="hidden">
+        <input name="gg" id="gg" class="gg" value="" type="hidden" />
+        <input name="mm" id="mm" class="mm" value="" type="hidden" />
+        <input name="aa" id="aa" class="aa" value="" type="hidden" />
+        <input name="ggf" id="ggf" class="ggf" value="" type="hidden" />
+        <input name="mmf" id="mmf" class="mmf" value="" type="hidden" />
+        <input name="aaf" id="aaf" class="aaf" value="" type="hidden" />
 
 		<!-- <?php echo esc_attr(ASTRO_BE_PREFIX); ?>dates -->
 		<?php
@@ -35,13 +36,14 @@ $provider = esc_attr('verticalbooking');
 			$field_label = __( 'Check-in', 'astro-booking-engine' );
 			$field_name = 'checkin';
 			//$field_date_format = get_option(ASTRO_BE_PREFIX.$provider.'_Arrivo_date_format');
-			$field_date_format = 'dd/mm/yy';
+			$field_date_format = astro_print_checkin_checkout_datepicker_format();
 			?>
 			<!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
 			<div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
 				<div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
 					<label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
-					<input type="text" name="<?php echo esc_attr($field_name); ?>" class="datepicker <?php echo ASTRO_BE_PREFIX . 'input'; ?> <?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>" size="10" data-date-format="<?php echo esc_attr($field_date_format); ?>" readonly />
+					<input type="text" class="datepicker <?php echo ASTRO_BE_PREFIX . 'input'; ?> <?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>" size="10" data-date-format="<?php echo esc_attr($field_date_format); ?>" readonly />
+					<input type="hidden" class="<?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>-js" value="<?php echo date("Y-m-d"); ?>" />
 				</div>
 			</div>
 			<!-- /<?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
@@ -51,13 +53,14 @@ $provider = esc_attr('verticalbooking');
 			$field_label = __( 'Check-out', 'astro-booking-engine' );
 			$field_name = 'checkout'; //provider field name
 			//$field_date_format = get_option(ASTRO_BE_PREFIX.$provider.'_Partenza_date_format');
-			$field_date_format = 'dd/mm/yy';
+			$field_date_format = astro_print_checkin_checkout_datepicker_format();
 			?>
 			<!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
 			<div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
 				<div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
 					<label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
-					<input type="text" name="<?php echo esc_attr($field_name); ?>" class="datepicker <?php echo ASTRO_BE_PREFIX . 'input'; ?> <?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>" size="10" data-date-format="<?php echo esc_attr($field_date_format); ?>" readonly />
+					<input type="text" class="datepicker <?php echo ASTRO_BE_PREFIX . 'input'; ?> <?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>" size="10" data-date-format="<?php echo esc_attr($field_date_format); ?>" readonly />
+                    <input type="hidden" class="<?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>-js" value="<?php echo date("Y-m-d", strtotime("+1 day")); ?>" />
 				</div>
 			</div>
 			<!-- /<?php echo ASTRO_BE_PREFIX.$field_class; ?> -->

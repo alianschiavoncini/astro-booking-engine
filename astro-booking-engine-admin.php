@@ -4,35 +4,6 @@ if( ! is_admin() ) {
 }
 
 /**
- * Add the plugin link to the admin menu.
- */
-add_action( 'admin_menu', 'astro_be_menu' );
-
-/*function my_admin_menu() {
-	add_menu_page(
-		'AstroThemes',
-		'AstroThemes Menu',
-		'manage_options',
-		'astro-booking-engine',
-		'myplguin_admin_page',
-		plugin_dir_url( __FILE__ ) . 'images/astrothemes-icon.png',
-		999
-	);
-}
-
-function myplguin_admin_page(){
-	echo 'Welcome to admin page';
-}
-my_admin_menu();*/
-
-/**
- * Add the config for the admin menu.
- */
-function astro_be_menu() {
-    add_options_page( 'Astro Booking Engine Options', 'Astro Booking Engine', 'manage_options', 'astro-booking-engine', 'astro_be_options' );
-}
-
-/**
  * Load Admin files.
  */
 function astro_be_load_admin_files() {
@@ -138,6 +109,26 @@ function astro_be_register_settings() {
 add_action( 'admin_init', 'astro_be_register_settings' );
 
 /**
+ * Display the plugin pages in menu.
+ */
+if (class_exists('Astro_Plugin_Panel')) {
+
+	add_action('astro_plugin_panel_pages', 'astro_be_plugin_panel_submenu');
+
+	function astro_be_plugin_panel_submenu() {
+		add_submenu_page(
+			'astro-plugin-panel',
+			__('Booking engine', 'astro-booking-engine'),
+			__('Booking engine', 'astro-booking-engine'),
+			'manage_options',
+			'astro-booking-engine',
+			'astro_be_options'
+		);
+	}
+
+}
+
+/**
  * Display the plugin panel to do define the settings.
  */
 function astro_be_options() {
@@ -152,12 +143,19 @@ function astro_be_options() {
 
         $tab  = 'settings'; // default panel
         if (isset($_REQUEST['tab']) && !empty($_REQUEST['tab'])) {
-            $tab  = sanitize_text_field($_REQUEST['tab']);
+			$tab  = sanitize_text_field($_REQUEST['tab']);
+            if (str_contains('-',$tab)) {
+				$tab = explode('-', $tab);
+				$tab = end($tab);
+			}
         }
 
 		astro_be_tabs_nav($tab);
 
-        include( plugin_dir_path( __FILE__ ) . 'includes/tabs/tab-' . $tab .'.php' );
+        $tab_file = plugin_dir_path( __FILE__ ) . 'includes/tabs/tab-' . $tab .'.php';
+        if (file_exists($tab_file)) {
+			include( plugin_dir_path( __FILE__ ) . 'includes/tabs/tab-' . $tab .'.php' );
+		}
 
         ?>
     </div>

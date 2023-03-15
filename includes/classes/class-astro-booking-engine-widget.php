@@ -1,67 +1,77 @@
 <?php
-// Astro Booking Engine Class
-class ASTRO_BE extends WP_Widget {
+/**
+ * AstroThemes Booking Engine Widget Class.
+ *
+ * @class   AstroThemes_BE_Widget
+ */
 
-	// The construct part
-	function __construct() {
-		parent::__construct(
+if (!class_exists('AstroThemes_BE_Widget')) {
 
-		    // Base ID of your widget
-			'astro_be',
+    class AstroThemes_BE_Widget extends WP_Widget {
 
-			// Widget name will appear in UI
-			__( 'Astro Booking Engine', 'astro-booking-engine' ),
+        // The construct part
+        function __construct() {
+            parent::__construct(
 
-			// Widget description
-			array( 'description' => __( 'The Astro Booking Engine plugin displays a user friendly and responsive hotel booking engine form.', 'astro-booking-engine' ), )
-		);
+                // Base ID of your widget
+                'astro_be',
+
+                // Widget name will appear in UI
+                __( 'Astro Booking Engine', 'astro-booking-engine' ),
+
+                // Widget description
+                array( 'description' => __( 'The Astro Booking Engine plugin displays a user friendly and responsive hotel booking engine form.', 'astro-booking-engine' ), )
+            );
+        }
+
+        // Creating widget front-end
+        public function widget( $args, $instance ) {
+            // before and after widget arguments are defined by themes
+            echo $args['before_widget'];
+
+            $title = apply_filters( 'widget_title', $instance['title'] );
+            if (!empty($title)) {
+                echo $args['before_title'] . $title . $args['after_title'];
+            }
+
+            echo do_shortcode('[astro-booking-engine]');
+
+            // This is where you run the code and display the output
+            echo $args['after_widget'];
+
+           return $instance;
+        }
+
+        // Creating widget Backend
+        public function form( $instance ) {
+            if ( isset( $instance[ 'title' ] ) ) {
+                $title = $instance[ 'title' ];
+            }else{
+                $title = __( 'New title', 'astro-booking-engine' );
+            }
+            // Widget admin form
+            ?>
+            <p>
+                <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title', 'astro-booking-engine' ); ?>:</label>
+                <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+            </p>
+            <?php
+        }
+
+        // Updating widget replacing old instances with new
+        public function update( $new_instance, $old_instance ) {
+            $instance = array();
+            $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+            return $instance;
+        }
+
 	}
 
-	// Creating widget front-end
-	public function widget( $args, $instance ) {
-        // before and after widget arguments are defined by themes
-		echo $args['before_widget'];
-
-		$title = apply_filters( 'widget_title', $instance['title'] );
-		if (!empty($title)) {
-			echo $args['before_title'] . $title . $args['after_title'];
-		}
-
-		echo do_shortcode('[astro-booking-engine]');
-
-		// This is where you run the code and display the output
-		echo $args['after_widget'];
-
-       return $instance;
+    // Register and load the widget class
+	function astro_be_registration() {
+		register_widget( 'AstroThemes_BE_Widget' );
 	}
-
-	// Creating widget Backend
-	public function form( $instance ) {
-		if ( isset( $instance[ 'title' ] ) ) {
-			$title = $instance[ 'title' ];
-		}else{
-			$title = __( 'New title', 'astro-booking-engine' );
-		}
-		// Widget admin form
-		?>
-		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title', 'astro-booking-engine' ); ?>:</label>
-			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-		</p>
-        <?php
-	}
-
-	// Updating widget replacing old instances with new
-	public function update( $new_instance, $old_instance ) {
-		$instance = array();
-		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-		return $instance;
-	}
+	add_action( 'widgets_init', 'astro_be_registration' );
 
 }
 
-// Register and load the widget class
-function astro_be_registration() {
-	register_widget( 'ASTRO_BE' );
-}
-add_action( 'widgets_init', 'astro_be_registration' );
