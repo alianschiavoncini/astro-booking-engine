@@ -213,7 +213,7 @@ $provider = esc_attr('iperbooking');
         ?>
 
         <?php
-        $value = __('Send', 'astro-booking-engine' );
+        $value = __('Search', 'astro-booking-engine' );
         $submit_label = get_option(ASTRO_BE_PREFIX.$provider.'_submit_label');
         if (!empty($submit_label)) {
             $value = $submit_label;

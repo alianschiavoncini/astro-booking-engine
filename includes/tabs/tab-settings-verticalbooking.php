@@ -759,10 +759,10 @@ $provider = 'verticalbooking';
 		<?php
 		$field = array(
 			'label' => esc_html__( 'Label', 'astro-booking-engine' ),
-			'description' => __('The default value is Send.', 'astro-booking-engine' ),
+			'description' => __('The default value is Search.', 'astro-booking-engine' ),
 			'name' => ASTRO_BE_PREFIX.$provider.'_submit_label',
 			'value' => get_option(ASTRO_BE_PREFIX.$provider.'_submit_label'),
-			'placeholder' => __('Send', 'astro-booking-engine' ),
+			'placeholder' => __('Search', 'astro-booking-engine' ),
 		);
 		?>
         <tr>
