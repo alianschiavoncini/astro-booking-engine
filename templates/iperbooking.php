@@ -139,7 +139,7 @@ $provider = esc_attr('iperbooking');
                         <label for="<?php echo $field_name; ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
                         <select name="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'select'; ?> <?php echo ASTRO_BE_PREFIX . 'select-' . $field_class; ?>">
                         <?php for ($i = 0; $i <= $children_n_max; $i++) { ?>
-                            <option value="<?php echo $i; ?>" <?php if ($children_n_default == $i) { echo ' selected="selected"'; } ?>><?php echo $i; ?></option>
+                            <option value="<?php echo $i; ?>" <?php if (($children_n_default == $i) && ($children_n_default > 0)) { echo ' selected="selected"'; } ?>><?php echo $i; ?></option>
                         <?php } ?>
                         </select>
                     </div>

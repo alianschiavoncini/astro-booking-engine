@@ -104,7 +104,7 @@ $provider = esc_attr('simplebooking');
                         <label for="<?php echo $field_name; ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
                         <select class="<?php echo ASTRO_BE_PREFIX . 'select'; ?> <?php echo ASTRO_BE_PREFIX . 'select-' . $field_class; ?>" data-no-submit>
                         <?php for ($i = 0; $i <= $children_n_max; $i++) { ?>
-                            <option value="<?php echo $i; ?>" <?php if ($children_n_default == $i) { echo ' selected="selected"'; } ?>><?php echo $i; ?></option>
+                            <option value="<?php echo $i; ?>" <?php if (($children_n_default == $i) && ($children_n_default > 0)) { echo ' selected="selected"'; } ?>><?php echo $i; ?></option>
                         <?php } ?>
                         </select>
                     </div>
@@ -173,6 +173,10 @@ $provider = esc_attr('simplebooking');
             </div>
         </div>
         <!-- /<?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
+        <?php
+        }else{
+        ?>
+            <input type="hidden" name="<?php echo esc_attr($field_name); ?>" value="" />
         <?php
         }
         ?>

@@ -212,6 +212,11 @@ jQuery( document ).ready(function( $ ) {
             if (astro_be_verticalbooking_hid == '') {
                 $error_msg += '- hid: the field is required.\n';
             }
+
+            if ($('#astro_be_simplebooking_children_enable').is(':checked') && !$("#astro_be_simplebooking_childage_enable").is(":checked")) {
+                $error_msg += '- children age: must be enable if the children dropdown is enable.\n';
+            }
+
             if ($('#astro_be_simplebooking_childage_enable').is(':checked')) {
 
                 var astro_be_simplebooking_childage_min = $('#astro_be_simplebooking_childage_min').length;
