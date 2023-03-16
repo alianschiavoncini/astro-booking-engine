@@ -393,6 +393,16 @@ function astro_get_post_language() {
 }
 
 /**
+ * Return the post language.
+ */
+function astro_return_post_language() {
+	$lang = astro_get_post_language();
+	$lang = strtolower($lang);
+
+	return $lang;
+}
+
+/**
  * Vertical booking: return the language.
  */
 function astro_return_verticalbooking_language() {

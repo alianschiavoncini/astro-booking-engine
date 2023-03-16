@@ -13,6 +13,7 @@ $provider = esc_attr('simplebooking');
 
         <input type="hidden" name="hid" value="<?php echo esc_attr( get_option(ASTRO_BE_PREFIX.$provider.'_hid') ); ?>" />
         <input type="hidden" name="cur" value="<?php echo esc_attr( get_option(ASTRO_BE_PREFIX.$provider.'_currency') ); ?>" />
+        <input type="hidden" name="lang" value="<?php echo esc_attr( astro_return_post_language() ); ?>" />
         <input type="hidden" id="astro_be_form<?php echo '_'. $provider; ?>_in" name="in" value="" />
         <input type="hidden" id="astro_be_form<?php echo '_'. $provider; ?>_out" name="out" value="" />
         <input type="hidden" id="astro_be_form<?php echo '_'. $provider; ?>_guests" name="guests" value="A" />
