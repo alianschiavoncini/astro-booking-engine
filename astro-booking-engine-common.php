@@ -200,8 +200,8 @@ function astro_be_shortcode_output() {
 	if (file_exists($template_file)) { // Check if the template file exists.
 		ob_start();
 		include($template_file);
-		$content = astro_be_get_custom_layout();
-		$content .= ob_get_clean();
+		//$content = astro_be_get_custom_layout();
+		$content = ob_get_clean();
 		return $content;
 	}
 }
@@ -367,12 +367,10 @@ function astro_be_get_custom_layout() {
 
 	$str = false;
 	if (!empty($arr) || !empty($custom_css)) {
-		$str = '<style type="text/css">';
 		foreach ($arr as $item) {
 			$str .= $item['class'].'{'.$item['prop'].';}';
 		}
 		$str .= $custom_css;
-		$str .= '</style>';
 	}
 
 	return $str;

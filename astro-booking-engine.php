@@ -70,6 +70,12 @@ function astro_be_enqueue_files() {
 	wp_enqueue_style( 'astro-booking-engine' );
 	wp_enqueue_script( 'astro-booking-engine', plugin_dir_url( __FILE__ ) . 'js/astro-booking-engine.js', array( 'jquery', 'jquery-ui-datepicker' ), $plugin_version );
 
+	// Add custom CSS
+	$custom_css = astro_be_get_custom_layout();
+	if (!empty($custom_css)) {
+		wp_add_inline_style('astro-booking-engine', $custom_css);
+	}
+
 	// Enqueue the Provider files
 	$provider = get_option(ASTRO_BE_PREFIX.'provider');
 	if ($provider) {
