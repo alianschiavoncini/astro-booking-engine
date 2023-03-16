@@ -1,4 +1,4 @@
-.astro {
+.astro_be {
     padding: 10px;
     background-color: #f5f5f5;
     overflow: hidden;
@@ -12,12 +12,12 @@
 .astro_be_column-inner {
     padding: 5px;
 }
-.astro_be_label {
+.astro_be .astro_be_label {
     display: block;
     white-space: nowrap;
 }
-.astro_be_input:not(.astro_be_input-submit_button),
-.astro_be_select {
+.astro_be .astro_be_input:not(.astro_be_input-submit_button),
+.astro_be .astro_be_select {
     padding: 5px;
     border: none;
     border-radius: 0;
@@ -26,7 +26,7 @@
     min-width: 40px;
     cursor: pointer;
 }
-.astro_be_input-submit_button {
+.astro_be .astro_be_input-submit_button {
     padding: 5px 15px;
     border: none;
     border-radius: 0;
@@ -41,7 +41,7 @@
 }
 
 /* Errors */
-.ube-error {
+.astro-error {
     margin: 0 auto;
     padding: 10px;
     border: 3px solid red;
@@ -49,31 +49,31 @@
     background: #ffe8e8; /*light red*/
     color: #000000;
 }
-.ube-error a {
+.astro-error a {
     color: red;
 }
 
 /* Sizes */
-.astro_be_input:not(.astro_be_input-submit_button),
-.astro_be_select {
+.astro_be .astro_be_input:not(.astro_be_input-submit_button),
+.astro_be .astro_be_select {
     width: -webkit-fill-available;
 }
-.astro_be_input-checkin,
-.astro_be_input-checkout {
+.astro_be .astro_be_input-checkin,
+.astro_be .astro_be_input-checkout {
     width: 10ch;
 }
 
 /* Media queries */
 @media only screen and (max-width: 767px) {
-    .astro_be_hide_mobile {
+    .astro_be .astro_be_hide_mobile {
         display: none !important;
     }
 }
 @media only screen and (min-width: 768px) {
-    .astro_be_form,
-    .astro_be_dates,
-    .astro_be_occupancy,
-    .astro_be_submit_button {
+    .astro_be .astro_be_form,
+    .astro_be .astro_be_dates,
+    .astro_be .astro_be_occupancy,
+    .astro_be .astro_be_submit_button {
         display: flex;
         justify-content: center;
     }

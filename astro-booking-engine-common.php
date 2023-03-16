@@ -282,7 +282,7 @@ function astro_be_get_custom_layout() {
 	}
 	if (!empty($label)) {
 		$label = implode(';', $label);
-		$arr[] = array('class' => '.astro_be_label', 'prop' => $label);
+		$arr[] = array('class' => '.astro_be .astro_be_label', 'prop' => $label);
 	}
 
 	//Field
@@ -321,7 +321,7 @@ function astro_be_get_custom_layout() {
 	}
 	if (!empty($field)) {
 		$field = implode(';', $field);
-		$arr[] = array('class' => '.astro_be_input:not(.astro_be_input-submit_button),.astro_be_select', 'prop' => $field);
+		$arr[] = array('class' => '.astro_be .astro_be_input:not(.astro_be_input-submit_button),.astro_be_select', 'prop' => $field);
 	}
 
 	//Submit
@@ -360,7 +360,7 @@ function astro_be_get_custom_layout() {
 	}
 	if (!empty($submit)) {
 		$submit = implode(';', $submit);
-		$arr[] = array('class' => '.astro_be_input-submit_button', 'prop' => $submit);
+		$arr[] = array('class' => '.astro_be .astro_be_input-submit_button', 'prop' => $submit);
 	}
 
 	$custom_css = get_option(ASTRO_BE_PREFIX.'custom-css');
