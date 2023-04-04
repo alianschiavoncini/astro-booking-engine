@@ -31,12 +31,10 @@ function astro_be_option_names($tab = false) {
 				/**
 				 * Iperbooking
 				 */
-				ASTRO_BE_PREFIX . 'iperbooking_form_method' => ASTRO_BE_PREFIX . 'iperbooking_form_method',
+				ASTRO_BE_PREFIX . 'iperbooking_form_method' => esc_attr('get'),
 				ASTRO_BE_PREFIX . 'iperbooking_form_target' => ASTRO_BE_PREFIX . 'iperbooking_form_target',
-				ASTRO_BE_PREFIX . 'iperbooking_checkin_date_format' => ASTRO_BE_PREFIX . 'iperbooking_checkin_date_format', //required
-				ASTRO_BE_PREFIX . 'iperbooking_checkout_date_format' => ASTRO_BE_PREFIX . 'iperbooking_checkout_date_format', //required
 				ASTRO_BE_PREFIX . 'iperbooking_checkin_checkout_hide_mobile' => ASTRO_BE_PREFIX . 'iperbooking_checkin_checkout_hide_mobile',
-				ASTRO_BE_PREFIX . 'iperbooking_rooms' => ASTRO_BE_PREFIX . 'iperbooking_rooms', //required >= 1; default value = 1
+				ASTRO_BE_PREFIX . 'iperbooking_rooms' => esc_attr('1'), //required >= 1; default value = 1
 				ASTRO_BE_PREFIX . 'iperbooking_adults_enable' => ASTRO_BE_PREFIX . 'iperbooking_adults_enable', //enable/disable
 				ASTRO_BE_PREFIX . 'iperbooking_adults_n_default' => ASTRO_BE_PREFIX . 'iperbooking_adults_n_default', //required >= 1
 				ASTRO_BE_PREFIX . 'iperbooking_adults_n_max' => ASTRO_BE_PREFIX . 'iperbooking_adults_n_max', //required >= 1
@@ -70,8 +68,6 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'simplebooking_form_target' => ASTRO_BE_PREFIX . 'simplebooking_form_target', //required
 				ASTRO_BE_PREFIX . 'simplebooking_hid' => ASTRO_BE_PREFIX . 'simplebooking_hid', //required
 				ASTRO_BE_PREFIX . 'simplebooking_currency' => ASTRO_BE_PREFIX . 'simplebooking_currency', //required
-				ASTRO_BE_PREFIX . 'simplebooking_checkin_date_format' => ASTRO_BE_PREFIX . 'simplebooking_checkin_date_format', //required
-				ASTRO_BE_PREFIX . 'simplebooking_checkout_date_format' => ASTRO_BE_PREFIX . 'simplebooking_checkout_date_format', //required
 				ASTRO_BE_PREFIX . 'simplebooking_checkin_checkout_hide_mobile' => ASTRO_BE_PREFIX . 'simplebooking_checkin_checkout_hide_mobile',
 				ASTRO_BE_PREFIX . 'simplebooking_rooms' => ASTRO_BE_PREFIX . 'simplebooking_rooms', //default value = 1
 				ASTRO_BE_PREFIX . 'simplebooking_adults_enable' => ASTRO_BE_PREFIX . 'simplebooking_adults_enable', //enable/disable
@@ -106,8 +102,6 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'verticalbooking_mmf' => ASTRO_BE_PREFIX . 'verticalbooking_mmf', //required
 				ASTRO_BE_PREFIX . 'verticalbooking_aaf' => ASTRO_BE_PREFIX . 'verticalbooking_aaf', //required
 
-				//ASTRO_BE_PREFIX . 'verticalbooking_checkin_date_format' => ASTRO_BE_PREFIX . 'verticalbooking_checkin_date_format', //required
-				//ASTRO_BE_PREFIX . 'verticalbooking_checkout_date_format' => ASTRO_BE_PREFIX . 'verticalbooking_checkout_date_format', //required
 				ASTRO_BE_PREFIX . 'verticalbooking_checkin_checkout_hide_mobile' => ASTRO_BE_PREFIX . 'verticalbooking_checkin_checkout_hide_mobile',
 				ASTRO_BE_PREFIX . 'verticalbooking_rooms' => ASTRO_BE_PREFIX . 'verticalbooking_rooms', //default value = 1
 				ASTRO_BE_PREFIX . 'verticalbooking_adults_enable' => ASTRO_BE_PREFIX . 'verticalbooking_adults_enable', //enable/disable

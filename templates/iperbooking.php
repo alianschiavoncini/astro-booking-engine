@@ -12,6 +12,8 @@ $provider = esc_attr('iperbooking');
           target="<?php echo esc_attr( get_option(ASTRO_BE_PREFIX.$provider.'_form_target') ); ?>">
 
         <input type="hidden" name="idHotel" value="<?php echo esc_attr( get_option(ASTRO_BE_PREFIX.$provider.'_idHotel') ); ?>" />
+        <input type="hidden" id="astro_be_form<?php echo '_'. $provider; ?>_checkin" name="Arrivo" value="" />
+        <input type="hidden" id="astro_be_form<?php echo '_'. $provider; ?>_checkout" name="Partenza" value="" />
         <input type="hidden" name="numeroCamere" value="1" />
 
         <!-- <?php echo esc_attr(ASTRO_BE_PREFIX); ?>dates -->
@@ -23,14 +25,13 @@ $provider = esc_attr('iperbooking');
             $field_class = esc_attr('checkin');
             $field_label = __( 'Check-in', 'astro-booking-engine' );
             $field_name = 'Arrivo'; //provider field name
-            //$field_date_format = get_option(ASTRO_BE_PREFIX.$provider.'_checkin_date_format');
 			$field_date_format = astro_print_checkin_checkout_datepicker_format();
             ?>
             <!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
             <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                 <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
                     <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
-                    <input type="text" name="<?php echo esc_attr($field_name); ?>" class="datepicker <?php echo ASTRO_BE_PREFIX . 'input'; ?> <?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>" size="10" data-date-format="<?php echo esc_attr($field_date_format); ?>" readonly />
+                    <input type="text" class="datepicker <?php echo ASTRO_BE_PREFIX . 'input'; ?> <?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>" size="10" data-date-format="<?php echo esc_attr($field_date_format); ?>"  readonly data-no-submit />
                     <input type="hidden" class="<?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>-js" value="<?php echo date("Y-m-d"); ?>" />
                 </div>
             </div>
@@ -40,14 +41,13 @@ $provider = esc_attr('iperbooking');
             $field_class = esc_attr('checkout');
             $field_label = __( 'Check-out', 'astro-booking-engine' );
             $field_name = 'Partenza'; //provider field name
-            //$field_date_format = get_option(ASTRO_BE_PREFIX.$provider.'_checkout_date_format');
 			$field_date_format = astro_print_checkin_checkout_datepicker_format();
             ?>
             <!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
             <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                 <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
                     <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
-                    <input type="text" name="<?php echo esc_attr($field_name); ?>" class="datepicker <?php echo ASTRO_BE_PREFIX . 'input'; ?> <?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>" size="10" data-date-format="<?php echo esc_attr($field_date_format); ?>" readonly />
+                    <input type="text" class="datepicker <?php echo ASTRO_BE_PREFIX . 'input'; ?> <?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>" size="10" data-date-format="<?php echo esc_attr($field_date_format); ?>"  readonly data-no-submit />
                     <input type="hidden" class="<?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>-js" value="<?php echo date("Y-m-d", strtotime("+1 day")); ?>" />
                 </div>
             </div>
