@@ -35,7 +35,6 @@ $provider = esc_attr('verticalbooking');
 			$field_class = esc_attr('checkin');
 			$field_label = __( 'Check-in', 'astro-booking-engine' );
 			$field_name = 'checkin';
-			//$field_date_format = get_option(ASTRO_BE_PREFIX.$provider.'_Arrivo_date_format');
 			$field_date_format = astro_print_checkin_checkout_datepicker_format();
 			?>
 			<!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
@@ -52,7 +51,6 @@ $provider = esc_attr('verticalbooking');
 			$field_class = esc_attr('checkout');
 			$field_label = __( 'Check-out', 'astro-booking-engine' );
 			$field_name = 'checkout'; //provider field name
-			//$field_date_format = get_option(ASTRO_BE_PREFIX.$provider.'_Partenza_date_format');
 			$field_date_format = astro_print_checkin_checkout_datepicker_format();
 			?>
 			<!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->

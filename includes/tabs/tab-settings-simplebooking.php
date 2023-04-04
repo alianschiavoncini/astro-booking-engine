@@ -71,35 +71,6 @@ $provider = 'simplebooking';
         <table class="form-table">
 			<?php
 			$field = array(
-				'label' => esc_html__( 'Method', 'astro-booking-engine' ),
-				'description' => esc_html__( 'not editable; this is the value requested by the provider.', 'astro-booking-engine' ),
-				'name' => ASTRO_BE_PREFIX.$provider.'_form_method',
-				'fixed_value' => esc_attr('get'),
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_form_method'),
-				'placeholder' => esc_attr('get'),
-				'readonly' => true,
-			);
-			?>
-            <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
-                <td>
-                    <input type="text"
-                           id="<?php echo esc_attr($field['name']); ?>"
-                           class="regular-text"
-                           name="<?php echo esc_attr($field['name']); ?>"
-                           placeholder="<?php echo $field['placeholder']; ?>"
-                           value="<?php if ($field['fixed_value']) { echo $field['fixed_value']; }else{ echo $field['value']; } ?>"
-						<?php if ($field['readonly']) { echo " readonly"; } ?>
-                    />
-					<?php if ($field['description']) { ?><p class="description"><?php echo $field['description']; ?></p><?php }?>
-					<?php if ($field['readonly']) { ?>
-                        <input type="hidden" name="<?php echo esc_attr($field['name']); ?>" value="<?php echo $field['fixed_value']; ?>" />
-					<?php } ?>
-                </td>
-            </tr>
-
-			<?php
-			$field = array(
 				'label' => esc_html__( 'Target', 'astro-booking-engine' ),
 				'description' => false,
 				'name' => ASTRO_BE_PREFIX.$provider.'_form_target',
@@ -139,64 +110,6 @@ $provider = 'simplebooking';
         <!-- dates -->
         <h3 id="dates"><?php _e( 'Check-in and Check-out', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
-			<?php
-			$field = array(
-				'label' => esc_html__( 'Check-in date format', 'astro-booking-engine' ),
-				'description' => 'not editable; this is the only value accepted by the provider.',
-				'name' => ASTRO_BE_PREFIX.$provider.'_checkin_date_format',
-				'fixed_value' => esc_attr('dd/mm/yy'),
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_checkin_date_format'),
-				'placeholder' => esc_attr('dd/mm/yy'),
-				'readonly' => true,
-			);
-			?>
-            <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
-                <td>
-                    <input type="text"
-                           id="<?php echo esc_attr($field['name']); ?>"
-                           class="regular-text"
-                           name="<?php echo esc_attr($field['name']); ?>"
-                           placeholder="<?php echo $field['placeholder']; ?>"
-                           value="<?php if ($field['fixed_value']) { echo $field['fixed_value']; }else{ echo $field['value']; } ?>"
-						<?php if ($field['readonly']) { echo " readonly"; } ?>
-                    />
-					<?php if ($field['description']) { ?><p class="description"><?php echo $field['description']; ?></p><?php }?>
-					<?php if ($field['readonly']) { ?>
-                        <input type="hidden" name="<?php echo esc_attr($field['name']); ?>" value="<?php echo $field['fixed_value']; ?>" />
-					<?php } ?>
-                </td>
-            </tr>
-
-			<?php
-			$field = array(
-				'label' => esc_html__( 'Check-out date format', 'astro-booking-engine' ),
-				'description' => 'not editable; this is the only value accepted by the provider.',
-				'name' => ASTRO_BE_PREFIX.$provider.'_checkout_date_format',
-				'fixed_value' => esc_attr('dd/mm/yy'),
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_checkout_date_format'),
-				'placeholder' => esc_attr('dd/mm/yy'),
-				'readonly' => true,
-			);
-			?>
-            <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
-                <td>
-                    <input type="text"
-                           id="<?php echo esc_attr($field['name']); ?>"
-                           class="regular-text"
-                           name="<?php echo esc_attr($field['name']); ?>"
-                           placeholder="<?php echo $field['placeholder']; ?>"
-                           value="<?php if ($field['fixed_value']) { echo $field['fixed_value']; }else{ echo $field['value']; } ?>"
-						<?php if ($field['readonly']) { echo " readonly"; } ?>
-                    />
-					<?php if ($field['description']) { ?><p class="description"><?php echo $field['description']; ?></p><?php }?>
-					<?php if ($field['readonly']) { ?>
-                        <input type="hidden" name="<?php echo esc_attr($field['name']); ?>" value="<?php echo $field['fixed_value']; ?>" />
-					<?php } ?>
-                </td>
-            </tr>
-
 			<?php
 			$field_label = esc_html__( 'Hide in mobile view', 'astro-booking-engine' );
 			$field_description = false;

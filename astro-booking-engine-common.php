@@ -64,7 +64,7 @@ function astro_be_option_names($tab = false) {
 				/**
 				 * Simple booking
 				 */
-				ASTRO_BE_PREFIX . 'simplebooking_form_method' => ASTRO_BE_PREFIX . 'simplebooking_form_method', //required
+				ASTRO_BE_PREFIX . 'simplebooking_form_method' => esc_attr('get'), //required
 				ASTRO_BE_PREFIX . 'simplebooking_form_target' => ASTRO_BE_PREFIX . 'simplebooking_form_target', //required
 				ASTRO_BE_PREFIX . 'simplebooking_hid' => ASTRO_BE_PREFIX . 'simplebooking_hid', //required
 				ASTRO_BE_PREFIX . 'simplebooking_currency' => ASTRO_BE_PREFIX . 'simplebooking_currency', //required
@@ -90,20 +90,13 @@ function astro_be_option_names($tab = false) {
 				/**
 				 * Vertical booking
 				 */
-				ASTRO_BE_PREFIX . 'verticalbooking_form_method' => ASTRO_BE_PREFIX . 'verticalbooking_form_method', //required
+				ASTRO_BE_PREFIX . 'verticalbooking_form_method' => esc_attr('get'), //required
 				ASTRO_BE_PREFIX . 'verticalbooking_form_target' => ASTRO_BE_PREFIX . 'verticalbooking_form_target', //required
 				ASTRO_BE_PREFIX . 'verticalbooking_id_albergo' => ASTRO_BE_PREFIX . 'verticalbooking_id_albergo', //required
 				ASTRO_BE_PREFIX . 'verticalbooking_dc' => ASTRO_BE_PREFIX . 'verticalbooking_dc', //required
 				ASTRO_BE_PREFIX . 'verticalbooking_id_stile' => ASTRO_BE_PREFIX . 'verticalbooking_id_stile',
-				ASTRO_BE_PREFIX . 'verticalbooking_gg' => ASTRO_BE_PREFIX . 'verticalbooking_gg', //required
-				ASTRO_BE_PREFIX . 'verticalbooking_mm' => ASTRO_BE_PREFIX . 'verticalbooking_mm', //required
-				ASTRO_BE_PREFIX . 'verticalbooking_aa' => ASTRO_BE_PREFIX . 'verticalbooking_aa', //required
-				ASTRO_BE_PREFIX . 'verticalbooking_ggf' => ASTRO_BE_PREFIX . 'verticalbooking_ggf', //required
-				ASTRO_BE_PREFIX . 'verticalbooking_mmf' => ASTRO_BE_PREFIX . 'verticalbooking_mmf', //required
-				ASTRO_BE_PREFIX . 'verticalbooking_aaf' => ASTRO_BE_PREFIX . 'verticalbooking_aaf', //required
 
 				ASTRO_BE_PREFIX . 'verticalbooking_checkin_checkout_hide_mobile' => ASTRO_BE_PREFIX . 'verticalbooking_checkin_checkout_hide_mobile',
-				ASTRO_BE_PREFIX . 'verticalbooking_rooms' => ASTRO_BE_PREFIX . 'verticalbooking_rooms', //default value = 1
 				ASTRO_BE_PREFIX . 'verticalbooking_adults_enable' => ASTRO_BE_PREFIX . 'verticalbooking_adults_enable', //enable/disable
 				ASTRO_BE_PREFIX . 'verticalbooking_adults_n_default' => ASTRO_BE_PREFIX . 'verticalbooking_adults_n_default', //required >= 1
 				ASTRO_BE_PREFIX . 'verticalbooking_adults_n_max' => ASTRO_BE_PREFIX . 'verticalbooking_adults_n_max', //required >= 1
