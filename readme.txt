@@ -1,23 +1,24 @@
 === Astro Booking Engine ===
 Contributors: alian
-Tags: booking engine, hotel booking, hotel widget, booking widget, reservation widget, hotel booking engine, iperbooking
+Tags: booking engine, hotel booking, hotel widget, booking widget, reservation widget, hotel booking engine, iperbooking, simple booking, vertical booking
 Requires at least: 6.0.1
-Tested up to: 6.1.1
+Tested up to: 6.2
 Stable tag:	1.0.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-Display the booking engine form of your favorite provider.
-The form is configurable for the following providers:
-- Iperbooking: https://www.iperbooking.com
+The plugin allows you to display the booking form through the use of the shortcode [astro-booking-engine] or through the use of the widget.
+It is necessary to have a contract with one of the booking engine providers and to have configured its parameters to use this plugin.
+List of configurable booking engine providers:
+- Iperbooking
+- Simple booking
+- Vertical booking
 
-The shortcode [astro-booking-engine] must be used to display the Astro Booking Engine.
+If your booking engine provider is not in the list, you can request its inclusion by sending a request to info@astrothemes.com with technical specifications if you have.
 
-Astro Booking Engine is compatible with WPML language plugin.
-
-IMPORTANT: it is mandatory to have the provider data settings and the provider contract must be active in order to use the Astro Booking Engine.
+The plugin is compatible with translation plugins such as WPML.
 
 == Installation ==
 1. Upload the entire `astro-booking-engine` folder to the `/wp-content/plugins/` directory.

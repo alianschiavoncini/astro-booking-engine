@@ -449,8 +449,7 @@ function astro_return_currencies() {
 
 function astro_print_checkin_checkout_datepicker_format() {
 	/*
-
-	formats:
+	Formats:
 		01 march 2023 -> dd MM yy
 		2023-03-01 -> yy-mm-dd
 		01/03/2023 -> dd/mm/yy
@@ -461,14 +460,12 @@ function astro_print_checkin_checkout_datepicker_format() {
 		m -> mm
 		j -> dd
 		F -> MM
-	*/
 
-	/*
 	Combination for select dropdown:
-	j F Y day Month year
-	Y-m-d year-month-day
-	m/d/Y month/day/year
-	d/m/Y day/month/year
+			j F Y day Month year
+			Y-m-d year-month-day
+			m/d/Y month/day/year
+			d/m/Y day/month/year
 	*/
 
 	$wp_date_format = get_option('date_format');

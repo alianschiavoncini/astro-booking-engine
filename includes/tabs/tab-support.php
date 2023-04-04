@@ -31,13 +31,13 @@ do_settings_sections($option_group);
             <ol>
                 <li><?php _e( 'Get data settings from your booking engine provider; if you don\'t have one, you need to adopt one', 'astro-booking-engine' ); ?> (<a href="#support-providers-list"><?php _e( 'see the list of currently available providers', 'astro-booking-engine' ); ?></a>)</li>
                 <li><?php _e( 'Select the provider name and configure its settings', 'astro-booking-engine' ); ?></li>
-                <li><?php _e( 'Configure module layout (optional)', 'astro-booking-engine' ); ?></li>
+                <li><?php _e( 'Configure the booking form layout (optional)', 'astro-booking-engine' ); ?></li>
                 <li><?php _e( 'Use the [astro-booking-engine] shortcode in your post/page content or add the Astro Booking Engine in the widget area.', 'astro-booking-engine' ); ?></li>
             </ol>
             <p><strong><?php _e( 'IMPORTANT', 'astro-booking-engine' ); ?></strong>:
 				<?php _e( 'it is mandatory to have the provider data settings and the provider contract must be active in order to use the Astro Booking Engine.', 'astro-booking-engine' ); ?><br>
-				<?php _e( 'The provider will send you the useful settings to configure the Astro Booking Engine.', 'astro-booking-engine' ); ?><br>
-				<?php _e( 'Only after configuring the Astro Booking Engine with the provider\'s data, you can you start to use the booking form on your site.', 'astro-booking-engine' ); ?></p>
+				<?php _e( 'The booking engine provider can send you the useful settings to configure the Astro Booking Engine; we are not a booking engine provider.', 'astro-booking-engine' ); ?><br>
+				<?php _e( 'Only after configuring the Astro Booking Engine with the provider\'s data, you can you start to use the booking form on your website.', 'astro-booking-engine' ); ?></p>
 
             <hr />
 

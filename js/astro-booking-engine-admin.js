@@ -8,19 +8,11 @@ jQuery( document ).ready(function( $ ) {
 
     // Show/hide the provider panel
     $("#astro_be_provider").change(function(){
-
-        /*$("form.astro_be_settings_form").removeClass (function (index, className) {
-            return (className.match (/(^|\s)astro_be_settings_form_\S+/g) || []).join(' ');
-        });*/
-
         $(this).find("option:selected").each(function(){
             var optionValue = $(this).attr("value");
             if(optionValue){
                 $(".box").not("." + optionValue).hide();
                 $("." + optionValue).show();
-
-                /*console.log(optionValue);
-                $("form.astro_be_settings_form").addClass("astro_be_settings_form_" + optionValue);*/
             }else{
                 $(".box").hide();
             }

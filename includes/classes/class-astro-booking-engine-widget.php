@@ -20,7 +20,7 @@ if (!class_exists('AstroThemes_BE_Widget')) {
                 __( 'Astro Booking Engine', 'astro-booking-engine' ),
 
                 // Widget description
-                array( 'description' => __( 'The Astro Booking Engine plugin displays a user friendly and responsive hotel booking engine form.', 'astro-booking-engine' ), )
+                array( 'description' => __( 'The Astro Booking Engine plugin displays a user friendly and responsive booking engine form.', 'astro-booking-engine' ), )
             );
         }
 
