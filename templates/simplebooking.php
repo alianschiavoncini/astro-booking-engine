@@ -19,10 +19,7 @@ $provider = esc_attr('simplebooking');
         <input type="hidden" id="astro_be_form<?php echo '_'. $provider; ?>_guests" name="guests" value="A" />
 
         <!-- <?php echo esc_attr(ASTRO_BE_PREFIX); ?>dates -->
-        <?php
-		$dates_hide_mobile = get_option(ASTRO_BE_PREFIX.$provider.'_checkin_checkout_hide_mobile');
-        ?>
-        <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . 'dates'; ?> <?php if ($dates_hide_mobile > 0) { echo ASTRO_BE_PREFIX . 'hide_mobile'; } ?>">
+        <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . 'dates'; ?>">
             <?php
             $field_class = esc_attr('checkin');
             $field_label = __( 'Check-in', 'astro-booking-engine' );
@@ -70,10 +67,9 @@ $provider = esc_attr('simplebooking');
             $field_label = __( 'Adults', 'astro-booking-engine' );
             $field_name = 'adults'; //provider field name
             if ($adults_enable) {
-				$adults_hide_mobile = get_option(ASTRO_BE_PREFIX.$provider.'_adults_hide_mobile');
             ?>
                 <!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
-                <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?> <?php if ($adults_hide_mobile > 0) { echo ASTRO_BE_PREFIX . 'hide_mobile'; } ?>">
+                <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                     <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
                         <label for="<?php echo $field_name; ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
                         <select class="<?php echo ASTRO_BE_PREFIX . 'select'; ?> <?php echo ASTRO_BE_PREFIX . 'select-' . $field_class; ?>" data-no-submit>
@@ -97,10 +93,9 @@ $provider = esc_attr('simplebooking');
             $field_label = __( 'Children', 'astro-booking-engine' );
             $field_name = 'children'; //provider field name
             if ($children_enable) {
-				$children_hide_mobile = get_option(ASTRO_BE_PREFIX.$provider.'_children_hide_mobile');
             ?>
                 <!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
-                <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?> <?php if ($children_hide_mobile > 0) { echo ASTRO_BE_PREFIX . 'hide_mobile'; } ?>">
+                <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                     <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
                         <label for="<?php echo $field_name; ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
                         <select class="<?php echo ASTRO_BE_PREFIX . 'select'; ?> <?php echo ASTRO_BE_PREFIX . 'select-' . $field_class; ?>" data-no-submit>
@@ -128,11 +123,9 @@ $provider = esc_attr('simplebooking');
         $field_name = 'childage'; //provider field name
 
         if ($childage_enable) {
-
-			$childage_hide_mobile = get_option(ASTRO_BE_PREFIX.$provider.'_childage_hide_mobile');
             ?>
             <!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
-            <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . $field_class; ?> <?php if ($childage_hide_mobile > 0) { echo ASTRO_BE_PREFIX . 'hide_mobile'; } ?>">
+            <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . $field_class; ?>">
                 <?php
                 for ($x = 1; $x <= $children_n_max; $x++) {
                     ?>
@@ -161,11 +154,9 @@ $provider = esc_attr('simplebooking');
             $field_class = esc_attr('coupon');
             $field_label = __( 'Coupon', 'astro-booking-engine' );
             $field_name = 'coupon'; //provider field name
-
-			$coupon_code_hide_mobile = get_option(ASTRO_BE_PREFIX.$provider.'_coupon_hide_mobile');
         ?>
         <!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
-        <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . $field_class; ?> <?php if ($coupon_code_hide_mobile > 0) { echo ASTRO_BE_PREFIX . 'hide_mobile'; } ?>">
+        <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . $field_class; ?>">
             <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                 <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
                     <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>

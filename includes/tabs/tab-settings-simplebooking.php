@@ -107,33 +107,6 @@ $provider = 'simplebooking';
 
         <hr />
 
-        <!-- dates -->
-        <h3 id="dates"><?php _e( 'Check-in and Check-out', 'astro-booking-engine' ); ?></h3>
-        <table class="form-table">
-			<?php
-			$field_label = esc_html__( 'Hide in mobile view', 'astro-booking-engine' );
-			$field_description = false;
-			$field_name = ASTRO_BE_PREFIX.$provider.'_checkin_checkout_hide_mobile';
-			$field_value = get_option($field_name);
-			?>
-            <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo $field_label; ?></label></th>
-                <td>
-                    <fieldset>
-                        <legend class="screen-reader-text"><span><?php echo $field_label; ?></span></legend>
-                        <label for="<?php echo esc_attr($field_name); ?>"><input id="<?php echo esc_attr($field_name); ?>"
-                                                                                 name="<?php echo esc_attr($field_name); ?>" type="checkbox"
-                                                                                 value="1" <?php if ($field_value == "1") {
-								echo 'checked="checked"';
-							} ?>><?php echo $field_description; ?></label>
-                    </fieldset>
-                </td>
-            </tr>
-        </table>
-        <!-- /dates -->
-
-        <hr />
-
         <!-- adults -->
         <h3 id="adults"><?php _e( 'Adults', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
@@ -217,25 +190,6 @@ $provider = 'simplebooking';
                 </td>
             </tr>
 
-			<?php
-			$field_label = esc_html__( 'Hide in mobile view', 'astro-booking-engine' );
-			$field_description = false;
-			$field_name = ASTRO_BE_PREFIX.$provider.'_adults_hide_mobile';
-			$field_value = get_option($field_name);
-			?>
-            <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo $field_label; ?></label></th>
-                <td>
-                    <fieldset>
-                        <legend class="screen-reader-text"><span><?php echo $field_label; ?></span></legend>
-                        <label for="<?php echo esc_attr($field_name); ?>"><input id="<?php echo esc_attr($field_name); ?>"
-                                                                                 name="<?php echo esc_attr($field_name); ?>" type="checkbox"
-                                                                                 value="1" <?php if ($field_value == "1") {
-								echo 'checked="checked"';
-							} ?>><?php echo $field_description; ?></label>
-                    </fieldset>
-                </td>
-            </tr>
         </table>
         <!-- /adults -->
 
@@ -324,26 +278,6 @@ $provider = 'simplebooking';
                 </td>
             </tr>
 
-			<?php
-			$field_label = esc_html__( 'Hide in mobile view', 'astro-booking-engine' );
-			$field_description = false;
-			$field_name = ASTRO_BE_PREFIX.$provider.'_children_hide_mobile';
-			$field_value = get_option($field_name);
-			?>
-            <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo $field_label; ?></label></th>
-                <td>
-                    <fieldset>
-                        <legend class="screen-reader-text"><span><?php echo $field_label; ?></span></legend>
-                        <label for="<?php echo esc_attr($field_name); ?>"><input id="<?php echo esc_attr($field_name); ?>"
-                                                                                 name="<?php echo esc_attr($field_name); ?>"
-                                                                                 type="checkbox"
-                                                                                 value="1" <?php if ($field_value == "1") {
-								echo 'checked="checked"';
-							} ?>><?php echo $field_description; ?></label>
-                    </fieldset>
-                </td>
-            </tr>
         </table>
         <!-- /children -->
 
@@ -435,26 +369,6 @@ $provider = 'simplebooking';
                 </td>
             </tr>
 
-			<?php
-			$field_label = esc_html__( 'Hide in mobile view', 'astro-booking-engine' );
-			$field_description = false;
-			$field_name = ASTRO_BE_PREFIX.$provider.'_childage_hide_mobile';
-			$field_value = get_option($field_name);
-			?>
-            <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo $field_label; ?></label></th>
-                <td>
-                    <fieldset>
-                        <legend class="screen-reader-text"><span><?php echo $field_label; ?></span></legend>
-                        <label for="<?php echo esc_attr($field_name); ?>"><input id="<?php echo esc_attr($field_name); ?>"
-                                                                                 name="<?php echo esc_attr($field_name); ?>"
-                                                                                 type="checkbox"
-                                                                                 value="1" <?php if ($field_value == "1") {
-								echo 'checked="checked"';
-							} ?>><?php echo $field_description; ?></label>
-                    </fieldset>
-                </td>
-            </tr>
         </table>
         <!-- /childrenage -->
 
@@ -484,26 +398,6 @@ $provider = 'simplebooking';
             </td>
         </tr>
 
-		<?php
-		$field_label = esc_html__( 'Hide in mobile view', 'astro-booking-engine' );
-		$field_description = false;
-		$field_name = ASTRO_BE_PREFIX.$provider.'_coupon_hide_mobile';
-		$field_value = get_option($field_name);
-		?>
-        <tr>
-            <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo $field_label; ?></label></th>
-            <td>
-                <fieldset>
-                    <legend class="screen-reader-text"><span><?php echo $field_label; ?></span></legend>
-                    <label for="<?php echo esc_attr($field_name); ?>"><input id="<?php echo esc_attr($field_name); ?>"
-                                                                             name="<?php echo esc_attr($field_name); ?>"
-                                                                             type="checkbox"
-                                                                             value="1" <?php if ($field_value == "1") {
-							echo 'checked="checked"';
-						} ?>><?php echo $field_description; ?></label>
-                </fieldset>
-            </td>
-        </tr>
         </table>
         <!-- /coupon -->
 

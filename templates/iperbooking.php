@@ -17,10 +17,7 @@ $provider = esc_attr('iperbooking');
         <input type="hidden" name="numeroCamere" value="1" />
 
         <!-- <?php echo esc_attr(ASTRO_BE_PREFIX); ?>dates -->
-        <?php
-		$dates_hide_mobile = get_option(ASTRO_BE_PREFIX.$provider.'_checkin_checkout_hide_mobile');
-        ?>
-        <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . 'dates'; ?> <?php if ($dates_hide_mobile > 0) { echo ASTRO_BE_PREFIX . 'hide_mobile'; } ?>">
+        <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . 'dates'; ?>">
             <?php
             $field_class = esc_attr('checkin');
             $field_label = __( 'Check-in', 'astro-booking-engine' );
@@ -65,10 +62,9 @@ $provider = esc_attr('iperbooking');
         $field_label = __( 'Treatment', 'astro-booking-engine' );
         $field_name = 'idTrattamento'; //provider field name
         if ($treatment_visible) {
-			$treatment_hide_mobile = get_option(ASTRO_BE_PREFIX.$provider.'_idTrattamento_hide_mobile');
         ?>
         <!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
-        <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . $field_class; ?> <?php if ($treatment_hide_mobile > 0) { echo ASTRO_BE_PREFIX . 'hide_mobile'; } ?>">
+        <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . $field_class; ?>">
             <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                 <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
                     <label for="<?php echo $field_name; ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
@@ -104,10 +100,9 @@ $provider = esc_attr('iperbooking');
             $field_label = __( 'Adults', 'astro-booking-engine' );
             $field_name = 'Camera_1_Adulti'; //provider field name
             if ($adults_enable) {
-				$adults_hide_mobile = get_option(ASTRO_BE_PREFIX.$provider.'_adults_hide_mobile');
             ?>
                 <!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
-                <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?> <?php if ($adults_hide_mobile > 0) { echo ASTRO_BE_PREFIX . 'hide_mobile'; } ?>">
+                <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                     <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
                         <label for="<?php echo $field_name; ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
                         <select name="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'select'; ?> <?php echo ASTRO_BE_PREFIX . 'select-' . $field_class; ?>">
@@ -131,10 +126,9 @@ $provider = esc_attr('iperbooking');
             $field_label = __( 'Children', 'astro-booking-engine' );
             $field_name = 'Camera_1_Bambini'; //provider field name
             if ($children_enable) {
-				$children_hide_mobile = get_option(ASTRO_BE_PREFIX.$provider.'_children_hide_mobile');
             ?>
                 <!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
-                <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?> <?php if ($children_hide_mobile > 0) { echo ASTRO_BE_PREFIX . 'hide_mobile'; } ?>">
+                <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                     <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
                         <label for="<?php echo $field_name; ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
                         <select name="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'select'; ?> <?php echo ASTRO_BE_PREFIX . 'select-' . $field_class; ?>">
@@ -162,11 +156,9 @@ $provider = esc_attr('iperbooking');
         $field_name = 'Camera_1_EtaBambino'; //provider field name
 
         if ($childage_enable) {
-
-			$childage_hide_mobile = get_option(ASTRO_BE_PREFIX.$provider.'_childage_hide_mobile');
             ?>
             <!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
-            <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . $field_class; ?> <?php if ($childage_hide_mobile > 0) { echo ASTRO_BE_PREFIX . 'hide_mobile'; } ?>">
+            <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . $field_class; ?>">
                 <?php
                 for ($x = 1; $x <= $children_n_max; $x++) {
                     ?>
@@ -195,11 +187,9 @@ $provider = esc_attr('iperbooking');
             $field_class = esc_attr('discount');
             $field_label = __( 'Discount code', 'astro-booking-engine' );
             $field_name = 'codiceSconto'; //provider field name
-
-			$discount_code_hide_mobile = get_option(ASTRO_BE_PREFIX.$provider.'_codiceSconto_hide_mobile');
         ?>
         <!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
-        <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . $field_class; ?> <?php if ($discount_code_hide_mobile > 0) { echo ASTRO_BE_PREFIX . 'hide_mobile'; } ?>">
+        <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . $field_class; ?>">
             <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                 <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
                     <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
