@@ -153,17 +153,16 @@ function astro_be_unregister_option_names() {
  */
 function astro_be_shortcode_output() {
 	// Get the Template
-
 	$provider = get_option(ASTRO_BE_PREFIX.'provider');
 	if (($provider == '') && user_can( wp_get_current_user(), 'administrator' )) {
-		$plugin_settings_url = admin_url('options-general.php?page=astro-booking-engine');
+		$plugin_settings_url = admin_url('admin.php?page=astro-booking-engine');
 		$str = '<div class="astro-error astro-error-no-provider">';
 		$str .= __( 'This message is visible only to the site administrator.', 'astro-booking-engine' );
 		$str .= '<br />';
 		$str .= __( 'No provider has been selected in Astro Booking Engine plugin.', 'astro-booking-engine' );
 		$str .= '<br />';
 		$str .= __('Choose your provider at plugin', 'astro-booking-engine' );
-		$str .= '<a href="'.$plugin_settings_url.'">';
+		$str .= ' <a href="'.$plugin_settings_url.'">';
 		$str .= __('settings page', 'astro-booking-engine' );
 		$str .= '</a>.';
 		$str .= '</div>';
@@ -174,7 +173,6 @@ function astro_be_shortcode_output() {
 	if (file_exists($template_file)) { // Check if the template file exists.
 		ob_start();
 		include($template_file);
-		//$content = astro_be_get_custom_layout();
 		$content = ob_get_clean();
 		return $content;
 	}
