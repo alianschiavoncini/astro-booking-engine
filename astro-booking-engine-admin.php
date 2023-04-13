@@ -56,20 +56,25 @@ add_action( 'admin_enqueue_scripts', 'astro_be_load_admin_files' );
 function astro_be_register_settings() {
 
     if (isset($_REQUEST['option_page']) && !empty($_REQUEST['option_page'])) {
-        $option_page = sanitize_text_field($_REQUEST['option_page']);
-        $tab = explode('_', $option_page);
-		$option_group = $option_page;
-		$option_names = astro_be_option_names(end($tab));
 
-        if (!empty($option_names)) {
+		if (strpos($_REQUEST['option_page'], ASTRO_BE_PREFIX) === 0) {
 
-			foreach ($option_names as $option_name) {
-				$arr = array();
-				if (strpos($option_name, '_options')) {
-					$arr = array('type' => 'array');
-				}
-				register_setting( $option_group, $option_name, array($arr) );
-			}
+            $option_page = sanitize_text_field($_REQUEST['option_page']);
+            $tab = explode('_', $option_page);
+            $option_group = $option_page;
+            $option_names = astro_be_option_names(end($tab));
+
+            if (!empty($option_names)) {
+
+                foreach ($option_names as $option_name) {
+                    $arr = array();
+                    if (strpos($option_name, '_options')) {
+                        $arr = array('type' => 'array');
+                    }
+                    register_setting( $option_group, $option_name, array($arr) );
+                }
+
+            }
 
 		}
 
