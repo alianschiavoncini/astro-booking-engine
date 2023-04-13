@@ -55,13 +55,13 @@ add_action('init', 'astro_be_enqueue_files');
 function astro_be_enqueue_files() {
 
 	// jQuery UI - ref. https://code.jquery.com/ui/
-	wp_enqueue_script('jquery-ui-datepicker', array( 'jquery' ) );
+	wp_enqueue_script('jquery-ui-datepicker-js', array( 'jquery' ) );
 
 	// UI theme
 	$jquery_ui_theme = get_option(ASTRO_BE_PREFIX.'calendar');
 	if (!$jquery_ui_theme) { $jquery_ui_theme = 'base'; }
 	$jquery_ui_theme_url = plugin_dir_url( __FILE__ ) . 'vendors/jquery-ui-themes/themes/'.$jquery_ui_theme.'/jquery-ui.min.css';
-	wp_enqueue_style('jquery-ui-datepicker', $jquery_ui_theme_url);
+	wp_enqueue_style('jquery-ui-datepicker-css', $jquery_ui_theme_url);
 
 	$plugin_version = astro_be_plugin_data('Version');
 
