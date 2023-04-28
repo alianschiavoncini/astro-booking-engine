@@ -143,7 +143,7 @@ function astro_be_options() {
 
     ?>
     <div class="wrap">
-        <h1><?php echo astro_be_plugin_data('Name'); ?></h1>
+        <h1><?php echo esc_html( astro_be_plugin_data('Name') ); ?></h1>
         <?php
 
         $tab  = 'settings'; // default panel

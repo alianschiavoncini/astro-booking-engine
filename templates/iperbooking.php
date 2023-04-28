@@ -27,7 +27,7 @@ $provider = esc_attr('iperbooking');
             <!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
             <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                 <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
-                    <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
+                    <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
                     <input type="text" class="datepicker <?php echo ASTRO_BE_PREFIX . 'input'; ?> <?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>" size="10" data-date-format="<?php echo esc_attr($field_date_format); ?>"  readonly data-no-submit />
                     <input type="hidden" class="<?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>-js" value="<?php echo date("Y-m-d"); ?>" />
                 </div>
@@ -43,7 +43,7 @@ $provider = esc_attr('iperbooking');
             <!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
             <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                 <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
-                    <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
+                    <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
                     <input type="text" class="datepicker <?php echo ASTRO_BE_PREFIX . 'input'; ?> <?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>" size="10" data-date-format="<?php echo esc_attr($field_date_format); ?>"  readonly data-no-submit />
                     <input type="hidden" class="<?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>-js" value="<?php echo date("Y-m-d", strtotime("+1 day")); ?>" />
                 </div>
@@ -67,12 +67,12 @@ $provider = esc_attr('iperbooking');
         <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . $field_class; ?>">
             <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                 <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
-                    <label for="<?php echo $field_name; ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
+                    <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
                     <select name="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'select'; ?> <?php echo ASTRO_BE_PREFIX . 'select-' . $field_class; ?>">
                     <?php foreach ($treatments as $treatment) { ?>
                         <option value="<?php echo esc_attr($treatment['value']); ?>"
-                            <?php if ($treatment_default_option_value == $treatment['value']) { echo ' selected="selected"'; } ?>>
-                            <?php echo $treatment['label']; ?>
+                            <?php if ($treatment_default_option_value == $treatment['value']) { echo ' selected=selected'; } ?>>
+                            <?php echo esc_html($treatment['label']); ?>
                         </option>
                     <?php } ?>
                     </select>
@@ -84,7 +84,7 @@ $provider = esc_attr('iperbooking');
         }else{
             //if not visible => print the default option
             ?>
-            <input type="hidden" name="idTrattamento" value="<?php echo $treatment_default_option_value; ?>" />
+            <input type="hidden" name="idTrattamento" value="<?php echo esc_attr($treatment_default_option_value); ?>" />
             <?php
 		}
         ?>
@@ -104,10 +104,10 @@ $provider = esc_attr('iperbooking');
                 <!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
                 <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                     <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
-                        <label for="<?php echo $field_name; ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
+                        <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
                         <select name="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'select'; ?> <?php echo ASTRO_BE_PREFIX . 'select-' . $field_class; ?>">
                         <?php for ($i = 1; $i <= $adults_n_max; $i++) { ?>
-                            <option value="<?php echo $i; ?>" <?php if ($adults_n_default == $i) { echo ' selected="selected"'; } ?>><?php echo $i; ?></option>
+                            <option value="<?php echo esc_attr($i); ?>" <?php if ($adults_n_default == $i) { echo ' selected=selected'; } ?>><?php echo esc_html($i); ?></option>
                         <?php } ?>
                         </select>
                     </div>
@@ -130,10 +130,10 @@ $provider = esc_attr('iperbooking');
                 <!-- <?php echo ASTRO_BE_PREFIX.$field_class; ?> -->
                 <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                     <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
-                        <label for="<?php echo $field_name; ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
+                        <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
                         <select name="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'select'; ?> <?php echo ASTRO_BE_PREFIX . 'select-' . $field_class; ?>">
                         <?php for ($i = 0; $i <= $children_n_max; $i++) { ?>
-                            <option value="<?php echo $i; ?>" <?php if (($children_n_default == $i) && ($children_n_default > 0)) { echo ' selected="selected"'; } ?>><?php echo $i; ?></option>
+                            <option value="<?php echo esc_attr($i); ?>" <?php if (($children_n_default == $i) && ($children_n_default > 0)) { echo ' selected=selected'; } ?>><?php echo esc_html($i); ?></option>
                         <?php } ?>
                         </select>
                     </div>
@@ -164,10 +164,10 @@ $provider = esc_attr('iperbooking');
                     ?>
                     <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?> <?php echo ASTRO_BE_PREFIX . 'column-' . $field_class . '-' . $x; ?>">
                         <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
-                            <label for="<?php echo $field_name . '_' . $x; ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?> <?php echo $x; ?></label>
-                            <select name="<?php echo $field_name . '_' . $x; ?>" class="<?php echo ASTRO_BE_PREFIX . 'select'; ?> <?php echo ASTRO_BE_PREFIX . 'select-' . $field_class; ?>" size="1">
+                            <label for="<?php echo esc_attr($field_name) . '_' . $x; ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?> <?php echo esc_html($x); ?></label>
+                            <select name="<?php echo esc_attr($field_name) . '_' . $x; ?>" class="<?php echo ASTRO_BE_PREFIX . 'select'; ?> <?php echo ASTRO_BE_PREFIX . 'select-' . $field_class; ?>" size="1">
                                 <?php for ($i = $childage_min; $i <= $childage_max; $i++) { ?>
-                                    <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                    <option value="<?php echo esc_attr($i); ?>"><?php echo esc_html($i); ?></option>
                                 <?php } ?>
                             </select>
                         </div>
@@ -192,7 +192,7 @@ $provider = esc_attr('iperbooking');
         <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . $field_class; ?>">
             <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                 <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
-                    <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
+                    <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
                     <input type="text" name="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'input'; ?> <?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>" size="5" />
                 </div>
             </div>
@@ -216,7 +216,7 @@ $provider = esc_attr('iperbooking');
         <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . $field_class; ?>">
             <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                 <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
-                    <label class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo $field_label; ?></label>
+                    <label class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
                     <input type="submit" class="<?php echo ASTRO_BE_PREFIX . 'input'; ?> <?php echo ASTRO_BE_PREFIX . 'input-' . $field_class; ?>" value="<?php echo esc_attr($value); ?>" />
                 </div>
             </div>

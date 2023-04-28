@@ -27,17 +27,17 @@ if (!class_exists('AstroThemes_BE_Widget')) {
         // Creating widget front-end
         public function widget( $args, $instance ) {
             // before and after widget arguments are defined by themes
-            echo $args['before_widget'];
+            echo esc_html( $args['before_widget'] );
 
             $title = apply_filters( 'widget_title', $instance['title'] );
             if (!empty($title)) {
-                echo $args['before_title'] . $title . $args['after_title'];
+                echo esc_html( $args['before_title'] . $title . $args['after_title'] );
             }
 
             echo do_shortcode('[astro-booking-engine]');
 
             // This is where you run the code and display the output
-            echo $args['after_widget'];
+            echo esc_html( $args['after_widget'] );
 
            return $instance;
         }

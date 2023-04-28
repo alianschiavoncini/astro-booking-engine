@@ -31,10 +31,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo esc_attr($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" />
-							<?php if ($field['description']) { ?><p class="description"><?php echo $field['description']; ?></p><?php } ?>
+							<?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php } ?>
                         </td>
                     </tr>
 					<?php
@@ -47,7 +47,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
                                 <option value=""><?php _e( 'inherit', 'astro-booking-engine' ); ?></option>
@@ -58,10 +58,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 								for ($i = 0; $i <= 100; $i++) {
 									$selected = '';
 									if ($i == $field['value']) {
-										$selected = ' selected="selected"';
+										$selected = ' selected=selected';
 									}
 									?>
-                                    <option value="<?php echo esc_attr($i); ?>"<?php echo $selected; ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
+                                    <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
 									<?php
 								}
 								?>
@@ -84,10 +84,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
-                            <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo $field['value']; ?>" placeholder="<?php echo $field['placeholder']; ?>">
-							<?php if ($field['description']) { ?><p class="description"><?php echo $field['description']; ?></p><?php } ?>
+                            <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo esc_html($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>">
+							<?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php } ?>
                         </td>
                     </tr>
 					<?php
@@ -100,7 +100,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
                                 <option value=""><?php _e( 'inherit', 'astro-booking-engine' ); ?></option>
@@ -111,10 +111,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 								for ($i = 6; $i <= 40; $i++) {
 									$selected = '';
 									if ($i == $field['value']) {
-										$selected = ' selected="selected"';
+										$selected = ' selected=selected';
 									}
 									?>
-                                    <option value="<?php echo esc_attr($i); ?>"<?php echo $selected; ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
+                                    <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
 									<?php
 								}
 								?>
@@ -131,7 +131,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
 								<?php
@@ -139,8 +139,8 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 									$field['value'] = 'normal';
 								}
 								?>
-                                <option value="normal"<?php if ($field['value'] == 'normal') { echo ' selected="selected"'; } ?>><?php echo esc_attr(__( 'normal', 'astro-booking-engine' )); ?></option>
-                                <option value="bold"<?php if ($field['value'] == 'bold') { echo ' selected="selected"'; } ?>><?php echo esc_attr(__( 'bold', 'astro-booking-engine' )); ?></option>
+                                <option value="normal"<?php if ($field['value'] == 'normal') { echo ' selected=selected'; } ?>><?php echo esc_attr(__( 'normal', 'astro-booking-engine' )); ?></option>
+                                <option value="bold"<?php if ($field['value'] == 'bold') { echo ' selected=selected'; } ?>><?php echo esc_attr(__( 'bold', 'astro-booking-engine' )); ?></option>
                             </select>
                         </td>
                     </tr>
@@ -160,10 +160,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
-                            <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo $field['value']; ?>" placeholder="<?php echo $field['placeholder']; ?>" />
-							<?php if ($field['description']) { ?><p class="description"><?php echo $field['description']; ?></p><?php } ?>
+                            <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo esc_html($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" />
+							<?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php } ?>
                         </td>
                     </tr>
 					<?php
@@ -176,7 +176,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
                                 <option value=""><?php _e( 'inherit', 'astro-booking-engine' ); ?></option>
@@ -187,10 +187,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 								for ($i = 6; $i <= 40; $i++) {
 									$selected = '';
 									if ($i == $field['value']) {
-										$selected = ' selected="selected"';
+										$selected = ' selected=selected';
 									}
 									?>
-                                    <option value="<?php echo esc_attr($i); ?>"<?php echo $selected; ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
+                                    <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
 									<?php
 								}
 								?>
@@ -207,7 +207,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
 								<?php
@@ -215,8 +215,8 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 									$field['value'] = 'normal';
 								}
 								?>
-                                <option value="normal"<?php if ($field['value'] == 'normal') { echo ' selected="selected"'; } ?>><?php echo esc_attr(__( 'normal', 'astro-booking-engine' )); ?></option>
-                                <option value="bold"<?php if ($field['value'] == 'bold') { echo ' selected="selected"'; } ?>><?php echo esc_attr(__( 'bold', 'astro-booking-engine' )); ?></option>
+                                <option value="normal"<?php if ($field['value'] == 'normal') { echo ' selected=selected'; } ?>><?php echo esc_attr(__( 'normal', 'astro-booking-engine' )); ?></option>
+                                <option value="bold"<?php if ($field['value'] == 'bold') { echo ' selected=selected'; } ?>><?php echo esc_attr(__( 'bold', 'astro-booking-engine' )); ?></option>
                             </select>
                         </td>
                     </tr>
@@ -230,10 +230,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
-                            <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo $field['value']; ?>" placeholder="<?php echo $field['placeholder']; ?>" />
-							<?php if ($field['description']) { ?><p class="description"><?php echo $field['description']; ?></p><?php } ?>
+                            <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo esc_html($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" />
+							<?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php } ?>
                         </td>
                     </tr>
 					<?php
@@ -246,7 +246,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
                                 <option value=""><?php _e( 'inherit', 'astro-booking-engine' ); ?></option>
@@ -257,10 +257,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 								for ($i = 0; $i <= 10; $i++) {
 									$selected = '';
 									if ($i == $field['value']) {
-										$selected = ' selected="selected"';
+										$selected = ' selected=selected';
 									}
 									?>
-                                    <option value="<?php echo esc_attr($i); ?>"<?php echo $selected; ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
+                                    <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
 									<?php
 								}
 								?>
@@ -277,7 +277,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
                             <?php
@@ -288,10 +288,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                             foreach ($border_styles as $border_style) {
 								$selected = '';
 								if ($border_style == $field['value']) {
-									$selected = ' selected="selected"';
+									$selected = ' selected=selected';
 								}
                             ?>
-                                <option value="<?php echo esc_attr($border_style); ?>"<?php echo $selected; ?>><?php echo esc_attr($border_style); ?></option>
+                                <option value="<?php echo esc_attr($border_style); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($border_style); ?></option>
                             <?php
                             }
                             ?>
@@ -308,10 +308,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
-                            <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo $field['value']; ?>" placeholder="<?php echo $field['placeholder']; ?>" />
-							<?php if ($field['description']) { ?><p class="description"><?php echo $field['description']; ?></p><?php } ?>
+                            <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo esc_html($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" />
+							<?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php } ?>
                         </td>
                     </tr>
 					<?php
@@ -324,7 +324,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
                                 <option value=""><?php _e( 'inherit', 'astro-booking-engine' ); ?></option>
@@ -335,10 +335,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                                 for ($i = 0; $i <= 100; $i++) {
                                     $selected = '';
                                     if ($i == $field['value']) {
-                                        $selected = ' selected="selected"';
+                                        $selected = ' selected=selected';
                                     }
                                     ?>
-                                    <option value="<?php echo esc_attr($i); ?>"<?php echo $selected; ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
+                                    <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
                                     <?php
                                 }
                                 ?>
@@ -355,7 +355,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
 								<?php
@@ -363,15 +363,15 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 								foreach ($options as $value) {
 									$selected = '';
 									if ($value == $field['value']) {
-										$selected = ' selected="selected"';
+										$selected = ' selected=selected';
 									}
 									?>
-                                    <option value="<?php echo esc_attr($value); ?>"<?php echo $selected; ?>><?php echo $value; ?></option>
+                                    <option value="<?php echo esc_attr($value); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($value); ?></option>
 									<?php
 								}
 								?>
                             </select>
-							<?php if ($field['description']) { ?><p class="description"><?php echo $field['description']; ?></p><?php } ?>
+							<?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php } ?>
                         </td>
                     </tr>
                 </table>
@@ -390,10 +390,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
-                            <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo $field['value']; ?>" placeholder="<?php echo $field['placeholder']; ?>" />
-							<?php if ($field['description']) { ?><p class="description"><?php echo $field['description']; ?></p><?php } ?>
+                            <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo esc_html($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" />
+							<?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php } ?>
                         </td>
                     </tr>
 					<?php
@@ -406,7 +406,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
                                 <option value=""><?php _e( 'inherit', 'astro-booking-engine' ); ?></option>
@@ -417,10 +417,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 								for ($i = 6; $i <= 40; $i++) {
 									$selected = '';
 									if ($i == $field['value']) {
-										$selected = ' selected="selected"';
+										$selected = ' selected=selected';
 									}
 									?>
-                                    <option value="<?php echo esc_attr($i); ?>"<?php echo $selected; ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
+                                    <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
 									<?php
 								}
 								?>
@@ -437,7 +437,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
 								<?php
@@ -445,8 +445,8 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 									$field['value'] = 'normal';
 								}
 								?>
-                                <option value="normal"<?php if ($field['value'] == 'normal') { echo ' selected="selected"'; } ?>><?php echo esc_attr(__( 'normal', 'astro-booking-engine' )); ?></option>
-                                <option value="bold"<?php if ($field['value'] == 'bold') { echo ' selected="selected"'; } ?>><?php echo esc_attr(__( 'bold', 'astro-booking-engine' )); ?></option>
+                                <option value="normal"<?php if ($field['value'] == 'normal') { echo ' selected=selected'; } ?>><?php echo esc_attr(__( 'normal', 'astro-booking-engine' )); ?></option>
+                                <option value="bold"<?php if ($field['value'] == 'bold') { echo ' selected=selected'; } ?>><?php echo esc_attr(__( 'bold', 'astro-booking-engine' )); ?></option>
                             </select>
                         </td>
                     </tr>
@@ -460,10 +460,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
-                            <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo $field['value']; ?>" placeholder="<?php echo $field['placeholder']; ?>" />
-							<?php if ($field['description']) { ?><p class="description"><?php echo $field['description']; ?></p><?php } ?>
+                            <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo esc_html($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" />
+							<?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php } ?>
                         </td>
                     </tr>
 					<?php
@@ -476,7 +476,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
                                 <option value=""><?php _e( 'inherit', 'astro-booking-engine' ); ?></option>
@@ -487,10 +487,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 								for ($i = 0; $i <= 10; $i++) {
 									$selected = '';
 									if ($i == $field['value']) {
-										$selected = ' selected="selected"';
+										$selected = ' selected=selected';
 									}
 									?>
-                                    <option value="<?php echo esc_attr($i); ?>"<?php echo $selected; ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
+                                    <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
 									<?php
 								}
 								?>
@@ -507,7 +507,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
 								<?php
@@ -518,10 +518,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 								foreach ($border_styles as $border_style) {
 									$selected = '';
 									if ($border_style == $field['value']) {
-										$selected = ' selected="selected"';
+										$selected = ' selected=selected';
 									}
 									?>
-                                    <option value="<?php echo esc_attr($border_style); ?>"<?php echo $selected; ?>><?php echo esc_attr($border_style); ?></option>
+                                    <option value="<?php echo esc_attr($border_style); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($border_style); ?></option>
 									<?php
 								}
 								?>
@@ -538,10 +538,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
-                            <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo $field['value']; ?>" placeholder="<?php echo $field['placeholder']; ?>" />
-							<?php if ($field['description']) { ?><p class="description"><?php echo $field['description']; ?></p><?php } ?>
+                            <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo esc_html($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" />
+							<?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php } ?>
                         </td>
                     </tr>
 					<?php
@@ -554,7 +554,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
                                 <option value=""><?php _e( 'inherit', 'astro-booking-engine' ); ?></option>
@@ -565,10 +565,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 								for ($i = 0; $i <= 100; $i++) {
 									$selected = '';
 									if ($i == $field['value']) {
-										$selected = ' selected="selected"';
+										$selected = ' selected=selected';
 									}
 									?>
-                                    <option value="<?php echo esc_attr($i); ?>"<?php echo $selected; ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
+                                    <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
 									<?php
 								}
 								?>
@@ -591,10 +591,10 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					);
 					?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
-                            <textarea id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text" placeholder="<?php echo $field['placeholder']; ?>" rows="10"><?php echo $field['value']; ?></textarea>
-							<?php if ($field['description']) { ?><p class="description"><?php echo $field['description']; ?></p><?php } ?>
+                            <textarea id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text" placeholder="<?php echo esc_attr($field['placeholder']); ?>" rows="10"><?php echo esc_html($field['value']); ?></textarea>
+							<?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php } ?>
                         </td>
                     </tr>
                 </table>

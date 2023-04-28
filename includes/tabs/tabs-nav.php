@@ -11,15 +11,15 @@ function astro_be_tabs_nav($panel) {
 	echo '<nav class="nav-tab-wrapper">';
 
 	echo '<a href="?page='.ASTRO_BE_TEXTDOMAIN.'&amp;tab=settings" class="nav-tab ';
-	if ($panel == 'settings') { echo $active_class; }
+	if ($panel == 'settings') { echo esc_attr($active_class); }
 	echo '">' . esc_html__('Settings', 'astro-booking-engine' ) . '</a>';
 
 	echo '<a href="?page='.ASTRO_BE_TEXTDOMAIN.'&amp;tab=layout" class="nav-tab ';
-	if ($panel == 'layout') { echo $active_class; }
+	if ($panel == 'layout') { echo esc_attr($active_class); }
 	echo '">' . esc_html__('Layout', 'astro-booking-engine' ) . '</a>';
 
 	echo '<a href="?page='.ASTRO_BE_TEXTDOMAIN.'&amp;tab=support" class="nav-tab ';
-	if ($panel == 'support') { echo $active_class; }
+	if ($panel == 'support') { echo esc_attr($active_class); }
 	echo '">' . esc_html__('Support', 'astro-booking-engine' ) . '</a>';
 
 	echo '</nav>';

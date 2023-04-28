@@ -18,7 +18,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         </div>
     </div>
 
-    <form method="post" action="options.php" class="<?php echo $option_group; ?>_form">
+    <form method="post" action="options.php" class="<?php echo esc_attr($option_group); ?>_form">
         <?php
         settings_fields($option_group);
         do_settings_sections($option_group);
@@ -39,7 +39,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                     );
                     ?>
                     <tr>
-                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
                                 <?php
@@ -52,15 +52,15 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                                 foreach ($options as $k => $v) {
                                     $selected = '';
                                     if ($k == $field['value']) {
-                                        $selected = ' selected="selected"';
+                                        $selected = ' selected=selected';
                                     }
                                     ?>
-                                    <option value="<?php echo esc_attr($k); ?>"<?php echo $selected; ?>><?php echo $v; ?></option>
+                                    <option value="<?php echo esc_attr($k); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($v); ?></option>
                                     <?php
                                 }
                                 ?>
                             </select>
-                            <p class="description"><?php echo $field['description']; ?></p>
+                            <p class="description"><?php echo esc_html($field['description']); ?></p>
                         </td>
                     </tr>
                 </table>

@@ -10,7 +10,6 @@
  * Author URI:        https://www.astrothemes.com
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Update URI:        https://github.com/alianschiavoncini/astro-booking-engine
  * Text Domain:       astro-booking-engine
  * Domain Path:       /languages
  */

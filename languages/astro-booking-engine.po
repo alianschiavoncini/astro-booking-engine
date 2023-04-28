@@ -172,14 +172,14 @@ msgid "The Universal Booking Engine plugin displays a user friendly and responsi
 msgstr ""
 
 # ?>
-# <option value="normal"<?php if ($field['value'] == 'normal') { echo ' selected="selected"'; } ?>><?php echo esc_attr(__( 'normal', 'astro-booking-engine' )); ?></option>
-# <option value="bold"<?php if ($field['value'] == 'bold') { echo ' selected="selected"'; } ?>><?php echo esc_attr(__( 'bold', 'astro-booking-engine' )); ?></option>
+# <option value="normal"<?php if ($field['value'] == 'normal') { echo ' selected=selected'; } ?>><?php echo esc_attr(__( 'normal', 'astro-booking-engine' )); ?></option>
+# <option value="bold"<?php if ($field['value'] == 'bold') { echo ' selected=selected'; } ?>><?php echo esc_attr(__( 'bold', 'astro-booking-engine' )); ?></option>
 
 msgid "normal"
 msgstr ""
 
-# <option value="normal"<?php if ($field['value'] == 'normal') { echo ' selected="selected"'; } ?>><?php echo esc_attr(__( 'normal', 'astro-booking-engine' )); ?></option>
-# <option value="bold"<?php if ($field['value'] == 'bold') { echo ' selected="selected"'; } ?>><?php echo esc_attr(__( 'bold', 'astro-booking-engine' )); ?></option>
+# <option value="normal"<?php if ($field['value'] == 'normal') { echo ' selected=selected'; } ?>><?php echo esc_attr(__( 'normal', 'astro-booking-engine' )); ?></option>
+# <option value="bold"<?php if ($field['value'] == 'bold') { echo ' selected=selected'; } ?>><?php echo esc_attr(__( 'bold', 'astro-booking-engine' )); ?></option>
 # </select>
 
 msgid "bold"
@@ -277,7 +277,7 @@ msgid "inherit"
 msgstr ""
 
 # ?>
-# <option value="<?php echo esc_attr($i); ?>"<?php echo $selected; ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
+# <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
 # <?php
 
 msgid "px"
@@ -472,15 +472,15 @@ msgstr ""
 msgid "URL"
 msgstr ""
 
-# <td class="<?php echo $provider; ?>-language">
-# <button class="button <?php echo $provider; ?>-language-options-add-field"><?php _e( 'Add new option', 'astro-booking-engine' ); ?></button>
+# <td class="<?php echo esc_attr($provider); ?>-language">
+# <button class="button <?php echo esc_ttr($provider); ?>-language-options-add-field"><?php _e( 'Add new option', 'astro-booking-engine' ); ?></button>
 # <?php
 
 msgid "Add new option"
 msgstr ""
 
-# <fieldset class="provider-fieldset provider-fieldset-<?php echo $i; ?>">
-# <legend class="provider-fieldset-legend"><?php _e( 'Language option', 'astro-booking-engine' ); ?> #<?php echo $i; ?></legend>
+# <fieldset class="provider-fieldset provider-fieldset-<?php echo esc_attr($i); ?>">
+# <legend class="provider-fieldset-legend"><?php _e( 'Language option', 'astro-booking-engine' ); ?> #<?php echo esc_html($i); ?></legend>
 # <div class="provider-fieldset-content">
 
 msgid "Language option"
@@ -684,7 +684,7 @@ msgstr ""
 
 # <h3 id="support-data-reset" class="title"><?php _e( 'Plugin data reset', 'astro-booking-engine' ); ?></h3>
 # <p><a class="button button-primary" href="?page=<?php echo ASTRO_BE_TEXTDOMAIN; ?>&amp;tab=support&amp;delete_options=1"><?php _e( 'Remove all plugin settings', 'astro-booking-engine' ); ?></a></p>
-# <p class="color-red"><?php echo $delete_options; ?></p>
+# <p class="color-red"><?php echo esc_html($delete_options); ?></p>
 
 msgid "Remove all plugin settings"
 msgstr ""

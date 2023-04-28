@@ -24,10 +24,10 @@ $provider = 'iperbooking';
 			);
 			?>
             <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                 <td>
-                    <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text" value="<?php echo $field['value']; ?>" placeholder="<?php echo $field['placeholder']; ?>" />
-                    <?php if ($field['description']) { ?><p class="description"><?php echo $field['description']; ?></p><?php }?>
+                    <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text" value="<?php echo esc_attr($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" />
+                    <?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php }?>
                 </td>
             </tr>
         </table>
@@ -53,17 +53,17 @@ $provider = 'iperbooking';
                                 );
 			?>
             <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                 <td>
                     <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
                     <?php
                     foreach ($arr_targets as $k => $v) {
                         $selected = '';
                         if ($k == $field['value']) {
-                            $selected = ' selected="selected"';
+                            $selected = ' selected=selected';
                         }
                         ?>
-                        <option value="<?php echo esc_attr($k); ?>"<?php echo $selected; ?>><?php echo esc_attr($v); ?></option>
+                        <option value="<?php echo esc_attr($k); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($v); ?></option>
                         <?php
                     }
                     ?>
@@ -87,8 +87,8 @@ $provider = 'iperbooking';
 						<?php _e( 'Lang code', 'astro-booking-engine' ); ?>: EN<br>
 						<?php _e( 'URL', 'astro-booking-engine' ); ?>: https://secure.iperbooking.net/be/en/your-hotel-name/</p>
                 </th>
-                <td class="<?php echo $provider; ?>-language">
-                    <button class="button <?php echo $provider; ?>-language-options-add-field"><?php _e( 'Add new option', 'astro-booking-engine' ); ?></button>
+                <td class="<?php echo esc_attr($provider); ?>-language">
+                    <button class="button <?php echo esc_attr($provider); ?>-language-options-add-field"><?php _e( 'Add new option', 'astro-booking-engine' ); ?></button>
 					<?php
 					$i = 1;
 
@@ -98,23 +98,23 @@ $provider = 'iperbooking';
                         $default_option = get_option($field['name'].'_default');
 						foreach ($check_option as $option) {
 							?>
-                            <fieldset class="provider-fieldset provider-fieldset-<?php echo $i; ?>">
-                                <legend class="provider-fieldset-legend"><?php _e( 'Language option', 'astro-booking-engine' ); ?> #<?php echo $i; ?></legend>
+                            <fieldset class="provider-fieldset provider-fieldset-<?php echo esc_attr($i); ?>">
+                                <legend class="provider-fieldset-legend"><?php _e( 'Language option', 'astro-booking-engine' ); ?> #<?php echo esc_attr($i); ?></legend>
                                 <div class="provider-fieldset-content">
                                     <div class="provider-fieldset-row">
                                         <span class="provider-fieldset-label"><?php _e( 'Lang code', 'astro-booking-engine' ); ?>:</span>
-                                        <input type="text" name="<?php echo $field['name'].'[option_'.$i.'][code]'; ?>" class="regular-text" value="<?php echo esc_attr($option['code']); ?>" />
+                                        <input type="text" name="<?php echo esc_attr($field['name']).'[option_'.esc_attr($i).'][code]'; ?>" class="regular-text" value="<?php echo esc_attr($option['code']); ?>" />
                                     </div>
                                     <div class="provider-fieldset-row">
                                         <span class="provider-fieldset-label"><?php _e( 'URL', 'astro-booking-engine' ); ?>:</span>
-                                        <input type="text" name="<?php echo $field['name'].'[option_'.$i.'][url]'; ?>" class="regular-text" value="<?php echo esc_attr($option['url']); ?>" />
+                                        <input type="text" name="<?php echo esc_attr($field['name']).'[option_'.esc_attr($i).'][url]'; ?>" class="regular-text" value="<?php echo esc_attr($option['url']); ?>" />
                                     </div>
                                     <div class="provider-fieldset-row">
                                         <span class="provider-fieldset-label"><?php _e( 'Default', 'astro-booking-engine' ); ?>:</span>
                                         <input type="radio"
-                                               name="<?php echo $field['name'].'_default'; ?>"
-                                               class="<?php echo $provider; ?>-language-option-default <?php echo $provider; ?>-language-option-<?php echo $i; ?>"
-                                               value="option_<?php echo $i; ?>"
+                                               name="<?php echo esc_attr($field['name']).'_default'; ?>"
+                                               class="<?php echo esc_attr($provider); ?>-language-option-default <?php echo esc_attr($provider); ?>-language-option-<?php echo esc_attr($i); ?>"
+                                               value="option_<?php echo esc_attr($i); ?>"
 											<?php
 											if ($default_option == 'option_'.$i) {
 												echo ' checked';
@@ -131,22 +131,22 @@ $provider = 'iperbooking';
 						}
 					}else{
 						?>
-                        <fieldset class="provider-fieldset provider-fieldset-<?php echo $i; ?>">
-                            <legend class="provider-fieldset-legend"><?php _e( 'Language option', 'astro-booking-engine' ); ?> #<?php echo $i; ?></legend>
+                        <fieldset class="provider-fieldset provider-fieldset-<?php echo esc_attr($i); ?>">
+                            <legend class="provider-fieldset-legend"><?php _e( 'Language option', 'astro-booking-engine' ); ?> #<?php echo esc_attr($i); ?></legend>
                             <div class="provider-fieldset-content">
                                 <div class="provider-fieldset-row">
                                     <span class="provider-fieldset-label">Lang code:</span>
-                                    <input type="text" name="<?php echo $field['name'].'[option_'.$i.'][code]'; ?>" class="regular-text" value="" />
+                                    <input type="text" name="<?php echo esc_attr($field['name']).'[option_'.esc_attr($i).'][code]'; ?>" class="regular-text" value="" />
                                 </div>
                                 <div class="provider-fieldset-row">
                                     <span class="provider-fieldset-label">URL:</span>
-                                    <input type="text" name="<?php echo $field['name'].'[option_'.$i.'][url]'; ?>" class="regular-text" value="" />
+                                    <input type="text" name="<?php echo esc_attr($field['name']).'[option_'.esc_attr($i).'][url]'; ?>" class="regular-text" value="" />
                                 </div>
                                 <div class="provider-fieldset-row">
                                     <span class="provider-fieldset-label"><?php _e( 'Default', 'astro-booking-engine' ); ?>:</span>
                                     <input type="radio"
-                                           name="<?php echo $field['name'].'_default'; ?>"
-                                           class="regular-text <?php echo $provider; ?>-language-option-default <?php echo $provider; ?>-language-option-<?php echo $i; ?>"
+                                           name="<?php echo esc_attr($field['name']).'_default'; ?>"
+                                           class="regular-text <?php echo esc_attr($provider); ?>-language-option-default <?php echo esc_attr($provider); ?>-language-option-<?php echo esc_attr($i); ?>"
                                            value="option_1" checked />
                                 </div>
                             </div>
@@ -172,15 +172,15 @@ $provider = 'iperbooking';
 			$field_value = get_option($field_name);
 			?>
             <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo $field_label; ?></label></th>
+                <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo esc_html($field_label); ?></label></th>
                 <td>
                     <fieldset>
-                        <legend class="screen-reader-text"><span><?php echo $field_label; ?></span></legend>
+                        <legend class="screen-reader-text"><span><?php echo esc_html($field_label); ?></span></legend>
                         <label for="<?php echo esc_attr($field_name); ?>"><input id="<?php echo esc_attr($field_name); ?>"
                                                                                  name="<?php echo esc_attr($field_name); ?>" type="checkbox"
                                                                                  value="1" <?php if ($field_value == "1") {
 								echo 'checked="checked"';
-							} ?>><?php echo $field_description; ?></label>
+							} ?>><?php echo esc_html($field_description); ?></label>
                     </fieldset>
                 </td>
             </tr>
@@ -201,8 +201,8 @@ $provider = 'iperbooking';
 						<?php _e( 'Value', 'astro-booking-engine' ); ?>: 4<br>
 						<?php _e( 'Label', 'astro-booking-engine' ); ?>: Bed & Breakfast</p>
                 </th>
-                <td class="<?php echo $provider; ?>-treatment">
-                    <button class="button <?php echo $provider; ?>-treatment-options-add-field"><?php _e( 'Add new option', 'astro-booking-engine' ); ?></button>
+                <td class="<?php echo esc_attr($provider); ?>-treatment">
+                    <button class="button <?php echo esc_attr($provider); ?>-treatment-options-add-field"><?php _e( 'Add new option', 'astro-booking-engine' ); ?></button>
                     <?php
                     $i = 1;
 
@@ -212,23 +212,23 @@ $provider = 'iperbooking';
                         $default_option = get_option($field['name'].'_default');
                         foreach ($check_option as $option) {
                     ?>
-                    <fieldset class="provider-fieldset provider-fieldset-<?php echo $i; ?>">
-                        <legend class="provider-fieldset-legend">Treatment option #<?php echo $i; ?></legend>
+                    <fieldset class="provider-fieldset provider-fieldset-<?php echo esc_attr($i); ?>">
+                        <legend class="provider-fieldset-legend">Treatment option #<?php echo esc_html($i); ?></legend>
                         <div class="provider-fieldset-content">
                             <div class="provider-fieldset-row">
                                 <span class="provider-fieldset-label">Value:</span>
-                                <input type="text" name="<?php echo $field['name'].'[option_'.$i.'][value]'; ?>" class="regular-text" value="<?php echo esc_attr($option['value']); ?>" />
+                                <input type="text" name="<?php echo esc_attr($field['name']).'[option_'.esc_attr($i).'][value]'; ?>" class="regular-text" value="<?php echo esc_attr($option['value']); ?>" />
                             </div>
                             <div class="provider-fieldset-row">
                                 <span class="provider-fieldset-label">Label:</span>
-                                <input type="text" name="<?php echo $field['name'].'[option_'.$i.'][label]'; ?>" class="regular-text" value="<?php echo esc_attr($option['label']); ?>" />
+                                <input type="text" name="<?php echo esc_attr($field['name']).'[option_'.esc_attr($i).'][label]'; ?>" class="regular-text" value="<?php echo esc_attr($option['label']); ?>" />
                             </div>
                             <div class="provider-fieldset-row">
                                 <span class="provider-fieldset-label"><?php _e( 'Default', 'astro-booking-engine' ); ?>:</span>
                                 <input type="radio"
-                                       name="<?php echo $field['name'].'_default'; ?>"
-                                       class="<?php echo $provider; ?>-treatment-option-default <?php echo $provider; ?>-treatment-option-<?php echo $i; ?>"
-                                       value="option_<?php echo $i; ?>"
+                                       name="<?php echo esc_attr($field['name']).'_default'; ?>"
+                                       class="<?php echo esc_attr($provider); ?>-treatment-option-default <?php echo esc_attr($provider); ?>-treatment-option-<?php echo esc_attr($i); ?>"
+                                       value="option_<?php echo esc_attr($i); ?>"
                                 <?php
                                    if ( $default_option == 'option_'.$i) {
                                        echo ' checked';
@@ -245,22 +245,22 @@ $provider = 'iperbooking';
                         }
                     }else{
                     ?>
-                    <fieldset class="provider-fieldset provider-fieldset-<?php echo $i; ?>">
-                        <legend class="provider-fieldset-legend">Treatment option #<?php echo $i; ?></legend>
+                    <fieldset class="provider-fieldset provider-fieldset-<?php echo esc_attr($i); ?>">
+                        <legend class="provider-fieldset-legend">Treatment option #<?php echo esc_html($i); ?></legend>
                         <div class="provider-fieldset-content">
                             <div class="provider-fieldset-row">
                                 <span class="provider-fieldset-label"><?php _e( 'Value', 'astro-booking-engine' ); ?>:</span>
-                                <input type="text" name="<?php echo $field['name'].'[option_'.$i.'][value]'; ?>" class="regular-text" value="" />
+                                <input type="text" name="<?php echo esc_attr($field['name']).'[option_'.esc_attr($i).'][value]'; ?>" class="regular-text" value="" />
                             </div>
                             <div class="provider-fieldset-row">
                                 <span class="provider-fieldset-label"><?php _e( 'Label', 'astro-booking-engine' ); ?>:</span>
-                                <input type="text" name="<?php echo $field['name'].'[option_'.$i.'][label]'; ?>" class="regular-text" value="" />
+                                <input type="text" name="<?php echo esc_attr($field['name']).'[option_'.esc_attr($i).'][label]'; ?>" class="regular-text" value="" />
                             </div>
                             <div class="provider-fieldset-row">
                                 <span class="provider-fieldset-label"><?php _e( 'Default', 'astro-booking-engine' ); ?>:</span>
                                 <input type="radio"
-                                       name="<?php echo $field['name'].'_default'; ?>"
-                                       class="regular-text <?php echo $provider; ?>-treatment-option-default <?php echo $provider; ?>-treatment-option-<?php echo $i; ?>"
+                                       name="<?php echo esc_attr($field['name']).'_default'; ?>"
+                                       class="regular-text <?php echo esc_attr($provider); ?>-treatment-option-default <?php echo esc_attr($provider); ?>-treatment-option-<?php echo esc_attr($i); ?>"
                                        value="option_1" checked />
                             </div>
                         </div>
@@ -286,16 +286,16 @@ $provider = 'iperbooking';
 			$field_value = get_option($field_name);
 			?>
             <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo $field_label; ?></label></th>
+                <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo esc_html($field_label); ?></label></th>
                 <td>
                     <fieldset>
-                        <legend class="screen-reader-text"><span><?php echo $field_label; ?></span></legend>
+                        <legend class="screen-reader-text"><span><?php echo esc_html($field_label); ?></span></legend>
                         <label for="<?php echo esc_attr($field_name); ?>"><input id="<?php echo esc_attr($field_name); ?>"
                                                                                  name="<?php echo esc_attr($field_name); ?>"
                                                                                  type="checkbox"
                                                                                  value="1" <?php if ($field_value == "1") {
 								echo 'checked="checked"';
-							} ?>><?php echo $field_description; ?></label>
+							} ?>><?php echo esc_html($field_description); ?></label>
                     </fieldset>
                 </td>
             </tr>
@@ -310,17 +310,17 @@ $provider = 'iperbooking';
 			);
 			?>
             <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                 <td>
                     <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
 						<?php
 						for ($i = 1; $i <= 10; $i++) {
 							$selected = '';
 							if ($i == $field['value']) {
-								$selected = ' selected="selected"';
+								$selected = ' selected=selected';
 							}
 							?>
-                            <option value="<?php echo esc_attr($i); ?>"<?php echo $selected; ?>><?php echo esc_attr($i); ?></option>
+                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($i); ?></option>
 							<?php
 						}
 						?>
@@ -338,7 +338,7 @@ $provider = 'iperbooking';
 			);
 			?>
             <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                 <td>
                     <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
 						<?php
@@ -348,10 +348,10 @@ $provider = 'iperbooking';
 						for ($i = 1; $i <= 10; $i++) {
 							$selected = '';
 							if ($i == $field['value']) {
-								$selected = ' selected="selected"';
+								$selected = ' selected=selected';
 							}
 							?>
-                            <option value="<?php echo esc_attr($i); ?>"<?php echo $selected; ?>><?php echo esc_attr($i); ?></option>
+                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($i); ?></option>
 							<?php
 						}
 						?>
@@ -374,16 +374,16 @@ $provider = 'iperbooking';
 			$field_value = get_option($field_name);
 			?>
             <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo $field_label; ?></label></th>
+                <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo esc_html($field_label); ?></label></th>
                 <td>
                     <fieldset>
-                        <legend class="screen-reader-text"><span><?php echo $field_label; ?></span></legend>
+                        <legend class="screen-reader-text"><span><?php echo esc_html($field_label); ?></span></legend>
                         <label for="<?php echo esc_attr($field_name); ?>"><input id="<?php echo esc_attr($field_name); ?>"
                                                                                  name="<?php echo esc_attr($field_name); ?>"
                                                                                  type="checkbox"
                                                                                  value="1" <?php if ($field_value == "1") {
 								echo 'checked="checked"';
-							} ?>><?php echo $field_description; ?></label>
+							} ?>><?php echo esc_html($field_description); ?></label>
                     </fieldset>
                 </td>
             </tr>
@@ -398,17 +398,17 @@ $provider = 'iperbooking';
 			);
 			?>
             <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                 <td>
                     <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
 						<?php
 						for ($i = 0; $i <= 10; $i++) {
 							$selected = '';
 							if ($i == $field['value']) {
-								$selected = ' selected="selected"';
+								$selected = ' selected=selected';
 							}
 							?>
-                            <option value="<?php echo esc_attr($i); ?>"<?php echo $selected; ?>><?php echo esc_attr($i); ?></option>
+                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($i); ?></option>
 							<?php
 						}
 						?>
@@ -426,7 +426,7 @@ $provider = 'iperbooking';
 			);
 			?>
             <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                 <td>
                     <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
 						<?php
@@ -436,10 +436,10 @@ $provider = 'iperbooking';
 						for ($i = 1; $i <= 10; $i++) {
 							$selected = '';
 							if ($i == $field['value']) {
-								$selected = ' selected="selected"';
+								$selected = ' selected=selected';
 							}
 							?>
-                            <option value="<?php echo esc_attr($i); ?>"<?php echo $selected; ?>><?php echo esc_attr($i); ?></option>
+                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($i); ?></option>
 							<?php
 						}
 						?>
@@ -462,16 +462,16 @@ $provider = 'iperbooking';
 			$field_value = get_option($field_name);
 			?>
             <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo $field_label; ?></label></th>
+                <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo esc_html($field_label); ?></label></th>
                 <td>
                     <fieldset>
-                        <legend class="screen-reader-text"><span><?php echo $field_label; ?></span></legend>
+                        <legend class="screen-reader-text"><span><?php echo esc_html($field_label); ?></span></legend>
                         <label for="<?php echo esc_attr($field_name); ?>"><input id="<?php echo esc_attr($field_name); ?>"
                                                                                  name="<?php echo esc_attr($field_name); ?>"
                                                                                  type="checkbox"
                                                                                  value="1" <?php if ($field_value == "1") {
 								echo 'checked="checked"';
-							} ?>><?php echo $field_description; ?></label>
+							} ?>><?php echo esc_html($field_description); ?></label>
                     </fieldset>
                 </td>
             </tr>
@@ -486,7 +486,7 @@ $provider = 'iperbooking';
 			);
 			?>
             <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                 <td>
                     <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
 						<?php
@@ -496,10 +496,10 @@ $provider = 'iperbooking';
 						for ($i = 0; $i <= 18; $i++) {
 							$selected = '';
 							if ($i == $field['value']) {
-								$selected = ' selected="selected"';
+								$selected = ' selected=selected';
 							}
 							?>
-                            <option value="<?php echo esc_attr($i); ?>"<?php echo $selected; ?>><?php echo esc_attr($i); ?></option>
+                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($i); ?></option>
 							<?php
 						}
 						?>
@@ -517,7 +517,7 @@ $provider = 'iperbooking';
 			);
 			?>
             <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                 <td>
                     <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
 						<?php
@@ -527,10 +527,10 @@ $provider = 'iperbooking';
 						for ($i = 0; $i <= 18; $i++) {
 							$selected = '';
 							if ($i == $field['value']) {
-								$selected = ' selected="selected"';
+								$selected = ' selected=selected';
 							}
 							?>
-                            <option value="<?php echo esc_attr($i); ?>"<?php echo $selected; ?>><?php echo esc_attr($i); ?></option>
+                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($i); ?></option>
 							<?php
 						}
 						?>
@@ -553,16 +553,16 @@ $provider = 'iperbooking';
 		$field_value = get_option($field_name);
 		?>
         <tr>
-            <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo $field_label; ?></label></th>
+            <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo esc_html($field_label); ?></label></th>
             <td>
                 <fieldset>
-                    <legend class="screen-reader-text"><span><?php echo $field_label; ?></span></legend>
+                    <legend class="screen-reader-text"><span><?php echo esc_html($field_label); ?></span></legend>
                     <label for="<?php echo esc_attr($field_name); ?>"><input id="<?php echo esc_attr($field_name); ?>"
                                                                              name="<?php echo esc_attr($field_name); ?>"
                                                                              type="checkbox"
                                                                              value="1" <?php if ($field_value == "1") {
 							echo 'checked="checked"';
-						} ?>><?php echo $field_description; ?></label>
+						} ?>><?php echo esc_html($field_description); ?></label>
                 </fieldset>
             </td>
         </tr>
@@ -585,10 +585,10 @@ $provider = 'iperbooking';
 		);
 		?>
         <tr>
-            <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo $field['label']; ?></label></th>
+            <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
             <td>
-                <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text" value="<?php echo $field['value']; ?>" placeholder="<?php echo $field['placeholder']; ?>">
-				<?php if ($field['description']) { ?><p class="description"><?php echo $field['description']; ?></p><?php }?>
+                <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text" value="<?php echo esc_attr($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>">
+				<?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php }?>
             </td>
         </tr>
         </table>
