@@ -54,7 +54,7 @@ add_action('init', 'astro_be_enqueue_files');
 function astro_be_enqueue_files() {
 
 	// jQuery UI - ref. https://code.jquery.com/ui/
-	wp_enqueue_script('jquery-ui-datepicker-js', array( 'jquery' ) );
+	wp_enqueue_script('jquery-ui-datepicker-js' );
 
 	// UI theme
 	$jquery_ui_theme = get_option(ASTRO_BE_PREFIX.'calendar');

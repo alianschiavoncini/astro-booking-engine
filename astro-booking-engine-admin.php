@@ -7,7 +7,7 @@ if( ! is_admin() ) {
  * Load Admin files.
  */
 function astro_be_load_admin_files() {
-    if(!is_admin_bar_showing()) return;
+    if( !is_admin_bar_showing() ) return;
 
 	/**
 	 * Main admin styles and scripts
@@ -55,7 +55,7 @@ add_action( 'admin_enqueue_scripts', 'astro_be_load_admin_files' );
  */
 function astro_be_register_settings() {
 
-    if (isset($_REQUEST['option_page']) && !empty($_REQUEST['option_page'])) {
+    if (isset($_REQUEST['option_page']) && !empty($_REQUEST['option_page']) && ($_REQUEST['option_page'] != '')) {
 
 		if (strpos($_REQUEST['option_page'], ASTRO_BE_PREFIX) === 0) {
 
@@ -68,9 +68,9 @@ function astro_be_register_settings() {
 
                 foreach ($option_names as $option_name) {
                     $arr = array();
-                    if (strpos($option_name, '_options')) {
-                        $arr = array('type' => 'array');
-                    }
+					if (strpos($option_name, '_options')) {
+						$arr = array('type' => 'array');
+					}
                     register_setting( $option_group, $option_name, array($arr) );
                 }
 
@@ -89,7 +89,7 @@ function astro_be_register_settings() {
 				if (strpos($option_name, '_options')) {
 					$arr = array('type' => 'array');
 				}
-				register_setting($option_group, $option_name, array($arr));
+				register_setting($option_group, $option_name, array($arr)); 
 			}
 		}
 
