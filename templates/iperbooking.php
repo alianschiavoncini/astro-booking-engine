@@ -4,16 +4,16 @@
  */
 $provider = esc_attr('iperbooking');
 ?>
-<div class="astro_be <?php echo ASTRO_BE_PREFIX . $provider; ?>">
+<div class="astro_be <?php echo ASTRO_BE_PREFIX . esc_attr($provider); ?>">
 
-    <form class="astro_be_form astro_be_form<?php echo '_'. $provider; ?>"
+    <form class="astro_be_form astro_be_form<?php echo '_'. esc_attr($provider); ?>"
           method="<?php echo esc_attr( get_option(ASTRO_BE_PREFIX.$provider.'_form_method') ); ?>"
           action="<?php echo astro_be_get_provider_form_action_url_language(); ?>"
           target="<?php echo esc_attr( get_option(ASTRO_BE_PREFIX.$provider.'_form_target') ); ?>">
 
         <input type="hidden" name="idHotel" value="<?php echo esc_attr( get_option(ASTRO_BE_PREFIX.$provider.'_idHotel') ); ?>" />
-        <input type="hidden" id="astro_be_form<?php echo '_'. $provider; ?>_checkin" name="Arrivo" value="" />
-        <input type="hidden" id="astro_be_form<?php echo '_'. $provider; ?>_checkout" name="Partenza" value="" />
+        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_checkin" name="Arrivo" value="" />
+        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_checkout" name="Partenza" value="" />
         <input type="hidden" name="numeroCamere" value="1" />
 
         <!-- <?php echo esc_attr(ASTRO_BE_PREFIX); ?>dates -->

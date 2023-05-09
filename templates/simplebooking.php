@@ -6,7 +6,7 @@ $provider = esc_attr('simplebooking');
 ?>
 <div class="astro_be <?php echo ASTRO_BE_PREFIX . $provider; ?>">
 
-    <form class="astro_be_form astro_be_form<?php echo '_'. $provider; ?>"
+    <form class="astro_be_form astro_be_form<?php echo '_'. esc_attr($provider); ?>"
           method="<?php echo esc_attr( get_option(ASTRO_BE_PREFIX.$provider.'_form_method') ); ?>"
           action="https://www.simplebooking.it/ibe/hotelbooking/search"
           target="<?php echo esc_attr( get_option(ASTRO_BE_PREFIX.$provider.'_form_target') ); ?>">
@@ -14,9 +14,9 @@ $provider = esc_attr('simplebooking');
         <input type="hidden" name="hid" value="<?php echo esc_attr( get_option(ASTRO_BE_PREFIX.$provider.'_hid') ); ?>" />
         <input type="hidden" name="cur" value="<?php echo esc_attr( get_option(ASTRO_BE_PREFIX.$provider.'_currency') ); ?>" />
         <input type="hidden" name="lang" value="<?php echo esc_attr( astro_return_post_language() ); ?>" />
-        <input type="hidden" id="astro_be_form<?php echo '_'. $provider; ?>_in" name="in" value="" />
-        <input type="hidden" id="astro_be_form<?php echo '_'. $provider; ?>_out" name="out" value="" />
-        <input type="hidden" id="astro_be_form<?php echo '_'. $provider; ?>_guests" name="guests" value="A" />
+        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_in" name="in" value="" />
+        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_out" name="out" value="" />
+        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_guests" name="guests" value="A" />
 
         <!-- <?php echo esc_attr(ASTRO_BE_PREFIX); ?>dates -->
         <div class="<?php echo ASTRO_BE_PREFIX . 'row'; ?> <?php echo ASTRO_BE_PREFIX . 'dates'; ?>">

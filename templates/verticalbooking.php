@@ -5,9 +5,9 @@
 $provider = esc_attr('verticalbooking');
 
 ?>
-<div class="astro_be <?php echo ASTRO_BE_PREFIX . $provider; ?>">
+<div class="astro_be <?php echo ASTRO_BE_PREFIX . esc_attr($provider); ?>">
 
-	<form class="astro_be_form astro_be_form<?php echo '_'. $provider; ?>"
+	<form class="astro_be_form astro_be_form<?php echo '_'. esc_attr($provider); ?>"
           method="<?php echo esc_attr( get_option(ASTRO_BE_PREFIX.$provider.'_form_method') ); ?>"
           action="https://reservations.verticalbooking.com/reservations/risultato.html"
           target="<?php echo esc_attr( get_option(ASTRO_BE_PREFIX.$provider.'_form_target') ); ?>">
@@ -108,7 +108,7 @@ $provider = esc_attr('verticalbooking');
                 <div class="<?php echo ASTRO_BE_PREFIX . 'column ' . ASTRO_BE_PREFIX . 'column-' . $field_class; ?>">
                     <div class="<?php echo ASTRO_BE_PREFIX . 'column-inner'; ?>">
                         <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'label'; ?> <?php echo ASTRO_BE_PREFIX . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
-                        <select name="<?php echo esc_attr($field_name); ?>"" class="<?php echo ASTRO_BE_PREFIX . 'select'; ?> <?php echo ASTRO_BE_PREFIX . 'select-' . $field_class; ?>">
+                        <select name="<?php echo esc_attr($field_name); ?>" class="<?php echo ASTRO_BE_PREFIX . 'select'; ?> <?php echo ASTRO_BE_PREFIX . 'select-' . $field_class; ?>">
 						<?php for ($i = 0; $i <= $children_n_max; $i++) { ?>
                             <option value="<?php echo esc_attr($i); ?>" <?php if (($children_n_default == $i) && ($children_n_default > 0)) { echo ' selected=selected'; } ?>><?php echo esc_html($i); ?></option>
 						<?php } ?>
