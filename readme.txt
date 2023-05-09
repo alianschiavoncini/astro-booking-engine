@@ -26,5 +26,5 @@ The plugin is compatible with translation plugins such as WPML.
 
 == Upgrade Notice ==
 
-= 0.0.1 (2023-03-01) =
+= 1.0.0 (2023-05-09) =
 * Initial version
