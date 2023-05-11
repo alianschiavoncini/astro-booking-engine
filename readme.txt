@@ -24,7 +24,9 @@ The plugin is compatible with translation plugins such as WPML.
 1. Upload the entire `astro-booking-engine` folder to the `/wp-content/plugins/` directory.
 1. Activate the plugin through the **Plugins** screen (**Plugins > Installed Plugins**).
 
-== Upgrade Notice ==
+== Changelog ==
+= 1.0.1 =
+* Changed the support link in admin settings page.
 
-= 1.0.0 (2023-05-09) =
+= 1.0.0 =
 * Initial version

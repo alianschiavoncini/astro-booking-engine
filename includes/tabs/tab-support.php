@@ -56,7 +56,7 @@ do_settings_sections($option_group);
 
             <h3 id="support-faqs" class="title"><?php _e( 'FAQs', 'astro-booking-engine' ); ?></h3>
             <p><span class="support-faq-question"><?php _e( 'Do you need support?', 'astro-booking-engine' ); ?></span><br>
-                <span class="support-faq-answer"><?php _e( 'Request support at the ', 'astro-booking-engine' ); ?> <a href="https://wordpress.org/support/plugin/display-post-link/" target="_blank"><?php _e( 'plugin support page', 'astro-booking-engine' ); ?></a>.</span></p>
+                <span class="support-faq-answer"><?php _e( 'Request support at the ', 'astro-booking-engine' ); ?> <a href="https://wordpress.org/support/plugin/astro-booking-engine/" target="_blank"><?php _e( 'plugin support page', 'astro-booking-engine' ); ?></a>.</span></p>
 
             <p><span class="support-faq-question"><?php _e( 'Have more questions?', 'astro-booking-engine' ); ?></span><br>
             <span class="support-faq-answer"><?php _e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:info@astrothemes.com">info@astrothemes.com</a>.</span></p>
