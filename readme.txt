@@ -24,6 +24,13 @@ The plugin is compatible with translation plugins such as WPML.
 1. Upload the entire `astro-booking-engine` folder to the `/wp-content/plugins/` directory.
 1. Activate the plugin through the **Plugins** screen (**Plugins > Installed Plugins**).
 
+== Screenshots ==
+1. Frontend: booking engine form with calendar
+2. Frontend: booking engine form with child age dropdown
+3. Backend: settings - providers list
+4. Backend: settings - provider config
+5. Backend: layout customization
+
 == Changelog ==
 = 1.0.1 =
 * Changed the support link in admin settings page.
