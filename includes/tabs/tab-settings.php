@@ -13,7 +13,11 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 
             <h2 id="settings" class="title"><?php _e('Settings', 'astro-booking-engine' ); ?></h2>
             <p><?php _e('Astro Booking Engine displays the booking form using the shortcode <strong>[astro-booking-engine]</strong>.', 'astro-booking-engine'); ?></p>
-            <p><?php printf( 'For installation details, read more at the <a href="%s">support page</a>', '?page='.ASTRO_BE_TEXTDOMAIN.'&amp;tab=support'  ); ?></p>
+            <p><?php _e( 'For installation details, read more at the', 'astro-booking-engine'); ?>
+                <?php printf( '<a href="%1$s">%2$s</a>',
+                    '?page='.ASTRO_BE_TEXTDOMAIN.'&amp;tab=support',
+                      __('support page', 'astro-booking-engine')
+                ); ?>.</p>
 
         </div>
     </div>

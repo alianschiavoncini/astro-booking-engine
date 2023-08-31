@@ -3,7 +3,7 @@ Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, booking widget, reservation widget, hotel booking engine, iperbooking, simple booking, vertical booking
 Requires at least: 6.0.1
 Tested up to: 6.2
-Stable tag:	1.0.0
+Stable tag:	1.0.2
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -32,6 +32,9 @@ The plugin is compatible with translation plugins such as WPML.
 5. Backend: layout customization
 
 == Changelog ==
+= 1.0.2 =
+* Added italian language.
+
 = 1.0.1 =
 * Changed the support link in admin settings page.
 

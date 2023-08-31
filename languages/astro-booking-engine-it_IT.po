@@ -1,0 +1,611 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Astro Booking Engine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-17 09:15+0000\n"
+"PO-Revision-Date: 2023-08-21 17:09+0000\n"
+"Last-Translator: admin\n"
+"Language-Team: Italian\n"
+"Language: it-IT\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.4; wp-6.2.2\n"
+"X-Domain: astro-booking-engine"
+
+#: includes/tabs/tab-settings-iperbooking.php:91 
+#: includes/tabs/tab-settings-iperbooking.php:205
+msgid "Add new option"
+msgstr "Aggiungi una nuova opzione"
+
+#: templates/verticalbooking.php:73 templates/simplebooking.php:67 
+#: templates/iperbooking.php:100 
+#: includes/tabs/tab-settings-iperbooking.php:280 
+#: includes/tabs/tab-settings-verticalbooking.php:114 
+#: includes/tabs/tab-settings-simplebooking.php:111
+msgid "Adults"
+msgstr "Adulti"
+
+#: includes/tabs/tab-layout.php:582
+msgid "Advanced settings"
+msgstr "Impostazioni avanzate"
+
+#: includes/tabs/tab-support.php:14
+msgid "All the plugin options have deleted."
+msgstr "Tutte le opzioni del plugin sono state eliminate."
+
+#. Widget name will appear in UI
+#. Name of the plugin
+#: includes/classes/class-astro-booking-engine-widget.php:20
+msgid "Astro Booking Engine"
+msgstr "Astro Booking Engine"
+
+#: includes/tabs/tab-settings.php:15
+msgid ""
+"Astro Booking Engine displays the booking form using the shortcode <strong>"
+"[astro-booking-engine]</strong>."
+msgstr ""
+"Astro Booking Engine visualizza il modulo di prenotazione utilizzando lo "
+"shortcode <strong>[astro-booking-engine]</strong>."
+
+#. Author of the plugin
+msgid "AstroThemes"
+msgstr "AstroThemes"
+
+#: includes/tabs/tab-layout.php:26 includes/tabs/tab-layout.php:225 
+#: includes/tabs/tab-layout.php:455
+msgid "Background color"
+msgstr "Colore di sfondo"
+
+#: includes/tabs/tab-layout.php:143 includes/tabs/tab-layout.php:219 
+#: includes/tabs/tab-layout.php:449
+msgid "bold"
+msgstr "grassetto"
+
+#: astro-booking-engine-admin.php:126 astro-booking-engine-admin.php:127
+msgid "Booking engine"
+msgstr "Booking engine"
+
+#: includes/tabs/tab-layout.php:303 includes/tabs/tab-layout.php:533
+msgid "Border color"
+msgstr "Colore del bordo"
+
+#: includes/tabs/tab-layout.php:42 includes/tabs/tab-layout.php:319 
+#: includes/tabs/tab-layout.php:549
+msgid "Border radius"
+msgstr "Raggio del bordo"
+
+#: includes/tabs/tab-layout.php:272 includes/tabs/tab-layout.php:502
+msgid "Border style"
+msgstr "Stile del bordo"
+
+#: includes/tabs/tab-layout.php:241 includes/tabs/tab-layout.php:471
+msgid "Border width"
+msgstr "Spessore del bordo"
+
+#: includes/tabs/tab-layout.php:350
+msgid "Calendar theme"
+msgstr "Tema del calendario"
+
+#: includes/tabs/tab-settings-iperbooking.php:284 
+#: includes/tabs/tab-settings-iperbooking.php:372 
+#: includes/tabs/tab-settings-iperbooking.php:460 
+#: includes/tabs/tab-settings-iperbooking.php:551 
+#: includes/tabs/tab-settings-verticalbooking.php:118 
+#: includes/tabs/tab-settings-verticalbooking.php:206 
+#: includes/tabs/tab-settings-verticalbooking.php:294 
+#: includes/tabs/tab-settings-simplebooking.php:115 
+#: includes/tabs/tab-settings-simplebooking.php:203 
+#: includes/tabs/tab-settings-simplebooking.php:291 
+#: includes/tabs/tab-settings-simplebooking.php:382
+msgid "Check to enable"
+msgstr "Seleziona per abilitare"
+
+#: includes/tabs/tab-settings-iperbooking.php:170
+msgid "Check to show"
+msgstr "Spunta per mostrare"
+
+#: templates/verticalbooking.php:33 templates/simplebooking.php:25 
+#: templates/iperbooking.php:23
+msgid "Check-in"
+msgstr "Check-in"
+
+#: templates/verticalbooking.php:49 templates/simplebooking.php:42 
+#: templates/iperbooking.php:39
+msgid "Check-out"
+msgstr "Check-out"
+
+#: templates/verticalbooking.php:136 templates/simplebooking.php:122 
+#: templates/iperbooking.php:155
+msgid "Child Age"
+msgstr "Età del bambino"
+
+#: templates/verticalbooking.php:103 templates/simplebooking.php:93 
+#: templates/iperbooking.php:126 
+#: includes/tabs/tab-settings-iperbooking.php:368 
+#: includes/tabs/tab-settings-verticalbooking.php:202 
+#: includes/tabs/tab-settings-simplebooking.php:199
+msgid "Children"
+msgstr "Bambini"
+
+#: includes/tabs/tab-settings-iperbooking.php:456 
+#: includes/tabs/tab-settings-verticalbooking.php:290 
+#: includes/tabs/tab-settings-simplebooking.php:287
+msgid "Children age"
+msgstr "Età bambini"
+
+#: astro-booking-engine-common.php:164
+msgid "Choose your provider at plugin"
+msgstr "Scegli il tuo provider per il plugin"
+
+#: astro-booking-engine-admin.php:39
+msgid "Clear"
+msgstr "Annulla"
+
+#: includes/tabs/tab-support.php:34
+msgid "Configure the booking form layout (optional)"
+msgstr "Configura il layout del modulo di prenotazione (facoltativo)"
+
+#: templates/simplebooking.php:155 
+#: includes/tabs/tab-settings-simplebooking.php:378
+msgid "Coupon"
+msgstr "Buono sconto"
+
+#: includes/tabs/tab-settings-simplebooking.php:36
+msgid "Currency"
+msgstr "Valuta"
+
+#: astro-booking-engine-admin.php:42
+msgid "Current Color"
+msgstr "Colore attuale"
+
+#: includes/tabs/tab-support.php:45
+msgid ""
+"Currently, Astro Booking Engine can be connected to the following booking "
+"engine providers (in alphabetic order)."
+msgstr ""
+"Attualmente, Astro Booking Engine può essere collegato ai seguenti fornitori "
+"di motori di prenotazione (in ordine alfabetico)."
+
+#: includes/tabs/tab-layout.php:586
+msgid "Custom CSS"
+msgstr "CSS personalizzato"
+
+#: includes/tabs/tab-settings-verticalbooking.php:36
+msgid "dc"
+msgstr "dc"
+
+#: astro-booking-engine-admin.php:40 
+#: includes/tabs/tab-settings-iperbooking.php:113 
+#: includes/tabs/tab-settings-iperbooking.php:146 
+#: includes/tabs/tab-settings-iperbooking.php:227 
+#: includes/tabs/tab-settings-iperbooking.php:260
+msgid "Default"
+msgstr "Predefinito"
+
+#: includes/tabs/tab-settings-iperbooking.php:305 
+#: includes/tabs/tab-settings-verticalbooking.php:139 
+#: includes/tabs/tab-settings-simplebooking.php:136
+msgid "Default Adults"
+msgstr "Predefinito Adulti"
+
+#: includes/tabs/tab-settings-iperbooking.php:393 
+#: includes/tabs/tab-settings-verticalbooking.php:227 
+#: includes/tabs/tab-settings-simplebooking.php:224
+msgid "Default children"
+msgstr "Predefinito Bambini"
+
+#: includes/tabs/tab-settings-iperbooking.php:126 
+#: includes/tabs/tab-settings-iperbooking.php:240
+msgid "Delete"
+msgstr "Elimina"
+
+#: templates/iperbooking.php:188 includes/tabs/tab-settings-iperbooking.php:547
+msgid "Discount code"
+msgstr "Codice sconto"
+
+#. Description of the plugin
+msgid "Display the booking engine form of your favorite provider."
+msgstr "Visualizza il modulo del booking engine del tuo fornitore preferito."
+
+#: includes/tabs/tab-support.php:58
+msgid "Do you need support?"
+msgstr "Hai bisogno di supporto?"
+
+#: includes/tabs/tab-settings-iperbooking.php:283 
+#: includes/tabs/tab-settings-iperbooking.php:371 
+#: includes/tabs/tab-settings-iperbooking.php:459 
+#: includes/tabs/tab-settings-iperbooking.php:550 
+#: includes/tabs/tab-settings-verticalbooking.php:117 
+#: includes/tabs/tab-settings-verticalbooking.php:205 
+#: includes/tabs/tab-settings-verticalbooking.php:293 
+#: includes/tabs/tab-settings-simplebooking.php:114 
+#: includes/tabs/tab-settings-simplebooking.php:202 
+#: includes/tabs/tab-settings-simplebooking.php:290 
+#: includes/tabs/tab-settings-simplebooking.php:381
+msgid "Enable"
+msgstr "Attivo"
+
+#: includes/tabs/tab-support.php:57
+msgid "FAQs"
+msgstr "Domande frequenti"
+
+#: includes/tabs/tab-layout.php:151
+msgid "Fields"
+msgstr "Campi"
+
+#: includes/tabs/tab-layout.php:79 includes/tabs/tab-layout.php:155 
+#: includes/tabs/tab-layout.php:385
+msgid "Font color"
+msgstr "Colore del carattere"
+
+#: includes/tabs/tab-layout.php:95 includes/tabs/tab-layout.php:171 
+#: includes/tabs/tab-layout.php:401
+msgid "Font size"
+msgstr "Dimensione del carattere"
+
+#: includes/tabs/tab-layout.php:126 includes/tabs/tab-layout.php:202 
+#: includes/tabs/tab-layout.php:432
+msgid "Font weight"
+msgstr "Peso del carattere"
+
+#: includes/tabs/tab-settings-iperbooking.php:39 
+#: includes/tabs/tab-settings-verticalbooking.php:73 
+#: includes/tabs/tab-settings-simplebooking.php:70
+msgid "Form settings"
+msgstr "Impostazioni del modulo"
+
+#: includes/tabs/tab-support.php:32
+msgid ""
+"Get data settings from your booking engine provider; if you don't have one, "
+"you need to adopt one"
+msgstr ""
+"Ottieni le impostazioni dei dati dal fornitore del tuo booking engine; se "
+"non ne hai uno, devi adottarne uno"
+
+#: includes/tabs/tab-support.php:61
+msgid "Have more questions?"
+msgstr "Hai altre domande?"
+
+#: includes/tabs/tab-settings-simplebooking.php:19
+msgid "hid"
+msgstr "hid"
+
+#: includes/tabs/tab-settings-iperbooking.php:15 
+#: includes/tabs/tab-settings-verticalbooking.php:15 
+#: includes/tabs/tab-settings-simplebooking.php:15
+msgid "Hotel settings"
+msgstr "Impostazioni dell'hotel"
+
+#: includes/tabs/tab-support.php:30
+msgid "How to start with this plugin"
+msgstr "Come iniziare con questo plugin"
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/astro-booking-engine"
+msgstr "https://wordpress.org/plugins/astro-booking-engine"
+
+#. Author URI of the plugin
+msgid "https://www.astrothemes.com"
+msgstr "https://www.astrothemes.com"
+
+#: includes/tabs/tab-settings-verticalbooking.php:19
+msgid "id_albergo"
+msgstr "id_albergo"
+
+#: includes/tabs/tab-settings-verticalbooking.php:53
+msgid "id_stile"
+msgstr "id_stile"
+
+#: includes/tabs/tab-settings-iperbooking.php:19
+msgid "idHotel"
+msgstr "idHotel"
+
+#: includes/tabs/tab-support.php:37
+msgid "IMPORTANT"
+msgstr "IMPORTANTE"
+
+#: includes/tabs/tab-layout.php:53 includes/tabs/tab-layout.php:106 
+#: includes/tabs/tab-layout.php:182 includes/tabs/tab-layout.php:252 
+#: includes/tabs/tab-layout.php:330 includes/tabs/tab-layout.php:412 
+#: includes/tabs/tab-layout.php:482 includes/tabs/tab-layout.php:560
+msgid "inherit"
+msgstr "ereditato"
+
+#: includes/tabs/tab-support.php:52
+msgid "Is your booking engine provider not available in Astro Booking Engine?"
+msgstr ""
+"Il fornitore del tuo motore di prenotazione non è disponibile in Astro "
+"Booking Engine?"
+
+#: includes/tabs/tab-support.php:38
+msgid ""
+"it is mandatory to have the provider data settings and the provider contract "
+"must be active in order to use the Astro Booking Engine."
+msgstr ""
+"è obbligatorio avere le impostazioni dei dati del fornitore e il contratto "
+"del fornitore deve essere attivo per poter utilizzare Astro Booking Engine."
+
+#: includes/tabs/tab-settings-iperbooking.php:202 
+#: includes/tabs/tab-settings-iperbooking.php:256 
+#: includes/tabs/tab-settings-iperbooking.php:580 
+#: includes/tabs/tab-settings-verticalbooking.php:385 
+#: includes/tabs/tab-settings-simplebooking.php:411
+msgid "Label"
+msgstr "Etichetta"
+
+#: includes/tabs/tab-layout.php:75
+msgid "Labels"
+msgstr "Etichette"
+
+#: includes/tabs/tab-settings-iperbooking.php:87 
+#: includes/tabs/tab-settings-iperbooking.php:105
+msgid "Lang code"
+msgstr "Codice lingua"
+
+#: includes/tabs/tab-settings-iperbooking.php:102 
+#: includes/tabs/tab-settings-iperbooking.php:135
+msgid "Language option"
+msgstr "Opzione lingua"
+
+#: includes/tabs/tab-settings-iperbooking.php:85
+msgid "Language options"
+msgstr "Opzione lingue"
+
+#: includes/tabs/tab-settings-iperbooking.php:76
+msgid "Language settings"
+msgstr "Impostazioni della lingua"
+
+#: includes/tabs/tab-layout.php:20 includes/tabs/tabs-nav.php:19
+msgid "Layout"
+msgstr "Layout"
+
+#: includes/tabs/tab-settings-iperbooking.php:333 
+#: includes/tabs/tab-settings-verticalbooking.php:167 
+#: includes/tabs/tab-settings-simplebooking.php:164
+msgid "Max Adults"
+msgstr "Massimo Adulti"
+
+#: includes/tabs/tab-settings-iperbooking.php:512
+msgid "Max child age"
+msgstr "Età massima dei bambini"
+
+#: includes/tabs/tab-settings-iperbooking.php:421 
+#: includes/tabs/tab-settings-verticalbooking.php:255 
+#: includes/tabs/tab-settings-simplebooking.php:252
+msgid "Max children"
+msgstr "Massimo bambini"
+
+#: includes/tabs/tab-settings-verticalbooking.php:346 
+#: includes/tabs/tab-settings-simplebooking.php:343
+msgid "Max children age"
+msgstr "Età massima dei bambini"
+
+#: includes/tabs/tab-settings-iperbooking.php:481
+msgid "Min child age"
+msgstr "Età minima del bambino"
+
+#: includes/tabs/tab-settings-verticalbooking.php:315 
+#: includes/tabs/tab-settings-simplebooking.php:312
+msgid "Min children age"
+msgstr "Età minima dei bambini"
+
+#: includes/classes/class-astro-booking-engine-widget.php:50
+msgid "New title"
+msgstr "Nuovo titolo"
+
+#: includes/tabs/tab-settings-iperbooking.php:51 
+#: includes/tabs/tab-settings-verticalbooking.php:85 
+#: includes/tabs/tab-settings-simplebooking.php:82
+msgid "New window or tab"
+msgstr "Nuova finestra o scheda"
+
+#: astro-booking-engine-common.php:162
+msgid "No provider has been selected in Astro Booking Engine plugin."
+msgstr "Nessun provider è stato selezionato nel plugin Astro Booking Engine."
+
+#: includes/tabs/tab-layout.php:142 includes/tabs/tab-layout.php:218 
+#: includes/tabs/tab-layout.php:448
+msgid "normal"
+msgstr "normale"
+
+#: includes/tabs/tab-support.php:40
+msgid ""
+"Only after configuring the Astro Booking Engine with the provider's data, "
+"you can you start to use the booking form on your website."
+msgstr ""
+"Solo dopo aver configurato l'Astro Booking Engine con i dati del provider, "
+"potrai iniziare ad utilizzare il modulo di prenotazione sul tuo sito web."
+
+#: includes/tabs/tab-settings-iperbooking.php:200
+msgid "Option example"
+msgstr "Esempio di opzione"
+
+#: includes/tabs/tab-settings-iperbooking.php:199
+msgid "Options"
+msgstr "Opzioni"
+
+#: includes/tabs/tab-settings.php:19
+msgctxt "pagina di supporto"
+msgid "support page"
+msgstr "pagina di supporto"
+
+#: includes/tabs/tab-settings.php:16
+msgctxt "Per i dettagli sull'installazione, vedi la"
+msgid "For installation details, read more at the"
+msgstr "Per i dettagli sull'installazione, vedi la"
+
+#: includes/tabs/tab-support.php:66
+msgid "Plugin data reset"
+msgstr "Ripristino dei dati del plugin"
+
+#: includes/tabs/tab-support.php:59
+msgid "plugin support page"
+msgstr "pagina di supporto del plugin"
+
+#: includes/tabs/tab-settings.php:34
+msgid "Provider"
+msgstr "Fornitore"
+
+#: includes/tabs/tab-support.php:44
+msgid "Providers list"
+msgstr "Elenco fornitori"
+
+#: includes/tabs/tab-layout.php:64 includes/tabs/tab-layout.php:117 
+#: includes/tabs/tab-layout.php:193 includes/tabs/tab-layout.php:263 
+#: includes/tabs/tab-layout.php:341 includes/tabs/tab-layout.php:423 
+#: includes/tabs/tab-layout.php:493 includes/tabs/tab-layout.php:571
+msgid "px"
+msgstr "px"
+
+#: includes/tabs/tab-support.php:67
+msgid "Remove all plugin settings"
+msgstr "Rimuovi tutte le impostazioni del plugin"
+
+#: includes/tabs/tab-support.php:59
+msgid "Request support at the "
+msgstr "Richiedi supporto a"
+
+#: includes/tabs/tab-settings-iperbooking.php:52 
+#: includes/tabs/tab-settings-verticalbooking.php:86 
+#: includes/tabs/tab-settings-simplebooking.php:83
+msgid "Same window or tab"
+msgstr "Stessa finestra o scheda"
+
+#: templates/verticalbooking.php:166 templates/simplebooking.php:177 
+#: templates/iperbooking.php:206 
+#: includes/tabs/tab-settings-iperbooking.php:584 
+#: includes/tabs/tab-settings-verticalbooking.php:389 
+#: includes/tabs/tab-settings-simplebooking.php:415
+msgid "Search"
+msgstr "Cerca"
+
+#: includes/tabs/tab-support.php:32
+msgid "see the list of currently available providers"
+msgstr "vedi l'elenco dei provider attualmente disponibili"
+
+#: astro-booking-engine-admin.php:41
+msgid "Select Color"
+msgstr "Seleziona Colore"
+
+#: includes/tabs/tab-support.php:33
+msgid "Select the provider name and configure its settings"
+msgstr "Seleziona il nome del provider e configura le sue impostazioni"
+
+#: includes/tabs/tab-settings.php:39
+msgid ""
+"Select your provider and configure its settings to enable Astro Booking "
+"Engine."
+msgstr ""
+"Seleziona il tuo provider e configura le sue impostazioni per abilitare "
+"Astro Booking Engine."
+
+#: astro-booking-engine.php:99 includes/tabs/tab-settings.php:14 
+#: includes/tabs/tabs-nav.php:15
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: astro-booking-engine-common.php:166
+msgid "settings page"
+msgstr "pagina delle impostazioni"
+
+#: includes/tabs/tab-layout.php:381 
+#: includes/tabs/tab-settings-iperbooking.php:576 
+#: includes/tabs/tab-settings-verticalbooking.php:381 
+#: includes/tabs/tab-settings-simplebooking.php:407
+msgid "Submit button"
+msgstr "Pulsante di invio"
+
+#: includes/tabs/tab-support.php:28 includes/tabs/tabs-nav.php:23
+msgid "Support"
+msgstr "Supporto"
+
+#: includes/tabs/tab-settings-iperbooking.php:43 
+#: includes/tabs/tab-settings-verticalbooking.php:77 
+#: includes/tabs/tab-settings-simplebooking.php:74
+msgid "Target"
+msgstr "Obiettivo"
+
+#: includes/classes/class-astro-booking-engine-widget.php:23
+msgid ""
+"The Astro Booking Engine plugin displays a user friendly and responsive "
+"booking engine form."
+msgstr ""
+"Il plugin Astro Booking Engine mostra un modulo di motore di prenotazione "
+"facile da usare e reattivo."
+
+#: includes/tabs/tab-support.php:39
+msgid ""
+"The booking engine provider can send you the useful settings to configure "
+"the Astro Booking Engine; we are not a booking engine provider."
+msgstr ""
+"Il fornitore del motore di prenotazione può inviarti le impostazioni utili "
+"per configurare l'Astro Booking Engine; non siamo un fornitore di motori di "
+"prenotazione."
+
+#: includes/tabs/tab-settings-iperbooking.php:581 
+#: includes/tabs/tab-settings-verticalbooking.php:386 
+#: includes/tabs/tab-settings-simplebooking.php:412
+msgid "The default value is Search."
+msgstr "Il valore predefinito è Cerca."
+
+#: astro-booking-engine-common.php:160
+msgid "This message is visible only to the site administrator."
+msgstr "Questo messaggio è visibile solo all'amministratore del sito."
+
+#: includes/classes/class-astro-booking-engine-widget.php:55
+msgid "Title"
+msgstr "Titolo"
+
+#: templates/iperbooking.php:62
+msgid "Treatment"
+msgstr "Trattamento"
+
+#: includes/tabs/tab-settings-iperbooking.php:190
+msgid "Treatment options"
+msgstr "Opzioni di trattamento"
+
+#: includes/tabs/tab-settings-iperbooking.php:166
+msgid "Treatments"
+msgstr "Trattamenti"
+
+#: includes/tabs/tab-settings-iperbooking.php:88 
+#: includes/tabs/tab-settings-iperbooking.php:109
+msgid "URL"
+msgstr "URL"
+
+#: includes/tabs/tab-support.php:35
+msgid ""
+"Use the [astro-booking-engine] shortcode in your post/page content or add "
+"the Astro Booking Engine in the widget area."
+msgstr ""
+"Usa lo shortcode [astro-booking-engine] nel contenuto del tuo "
+"articolo/pagina o aggiungi Astro Booking Engine nell'area del widget."
+
+#: includes/tabs/tab-settings-iperbooking.php:201 
+#: includes/tabs/tab-settings-iperbooking.php:252
+msgid "Value"
+msgstr "Valore"
+
+#: includes/tabs/tab-settings-iperbooking.php:169
+msgid "Visible"
+msgstr "Visibile"
+
+#: includes/tabs/tab-layout.php:22
+msgid "Widget"
+msgstr "Widget"
+
+#: includes/tabs/tab-support.php:53 includes/tabs/tab-support.php:62
+msgid "Write me an email at"
+msgstr "Scrivi una mail a"
+
+#: astro-booking-engine-admin.php:141
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+"Non disponi di autorizzazioni sufficienti per accedere a questa pagina."
+
+#: includes/tabs/tab-settings.php:38
+msgid "Your provider"
+msgstr "Il tuo fornitore"
