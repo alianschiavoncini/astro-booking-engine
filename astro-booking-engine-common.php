@@ -29,6 +29,26 @@ function astro_be_option_names($tab = false) {
 				'provider' => ASTRO_BE_PREFIX . 'provider',
 
 				/**
+				 * 5Stelle
+				 */
+				ASTRO_BE_PREFIX . '5stelle_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . '5stelle_form_target' => ASTRO_BE_PREFIX . '5stelle_form_target',
+				ASTRO_BE_PREFIX . '5stelle_rooms' => esc_attr('1'), //required >= 1; default value = 1
+				ASTRO_BE_PREFIX . '5stelle_adults_enable' => ASTRO_BE_PREFIX . '5stelle_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . '5stelle_adults_n_default' => ASTRO_BE_PREFIX . '5stelle_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . '5stelle_adults_n_max' => ASTRO_BE_PREFIX . '5stelle_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . '5stelle_children_enable' => ASTRO_BE_PREFIX . '5stelle_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . '5stelle_children_n_default' => ASTRO_BE_PREFIX . '5stelle_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . '5stelle_children_n_max' => ASTRO_BE_PREFIX . '5stelle_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . '5stelle_childage_enable' => ASTRO_BE_PREFIX . '5stelle_childage_enable', //enable/disable
+				ASTRO_BE_PREFIX . '5stelle_childage_min' => ASTRO_BE_PREFIX . '5stelle_childage_min', //conditional
+				ASTRO_BE_PREFIX . '5stelle_childage_max' => ASTRO_BE_PREFIX . '5stelle_childage_max', //conditional
+				ASTRO_BE_PREFIX . '5stelle_submit_label' => ASTRO_BE_PREFIX . '5stelle_submit_label', //optional
+
+				//5Stelle custom fields
+				ASTRO_BE_PREFIX . '5stelle_portal' => ASTRO_BE_PREFIX . '5stelle_portal', //required
+
+				/**
 				 * Iperbooking
 				 */
 				ASTRO_BE_PREFIX . 'iperbooking_form_method' => esc_attr('get'),
