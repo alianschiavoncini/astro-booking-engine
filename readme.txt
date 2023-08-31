@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 The plugin allows you to <strong>display the booking engine</strong> form through the use of the shortcode <strong>[astro-booking-engine]</strong> or through the use of the widget.
 It is necessary to have a contract with one of the booking engine providers and to have configured its parameters to use this plugin.
 
-<strong>List of configurable booking engine providers</strong>:
+<strong>List of configurable booking engine providers in alphabetical order</strong>:
 <ul>
     <li><a href="https://www.hotelcinquestelle.cloud/en/" target="_blank" rel="nofollow">5Stelle</a></li>
     <li><a href="https://www.iperbooking.com/" target="_blank" rel="nofollow">Iperbooking</a></li>
