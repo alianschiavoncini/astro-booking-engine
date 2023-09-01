@@ -3,26 +3,28 @@ Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, booking widget, reservation widget, hotel booking engine, iperbooking, simple booking, vertical booking, 5stelle
 Requires at least: 6.0.1
 Tested up to: 6.3.1
-Stable tag:	1.1.0
+Stable tag:	1.1.1
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-The plugin allows you to <strong>display the booking engine</strong> form through the use of the shortcode <strong>[astro-booking-engine]</strong> or through the use of the widget.
-It is necessary to have a contract with one of the booking engine providers and to have configured its parameters to use this plugin.
+Display the <strong>booking engine form</strong> through the use of the shortcode <strong>[astro-booking-engine]</strong>.
+Includes the most popular booking engine providers.
+You need to have a contract with one of the booking engine providers listed below and configure the plugin settings.
 
 <strong>List of configurable booking engine providers in alphabetical order</strong>:
 <ul>
-    <li><a href="https://www.hotelcinquestelle.cloud/en/" target="_blank" rel="nofollow">5Stelle</a></li>
-    <li><a href="https://www.iperbooking.com/" target="_blank" rel="nofollow">Iperbooking</a></li>
-    <li><a href="https://www.simplebooking.travel/" target="_blank" rel="nofollow">Simple booking</a></li>
-    <li><a href="https://www.verticalbooking.com/en/home/" target="_blank" rel="nofollow">Vertical booking</a></li>
+    <li><a href="https://www.hotelcinquestelle.cloud/en/">5Stelle</a></li>
+    <li><a href="https://www.iperbooking.com/">Iperbooking</a></li>
+    <li><a href="https://www.simplebooking.travel/">Simple booking</a></li>
+    <li><a href="https://www.verticalbooking.com/en/home/">Vertical booking</a></li>
 </ul>
 
-If your booking engine provider is not in the list, you can request its inclusion by sending a request to info@astrothemes.com with technical specifications if you have.
+<strong>New booking engine providers are welcome!</strong>
+If your booking engine provider is not on the list, you can request its inclusion by sending an email to <a href="mailto:info@astrothemes.com">info@astrothemes.com</a> with the provider documentation if you have.
 
-The plugin is compatible with translation plugins such as WPML.
+This plugin is compatible with translation plugins such as <a href="https://wpml.org/?aid=24407&affiliate_key=4jfiIKfWkVVG">WPML</a> and <a href="https://wordpress.org/plugins/loco-translate/">Loco Translate.
 
 == Installation ==
 1. Upload the entire `astro-booking-engine` folder to the `/wp-content/plugins/` directory.
