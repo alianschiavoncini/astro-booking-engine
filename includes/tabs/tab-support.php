@@ -64,7 +64,7 @@ do_settings_sections($option_group);
 
             <hr />
 
-            <h3 id="support-data-reset" class="title"><?php _e( 'Plugin data reset', 'astro-booking-engine' ); ?></h3>
+            <h3 id="support-data-reset" class="title"><?php esc_html_e( 'Plugin data reset', 'astro-booking-engine' ); ?></h3>
             <p><a class="button button-primary" href="?page=<?php echo ASTRO_BE_TEXTDOMAIN; ?>&amp;tab=support&amp;delete_options=1"><?php _e( 'Remove all plugin settings', 'astro-booking-engine' ); ?></a></p>
             <p class="color-red"><?php echo esc_html($delete_options); ?></p>
 
