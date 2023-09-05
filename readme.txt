@@ -24,7 +24,7 @@ You need to have a contract with one of the booking engine providers listed belo
 <strong>New booking engine providers are welcome!</strong>
 If your booking engine provider is not on the list, you can request its inclusion by sending an email to <a href="mailto:info@astrothemes.com">info@astrothemes.com</a> with the provider documentation if you have.
 
-This plugin is compatible with translation plugins such as <a href="https://wpml.org/?aid=24407&affiliate_key=4jfiIKfWkVVG">WPML</a> and <a href="https://wordpress.org/plugins/loco-translate/">Loco Translate.
+This plugin is compatible with translation plugins such as WPML and Loco Translate.
 
 == Installation ==
 1. Upload the entire `astro-booking-engine` folder to the `/wp-content/plugins/` directory.
@@ -38,6 +38,9 @@ This plugin is compatible with translation plugins such as <a href="https://wpml
 5. Backend: layout customization
 
 == Changelog ==
+= 1.1.1 =
+* Changed the plugin description.
+
 = 1.1.0 =
 * Added 5Stelle provider.
 
