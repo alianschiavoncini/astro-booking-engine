@@ -51,6 +51,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                                                 '' => '---',
                                                 '5stelle' => '5Stelle',
                                                 'iperbooking' => 'Iperbooking',
+                                                'passepartout' => 'Passepartout',
                                                 'simplebooking' => 'Simple booking',
                                                 'verticalbooking' => 'Vertical booking',
                                                 );
@@ -80,6 +81,9 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 
         //iperbooking
         include('tab-settings-iperbooking.php');
+
+        //passepartout
+        include('tab-settings-passepartout.php');
 
         //simplebooking
         include('tab-settings-simplebooking.php');

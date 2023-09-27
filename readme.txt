@@ -1,9 +1,9 @@
 === Astro Booking Engine ===
 Contributors: alian
-Tags: booking engine, hotel booking, hotel widget, booking widget, reservation widget, hotel booking engine, iperbooking, simple booking, vertical booking, 5stelle
+Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget, reservation widget
 Requires at least: 6.0.1
 Tested up to: 6.3.1
-Stable tag:	1.1.1
+Stable tag:	1.2.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,6 +17,7 @@ You need to have a contract with one of the booking engine providers listed belo
 <ul>
     <li><a href="https://www.hotelcinquestelle.cloud/en/">5Stelle</a></li>
     <li><a href="https://www.iperbooking.com/">Iperbooking</a></li>
+    <li><a href="https://www.passepartout.net/">Passepartout</a></li>
     <li><a href="https://www.simplebooking.travel/">Simple booking</a></li>
     <li><a href="https://www.verticalbooking.com/en/home/">Vertical booking</a></li>
 </ul>
@@ -38,6 +39,9 @@ This plugin is compatible with translation plugins such as WPML and Loco Transla
 5. Backend: layout customization
 
 == Changelog ==
+= 1.2.0 =
+* Added Passepartout provider.
+
 = 1.1.1 =
 * Changed the plugin description.
 

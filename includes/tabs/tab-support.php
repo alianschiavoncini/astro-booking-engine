@@ -46,6 +46,7 @@ do_settings_sections($option_group);
             <ul>
                 <li><a href="https://www.hotelcinquestelle.cloud/en/" target="_blank">5Stelle</a></li>
                 <li><a href="https://www.iperbooking.com/" target="_blank">Iperbooking</a></li>
+                <li><a href="https://www.passepartout.net/" target="_blank">Passepartout</a></li>
                 <li><a href="https://www.simplebooking.travel/" target="_blank">Simple Booking</a></li>
                 <li><a href="https://www.verticalbooking.com/en/home/" target="_blank">Vertical Booking</a></li>
             </ul>

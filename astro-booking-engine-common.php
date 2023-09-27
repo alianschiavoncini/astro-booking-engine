@@ -75,6 +75,28 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'iperbooking_codiceSconto' => ASTRO_BE_PREFIX . 'iperbooking_codiceSconto', //enable/disable
 
 				/**
+				 * Passepartout
+				 */
+				ASTRO_BE_PREFIX . 'passepartout_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'passepartout_form_target' => ASTRO_BE_PREFIX . 'passepartout_form_target',
+				ASTRO_BE_PREFIX . 'passepartout_rooms' => esc_attr('1'), //required >= 1; default value = 1
+				ASTRO_BE_PREFIX . 'passepartout_adults_enable' => ASTRO_BE_PREFIX . 'passepartout_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'passepartout_adults_n_default' => ASTRO_BE_PREFIX . 'passepartout_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'passepartout_adults_n_max' => ASTRO_BE_PREFIX . 'passepartout_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'passepartout_children_enable' => ASTRO_BE_PREFIX . 'passepartout_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'passepartout_children_n_default' => ASTRO_BE_PREFIX . 'passepartout_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'passepartout_children_n_max' => ASTRO_BE_PREFIX . 'passepartout_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'passepartout_childage_enable' => ASTRO_BE_PREFIX . 'passepartout_childage_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'passepartout_childage_min' => ASTRO_BE_PREFIX . 'passepartout_childage_min', //conditional
+				ASTRO_BE_PREFIX . 'passepartout_childage_max' => ASTRO_BE_PREFIX . 'passepartout_childage_max', //conditional
+				ASTRO_BE_PREFIX . 'passepartout_submit_label' => ASTRO_BE_PREFIX . 'passepartout_submit_label', //optional
+
+				//passepartout custom fields
+				ASTRO_BE_PREFIX . 'passepartout_Albergo' => ASTRO_BE_PREFIX . 'passepartout_Albergo', //required
+				ASTRO_BE_PREFIX . 'passepartout_OidPortaleXAlbergo' => ASTRO_BE_PREFIX . 'passepartout_OidPortaleXAlbergo', //required
+				ASTRO_BE_PREFIX . 'passepartout_CodicePromozione' => ASTRO_BE_PREFIX . 'passepartout_CodicePromozione',
+
+				/**
 				 * Simple booking
 				 */
 				ASTRO_BE_PREFIX . 'simplebooking_form_method' => esc_attr('get'), //required

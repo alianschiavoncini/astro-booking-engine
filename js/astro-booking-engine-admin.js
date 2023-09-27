@@ -117,6 +117,22 @@ jQuery( document ).ready(function( $ ) {
 
         $error_msg = '';
 
+        //5Stelle
+        if($('.box.5stelle').css('display') == 'block') {
+
+            var astro_be_5stelle_portal = $('#astro_be_5stelle_portal').val();
+            if (astro_be_5stelle_portal == '') {
+                $error_msg += '- Portal: the field is required.\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = '5Stelle fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
         //iperbooking
         if($('.box.iperbooking').css('display') == 'block') {
 
@@ -160,6 +176,27 @@ jQuery( document ).ready(function( $ ) {
 
         }
 
+        //passepartout
+        /*if($('.box.passepartout').css('display') == 'block') {
+
+            var astro_be_passepartout_Albergo = $('#astro_be_passepartout_Albergo').val();
+            if (astro_be_passepartout_Albergo == '') {
+                $error_msg += '- Albergo: the field is required.\n';
+            }
+
+            var astro_be_passepartout_OidPortaleXAlbergo = $('#astro_be_passepartout_OidPortaleXAlbergo').val();
+            if (astro_be_passepartout_OidPortaleXAlbergo == '') {
+                $error_msg += '- OidPortaleXAlbergo: the field is required.\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Passepartout fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }*/
+
         //verticalbooking
         if($('.box.verticalbooking').css('display') == 'block') {
 
@@ -199,11 +236,6 @@ jQuery( document ).ready(function( $ ) {
 
         //simplebooking
         if($('.box.simplebooking').css('display') == 'block') {
-
-            var astro_be_verticalbooking_hid = $('#astro_be_verticalbooking_hid').val();
-            if (astro_be_verticalbooking_hid == '') {
-                $error_msg += '- hid: the field is required.\n';
-            }
 
             if ($('#astro_be_simplebooking_children_enable').is(':checked') && !$("#astro_be_simplebooking_childage_enable").is(":checked")) {
                 $error_msg += '- children age: must be enable if the children dropdown is enable.\n';
