@@ -5,7 +5,13 @@ if( ! is_admin() ) {
 
 function astro_be_delete_options_prefixed( $prefix ) {
 	global $wpdb;
-	$wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE '{$prefix}%'" );
+
+	$prefix = esc_sql( $prefix );
+	$query = $wpdb->prepare(
+		"DELETE FROM {$wpdb->options} WHERE option_name LIKE %s",
+		$prefix . '%'
+	);
+	$wpdb->query( $query );
 }
 
 $delete_options = false;
@@ -20,7 +26,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 settings_fields($option_group);
 do_settings_sections($option_group);
 ?>
-<div class="<?php echo ASTRO_BE_PREFIX . 'wrapper'; ?> <?php echo esc_attr( $option_group ); ?>">
+<div class="<?php echo esc_attr(ASTRO_BE_PREFIX) . 'wrapper'; ?> <?php echo esc_attr( $option_group ); ?>">
 
     <div class="section-wrapper">
         <div class="section-wrapper-inner">
@@ -58,7 +64,7 @@ do_settings_sections($option_group);
 
             <h3 id="support-faqs" class="title"><?php esc_html_e( 'FAQs', 'astro-booking-engine' ); ?></h3>
             <p><span class="support-faq-question"><?php esc_html_e( 'Do you need support?', 'astro-booking-engine' ); ?></span><br>
-                <span class="support-faq-answer"><?php esc_html_e( 'Request support at the ', 'astro-booking-engine' ); ?> <a href="https://wordpress.org/support/plugin/astro-booking-engine/" target="_blank"><?php _e( 'plugin support page', 'astro-booking-engine' ); ?></a>.</span></p>
+                <span class="support-faq-answer"><?php esc_html_e( 'Request support at the ', 'astro-booking-engine' ); ?> <a href="https://wordpress.org/support/plugin/astro-booking-engine/" target="_blank"><?php esc_html_e( 'plugin support page', 'astro-booking-engine' ); ?></a>.</span></p>
 
             <p><span class="support-faq-question"><?php esc_html_e( 'Have more questions?', 'astro-booking-engine' ); ?></span><br>
             <span class="support-faq-answer"><?php esc_html_e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:info@astrothemes.com">info@astrothemes.com</a>.</span></p>
@@ -66,7 +72,7 @@ do_settings_sections($option_group);
             <hr />
 
             <h3 id="support-data-reset" class="title"><?php esc_html_e( 'Plugin data reset', 'astro-booking-engine' ); ?></h3>
-            <p><a class="button button-primary" href="?page=<?php echo ASTRO_BE_TEXTDOMAIN; ?>&amp;tab=support&amp;delete_options=1"><?php _e( 'Remove all plugin settings', 'astro-booking-engine' ); ?></a></p>
+            <p><a class="button button-primary" href="?page=<?php echo urlencode_deep(ASTRO_BE_TEXTDOMAIN); ?>&amp;tab=support&amp;delete_options=1"><?php esc_html_e( 'Remove all plugin settings', 'astro-booking-engine' ); ?></a></p>
             <p class="color-red"><?php echo esc_html($delete_options); ?></p>
 
         </div>

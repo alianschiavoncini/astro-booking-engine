@@ -12,7 +12,7 @@ $provider = 'iperbooking';
         <h2>Iperbooking</h2>
 
         <!-- hotelsettings -->
-        <h3 id="hotelsettings"><?php _e( 'Hotel settings', 'astro-booking-engine' ); ?></h3>
+        <h3 id="hotelsettings"><?php esc_html_e( 'Hotel settings', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 			<?php
 			$field = array(
@@ -36,7 +36,7 @@ $provider = 'iperbooking';
         <hr />
 
         <!-- formsetting -->
-        <h3 id="formsetting"><?php _e( 'Form settings', 'astro-booking-engine' ); ?></h3>
+        <h3 id="formsetting"><?php esc_html_e( 'Form settings', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 			<?php
 			$field = array(
@@ -82,13 +82,13 @@ $provider = 'iperbooking';
 			?>
             <tr>
                 <th scope="row">
-					<?php _e( 'Language options', 'astro-booking-engine' ); ?>
+					<?php esc_html_e( 'Language options', 'astro-booking-engine' ); ?>
                     <p class="description"><strong>Option example</strong><br>
-						<?php _e( 'Lang code', 'astro-booking-engine' ); ?>: EN<br>
-						<?php _e( 'URL', 'astro-booking-engine' ); ?>: https://secure.iperbooking.net/be/en/your-hotel-name/</p>
+						<?php esc_html_e( 'Lang code', 'astro-booking-engine' ); ?>: EN<br>
+						<?php esc_html_e( 'URL', 'astro-booking-engine' ); ?>: https://secure.iperbooking.net/be/en/your-hotel-name/</p>
                 </th>
                 <td class="<?php echo esc_attr($provider); ?>-language">
-                    <button class="button <?php echo esc_attr($provider); ?>-language-options-add-field"><?php _e( 'Add new option', 'astro-booking-engine' ); ?></button>
+                    <button class="button <?php echo esc_attr($provider); ?>-language-options-add-field"><?php esc_html_e( 'Add new option', 'astro-booking-engine' ); ?></button>
 					<?php
 					$i = 1;
 
@@ -99,18 +99,18 @@ $provider = 'iperbooking';
 						foreach ($check_option as $option) {
 							?>
                             <fieldset class="provider-fieldset provider-fieldset-<?php echo esc_attr($i); ?>">
-                                <legend class="provider-fieldset-legend"><?php _e( 'Language option', 'astro-booking-engine' ); ?> #<?php echo esc_attr($i); ?></legend>
+                                <legend class="provider-fieldset-legend"><?php esc_html_e( 'Language option', 'astro-booking-engine' ); ?> #<?php echo esc_attr($i); ?></legend>
                                 <div class="provider-fieldset-content">
                                     <div class="provider-fieldset-row">
-                                        <span class="provider-fieldset-label"><?php _e( 'Lang code', 'astro-booking-engine' ); ?>:</span>
+                                        <span class="provider-fieldset-label"><?php esc_html_e( 'Lang code', 'astro-booking-engine' ); ?>:</span>
                                         <input type="text" name="<?php echo esc_attr($field['name']).'[option_'.esc_attr($i).'][code]'; ?>" class="regular-text" value="<?php echo esc_attr($option['code']); ?>" />
                                     </div>
                                     <div class="provider-fieldset-row">
-                                        <span class="provider-fieldset-label"><?php _e( 'URL', 'astro-booking-engine' ); ?>:</span>
+                                        <span class="provider-fieldset-label"><?php esc_html_e( 'URL', 'astro-booking-engine' ); ?>:</span>
                                         <input type="text" name="<?php echo esc_attr($field['name']).'[option_'.esc_attr($i).'][url]'; ?>" class="regular-text" value="<?php echo esc_attr($option['url']); ?>" />
                                     </div>
                                     <div class="provider-fieldset-row">
-                                        <span class="provider-fieldset-label"><?php _e( 'Default', 'astro-booking-engine' ); ?>:</span>
+                                        <span class="provider-fieldset-label"><?php esc_html_e( 'Default', 'astro-booking-engine' ); ?>:</span>
                                         <input type="radio"
                                                name="<?php echo esc_attr($field['name']).'_default'; ?>"
                                                class="<?php echo esc_attr($provider); ?>-language-option-default <?php echo esc_attr($provider); ?>-language-option-<?php echo esc_attr($i); ?>"
@@ -123,7 +123,7 @@ $provider = 'iperbooking';
                                     </div>
                                 </div>
 								<?php if ($i > 1) { ?>
-                                    <button class="button iperbooking-language-options-delete-field"><?php _e( 'Delete', 'astro-booking-engine' ); ?></button>
+                                    <button class="button iperbooking-language-options-delete-field"><?php esc_html_e( 'Delete', 'astro-booking-engine' ); ?></button>
 								<?php } ?>
                             </fieldset>
 							<?php
@@ -132,7 +132,7 @@ $provider = 'iperbooking';
 					}else{
 						?>
                         <fieldset class="provider-fieldset provider-fieldset-<?php echo esc_attr($i); ?>">
-                            <legend class="provider-fieldset-legend"><?php _e( 'Language option', 'astro-booking-engine' ); ?> #<?php echo esc_attr($i); ?></legend>
+                            <legend class="provider-fieldset-legend"><?php esc_html_e( 'Language option', 'astro-booking-engine' ); ?> #<?php echo esc_attr($i); ?></legend>
                             <div class="provider-fieldset-content">
                                 <div class="provider-fieldset-row">
                                     <span class="provider-fieldset-label">Lang code:</span>
@@ -143,7 +143,7 @@ $provider = 'iperbooking';
                                     <input type="text" name="<?php echo esc_attr($field['name']).'[option_'.esc_attr($i).'][url]'; ?>" class="regular-text" value="" />
                                 </div>
                                 <div class="provider-fieldset-row">
-                                    <span class="provider-fieldset-label"><?php _e( 'Default', 'astro-booking-engine' ); ?>:</span>
+                                    <span class="provider-fieldset-label"><?php esc_html_e( 'Default', 'astro-booking-engine' ); ?>:</span>
                                     <input type="radio"
                                            name="<?php echo esc_attr($field['name']).'_default'; ?>"
                                            class="regular-text <?php echo esc_attr($provider); ?>-language-option-default <?php echo esc_attr($provider); ?>-language-option-<?php echo esc_attr($i); ?>"
@@ -163,7 +163,7 @@ $provider = 'iperbooking';
         <hr />
 
         <!-- treatment -->
-        <h3 id="treatment"><?php _e( 'Treatments', 'astro-booking-engine' ); ?></h3>
+        <h3 id="treatment"><?php esc_html_e( 'Treatments', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 			<?php
 			$field_label = esc_html__( 'Visible', 'astro-booking-engine' );
@@ -196,13 +196,13 @@ $provider = 'iperbooking';
             ?>
             <tr>
                 <th scope="row">
-                    <?php _e( 'Options', 'astro-booking-engine' ); ?>
-                    <p class="description"><strong><?php _e( 'Option example', 'astro-booking-engine' ); ?></strong><br>
-						<?php _e( 'Value', 'astro-booking-engine' ); ?>: 4<br>
-						<?php _e( 'Label', 'astro-booking-engine' ); ?>: Bed & Breakfast</p>
+                    <?php esc_html_e( 'Options', 'astro-booking-engine' ); ?>
+                    <p class="description"><strong><?php esc_html_e( 'Option example', 'astro-booking-engine' ); ?></strong><br>
+						<?php esc_html_e( 'Value', 'astro-booking-engine' ); ?>: 4<br>
+						<?php esc_html_e( 'Label', 'astro-booking-engine' ); ?>: Bed & Breakfast</p>
                 </th>
                 <td class="<?php echo esc_attr($provider); ?>-treatment">
-                    <button class="button <?php echo esc_attr($provider); ?>-treatment-options-add-field"><?php _e( 'Add new option', 'astro-booking-engine' ); ?></button>
+                    <button class="button <?php echo esc_attr($provider); ?>-treatment-options-add-field"><?php esc_html_e( 'Add new option', 'astro-booking-engine' ); ?></button>
                     <?php
                     $i = 1;
 
@@ -224,7 +224,7 @@ $provider = 'iperbooking';
                                 <input type="text" name="<?php echo esc_attr($field['name']).'[option_'.esc_attr($i).'][label]'; ?>" class="regular-text" value="<?php echo esc_attr($option['label']); ?>" />
                             </div>
                             <div class="provider-fieldset-row">
-                                <span class="provider-fieldset-label"><?php _e( 'Default', 'astro-booking-engine' ); ?>:</span>
+                                <span class="provider-fieldset-label"><?php esc_html_e( 'Default', 'astro-booking-engine' ); ?>:</span>
                                 <input type="radio"
                                        name="<?php echo esc_attr($field['name']).'_default'; ?>"
                                        class="<?php echo esc_attr($provider); ?>-treatment-option-default <?php echo esc_attr($provider); ?>-treatment-option-<?php echo esc_attr($i); ?>"
@@ -237,7 +237,7 @@ $provider = 'iperbooking';
                             </div>
                         </div>
                         <?php if ($i > 1) { ?>
-                        <button class="button iperbooking-treatment-options-delete-field"><?php _e( 'Delete', 'astro-booking-engine' ); ?></button>
+                        <button class="button iperbooking-treatment-options-delete-field"><?php esc_html_e( 'Delete', 'astro-booking-engine' ); ?></button>
                         <?php } ?>
                     </fieldset>
                     <?php
@@ -249,15 +249,15 @@ $provider = 'iperbooking';
                         <legend class="provider-fieldset-legend">Treatment option #<?php echo esc_html($i); ?></legend>
                         <div class="provider-fieldset-content">
                             <div class="provider-fieldset-row">
-                                <span class="provider-fieldset-label"><?php _e( 'Value', 'astro-booking-engine' ); ?>:</span>
+                                <span class="provider-fieldset-label"><?php esc_html_e( 'Value', 'astro-booking-engine' ); ?>:</span>
                                 <input type="text" name="<?php echo esc_attr($field['name']).'[option_'.esc_attr($i).'][value]'; ?>" class="regular-text" value="" />
                             </div>
                             <div class="provider-fieldset-row">
-                                <span class="provider-fieldset-label"><?php _e( 'Label', 'astro-booking-engine' ); ?>:</span>
+                                <span class="provider-fieldset-label"><?php esc_html_e( 'Label', 'astro-booking-engine' ); ?>:</span>
                                 <input type="text" name="<?php echo esc_attr($field['name']).'[option_'.esc_attr($i).'][label]'; ?>" class="regular-text" value="" />
                             </div>
                             <div class="provider-fieldset-row">
-                                <span class="provider-fieldset-label"><?php _e( 'Default', 'astro-booking-engine' ); ?>:</span>
+                                <span class="provider-fieldset-label"><?php esc_html_e( 'Default', 'astro-booking-engine' ); ?>:</span>
                                 <input type="radio"
                                        name="<?php echo esc_attr($field['name']).'_default'; ?>"
                                        class="regular-text <?php echo esc_attr($provider); ?>-treatment-option-default <?php echo esc_attr($provider); ?>-treatment-option-<?php echo esc_attr($i); ?>"
@@ -277,7 +277,7 @@ $provider = 'iperbooking';
         <hr />
 
         <!-- adults -->
-        <h3 id="adults"><?php _e( 'Adults', 'astro-booking-engine' ); ?></h3>
+        <h3 id="adults"><?php esc_html_e( 'Adults', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 			<?php
 			$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
@@ -365,7 +365,7 @@ $provider = 'iperbooking';
         <hr />
 
         <!-- children -->
-        <h3 id="children"><?php _e( 'Children', 'astro-booking-engine' ); ?></h3>
+        <h3 id="children"><?php esc_html_e( 'Children', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 			<?php
 			$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
@@ -453,7 +453,7 @@ $provider = 'iperbooking';
         <hr />
 
         <!-- childrenage -->
-        <h3 id="childrenage"><?php _e( 'Children age', 'astro-booking-engine' ); ?></h3>
+        <h3 id="childrenage"><?php esc_html_e( 'Children age', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 			<?php
 			$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
@@ -544,7 +544,7 @@ $provider = 'iperbooking';
         <hr />
 
         <!-- discountcode -->
-        <h3 id="discountcode"><?php _e( 'Discount code', 'astro-booking-engine' ); ?></h3>
+        <h3 id="discountcode"><?php esc_html_e( 'Discount code', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 		<?php
 		$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
@@ -573,7 +573,7 @@ $provider = 'iperbooking';
         <hr />
 
         <!-- submitbutton -->
-        <h3 id="submitbutton"><?php _e( 'Submit button', 'astro-booking-engine' ); ?></h3>
+        <h3 id="submitbutton"><?php esc_html_e( 'Submit button', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 		<?php
 		$field = array(

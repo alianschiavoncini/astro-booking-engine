@@ -11,9 +11,9 @@ $option_group = ASTRO_BE_PREFIX . $tab;
     <div class="section-wrapper">
         <div class="section-wrapper-inner">
 
-            <h2 id="settings" class="title"><?php _e('Settings', 'astro-booking-engine' ); ?></h2>
-            <p><?php _e('Astro Booking Engine displays the booking form using the shortcode <strong>[astro-booking-engine]</strong>.', 'astro-booking-engine'); ?></p>
-            <p><?php _e( 'For installation details, read more at the', 'astro-booking-engine'); ?>
+            <h2 id="settings" class="title"><?php esc_html_e('Settings', 'astro-booking-engine' ); ?></h2>
+            <p><?php esc_html_e('Astro Booking Engine displays the booking form using the shortcode <strong>[astro-booking-engine]</strong>.', 'astro-booking-engine'); ?></p>
+            <p><?php esc_html_e( 'For installation details, read more at the', 'astro-booking-engine'); ?>
                 <?php printf( '<a href="%1$s">%2$s</a>',
                     '?page='.ASTRO_BE_TEXTDOMAIN.'&amp;tab=support',
                       __('support page', 'astro-booking-engine')
@@ -31,7 +31,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         <div class="section-wrapper">
             <div class="section-wrapper-inner">
 
-                <h2 id="provider" class="title"><?php _e('Provider', 'astro-booking-engine' ); ?></h2>
+                <h2 id="provider" class="title"><?php esc_html_e('Provider', 'astro-booking-engine' ); ?></h2>
                 <table class="form-table">
                     <?php
                     $field = array(

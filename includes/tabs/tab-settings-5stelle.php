@@ -12,7 +12,7 @@ $provider = '5stelle';
         <h2>5stelle</h2>
 
         <!-- hotelsettings -->
-        <h3 id="hotelsettings"><?php _e( 'Hotel settings', 'astro-booking-engine' ); ?></h3>
+        <h3 id="hotelsettings"><?php esc_html_e( 'Hotel settings', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 			<?php
 			$field = array(
@@ -36,7 +36,7 @@ $provider = '5stelle';
         <hr />
 
         <!-- formsetting -->
-        <h3 id="formsetting"><?php _e( 'Form settings', 'astro-booking-engine' ); ?></h3>
+        <h3 id="formsetting"><?php esc_html_e( 'Form settings', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 			<?php
 			$field = array(
@@ -76,7 +76,7 @@ $provider = '5stelle';
         <hr />
 
         <!-- adults -->
-        <h3 id="adults"><?php _e( 'Adults', 'astro-booking-engine' ); ?></h3>
+        <h3 id="adults"><?php esc_html_e( 'Adults', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 			<?php
 			$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
@@ -164,7 +164,7 @@ $provider = '5stelle';
         <hr />
 
         <!-- children -->
-        <h3 id="children"><?php _e( 'Children', 'astro-booking-engine' ); ?></h3>
+        <h3 id="children"><?php esc_html_e( 'Children', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 			<?php
 			$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
@@ -252,7 +252,7 @@ $provider = '5stelle';
         <hr />
 
         <!-- childrenage -->
-        <h3 id="childrenage"><?php _e( 'Children age', 'astro-booking-engine' ); ?></h3>
+        <h3 id="childrenage"><?php esc_html_e( 'Children age', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 			<?php
 			$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
@@ -343,7 +343,7 @@ $provider = '5stelle';
         <hr />
 
         <!-- submitbutton -->
-        <h3 id="submitbutton"><?php _e( 'Submit button', 'astro-booking-engine' ); ?></h3>
+        <h3 id="submitbutton"><?php esc_html_e( 'Submit button', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 		<?php
 		$field = array(

@@ -138,7 +138,8 @@ if (class_exists('Astro_Plugin_Panel')) {
  */
 function astro_be_options() {
     if ( !current_user_can( 'manage_options' ) )  {
-        wp_die( __( 'You do not have sufficient permissions to access this page.', 'astro-booking-engine' ) );
+        $str = __( 'You do not have sufficient permissions to access this page.', 'astro-booking-engine' );
+        wp_die($str);
     }
 
     ?>

@@ -52,7 +52,7 @@ if (!class_exists('AstroThemes_BE_Widget')) {
             // Widget admin form
             ?>
             <p>
-                <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title', 'astro-booking-engine' ); ?>:</label>
+                <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title', 'astro-booking-engine' ); ?>:</label>
                 <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
             </p>
             <?php
@@ -61,7 +61,7 @@ if (!class_exists('AstroThemes_BE_Widget')) {
         // Updating widget replacing old instances with new
         public function update( $new_instance, $old_instance ) {
             $instance = array();
-            $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+            $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? wp_strip_all_tags( $new_instance['title'] ) : '';
             return $instance;
         }
 

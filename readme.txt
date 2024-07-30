@@ -1,12 +1,14 @@
 === Astro Booking Engine ===
 Contributors: alian
-Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget, reservation widget
+Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget
 Requires at least: 6.0.1
-Tested up to: 6.3.1
-Stable tag:	1.2.0
-Requires PHP: 7.0
+Tested up to: 6.6.1
+Stable tag:	1.3.0
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Use shortcode [astro-booking-engine] to display the booking form. Configure with 5Stelle, Iperbooking, Passepartout, Simple booking, or Vertical booking.
 
 == Description ==
 Display the <strong>booking engine form</strong> through the use of the shortcode <strong>[astro-booking-engine]</strong>.
@@ -39,6 +41,10 @@ This plugin is compatible with translation plugins such as WPML and Loco Transla
 5. Backend: layout customization
 
 == Changelog ==
+= 1.3.0 =
+* Added full compatibility with WordPress version 6.6.1.
+* Added security checks to the code
+
 = 1.2.0 =
 * Added Passepartout provider.
 
