@@ -2,8 +2,8 @@
 Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget
 Requires at least: 6.0.1
-Tested up to: 6.6.1
-Stable tag:	1.3.0
+Tested up to: 7.0
+Stable tag: 1.4.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,7 +25,7 @@ You need to have a contract with one of the booking engine providers listed belo
 </ul>
 
 <strong>New booking engine providers are welcome!</strong>
-If your booking engine provider is not on the list, you can request its inclusion by sending an email to <a href="mailto:info@astrothemes.com">info@astrothemes.com</a> with the provider documentation if you have.
+If your booking engine provider is not on the list, you can request its inclusion by sending an email to <a href="mailto:alian@alian.it">alian@alian.it</a> with the provider documentation if you have.
 
 This plugin is compatible with translation plugins such as WPML and Loco Translate.
 
@@ -40,7 +40,28 @@ This plugin is compatible with translation plugins such as WPML and Loco Transla
 4. Backend: settings - provider config
 5. Backend: layout customization
 
+== Wordefence vendor verification key ==
+gsphudo7by90lzwdlihyerqxbzj6jiln
+
+== Upgrade Notice ==
+
+= 1.4.1 =
+Security release. Fixes a CSRF issue (CVE-2025-10308) that allowed an administrator to be tricked into deleting all plugin settings through a forged link. Updating is recommended.
+
 == Changelog ==
+= 1.4.1 =
+* Security: fixed a Cross-Site Request Forgery issue in the "Remove all plugin settings" function (CVE-2025-10308). The action was performed on a plain GET request without nonce validation, so an administrator could be tricked into deleting all plugin settings by following a forged link. The request is now validated with a nonce and an explicit capability check. Thanks to Nabil Irawan (Heroes Cyber Security) for the responsible disclosure.
+* Fixed: on the Settings screen the shortcode name was showing the literal &lt;strong&gt; tags instead of being displayed in bold.
+* Changed: the plugin author is now Alian Schiavoncini (https://www.alian.it) and the support address is alian@alian.it. The previous AstroThemes website and email address are no longer active.
+* Changed: the admin menu is now named "Astro Plugins" instead of "AstroThemes".
+* Compatibility: tested with WordPress 7.0.
+* Changed: the plugin version is now stored in the ASTRO_BE_VERSION constant instead of being read at runtime with get_plugin_data().
+* Changed: the jQuery UI calendar stylesheet is now enqueued with a version number, so browsers pick up changes after an update.
+
+= 1.4.0 =
+* Checked full compatibility with WordPress version 6.8.3
+* Added Wordefence vendor verification key
+
 = 1.3.0 =
 * Added full compatibility with WordPress version 6.6.1.
 * Added security checks to the code

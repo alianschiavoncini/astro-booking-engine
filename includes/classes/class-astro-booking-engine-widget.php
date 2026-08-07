@@ -1,13 +1,13 @@
 <?php
 /**
- * AstroThemes Booking Engine Widget Class.
+ * Astro Booking Engine Widget Class.
  *
- * @class   AstroThemes_BE_Widget
+ * @class   Astro_BE_Widget
  */
 
-if (!class_exists('AstroThemes_BE_Widget')) {
+if (!class_exists('Astro_BE_Widget')) {
 
-    class AstroThemes_BE_Widget extends WP_Widget {
+    class Astro_BE_Widget extends WP_Widget {
 
         // The construct part
         function __construct() {
@@ -69,7 +69,7 @@ if (!class_exists('AstroThemes_BE_Widget')) {
 
     // Register and load the widget class
 	function astro_be_registration() {
-		register_widget( 'AstroThemes_BE_Widget' );
+		register_widget( 'Astro_BE_Widget' );
 	}
 	add_action( 'widgets_init', 'astro_be_registration' );
 

@@ -12,7 +12,15 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         <div class="section-wrapper-inner">
 
             <h2 id="settings" class="title"><?php esc_html_e('Settings', 'astro-booking-engine' ); ?></h2>
-            <p><?php esc_html_e('Astro Booking Engine displays the booking form using the shortcode <strong>[astro-booking-engine]</strong>.', 'astro-booking-engine'); ?></p>
+            <p><?php
+				// La stringa contiene <strong>: va stampata con wp_kses() e non con
+				// esc_html_e(), che ne convertirebbe i tag in entita rendendoli visibili
+				// a video. La whitelist consente il solo <strong>.
+				echo wp_kses(
+					__( 'Astro Booking Engine displays the booking form using the shortcode <strong>[astro-booking-engine]</strong>.', 'astro-booking-engine' ),
+					array( 'strong' => array() )
+				);
+			?></p>
             <p><?php esc_html_e( 'For installation details, read more at the', 'astro-booking-engine'); ?>
                 <?php printf( '<a href="%1$s">%2$s</a>',
                     '?page='.ASTRO_BE_TEXTDOMAIN.'&amp;tab=support',

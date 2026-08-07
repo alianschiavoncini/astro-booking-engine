@@ -628,13 +628,13 @@ msgstr ""
 
 # 
 # <p><?php _e( 'Is your booking engine provider not available in Astro Booking Engine?', 'astro-booking-engine' ); ?><br>
-# <?php _e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:info@astrothemes.com">info@astrothemes.com</a>.</p>
+# <?php _e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:alian@alian.it">alian@alian.it</a>.</p>
 
 msgid "Is your booking engine provider not available in Astro Booking Engine?"
 msgstr ""
 
 # <p><?php _e( 'Is your booking engine provider not available in Astro Booking Engine?', 'astro-booking-engine' ); ?><br>
-# <?php _e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:info@astrothemes.com">info@astrothemes.com</a>.</p>
+# <?php _e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:alian@alian.it">alian@alian.it</a>.</p>
 # 
 
 msgid "Write me an email at"
@@ -670,7 +670,7 @@ msgstr ""
 
 # 
 # <p><span class="support-faq-question"><?php _e( 'Have more questions?', 'astro-booking-engine' ); ?></span><br>
-# <span class="support-faq-answer"><?php _e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:info@astrothemes.com">info@astrothemes.com</a>.</span></p>
+# <span class="support-faq-answer"><?php _e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:alian@alian.it">alian@alian.it</a>.</span></p>
 
 msgid "Have more questions?"
 msgstr ""

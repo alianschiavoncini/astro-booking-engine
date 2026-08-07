@@ -1,6 +1,6 @@
 <?php
 /**
- * AstroThemes Plugin Panel Class.
+ * Astro Plugins Plugin Panel Class.
  *
  * @class   Astro_Plugin_Panel
  */
@@ -17,8 +17,8 @@ if (!class_exists('Astro_Plugin_Panel')) {
 		}
 
 		public function astro_plugin_panel_pages() {
-			$page_title = 'AstroThemes';
-			$menu_title = 'AstroThemes';
+			$page_title = 'Astro Plugins';
+			$menu_title = 'Astro Plugins';
 			$capability = 'manage_options';
 			$slug = 'astro-plugin-panel';
 			$callback = '';

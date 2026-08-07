@@ -6,19 +6,44 @@ if( ! is_admin() ) {
 function astro_be_delete_options_prefixed( $prefix ) {
 	global $wpdb;
 
-	$prefix = esc_sql( $prefix );
-	$query = $wpdb->prepare(
-		"DELETE FROM {$wpdb->options} WHERE option_name LIKE %s",
-		$prefix . '%'
+	// esc_like() neutralizza _ e % nel prefisso; prepare() si occupa del resto.
+	$like = $wpdb->esc_like( $prefix ) . '%';
+
+	return $wpdb->query(
+		$wpdb->prepare( "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s", $like )
 	);
-	$wpdb->query( $query );
 }
 
 $delete_options = false;
-if (isset($_GET['delete_options']) && ($_GET['delete_options'] == 1)) {
+if ( isset( $_GET['delete_options'] ) && '1' === $_GET['delete_options'] ) {
+
+	// La capability da sola non basta: senza nonce un amministratore autenticato puo
+	// essere indotto a eseguire la cancellazione con una semplice richiesta forgiata
+	// (CVE-2025-10308). Servono entrambi i controlli.
+	if ( ! current_user_can( 'manage_options' ) ) {
+		wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'astro-booking-engine' ) );
+	}
+
+	$astro_be_nonce = isset( $_GET['nonce'] ) ? sanitize_text_field( wp_unslash( $_GET['nonce'] ) ) : '';
+
+	if ( ! wp_verify_nonce( $astro_be_nonce, 'astro_be_delete_options' ) ) {
+		wp_die( esc_html__( 'Security check failed. Please go back and try again.', 'astro-booking-engine' ) );
+	}
+
 	astro_be_delete_options_prefixed( ASTRO_BE_PREFIX );
 	$delete_options = __( 'All the plugin options have deleted.', 'astro-booking-engine' );
 }
+
+// URL del pulsante di reset, con nonce.
+$astro_be_delete_options_url = add_query_arg(
+	array(
+		'page'           => ASTRO_BE_TEXTDOMAIN,
+		'tab'            => 'support',
+		'delete_options' => 1,
+		'nonce'          => wp_create_nonce( 'astro_be_delete_options' ),
+	),
+	admin_url( 'admin.php' )
+);
 
 $tab = 'support';
 $option_group = ASTRO_BE_PREFIX . $tab;
@@ -58,7 +83,7 @@ do_settings_sections($option_group);
             </ul>
 
             <p><?php esc_html_e( 'Is your booking engine provider not available in Astro Booking Engine?', 'astro-booking-engine' ); ?><br>
-				<?php esc_html_e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:info@astrothemes.com">info@astrothemes.com</a>.</p>
+				<?php esc_html_e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:alian@alian.it">alian@alian.it</a>.</p>
 
             <hr />
 
@@ -67,12 +92,12 @@ do_settings_sections($option_group);
                 <span class="support-faq-answer"><?php esc_html_e( 'Request support at the ', 'astro-booking-engine' ); ?> <a href="https://wordpress.org/support/plugin/astro-booking-engine/" target="_blank"><?php esc_html_e( 'plugin support page', 'astro-booking-engine' ); ?></a>.</span></p>
 
             <p><span class="support-faq-question"><?php esc_html_e( 'Have more questions?', 'astro-booking-engine' ); ?></span><br>
-            <span class="support-faq-answer"><?php esc_html_e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:info@astrothemes.com">info@astrothemes.com</a>.</span></p>
+            <span class="support-faq-answer"><?php esc_html_e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:alian@alian.it">alian@alian.it</a>.</span></p>
 
             <hr />
 
             <h3 id="support-data-reset" class="title"><?php esc_html_e( 'Plugin data reset', 'astro-booking-engine' ); ?></h3>
-            <p><a class="button button-primary" href="?page=<?php echo urlencode_deep(ASTRO_BE_TEXTDOMAIN); ?>&amp;tab=support&amp;delete_options=1"><?php esc_html_e( 'Remove all plugin settings', 'astro-booking-engine' ); ?></a></p>
+            <p><a class="button button-primary" href="<?php echo esc_url( $astro_be_delete_options_url ); ?>"><?php esc_html_e( 'Remove all plugin settings', 'astro-booking-engine' ); ?></a></p>
             <p class="color-red"><?php echo esc_html($delete_options); ?></p>
 
         </div>

@@ -3,11 +3,11 @@
  * Plugin Name:       Astro Booking Engine
  * Plugin URI:        https://wordpress.org/plugins/astro-booking-engine
  * Description:       Display the booking engine form through the use of the shortcode [astro-booking-engine]. Includes the most popular booking engine providers.
- * Version:           1.3.0
- * Requires at least: 5.2
+ * Version:           1.4.1
+ * Requires at least: 6.0.1
  * Requires PHP:      7.4
- * Author:            AstroThemes
- * Author URI:        https://www.astrothemes.com
+ * Author:            Alian Schiavoncini
+ * Author URI:        https://www.alian.it
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       astro-booking-engine
@@ -36,6 +36,7 @@ if ( is_admin() ) {
 /**
  * Plugin constants.
  */
+define('ASTRO_BE_VERSION', '1.4.1');
 define('ASTRO_BE_PREFIX', 'astro_be_');
 define('ASTRO_BE_TEXTDOMAIN', astro_be_plugin_data('TextDomain'));
 
@@ -60,9 +61,9 @@ function astro_be_enqueue_files() {
 	$jquery_ui_theme = get_option(ASTRO_BE_PREFIX.'calendar');
 	if (!$jquery_ui_theme) { $jquery_ui_theme = 'base'; }
 	$jquery_ui_theme_url = plugin_dir_url( __FILE__ ) . 'vendors/jquery-ui-themes/themes/'.$jquery_ui_theme.'/jquery-ui.min.css';
-	wp_enqueue_style('jquery-ui-datepicker-css', $jquery_ui_theme_url);
+	wp_enqueue_style('jquery-ui-datepicker-css', $jquery_ui_theme_url, array(), ASTRO_BE_VERSION);
 
-	$plugin_version = astro_be_plugin_data('Version');
+	$plugin_version = ASTRO_BE_VERSION;
 
 	// Enqueue main files
 	wp_register_style( 'astro-booking-engine', plugin_dir_url( __FILE__ ) . 'css/astro-booking-engine.css', array(), $plugin_version );

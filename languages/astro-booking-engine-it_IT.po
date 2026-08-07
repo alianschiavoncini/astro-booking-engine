@@ -51,8 +51,8 @@ msgstr ""
 "shortcode <strong>[astro-booking-engine]</strong>."
 
 #. Author of the plugin
-msgid "AstroThemes"
-msgstr "AstroThemes"
+msgid "Alian Schiavoncini"
+msgstr "Alian Schiavoncini"
 
 #: includes/tabs/tab-layout.php:26 includes/tabs/tab-layout.php:225 
 #: includes/tabs/tab-layout.php:455
@@ -288,8 +288,8 @@ msgid "https://wordpress.org/plugins/astro-booking-engine"
 msgstr "https://wordpress.org/plugins/astro-booking-engine"
 
 #. Author URI of the plugin
-msgid "https://www.astrothemes.com"
-msgstr "https://www.astrothemes.com"
+msgid "https://www.alian.it"
+msgstr "https://www.alian.it"
 
 #: includes/tabs/tab-settings-verticalbooking.php:19
 msgid "id_albergo"
