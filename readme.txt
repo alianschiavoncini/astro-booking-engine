@@ -2,8 +2,8 @@
 Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget
 Requires at least: 6.0.1
-Tested up to: 7.0
-Stable tag: 1.4.1
+Tested up to: 7.1
+Stable tag: 1.4.2
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -49,6 +49,9 @@ gsphudo7by90lzwdlihyerqxbzj6jiln
 Security release. Fixes a CSRF issue (CVE-2025-10308) that allowed an administrator to be tricked into deleting all plugin settings through a forged link. Updating is recommended.
 
 == Changelog ==
+= 1.4.2 =
+* Compatibility: tested with WordPress 7.1.
+
 = 1.4.1 =
 * Security: fixed a Cross-Site Request Forgery issue in the "Remove all plugin settings" function (CVE-2025-10308). The action was performed on a plain GET request without nonce validation, so an administrator could be tricked into deleting all plugin settings by following a forged link. The request is now validated with a nonce and an explicit capability check. Thanks to Nabil Irawan (Heroes Cyber Security) for the responsible disclosure.
 * Fixed: on the Settings screen the shortcode name was showing the literal &lt;strong&gt; tags instead of being displayed in bold.
