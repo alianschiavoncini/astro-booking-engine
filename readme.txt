@@ -43,12 +43,8 @@ This plugin is compatible with translation plugins such as WPML and Loco Transla
 == Wordefence vendor verification key ==
 gsphudo7by90lzwdlihyerqxbzj6jiln
 
-== Upgrade Notice ==
-
-= 1.4.1 =
-Security release. Fixes a CSRF issue (CVE-2025-10308) that allowed an administrator to be tricked into deleting all plugin settings through a forged link. Updating is recommended.
-
 == Changelog ==
+
 = 1.4.2 =
 * Compatibility: tested with WordPress 7.1.
 
@@ -57,32 +53,40 @@ Security release. Fixes a CSRF issue (CVE-2025-10308) that allowed an administra
 * Fixed: on the Settings screen the shortcode name was showing the literal &lt;strong&gt; tags instead of being displayed in bold.
 * Changed: the plugin author is now Alian Schiavoncini (https://www.alian.it) and the support address is alian@alian.it. The previous AstroThemes website and email address are no longer active.
 * Changed: the admin menu is now named "Astro Plugins" instead of "AstroThemes".
-* Compatibility: tested with WordPress 7.0.
 * Changed: the plugin version is now stored in the ASTRO_BE_VERSION constant instead of being read at runtime with get_plugin_data().
 * Changed: the jQuery UI calendar stylesheet is now enqueued with a version number, so browsers pick up changes after an update.
+* Compatibility: tested with WordPress 7.0.
 
 = 1.4.0 =
-* Checked full compatibility with WordPress version 6.8.3
-* Added Wordefence vendor verification key
+* Added: Wordefence vendor verification key.
+* Compatibility: tested with WordPress 6.8.3.
 
 = 1.3.0 =
-* Added full compatibility with WordPress version 6.6.1.
-* Added security checks to the code
+* Security: added security checks to the code.
+* Compatibility: tested with WordPress 6.6.1.
 
 = 1.2.0 =
-* Added Passepartout provider.
+* Added: Passepartout provider.
 
 = 1.1.1 =
-* Changed the plugin description.
+* Changed: the plugin description.
 
 = 1.1.0 =
-* Added 5Stelle provider.
+* Added: 5Stelle provider.
 
 = 1.0.2 =
-* Added italian language.
+* Added: Italian translation.
 
 = 1.0.1 =
-* Changed the support link in admin settings page.
+* Changed: the support link on the admin settings screen.
 
 = 1.0.0 =
-* Initial version
+* Initial version.
+
+== Upgrade Notice ==
+
+= 1.4.2 =
+Maintenance release: compatibility with WordPress 7.1. If you are updating from 1.4.0 or earlier it also includes the security fix for CVE-2025-10308, released in 1.4.1.
+
+= 1.4.1 =
+Security release. Fixes a CSRF issue (CVE-2025-10308) that allowed an administrator to be tricked into deleting all plugin settings through a forged link. Updating is recommended.
