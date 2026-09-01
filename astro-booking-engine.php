@@ -3,7 +3,7 @@
  * Plugin Name:       Astro Booking Engine
  * Plugin URI:        https://wordpress.org/plugins/astro-booking-engine
  * Description:       Display the booking engine form through the use of the shortcode [astro-booking-engine]. Includes the most popular booking engine providers.
- * Version:           1.4.2
+ * Version:           1.5.0
  * Requires at least: 6.0.1
  * Requires PHP:      7.4
  * Author:            Alian Schiavoncini
@@ -36,7 +36,7 @@ if ( is_admin() ) {
 /**
  * Plugin constants.
  */
-define('ASTRO_BE_VERSION', '1.4.2');
+define('ASTRO_BE_VERSION', '1.5.0');
 define('ASTRO_BE_PREFIX', 'astro_be_');
 define('ASTRO_BE_TEXTDOMAIN', astro_be_plugin_data('TextDomain'));
 

@@ -609,3 +609,31 @@ msgstr ""
 #: includes/tabs/tab-settings.php:38
 msgid "Your provider"
 msgstr "Il tuo fornitore"
+
+#: includes/tabs/tab-settings-ericsoft.php:339
+msgid "Default Infants"
+msgstr "Predefinito Neonati"
+
+#: includes/tabs/tab-settings-ericsoft.php:368
+msgid "Max Infants"
+msgstr "Massimo Neonati"
+
+#: includes/tabs/tab-settings-ericsoft.php:310 templates/ericsoft.php:140
+msgid "Infants"
+msgstr "Neonati"
+
+#: includes/tabs/tab-settings-ericsoft.php:19
+msgid "idh"
+msgstr "idh"
+
+#: includes/tabs/tab-settings-myguestcare.php:19
+msgid "idcliente"
+msgstr "idcliente"
+
+#: includes/tabs/tab-settings-ericsoft.php:206
+msgid ""
+"The age ranges of children and infants depend on the age categories "
+"configured in your Ericsoft booking engine."
+msgstr ""
+"Le fasce di età di bambini e neonati dipendono dalle categorie di età "
+"configurate nel tuo booking engine Ericsoft."

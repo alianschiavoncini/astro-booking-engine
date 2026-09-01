@@ -133,6 +133,58 @@ jQuery( document ).ready(function( $ ) {
 
         }
 
+        //ericsoft
+        if($('.box.ericsoft').css('display') == 'block') {
+
+            var astro_be_ericsoft_idh = $('#astro_be_ericsoft_idh').val();
+            if (astro_be_ericsoft_idh == '') {
+                $error_msg += '- idh: the field is required.\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Ericsoft fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //myguestcare
+        if($('.box.myguestcare').css('display') == 'block') {
+
+            var astro_be_myguestcare_idcliente = $('#astro_be_myguestcare_idcliente').val();
+            if (astro_be_myguestcare_idcliente == '') {
+                $error_msg += '- idcliente: the field is required.\n';
+            }
+
+            if ($('#astro_be_myguestcare_children_enable').is(':checked') && !$("#astro_be_myguestcare_childage_enable").is(":checked")) {
+                $error_msg += '- children age: must be enable if the children dropdown is enable.\n';
+            }
+
+            if ($('#astro_be_myguestcare_childage_enable').is(':checked')) {
+
+                var astro_be_myguestcare_childage_min = $('#astro_be_myguestcare_childage_min').length;
+                var astro_be_myguestcare_childage_max = $('#astro_be_myguestcare_childage_max').length;
+
+                if (astro_be_myguestcare_childage_min && astro_be_myguestcare_childage_max) {
+                    var astro_be_myguestcare_childage_min_value = parseInt( $("#astro_be_myguestcare_childage_min option:selected").val() );
+                    var astro_be_myguestcare_childage_max_value = parseInt( $("#astro_be_myguestcare_childage_max option:selected").val() );
+
+                    if (astro_be_myguestcare_childage_min_value > astro_be_myguestcare_childage_max_value) {
+                        $error_msg += '- children age: min child age value is greater than max value.\n';
+                    }
+                }
+
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'MyGuestCare fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
         //iperbooking
         if($('.box.iperbooking').css('display') == 'block') {
 

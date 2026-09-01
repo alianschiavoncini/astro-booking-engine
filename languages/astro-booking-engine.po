@@ -800,3 +800,23 @@ msgstr ""
 
 msgid "settings page"
 msgstr ""
+
+msgid "Default Infants"
+msgstr ""
+
+msgid "Max Infants"
+msgstr ""
+
+msgid "Infants"
+msgstr ""
+
+msgid "idh"
+msgstr ""
+
+msgid "idcliente"
+msgstr ""
+
+msgid ""
+"The age ranges of children and infants depend on the age categories "
+"configured in your Ericsoft booking engine."
+msgstr ""

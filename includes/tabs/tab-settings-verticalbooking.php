@@ -139,7 +139,7 @@ $provider = 'verticalbooking';
 				'label' => esc_html__( 'Default Adults', 'astro-booking-engine' ),
 				'description' => false,
 				'name' => ASTRO_BE_PREFIX.$provider.'_adults_n_default',
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_tot_adulti_n_default'),
+				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_adults_n_default'),
 				'placeholder' => false
 			);
 			?>
@@ -167,7 +167,7 @@ $provider = 'verticalbooking';
 				'label' => esc_html__( 'Max Adults', 'astro-booking-engine' ),
 				'description' => false,
 				'name' => ASTRO_BE_PREFIX.$provider.'_adults_n_max',
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_tot_adulti_n_max'),
+				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_adults_n_max'),
 				'placeholder' => false
 			);
 			?>
@@ -227,7 +227,7 @@ $provider = 'verticalbooking';
 				'label' => esc_html__( 'Default children', 'astro-booking-engine' ),
 				'description' => false,
 				'name' => ASTRO_BE_PREFIX.$provider.'_children_n_default',
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_tot_bambini_n_default'),
+				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_children_n_default'),
 				'placeholder' => false
 			);
 			?>
@@ -255,7 +255,7 @@ $provider = 'verticalbooking';
 				'label' => esc_html__( 'Max children', 'astro-booking-engine' ),
 				'description' => false,
 				'name' => ASTRO_BE_PREFIX.$provider.'_children_n_max',
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_tot_bambini_n_max'),
+				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_children_n_max'),
 				'placeholder' => false
 			);
 			?>

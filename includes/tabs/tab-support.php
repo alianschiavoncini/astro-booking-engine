@@ -76,7 +76,9 @@ do_settings_sections($option_group);
             <p><?php esc_html_e( 'Currently, Astro Booking Engine can be connected to the following booking engine providers (in alphabetic order).', 'astro-booking-engine' ); ?></p>
             <ul>
                 <li><a href="https://www.hotelcinquestelle.cloud/en/" target="_blank">5Stelle</a></li>
+                <li><a href="https://www.ericsoft.com/" target="_blank">Ericsoft</a></li>
                 <li><a href="https://www.iperbooking.com/" target="_blank">Iperbooking</a></li>
+                <li><a href="https://www.mycomp.it/" target="_blank">MyGuestCare</a></li>
                 <li><a href="https://www.passepartout.net/" target="_blank">Passepartout</a></li>
                 <li><a href="https://www.simplebooking.travel/" target="_blank">Simple Booking</a></li>
                 <li><a href="https://www.verticalbooking.com/en/home/" target="_blank">Vertical Booking</a></li>

@@ -3,12 +3,12 @@ Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget
 Requires at least: 6.0.1
 Tested up to: 7.1
-Stable tag: 1.4.2
+Stable tag: 1.5.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Use shortcode [astro-booking-engine] to display the booking form. Configure with 5Stelle, Iperbooking, Passepartout, Simple booking, or Vertical booking.
+Use shortcode [astro-booking-engine] to display the booking form of 5Stelle, Ericsoft, Iperbooking, MyGuestCare, Passepartout and other providers.
 
 == Description ==
 Display the <strong>booking engine form</strong> through the use of the shortcode <strong>[astro-booking-engine]</strong>.
@@ -18,7 +18,9 @@ You need to have a contract with one of the booking engine providers listed belo
 <strong>List of configurable booking engine providers in alphabetical order</strong>:
 <ul>
     <li><a href="https://www.hotelcinquestelle.cloud/en/">5Stelle</a></li>
+    <li><a href="https://www.ericsoft.com/">Ericsoft</a></li>
     <li><a href="https://www.iperbooking.com/">Iperbooking</a></li>
+    <li><a href="https://www.mycomp.it/">MyGuestCare</a></li>
     <li><a href="https://www.passepartout.net/">Passepartout</a></li>
     <li><a href="https://www.simplebooking.travel/">Simple booking</a></li>
     <li><a href="https://www.verticalbooking.com/en/home/">Vertical booking</a></li>
@@ -44,6 +46,12 @@ This plugin is compatible with translation plugins such as WPML and Loco Transla
 gsphudo7by90lzwdlihyerqxbzj6jiln
 
 == Changelog ==
+
+= 1.5.0 =
+* Added: Ericsoft provider.
+* Added: MyGuestCare provider.
+* Fixed: on the settings screen some saved values were displayed wrong after saving: the Simple booking currency and the default and maximum numbers of adults and children for Simple booking and Vertical booking.
+* Compatibility: tested with WordPress 7.1.
 
 = 1.4.2 =
 * Compatibility: tested with WordPress 7.1.

@@ -49,6 +49,26 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . '5stelle_portal' => ASTRO_BE_PREFIX . '5stelle_portal', //required
 
 				/**
+				 * Ericsoft
+				 */
+				ASTRO_BE_PREFIX . 'ericsoft_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'ericsoft_form_target' => ASTRO_BE_PREFIX . 'ericsoft_form_target',
+				ASTRO_BE_PREFIX . 'ericsoft_adults_enable' => ASTRO_BE_PREFIX . 'ericsoft_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'ericsoft_adults_n_default' => ASTRO_BE_PREFIX . 'ericsoft_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'ericsoft_adults_n_max' => ASTRO_BE_PREFIX . 'ericsoft_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'ericsoft_children_enable' => ASTRO_BE_PREFIX . 'ericsoft_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'ericsoft_children_n_default' => ASTRO_BE_PREFIX . 'ericsoft_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'ericsoft_children_n_max' => ASTRO_BE_PREFIX . 'ericsoft_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'ericsoft_infants_enable' => ASTRO_BE_PREFIX . 'ericsoft_infants_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'ericsoft_infants_n_default' => ASTRO_BE_PREFIX . 'ericsoft_infants_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'ericsoft_infants_n_max' => ASTRO_BE_PREFIX . 'ericsoft_infants_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'ericsoft_submit_label' => ASTRO_BE_PREFIX . 'ericsoft_submit_label', //optional
+
+				//Ericsoft custom fields
+				ASTRO_BE_PREFIX . 'ericsoft_idh' => ASTRO_BE_PREFIX . 'ericsoft_idh', //required
+				ASTRO_BE_PREFIX . 'ericsoft_currency' => ASTRO_BE_PREFIX . 'ericsoft_currency', //required
+
+				/**
 				 * Iperbooking
 				 */
 				ASTRO_BE_PREFIX . 'iperbooking_form_method' => esc_attr('get'),
@@ -73,6 +93,25 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'iperbooking_idTrattamento_default' => ASTRO_BE_PREFIX . 'iperbooking_idTrattamento_default',
 				ASTRO_BE_PREFIX . 'iperbooking_idTrattamento_visible' => ASTRO_BE_PREFIX . 'iperbooking_idTrattamento_visible',
 				ASTRO_BE_PREFIX . 'iperbooking_codiceSconto' => ASTRO_BE_PREFIX . 'iperbooking_codiceSconto', //enable/disable
+
+				/**
+				 * MyGuestCare
+				 */
+				ASTRO_BE_PREFIX . 'myguestcare_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'myguestcare_form_target' => ASTRO_BE_PREFIX . 'myguestcare_form_target',
+				ASTRO_BE_PREFIX . 'myguestcare_adults_enable' => ASTRO_BE_PREFIX . 'myguestcare_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'myguestcare_adults_n_default' => ASTRO_BE_PREFIX . 'myguestcare_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'myguestcare_adults_n_max' => ASTRO_BE_PREFIX . 'myguestcare_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'myguestcare_children_enable' => ASTRO_BE_PREFIX . 'myguestcare_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'myguestcare_children_n_default' => ASTRO_BE_PREFIX . 'myguestcare_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'myguestcare_children_n_max' => ASTRO_BE_PREFIX . 'myguestcare_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'myguestcare_childage_enable' => ASTRO_BE_PREFIX . 'myguestcare_childage_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'myguestcare_childage_min' => ASTRO_BE_PREFIX . 'myguestcare_childage_min', //conditional
+				ASTRO_BE_PREFIX . 'myguestcare_childage_max' => ASTRO_BE_PREFIX . 'myguestcare_childage_max', //conditional
+				ASTRO_BE_PREFIX . 'myguestcare_submit_label' => ASTRO_BE_PREFIX . 'myguestcare_submit_label', //optional
+
+				//MyGuestCare custom fields
+				ASTRO_BE_PREFIX . 'myguestcare_idcliente' => ASTRO_BE_PREFIX . 'myguestcare_idcliente', //required
 
 				/**
 				 * Passepartout
