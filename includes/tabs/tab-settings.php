@@ -17,7 +17,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 				// esc_html_e(), che ne convertirebbe i tag in entita rendendoli visibili
 				// a video. La whitelist consente il solo <strong>.
 				echo wp_kses(
-					__( 'Astro Booking Engine displays the booking form using the shortcode <strong>[astro-booking-engine]</strong>.', 'astro-booking-engine' ),
+					__( 'Astro Booking Engine displays the booking form using the <strong>Astro Booking Engine</strong> block in the editor or the shortcode <strong>[astro-booking-engine]</strong>.', 'astro-booking-engine' ),
 					array( 'strong' => array() )
 				);
 			?></p>
@@ -58,12 +58,15 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                                 $options = array(
                                                 '' => '---',
                                                 '5stelle' => '5Stelle',
+                                                'blastness' => 'Blastness',
+                                                'datasistemi' => 'Data Sistemi',
                                                 'ericsoft' => 'Ericsoft',
                                                 'iperbooking' => 'Iperbooking',
                                                 'myguestcare' => 'MyGuestCare',
                                                 'passepartout' => 'Passepartout',
                                                 'simplebooking' => 'Simple booking',
                                                 'verticalbooking' => 'Vertical booking',
+                                                'wubook' => 'WuBook',
                                                 );
                                 foreach ($options as $k => $v) {
                                     $selected = '';
@@ -89,6 +92,12 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         //5stelle
         include('tab-settings-5stelle.php');
 
+        //blastness
+        include('tab-settings-blastness.php');
+
+        //datasistemi
+        include('tab-settings-datasistemi.php');
+
         //ericsoft
         include('tab-settings-ericsoft.php');
 
@@ -106,6 +115,9 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 
         //verticalbooking
         include('tab-settings-verticalbooking.php');
+
+        //wubook
+        include('tab-settings-wubook.php');
         ?>
 
         <?php

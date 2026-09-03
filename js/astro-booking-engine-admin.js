@@ -133,6 +133,59 @@ jQuery( document ).ready(function( $ ) {
 
         }
 
+        //blastness
+        if($('.box.blastness').css('display') == 'block') {
+
+            var astro_be_blastness_id_albergo = $('#astro_be_blastness_id_albergo').val();
+            if (astro_be_blastness_id_albergo == '') {
+                $error_msg += '- id_albergo: the field is required.\n';
+            }
+
+            var astro_be_blastness_dc = $('#astro_be_blastness_dc').val();
+            if (astro_be_blastness_dc == '') {
+                $error_msg += '- dc: the field is required.\n';
+            }
+
+            if ($('#astro_be_blastness_childage_enable').is(':checked')) {
+
+                var astro_be_blastness_childage_min = $('#astro_be_blastness_childage_min').length;
+                var astro_be_blastness_childage_max = $('#astro_be_blastness_childage_max').length;
+
+                if (astro_be_blastness_childage_min && astro_be_blastness_childage_max) {
+                    var astro_be_blastness_childage_min_value = parseInt( $("#astro_be_blastness_childage_min option:selected").val() );
+                    var astro_be_blastness_childage_max_value = parseInt( $("#astro_be_blastness_childage_max option:selected").val() );
+
+                    if (astro_be_blastness_childage_min_value > astro_be_blastness_childage_max_value) {
+                        $error_msg += '- children age: min child age value is greater than max value.\n';
+                    }
+                }
+
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Blastness fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //datasistemi
+        if($('.box.datasistemi').css('display') == 'block') {
+
+            var astro_be_datasistemi_idstr = $('#astro_be_datasistemi_idstr').val();
+            if (astro_be_datasistemi_idstr == '') {
+                $error_msg += '- idstr: the field is required.\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Data Sistemi fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
         //ericsoft
         if($('.box.ericsoft').css('display') == 'block') {
 
@@ -280,6 +333,22 @@ jQuery( document ).ready(function( $ ) {
 
             if ($error_msg != '') {
                 $error_msg = 'Vertical booking fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //wubook
+        if($('.box.wubook').css('display') == 'block') {
+
+            var astro_be_wubook_ep = $('#astro_be_wubook_ep').val();
+            if (astro_be_wubook_ep == '') {
+                $error_msg += '- ep: the field is required.\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'WuBook fields errors:\n' + $error_msg;
                 alert($error_msg);
                 return false;
             }

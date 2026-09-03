@@ -2,8 +2,8 @@
 /*
  * Plugin Name:       Astro Booking Engine
  * Plugin URI:        https://wordpress.org/plugins/astro-booking-engine
- * Description:       Display the booking engine form through the use of the shortcode [astro-booking-engine]. Includes the most popular booking engine providers.
- * Version:           1.5.0
+ * Description:       Hotel booking form via Gutenberg block or shortcode, independent from the provider: switch booking engine anytime, your form stays the same.
+ * Version:           2.0.0
  * Requires at least: 6.0.1
  * Requires PHP:      7.4
  * Author:            Alian Schiavoncini
@@ -28,6 +28,7 @@ require_once(dirname(__FILE__) . '/includes/classes/class-astro-booking-engine-w
  * File inclusions.
  */
 require_once(dirname(__FILE__) . '/astro-booking-engine-common.php');
+require_once(dirname(__FILE__) . '/astro-booking-engine-block.php');
 
 if ( is_admin() ) {
 	require_once(dirname(__FILE__) . '/astro-booking-engine-admin.php');
@@ -36,7 +37,7 @@ if ( is_admin() ) {
 /**
  * Plugin constants.
  */
-define('ASTRO_BE_VERSION', '1.5.0');
+define('ASTRO_BE_VERSION', '2.0.0');
 define('ASTRO_BE_PREFIX', 'astro_be_');
 define('ASTRO_BE_TEXTDOMAIN', astro_be_plugin_data('TextDomain'));
 
@@ -99,5 +100,20 @@ function astro_be_add_plugin_page_settings_link( $links ) {
 		admin_url('admin.php?page=' . ASTRO_BE_TEXTDOMAIN ) .
 		'">' . __('Settings', 'astro-booking-engine' ) . '</a>'
 	);
+	return $links;
+}
+
+/**
+ * Add "Support" and "Author website" links to the plugin row on the Plugins screen.
+ */
+add_filter( 'plugin_row_meta', 'astro_be_plugin_row_meta', 10, 2 );
+function astro_be_plugin_row_meta( $links, $file ) {
+	if ( plugin_basename( __FILE__ ) !== $file ) {
+		return $links;
+	}
+
+	$links[] = '<a href="' . esc_url( admin_url( 'admin.php?page=' . ASTRO_BE_TEXTDOMAIN . '&tab=support' ) ) . '">' . esc_html__( 'Support', 'astro-booking-engine' ) . '</a>';
+	$links[] = '<a href="' . esc_url( 'https://www.alian.it' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Author website', 'astro-booking-engine' ) . '</a>';
+
 	return $links;
 }

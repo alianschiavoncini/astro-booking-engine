@@ -30,8 +30,8 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
             <!-- <?php echo $astro_be_prefix.$field_class; ?> -->
             <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?>">
                 <div class="<?php echo $astro_be_prefix . 'column-inner'; ?>">
-                    <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
-                    <input type="text" class="datepicker <?php echo $astro_be_prefix . 'input'; ?> <?php echo $astro_be_prefix . 'input-' . $field_class; ?>" size="10" data-date-format="<?php echo esc_attr($field_date_format); ?>"  readonly data-no-submit />
+                    <label for="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
+                    <input type="text" id="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="datepicker <?php echo $astro_be_prefix . 'input'; ?> <?php echo $astro_be_prefix . 'input-' . $field_class; ?>" size="10" data-date-format="<?php echo esc_attr($field_date_format); ?>"  readonly data-no-submit />
                     <input type="hidden" class="<?php echo $astro_be_prefix . 'input-' . $field_class; ?>-js" value="<?php echo date_i18n("Y-m-d"); ?>" />
                 </div>
             </div>
@@ -46,8 +46,8 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
             <!-- <?php echo $astro_be_prefix.$field_class; ?> -->
             <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?>">
                 <div class="<?php echo $astro_be_prefix . 'column-inner'; ?>">
-                    <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
-                    <input type="text" class="datepicker <?php echo $astro_be_prefix . 'input'; ?> <?php echo $astro_be_prefix . 'input-' . $field_class; ?>" size="10" data-date-format="<?php echo esc_attr($field_date_format); ?>"  readonly data-no-submit />
+                    <label for="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
+                    <input type="text" id="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="datepicker <?php echo $astro_be_prefix . 'input'; ?> <?php echo $astro_be_prefix . 'input-' . $field_class; ?>" size="10" data-date-format="<?php echo esc_attr($field_date_format); ?>"  readonly data-no-submit />
                     <input type="hidden" class="<?php echo $astro_be_prefix . 'input-' . $field_class; ?>-js" value="<?php echo date_i18n("Y-m-d", strtotime("+1 day")); ?>" />
                 </div>
             </div>
@@ -70,8 +70,8 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
                 <!-- <?php echo $astro_be_prefix.$field_class; ?> -->
                 <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?>">
                     <div class="<?php echo $astro_be_prefix . 'column-inner'; ?>">
-                        <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
-                        <select class="<?php echo $astro_be_prefix . 'select'; ?> <?php echo $astro_be_prefix . 'select-' . $field_class; ?>" data-no-submit>
+                        <label for="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
+                        <select id="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'select'; ?> <?php echo $astro_be_prefix . 'select-' . $field_class; ?>" data-no-submit>
 							<?php for ($i = 1; $i <= $adults_n_max; $i++) { ?>
                                 <option value="<?php echo esc_attr($i); ?>" <?php if ($adults_n_default == $i) { echo ' selected=selected'; } ?>><?php echo esc_html($i); ?></option>
 							<?php } ?>
@@ -96,8 +96,8 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
                 <!-- <?php echo $astro_be_prefix.$field_class; ?> -->
                 <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?>">
                     <div class="<?php echo $astro_be_prefix . 'column-inner'; ?>">
-                        <label for="<?php echo esc_attr($field_name); ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
-                        <select class="<?php echo $astro_be_prefix . 'select'; ?> <?php echo $astro_be_prefix . 'select-' . $field_class; ?>" data-no-submit>
+                        <label for="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
+                        <select id="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'select'; ?> <?php echo $astro_be_prefix . 'select-' . $field_class; ?>" data-no-submit>
 							<?php for ($i = 0; $i <= $children_n_max; $i++) { ?>
                                 <option value="<?php echo esc_attr($i); ?>" <?php if (($children_n_default == $i) && ($children_n_default > 0)) { echo ' selected=selected'; } ?>><?php echo esc_html($i); ?></option>
 							<?php } ?>
@@ -130,8 +130,8 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
 					?>
                     <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?> <?php echo $astro_be_prefix . 'column-' . $field_class . '-' . esc_attr($x); ?>">
                         <div class="<?php echo $astro_be_prefix . 'column-inner'; ?>">
-                            <label for="<?php echo esc_attr($field_name . '_' . $x); ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?> <?php echo esc_html($x); ?></label>
-                            <select class="<?php echo $astro_be_prefix . 'select'; ?> <?php echo $astro_be_prefix . 'select-' . $field_class; ?>" size="1" data-no-submit>
+                            <label for="<?php echo $astro_be_prefix . $provider . '-' . $field_class . '-' . esc_attr($x); ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?> <?php echo esc_html($x); ?></label>
+                            <select id="<?php echo $astro_be_prefix . $provider . '-' . $field_class . '-' . esc_attr($x); ?>" class="<?php echo $astro_be_prefix . 'select'; ?> <?php echo $astro_be_prefix . 'select-' . $field_class; ?>" size="1" data-no-submit>
 								<?php for ($i = $childage_min; $i <= $childage_max; $i++) { ?>
                                     <option value="<?php echo esc_attr($i); ?>"><?php echo esc_html($i); ?></option>
 								<?php } ?>
@@ -161,7 +161,7 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
         <div class="<?php echo $astro_be_prefix . 'row'; ?> <?php echo $astro_be_prefix . $field_class; ?>">
             <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?>">
                 <div class="<?php echo $astro_be_prefix . 'column-inner'; ?>">
-                    <label class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
+                    <label class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>" aria-hidden="true"><?php echo esc_html($field_label); ?></label>
                     <input type="submit" class="<?php echo $astro_be_prefix . 'input'; ?> <?php echo $astro_be_prefix . 'input-' . $field_class; ?>" value="<?php echo esc_attr($value); ?>" />
                 </div>
             </div>

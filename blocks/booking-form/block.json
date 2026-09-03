@@ -1,0 +1,72 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "astro-booking-engine/booking-form",
+	"title": "Astro Booking Engine",
+	"category": "widgets",
+	"icon": "calendar-alt",
+	"description": "Display the booking engine form of the configured provider.",
+	"keywords": [ "booking", "hotel", "reservation", "booking engine" ],
+	"textdomain": "astro-booking-engine",
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"color": {
+			"background": true,
+			"text": false,
+			"gradients": true
+		},
+		"typography": {
+			"fontSize": true
+		}
+	},
+	"attributes": {
+		"customizeLayout": {
+			"type": "boolean",
+			"default": false
+		},
+		"widgetBackgroundColor": {
+			"type": "string",
+			"default": ""
+		},
+		"widgetBorderRadius": {
+			"type": "number"
+		},
+		"submitLabel": {
+			"type": "string",
+			"default": ""
+		},
+		"labelFontColor": {
+			"type": "string",
+			"default": ""
+		},
+		"fieldFontColor": {
+			"type": "string",
+			"default": ""
+		},
+		"fieldBackgroundColor": {
+			"type": "string",
+			"default": ""
+		},
+		"fieldBorderRadius": {
+			"type": "number"
+		},
+		"submitFontColor": {
+			"type": "string",
+			"default": ""
+		},
+		"submitBackgroundColor": {
+			"type": "string",
+			"default": ""
+		},
+		"submitBorderRadius": {
+			"type": "number"
+		}
+	},
+	"editorScript": "astro-booking-engine-block-editor",
+	"style": "astro-booking-engine"
+}

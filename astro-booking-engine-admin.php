@@ -134,6 +134,111 @@ if (class_exists('Astro_Plugin_Panel')) {
 }
 
 /**
+ * Review notice: handle the choice links (nonce + capability), then redirect.
+ */
+add_action( 'admin_init', 'astro_be_review_notice_actions' );
+function astro_be_review_notice_actions() {
+
+	if ( ! isset( $_GET['astro_be_review'] ) ) {
+		return;
+	}
+
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
+
+	$astro_be_nonce = isset( $_GET['nonce'] ) ? sanitize_text_field( wp_unslash( $_GET['nonce'] ) ) : '';
+	if ( ! wp_verify_nonce( $astro_be_nonce, 'astro_be_review_notice' ) ) {
+		return;
+	}
+
+	$action = sanitize_text_field( wp_unslash( $_GET['astro_be_review'] ) );
+	$settings_url = admin_url( 'admin.php?page=' . ASTRO_BE_TEXTDOMAIN );
+
+	switch ( $action ) {
+		case 'write' :
+			update_option( ASTRO_BE_PREFIX . 'review_notice_dismissed', 'done' );
+			wp_redirect( 'https://wordpress.org/support/plugin/astro-booking-engine/reviews/#new-post' );
+			exit;
+
+		case 'done' :
+			update_option( ASTRO_BE_PREFIX . 'review_notice_dismissed', 'done' );
+			wp_safe_redirect( $settings_url );
+			exit;
+
+		case 'later' :
+			update_option( ASTRO_BE_PREFIX . 'review_notice_dismissed', time() + ( 30 * DAY_IN_SECONDS ) );
+			wp_safe_redirect( $settings_url );
+			exit;
+	}
+
+}
+
+/**
+ * Review notice: shown only on the plugin settings page, only to manage_options,
+ * and only after the provider has been configured for at least 30 days.
+ */
+add_action( 'admin_notices', 'astro_be_review_notice' );
+function astro_be_review_notice() {
+
+	// Only on the plugin settings page.
+	$page = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
+	if ( $page !== ASTRO_BE_TEXTDOMAIN ) {
+		return;
+	}
+
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
+
+	// Only when the plugin is really in use.
+	$provider = get_option( ASTRO_BE_PREFIX . 'provider' );
+	if ( ! $provider ) {
+		return;
+	}
+
+	// The 30 days start when the provider is first seen configured.
+	$start = (int) get_option( ASTRO_BE_PREFIX . 'review_notice_start' );
+	if ( ! $start ) {
+		update_option( ASTRO_BE_PREFIX . 'review_notice_start', time() );
+		return;
+	}
+	if ( ( time() - $start ) < ( 30 * DAY_IN_SECONDS ) ) {
+		return;
+	}
+
+	$dismissed = get_option( ASTRO_BE_PREFIX . 'review_notice_dismissed' );
+	if ( $dismissed === 'done' ) {
+		return;
+	}
+	if ( $dismissed && (int) $dismissed > time() ) { // "Maybe later" still active.
+		return;
+	}
+
+	$nonce = wp_create_nonce( 'astro_be_review_notice' );
+	$settings_url = admin_url( 'admin.php?page=' . ASTRO_BE_TEXTDOMAIN );
+
+	$write_url = add_query_arg( array( 'astro_be_review' => 'write', 'nonce' => $nonce ), $settings_url );
+	$done_url  = add_query_arg( array( 'astro_be_review' => 'done',  'nonce' => $nonce ), $settings_url );
+	$later_url = add_query_arg( array( 'astro_be_review' => 'later', 'nonce' => $nonce ), $settings_url );
+
+	?>
+	<div class="notice notice-info astro-be-review-notice">
+		<p>
+			<strong><?php esc_html_e( 'Do you enjoy Astro Booking Engine?', 'astro-booking-engine' ); ?></strong><br />
+			<?php esc_html_e( 'You have been using it for a while: a review on WordPress.org would help other users discover it. Thank you!', 'astro-booking-engine' ); ?>
+		</p>
+		<p>
+			<a href="<?php echo esc_url( $write_url ); ?>" class="button button-primary"><?php esc_html_e( 'Sure, I\'ll write a review', 'astro-booking-engine' ); ?></a>
+			&nbsp;<a href="<?php echo esc_url( $done_url ); ?>"><?php esc_html_e( 'I\'ve already reviewed it', 'astro-booking-engine' ); ?></a>
+			&nbsp;|&nbsp;<a href="<?php echo esc_url( $later_url ); ?>"><?php esc_html_e( 'Maybe later', 'astro-booking-engine' ); ?></a>
+		</p>
+	</div>
+	<?php
+
+}
+
+/**
  * Display the plugin panel to do define the settings.
  */
 function astro_be_options() {

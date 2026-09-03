@@ -1,822 +1,1041 @@
+# Copyright (C) 2026 Alian Schiavoncini
+# This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version:WPML_EXPORT\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
+"Project-Id-Version: Astro Booking Engine 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/astro-booking-engine\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language:en\n"
 "MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-09-03T07:30:08+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: astro-booking-engine\n"
 
-# // Widget name will appear in UI
-# __( 'Astro Booking Engine', 'astro-booking-engine' ),
-# 
-
+#. Plugin Name of the plugin
+#: astro-booking-engine.php
+#: includes/classes/class-astro-booking-engine-widget.php:20
 msgid "Astro Booking Engine"
 msgstr ""
 
-# // Widget description
-# array( 'description' => __( 'The Astro Booking Engine plugin displays a user friendly and responsive hotel booking engine form.', 'astro-booking-engine' ), )
-# );
-
-msgid "The Astro Booking Engine plugin displays a user friendly and responsive hotel booking engine form."
+#. Plugin URI of the plugin
+#: astro-booking-engine.php
+msgid "https://wordpress.org/plugins/astro-booking-engine"
 msgstr ""
 
-# }else{
-# $title = __( 'New title', 'astro-booking-engine' );
-# }
-
-msgid "New title"
+#. Description of the plugin
+#: astro-booking-engine.php
+msgid "Hotel booking form via Gutenberg block or shortcode, independent from the provider: switch booking engine anytime, your form stays the same."
 msgstr ""
 
-# <p>
-# <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title', 'astro-booking-engine' ); ?>:</label>
-# <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-
-msgid "Title"
+#. Author of the plugin
+#: astro-booking-engine.php
+msgid "Alian Schiavoncini"
 msgstr ""
 
-# $str = '<div class="ube-error ube-error-no-provider">';
-# $str .= __( 'This message is visible only to the site administrator.', 'astro-booking-engine' );
-# $str .= '<br />';
-
-msgid "This message is visible only to the site administrator."
+#. Author URI of the plugin
+#: astro-booking-engine.php
+msgid "https://www.alian.it"
 msgstr ""
 
-# $str .= '<br />';
-# $str .= __( 'No provider has been selected in Universal Booking Engine plugin.', 'astro-booking-engine' );
-# $str .= '<br />';
-
-msgid "No provider has been selected in Universal Booking Engine plugin."
-msgstr ""
-
-# $field_class = esc_attr('checkin');
-# $field_label = __( 'Check-in', 'astro-booking-engine' );
-# $field_name = 'checkin';
-
-msgid "Check-in"
-msgstr ""
-
-# $field_class = esc_attr('checkout');
-# $field_label = __( 'Check-out', 'astro-booking-engine' );
-# $field_name = 'checkout'; //provider field name
-
-msgid "Check-out"
-msgstr ""
-
-# $field_class = esc_attr('adults');
-# $field_label = __( 'Adults', 'astro-booking-engine' );
-# $field_name = 'tot_adulti'; //provider field name
-
-msgid "Adults"
-msgstr ""
-
-# $field_class = esc_attr('children');
-# $field_label = __( 'Children', 'astro-booking-engine' );
-# $field_name = 'tot_bambini'; //provider field name
-
-msgid "Children"
-msgstr ""
-
-# $field_class = esc_attr('children_age');
-# $field_label = __( 'Child Age', 'astro-booking-engine' );
-# $field_name = 'st1bamb'; //provider field name
-
-msgid "Child Age"
-msgstr ""
-
-# <?php
-# $value = __('Search', 'astro-booking-engine' );
-# $submit_label = get_option(ASTRO_BE_PREFIX.$provider.'_submit_label');
-
-msgid "Search"
-msgstr ""
-
-# $field_class = esc_attr('coupon');
-# $field_label = __( 'Coupon', 'astro-booking-engine' );
-# $field_name = 'coupon'; //provider field name
-
-msgid "Coupon"
-msgstr ""
-
-# $field_class = esc_attr('treatment');
-# $field_label = __( 'Treatment', 'astro-booking-engine' );
-# $field_name = 'idTrattamento'; //provider field name
-
-msgid "Treatment"
-msgstr ""
-
-# $field_class = esc_attr('discount');
-# $field_label = __( 'Discount code', 'astro-booking-engine' );
-# $field_name = 'codiceSconto'; //provider field name
-
-msgid "Discount code"
-msgstr ""
-
-# admin_url('admin.php?page=' . ASTRO_BE_TEXTDOMAIN ) .
-# '">' . __('Settings', 'astro-booking-engine' ) . '</a>'
-# );
-
-msgid "Settings"
-msgstr ""
-
-# $colorpicker_l10n = array(
-# 'clear' => __( 'Clear', 'astro-booking-engine' ),
-# 'defaultString' => __( 'Default', 'astro-booking-engine' ),
-
+#: astro-booking-engine-admin.php:39
 msgid "Clear"
 msgstr ""
 
-# 'clear' => __( 'Clear', 'astro-booking-engine' ),
-# 'defaultString' => __( 'Default', 'astro-booking-engine' ),
-# 'pick' => __( 'Select Color', 'astro-booking-engine' ),
-
+#: astro-booking-engine-admin.php:40
+#: includes/tabs/tab-settings-iperbooking.php:113
+#: includes/tabs/tab-settings-iperbooking.php:146
+#: includes/tabs/tab-settings-iperbooking.php:227
+#: includes/tabs/tab-settings-iperbooking.php:260
 msgid "Default"
 msgstr ""
 
-# 'defaultString' => __( 'Default', 'astro-booking-engine' ),
-# 'pick' => __( 'Select Color', 'astro-booking-engine' ),
-# 'current' => __( 'Current Color', 'astro-booking-engine' ),
-
+#: astro-booking-engine-admin.php:41
 msgid "Select Color"
 msgstr ""
 
-# 'pick' => __( 'Select Color', 'astro-booking-engine' ),
-# 'current' => __( 'Current Color', 'astro-booking-engine' ),
-# );
-
+#: astro-booking-engine-admin.php:42
 msgid "Current Color"
 msgstr ""
 
-# if ( !current_user_can( 'manage_options' ) )  {
-# wp_die( __( 'You do not have sufficient permissions to access this page.', 'astro-booking-engine' ) );
-# }
-
-msgid "You do not have sufficient permissions to access this page."
-msgstr ""
-
-# // Widget name will appear in UI
-# __( 'Universal Booking Engine', 'astro-booking-engine' ),
-# 
-
-msgid "Universal Booking Engine"
-msgstr ""
-
-# // Widget description
-# array( 'description' => __( 'The Universal Booking Engine plugin displays a user friendly and responsive hotel booking engine form.', 'astro-booking-engine' ), )
-# );
-
-msgid "The Universal Booking Engine plugin displays a user friendly and responsive hotel booking engine form."
-msgstr ""
-
-# ?>
-# <option value="normal"<?php if ($field['value'] == 'normal') { echo ' selected=selected'; } ?>><?php echo esc_attr(__( 'normal', 'astro-booking-engine' )); ?></option>
-# <option value="bold"<?php if ($field['value'] == 'bold') { echo ' selected=selected'; } ?>><?php echo esc_attr(__( 'bold', 'astro-booking-engine' )); ?></option>
-
-msgid "normal"
-msgstr ""
-
-# <option value="normal"<?php if ($field['value'] == 'normal') { echo ' selected=selected'; } ?>><?php echo esc_attr(__( 'normal', 'astro-booking-engine' )); ?></option>
-# <option value="bold"<?php if ($field['value'] == 'bold') { echo ' selected=selected'; } ?>><?php echo esc_attr(__( 'bold', 'astro-booking-engine' )); ?></option>
-# </select>
-
-msgid "bold"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Background color', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Background color"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Border radius', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Border radius"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Font color', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Font color"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Font size', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Font size"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Font weight', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Font weight"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Border width', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Border width"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Border style', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Border style"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Border color', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Border color"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Calendar theme', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Calendar theme"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Custom CSS', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Custom CSS"
-msgstr ""
-
-# 
-# <h2 id="layout"><?php _e( 'Layout', 'astro-booking-engine' ); ?></h2>
-# 
-
-msgid "Layout"
-msgstr ""
-
-# 
-# <h3 id="widget"><?php _e( 'Widget', 'astro-booking-engine' ); ?></h3>
-# <table class="form-table">
-
-msgid "Widget"
-msgstr ""
-
-# <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
-# <option value=""><?php _e( 'inherit', 'astro-booking-engine' ); ?></option>
-# <?php
-
-msgid "inherit"
-msgstr ""
-
-# ?>
-# <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?> <span class="select-option-suffix-px"><?php _e( 'px', 'astro-booking-engine' ); ?></span></option>
-# <?php
-
-msgid "px"
-msgstr ""
-
-# 
-# <h3 id="labels"><?php _e( 'Labels', 'astro-booking-engine' ); ?></h3>
-# <table class="form-table">
-
-msgid "Labels"
-msgstr ""
-
-# 
-# <h3 id="fields"><?php _e( 'Fields', 'astro-booking-engine' ); ?></h3>
-# <table class="form-table">
-
-msgid "Fields"
-msgstr ""
-
-# 
-# <h3 id="submitbutton"><?php _e( 'Submit button', 'astro-booking-engine' ); ?></h3>
-# <table class="form-table">
-
-msgid "Submit button"
-msgstr ""
-
-# 
-# <h3 id="advanced"><?php _e( 'Advanced settings', 'astro-booking-engine' ); ?></h3>
-# <table class="form-table">
-
-msgid "Advanced settings"
-msgstr ""
-
-# $arr_targets = array(
-# '_blank' =>  __('New window or tab', 'astro-booking-engine' ),
-# '_self' =>  __('Same window or tab', 'astro-booking-engine' ),
-
-msgid "New window or tab"
-msgstr ""
-
-# '_blank' =>  __('New window or tab', 'astro-booking-engine' ),
-# '_self' =>  __('Same window or tab', 'astro-booking-engine' ),
-# );
-
-msgid "Same window or tab"
-msgstr ""
-
-# $field_label = esc_html__( 'Visible', 'astro-booking-engine' );
-# $field_description = __('Check to show', 'astro-booking-engine' );
-# $field_name = ASTRO_BE_PREFIX.$provider.'_idTrattamento_visible';
-
-msgid "Check to show"
-msgstr ""
-
-# $field_label = esc_html__( 'Enable', 'astro-booking-engine' );
-# $field_description = __('Check to enable', 'astro-booking-engine' );
-# $field_name = ASTRO_BE_PREFIX.$provider.'_adults_enable';
-
-msgid "Check to enable"
-msgstr ""
-
-# 'label' => esc_html__( 'Label', 'astro-booking-engine' ),
-# 'description' => __('The default value is Search.', 'astro-booking-engine' ),
-# 'name' => ASTRO_BE_PREFIX.$provider.'_submit_label',
-
-msgid "The default value is Search."
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'idHotel', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "idHotel"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Target', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Target"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Language settings', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Language settings"
-msgstr ""
-
-# <?php
-# $field_label = esc_html__( 'Visible', 'astro-booking-engine' );
-# $field_description = __('Check to show', 'astro-booking-engine' );
-
-msgid "Visible"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Treatment options', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Treatment options"
-msgstr ""
-
-# <?php
-# $field_label = esc_html__( 'Enable', 'astro-booking-engine' );
-# $field_description = __('Check to enable', 'astro-booking-engine' );
-
-msgid "Enable"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Default Adults', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Default Adults"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Max Adults', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Max Adults"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Default children', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Default children"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Max children', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Max children"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Min child age', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Min child age"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Max child age', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Max child age"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Label', 'astro-booking-engine' ),
-# 'description' => __('The default value is Search.', 'astro-booking-engine' ),
-
-msgid "Label"
-msgstr ""
-
-# <!-- hotelsettings -->
-# <h3 id="hotelsettings"><?php _e( 'Hotel settings', 'astro-booking-engine' ); ?></h3>
-# <table class="form-table">
-
-msgid "Hotel settings"
-msgstr ""
-
-# <!-- formsetting -->
-# <h3 id="formsetting"><?php _e( 'Form settings', 'astro-booking-engine' ); ?></h3>
-# <table class="form-table">
-
-msgid "Form settings"
-msgstr ""
-
-# <th scope="row">
-# <?php _e( 'Language options', 'astro-booking-engine' ); ?>
-# <p class="description"><strong>Option example</strong><br>
-
-msgid "Language options"
-msgstr ""
-
-# <p class="description"><strong>Option example</strong><br>
-# <?php _e( 'Lang code', 'astro-booking-engine' ); ?>: EN<br>
-# <?php _e( 'URL', 'astro-booking-engine' ); ?>: https://secure.iperbooking.net/be/en/your-hotel-name/</p>
-
-msgid "Lang code"
-msgstr ""
-
-# <?php _e( 'Lang code', 'astro-booking-engine' ); ?>: EN<br>
-# <?php _e( 'URL', 'astro-booking-engine' ); ?>: https://secure.iperbooking.net/be/en/your-hotel-name/</p>
-# </th>
-
-msgid "URL"
-msgstr ""
-
-# <td class="<?php echo esc_attr($provider); ?>-language">
-# <button class="button <?php echo esc_ttr($provider); ?>-language-options-add-field"><?php _e( 'Add new option', 'astro-booking-engine' ); ?></button>
-# <?php
-
-msgid "Add new option"
-msgstr ""
-
-# <fieldset class="provider-fieldset provider-fieldset-<?php echo esc_attr($i); ?>">
-# <legend class="provider-fieldset-legend"><?php _e( 'Language option', 'astro-booking-engine' ); ?> #<?php echo esc_html($i); ?></legend>
-# <div class="provider-fieldset-content">
-
-msgid "Language option"
-msgstr ""
-
-# <?php if ($i > 1) { ?>
-# <button class="button iperbooking-language-options-delete-field"><?php _e( 'Delete', 'astro-booking-engine' ); ?></button>
-# <?php } ?>
-
-msgid "Delete"
-msgstr ""
-
-# <!-- treatment -->
-# <h3 id="treatment"><?php _e( 'Treatments', 'astro-booking-engine' ); ?></h3>
-# <table class="form-table">
-
-msgid "Treatments"
-msgstr ""
-
-# <th scope="row">
-# <?php _e( 'Options', 'astro-booking-engine' ); ?>
-# <p class="description"><strong><?php _e( 'Option example', 'astro-booking-engine' ); ?></strong><br>
-
-msgid "Options"
-msgstr ""
-
-# <?php _e( 'Options', 'astro-booking-engine' ); ?>
-# <p class="description"><strong><?php _e( 'Option example', 'astro-booking-engine' ); ?></strong><br>
-# <?php _e( 'Value', 'astro-booking-engine' ); ?>: 4<br>
-
-msgid "Option example"
-msgstr ""
-
-# <p class="description"><strong><?php _e( 'Option example', 'astro-booking-engine' ); ?></strong><br>
-# <?php _e( 'Value', 'astro-booking-engine' ); ?>: 4<br>
-# <?php _e( 'Label', 'astro-booking-engine' ); ?>: Bed & Breakfast</p>
-
-msgid "Value"
-msgstr ""
-
-# <!-- childrenage -->
-# <h3 id="childrenage"><?php _e( 'Children age', 'astro-booking-engine' ); ?></h3>
-# <table class="form-table">
-
-msgid "Children age"
-msgstr ""
-
-# astro_be_delete_options_prefixed( ASTRO_BE_PREFIX );
-# $delete_options = __( 'All the plugin options have deleted.', 'astro-booking-engine' );
-# }
-
-msgid "All the plugin options have deleted."
-msgstr ""
-
-# 
-# <h2 id="support" class="title"><?php _e('Support', 'astro-booking-engine' ); ?></h2>
-# 
-
-msgid "Support"
-msgstr ""
-
-# 
-# <h3 id="support-configuration" class="title"><?php _e( 'How to start with this plugin', 'astro-booking-engine' ); ?></h3>
-# <ol>
-
-msgid "How to start with this plugin"
-msgstr ""
-
-# <ol>
-# <li><?php _e( 'Get data settings from your booking engine provider; if you don\'t have one, you need to adopt one', 'astro-booking-engine' ); ?> (<a href="#support-providers-list"><?php _e( 'see the list of currently available providers', 'astro-booking-engine' ); ?></a>)</li>
-# <li><?php _e( 'Select the provider name and configure its settings', 'astro-booking-engine' ); ?></li>
-
-msgid "Get data settings from your booking engine provider; if you don't have one, you need to adopt one"
-msgstr ""
-
-# <ol>
-# <li><?php _e( 'Get data settings from your booking engine provider; if you don\'t have one, you need to adopt one', 'astro-booking-engine' ); ?> (<a href="#support-providers-list"><?php _e( 'see the list of currently available providers', 'astro-booking-engine' ); ?></a>)</li>
-# <li><?php _e( 'Select the provider name and configure its settings', 'astro-booking-engine' ); ?></li>
-
-msgid "see the list of currently available providers"
-msgstr ""
-
-# <li><?php _e( 'Get data settings from your booking engine provider; if you don\'t have one, you need to adopt one', 'astro-booking-engine' ); ?> (<a href="#support-providers-list"><?php _e( 'see the list of currently available providers', 'astro-booking-engine' ); ?></a>)</li>
-# <li><?php _e( 'Select the provider name and configure its settings', 'astro-booking-engine' ); ?></li>
-# <li><?php _e( 'Configure the booking form layout (optional)', 'astro-booking-engine' ); ?></li>
-
-msgid "Select the provider name and configure its settings"
-msgstr ""
-
-# <li><?php _e( 'Select the provider name and configure its settings', 'astro-booking-engine' ); ?></li>
-# <li><?php _e( 'Configure the booking form layout (optional)', 'astro-booking-engine' ); ?></li>
-# <li><?php _e( 'Use the [astro-booking-engine] shortcode in your post/page content or add the Astro Booking Engine in the widget area.', 'astro-booking-engine' ); ?></li>
-
-msgid "Configure the booking form layout (optional)"
-msgstr ""
-
-# <li><?php _e( 'Configure the booking form layout (optional)', 'astro-booking-engine' ); ?></li>
-# <li><?php _e( 'Use the [astro-booking-engine] shortcode in your post/page content or add the Astro Booking Engine in the widget area.', 'astro-booking-engine' ); ?></li>
-# </ol>
-
-msgid "Use the [astro-booking-engine] shortcode in your post/page content or add the Astro Booking Engine in the widget area."
-msgstr ""
-
-# </ol>
-# <p><strong><?php _e( 'IMPORTANT', 'astro-booking-engine' ); ?></strong>:
-# <?php _e( 'it is mandatory to have the provider data settings and the provider contract must be active in order to use the Astro Booking Engine.', 'astro-booking-engine' ); ?><br>
-
-msgid "IMPORTANT"
-msgstr ""
-
-# <p><strong><?php _e( 'IMPORTANT', 'astro-booking-engine' ); ?></strong>:
-# <?php _e( 'it is mandatory to have the provider data settings and the provider contract must be active in order to use the Astro Booking Engine.', 'astro-booking-engine' ); ?><br>
-# <?php _e( 'The booking engine provider can send you the useful settings to configure the Astro Booking Engine; we are not a booking engine provider.', 'astro-booking-engine' ); ?><br>
-
-msgid "it is mandatory to have the provider data settings and the provider contract must be active in order to use the Astro Booking Engine."
-msgstr ""
-
-# <?php _e( 'it is mandatory to have the provider data settings and the provider contract must be active in order to use the Astro Booking Engine.', 'astro-booking-engine' ); ?><br>
-# <?php _e( 'The booking engine provider can send you the useful settings to configure the Astro Booking Engine; we are not a booking engine provider.', 'astro-booking-engine' ); ?><br>
-# <?php _e( 'Only after configuring the Astro Booking Engine with the provider\'s data, you can you start to use the booking form on your website.', 'astro-booking-engine' ); ?></p>
-
-msgid "The booking engine provider can send you the useful settings to configure the Astro Booking Engine; we are not a booking engine provider."
-msgstr ""
-
-# <?php _e( 'The booking engine provider can send you the useful settings to configure the Astro Booking Engine; we are not a booking engine provider.', 'astro-booking-engine' ); ?><br>
-# <?php _e( 'Only after configuring the Astro Booking Engine with the provider\'s data, you can you start to use the booking form on your website.', 'astro-booking-engine' ); ?></p>
-# 
-
-msgid "Only after configuring the Astro Booking Engine with the provider's data, you can you start to use the booking form on your website."
-msgstr ""
-
-# 
-# <h3 id="support-providers-list" class="title"><?php _e( 'Providers list', 'astro-booking-engine' ); ?></h3>
-# <p><?php _e( 'Currently, Astro Booking Engine can be connected to the following booking engine providers (in alphabetic order).', 'astro-booking-engine' ); ?></p>
-
-msgid "Providers list"
-msgstr ""
-
-# <h3 id="support-providers-list" class="title"><?php _e( 'Providers list', 'astro-booking-engine' ); ?></h3>
-# <p><?php _e( 'Currently, Astro Booking Engine can be connected to the following booking engine providers (in alphabetic order).', 'astro-booking-engine' ); ?></p>
-# <ul>
-
-msgid "Currently, Astro Booking Engine can be connected to the following booking engine providers (in alphabetic order)."
-msgstr ""
-
-# 
-# <p><?php _e( 'Is your booking engine provider not available in Astro Booking Engine?', 'astro-booking-engine' ); ?><br>
-# <?php _e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:alian@alian.it">alian@alian.it</a>.</p>
-
-msgid "Is your booking engine provider not available in Astro Booking Engine?"
-msgstr ""
-
-# <p><?php _e( 'Is your booking engine provider not available in Astro Booking Engine?', 'astro-booking-engine' ); ?><br>
-# <?php _e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:alian@alian.it">alian@alian.it</a>.</p>
-# 
-
-msgid "Write me an email at"
-msgstr ""
-
-# 
-# <h3 id="support-faqs" class="title"><?php _e( 'FAQs', 'astro-booking-engine' ); ?></h3>
-# <p><span class="support-faq-question"><?php _e( 'Do you need support?', 'astro-booking-engine' ); ?></span><br>
-
-msgid "FAQs"
-msgstr ""
-
-# <h3 id="support-faqs" class="title"><?php _e( 'FAQs', 'astro-booking-engine' ); ?></h3>
-# <p><span class="support-faq-question"><?php _e( 'Do you need support?', 'astro-booking-engine' ); ?></span><br>
-# <span class="support-faq-answer"><?php _e( 'Request support at the ', 'astro-booking-engine' ); ?> <a href="https://wordpress.org/support/plugin/display-post-link/" target="_blank"><?php _e( 'plugin support page', 'astro-booking-engine' ); ?></a>.</span></p>
-
-msgid "Do you need support?"
-msgstr ""
-
-# <p><span class="support-faq-question"><?php _e( 'Do you need support?', 'astro-booking-engine' ); ?></span><br>
-# <span class="support-faq-answer"><?php _e( 'Request support at the ', 'astro-booking-engine' ); ?> <a href="https://wordpress.org/support/plugin/display-post-link/" target="_blank"><?php _e( 'plugin support page', 'astro-booking-engine' ); ?></a>.</span></p>
-# 
-
-msgid "Request support at the "
-msgstr ""
-
-# <p><span class="support-faq-question"><?php _e( 'Do you need support?', 'astro-booking-engine' ); ?></span><br>
-# <span class="support-faq-answer"><?php _e( 'Request support at the ', 'astro-booking-engine' ); ?> <a href="https://wordpress.org/support/plugin/display-post-link/" target="_blank"><?php _e( 'plugin support page', 'astro-booking-engine' ); ?></a>.</span></p>
-# 
-
-msgid "plugin support page"
-msgstr ""
-
-# 
-# <p><span class="support-faq-question"><?php _e( 'Have more questions?', 'astro-booking-engine' ); ?></span><br>
-# <span class="support-faq-answer"><?php _e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:alian@alian.it">alian@alian.it</a>.</span></p>
-
-msgid "Have more questions?"
-msgstr ""
-
-# 
-# <h3 id="support-data-reset" class="title"><?php _e( 'Plugin data reset', 'astro-booking-engine' ); ?></h3>
-# <p><a class="button button-primary" href="?page=<?php echo ASTRO_BE_TEXTDOMAIN; ?>&amp;tab=support&amp;delete_options=1"><?php _e( 'Remove all plugin settings', 'astro-booking-engine' ); ?></a></p>
-
-msgid "Plugin data reset"
-msgstr ""
-
-# <h3 id="support-data-reset" class="title"><?php _e( 'Plugin data reset', 'astro-booking-engine' ); ?></h3>
-# <p><a class="button button-primary" href="?page=<?php echo ASTRO_BE_TEXTDOMAIN; ?>&amp;tab=support&amp;delete_options=1"><?php _e( 'Remove all plugin settings', 'astro-booking-engine' ); ?></a></p>
-# <p class="color-red"><?php echo esc_html($delete_options); ?></p>
-
-msgid "Remove all plugin settings"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'id_albergo', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "id_albergo"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'dc', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "dc"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'id_stile', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "id_stile"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Min children age', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Min children age"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Max children age', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Max children age"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__('Your provider', 'astro-booking-engine' ),
-# 'description' => esc_html__('Select your provider and configure its settings to enable Astro Booking Engine.', 'astro-booking-engine' ),
-
-msgid "Your provider"
-msgstr ""
-
-# 'label' => esc_html__('Your provider', 'astro-booking-engine' ),
-# 'description' => esc_html__('Select your provider and configure its settings to enable Astro Booking Engine.', 'astro-booking-engine' ),
-# 'name' => ASTRO_BE_PREFIX.'provider',
-
-msgid "Select your provider and configure its settings to enable Astro Booking Engine."
-msgstr ""
-
-# <h2 id="settings" class="title"><?php _e('Settings', 'astro-booking-engine' ); ?></h2>
-# <p><?php _e('Astro Booking Engine displays the booking form using the shortcode <strong>[astro-booking-engine]</strong>.', 'astro-booking-engine'); ?></p>
-# <p><?php printf( 'For installation details, read more at the <a href="%s">support page</a>', '?page='.ASTRO_BE_TEXTDOMAIN.'&amp;tab=support'  ); ?></p>
-
-msgid "Astro Booking Engine displays the booking form using the shortcode <strong>[astro-booking-engine]</strong>."
-msgstr ""
-
-# 
-# <h2 id="provider" class="title"><?php _e('Provider', 'astro-booking-engine' ); ?></h2>
-# <table class="form-table">
-
-msgid "Provider"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'hid', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "hid"
-msgstr ""
-
-# $field = array(
-# 'label' => esc_html__( 'Currency', 'astro-booking-engine' ),
-# 'description' => false,
-
-msgid "Currency"
-msgstr ""
-
-# // Widget description
-# array( 'description' => __( 'The Astro Booking Engine plugin displays a user friendly and responsive booking engine form.', 'astro-booking-engine' ), )
-# );
-
-msgid "The Astro Booking Engine plugin displays a user friendly and responsive booking engine form."
-msgstr ""
-
-# 'astro-plugin-panel',
-# __('Booking engine', 'astro-booking-engine'),
-# __('Booking engine', 'astro-booking-engine'),
-
+#: astro-booking-engine-admin.php:126
+#: astro-booking-engine-admin.php:127
 msgid "Booking engine"
 msgstr ""
 
-# $str .= '<br />';
-# $str .= __( 'No provider has been selected in Astro Booking Engine plugin.', 'astro-booking-engine' );
-# $str .= '<br />';
+#: astro-booking-engine-admin.php:228
+msgid "Do you enjoy Astro Booking Engine?"
+msgstr ""
 
+#: astro-booking-engine-admin.php:229
+msgid "You have been using it for a while: a review on WordPress.org would help other users discover it. Thank you!"
+msgstr ""
+
+#: astro-booking-engine-admin.php:232
+msgid "Sure, I'll write a review"
+msgstr ""
+
+#: astro-booking-engine-admin.php:233
+msgid "I've already reviewed it"
+msgstr ""
+
+#: astro-booking-engine-admin.php:234
+msgid "Maybe later"
+msgstr ""
+
+#: astro-booking-engine-admin.php:246
+#: includes/tabs/tab-support.php:24
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: astro-booking-engine-common.php:300
+msgid "This message is visible only to the site administrator."
+msgstr ""
+
+#: astro-booking-engine-common.php:302
 msgid "No provider has been selected in Astro Booking Engine plugin."
 msgstr ""
 
-# $str .= '<br />';
-# $str .= __('Choose your provider at plugin', 'astro-booking-engine' );
-# $str .= '<a href="'.$plugin_settings_url.'">';
-
+#: astro-booking-engine-common.php:304
 msgid "Choose your provider at plugin"
 msgstr ""
 
-# $str .= '<a href="'.$plugin_settings_url.'">';
-# $str .= __('settings page', 'astro-booking-engine' );
-# $str .= '</a>.';
-
+#: astro-booking-engine-common.php:306
 msgid "settings page"
 msgstr ""
 
-msgid "Default Infants"
+#: astro-booking-engine.php:101
+#: includes/tabs/tab-settings.php:14
+#: includes/tabs/tabs-nav.php:15
+msgid "Settings"
 msgstr ""
 
-msgid "Max Infants"
+#: astro-booking-engine.php:115
+#: includes/tabs/tab-support.php:59
+#: includes/tabs/tabs-nav.php:23
+msgid "Support"
 msgstr ""
 
-msgid "Infants"
+#: astro-booking-engine.php:116
+msgid "Author website"
 msgstr ""
 
+#: includes/classes/class-astro-booking-engine-widget.php:23
+msgid "The Astro Booking Engine plugin displays a user friendly and responsive booking engine form."
+msgstr ""
+
+#: includes/classes/class-astro-booking-engine-widget.php:50
+msgid "New title"
+msgstr ""
+
+#: includes/classes/class-astro-booking-engine-widget.php:55
+msgid "Title"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:20
+#: includes/tabs/tabs-nav.php:19
+#: blocks/booking-form/editor.js:39
+msgid "Layout"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:22
+msgid "Widget"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:26
+#: includes/tabs/tab-layout.php:225
+#: includes/tabs/tab-layout.php:455
+msgid "Background color"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:42
+#: includes/tabs/tab-layout.php:319
+#: includes/tabs/tab-layout.php:549
+msgid "Border radius"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:53
+#: includes/tabs/tab-layout.php:106
+#: includes/tabs/tab-layout.php:182
+#: includes/tabs/tab-layout.php:252
+#: includes/tabs/tab-layout.php:330
+#: includes/tabs/tab-layout.php:412
+#: includes/tabs/tab-layout.php:482
+#: includes/tabs/tab-layout.php:560
+msgid "inherit"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:64
+#: includes/tabs/tab-layout.php:117
+#: includes/tabs/tab-layout.php:193
+#: includes/tabs/tab-layout.php:263
+#: includes/tabs/tab-layout.php:341
+#: includes/tabs/tab-layout.php:423
+#: includes/tabs/tab-layout.php:493
+#: includes/tabs/tab-layout.php:571
+msgid "px"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:75
+msgid "Labels"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:79
+#: includes/tabs/tab-layout.php:155
+#: includes/tabs/tab-layout.php:385
+msgid "Font color"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:95
+#: includes/tabs/tab-layout.php:171
+#: includes/tabs/tab-layout.php:401
+msgid "Font size"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:126
+#: includes/tabs/tab-layout.php:202
+#: includes/tabs/tab-layout.php:432
+msgid "Font weight"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:142
+#: includes/tabs/tab-layout.php:218
+#: includes/tabs/tab-layout.php:448
+msgid "normal"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:143
+#: includes/tabs/tab-layout.php:219
+#: includes/tabs/tab-layout.php:449
+msgid "bold"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:151
+msgid "Fields"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:241
+#: includes/tabs/tab-layout.php:471
+msgid "Border width"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:272
+#: includes/tabs/tab-layout.php:502
+msgid "Border style"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:303
+#: includes/tabs/tab-layout.php:533
+msgid "Border color"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:350
+msgid "Calendar theme"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:381
+#: includes/tabs/tab-settings-5stelle.php:346
+#: includes/tabs/tab-settings-blastness.php:385
+#: includes/tabs/tab-settings-datasistemi.php:324
+#: includes/tabs/tab-settings-ericsoft.php:383
+#: includes/tabs/tab-settings-iperbooking.php:576
+#: includes/tabs/tab-settings-myguestcare.php:355
+#: includes/tabs/tab-settings-passepartout.php:391
+#: includes/tabs/tab-settings-simplebooking.php:407
+#: includes/tabs/tab-settings-verticalbooking.php:381
+#: includes/tabs/tab-settings-wubook.php:471
+msgid "Submit button"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:582
+msgid "Advanced settings"
+msgstr ""
+
+#: includes/tabs/tab-layout.php:586
+msgid "Custom CSS"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:15
+#: includes/tabs/tab-settings-blastness.php:19
+#: includes/tabs/tab-settings-datasistemi.php:19
+#: includes/tabs/tab-settings-ericsoft.php:19
+#: includes/tabs/tab-settings-iperbooking.php:15
+#: includes/tabs/tab-settings-myguestcare.php:19
+#: includes/tabs/tab-settings-passepartout.php:15
+#: includes/tabs/tab-settings-simplebooking.php:15
+#: includes/tabs/tab-settings-verticalbooking.php:15
+#: includes/tabs/tab-settings-wubook.php:19
+msgid "Hotel settings"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:19
+msgid "Portal"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:39
+#: includes/tabs/tab-settings-blastness.php:77
+#: includes/tabs/tab-settings-datasistemi.php:74
+#: includes/tabs/tab-settings-ericsoft.php:74
+#: includes/tabs/tab-settings-iperbooking.php:39
+#: includes/tabs/tab-settings-myguestcare.php:44
+#: includes/tabs/tab-settings-passepartout.php:55
+#: includes/tabs/tab-settings-simplebooking.php:70
+#: includes/tabs/tab-settings-verticalbooking.php:73
+#: includes/tabs/tab-settings-wubook.php:74
+msgid "Form settings"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:43
+#: includes/tabs/tab-settings-blastness.php:81
+#: includes/tabs/tab-settings-datasistemi.php:78
+#: includes/tabs/tab-settings-ericsoft.php:78
+#: includes/tabs/tab-settings-iperbooking.php:43
+#: includes/tabs/tab-settings-myguestcare.php:48
+#: includes/tabs/tab-settings-passepartout.php:59
+#: includes/tabs/tab-settings-simplebooking.php:74
+#: includes/tabs/tab-settings-verticalbooking.php:77
+#: includes/tabs/tab-settings-wubook.php:78
+msgid "Target"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:51
+#: includes/tabs/tab-settings-blastness.php:89
+#: includes/tabs/tab-settings-datasistemi.php:86
+#: includes/tabs/tab-settings-ericsoft.php:86
+#: includes/tabs/tab-settings-iperbooking.php:51
+#: includes/tabs/tab-settings-myguestcare.php:56
+#: includes/tabs/tab-settings-passepartout.php:67
+#: includes/tabs/tab-settings-simplebooking.php:82
+#: includes/tabs/tab-settings-verticalbooking.php:85
+#: includes/tabs/tab-settings-wubook.php:86
+msgid "New window or tab"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:52
+#: includes/tabs/tab-settings-blastness.php:90
+#: includes/tabs/tab-settings-datasistemi.php:87
+#: includes/tabs/tab-settings-ericsoft.php:87
+#: includes/tabs/tab-settings-iperbooking.php:52
+#: includes/tabs/tab-settings-myguestcare.php:57
+#: includes/tabs/tab-settings-passepartout.php:68
+#: includes/tabs/tab-settings-simplebooking.php:83
+#: includes/tabs/tab-settings-verticalbooking.php:86
+#: includes/tabs/tab-settings-wubook.php:87
+msgid "Same window or tab"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:79
+#: includes/tabs/tab-settings-blastness.php:118
+#: includes/tabs/tab-settings-datasistemi.php:115
+#: includes/tabs/tab-settings-ericsoft.php:115
+#: includes/tabs/tab-settings-iperbooking.php:280
+#: includes/tabs/tab-settings-myguestcare.php:85
+#: includes/tabs/tab-settings-passepartout.php:95
+#: includes/tabs/tab-settings-simplebooking.php:111
+#: includes/tabs/tab-settings-verticalbooking.php:114
+#: includes/tabs/tab-settings-wubook.php:115
+#: templates/5stelle.php:66
+#: templates/blastness.php:77
+#: templates/datasistemi.php:69
+#: templates/ericsoft.php:87
+#: templates/iperbooking.php:101
+#: templates/myguestcare.php:77
+#: templates/passepartout.php:76
+#: templates/simplebooking.php:68
+#: templates/verticalbooking.php:73
+#: templates/wubook.php:90
+msgid "Adults"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:82
+#: includes/tabs/tab-settings-5stelle.php:170
+#: includes/tabs/tab-settings-5stelle.php:258
+#: includes/tabs/tab-settings-blastness.php:121
+#: includes/tabs/tab-settings-blastness.php:209
+#: includes/tabs/tab-settings-blastness.php:297
+#: includes/tabs/tab-settings-datasistemi.php:118
+#: includes/tabs/tab-settings-datasistemi.php:210
+#: includes/tabs/tab-settings-datasistemi.php:298
+#: includes/tabs/tab-settings-ericsoft.php:118
+#: includes/tabs/tab-settings-ericsoft.php:210
+#: includes/tabs/tab-settings-ericsoft.php:298
+#: includes/tabs/tab-settings-iperbooking.php:283
+#: includes/tabs/tab-settings-iperbooking.php:371
+#: includes/tabs/tab-settings-iperbooking.php:459
+#: includes/tabs/tab-settings-iperbooking.php:550
+#: includes/tabs/tab-settings-myguestcare.php:88
+#: includes/tabs/tab-settings-myguestcare.php:179
+#: includes/tabs/tab-settings-myguestcare.php:267
+#: includes/tabs/tab-settings-passepartout.php:98
+#: includes/tabs/tab-settings-passepartout.php:186
+#: includes/tabs/tab-settings-passepartout.php:274
+#: includes/tabs/tab-settings-passepartout.php:366
+#: includes/tabs/tab-settings-simplebooking.php:114
+#: includes/tabs/tab-settings-simplebooking.php:202
+#: includes/tabs/tab-settings-simplebooking.php:290
+#: includes/tabs/tab-settings-simplebooking.php:381
+#: includes/tabs/tab-settings-verticalbooking.php:117
+#: includes/tabs/tab-settings-verticalbooking.php:205
+#: includes/tabs/tab-settings-verticalbooking.php:293
+#: includes/tabs/tab-settings-wubook.php:118
+#: includes/tabs/tab-settings-wubook.php:210
+#: includes/tabs/tab-settings-wubook.php:298
+#: includes/tabs/tab-settings-wubook.php:386
+msgid "Enable"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:83
+#: includes/tabs/tab-settings-5stelle.php:171
+#: includes/tabs/tab-settings-5stelle.php:259
+#: includes/tabs/tab-settings-blastness.php:122
+#: includes/tabs/tab-settings-blastness.php:210
+#: includes/tabs/tab-settings-blastness.php:298
+#: includes/tabs/tab-settings-datasistemi.php:119
+#: includes/tabs/tab-settings-datasistemi.php:211
+#: includes/tabs/tab-settings-datasistemi.php:299
+#: includes/tabs/tab-settings-ericsoft.php:119
+#: includes/tabs/tab-settings-ericsoft.php:211
+#: includes/tabs/tab-settings-ericsoft.php:299
+#: includes/tabs/tab-settings-iperbooking.php:284
+#: includes/tabs/tab-settings-iperbooking.php:372
+#: includes/tabs/tab-settings-iperbooking.php:460
+#: includes/tabs/tab-settings-iperbooking.php:551
+#: includes/tabs/tab-settings-myguestcare.php:89
+#: includes/tabs/tab-settings-myguestcare.php:180
+#: includes/tabs/tab-settings-myguestcare.php:268
+#: includes/tabs/tab-settings-passepartout.php:99
+#: includes/tabs/tab-settings-passepartout.php:187
+#: includes/tabs/tab-settings-passepartout.php:275
+#: includes/tabs/tab-settings-passepartout.php:367
+#: includes/tabs/tab-settings-simplebooking.php:115
+#: includes/tabs/tab-settings-simplebooking.php:203
+#: includes/tabs/tab-settings-simplebooking.php:291
+#: includes/tabs/tab-settings-simplebooking.php:382
+#: includes/tabs/tab-settings-verticalbooking.php:118
+#: includes/tabs/tab-settings-verticalbooking.php:206
+#: includes/tabs/tab-settings-verticalbooking.php:294
+#: includes/tabs/tab-settings-wubook.php:119
+#: includes/tabs/tab-settings-wubook.php:211
+#: includes/tabs/tab-settings-wubook.php:299
+#: includes/tabs/tab-settings-wubook.php:387
+msgid "Check to enable"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:104
+#: includes/tabs/tab-settings-blastness.php:143
+#: includes/tabs/tab-settings-datasistemi.php:140
+#: includes/tabs/tab-settings-ericsoft.php:140
+#: includes/tabs/tab-settings-iperbooking.php:305
+#: includes/tabs/tab-settings-myguestcare.php:110
+#: includes/tabs/tab-settings-passepartout.php:120
+#: includes/tabs/tab-settings-simplebooking.php:136
+#: includes/tabs/tab-settings-verticalbooking.php:139
+#: includes/tabs/tab-settings-wubook.php:140
+msgid "Default Adults"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:132
+#: includes/tabs/tab-settings-blastness.php:171
+#: includes/tabs/tab-settings-datasistemi.php:171
+#: includes/tabs/tab-settings-ericsoft.php:171
+#: includes/tabs/tab-settings-iperbooking.php:333
+#: includes/tabs/tab-settings-myguestcare.php:141
+#: includes/tabs/tab-settings-passepartout.php:148
+#: includes/tabs/tab-settings-simplebooking.php:164
+#: includes/tabs/tab-settings-verticalbooking.php:167
+#: includes/tabs/tab-settings-wubook.php:171
+msgid "Max Adults"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:167
+#: includes/tabs/tab-settings-blastness.php:206
+#: includes/tabs/tab-settings-datasistemi.php:206
+#: includes/tabs/tab-settings-ericsoft.php:206
+#: includes/tabs/tab-settings-iperbooking.php:368
+#: includes/tabs/tab-settings-myguestcare.php:176
+#: includes/tabs/tab-settings-passepartout.php:183
+#: includes/tabs/tab-settings-simplebooking.php:199
+#: includes/tabs/tab-settings-verticalbooking.php:202
+#: includes/tabs/tab-settings-wubook.php:295
+#: templates/5stelle.php:92
+#: templates/blastness.php:107
+#: templates/datasistemi.php:99
+#: templates/ericsoft.php:112
+#: templates/iperbooking.php:127
+#: templates/myguestcare.php:107
+#: templates/passepartout.php:102
+#: templates/simplebooking.php:94
+#: templates/verticalbooking.php:103
+#: templates/wubook.php:140
+msgid "Children"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:192
+#: includes/tabs/tab-settings-blastness.php:231
+#: includes/tabs/tab-settings-datasistemi.php:232
+#: includes/tabs/tab-settings-ericsoft.php:232
+#: includes/tabs/tab-settings-iperbooking.php:393
+#: includes/tabs/tab-settings-myguestcare.php:201
+#: includes/tabs/tab-settings-passepartout.php:208
+#: includes/tabs/tab-settings-simplebooking.php:224
+#: includes/tabs/tab-settings-verticalbooking.php:227
+#: includes/tabs/tab-settings-wubook.php:320
+msgid "Default children"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:220
+#: includes/tabs/tab-settings-blastness.php:259
+#: includes/tabs/tab-settings-datasistemi.php:260
+#: includes/tabs/tab-settings-ericsoft.php:260
+#: includes/tabs/tab-settings-iperbooking.php:421
+#: includes/tabs/tab-settings-myguestcare.php:229
+#: includes/tabs/tab-settings-passepartout.php:236
+#: includes/tabs/tab-settings-simplebooking.php:252
+#: includes/tabs/tab-settings-verticalbooking.php:255
+#: includes/tabs/tab-settings-wubook.php:348
+msgid "Max children"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:255
+#: includes/tabs/tab-settings-blastness.php:294
+#: includes/tabs/tab-settings-iperbooking.php:456
+#: includes/tabs/tab-settings-myguestcare.php:264
+#: includes/tabs/tab-settings-passepartout.php:271
+#: includes/tabs/tab-settings-simplebooking.php:287
+#: includes/tabs/tab-settings-verticalbooking.php:290
+msgid "Children age"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:280
+#: includes/tabs/tab-settings-iperbooking.php:481
+#: includes/tabs/tab-settings-passepartout.php:296
+msgid "Min child age"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:311
+#: includes/tabs/tab-settings-iperbooking.php:512
+#: includes/tabs/tab-settings-passepartout.php:327
+msgid "Max child age"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:350
+#: includes/tabs/tab-settings-blastness.php:389
+#: includes/tabs/tab-settings-datasistemi.php:328
+#: includes/tabs/tab-settings-ericsoft.php:387
+#: includes/tabs/tab-settings-iperbooking.php:202
+#: includes/tabs/tab-settings-iperbooking.php:256
+#: includes/tabs/tab-settings-iperbooking.php:580
+#: includes/tabs/tab-settings-myguestcare.php:359
+#: includes/tabs/tab-settings-passepartout.php:395
+#: includes/tabs/tab-settings-simplebooking.php:411
+#: includes/tabs/tab-settings-verticalbooking.php:385
+#: includes/tabs/tab-settings-wubook.php:475
+msgid "Label"
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:351
+#: includes/tabs/tab-settings-blastness.php:390
+#: includes/tabs/tab-settings-datasistemi.php:329
+#: includes/tabs/tab-settings-ericsoft.php:388
+#: includes/tabs/tab-settings-iperbooking.php:581
+#: includes/tabs/tab-settings-myguestcare.php:360
+#: includes/tabs/tab-settings-passepartout.php:396
+#: includes/tabs/tab-settings-simplebooking.php:412
+#: includes/tabs/tab-settings-verticalbooking.php:386
+#: includes/tabs/tab-settings-wubook.php:476
+msgid "The default value is Search."
+msgstr ""
+
+#: includes/tabs/tab-settings-5stelle.php:354
+#: includes/tabs/tab-settings-blastness.php:393
+#: includes/tabs/tab-settings-datasistemi.php:332
+#: includes/tabs/tab-settings-ericsoft.php:391
+#: includes/tabs/tab-settings-iperbooking.php:584
+#: includes/tabs/tab-settings-myguestcare.php:363
+#: includes/tabs/tab-settings-passepartout.php:399
+#: includes/tabs/tab-settings-simplebooking.php:415
+#: includes/tabs/tab-settings-verticalbooking.php:389
+#: includes/tabs/tab-settings-wubook.php:479
+#: templates/5stelle.php:151
+#: templates/blastness.php:170
+#: templates/datasistemi.php:148
+#: templates/ericsoft.php:160
+#: templates/iperbooking.php:207
+#: templates/myguestcare.php:170
+#: templates/passepartout.php:183
+#: templates/simplebooking.php:178
+#: templates/verticalbooking.php:166
+#: templates/wubook.php:188
+msgid "Search"
+msgstr ""
+
+#: includes/tabs/tab-settings-blastness.php:23
+#: includes/tabs/tab-settings-verticalbooking.php:19
+msgid "id_albergo"
+msgstr ""
+
+#: includes/tabs/tab-settings-blastness.php:40
+#: includes/tabs/tab-settings-verticalbooking.php:36
+msgid "dc"
+msgstr ""
+
+#: includes/tabs/tab-settings-blastness.php:57
+#: includes/tabs/tab-settings-verticalbooking.php:53
+msgid "id_stile"
+msgstr ""
+
+#: includes/tabs/tab-settings-blastness.php:319
+#: includes/tabs/tab-settings-myguestcare.php:289
+#: includes/tabs/tab-settings-simplebooking.php:312
+#: includes/tabs/tab-settings-verticalbooking.php:315
+msgid "Min children age"
+msgstr ""
+
+#: includes/tabs/tab-settings-blastness.php:350
+#: includes/tabs/tab-settings-myguestcare.php:320
+#: includes/tabs/tab-settings-simplebooking.php:343
+#: includes/tabs/tab-settings-verticalbooking.php:346
+msgid "Max children age"
+msgstr ""
+
+#: includes/tabs/tab-settings-datasistemi.php:23
+msgid "idstr"
+msgstr ""
+
+#: includes/tabs/tab-settings-datasistemi.php:40
+#: includes/tabs/tab-settings-ericsoft.php:40
+#: includes/tabs/tab-settings-simplebooking.php:36
+#: includes/tabs/tab-settings-wubook.php:40
+msgid "Currency"
+msgstr ""
+
+#: includes/tabs/tab-settings-datasistemi.php:207
+msgid "Children ages cannot be passed to the Data Sistemi booking engine: guests can set them on the booking page."
+msgstr ""
+
+#: includes/tabs/tab-settings-datasistemi.php:295
+#: templates/datasistemi.php:129
+msgid "Promo code"
+msgstr ""
+
+#: includes/tabs/tab-settings-ericsoft.php:23
 msgid "idh"
 msgstr ""
 
+#: includes/tabs/tab-settings-ericsoft.php:207
+msgid "The age ranges of children and infants depend on the age categories configured in your Ericsoft booking engine."
+msgstr ""
+
+#: includes/tabs/tab-settings-ericsoft.php:295
+#: templates/ericsoft.php:137
+msgid "Infants"
+msgstr ""
+
+#: includes/tabs/tab-settings-ericsoft.php:320
+msgid "Default Infants"
+msgstr ""
+
+#: includes/tabs/tab-settings-ericsoft.php:348
+msgid "Max Infants"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:19
+msgid "idHotel"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:76
+msgid "Language settings"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:85
+msgid "Language options"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:87
+#: includes/tabs/tab-settings-iperbooking.php:105
+msgid "Lang code"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:88
+#: includes/tabs/tab-settings-iperbooking.php:109
+msgid "URL"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:91
+#: includes/tabs/tab-settings-iperbooking.php:205
+msgid "Add new option"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:102
+#: includes/tabs/tab-settings-iperbooking.php:135
+msgid "Language option"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:126
+#: includes/tabs/tab-settings-iperbooking.php:240
+msgid "Delete"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:166
+msgid "Treatments"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:169
+msgid "Visible"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:170
+msgid "Check to show"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:190
+msgid "Treatment options"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:199
+msgid "Options"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:200
+msgid "Option example"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:201
+#: includes/tabs/tab-settings-iperbooking.php:252
+msgid "Value"
+msgstr ""
+
+#: includes/tabs/tab-settings-iperbooking.php:547
+#: includes/tabs/tab-settings-passepartout.php:363
+#: templates/iperbooking.php:189
+#: templates/passepartout.php:164
+msgid "Discount code"
+msgstr ""
+
+#: includes/tabs/tab-settings-myguestcare.php:23
 msgid "idcliente"
 msgstr ""
 
-msgid ""
-"The age ranges of children and infants depend on the age categories "
-"configured in your Ericsoft booking engine."
+#: includes/tabs/tab-settings-passepartout.php:19
+msgid "Albergo"
+msgstr ""
+
+#: includes/tabs/tab-settings-passepartout.php:35
+msgid "OidPortaleXAlbergo"
+msgstr ""
+
+#: includes/tabs/tab-settings-simplebooking.php:19
+msgid "hid"
+msgstr ""
+
+#: includes/tabs/tab-settings-simplebooking.php:378
+#: templates/simplebooking.php:156
+msgid "Coupon"
+msgstr ""
+
+#: includes/tabs/tab-settings-wubook.php:23
+msgid "ep"
+msgstr ""
+
+#: includes/tabs/tab-settings-wubook.php:206
+#: templates/wubook.php:115
+msgid "Teens"
+msgstr ""
+
+#: includes/tabs/tab-settings-wubook.php:207
+msgid "The age ranges of teens, children and babies depend on the age categories configured in your WuBook booking engine."
+msgstr ""
+
+#: includes/tabs/tab-settings-wubook.php:232
+msgid "Default Teens"
+msgstr ""
+
+#: includes/tabs/tab-settings-wubook.php:260
+msgid "Max Teens"
+msgstr ""
+
+#: includes/tabs/tab-settings-wubook.php:383
+#: templates/wubook.php:165
+msgid "Babies"
+msgstr ""
+
+#: includes/tabs/tab-settings-wubook.php:408
+msgid "Default Babies"
+msgstr ""
+
+#: includes/tabs/tab-settings-wubook.php:436
+msgid "Max Babies"
+msgstr ""
+
+#: includes/tabs/tab-settings.php:20
+msgid "Astro Booking Engine displays the booking form using the <strong>Astro Booking Engine</strong> block in the editor or the shortcode <strong>[astro-booking-engine]</strong>."
+msgstr ""
+
+#: includes/tabs/tab-settings.php:24
+msgid "For installation details, read more at the"
+msgstr ""
+
+#: includes/tabs/tab-settings.php:27
+msgid "support page"
+msgstr ""
+
+#: includes/tabs/tab-settings.php:42
+msgid "Provider"
+msgstr ""
+
+#: includes/tabs/tab-settings.php:46
+msgid "Your provider"
+msgstr ""
+
+#: includes/tabs/tab-settings.php:47
+msgid "Select your provider and configure its settings to enable Astro Booking Engine."
+msgstr ""
+
+#: includes/tabs/tab-support.php:30
+msgid "Security check failed. Please go back and try again."
+msgstr ""
+
+#: includes/tabs/tab-support.php:34
+msgid "All the plugin options have deleted."
+msgstr ""
+
+#: includes/tabs/tab-support.php:61
+msgid "How to start with this plugin"
+msgstr ""
+
+#: includes/tabs/tab-support.php:63
+msgid "Get data settings from your booking engine provider; if you don't have one, you need to adopt one"
+msgstr ""
+
+#: includes/tabs/tab-support.php:63
+msgid "see the list of currently available providers"
+msgstr ""
+
+#: includes/tabs/tab-support.php:64
+msgid "Select the provider name and configure its settings"
+msgstr ""
+
+#: includes/tabs/tab-support.php:65
+msgid "Configure the booking form layout (optional)"
+msgstr ""
+
+#: includes/tabs/tab-support.php:66
+msgid "Add the Astro Booking Engine block in the editor, use the [astro-booking-engine] shortcode in your post/page content, or add the Astro Booking Engine widget in the widget area."
+msgstr ""
+
+#: includes/tabs/tab-support.php:68
+msgid "IMPORTANT"
+msgstr ""
+
+#: includes/tabs/tab-support.php:69
+msgid "it is mandatory to have the provider data settings and the provider contract must be active in order to use the Astro Booking Engine."
+msgstr ""
+
+#: includes/tabs/tab-support.php:70
+msgid "The booking engine provider can send you the useful settings to configure the Astro Booking Engine; we are not a booking engine provider."
+msgstr ""
+
+#: includes/tabs/tab-support.php:71
+msgid "Only after configuring the Astro Booking Engine with the provider's data, you can you start to use the booking form on your website."
+msgstr ""
+
+#: includes/tabs/tab-support.php:75
+msgid "Providers list"
+msgstr ""
+
+#: includes/tabs/tab-support.php:76
+msgid "Currently, Astro Booking Engine can be connected to the following booking engine providers (in alphabetic order)."
+msgstr ""
+
+#: includes/tabs/tab-support.php:90
+msgid "Is your booking engine provider not available in Astro Booking Engine?"
+msgstr ""
+
+#: includes/tabs/tab-support.php:91
+#: includes/tabs/tab-support.php:100
+msgid "Write me an email at"
+msgstr ""
+
+#: includes/tabs/tab-support.php:95
+msgid "FAQs"
+msgstr ""
+
+#: includes/tabs/tab-support.php:96
+msgid "Do you need support?"
+msgstr ""
+
+#: includes/tabs/tab-support.php:97
+msgid "Request support at the "
+msgstr ""
+
+#: includes/tabs/tab-support.php:97
+msgid "plugin support page"
+msgstr ""
+
+#: includes/tabs/tab-support.php:99
+msgid "Have more questions?"
+msgstr ""
+
+#: includes/tabs/tab-support.php:104
+msgid "About the author"
+msgstr ""
+
+#: includes/tabs/tab-support.php:106
+msgid "Creator of Astro Booking Engine and founder of AboutMyHotel."
+msgstr ""
+
+#: includes/tabs/tab-support.php:108
+msgid "Website:"
+msgstr ""
+
+#: includes/tabs/tab-support.php:109
+msgid "hotel reputation and market intelligence platform."
+msgstr ""
+
+#: includes/tabs/tab-support.php:110
+msgid "Bug reports and suggestions:"
+msgstr ""
+
+#: includes/tabs/tab-support.php:112
+msgid "AboutMyHotel is a separate, commercial service by the same author. It is not required to use this plugin."
+msgstr ""
+
+#: includes/tabs/tab-support.php:116
+msgid "Plugin data reset"
+msgstr ""
+
+#: includes/tabs/tab-support.php:117
+msgid "Remove all plugin settings"
+msgstr ""
+
+#: templates/5stelle.php:26
+#: templates/blastness.php:37
+#: templates/datasistemi.php:29
+#: templates/ericsoft.php:47
+#: templates/iperbooking.php:24
+#: templates/myguestcare.php:37
+#: templates/passepartout.php:36
+#: templates/simplebooking.php:26
+#: templates/verticalbooking.php:33
+#: templates/wubook.php:50
+msgid "Check-in"
+msgstr ""
+
+#: templates/5stelle.php:42
+#: templates/blastness.php:53
+#: templates/datasistemi.php:45
+#: templates/ericsoft.php:63
+#: templates/iperbooking.php:40
+#: templates/myguestcare.php:53
+#: templates/passepartout.php:52
+#: templates/simplebooking.php:43
+#: templates/verticalbooking.php:49
+#: templates/wubook.php:66
+msgid "Check-out"
+msgstr ""
+
+#: templates/5stelle.php:121
+#: templates/blastness.php:140
+#: templates/iperbooking.php:156
+#: templates/myguestcare.php:140
+#: templates/passepartout.php:131
+#: templates/simplebooking.php:123
+#: templates/verticalbooking.php:136
+msgid "Child Age"
+msgstr ""
+
+#: templates/iperbooking.php:63
+msgid "Treatment"
+msgstr ""
+
+#: blocks/booking-form/editor.js:25
+msgid "Form"
+msgstr ""
+
+#: blocks/booking-form/editor.js:29
+msgid "Submit button label"
+msgstr ""
+
+#: blocks/booking-form/editor.js:30
+msgid "Leave empty to use the label from the plugin settings."
+msgstr ""
+
+#: blocks/booking-form/editor.js:43
+msgid "Customize layout for this block"
+msgstr ""
+
+#: blocks/booking-form/editor.js:44
+msgid "When off, the block uses the layout defined in the plugin settings."
+msgstr ""
+
+#: blocks/booking-form/editor.js:51
+msgid "Form container border radius (px)"
+msgstr ""
+
+#: blocks/booking-form/editor.js:61
+msgid "Field border radius (px)"
+msgstr ""
+
+#: blocks/booking-form/editor.js:71
+msgid "Submit button border radius (px)"
+msgstr ""
+
+#: blocks/booking-form/editor.js:83
+msgid "Form colors"
+msgstr ""
+
+#: blocks/booking-form/editor.js:89
+msgid "Form container background color"
+msgstr ""
+
+#: blocks/booking-form/editor.js:97
+msgid "Label text color"
+msgstr ""
+
+#: blocks/booking-form/editor.js:105
+msgid "Field text color"
+msgstr ""
+
+#: blocks/booking-form/editor.js:113
+msgid "Field background color"
+msgstr ""
+
+#: blocks/booking-form/editor.js:121
+msgid "Submit button text color"
+msgstr ""
+
+#: blocks/booking-form/editor.js:129
+msgid "Submit button background color"
+msgstr ""
+
+#: blocks/booking-form/block.json
+msgctxt "block title"
+msgid "Astro Booking Engine"
+msgstr ""
+
+#: blocks/booking-form/block.json
+msgctxt "block description"
+msgid "Display the booking engine form of the configured provider."
+msgstr ""
+
+#: blocks/booking-form/block.json
+msgctxt "block keyword"
+msgid "booking"
+msgstr ""
+
+#: blocks/booking-form/block.json
+msgctxt "block keyword"
+msgid "hotel"
+msgstr ""
+
+#: blocks/booking-form/block.json
+msgctxt "block keyword"
+msgid "reservation"
+msgstr ""
+
+#: blocks/booking-form/block.json
+msgctxt "block keyword"
+msgid "booking engine"
 msgstr ""

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Astro Booking Engine\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-17 09:15+0000\n"
-"PO-Revision-Date: 2023-08-21 17:09+0000\n"
+"PO-Revision-Date: 2026-09-03 09:28+0200\n"
 "Last-Translator: admin\n"
 "Language-Team: Italian\n"
 "Language: it-IT\n"
@@ -32,6 +32,10 @@ msgstr "Adulti"
 msgid "Advanced settings"
 msgstr "Impostazioni avanzate"
 
+#: includes/tabs/tab-settings-passepartout.php:19
+msgid "Albergo"
+msgstr "Albergo"
+
 #: includes/tabs/tab-support.php:14
 msgid "All the plugin options have deleted."
 msgstr "Tutte le opzioni del plugin sono state eliminate."
@@ -41,14 +45,6 @@ msgstr "Tutte le opzioni del plugin sono state eliminate."
 #: includes/classes/class-astro-booking-engine-widget.php:20
 msgid "Astro Booking Engine"
 msgstr "Astro Booking Engine"
-
-#: includes/tabs/tab-settings.php:15
-msgid ""
-"Astro Booking Engine displays the booking form using the shortcode <strong>"
-"[astro-booking-engine]</strong>."
-msgstr ""
-"Astro Booking Engine visualizza il modulo di prenotazione utilizzando lo "
-"shortcode <strong>[astro-booking-engine]</strong>."
 
 #. Author of the plugin
 msgid "Alian Schiavoncini"
@@ -207,8 +203,8 @@ msgid "Discount code"
 msgstr "Codice sconto"
 
 #. Description of the plugin
-msgid "Display the booking engine form of your favorite provider."
-msgstr "Visualizza il modulo del booking engine del tuo fornitore preferito."
+msgid "Hotel booking form via Gutenberg block or shortcode, independent from the provider: switch booking engine anytime, your form stays the same."
+msgstr "Modulo di prenotazione hotel via blocco Gutenberg o shortcode, indipendente dal fornitore: cambi booking engine quando vuoi, il modulo resta uguale."
 
 #: includes/tabs/tab-support.php:58
 msgid "Do you need support?"
@@ -359,6 +355,7 @@ msgid "Language settings"
 msgstr "Impostazioni della lingua"
 
 #: includes/tabs/tab-layout.php:20 includes/tabs/tabs-nav.php:19
+#: blocks/booking-form/editor.js:39
 msgid "Layout"
 msgstr "Layout"
 
@@ -411,6 +408,10 @@ msgstr "Nessun provider è stato selezionato nel plugin Astro Booking Engine."
 msgid "normal"
 msgstr "normale"
 
+#: includes/tabs/tab-settings-passepartout.php:35
+msgid "OidPortaleXAlbergo"
+msgstr "OidPortaleXAlbergo"
+
 #: includes/tabs/tab-support.php:40
 msgid ""
 "Only after configuring the Astro Booking Engine with the provider's data, "
@@ -427,13 +428,19 @@ msgstr "Esempio di opzione"
 msgid "Options"
 msgstr "Opzioni"
 
+#: includes/tabs/tab-settings-5stelle.php:19
+msgid "Portal"
+msgstr "Portale"
+
+#: includes/tabs/tab-support.php:30
+msgid "Security check failed. Please go back and try again."
+msgstr "Controllo di sicurezza non riuscito. Torna indietro e riprova."
+
 #: includes/tabs/tab-settings.php:19
-msgctxt "pagina di supporto"
 msgid "support page"
 msgstr "pagina di supporto"
 
 #: includes/tabs/tab-settings.php:16
-msgctxt "Per i dettagli sull'installazione, vedi la"
 msgid "For installation details, read more at the"
 msgstr "Per i dettagli sull'installazione, vedi la"
 
@@ -576,14 +583,6 @@ msgstr "Trattamenti"
 msgid "URL"
 msgstr "URL"
 
-#: includes/tabs/tab-support.php:35
-msgid ""
-"Use the [astro-booking-engine] shortcode in your post/page content or add "
-"the Astro Booking Engine in the widget area."
-msgstr ""
-"Usa lo shortcode [astro-booking-engine] nel contenuto del tuo "
-"articolo/pagina o aggiungi Astro Booking Engine nell'area del widget."
-
 #: includes/tabs/tab-settings-iperbooking.php:201 
 #: includes/tabs/tab-settings-iperbooking.php:252
 msgid "Value"
@@ -637,3 +636,221 @@ msgid ""
 msgstr ""
 "Le fasce di età di bambini e neonati dipendono dalle categorie di età "
 "configurate nel tuo booking engine Ericsoft."
+
+#: astro-booking-engine-admin.php:225
+msgid "Do you enjoy Astro Booking Engine?"
+msgstr "Ti trovi bene con Astro Booking Engine?"
+
+#: astro-booking-engine-admin.php:226
+msgid ""
+"You have been using it for a while: a review on WordPress.org would help "
+"other users discover it. Thank you!"
+msgstr ""
+"Lo usi da un po' di tempo: una recensione su WordPress.org aiuterebbe altri "
+"utenti a scoprirlo. Grazie!"
+
+#: astro-booking-engine-admin.php:229
+msgid "Sure, I'll write a review"
+msgstr "Certo, scrivo una recensione"
+
+#: astro-booking-engine-admin.php:230
+msgid "I've already reviewed it"
+msgstr "L'ho già recensito"
+
+#: astro-booking-engine-admin.php:231
+msgid "Maybe later"
+msgstr "Magari più tardi"
+
+#: includes/tabs/tab-settings.php:20
+msgid ""
+"Astro Booking Engine displays the booking form using the <strong>Astro "
+"Booking Engine</strong> block in the editor or the shortcode "
+"<strong>[astro-booking-engine]</strong>."
+msgstr ""
+"Astro Booking Engine mostra il form di prenotazione tramite il blocco "
+"<strong>Astro Booking Engine</strong> nell'editor o lo shortcode "
+"<strong>[astro-booking-engine]</strong>."
+
+#: includes/tabs/tab-support.php:66
+msgid ""
+"Add the Astro Booking Engine block in the editor, use the "
+"[astro-booking-engine] shortcode in your post/page content, or add the "
+"Astro Booking Engine widget in the widget area."
+msgstr ""
+"Aggiungi il blocco Astro Booking Engine nell'editor, usa lo shortcode "
+"[astro-booking-engine] nel contenuto di articoli/pagine, oppure aggiungi il "
+"widget Astro Booking Engine nell'area widget."
+
+#: blocks/booking-form/block.json
+msgctxt "block title"
+msgid "Astro Booking Engine"
+msgstr "Astro Booking Engine"
+
+#: blocks/booking-form/block.json
+msgctxt "block description"
+msgid "Display the booking engine form of the configured provider."
+msgstr "Mostra il form del booking engine del provider configurato."
+
+#: blocks/booking-form/block.json
+msgctxt "block keyword"
+msgid "booking"
+msgstr "booking"
+
+#: blocks/booking-form/block.json
+msgctxt "block keyword"
+msgid "hotel"
+msgstr "hotel"
+
+#: blocks/booking-form/block.json
+msgctxt "block keyword"
+msgid "reservation"
+msgstr "prenotazione"
+
+#: blocks/booking-form/block.json
+msgctxt "block keyword"
+msgid "booking engine"
+msgstr "booking engine"
+
+#: blocks/booking-form/editor.js:25
+msgid "Form"
+msgstr "Form"
+
+#: blocks/booking-form/editor.js:29
+msgid "Submit button label"
+msgstr "Etichetta del pulsante di invio"
+
+#: blocks/booking-form/editor.js:30
+msgid "Leave empty to use the label from the plugin settings."
+msgstr "Lascia vuoto per usare l'etichetta delle impostazioni del plugin."
+
+#: blocks/booking-form/editor.js:43
+msgid "Customize layout for this block"
+msgstr "Personalizza il layout per questo blocco"
+
+#: blocks/booking-form/editor.js:44
+msgid "When off, the block uses the layout defined in the plugin settings."
+msgstr "Se disattivato, il blocco usa il layout definito nelle impostazioni del plugin."
+
+#: blocks/booking-form/editor.js:51
+msgid "Field border radius (px)"
+msgstr "Raggio del bordo dei campi (px)"
+
+#: blocks/booking-form/editor.js:61
+msgid "Submit button border radius (px)"
+msgstr "Raggio del bordo del pulsante di invio (px)"
+
+#: blocks/booking-form/editor.js:73
+msgid "Form colors"
+msgstr "Colori del form"
+
+#: blocks/booking-form/editor.js:78
+msgid "Label text color"
+msgstr "Colore del testo delle etichette"
+
+#: blocks/booking-form/editor.js:85
+msgid "Field text color"
+msgstr "Colore del testo dei campi"
+
+#: blocks/booking-form/editor.js:92
+msgid "Field background color"
+msgstr "Colore di sfondo dei campi"
+
+#: blocks/booking-form/editor.js:99
+msgid "Submit button text color"
+msgstr "Colore del testo del pulsante di invio"
+
+#: blocks/booking-form/editor.js:106
+msgid "Submit button background color"
+msgstr "Colore di sfondo del pulsante di invio"
+
+#: blocks/booking-form/editor.js:52
+msgid "Form container background color"
+msgstr "Colore di sfondo del contenitore del form"
+
+#: blocks/booking-form/editor.js:53
+msgid "Form container border radius (px)"
+msgstr "Raggio del bordo del contenitore del form (px)"
+
+#: includes/tabs/tab-settings-datasistemi.php:22
+msgid "idstr"
+msgstr "idstr"
+
+#: includes/tabs/tab-settings-datasistemi.php:307 templates/datasistemi.php:139
+msgid "Promo code"
+msgstr "Codice promozionale"
+
+#: includes/tabs/tab-settings-datasistemi.php:213
+msgid ""
+"Children ages cannot be passed to the Data Sistemi booking engine: guests "
+"can set them on the booking page."
+msgstr ""
+"Le età dei bambini non possono essere passate al booking engine Data "
+"Sistemi: gli ospiti potranno indicarle nella pagina di prenotazione."
+
+#: includes/tabs/tab-settings-wubook.php:22
+msgid "ep"
+msgstr "ep"
+
+#: includes/tabs/tab-settings-wubook.php:206 templates/wubook.php:123
+msgid "Teens"
+msgstr "Ragazzi"
+
+#: includes/tabs/tab-settings-wubook.php:233
+msgid "Default Teens"
+msgstr "Predefinito Ragazzi"
+
+#: includes/tabs/tab-settings-wubook.php:261
+msgid "Max Teens"
+msgstr "Massimo Ragazzi"
+
+#: includes/tabs/tab-settings-wubook.php:398 templates/wubook.php:172
+msgid "Babies"
+msgstr "Neonati"
+
+#: includes/tabs/tab-settings-wubook.php:425
+msgid "Default Babies"
+msgstr "Predefinito Neonati"
+
+#: includes/tabs/tab-settings-wubook.php:453
+msgid "Max Babies"
+msgstr "Massimo Neonati"
+
+#: includes/tabs/tab-settings-wubook.php:207
+msgid ""
+"The age ranges of teens, children and babies depend on the age categories "
+"configured in your WuBook booking engine."
+msgstr ""
+"Le fasce di età di ragazzi, bambini e neonati dipendono dalle categorie di "
+"età configurate nel tuo booking engine WuBook."
+
+#: includes/tabs/tab-support.php:104
+msgid "About the author"
+msgstr "L'autore"
+
+#: includes/tabs/tab-support.php:106
+msgid "Creator of Astro Booking Engine and founder of AboutMyHotel."
+msgstr "Creatore di Astro Booking Engine e fondatore di AboutMyHotel."
+
+#: includes/tabs/tab-support.php:108
+msgid "Website:"
+msgstr "Sito web:"
+
+#: includes/tabs/tab-support.php:109
+msgid "hotel reputation and market intelligence platform."
+msgstr "piattaforma di hotel reputation e market intelligence."
+
+#: includes/tabs/tab-support.php:110
+msgid "Bug reports and suggestions:"
+msgstr "Segnalazioni di bug e suggerimenti:"
+
+#: includes/tabs/tab-support.php:112
+msgid ""
+"AboutMyHotel is a separate, commercial service by the same author. It is "
+"not required to use this plugin."
+msgstr ""
+"AboutMyHotel è un servizio separato e commerciale dello stesso autore. Non "
+"è necessario per usare questo plugin."
+
+#: astro-booking-engine.php:116
+msgid "Author website"
+msgstr "Sito dell'autore"

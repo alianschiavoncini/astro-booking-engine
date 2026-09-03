@@ -63,7 +63,7 @@ do_settings_sections($option_group);
                 <li><?php esc_html_e( 'Get data settings from your booking engine provider; if you don\'t have one, you need to adopt one', 'astro-booking-engine' ); ?> (<a href="#support-providers-list"><?php esc_html_e( 'see the list of currently available providers', 'astro-booking-engine' ); ?></a>)</li>
                 <li><?php esc_html_e( 'Select the provider name and configure its settings', 'astro-booking-engine' ); ?></li>
                 <li><?php esc_html_e( 'Configure the booking form layout (optional)', 'astro-booking-engine' ); ?></li>
-                <li><?php esc_html_e( 'Use the [astro-booking-engine] shortcode in your post/page content or add the Astro Booking Engine in the widget area.', 'astro-booking-engine' ); ?></li>
+                <li><?php esc_html_e( 'Add the Astro Booking Engine block in the editor, use the [astro-booking-engine] shortcode in your post/page content, or add the Astro Booking Engine widget in the widget area.', 'astro-booking-engine' ); ?></li>
             </ol>
             <p><strong><?php esc_html_e( 'IMPORTANT', 'astro-booking-engine' ); ?></strong>:
 				<?php esc_html_e( 'it is mandatory to have the provider data settings and the provider contract must be active in order to use the Astro Booking Engine.', 'astro-booking-engine' ); ?><br>
@@ -76,12 +76,15 @@ do_settings_sections($option_group);
             <p><?php esc_html_e( 'Currently, Astro Booking Engine can be connected to the following booking engine providers (in alphabetic order).', 'astro-booking-engine' ); ?></p>
             <ul>
                 <li><a href="https://www.hotelcinquestelle.cloud/en/" target="_blank">5Stelle</a></li>
+                <li><a href="https://www.blastness.com/" target="_blank">Blastness</a></li>
+                <li><a href="https://www.datasistemi.eu/" target="_blank">Data Sistemi</a></li>
                 <li><a href="https://www.ericsoft.com/" target="_blank">Ericsoft</a></li>
                 <li><a href="https://www.iperbooking.com/" target="_blank">Iperbooking</a></li>
                 <li><a href="https://www.mycomp.it/" target="_blank">MyGuestCare</a></li>
                 <li><a href="https://www.passepartout.net/" target="_blank">Passepartout</a></li>
                 <li><a href="https://www.simplebooking.travel/" target="_blank">Simple Booking</a></li>
                 <li><a href="https://www.verticalbooking.com/en/home/" target="_blank">Vertical Booking</a></li>
+                <li><a href="https://wubook.net/" target="_blank">WuBook</a></li>
             </ul>
 
             <p><?php esc_html_e( 'Is your booking engine provider not available in Astro Booking Engine?', 'astro-booking-engine' ); ?><br>
@@ -95,6 +98,18 @@ do_settings_sections($option_group);
 
             <p><span class="support-faq-question"><?php esc_html_e( 'Have more questions?', 'astro-booking-engine' ); ?></span><br>
             <span class="support-faq-answer"><?php esc_html_e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:alian@alian.it">alian@alian.it</a>.</span></p>
+
+            <hr />
+
+            <h3 id="support-about-author" class="title"><?php esc_html_e( 'About the author', 'astro-booking-engine' ); ?></h3>
+            <p><strong>Alian Schiavoncini</strong><br>
+                <?php esc_html_e( 'Creator of Astro Booking Engine and founder of AboutMyHotel.', 'astro-booking-engine' ); ?></p>
+            <ul>
+                <li><?php esc_html_e( 'Website:', 'astro-booking-engine' ); ?> <a href="<?php echo esc_url( 'https://www.alian.it' ); ?>" target="_blank" rel="noopener noreferrer">www.alian.it</a></li>
+                <li><a href="<?php echo esc_url( 'https://www.aboutmyhotel.com' ); ?>" target="_blank" rel="noopener noreferrer">AboutMyHotel</a>: <?php esc_html_e( 'hotel reputation and market intelligence platform.', 'astro-booking-engine' ); ?></li>
+                <li><?php esc_html_e( 'Bug reports and suggestions:', 'astro-booking-engine' ); ?> <a href="mailto:alian@alian.it">alian@alian.it</a></li>
+            </ul>
+            <p class="description"><?php esc_html_e( 'AboutMyHotel is a separate, commercial service by the same author. It is not required to use this plugin.', 'astro-booking-engine' ); ?></p>
 
             <hr />
 

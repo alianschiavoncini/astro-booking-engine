@@ -49,6 +49,43 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . '5stelle_portal' => ASTRO_BE_PREFIX . '5stelle_portal', //required
 
 				/**
+				 * Blastness
+				 */
+				ASTRO_BE_PREFIX . 'blastness_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'blastness_form_target' => ASTRO_BE_PREFIX . 'blastness_form_target',
+				ASTRO_BE_PREFIX . 'blastness_id_albergo' => ASTRO_BE_PREFIX . 'blastness_id_albergo', //required
+				ASTRO_BE_PREFIX . 'blastness_dc' => ASTRO_BE_PREFIX . 'blastness_dc', //required
+				ASTRO_BE_PREFIX . 'blastness_id_stile' => ASTRO_BE_PREFIX . 'blastness_id_stile',
+				ASTRO_BE_PREFIX . 'blastness_adults_enable' => ASTRO_BE_PREFIX . 'blastness_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'blastness_adults_n_default' => ASTRO_BE_PREFIX . 'blastness_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'blastness_adults_n_max' => ASTRO_BE_PREFIX . 'blastness_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'blastness_children_enable' => ASTRO_BE_PREFIX . 'blastness_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'blastness_children_n_default' => ASTRO_BE_PREFIX . 'blastness_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'blastness_children_n_max' => ASTRO_BE_PREFIX . 'blastness_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'blastness_childage_enable' => ASTRO_BE_PREFIX . 'blastness_childage_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'blastness_childage_min' => ASTRO_BE_PREFIX . 'blastness_childage_min', //conditional
+				ASTRO_BE_PREFIX . 'blastness_childage_max' => ASTRO_BE_PREFIX . 'blastness_childage_max', //conditional
+				ASTRO_BE_PREFIX . 'blastness_submit_label' => ASTRO_BE_PREFIX . 'blastness_submit_label', //optional
+
+				/**
+				 * Data Sistemi
+				 */
+				ASTRO_BE_PREFIX . 'datasistemi_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'datasistemi_form_target' => ASTRO_BE_PREFIX . 'datasistemi_form_target',
+				ASTRO_BE_PREFIX . 'datasistemi_adults_enable' => ASTRO_BE_PREFIX . 'datasistemi_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'datasistemi_adults_n_default' => ASTRO_BE_PREFIX . 'datasistemi_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'datasistemi_adults_n_max' => ASTRO_BE_PREFIX . 'datasistemi_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'datasistemi_children_enable' => ASTRO_BE_PREFIX . 'datasistemi_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'datasistemi_children_n_default' => ASTRO_BE_PREFIX . 'datasistemi_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'datasistemi_children_n_max' => ASTRO_BE_PREFIX . 'datasistemi_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'datasistemi_submit_label' => ASTRO_BE_PREFIX . 'datasistemi_submit_label', //optional
+
+				//Data Sistemi custom fields
+				ASTRO_BE_PREFIX . 'datasistemi_idstr' => ASTRO_BE_PREFIX . 'datasistemi_idstr', //required
+				ASTRO_BE_PREFIX . 'datasistemi_currency' => ASTRO_BE_PREFIX . 'datasistemi_currency', //required
+				ASTRO_BE_PREFIX . 'datasistemi_codpromo' => ASTRO_BE_PREFIX . 'datasistemi_codpromo', //enable/disable
+
+				/**
 				 * Ericsoft
 				 */
 				ASTRO_BE_PREFIX . 'ericsoft_form_method' => esc_attr('get'),
@@ -175,6 +212,28 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'verticalbooking_childage_min' => ASTRO_BE_PREFIX . 'verticalbooking_childage_min', //conditional
 				ASTRO_BE_PREFIX . 'verticalbooking_childage_max' => ASTRO_BE_PREFIX . 'verticalbooking_childage_max', //conditional
 				ASTRO_BE_PREFIX . 'verticalbooking_submit_label' => ASTRO_BE_PREFIX . 'verticalbooking_submit_label', //optional
+				/**
+				 * WuBook
+				 */
+				ASTRO_BE_PREFIX . 'wubook_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'wubook_form_target' => ASTRO_BE_PREFIX . 'wubook_form_target',
+				ASTRO_BE_PREFIX . 'wubook_adults_enable' => ASTRO_BE_PREFIX . 'wubook_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'wubook_adults_n_default' => ASTRO_BE_PREFIX . 'wubook_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'wubook_adults_n_max' => ASTRO_BE_PREFIX . 'wubook_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'wubook_teens_enable' => ASTRO_BE_PREFIX . 'wubook_teens_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'wubook_teens_n_default' => ASTRO_BE_PREFIX . 'wubook_teens_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'wubook_teens_n_max' => ASTRO_BE_PREFIX . 'wubook_teens_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'wubook_children_enable' => ASTRO_BE_PREFIX . 'wubook_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'wubook_children_n_default' => ASTRO_BE_PREFIX . 'wubook_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'wubook_children_n_max' => ASTRO_BE_PREFIX . 'wubook_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'wubook_babies_enable' => ASTRO_BE_PREFIX . 'wubook_babies_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'wubook_babies_n_default' => ASTRO_BE_PREFIX . 'wubook_babies_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'wubook_babies_n_max' => ASTRO_BE_PREFIX . 'wubook_babies_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'wubook_submit_label' => ASTRO_BE_PREFIX . 'wubook_submit_label', //optional
+
+				//WuBook custom fields
+				ASTRO_BE_PREFIX . 'wubook_ep' => ASTRO_BE_PREFIX . 'wubook_ep', //required
+				ASTRO_BE_PREFIX . 'wubook_currency' => ASTRO_BE_PREFIX . 'wubook_currency', //required
 			);
 			break;
 

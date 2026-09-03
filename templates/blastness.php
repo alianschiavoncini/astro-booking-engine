@@ -1,15 +1,19 @@
 <?php
 /**
- * Vertical booking.
+ * Blastness.
  */
-$provider = esc_attr('verticalbooking');
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+$provider = esc_attr('blastness');
 $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
 ?>
 <div class="astro_be <?php echo $astro_be_prefix . $provider; ?>">
 
 	<form class="astro_be_form astro_be_form<?php echo '_'. esc_attr($provider); ?>"
           method="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_form_method') ); ?>"
-          action="https://reservations.verticalbooking.com/reservations/risultato.html"
+          action="https://www.blastnessbooking.com/premium/index2.html"
           target="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_form_target') ); ?>">
 
 		<input type="hidden" name="id_albergo" value="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_id_albergo') ); ?>" />
