@@ -3,7 +3,7 @@ Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget
 Requires at least: 6.0.1
 Tested up to: 7.1
-Stable tag: 2.0.0
+Stable tag: 2.1.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -41,6 +41,7 @@ Astro Booking Engine is not a booking engine: it needs an active contract with o
 <strong>Supported hotel booking engine providers</strong>, in alphabetical order:
 <ul>
     <li><a href="https://www.hotelcinquestelle.cloud/en/">5Stelle</a></li>
+    <li><a href="http://www.begenius.it/">BeGenius</a></li>
     <li><a href="https://www.blastness.com/">Blastness</a></li>
     <li><a href="https://www.datasistemi.eu/">Data Sistemi</a></li>
     <li><a href="https://www.ericsoft.com/">Ericsoft</a></li>
@@ -79,6 +80,19 @@ You can use the <a href="https://wordpress.org/support/plugin/astro-booking-engi
 gsphudo7by90lzwdlihyerqxbzj6jiln
 
 == Changelog ==
+
+= 2.1.0 =
+* Security: the plugin settings are now sanitized when saved and validated again when used, so that a user with access to the settings cannot inject scripts into the site pages through the Layout colors, sizes and custom CSS (relevant on multisite, where site administrators are not allowed to add unfiltered HTML).
+* Security: the Iperbooking form address is now escaped.
+* Security: direct access protection added to all the PHP files; the settings tab, the provider and the calendar theme are checked against the allowed values before being used in file paths and URLs; output escaping completed on the admin screens.
+* Added: BeGenius provider.
+* Fixed: the widget printed the theme's widget markup as visible text instead of HTML.
+* Fixed: the Iperbooking form address was "Array" when the site language matched none of the configured languages, instead of the default language; PHP warnings when no treatment is configured.
+* Fixed: deleting the plugin now removes its settings and widgets from the database, also on multisite: the previous uninstall routine was never executed.
+* Fixed: "Remove all plugin settings" now also clears the object cache, so deleted settings are no longer read back on sites with a persistent object cache.
+* Changed: in the block-based widget editor only the Astro Booking Engine block is offered: the classic widget, which did the same, is hidden from the inserter as WordPress does for its own widgets replaced by blocks; widgets already added keep working.
+* Changed: the color fields of the Layout settings and of the block accept hex, rgb/rgba, hsl/hsla, CSS variables and named colors.
+* Compatibility: tested with WordPress 7.1.
 
 = 2.0.0 =
 * Added: Astro Booking Engine Gutenberg block with live editor preview and per-block layout customization (submit button label, form colors with transparency, border radius), alongside the existing shortcode and widget.
@@ -139,6 +153,9 @@ gsphudo7by90lzwdlihyerqxbzj6jiln
 * Initial version.
 
 == Upgrade Notice ==
+
+= 2.1.0 =
+Security release: settings sanitization and escaping hardening, plus the new BeGenius provider and widget and Iperbooking fixes. Updating is recommended. If you are updating from 1.4.0 or earlier it also includes the fix for CVE-2025-10308.
 
 = 2.0.0 =
 Major release: new Gutenberg block with per-block customization, three new providers (Blastness, Data Sistemi, WuBook), review notice and accessibility fixes. Fully backwards compatible: shortcode, widget and settings keep working unchanged.

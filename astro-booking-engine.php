@@ -3,7 +3,7 @@
  * Plugin Name:       Astro Booking Engine
  * Plugin URI:        https://wordpress.org/plugins/astro-booking-engine
  * Description:       Hotel booking form via Gutenberg block or shortcode, independent from the provider: switch booking engine anytime, your form stays the same.
- * Version:           2.0.0
+ * Version:           2.1.0
  * Requires at least: 6.0.1
  * Requires PHP:      7.4
  * Author:            Alian Schiavoncini
@@ -37,7 +37,7 @@ if ( is_admin() ) {
 /**
  * Plugin constants.
  */
-define('ASTRO_BE_VERSION', '2.0.0');
+define('ASTRO_BE_VERSION', '2.1.0');
 define('ASTRO_BE_PREFIX', 'astro_be_');
 define('ASTRO_BE_TEXTDOMAIN', astro_be_plugin_data('TextDomain'));
 
@@ -58,8 +58,8 @@ function astro_be_enqueue_files() {
 	// jQuery UI - ref. https://code.jquery.com/ui/
 	wp_enqueue_script('jquery-ui-datepicker-js' );
 
-	// UI theme
-	$jquery_ui_theme = get_option(ASTRO_BE_PREFIX.'calendar');
+	// UI theme: only the themes shipped with the plugin (the value is part of the stylesheet path)
+	$jquery_ui_theme = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'calendar');
 	if (!$jquery_ui_theme) { $jquery_ui_theme = 'base'; }
 	$jquery_ui_theme_url = plugin_dir_url( __FILE__ ) . 'vendors/jquery-ui-themes/themes/'.$jquery_ui_theme.'/jquery-ui.min.css';
 	wp_enqueue_style('jquery-ui-datepicker-css', $jquery_ui_theme_url, array(), ASTRO_BE_VERSION);
@@ -78,9 +78,8 @@ function astro_be_enqueue_files() {
 	}
 
 	// Enqueue the Provider files
-	$provider = get_option(ASTRO_BE_PREFIX.'provider');
+	$provider = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'provider');
 	if ($provider) {
-		$provider = sanitize_text_field($provider);
 		$provider_js_path_file = plugin_dir_path( __FILE__ ) . 'js/astro-booking-engine-' . $provider . '.js';
 		if (file_exists($provider_js_path_file)) {
 			wp_enqueue_script( 'astro-booking-engine-' . $provider, plugin_dir_url( __FILE__ ) . 'js/astro-booking-engine-'.$provider.'.js', array( 'jquery', 'jquery-ui-datepicker', 'astro-booking-engine' ), $plugin_version );
@@ -97,8 +96,8 @@ function astro_be_add_plugin_page_settings_link( $links ) {
 	array_unshift(
 		$links,
 		'<a href="' .
-		admin_url('admin.php?page=' . ASTRO_BE_TEXTDOMAIN ) .
-		'">' . __('Settings', 'astro-booking-engine' ) . '</a>'
+		esc_url( admin_url('admin.php?page=' . ASTRO_BE_TEXTDOMAIN ) ) .
+		'">' . esc_html__('Settings', 'astro-booking-engine' ) . '</a>'
 	);
 	return $links;
 }

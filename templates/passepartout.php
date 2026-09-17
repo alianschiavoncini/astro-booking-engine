@@ -2,6 +2,10 @@
 /**
  * Passepartout.
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $provider = esc_attr('passepartout');
 $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
 ?>

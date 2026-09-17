@@ -854,3 +854,15 @@ msgstr ""
 #: astro-booking-engine.php:116
 msgid "Author website"
 msgstr "Sito dell'autore"
+
+#: includes/tabs/tab-settings-begenius.php:23
+msgid "Hotel code"
+msgstr "Codice hotel"
+
+#: includes/tabs/tab-settings-begenius.php:24
+msgid ""
+"Found in your BeGenius booking engine address: secure.begenius.it/"
+"bookingenius/hotel_web/en/HOTEL-CODE/"
+msgstr ""
+"Si trova nell'indirizzo del tuo booking engine BeGenius: secure.begenius.it/"
+"bookingenius/hotel_web/it/CODICE-HOTEL/"

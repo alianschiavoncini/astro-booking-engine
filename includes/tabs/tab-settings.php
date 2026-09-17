@@ -1,4 +1,8 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if( ! is_admin() ) {
 	return;
 }
@@ -6,7 +10,7 @@ if( ! is_admin() ) {
 $tab = 'settings';
 $option_group = ASTRO_BE_PREFIX . $tab;
 ?>
-<div class="<?php echo ASTRO_BE_PREFIX . 'wrapper'; ?> <?php echo esc_attr( $option_group ); ?>">
+<div class="<?php echo esc_attr( ASTRO_BE_PREFIX . 'wrapper' ); ?> <?php echo esc_attr( $option_group ); ?>">
 
     <div class="section-wrapper">
         <div class="section-wrapper-inner">
@@ -23,8 +27,8 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 			?></p>
             <p><?php esc_html_e( 'For installation details, read more at the', 'astro-booking-engine'); ?>
                 <?php printf( '<a href="%1$s">%2$s</a>',
-                    '?page='.ASTRO_BE_TEXTDOMAIN.'&amp;tab=support',
-                      __('support page', 'astro-booking-engine')
+                    esc_url( add_query_arg( array( 'page' => ASTRO_BE_TEXTDOMAIN, 'tab' => 'support' ), admin_url( 'admin.php' ) ) ),
+                    esc_html__('support page', 'astro-booking-engine')
                 ); ?>.</p>
 
         </div>
@@ -58,6 +62,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                                 $options = array(
                                                 '' => '---',
                                                 '5stelle' => '5Stelle',
+                                                'begenius' => 'BeGenius',
                                                 'blastness' => 'Blastness',
                                                 'datasistemi' => 'Data Sistemi',
                                                 'ericsoft' => 'Ericsoft',
@@ -91,6 +96,9 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         <?php
         //5stelle
         include('tab-settings-5stelle.php');
+
+        //begenius
+        include('tab-settings-begenius.php');
 
         //blastness
         include('tab-settings-blastness.php');

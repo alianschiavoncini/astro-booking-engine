@@ -1,4 +1,8 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if( ! is_admin() ) {
 	return;
 }
@@ -6,7 +10,7 @@ if( ! is_admin() ) {
 $tab = 'layout';
 $option_group = ASTRO_BE_PREFIX . $tab;
 ?>
-<div class="<?php echo ASTRO_BE_PREFIX . 'wrapper'; ?>  <?php echo esc_attr( $option_group ); ?>">
+<div class="<?php echo esc_attr( ASTRO_BE_PREFIX . 'wrapper' ); ?>  <?php echo esc_attr( $option_group ); ?>">
 
     <form method="post" action="options.php">
     <?php
@@ -359,7 +363,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
 								<?php
-								$options = array('base', 'black-tie', 'blitzer', 'cupertino', 'dark-hive', 'dot-luv', 'eggplant', 'excite-bike', 'flick', 'hot-sneaks', 'humanity', 'le-frog', 'mint-choc', 'overcast', 'pepper-grinder', 'redmond', 'smoothness', 'south-street', 'start', 'sunny', 'swanky-purse', 'trontastic', 'ui-darkness', 'ui-lightness', 'vader');
+								$options = astro_be_calendar_themes();
 								foreach ($options as $value) {
 									$selected = '';
 									if ($value == $field['value']) {

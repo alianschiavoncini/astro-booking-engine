@@ -35,6 +35,9 @@ function astro_be_register_block() {
  * Keep only values that are safe inside a CSS color declaration.
  */
 function astro_be_block_sanitize_css_color( $value ) {
+	if ( ! is_scalar( $value ) ) {
+		return '';
+	}
 	$value = trim( (string) $value );
 	if ( $value === '' ) {
 		return '';
@@ -48,7 +51,14 @@ function astro_be_block_sanitize_css_color( $value ) {
 	if ( preg_match( '/^rgba?\([0-9,.\s%]+\)$/', $value ) ) {
 		return $value;
 	}
+	if ( preg_match( '/^hsla?\([0-9a-z,.\s%]+\)$/', $value ) ) {
+		return $value;
+	}
 	if ( preg_match( '/^var\(--[a-zA-Z0-9\-]+\)$/', $value ) ) {
+		return $value;
+	}
+	// Named colors (white, red...): the Layout settings accept them when typed by hand.
+	if ( preg_match( '/^[a-zA-Z]+$/', $value ) ) {
 		return $value;
 	}
 	return '';

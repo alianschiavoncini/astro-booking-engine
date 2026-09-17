@@ -133,6 +133,44 @@ jQuery( document ).ready(function( $ ) {
 
         }
 
+        //begenius
+        if($('.box.begenius').css('display') == 'block') {
+
+            var astro_be_begenius_hotel = $.trim( $('#astro_be_begenius_hotel').val() );
+            if (astro_be_begenius_hotel == '') {
+                $error_msg += '- Hotel code: the field is required.\n';
+            } else if (!/^[A-Za-z0-9_-]+$/.test(astro_be_begenius_hotel)) {
+                $error_msg += '- Hotel code: only letters, numbers, hyphens and underscores are allowed.\n';
+            }
+
+            if ($('#astro_be_begenius_children_enable').is(':checked') && !$("#astro_be_begenius_childage_enable").is(":checked")) {
+                $error_msg += '- children age: must be enable if the children dropdown is enable.\n';
+            }
+
+            if ($('#astro_be_begenius_childage_enable').is(':checked')) {
+
+                var astro_be_begenius_childage_min = $('#astro_be_begenius_childage_min').length;
+                var astro_be_begenius_childage_max = $('#astro_be_begenius_childage_max').length;
+
+                if (astro_be_begenius_childage_min && astro_be_begenius_childage_max) {
+                    var astro_be_begenius_childage_min_value = parseInt( $("#astro_be_begenius_childage_min option:selected").val() );
+                    var astro_be_begenius_childage_max_value = parseInt( $("#astro_be_begenius_childage_max option:selected").val() );
+
+                    if (astro_be_begenius_childage_min_value > astro_be_begenius_childage_max_value) {
+                        $error_msg += '- children age: min child age value is greater than max value.\n';
+                    }
+                }
+
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'BeGenius fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
         //blastness
         if($('.box.blastness').css('display') == 'block') {
 

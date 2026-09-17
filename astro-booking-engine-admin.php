@@ -1,4 +1,8 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if( ! is_admin() ) {
 	return;
 }
@@ -55,60 +59,46 @@ add_action( 'admin_enqueue_scripts', 'astro_be_load_admin_files' );
  */
 function astro_be_register_settings() {
 
-    if (isset($_REQUEST['option_page']) && !empty($_REQUEST['option_page']) && ($_REQUEST['option_page'] != '')) {
+	$option_page = isset( $_REQUEST['option_page'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['option_page'] ) ) : '';
 
-		if (strpos($_REQUEST['option_page'], ASTRO_BE_PREFIX) === 0) {
+	if ( $option_page !== '' ) {
 
-            $option_page = sanitize_text_field($_REQUEST['option_page']);
-            $tab = explode('_', $option_page);
-            $option_group = $option_page;
-            $option_names = astro_be_option_names(end($tab));
-
-            if (!empty($option_names)) {
-
-                foreach ($option_names as $option_name) {
-                    $arr = array();
-					if (strpos($option_name, '_options')) {
-						$arr = array('type' => 'array');
-					}
-                    register_setting( $option_group, $option_name, array($arr) );
-                }
-
-            }
-
+		if ( strpos( $option_page, ASTRO_BE_PREFIX ) === 0 ) {
+			$tab = explode( '_', $option_page );
+			astro_be_register_option_group( $option_page, end( $tab ) );
 		}
 
-    }else{
-		$tab = 'settings';
-		$option_group = ASTRO_BE_PREFIX . '_' . $tab;
-		$option_names = astro_be_option_names($tab);
+	}else{
+		astro_be_register_option_group( ASTRO_BE_PREFIX . '_settings', 'settings' );
+		astro_be_register_option_group( ASTRO_BE_PREFIX . '_layout', 'layout' );
+	}
 
-		if (!empty($option_names)) {
-			foreach ($option_names as $option_name) {
-				$arr = array();
-				if (strpos($option_name, '_options')) {
-					$arr = array('type' => 'array');
-				}
-				register_setting($option_group, $option_name, array($arr)); 
-			}
+}
+
+/**
+ * Register the options of a settings tab, each one with its sanitize callback.
+ */
+function astro_be_register_option_group( $option_group, $tab ) {
+
+	$option_names = astro_be_option_names( $tab );
+	if ( empty( $option_names ) ) {
+		return;
+	}
+
+	foreach ( $option_names as $option_name ) {
+
+		// Fixed values listed with the options (such as the form method 'get') are not option names.
+		if ( strpos( $option_name, ASTRO_BE_PREFIX ) !== 0 ) {
+			continue;
 		}
 
-		$tab = 'layout';
-		$option_group = ASTRO_BE_PREFIX . '_' . $tab;
-		$option_names = astro_be_option_names($tab);
+		$sanitize_callback = astro_be_get_option_sanitize_callback( $option_name );
 
-		if (!empty($option_names)) {
-
-            foreach ($option_names as $option_name) {
-                $arr = array();
-                if (strpos($option_name, '_options')) {
-                    $arr = array('type' => 'array');
-                }
-                register_setting( $option_group, $option_name, array($arr) );
-            }
-
-		}
-    }
+		register_setting( $option_group, $option_name, array(
+			'type'              => ( 'astro_be_sanitize_options_list' === $sanitize_callback ) ? 'array' : 'string',
+			'sanitize_callback' => $sanitize_callback,
+		) );
+	}
 
 }
 add_action( 'admin_init', 'astro_be_register_settings' );
@@ -243,8 +233,7 @@ function astro_be_review_notice() {
  */
 function astro_be_options() {
     if ( !current_user_can( 'manage_options' ) )  {
-        $str = __( 'You do not have sufficient permissions to access this page.', 'astro-booking-engine' );
-        wp_die($str);
+        wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'astro-booking-engine' ) );
     }
 
     ?>
@@ -252,21 +241,15 @@ function astro_be_options() {
         <h1><?php echo esc_html( astro_be_plugin_data('Name') ); ?></h1>
         <?php
 
-        $tab  = 'settings'; // default panel
-        if (isset($_REQUEST['tab']) && !empty($_REQUEST['tab'])) {
-			$tab  = sanitize_text_field($_REQUEST['tab']);
-            if (str_contains('-',$tab)) {
-				$tab = explode('-', $tab);
-				$tab = end($tab);
-			}
+        // The tab becomes part of an included file path: only the known tabs are accepted.
+        $tab = isset( $_GET['tab'] ) ? sanitize_key( wp_unslash( $_GET['tab'] ) ) : '';
+        if ( ! in_array( $tab, array( 'settings', 'layout', 'support' ), true ) ) {
+            $tab = 'settings'; // default panel
         }
 
 		astro_be_tabs_nav($tab);
 
-        $tab_file = plugin_dir_path( __FILE__ ) . 'includes/tabs/tab-' . $tab .'.php';
-        if (file_exists($tab_file)) {
-			include( plugin_dir_path( __FILE__ ) . 'includes/tabs/tab-' . $tab .'.php' );
-		}
+		include( plugin_dir_path( __FILE__ ) . 'includes/tabs/tab-' . $tab .'.php' );
 
         ?>
     </div>

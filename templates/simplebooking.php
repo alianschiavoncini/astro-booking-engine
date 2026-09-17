@@ -2,6 +2,10 @@
 /**
  * Simple booking.
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $provider = esc_attr('simplebooking');
 $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
 ?>

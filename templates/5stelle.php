@@ -2,6 +2,10 @@
 /**
  * 5Stelle.
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $provider = esc_attr('5stelle');
 $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
 ?>

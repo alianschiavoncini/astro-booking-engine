@@ -2,21 +2,21 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Astro Booking Engine 2.0.0\n"
+"Project-Id-Version: Astro Booking Engine 2.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/astro-booking-engine\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-03T07:30:08+00:00\n"
+"POT-Creation-Date: 2026-09-17T07:15:18+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: astro-booking-engine\n"
 
 #. Plugin Name of the plugin
 #: astro-booking-engine.php
-#: includes/classes/class-astro-booking-engine-widget.php:20
+#: includes/classes/class-astro-booking-engine-widget.php:24
 msgid "Astro Booking Engine"
 msgstr ""
 
@@ -40,318 +40,330 @@ msgstr ""
 msgid "https://www.alian.it"
 msgstr ""
 
-#: astro-booking-engine-admin.php:39
+#: astro-booking-engine-admin.php:43
 msgid "Clear"
 msgstr ""
 
-#: astro-booking-engine-admin.php:40
-#: includes/tabs/tab-settings-iperbooking.php:113
-#: includes/tabs/tab-settings-iperbooking.php:146
-#: includes/tabs/tab-settings-iperbooking.php:227
-#: includes/tabs/tab-settings-iperbooking.php:260
+#: astro-booking-engine-admin.php:44
+#: includes/tabs/tab-settings-iperbooking.php:117
+#: includes/tabs/tab-settings-iperbooking.php:150
+#: includes/tabs/tab-settings-iperbooking.php:231
+#: includes/tabs/tab-settings-iperbooking.php:264
 msgid "Default"
 msgstr ""
 
-#: astro-booking-engine-admin.php:41
+#: astro-booking-engine-admin.php:45
 msgid "Select Color"
 msgstr ""
 
-#: astro-booking-engine-admin.php:42
+#: astro-booking-engine-admin.php:46
 msgid "Current Color"
 msgstr ""
 
-#: astro-booking-engine-admin.php:126
-#: astro-booking-engine-admin.php:127
+#: astro-booking-engine-admin.php:116
+#: astro-booking-engine-admin.php:117
 msgid "Booking engine"
 msgstr ""
 
-#: astro-booking-engine-admin.php:228
+#: astro-booking-engine-admin.php:218
 msgid "Do you enjoy Astro Booking Engine?"
 msgstr ""
 
-#: astro-booking-engine-admin.php:229
+#: astro-booking-engine-admin.php:219
 msgid "You have been using it for a while: a review on WordPress.org would help other users discover it. Thank you!"
 msgstr ""
 
-#: astro-booking-engine-admin.php:232
+#: astro-booking-engine-admin.php:222
 msgid "Sure, I'll write a review"
 msgstr ""
 
-#: astro-booking-engine-admin.php:233
+#: astro-booking-engine-admin.php:223
 msgid "I've already reviewed it"
 msgstr ""
 
-#: astro-booking-engine-admin.php:234
+#: astro-booking-engine-admin.php:224
 msgid "Maybe later"
 msgstr ""
 
-#: astro-booking-engine-admin.php:246
-#: includes/tabs/tab-support.php:24
+#: astro-booking-engine-admin.php:236
+#: includes/tabs/tab-support.php:39
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: astro-booking-engine-common.php:300
+#: astro-booking-engine-common.php:483
 msgid "This message is visible only to the site administrator."
 msgstr ""
 
-#: astro-booking-engine-common.php:302
+#: astro-booking-engine-common.php:485
 msgid "No provider has been selected in Astro Booking Engine plugin."
 msgstr ""
 
-#: astro-booking-engine-common.php:304
+#: astro-booking-engine-common.php:487
 msgid "Choose your provider at plugin"
 msgstr ""
 
-#: astro-booking-engine-common.php:306
+#: astro-booking-engine-common.php:489
 msgid "settings page"
 msgstr ""
 
-#: astro-booking-engine.php:101
-#: includes/tabs/tab-settings.php:14
-#: includes/tabs/tabs-nav.php:15
+#: astro-booking-engine.php:100
+#: includes/tabs/tab-settings.php:18
+#: includes/tabs/tabs-nav.php:13
 msgid "Settings"
 msgstr ""
 
-#: astro-booking-engine.php:115
-#: includes/tabs/tab-support.php:59
-#: includes/tabs/tabs-nav.php:23
+#: astro-booking-engine.php:114
+#: includes/tabs/tab-support.php:74
+#: includes/tabs/tabs-nav.php:15
 msgid "Support"
 msgstr ""
 
-#: astro-booking-engine.php:116
+#: astro-booking-engine.php:115
 msgid "Author website"
 msgstr ""
 
-#: includes/classes/class-astro-booking-engine-widget.php:23
+#: includes/classes/class-astro-booking-engine-widget.php:27
 msgid "The Astro Booking Engine plugin displays a user friendly and responsive booking engine form."
 msgstr ""
 
-#: includes/classes/class-astro-booking-engine-widget.php:50
+#: includes/classes/class-astro-booking-engine-widget.php:56
 msgid "New title"
 msgstr ""
 
-#: includes/classes/class-astro-booking-engine-widget.php:55
+#: includes/classes/class-astro-booking-engine-widget.php:61
 msgid "Title"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:20
-#: includes/tabs/tabs-nav.php:19
+#: includes/tabs/tab-layout.php:24
+#: includes/tabs/tabs-nav.php:14
 #: blocks/booking-form/editor.js:39
 msgid "Layout"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:22
+#: includes/tabs/tab-layout.php:26
 msgid "Widget"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:26
-#: includes/tabs/tab-layout.php:225
-#: includes/tabs/tab-layout.php:455
+#: includes/tabs/tab-layout.php:30
+#: includes/tabs/tab-layout.php:229
+#: includes/tabs/tab-layout.php:459
 msgid "Background color"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:42
-#: includes/tabs/tab-layout.php:319
-#: includes/tabs/tab-layout.php:549
+#: includes/tabs/tab-layout.php:46
+#: includes/tabs/tab-layout.php:323
+#: includes/tabs/tab-layout.php:553
 msgid "Border radius"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:53
-#: includes/tabs/tab-layout.php:106
-#: includes/tabs/tab-layout.php:182
-#: includes/tabs/tab-layout.php:252
-#: includes/tabs/tab-layout.php:330
-#: includes/tabs/tab-layout.php:412
-#: includes/tabs/tab-layout.php:482
-#: includes/tabs/tab-layout.php:560
+#: includes/tabs/tab-layout.php:57
+#: includes/tabs/tab-layout.php:110
+#: includes/tabs/tab-layout.php:186
+#: includes/tabs/tab-layout.php:256
+#: includes/tabs/tab-layout.php:334
+#: includes/tabs/tab-layout.php:416
+#: includes/tabs/tab-layout.php:486
+#: includes/tabs/tab-layout.php:564
 msgid "inherit"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:64
-#: includes/tabs/tab-layout.php:117
-#: includes/tabs/tab-layout.php:193
-#: includes/tabs/tab-layout.php:263
-#: includes/tabs/tab-layout.php:341
-#: includes/tabs/tab-layout.php:423
-#: includes/tabs/tab-layout.php:493
-#: includes/tabs/tab-layout.php:571
+#: includes/tabs/tab-layout.php:68
+#: includes/tabs/tab-layout.php:121
+#: includes/tabs/tab-layout.php:197
+#: includes/tabs/tab-layout.php:267
+#: includes/tabs/tab-layout.php:345
+#: includes/tabs/tab-layout.php:427
+#: includes/tabs/tab-layout.php:497
+#: includes/tabs/tab-layout.php:575
 msgid "px"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:75
+#: includes/tabs/tab-layout.php:79
 msgid "Labels"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:79
-#: includes/tabs/tab-layout.php:155
-#: includes/tabs/tab-layout.php:385
+#: includes/tabs/tab-layout.php:83
+#: includes/tabs/tab-layout.php:159
+#: includes/tabs/tab-layout.php:389
 msgid "Font color"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:95
-#: includes/tabs/tab-layout.php:171
-#: includes/tabs/tab-layout.php:401
+#: includes/tabs/tab-layout.php:99
+#: includes/tabs/tab-layout.php:175
+#: includes/tabs/tab-layout.php:405
 msgid "Font size"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:126
-#: includes/tabs/tab-layout.php:202
-#: includes/tabs/tab-layout.php:432
+#: includes/tabs/tab-layout.php:130
+#: includes/tabs/tab-layout.php:206
+#: includes/tabs/tab-layout.php:436
 msgid "Font weight"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:142
-#: includes/tabs/tab-layout.php:218
-#: includes/tabs/tab-layout.php:448
+#: includes/tabs/tab-layout.php:146
+#: includes/tabs/tab-layout.php:222
+#: includes/tabs/tab-layout.php:452
 msgid "normal"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:143
-#: includes/tabs/tab-layout.php:219
-#: includes/tabs/tab-layout.php:449
+#: includes/tabs/tab-layout.php:147
+#: includes/tabs/tab-layout.php:223
+#: includes/tabs/tab-layout.php:453
 msgid "bold"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:151
+#: includes/tabs/tab-layout.php:155
 msgid "Fields"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:241
-#: includes/tabs/tab-layout.php:471
+#: includes/tabs/tab-layout.php:245
+#: includes/tabs/tab-layout.php:475
 msgid "Border width"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:272
-#: includes/tabs/tab-layout.php:502
+#: includes/tabs/tab-layout.php:276
+#: includes/tabs/tab-layout.php:506
 msgid "Border style"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:303
-#: includes/tabs/tab-layout.php:533
+#: includes/tabs/tab-layout.php:307
+#: includes/tabs/tab-layout.php:537
 msgid "Border color"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:350
+#: includes/tabs/tab-layout.php:354
 msgid "Calendar theme"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:381
-#: includes/tabs/tab-settings-5stelle.php:346
+#: includes/tabs/tab-layout.php:385
+#: includes/tabs/tab-settings-5stelle.php:350
+#: includes/tabs/tab-settings-begenius.php:384
 #: includes/tabs/tab-settings-blastness.php:385
 #: includes/tabs/tab-settings-datasistemi.php:324
 #: includes/tabs/tab-settings-ericsoft.php:383
-#: includes/tabs/tab-settings-iperbooking.php:576
+#: includes/tabs/tab-settings-iperbooking.php:580
 #: includes/tabs/tab-settings-myguestcare.php:355
-#: includes/tabs/tab-settings-passepartout.php:391
-#: includes/tabs/tab-settings-simplebooking.php:407
-#: includes/tabs/tab-settings-verticalbooking.php:381
+#: includes/tabs/tab-settings-passepartout.php:395
+#: includes/tabs/tab-settings-simplebooking.php:411
+#: includes/tabs/tab-settings-verticalbooking.php:385
 #: includes/tabs/tab-settings-wubook.php:471
 msgid "Submit button"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:582
+#: includes/tabs/tab-layout.php:586
 msgid "Advanced settings"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:586
+#: includes/tabs/tab-layout.php:590
 msgid "Custom CSS"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:15
+#: includes/tabs/tab-settings-5stelle.php:19
+#: includes/tabs/tab-settings-begenius.php:19
 #: includes/tabs/tab-settings-blastness.php:19
 #: includes/tabs/tab-settings-datasistemi.php:19
 #: includes/tabs/tab-settings-ericsoft.php:19
-#: includes/tabs/tab-settings-iperbooking.php:15
+#: includes/tabs/tab-settings-iperbooking.php:19
 #: includes/tabs/tab-settings-myguestcare.php:19
-#: includes/tabs/tab-settings-passepartout.php:15
-#: includes/tabs/tab-settings-simplebooking.php:15
-#: includes/tabs/tab-settings-verticalbooking.php:15
+#: includes/tabs/tab-settings-passepartout.php:19
+#: includes/tabs/tab-settings-simplebooking.php:19
+#: includes/tabs/tab-settings-verticalbooking.php:19
 #: includes/tabs/tab-settings-wubook.php:19
 msgid "Hotel settings"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:19
+#: includes/tabs/tab-settings-5stelle.php:23
 msgid "Portal"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:39
+#: includes/tabs/tab-settings-5stelle.php:43
+#: includes/tabs/tab-settings-begenius.php:44
 #: includes/tabs/tab-settings-blastness.php:77
 #: includes/tabs/tab-settings-datasistemi.php:74
 #: includes/tabs/tab-settings-ericsoft.php:74
-#: includes/tabs/tab-settings-iperbooking.php:39
+#: includes/tabs/tab-settings-iperbooking.php:43
 #: includes/tabs/tab-settings-myguestcare.php:44
-#: includes/tabs/tab-settings-passepartout.php:55
-#: includes/tabs/tab-settings-simplebooking.php:70
-#: includes/tabs/tab-settings-verticalbooking.php:73
+#: includes/tabs/tab-settings-passepartout.php:59
+#: includes/tabs/tab-settings-simplebooking.php:74
+#: includes/tabs/tab-settings-verticalbooking.php:77
 #: includes/tabs/tab-settings-wubook.php:74
 msgid "Form settings"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:43
+#: includes/tabs/tab-settings-5stelle.php:47
+#: includes/tabs/tab-settings-begenius.php:48
 #: includes/tabs/tab-settings-blastness.php:81
 #: includes/tabs/tab-settings-datasistemi.php:78
 #: includes/tabs/tab-settings-ericsoft.php:78
-#: includes/tabs/tab-settings-iperbooking.php:43
+#: includes/tabs/tab-settings-iperbooking.php:47
 #: includes/tabs/tab-settings-myguestcare.php:48
-#: includes/tabs/tab-settings-passepartout.php:59
-#: includes/tabs/tab-settings-simplebooking.php:74
-#: includes/tabs/tab-settings-verticalbooking.php:77
+#: includes/tabs/tab-settings-passepartout.php:63
+#: includes/tabs/tab-settings-simplebooking.php:78
+#: includes/tabs/tab-settings-verticalbooking.php:81
 #: includes/tabs/tab-settings-wubook.php:78
 msgid "Target"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:51
+#: includes/tabs/tab-settings-5stelle.php:55
+#: includes/tabs/tab-settings-begenius.php:56
 #: includes/tabs/tab-settings-blastness.php:89
 #: includes/tabs/tab-settings-datasistemi.php:86
 #: includes/tabs/tab-settings-ericsoft.php:86
-#: includes/tabs/tab-settings-iperbooking.php:51
+#: includes/tabs/tab-settings-iperbooking.php:55
 #: includes/tabs/tab-settings-myguestcare.php:56
-#: includes/tabs/tab-settings-passepartout.php:67
-#: includes/tabs/tab-settings-simplebooking.php:82
-#: includes/tabs/tab-settings-verticalbooking.php:85
+#: includes/tabs/tab-settings-passepartout.php:71
+#: includes/tabs/tab-settings-simplebooking.php:86
+#: includes/tabs/tab-settings-verticalbooking.php:89
 #: includes/tabs/tab-settings-wubook.php:86
 msgid "New window or tab"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:52
+#: includes/tabs/tab-settings-5stelle.php:56
+#: includes/tabs/tab-settings-begenius.php:57
 #: includes/tabs/tab-settings-blastness.php:90
 #: includes/tabs/tab-settings-datasistemi.php:87
 #: includes/tabs/tab-settings-ericsoft.php:87
-#: includes/tabs/tab-settings-iperbooking.php:52
+#: includes/tabs/tab-settings-iperbooking.php:56
 #: includes/tabs/tab-settings-myguestcare.php:57
-#: includes/tabs/tab-settings-passepartout.php:68
-#: includes/tabs/tab-settings-simplebooking.php:83
-#: includes/tabs/tab-settings-verticalbooking.php:86
+#: includes/tabs/tab-settings-passepartout.php:72
+#: includes/tabs/tab-settings-simplebooking.php:87
+#: includes/tabs/tab-settings-verticalbooking.php:90
 #: includes/tabs/tab-settings-wubook.php:87
 msgid "Same window or tab"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:79
+#: includes/tabs/tab-settings-5stelle.php:83
+#: includes/tabs/tab-settings-begenius.php:85
 #: includes/tabs/tab-settings-blastness.php:118
 #: includes/tabs/tab-settings-datasistemi.php:115
 #: includes/tabs/tab-settings-ericsoft.php:115
-#: includes/tabs/tab-settings-iperbooking.php:280
+#: includes/tabs/tab-settings-iperbooking.php:284
 #: includes/tabs/tab-settings-myguestcare.php:85
-#: includes/tabs/tab-settings-passepartout.php:95
-#: includes/tabs/tab-settings-simplebooking.php:111
-#: includes/tabs/tab-settings-verticalbooking.php:114
+#: includes/tabs/tab-settings-passepartout.php:99
+#: includes/tabs/tab-settings-simplebooking.php:115
+#: includes/tabs/tab-settings-verticalbooking.php:118
 #: includes/tabs/tab-settings-wubook.php:115
-#: templates/5stelle.php:66
+#: templates/5stelle.php:70
+#: templates/begenius.php:67
 #: templates/blastness.php:77
 #: templates/datasistemi.php:69
 #: templates/ericsoft.php:87
-#: templates/iperbooking.php:101
+#: templates/iperbooking.php:106
 #: templates/myguestcare.php:77
-#: templates/passepartout.php:76
-#: templates/simplebooking.php:68
-#: templates/verticalbooking.php:73
+#: templates/passepartout.php:80
+#: templates/simplebooking.php:72
+#: templates/verticalbooking.php:77
 #: templates/wubook.php:90
 msgid "Adults"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:82
-#: includes/tabs/tab-settings-5stelle.php:170
-#: includes/tabs/tab-settings-5stelle.php:258
+#: includes/tabs/tab-settings-5stelle.php:86
+#: includes/tabs/tab-settings-5stelle.php:174
+#: includes/tabs/tab-settings-5stelle.php:262
+#: includes/tabs/tab-settings-begenius.php:88
+#: includes/tabs/tab-settings-begenius.php:179
+#: includes/tabs/tab-settings-begenius.php:267
+#: includes/tabs/tab-settings-begenius.php:358
 #: includes/tabs/tab-settings-blastness.php:121
 #: includes/tabs/tab-settings-blastness.php:209
 #: includes/tabs/tab-settings-blastness.php:297
@@ -361,24 +373,24 @@ msgstr ""
 #: includes/tabs/tab-settings-ericsoft.php:118
 #: includes/tabs/tab-settings-ericsoft.php:210
 #: includes/tabs/tab-settings-ericsoft.php:298
-#: includes/tabs/tab-settings-iperbooking.php:283
-#: includes/tabs/tab-settings-iperbooking.php:371
-#: includes/tabs/tab-settings-iperbooking.php:459
-#: includes/tabs/tab-settings-iperbooking.php:550
+#: includes/tabs/tab-settings-iperbooking.php:287
+#: includes/tabs/tab-settings-iperbooking.php:375
+#: includes/tabs/tab-settings-iperbooking.php:463
+#: includes/tabs/tab-settings-iperbooking.php:554
 #: includes/tabs/tab-settings-myguestcare.php:88
 #: includes/tabs/tab-settings-myguestcare.php:179
 #: includes/tabs/tab-settings-myguestcare.php:267
-#: includes/tabs/tab-settings-passepartout.php:98
-#: includes/tabs/tab-settings-passepartout.php:186
-#: includes/tabs/tab-settings-passepartout.php:274
-#: includes/tabs/tab-settings-passepartout.php:366
-#: includes/tabs/tab-settings-simplebooking.php:114
-#: includes/tabs/tab-settings-simplebooking.php:202
-#: includes/tabs/tab-settings-simplebooking.php:290
-#: includes/tabs/tab-settings-simplebooking.php:381
-#: includes/tabs/tab-settings-verticalbooking.php:117
-#: includes/tabs/tab-settings-verticalbooking.php:205
-#: includes/tabs/tab-settings-verticalbooking.php:293
+#: includes/tabs/tab-settings-passepartout.php:102
+#: includes/tabs/tab-settings-passepartout.php:190
+#: includes/tabs/tab-settings-passepartout.php:278
+#: includes/tabs/tab-settings-passepartout.php:370
+#: includes/tabs/tab-settings-simplebooking.php:118
+#: includes/tabs/tab-settings-simplebooking.php:206
+#: includes/tabs/tab-settings-simplebooking.php:294
+#: includes/tabs/tab-settings-simplebooking.php:385
+#: includes/tabs/tab-settings-verticalbooking.php:121
+#: includes/tabs/tab-settings-verticalbooking.php:209
+#: includes/tabs/tab-settings-verticalbooking.php:297
 #: includes/tabs/tab-settings-wubook.php:118
 #: includes/tabs/tab-settings-wubook.php:210
 #: includes/tabs/tab-settings-wubook.php:298
@@ -386,9 +398,13 @@ msgstr ""
 msgid "Enable"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:83
-#: includes/tabs/tab-settings-5stelle.php:171
-#: includes/tabs/tab-settings-5stelle.php:259
+#: includes/tabs/tab-settings-5stelle.php:87
+#: includes/tabs/tab-settings-5stelle.php:175
+#: includes/tabs/tab-settings-5stelle.php:263
+#: includes/tabs/tab-settings-begenius.php:89
+#: includes/tabs/tab-settings-begenius.php:180
+#: includes/tabs/tab-settings-begenius.php:268
+#: includes/tabs/tab-settings-begenius.php:359
 #: includes/tabs/tab-settings-blastness.php:122
 #: includes/tabs/tab-settings-blastness.php:210
 #: includes/tabs/tab-settings-blastness.php:298
@@ -398,24 +414,24 @@ msgstr ""
 #: includes/tabs/tab-settings-ericsoft.php:119
 #: includes/tabs/tab-settings-ericsoft.php:211
 #: includes/tabs/tab-settings-ericsoft.php:299
-#: includes/tabs/tab-settings-iperbooking.php:284
-#: includes/tabs/tab-settings-iperbooking.php:372
-#: includes/tabs/tab-settings-iperbooking.php:460
-#: includes/tabs/tab-settings-iperbooking.php:551
+#: includes/tabs/tab-settings-iperbooking.php:288
+#: includes/tabs/tab-settings-iperbooking.php:376
+#: includes/tabs/tab-settings-iperbooking.php:464
+#: includes/tabs/tab-settings-iperbooking.php:555
 #: includes/tabs/tab-settings-myguestcare.php:89
 #: includes/tabs/tab-settings-myguestcare.php:180
 #: includes/tabs/tab-settings-myguestcare.php:268
-#: includes/tabs/tab-settings-passepartout.php:99
-#: includes/tabs/tab-settings-passepartout.php:187
-#: includes/tabs/tab-settings-passepartout.php:275
-#: includes/tabs/tab-settings-passepartout.php:367
-#: includes/tabs/tab-settings-simplebooking.php:115
-#: includes/tabs/tab-settings-simplebooking.php:203
-#: includes/tabs/tab-settings-simplebooking.php:291
-#: includes/tabs/tab-settings-simplebooking.php:382
-#: includes/tabs/tab-settings-verticalbooking.php:118
-#: includes/tabs/tab-settings-verticalbooking.php:206
-#: includes/tabs/tab-settings-verticalbooking.php:294
+#: includes/tabs/tab-settings-passepartout.php:103
+#: includes/tabs/tab-settings-passepartout.php:191
+#: includes/tabs/tab-settings-passepartout.php:279
+#: includes/tabs/tab-settings-passepartout.php:371
+#: includes/tabs/tab-settings-simplebooking.php:119
+#: includes/tabs/tab-settings-simplebooking.php:207
+#: includes/tabs/tab-settings-simplebooking.php:295
+#: includes/tabs/tab-settings-simplebooking.php:386
+#: includes/tabs/tab-settings-verticalbooking.php:122
+#: includes/tabs/tab-settings-verticalbooking.php:210
+#: includes/tabs/tab-settings-verticalbooking.php:298
 #: includes/tabs/tab-settings-wubook.php:119
 #: includes/tabs/tab-settings-wubook.php:211
 #: includes/tabs/tab-settings-wubook.php:299
@@ -423,181 +439,209 @@ msgstr ""
 msgid "Check to enable"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:104
+#: includes/tabs/tab-settings-5stelle.php:108
+#: includes/tabs/tab-settings-begenius.php:110
 #: includes/tabs/tab-settings-blastness.php:143
 #: includes/tabs/tab-settings-datasistemi.php:140
 #: includes/tabs/tab-settings-ericsoft.php:140
-#: includes/tabs/tab-settings-iperbooking.php:305
+#: includes/tabs/tab-settings-iperbooking.php:309
 #: includes/tabs/tab-settings-myguestcare.php:110
-#: includes/tabs/tab-settings-passepartout.php:120
-#: includes/tabs/tab-settings-simplebooking.php:136
-#: includes/tabs/tab-settings-verticalbooking.php:139
+#: includes/tabs/tab-settings-passepartout.php:124
+#: includes/tabs/tab-settings-simplebooking.php:140
+#: includes/tabs/tab-settings-verticalbooking.php:143
 #: includes/tabs/tab-settings-wubook.php:140
 msgid "Default Adults"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:132
+#: includes/tabs/tab-settings-5stelle.php:136
+#: includes/tabs/tab-settings-begenius.php:141
 #: includes/tabs/tab-settings-blastness.php:171
 #: includes/tabs/tab-settings-datasistemi.php:171
 #: includes/tabs/tab-settings-ericsoft.php:171
-#: includes/tabs/tab-settings-iperbooking.php:333
+#: includes/tabs/tab-settings-iperbooking.php:337
 #: includes/tabs/tab-settings-myguestcare.php:141
-#: includes/tabs/tab-settings-passepartout.php:148
-#: includes/tabs/tab-settings-simplebooking.php:164
-#: includes/tabs/tab-settings-verticalbooking.php:167
+#: includes/tabs/tab-settings-passepartout.php:152
+#: includes/tabs/tab-settings-simplebooking.php:168
+#: includes/tabs/tab-settings-verticalbooking.php:171
 #: includes/tabs/tab-settings-wubook.php:171
 msgid "Max Adults"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:167
+#: includes/tabs/tab-settings-5stelle.php:171
+#: includes/tabs/tab-settings-begenius.php:176
 #: includes/tabs/tab-settings-blastness.php:206
 #: includes/tabs/tab-settings-datasistemi.php:206
 #: includes/tabs/tab-settings-ericsoft.php:206
-#: includes/tabs/tab-settings-iperbooking.php:368
+#: includes/tabs/tab-settings-iperbooking.php:372
 #: includes/tabs/tab-settings-myguestcare.php:176
-#: includes/tabs/tab-settings-passepartout.php:183
-#: includes/tabs/tab-settings-simplebooking.php:199
-#: includes/tabs/tab-settings-verticalbooking.php:202
+#: includes/tabs/tab-settings-passepartout.php:187
+#: includes/tabs/tab-settings-simplebooking.php:203
+#: includes/tabs/tab-settings-verticalbooking.php:206
 #: includes/tabs/tab-settings-wubook.php:295
-#: templates/5stelle.php:92
+#: templates/5stelle.php:96
+#: templates/begenius.php:96
 #: templates/blastness.php:107
 #: templates/datasistemi.php:99
 #: templates/ericsoft.php:112
-#: templates/iperbooking.php:127
+#: templates/iperbooking.php:132
 #: templates/myguestcare.php:107
-#: templates/passepartout.php:102
-#: templates/simplebooking.php:94
-#: templates/verticalbooking.php:103
+#: templates/passepartout.php:106
+#: templates/simplebooking.php:98
+#: templates/verticalbooking.php:107
 #: templates/wubook.php:140
 msgid "Children"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:192
+#: includes/tabs/tab-settings-5stelle.php:196
+#: includes/tabs/tab-settings-begenius.php:201
 #: includes/tabs/tab-settings-blastness.php:231
 #: includes/tabs/tab-settings-datasistemi.php:232
 #: includes/tabs/tab-settings-ericsoft.php:232
-#: includes/tabs/tab-settings-iperbooking.php:393
+#: includes/tabs/tab-settings-iperbooking.php:397
 #: includes/tabs/tab-settings-myguestcare.php:201
-#: includes/tabs/tab-settings-passepartout.php:208
-#: includes/tabs/tab-settings-simplebooking.php:224
-#: includes/tabs/tab-settings-verticalbooking.php:227
+#: includes/tabs/tab-settings-passepartout.php:212
+#: includes/tabs/tab-settings-simplebooking.php:228
+#: includes/tabs/tab-settings-verticalbooking.php:231
 #: includes/tabs/tab-settings-wubook.php:320
 msgid "Default children"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:220
+#: includes/tabs/tab-settings-5stelle.php:224
+#: includes/tabs/tab-settings-begenius.php:229
 #: includes/tabs/tab-settings-blastness.php:259
 #: includes/tabs/tab-settings-datasistemi.php:260
 #: includes/tabs/tab-settings-ericsoft.php:260
-#: includes/tabs/tab-settings-iperbooking.php:421
+#: includes/tabs/tab-settings-iperbooking.php:425
 #: includes/tabs/tab-settings-myguestcare.php:229
-#: includes/tabs/tab-settings-passepartout.php:236
-#: includes/tabs/tab-settings-simplebooking.php:252
-#: includes/tabs/tab-settings-verticalbooking.php:255
+#: includes/tabs/tab-settings-passepartout.php:240
+#: includes/tabs/tab-settings-simplebooking.php:256
+#: includes/tabs/tab-settings-verticalbooking.php:259
 #: includes/tabs/tab-settings-wubook.php:348
 msgid "Max children"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:255
+#: includes/tabs/tab-settings-5stelle.php:259
+#: includes/tabs/tab-settings-begenius.php:264
 #: includes/tabs/tab-settings-blastness.php:294
-#: includes/tabs/tab-settings-iperbooking.php:456
+#: includes/tabs/tab-settings-iperbooking.php:460
 #: includes/tabs/tab-settings-myguestcare.php:264
-#: includes/tabs/tab-settings-passepartout.php:271
-#: includes/tabs/tab-settings-simplebooking.php:287
-#: includes/tabs/tab-settings-verticalbooking.php:290
+#: includes/tabs/tab-settings-passepartout.php:275
+#: includes/tabs/tab-settings-simplebooking.php:291
+#: includes/tabs/tab-settings-verticalbooking.php:294
 msgid "Children age"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:280
-#: includes/tabs/tab-settings-iperbooking.php:481
-#: includes/tabs/tab-settings-passepartout.php:296
+#: includes/tabs/tab-settings-5stelle.php:284
+#: includes/tabs/tab-settings-iperbooking.php:485
+#: includes/tabs/tab-settings-passepartout.php:300
 msgid "Min child age"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:311
-#: includes/tabs/tab-settings-iperbooking.php:512
-#: includes/tabs/tab-settings-passepartout.php:327
+#: includes/tabs/tab-settings-5stelle.php:315
+#: includes/tabs/tab-settings-iperbooking.php:516
+#: includes/tabs/tab-settings-passepartout.php:331
 msgid "Max child age"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:350
+#: includes/tabs/tab-settings-5stelle.php:354
+#: includes/tabs/tab-settings-begenius.php:388
 #: includes/tabs/tab-settings-blastness.php:389
 #: includes/tabs/tab-settings-datasistemi.php:328
 #: includes/tabs/tab-settings-ericsoft.php:387
-#: includes/tabs/tab-settings-iperbooking.php:202
-#: includes/tabs/tab-settings-iperbooking.php:256
-#: includes/tabs/tab-settings-iperbooking.php:580
+#: includes/tabs/tab-settings-iperbooking.php:206
+#: includes/tabs/tab-settings-iperbooking.php:260
+#: includes/tabs/tab-settings-iperbooking.php:584
 #: includes/tabs/tab-settings-myguestcare.php:359
-#: includes/tabs/tab-settings-passepartout.php:395
-#: includes/tabs/tab-settings-simplebooking.php:411
-#: includes/tabs/tab-settings-verticalbooking.php:385
+#: includes/tabs/tab-settings-passepartout.php:399
+#: includes/tabs/tab-settings-simplebooking.php:415
+#: includes/tabs/tab-settings-verticalbooking.php:389
 #: includes/tabs/tab-settings-wubook.php:475
 msgid "Label"
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:351
+#: includes/tabs/tab-settings-5stelle.php:355
+#: includes/tabs/tab-settings-begenius.php:389
 #: includes/tabs/tab-settings-blastness.php:390
 #: includes/tabs/tab-settings-datasistemi.php:329
 #: includes/tabs/tab-settings-ericsoft.php:388
-#: includes/tabs/tab-settings-iperbooking.php:581
+#: includes/tabs/tab-settings-iperbooking.php:585
 #: includes/tabs/tab-settings-myguestcare.php:360
-#: includes/tabs/tab-settings-passepartout.php:396
-#: includes/tabs/tab-settings-simplebooking.php:412
-#: includes/tabs/tab-settings-verticalbooking.php:386
+#: includes/tabs/tab-settings-passepartout.php:400
+#: includes/tabs/tab-settings-simplebooking.php:416
+#: includes/tabs/tab-settings-verticalbooking.php:390
 #: includes/tabs/tab-settings-wubook.php:476
 msgid "The default value is Search."
 msgstr ""
 
-#: includes/tabs/tab-settings-5stelle.php:354
+#: includes/tabs/tab-settings-5stelle.php:358
+#: includes/tabs/tab-settings-begenius.php:392
 #: includes/tabs/tab-settings-blastness.php:393
 #: includes/tabs/tab-settings-datasistemi.php:332
 #: includes/tabs/tab-settings-ericsoft.php:391
-#: includes/tabs/tab-settings-iperbooking.php:584
+#: includes/tabs/tab-settings-iperbooking.php:588
 #: includes/tabs/tab-settings-myguestcare.php:363
-#: includes/tabs/tab-settings-passepartout.php:399
-#: includes/tabs/tab-settings-simplebooking.php:415
-#: includes/tabs/tab-settings-verticalbooking.php:389
+#: includes/tabs/tab-settings-passepartout.php:403
+#: includes/tabs/tab-settings-simplebooking.php:419
+#: includes/tabs/tab-settings-verticalbooking.php:393
 #: includes/tabs/tab-settings-wubook.php:479
-#: templates/5stelle.php:151
+#: templates/5stelle.php:155
+#: templates/begenius.php:177
 #: templates/blastness.php:170
 #: templates/datasistemi.php:148
 #: templates/ericsoft.php:160
-#: templates/iperbooking.php:207
+#: templates/iperbooking.php:212
 #: templates/myguestcare.php:170
-#: templates/passepartout.php:183
-#: templates/simplebooking.php:178
-#: templates/verticalbooking.php:166
+#: templates/passepartout.php:187
+#: templates/simplebooking.php:182
+#: templates/verticalbooking.php:170
 #: templates/wubook.php:188
 msgid "Search"
 msgstr ""
 
+#: includes/tabs/tab-settings-begenius.php:23
+msgid "Hotel code"
+msgstr ""
+
+#: includes/tabs/tab-settings-begenius.php:24
+msgid "Found in your BeGenius booking engine address: secure.begenius.it/bookingenius/hotel_web/en/HOTEL-CODE/"
+msgstr ""
+
+#: includes/tabs/tab-settings-begenius.php:289
+#: includes/tabs/tab-settings-blastness.php:319
+#: includes/tabs/tab-settings-myguestcare.php:289
+#: includes/tabs/tab-settings-simplebooking.php:316
+#: includes/tabs/tab-settings-verticalbooking.php:319
+msgid "Min children age"
+msgstr ""
+
+#: includes/tabs/tab-settings-begenius.php:320
+#: includes/tabs/tab-settings-blastness.php:350
+#: includes/tabs/tab-settings-myguestcare.php:320
+#: includes/tabs/tab-settings-simplebooking.php:347
+#: includes/tabs/tab-settings-verticalbooking.php:350
+msgid "Max children age"
+msgstr ""
+
+#: includes/tabs/tab-settings-begenius.php:355
+#: includes/tabs/tab-settings-simplebooking.php:382
+#: templates/begenius.php:160
+#: templates/simplebooking.php:160
+msgid "Coupon"
+msgstr ""
+
 #: includes/tabs/tab-settings-blastness.php:23
-#: includes/tabs/tab-settings-verticalbooking.php:19
+#: includes/tabs/tab-settings-verticalbooking.php:23
 msgid "id_albergo"
 msgstr ""
 
 #: includes/tabs/tab-settings-blastness.php:40
-#: includes/tabs/tab-settings-verticalbooking.php:36
+#: includes/tabs/tab-settings-verticalbooking.php:40
 msgid "dc"
 msgstr ""
 
 #: includes/tabs/tab-settings-blastness.php:57
-#: includes/tabs/tab-settings-verticalbooking.php:53
+#: includes/tabs/tab-settings-verticalbooking.php:57
 msgid "id_stile"
-msgstr ""
-
-#: includes/tabs/tab-settings-blastness.php:319
-#: includes/tabs/tab-settings-myguestcare.php:289
-#: includes/tabs/tab-settings-simplebooking.php:312
-#: includes/tabs/tab-settings-verticalbooking.php:315
-msgid "Min children age"
-msgstr ""
-
-#: includes/tabs/tab-settings-blastness.php:350
-#: includes/tabs/tab-settings-myguestcare.php:320
-#: includes/tabs/tab-settings-simplebooking.php:343
-#: includes/tabs/tab-settings-verticalbooking.php:346
-msgid "Max children age"
 msgstr ""
 
 #: includes/tabs/tab-settings-datasistemi.php:23
@@ -606,7 +650,7 @@ msgstr ""
 
 #: includes/tabs/tab-settings-datasistemi.php:40
 #: includes/tabs/tab-settings-ericsoft.php:40
-#: includes/tabs/tab-settings-simplebooking.php:36
+#: includes/tabs/tab-settings-simplebooking.php:40
 #: includes/tabs/tab-settings-wubook.php:40
 msgid "Currency"
 msgstr ""
@@ -641,76 +685,76 @@ msgstr ""
 msgid "Max Infants"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:19
+#: includes/tabs/tab-settings-iperbooking.php:23
 msgid "idHotel"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:76
+#: includes/tabs/tab-settings-iperbooking.php:80
 msgid "Language settings"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:85
+#: includes/tabs/tab-settings-iperbooking.php:89
 msgid "Language options"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:87
-#: includes/tabs/tab-settings-iperbooking.php:105
+#: includes/tabs/tab-settings-iperbooking.php:91
+#: includes/tabs/tab-settings-iperbooking.php:109
 msgid "Lang code"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:88
-#: includes/tabs/tab-settings-iperbooking.php:109
+#: includes/tabs/tab-settings-iperbooking.php:92
+#: includes/tabs/tab-settings-iperbooking.php:113
 msgid "URL"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:91
-#: includes/tabs/tab-settings-iperbooking.php:205
+#: includes/tabs/tab-settings-iperbooking.php:95
+#: includes/tabs/tab-settings-iperbooking.php:209
 msgid "Add new option"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:102
-#: includes/tabs/tab-settings-iperbooking.php:135
+#: includes/tabs/tab-settings-iperbooking.php:106
+#: includes/tabs/tab-settings-iperbooking.php:139
 msgid "Language option"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:126
-#: includes/tabs/tab-settings-iperbooking.php:240
+#: includes/tabs/tab-settings-iperbooking.php:130
+#: includes/tabs/tab-settings-iperbooking.php:244
 msgid "Delete"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:166
+#: includes/tabs/tab-settings-iperbooking.php:170
 msgid "Treatments"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:169
+#: includes/tabs/tab-settings-iperbooking.php:173
 msgid "Visible"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:170
+#: includes/tabs/tab-settings-iperbooking.php:174
 msgid "Check to show"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:190
+#: includes/tabs/tab-settings-iperbooking.php:194
 msgid "Treatment options"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:199
+#: includes/tabs/tab-settings-iperbooking.php:203
 msgid "Options"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:200
+#: includes/tabs/tab-settings-iperbooking.php:204
 msgid "Option example"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:201
-#: includes/tabs/tab-settings-iperbooking.php:252
+#: includes/tabs/tab-settings-iperbooking.php:205
+#: includes/tabs/tab-settings-iperbooking.php:256
 msgid "Value"
 msgstr ""
 
-#: includes/tabs/tab-settings-iperbooking.php:547
-#: includes/tabs/tab-settings-passepartout.php:363
-#: templates/iperbooking.php:189
-#: templates/passepartout.php:164
+#: includes/tabs/tab-settings-iperbooking.php:551
+#: includes/tabs/tab-settings-passepartout.php:367
+#: templates/iperbooking.php:194
+#: templates/passepartout.php:168
 msgid "Discount code"
 msgstr ""
 
@@ -718,21 +762,16 @@ msgstr ""
 msgid "idcliente"
 msgstr ""
 
-#: includes/tabs/tab-settings-passepartout.php:19
+#: includes/tabs/tab-settings-passepartout.php:23
 msgid "Albergo"
 msgstr ""
 
-#: includes/tabs/tab-settings-passepartout.php:35
+#: includes/tabs/tab-settings-passepartout.php:39
 msgid "OidPortaleXAlbergo"
 msgstr ""
 
-#: includes/tabs/tab-settings-simplebooking.php:19
+#: includes/tabs/tab-settings-simplebooking.php:23
 msgid "hid"
-msgstr ""
-
-#: includes/tabs/tab-settings-simplebooking.php:378
-#: templates/simplebooking.php:156
-msgid "Coupon"
 msgstr ""
 
 #: includes/tabs/tab-settings-wubook.php:23
@@ -769,184 +808,187 @@ msgstr ""
 msgid "Max Babies"
 msgstr ""
 
-#: includes/tabs/tab-settings.php:20
+#: includes/tabs/tab-settings.php:24
 msgid "Astro Booking Engine displays the booking form using the <strong>Astro Booking Engine</strong> block in the editor or the shortcode <strong>[astro-booking-engine]</strong>."
 msgstr ""
 
-#: includes/tabs/tab-settings.php:24
+#: includes/tabs/tab-settings.php:28
 msgid "For installation details, read more at the"
 msgstr ""
 
-#: includes/tabs/tab-settings.php:27
+#: includes/tabs/tab-settings.php:31
 msgid "support page"
 msgstr ""
 
-#: includes/tabs/tab-settings.php:42
+#: includes/tabs/tab-settings.php:46
 msgid "Provider"
 msgstr ""
 
-#: includes/tabs/tab-settings.php:46
+#: includes/tabs/tab-settings.php:50
 msgid "Your provider"
 msgstr ""
 
-#: includes/tabs/tab-settings.php:47
+#: includes/tabs/tab-settings.php:51
 msgid "Select your provider and configure its settings to enable Astro Booking Engine."
 msgstr ""
 
-#: includes/tabs/tab-support.php:30
+#: includes/tabs/tab-support.php:45
 msgid "Security check failed. Please go back and try again."
 msgstr ""
 
-#: includes/tabs/tab-support.php:34
+#: includes/tabs/tab-support.php:49
 msgid "All the plugin options have deleted."
 msgstr ""
 
-#: includes/tabs/tab-support.php:61
+#: includes/tabs/tab-support.php:76
 msgid "How to start with this plugin"
 msgstr ""
 
-#: includes/tabs/tab-support.php:63
+#: includes/tabs/tab-support.php:78
 msgid "Get data settings from your booking engine provider; if you don't have one, you need to adopt one"
 msgstr ""
 
-#: includes/tabs/tab-support.php:63
+#: includes/tabs/tab-support.php:78
 msgid "see the list of currently available providers"
 msgstr ""
 
-#: includes/tabs/tab-support.php:64
+#: includes/tabs/tab-support.php:79
 msgid "Select the provider name and configure its settings"
 msgstr ""
 
-#: includes/tabs/tab-support.php:65
+#: includes/tabs/tab-support.php:80
 msgid "Configure the booking form layout (optional)"
 msgstr ""
 
-#: includes/tabs/tab-support.php:66
+#: includes/tabs/tab-support.php:81
 msgid "Add the Astro Booking Engine block in the editor, use the [astro-booking-engine] shortcode in your post/page content, or add the Astro Booking Engine widget in the widget area."
 msgstr ""
 
-#: includes/tabs/tab-support.php:68
+#: includes/tabs/tab-support.php:83
 msgid "IMPORTANT"
 msgstr ""
 
-#: includes/tabs/tab-support.php:69
+#: includes/tabs/tab-support.php:84
 msgid "it is mandatory to have the provider data settings and the provider contract must be active in order to use the Astro Booking Engine."
 msgstr ""
 
-#: includes/tabs/tab-support.php:70
+#: includes/tabs/tab-support.php:85
 msgid "The booking engine provider can send you the useful settings to configure the Astro Booking Engine; we are not a booking engine provider."
 msgstr ""
 
-#: includes/tabs/tab-support.php:71
+#: includes/tabs/tab-support.php:86
 msgid "Only after configuring the Astro Booking Engine with the provider's data, you can you start to use the booking form on your website."
 msgstr ""
 
-#: includes/tabs/tab-support.php:75
+#: includes/tabs/tab-support.php:90
 msgid "Providers list"
 msgstr ""
 
-#: includes/tabs/tab-support.php:76
+#: includes/tabs/tab-support.php:91
 msgid "Currently, Astro Booking Engine can be connected to the following booking engine providers (in alphabetic order)."
 msgstr ""
 
-#: includes/tabs/tab-support.php:90
+#: includes/tabs/tab-support.php:106
 msgid "Is your booking engine provider not available in Astro Booking Engine?"
 msgstr ""
 
-#: includes/tabs/tab-support.php:91
-#: includes/tabs/tab-support.php:100
+#: includes/tabs/tab-support.php:107
+#: includes/tabs/tab-support.php:116
 msgid "Write me an email at"
 msgstr ""
 
-#: includes/tabs/tab-support.php:95
+#: includes/tabs/tab-support.php:111
 msgid "FAQs"
 msgstr ""
 
-#: includes/tabs/tab-support.php:96
+#: includes/tabs/tab-support.php:112
 msgid "Do you need support?"
 msgstr ""
 
-#: includes/tabs/tab-support.php:97
+#: includes/tabs/tab-support.php:113
 msgid "Request support at the "
 msgstr ""
 
-#: includes/tabs/tab-support.php:97
+#: includes/tabs/tab-support.php:113
 msgid "plugin support page"
 msgstr ""
 
-#: includes/tabs/tab-support.php:99
+#: includes/tabs/tab-support.php:115
 msgid "Have more questions?"
 msgstr ""
 
-#: includes/tabs/tab-support.php:104
+#: includes/tabs/tab-support.php:120
 msgid "About the author"
 msgstr ""
 
-#: includes/tabs/tab-support.php:106
+#: includes/tabs/tab-support.php:122
 msgid "Creator of Astro Booking Engine and founder of AboutMyHotel."
 msgstr ""
 
-#: includes/tabs/tab-support.php:108
+#: includes/tabs/tab-support.php:124
 msgid "Website:"
 msgstr ""
 
-#: includes/tabs/tab-support.php:109
+#: includes/tabs/tab-support.php:125
 msgid "hotel reputation and market intelligence platform."
 msgstr ""
 
-#: includes/tabs/tab-support.php:110
+#: includes/tabs/tab-support.php:126
 msgid "Bug reports and suggestions:"
 msgstr ""
 
-#: includes/tabs/tab-support.php:112
+#: includes/tabs/tab-support.php:128
 msgid "AboutMyHotel is a separate, commercial service by the same author. It is not required to use this plugin."
 msgstr ""
 
-#: includes/tabs/tab-support.php:116
+#: includes/tabs/tab-support.php:132
 msgid "Plugin data reset"
 msgstr ""
 
-#: includes/tabs/tab-support.php:117
+#: includes/tabs/tab-support.php:133
 msgid "Remove all plugin settings"
 msgstr ""
 
-#: templates/5stelle.php:26
+#: templates/5stelle.php:30
+#: templates/begenius.php:29
 #: templates/blastness.php:37
 #: templates/datasistemi.php:29
 #: templates/ericsoft.php:47
-#: templates/iperbooking.php:24
+#: templates/iperbooking.php:28
 #: templates/myguestcare.php:37
-#: templates/passepartout.php:36
-#: templates/simplebooking.php:26
-#: templates/verticalbooking.php:33
+#: templates/passepartout.php:40
+#: templates/simplebooking.php:30
+#: templates/verticalbooking.php:37
 #: templates/wubook.php:50
 msgid "Check-in"
 msgstr ""
 
-#: templates/5stelle.php:42
+#: templates/5stelle.php:46
+#: templates/begenius.php:44
 #: templates/blastness.php:53
 #: templates/datasistemi.php:45
 #: templates/ericsoft.php:63
-#: templates/iperbooking.php:40
+#: templates/iperbooking.php:44
 #: templates/myguestcare.php:53
-#: templates/passepartout.php:52
-#: templates/simplebooking.php:43
-#: templates/verticalbooking.php:49
+#: templates/passepartout.php:56
+#: templates/simplebooking.php:47
+#: templates/verticalbooking.php:53
 #: templates/wubook.php:66
 msgid "Check-out"
 msgstr ""
 
-#: templates/5stelle.php:121
+#: templates/5stelle.php:125
+#: templates/begenius.php:128
 #: templates/blastness.php:140
-#: templates/iperbooking.php:156
+#: templates/iperbooking.php:161
 #: templates/myguestcare.php:140
-#: templates/passepartout.php:131
-#: templates/simplebooking.php:123
-#: templates/verticalbooking.php:136
+#: templates/passepartout.php:135
+#: templates/simplebooking.php:127
+#: templates/verticalbooking.php:140
 msgid "Child Age"
 msgstr ""
 
-#: templates/iperbooking.php:63
+#: templates/iperbooking.php:68
 msgid "Treatment"
 msgstr ""
 

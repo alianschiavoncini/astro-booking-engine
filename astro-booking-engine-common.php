@@ -49,6 +49,26 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . '5stelle_portal' => ASTRO_BE_PREFIX . '5stelle_portal', //required
 
 				/**
+				 * BeGenius
+				 */
+				ASTRO_BE_PREFIX . 'begenius_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'begenius_form_target' => ASTRO_BE_PREFIX . 'begenius_form_target',
+				ASTRO_BE_PREFIX . 'begenius_adults_enable' => ASTRO_BE_PREFIX . 'begenius_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'begenius_adults_n_default' => ASTRO_BE_PREFIX . 'begenius_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'begenius_adults_n_max' => ASTRO_BE_PREFIX . 'begenius_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'begenius_children_enable' => ASTRO_BE_PREFIX . 'begenius_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'begenius_children_n_default' => ASTRO_BE_PREFIX . 'begenius_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'begenius_children_n_max' => ASTRO_BE_PREFIX . 'begenius_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'begenius_childage_enable' => ASTRO_BE_PREFIX . 'begenius_childage_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'begenius_childage_min' => ASTRO_BE_PREFIX . 'begenius_childage_min', //conditional
+				ASTRO_BE_PREFIX . 'begenius_childage_max' => ASTRO_BE_PREFIX . 'begenius_childage_max', //conditional
+				ASTRO_BE_PREFIX . 'begenius_coupon' => ASTRO_BE_PREFIX . 'begenius_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'begenius_submit_label' => ASTRO_BE_PREFIX . 'begenius_submit_label', //optional
+
+				//BeGenius custom fields
+				ASTRO_BE_PREFIX . 'begenius_hotel' => ASTRO_BE_PREFIX . 'begenius_hotel', //required
+
+				/**
 				 * Blastness
 				 */
 				ASTRO_BE_PREFIX . 'blastness_form_method' => esc_attr('get'),
@@ -275,16 +295,179 @@ function astro_be_option_names($tab = false) {
 }
 
 /**
- * Unregister the option names if the plugin will delete.
+ * Return the calendar themes shipped in vendors/jquery-ui-themes/themes/.
  */
-register_uninstall_hook(__FILE__, 'astro_be_unregister_option_names');
+function astro_be_calendar_themes() {
+	return array('base', 'black-tie', 'blitzer', 'cupertino', 'dark-hive', 'dot-luv', 'eggplant', 'excite-bike', 'flick', 'hot-sneaks', 'humanity', 'le-frog', 'mint-choc', 'overcast', 'pepper-grinder', 'redmond', 'smoothness', 'south-street', 'start', 'sunny', 'swanky-purse', 'trontastic', 'ui-darkness', 'ui-lightness', 'vader');
+}
+
+/**
+ * Return the sanitize callback of a plugin option.
+ * The same callback is used when the option is saved (register_setting) and when it is
+ * read to build paths, URLs or inline CSS (astro_be_get_sanitized_option), so that values
+ * saved by older versions are validated as well.
+ * Provider fields not listed here are plain text: sanitize_text_field().
+ */
+function astro_be_get_option_sanitize_callback( $option_name ) {
+	$name = substr( $option_name, strlen( ASTRO_BE_PREFIX ) );
+
+	// General and layout settings.
+	if ( 'provider' === $name ) {
+		return 'astro_be_sanitize_provider';
+	}
+	if ( 'calendar' === $name ) {
+		return 'astro_be_sanitize_calendar_theme';
+	}
+	if ( 'custom-css' === $name ) {
+		return 'astro_be_sanitize_custom_css';
+	}
+	if ( preg_match( '/-color$/', $name ) ) {
+		return 'astro_be_block_sanitize_css_color';
+	}
+	if ( preg_match( '/-(font-size|border-width|border-radius)$/', $name ) ) {
+		return 'astro_be_sanitize_absint_or_empty';
+	}
+	if ( preg_match( '/-font-weight$/', $name ) ) {
+		return 'astro_be_sanitize_font_weight';
+	}
+	if ( preg_match( '/-border-style$/', $name ) ) {
+		return 'astro_be_sanitize_border_style';
+	}
+
+	// Provider settings: <provider>_<field>.
+	if ( preg_match( '/_form_target$/', $name ) ) {
+		return 'astro_be_sanitize_form_target';
+	}
+	if ( preg_match( '/_(enable|coupon|codiceSconto|codpromo|CodicePromozione|idTrattamento_visible)$/', $name ) ) {
+		return 'astro_be_sanitize_checkbox';
+	}
+	if ( preg_match( '/_(n_default|n_max|childage_min|childage_max)$/', $name ) ) {
+		return 'astro_be_sanitize_absint_or_empty';
+	}
+	if ( preg_match( '/_(language|idTrattamento)$/', $name ) ) {
+		return 'astro_be_sanitize_options_list';
+	}
+
+	return 'sanitize_text_field';
+}
+
+/**
+ * Return a plugin option passed through its sanitize callback.
+ */
+function astro_be_get_sanitized_option( $option_name ) {
+	return call_user_func( astro_be_get_option_sanitize_callback( $option_name ), get_option( $option_name ) );
+}
+
+/**
+ * Provider: it becomes part of the template and script file paths, so only the name of an
+ * existing template is accepted.
+ */
+function astro_be_sanitize_provider( $value ) {
+	if ( ! is_string( $value ) || ! preg_match( '/^[a-z0-9]+$/', $value ) ) {
+		return '';
+	}
+	if ( ! file_exists( plugin_dir_path( __FILE__ ) . 'templates/' . $value . '.php' ) ) {
+		return '';
+	}
+	return $value;
+}
+
+/**
+ * Checkbox: '1' when checked, empty otherwise.
+ */
+function astro_be_sanitize_checkbox( $value ) {
+	return ( is_scalar( $value ) && '1' === (string) $value ) ? '1' : '';
+}
+
+/**
+ * Number from a dropdown; the empty value ("inherit") is kept.
+ */
+function astro_be_sanitize_absint_or_empty( $value ) {
+	if ( ! is_scalar( $value ) || '' === trim( (string) $value ) ) {
+		return '';
+	}
+	return absint( $value );
+}
+
+/**
+ * Form target: new or same window.
+ */
+function astro_be_sanitize_form_target( $value ) {
+	return ( is_string( $value ) && in_array( $value, array( '_blank', '_self' ), true ) ) ? $value : '';
+}
+
+/**
+ * Font weight: values of the Layout dropdown.
+ */
+function astro_be_sanitize_font_weight( $value ) {
+	return ( is_string( $value ) && in_array( $value, array( 'normal', 'bold' ), true ) ) ? $value : '';
+}
+
+/**
+ * Border style: values of the Layout dropdown.
+ */
+function astro_be_sanitize_border_style( $value ) {
+	$border_styles = array('none', 'dashed', 'dotted', 'double', 'groove', 'hidden', 'inset', 'outset', 'ridge', 'solid');
+	return ( is_string( $value ) && in_array( $value, $border_styles, true ) ) ? $value : '';
+}
+
+/**
+ * Calendar theme: one of the themes shipped with the plugin.
+ */
+function astro_be_sanitize_calendar_theme( $value ) {
+	return ( is_string( $value ) && in_array( $value, astro_be_calendar_themes(), true ) ) ? $value : '';
+}
+
+/**
+ * Custom CSS: printed inside a <style> element, so HTML tags (such as </style>) are removed.
+ */
+function astro_be_sanitize_custom_css( $value ) {
+	return is_string( $value ) ? wp_strip_all_tags( $value ) : '';
+}
+
+/**
+ * Lists of options with dynamic rows (Iperbooking languages and treatments):
+ * array( 'option_N' => array( 'code' => ..., 'url' => ... ) ).
+ */
+function astro_be_sanitize_options_list( $value ) {
+	if ( ! is_array( $value ) ) {
+		return array();
+	}
+
+	$options = array();
+	foreach ( $value as $key => $option ) {
+		if ( ! is_array( $option ) ) {
+			continue;
+		}
+		$fields = array();
+		foreach ( $option as $field => $field_value ) {
+			if ( ! is_scalar( $field_value ) ) {
+				continue;
+			}
+			$fields[ sanitize_key( $field ) ] = ( 'url' === $field ) ? esc_url_raw( $field_value ) : sanitize_text_field( $field_value );
+		}
+		$options[ sanitize_key( $key ) ] = $fields;
+	}
+
+	return $options;
+}
+
+/**
+ * Former uninstall callback: it was registered on this file instead of the main plugin file,
+ * so WordPress never ran it, and it did not delete anything. The options are now removed by
+ * uninstall.php.
+ *
+ * @deprecated 2.1.0
+ */
 function astro_be_unregister_option_names() {
+	_deprecated_function( __FUNCTION__, '2.1.0' );
+
 	$tab = 'settings';
 	$option_group = ASTRO_BE_PREFIX . '_' . $tab;
 	$option_names = astro_be_option_names($tab);
 
 	foreach ($option_names as $option_name) {
-		register_setting( $option_group, $option_name );
+		register_setting( $option_group, $option_name, array( 'sanitize_callback' => astro_be_get_option_sanitize_callback( $option_name ) ) );
 	}
 }
 
@@ -293,20 +476,24 @@ function astro_be_unregister_option_names() {
  */
 function astro_be_shortcode_output() {
 	// Get the Template
-	$provider = get_option(ASTRO_BE_PREFIX.'provider');
-	if (($provider == '') && user_can( wp_get_current_user(), 'administrator' )) {
+	$provider = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'provider');
+	if (($provider == '') && current_user_can( 'manage_options' )) {
 		$plugin_settings_url = admin_url('admin.php?page=astro-booking-engine');
 		$str = '<div class="astro-error astro-error-no-provider">';
-		$str .= __( 'This message is visible only to the site administrator.', 'astro-booking-engine' );
+		$str .= esc_html__( 'This message is visible only to the site administrator.', 'astro-booking-engine' );
 		$str .= '<br />';
-		$str .= __( 'No provider has been selected in Astro Booking Engine plugin.', 'astro-booking-engine' );
+		$str .= esc_html__( 'No provider has been selected in Astro Booking Engine plugin.', 'astro-booking-engine' );
 		$str .= '<br />';
-		$str .= __('Choose your provider at plugin', 'astro-booking-engine' );
-		$str .= ' <a href="'.$plugin_settings_url.'">';
-		$str .= __('settings page', 'astro-booking-engine' );
+		$str .= esc_html__('Choose your provider at plugin', 'astro-booking-engine' );
+		$str .= ' <a href="'.esc_url($plugin_settings_url).'">';
+		$str .= esc_html__('settings page', 'astro-booking-engine' );
 		$str .= '</a>.';
 		$str .= '</div>';
 		return $str;
+	}
+
+	if ($provider == '') {
+		return '';
 	}
 
 	$template_file = plugin_dir_path(__FILE__) . 'templates/' .$provider.'.php';
@@ -326,34 +513,29 @@ function astro_be_get_provider_form_action_url_language() {
 	$provider = get_option(ASTRO_BE_PREFIX.'provider');
 
 	$form_urls = get_option(ASTRO_BE_PREFIX.$provider.'_language');
-	$form_url = false;
+	if ( ! is_array( $form_urls ) ) {
+		return '';
+	}
 
 	if ( class_exists( 'SitePress' ) ) { //check if WPML is active
 		$current_post_language = apply_filters( 'wpml_current_language', NULL );
-		foreach ($form_urls as $arr) {
-			if (strtolower($arr['code']) == strtolower($current_post_language)) {
-				$form_url = $arr['url'];
-				break;
-			}
-		}
 	}else{ //No WPML; get WP language setting
-		$current_post_language = get_bloginfo("language");
-		$current_post_language = substr($current_post_language, 0, 2);
-		foreach ($form_urls as $form_url) {
-			if (strtolower($form_url['code']) == strtolower($current_post_language)) {
-				$form_url = $form_url['url'];
-				break;
-			}
+		$current_post_language = substr( get_bloginfo("language"), 0, 2 );
+	}
+
+	foreach ( $form_urls as $option ) {
+		if ( isset( $option['code'], $option['url'] ) && ( $option['url'] !== '' ) && ( strtolower( $option['code'] ) == strtolower( (string) $current_post_language ) ) ) {
+			return $option['url'];
 		}
 	}
 
-	if (!$form_url) { //no language detected => set the default language provided
-		$languages = get_option(ASTRO_BE_PREFIX.$provider.'_language');
-		$defalut_language_option = get_option(ASTRO_BE_PREFIX.$provider.'_language_default');
-		$form_url = $languages[$defalut_language_option]['url'];
+	//no language detected => set the default language provided
+	$default_language_option = get_option(ASTRO_BE_PREFIX.$provider.'_language_default');
+	if ( is_scalar( $default_language_option ) && isset( $form_urls[ $default_language_option ]['url'] ) ) {
+		return $form_urls[ $default_language_option ]['url'];
 	}
 
-	return $form_url;
+	return '';
 }
 
 /**
@@ -365,11 +547,11 @@ function astro_be_get_custom_layout() {
 
 	//Widget
 	$widget = array();
-	$widget_background_color = get_option(ASTRO_BE_PREFIX.'widget-background-color');
+	$widget_background_color = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'widget-background-color');
 	if (!empty($widget_background_color)) {
 		$widget[] = 'background-color:'.$widget_background_color;
 	}
-	$widget_border_radius = get_option(ASTRO_BE_PREFIX.'widget-border-radius');
+	$widget_border_radius = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'widget-border-radius');
 	if (!empty($widget_border_radius)) {
 		$widget[] = 'border-radius:'.$widget_border_radius.'px';
 	}
@@ -380,15 +562,15 @@ function astro_be_get_custom_layout() {
 
 	//Label
 	$label = array();
-	$label_font_color = get_option(ASTRO_BE_PREFIX.'label-font-color');
+	$label_font_color = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'label-font-color');
 	if (!empty($label_font_color)) {
 		$label[] = 'color:'.$label_font_color;
 	}
-	$label_font_size = get_option(ASTRO_BE_PREFIX.'label-font-size');
+	$label_font_size = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'label-font-size');
 	if (!empty($label_font_size)) {
 		$label[] = 'font-size:'.$label_font_size.'px';
 	}
-	$label_font_weight = get_option(ASTRO_BE_PREFIX.'label-font-weight');
+	$label_font_weight = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'label-font-weight');
 	if (!empty($label_font_weight)) {
 		$label[] = 'font-weight:'.$label_font_weight;
 	}
@@ -399,35 +581,35 @@ function astro_be_get_custom_layout() {
 
 	//Field
 	$field = array();
-	$field_font_color = get_option(ASTRO_BE_PREFIX.'field-font-color');
+	$field_font_color = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'field-font-color');
 	if (!empty($field_font_color)) {
 		$field[] = 'color:'.$field_font_color;
 	}
-	$field_font_size = get_option(ASTRO_BE_PREFIX.'field-font-size');
+	$field_font_size = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'field-font-size');
 	if (!empty($field_font_size)) {
 		$field[] = 'font-size:'.$field_font_size.'px';
 	}
-	$field_font_weight = get_option(ASTRO_BE_PREFIX.'field-font-weight');
+	$field_font_weight = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'field-font-weight');
 	if (!empty($field_font_weight)) {
 		$field[] = 'font-weight:'.$field_font_weight;
 	}
-	$field_background_color = get_option(ASTRO_BE_PREFIX.'field-background-color');
+	$field_background_color = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'field-background-color');
 	if (!empty($field_background_color)) {
 		$field[] = 'background-color:'.$field_background_color;
 	}
-	$field_border_width = get_option(ASTRO_BE_PREFIX.'field-border-width');
+	$field_border_width = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'field-border-width');
 	if (!empty($field_border_width)) {
 		$field[] = 'border-width:'.$field_border_width.'px';
 	}
-	$field_border_style = get_option(ASTRO_BE_PREFIX.'field-border-style');
+	$field_border_style = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'field-border-style');
 	if (!empty($field_border_style)) {
 		$field[] = 'border-style:'.$field_border_style;
 	}
-	$field_border_color = get_option(ASTRO_BE_PREFIX.'field-border-color');
+	$field_border_color = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'field-border-color');
 	if (!empty($field_border_color)) {
 		$field[] = 'border-color:'.$field_border_color;
 	}
-	$field_border_radius = get_option(ASTRO_BE_PREFIX.'field-border-radius');
+	$field_border_radius = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'field-border-radius');
 	if (!empty($field_border_radius)) {
 		$field[] = 'border-radius:'.$field_border_radius.'px';
 	}
@@ -438,35 +620,35 @@ function astro_be_get_custom_layout() {
 
 	//Submit
 	$submit = array();
-	$submit_font_color = get_option(ASTRO_BE_PREFIX.'submit-font-color');
+	$submit_font_color = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'submit-font-color');
 	if (!empty($submit_font_color)) {
 		$submit[] = 'color:'.$submit_font_color;
 	}
-	$submit_font_size = get_option(ASTRO_BE_PREFIX.'submit-font-size');
+	$submit_font_size = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'submit-font-size');
 	if (!empty($submit_font_size)) {
 		$submit[] = 'font-size:'.$submit_font_size.'px';
 	}
-	$submit_font_weight = get_option(ASTRO_BE_PREFIX.'submit-font-weight');
+	$submit_font_weight = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'submit-font-weight');
 	if (!empty($submit_font_weight)) {
 		$submit[] = 'font-weight:'.$submit_font_weight;
 	}
-	$submit_background_color = get_option(ASTRO_BE_PREFIX.'submit-background-color');
+	$submit_background_color = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'submit-background-color');
 	if (!empty($submit_background_color)) {
 		$submit[] = 'background-color:'.$submit_background_color;
 	}
-	$submit_border_width = get_option(ASTRO_BE_PREFIX.'submit-border-width');
+	$submit_border_width = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'submit-border-width');
 	if (!empty($submit_border_width)) {
 		$submit[] = 'border-width:'.$submit_border_width.'px';
 	}
-	$submit_border_style = get_option(ASTRO_BE_PREFIX.'submit-border-style');
+	$submit_border_style = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'submit-border-style');
 	if (!empty($submit_border_style)) {
 		$submit[] = 'border-style:'.$submit_border_style;
 	}
-	$submit_border_color = get_option(ASTRO_BE_PREFIX.'submit-border-color');
+	$submit_border_color = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'submit-border-color');
 	if (!empty($submit_border_color)) {
 		$submit[] = 'border-color:'.$submit_border_color;
 	}
-	$submit_border_radius = get_option(ASTRO_BE_PREFIX.'submit-border-radius');
+	$submit_border_radius = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'submit-border-radius');
 	if (!empty($submit_border_radius)) {
 		$submit[] = 'border-radius:'.$submit_border_radius.'px';
 	}
@@ -475,7 +657,7 @@ function astro_be_get_custom_layout() {
 		$arr[] = array('class' => '.astro_be .astro_be_input-submit_button', 'prop' => $submit);
 	}
 
-	$custom_css = get_option(ASTRO_BE_PREFIX.'custom-css');
+	$custom_css = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'custom-css');
 
 	$str = false;
 	if (!empty($arr) || !empty($custom_css)) {
@@ -508,6 +690,22 @@ function astro_get_post_language() {
 function astro_return_post_language() {
 	$lang = astro_get_post_language();
 	$lang = strtolower($lang);
+
+	return $lang;
+}
+
+/**
+ * BeGenius: return the language.
+ * The language is a segment of the booking engine address, which returns a 404 for the
+ * languages it does not support: those fall back to English.
+ */
+function astro_return_begenius_language() {
+
+	$lang = astro_return_post_language();
+
+	if ( ! in_array( $lang, array( 'it', 'en', 'de', 'fr', 'es', 'pt' ), true ) ) {
+		$lang = 'en';
+	}
 
 	return $lang;
 }

@@ -1,4 +1,8 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if( ! is_admin() ) {
 	return;
 }
@@ -9,9 +13,20 @@ function astro_be_delete_options_prefixed( $prefix ) {
 	// esc_like() neutralizza _ e % nel prefisso; prepare() si occupa del resto.
 	$like = $wpdb->esc_like( $prefix ) . '%';
 
-	return $wpdb->query(
-		$wpdb->prepare( "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s", $like )
+	$option_names = $wpdb->get_col(
+		$wpdb->prepare( "SELECT option_name FROM {$wpdb->options} WHERE option_name LIKE %s", $like )
 	);
+
+	// delete_option() e non una DELETE diretta: aggiorna anche la cache degli oggetti, altrimenti
+	// con una cache persistente le opzioni cancellate continuerebbero a essere lette.
+	$deleted = 0;
+	foreach ( $option_names as $option_name ) {
+		if ( delete_option( $option_name ) ) {
+			$deleted++;
+		}
+	}
+
+	return $deleted;
 }
 
 $delete_options = false;
@@ -76,6 +91,7 @@ do_settings_sections($option_group);
             <p><?php esc_html_e( 'Currently, Astro Booking Engine can be connected to the following booking engine providers (in alphabetic order).', 'astro-booking-engine' ); ?></p>
             <ul>
                 <li><a href="https://www.hotelcinquestelle.cloud/en/" target="_blank">5Stelle</a></li>
+                <li><a href="http://www.begenius.it/" target="_blank">BeGenius</a></li>
                 <li><a href="https://www.blastness.com/" target="_blank">Blastness</a></li>
                 <li><a href="https://www.datasistemi.eu/" target="_blank">Data Sistemi</a></li>
                 <li><a href="https://www.ericsoft.com/" target="_blank">Ericsoft</a></li>

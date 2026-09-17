@@ -5,6 +5,10 @@
  * @class   Astro_BE_Widget
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if (!class_exists('Astro_BE_Widget')) {
 
     class Astro_BE_Widget extends WP_Widget {
@@ -26,18 +30,20 @@ if (!class_exists('Astro_BE_Widget')) {
 
         // Creating widget front-end
         public function widget( $args, $instance ) {
-            // before and after widget arguments are defined by themes
-            echo esc_html( $args['before_widget'] );
+            // before and after widget arguments are HTML defined by themes: esc_html() would print
+            // the markup as visible text, wp_kses_post() keeps it and removes scripts
+            echo wp_kses_post( $args['before_widget'] );
 
-            $title = apply_filters( 'widget_title', $instance['title'] );
+            $title = isset( $instance['title'] ) ? $instance['title'] : '';
+            $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
             if (!empty($title)) {
-                echo esc_html( $args['before_title'] . $title . $args['after_title'] );
+                echo wp_kses_post( $args['before_title'] ) . esc_html( $title ) . wp_kses_post( $args['after_title'] );
             }
 
             echo do_shortcode('[astro-booking-engine]');
 
             // This is where you run the code and display the output
-            echo esc_html( $args['after_widget'] );
+            echo wp_kses_post( $args['after_widget'] );
 
            return $instance;
         }
@@ -72,6 +78,15 @@ if (!class_exists('Astro_BE_Widget')) {
 		register_widget( 'Astro_BE_Widget' );
 	}
 	add_action( 'widgets_init', 'astro_be_registration' );
+
+	// The block-based widget editor already offers the Astro Booking Engine block: hide the
+	// classic widget from its inserter, as WordPress does for its own widgets replaced by blocks.
+	// Widgets already added keep working, and the classic widget screen is not affected.
+	function astro_be_hide_legacy_widget( $widget_types ) {
+		$widget_types[] = 'astro_be';
+		return $widget_types;
+	}
+	add_filter( 'widget_types_to_hide_from_legacy_widget_block', 'astro_be_hide_legacy_widget' );
 
 }
 

@@ -2,6 +2,10 @@
 /**
  * Vertical booking.
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $provider = esc_attr('verticalbooking');
 $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
 ?>
