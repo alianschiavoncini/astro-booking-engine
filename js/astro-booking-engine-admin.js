@@ -208,6 +208,24 @@ jQuery( document ).ready(function( $ ) {
 
         }
 
+        //bookingexpert
+        if($('.box.bookingexpert').css('display') == 'block') {
+
+            var astro_be_bookingexpert_layout = $.trim($('#astro_be_bookingexpert_layout').val());
+            if (astro_be_bookingexpert_layout == '') {
+                $error_msg += '- layout: the field is required.\n';
+            } else if (!/^\d+$/.test(astro_be_bookingexpert_layout) && !/[?&]layout=\d+/.test(astro_be_bookingexpert_layout)) {
+                $error_msg += '- layout: enter the number after layout= in the booking engine address.\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Booking Expert fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
         //datasistemi
         if($('.box.datasistemi').css('display') == 'block') {
 
@@ -234,6 +252,125 @@ jQuery( document ).ready(function( $ ) {
 
             if ($error_msg != '') {
                 $error_msg = 'Ericsoft fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //mews
+        if($('.box.mews').css('display') == 'block') {
+
+            var astro_be_mews_configuration_id = $('#astro_be_mews_configuration_id').val();
+            if (astro_be_mews_configuration_id == '') {
+                $error_msg += '- Configuration ID: the field is required.\n';
+            } else if (!/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i.test(astro_be_mews_configuration_id)) {
+                $error_msg += '- Configuration ID: the format is not valid (e.g. aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee).\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Mews fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //octorate
+        if($('.box.octorate').css('display') == 'block') {
+
+            var astro_be_octorate_codice = $.trim($('#astro_be_octorate_codice').val());
+            if (astro_be_octorate_codice == '') {
+                $error_msg += '- codice: the field is required.\n';
+            } else if (!/^\d+$/.test(astro_be_octorate_codice) && !/[?&]codice=\d+/.test(astro_be_octorate_codice)) {
+                $error_msg += '- codice: enter the number after codice= in the booking engine address.\n';
+            }
+
+            if ($('#astro_be_octorate_childage_enable').is(':checked')) {
+
+                var astro_be_octorate_childage_min = $('#astro_be_octorate_childage_min').length;
+                var astro_be_octorate_childage_max = $('#astro_be_octorate_childage_max').length;
+
+                if (astro_be_octorate_childage_min && astro_be_octorate_childage_max) {
+                    var astro_be_octorate_childage_min_value = parseInt( $("#astro_be_octorate_childage_min option:selected").val() );
+                    var astro_be_octorate_childage_max_value = parseInt( $("#astro_be_octorate_childage_max option:selected").val() );
+
+                    if (astro_be_octorate_childage_min_value > astro_be_octorate_childage_max_value) {
+                        $error_msg += '- children age: min child age value is greater than max value.\n';
+                    }
+                }
+
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Octorate fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //revplus
+        if($('.box.revplus').css('display') == 'block') {
+
+            var astro_be_revplus_hotel = $.trim($('#astro_be_revplus_hotel').val());
+            if (astro_be_revplus_hotel == '') {
+                $error_msg += '- Property name: the field is required.\n';
+            } else if (!/^[a-zA-Z0-9-]+$/.test(astro_be_revplus_hotel) && !/^(https?:\/\/)?[a-zA-Z0-9-]+\.reserve-online\.net/.test(astro_be_revplus_hotel)) {
+                $error_msg += '- Property name: enter the name before .reserve-online.net in the booking engine address.\n';
+            }
+
+            var astro_be_revplus_htl_code = $.trim($('#astro_be_revplus_htl_code').val());
+            if (astro_be_revplus_htl_code != '' && !/^[a-zA-Z0-9_-]+$/.test(astro_be_revplus_htl_code)) {
+                $error_msg += '- property: the code can contain letters, digits, - and _ only.\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'RevPlus fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //scidoo
+        if($('.box.scidoo').css('display') == 'block') {
+
+            var astro_be_scidoo_cod = $.trim($('#astro_be_scidoo_cod').val());
+            if (astro_be_scidoo_cod == '') {
+                $error_msg += '- cod: the field is required.\n';
+            } else if (!/^\d+$/.test(astro_be_scidoo_cod) && !/[?&]cod=\d+/.test(astro_be_scidoo_cod)) {
+                $error_msg += '- cod: enter the number after cod= in the booking engine address.\n';
+            }
+
+            var astro_be_scidoo_IDsotto_struttura = $.trim($('#astro_be_scidoo_IDsotto_struttura').val());
+            if (astro_be_scidoo_IDsotto_struttura != '' && !/^\d+$/.test(astro_be_scidoo_IDsotto_struttura)) {
+                $error_msg += '- IDsotto_struttura: the value must be a number.\n';
+            }
+
+            //Scidoo receives the children as the list of their ages
+            if ($('#astro_be_scidoo_children_enable').is(':checked') && !$("#astro_be_scidoo_childage_enable").is(":checked")) {
+                $error_msg += '- children age: it must be enabled when children are enabled.\n';
+            }
+
+            if ($('#astro_be_scidoo_childage_enable').is(':checked')) {
+
+                var astro_be_scidoo_childage_min = $('#astro_be_scidoo_childage_min').length;
+                var astro_be_scidoo_childage_max = $('#astro_be_scidoo_childage_max').length;
+
+                if (astro_be_scidoo_childage_min && astro_be_scidoo_childage_max) {
+                    var astro_be_scidoo_childage_min_value = parseInt( $("#astro_be_scidoo_childage_min option:selected").val() );
+                    var astro_be_scidoo_childage_max_value = parseInt( $("#astro_be_scidoo_childage_max option:selected").val() );
+
+                    if (astro_be_scidoo_childage_min_value > astro_be_scidoo_childage_max_value) {
+                        $error_msg += '- children age: min child age value is greater than max value.\n';
+                    }
+                }
+
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Scidoo fields errors:\n' + $error_msg;
                 alert($error_msg);
                 return false;
             }

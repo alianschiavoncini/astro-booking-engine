@@ -69,6 +69,18 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'begenius_hotel' => ASTRO_BE_PREFIX . 'begenius_hotel', //required
 
 				/**
+				 * Booking Expert
+				 */
+				ASTRO_BE_PREFIX . 'bookingexpert_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'bookingexpert_form_target' => ASTRO_BE_PREFIX . 'bookingexpert_form_target',
+				ASTRO_BE_PREFIX . 'bookingexpert_coupon' => ASTRO_BE_PREFIX . 'bookingexpert_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'bookingexpert_submit_label' => ASTRO_BE_PREFIX . 'bookingexpert_submit_label', //optional
+
+				//Booking Expert custom fields
+				ASTRO_BE_PREFIX . 'bookingexpert_layout' => ASTRO_BE_PREFIX . 'bookingexpert_layout', //required
+				ASTRO_BE_PREFIX . 'bookingexpert_currency' => ASTRO_BE_PREFIX . 'bookingexpert_currency', //required
+
+				/**
 				 * Blastness
 				 */
 				ASTRO_BE_PREFIX . 'blastness_form_method' => esc_attr('get'),
@@ -152,6 +164,24 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'iperbooking_codiceSconto' => ASTRO_BE_PREFIX . 'iperbooking_codiceSconto', //enable/disable
 
 				/**
+				 * Mews
+				 */
+				ASTRO_BE_PREFIX . 'mews_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'mews_form_target' => ASTRO_BE_PREFIX . 'mews_form_target',
+				ASTRO_BE_PREFIX . 'mews_adults_enable' => ASTRO_BE_PREFIX . 'mews_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'mews_adults_n_default' => ASTRO_BE_PREFIX . 'mews_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'mews_adults_n_max' => ASTRO_BE_PREFIX . 'mews_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'mews_children_enable' => ASTRO_BE_PREFIX . 'mews_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'mews_children_n_default' => ASTRO_BE_PREFIX . 'mews_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'mews_children_n_max' => ASTRO_BE_PREFIX . 'mews_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'mews_coupon' => ASTRO_BE_PREFIX . 'mews_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'mews_submit_label' => ASTRO_BE_PREFIX . 'mews_submit_label', //optional
+
+				//Mews custom fields
+				ASTRO_BE_PREFIX . 'mews_configuration_id' => ASTRO_BE_PREFIX . 'mews_configuration_id', //required
+				ASTRO_BE_PREFIX . 'mews_currency' => ASTRO_BE_PREFIX . 'mews_currency', //required
+
+				/**
 				 * MyGuestCare
 				 */
 				ASTRO_BE_PREFIX . 'myguestcare_form_method' => esc_attr('get'),
@@ -169,6 +199,27 @@ function astro_be_option_names($tab = false) {
 
 				//MyGuestCare custom fields
 				ASTRO_BE_PREFIX . 'myguestcare_idcliente' => ASTRO_BE_PREFIX . 'myguestcare_idcliente', //required
+
+				/**
+				 * Octorate
+				 */
+				ASTRO_BE_PREFIX . 'octorate_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'octorate_form_target' => ASTRO_BE_PREFIX . 'octorate_form_target',
+				ASTRO_BE_PREFIX . 'octorate_adults_enable' => ASTRO_BE_PREFIX . 'octorate_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'octorate_adults_n_default' => ASTRO_BE_PREFIX . 'octorate_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'octorate_adults_n_max' => ASTRO_BE_PREFIX . 'octorate_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'octorate_children_enable' => ASTRO_BE_PREFIX . 'octorate_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'octorate_children_n_default' => ASTRO_BE_PREFIX . 'octorate_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'octorate_children_n_max' => ASTRO_BE_PREFIX . 'octorate_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'octorate_childage_enable' => ASTRO_BE_PREFIX . 'octorate_childage_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'octorate_childage_min' => ASTRO_BE_PREFIX . 'octorate_childage_min', //conditional
+				ASTRO_BE_PREFIX . 'octorate_childage_max' => ASTRO_BE_PREFIX . 'octorate_childage_max', //conditional
+				ASTRO_BE_PREFIX . 'octorate_coupon' => ASTRO_BE_PREFIX . 'octorate_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'octorate_submit_label' => ASTRO_BE_PREFIX . 'octorate_submit_label', //optional
+
+				//Octorate custom fields
+				ASTRO_BE_PREFIX . 'octorate_codice' => ASTRO_BE_PREFIX . 'octorate_codice', //required
+				ASTRO_BE_PREFIX . 'octorate_currency' => ASTRO_BE_PREFIX . 'octorate_currency', //required
 
 				/**
 				 * Passepartout
@@ -191,6 +242,51 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'passepartout_Albergo' => ASTRO_BE_PREFIX . 'passepartout_Albergo', //required
 				ASTRO_BE_PREFIX . 'passepartout_OidPortaleXAlbergo' => ASTRO_BE_PREFIX . 'passepartout_OidPortaleXAlbergo', //required
 				ASTRO_BE_PREFIX . 'passepartout_CodicePromozione' => ASTRO_BE_PREFIX . 'passepartout_CodicePromozione',
+
+				/**
+				 * Scidoo
+				 */
+				/**
+				 * RevPlus (WebHotelier)
+				 */
+				ASTRO_BE_PREFIX . 'revplus_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'revplus_form_target' => ASTRO_BE_PREFIX . 'revplus_form_target',
+				ASTRO_BE_PREFIX . 'revplus_adults_enable' => ASTRO_BE_PREFIX . 'revplus_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'revplus_adults_n_default' => ASTRO_BE_PREFIX . 'revplus_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'revplus_adults_n_max' => ASTRO_BE_PREFIX . 'revplus_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'revplus_children_enable' => ASTRO_BE_PREFIX . 'revplus_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'revplus_children_n_default' => ASTRO_BE_PREFIX . 'revplus_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'revplus_children_n_max' => ASTRO_BE_PREFIX . 'revplus_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'revplus_infants_enable' => ASTRO_BE_PREFIX . 'revplus_infants_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'revplus_infants_n_default' => ASTRO_BE_PREFIX . 'revplus_infants_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'revplus_infants_n_max' => ASTRO_BE_PREFIX . 'revplus_infants_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'revplus_coupon' => ASTRO_BE_PREFIX . 'revplus_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'revplus_submit_label' => ASTRO_BE_PREFIX . 'revplus_submit_label', //optional
+
+				//RevPlus custom fields
+				ASTRO_BE_PREFIX . 'revplus_hotel' => ASTRO_BE_PREFIX . 'revplus_hotel', //required
+				ASTRO_BE_PREFIX . 'revplus_htl_code' => ASTRO_BE_PREFIX . 'revplus_htl_code', //optional; empty = all the hotels
+				ASTRO_BE_PREFIX . 'revplus_currency' => ASTRO_BE_PREFIX . 'revplus_currency', //required
+
+				/**
+				 * Scidoo
+				 */
+				ASTRO_BE_PREFIX . 'scidoo_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'scidoo_form_target' => ASTRO_BE_PREFIX . 'scidoo_form_target',
+				ASTRO_BE_PREFIX . 'scidoo_adults_enable' => ASTRO_BE_PREFIX . 'scidoo_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'scidoo_adults_n_default' => ASTRO_BE_PREFIX . 'scidoo_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'scidoo_adults_n_max' => ASTRO_BE_PREFIX . 'scidoo_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'scidoo_children_enable' => ASTRO_BE_PREFIX . 'scidoo_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'scidoo_children_n_default' => ASTRO_BE_PREFIX . 'scidoo_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'scidoo_children_n_max' => ASTRO_BE_PREFIX . 'scidoo_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'scidoo_childage_enable' => ASTRO_BE_PREFIX . 'scidoo_childage_enable', //required when children are enabled
+				ASTRO_BE_PREFIX . 'scidoo_childage_min' => ASTRO_BE_PREFIX . 'scidoo_childage_min', //conditional
+				ASTRO_BE_PREFIX . 'scidoo_childage_max' => ASTRO_BE_PREFIX . 'scidoo_childage_max', //conditional
+				ASTRO_BE_PREFIX . 'scidoo_submit_label' => ASTRO_BE_PREFIX . 'scidoo_submit_label', //optional
+
+				//Scidoo custom fields
+				ASTRO_BE_PREFIX . 'scidoo_cod' => ASTRO_BE_PREFIX . 'scidoo_cod', //required
+				ASTRO_BE_PREFIX . 'scidoo_IDsotto_struttura' => ASTRO_BE_PREFIX . 'scidoo_IDsotto_struttura', //optional; 0 = all
 
 				/**
 				 * Simple booking
@@ -347,6 +443,27 @@ function astro_be_get_option_sanitize_callback( $option_name ) {
 	if ( preg_match( '/_(language|idTrattamento)$/', $name ) ) {
 		return 'astro_be_sanitize_options_list';
 	}
+	if ( preg_match( '/_configuration_id$/', $name ) ) {
+		return 'astro_be_sanitize_uuid';
+	}
+	if ( 'bookingexpert_layout' === $name ) {
+		return 'astro_be_sanitize_bookingexpert_layout';
+	}
+	if ( 'octorate_codice' === $name ) {
+		return 'astro_be_sanitize_octorate_codice';
+	}
+	if ( 'revplus_hotel' === $name ) {
+		return 'astro_be_sanitize_revplus_hotel';
+	}
+	if ( 'revplus_htl_code' === $name ) {
+		return 'astro_be_sanitize_revplus_htl_code';
+	}
+	if ( 'scidoo_cod' === $name ) {
+		return 'astro_be_sanitize_scidoo_cod';
+	}
+	if ( 'scidoo_IDsotto_struttura' === $name ) {
+		return 'astro_be_sanitize_absint_or_empty';
+	}
 
 	return 'sanitize_text_field';
 }
@@ -387,6 +504,88 @@ function astro_be_sanitize_absint_or_empty( $value ) {
 		return '';
 	}
 	return absint( $value );
+}
+
+/**
+ * Identifier in UUID format (Mews configuration ID), part of the form address.
+ * The whole booking engine address can be pasted: only the identifier is kept.
+ */
+function astro_be_sanitize_uuid( $value ) {
+	if ( is_string( $value ) && preg_match( '/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i', $value, $matches ) ) {
+		return strtolower( $matches[0] );
+	}
+	return '';
+}
+
+/**
+ * Octorate property code: a number. The whole booking engine address can be pasted: the
+ * value of its codice parameter is kept.
+ */
+function astro_be_sanitize_octorate_codice( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+	if ( preg_match( '/[?&]codice=(\d+)/', $value, $matches ) ) {
+		return $matches[1];
+	}
+	$value = trim( $value );
+	return preg_match( '/^\d+$/', $value ) ? $value : '';
+}
+
+/**
+ * Scidoo property code: a number. The whole booking engine address can be pasted: the value
+ * of its cod parameter is kept.
+ */
+function astro_be_sanitize_scidoo_cod( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+	if ( preg_match( '/[?&]cod=(\d+)/', $value, $matches ) ) {
+		return $matches[1];
+	}
+	$value = trim( $value );
+	return preg_match( '/^\d+$/', $value ) ? $value : '';
+}
+
+/**
+ * RevPlus property name: the subdomain of reserve-online.net, part of the form address.
+ * The whole booking engine address can be pasted: only the subdomain is kept.
+ */
+function astro_be_sanitize_revplus_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+	$value = strtolower( trim( $value ) );
+	if ( preg_match( '#^(?:https?://)?([a-z0-9-]+)\.reserve-online\.net#', $value, $matches ) ) {
+		return $matches[1];
+	}
+	return preg_match( '/^[a-z0-9-]+$/', $value ) ? $value : '';
+}
+
+/**
+ * RevPlus hotel code of a multi-hotel account: letters, digits, - and _.
+ */
+function astro_be_sanitize_revplus_htl_code( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+	$value = trim( $value );
+	return preg_match( '/^[A-Za-z0-9_-]+$/', $value ) ? $value : '';
+}
+
+/**
+ * Booking Expert layout: a number. The whole booking engine address can be pasted: the value
+ * of its layout parameter is kept.
+ */
+function astro_be_sanitize_bookingexpert_layout( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+	if ( preg_match( '/[?&]layout=(\d+)/', $value, $matches ) ) {
+		return $matches[1];
+	}
+	$value = trim( $value );
+	return preg_match( '/^\d+$/', $value ) ? $value : '';
 }
 
 /**
@@ -708,6 +907,39 @@ function astro_return_begenius_language() {
 	}
 
 	return $lang;
+}
+
+/**
+ * Mews: return the language in the xx-YY format (the WordPress site language, e.g. it-IT).
+ * Mews opens the property default language when the language is not supported.
+ */
+function astro_return_mews_language() {
+	return get_bloginfo( 'language' );
+}
+
+/**
+ * Octorate: return the language, among the ones of the booking engine (English otherwise).
+ */
+function astro_return_octorate_language() {
+
+	$lang = strtoupper( astro_get_post_language() );
+
+	if ( ! in_array( $lang, array( 'IT', 'EN', 'FR', 'ES', 'DE', 'RU', 'PT', 'NL', 'JA', 'EL', 'TR', 'ZH', 'CA', 'RO' ), true ) ) {
+		$lang = 'EN';
+	}
+
+	return $lang;
+}
+
+/**
+ * Scidoo: return the language number of the booking engine (English otherwise).
+ */
+function astro_return_scidoo_language() {
+
+	$languages = array( 'it' => 0, 'en' => 1, 'es' => 2, 'fr' => 3, 'de' => 4, 'ru' => 5 );
+	$lang = astro_return_post_language();
+
+	return isset( $languages[ $lang ] ) ? $languages[ $lang ] : 1;
 }
 
 /**

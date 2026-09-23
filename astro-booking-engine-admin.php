@@ -241,6 +241,21 @@ function astro_be_options() {
         <h1><?php echo esc_html( astro_be_plugin_data('Name') ); ?></h1>
         <?php
 
+        // options.php redirects back with settings-updated=true: the confirmation notice of the
+        // core settings pages is not printed on the plugin pages, so it is added here.
+        // No nonce check: the parameter only decides whether a message is displayed.
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+        if ( isset( $_GET['settings-updated'] ) && 'true' === $_GET['settings-updated'] ) {
+            add_settings_error(
+                ASTRO_BE_PREFIX . 'messages',
+                ASTRO_BE_PREFIX . 'settings_updated',
+                __( 'Settings saved.', 'astro-booking-engine' ),
+                'success'
+            );
+        }
+        settings_errors( ASTRO_BE_PREFIX . 'messages' );
+
+
         // The tab becomes part of an included file path: only the known tabs are accepted.
         $tab = isset( $_GET['tab'] ) ? sanitize_key( wp_unslash( $_GET['tab'] ) ) : '';
         if ( ! in_array( $tab, array( 'settings', 'layout', 'support' ), true ) ) {

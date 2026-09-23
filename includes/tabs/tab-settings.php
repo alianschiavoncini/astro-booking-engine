@@ -64,11 +64,16 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                                                 '5stelle' => '5Stelle',
                                                 'begenius' => 'BeGenius',
                                                 'blastness' => 'Blastness',
+                                                'bookingexpert' => 'Booking Expert',
                                                 'datasistemi' => 'Data Sistemi',
                                                 'ericsoft' => 'Ericsoft',
                                                 'iperbooking' => 'Iperbooking',
+                                                'mews' => 'Mews',
                                                 'myguestcare' => 'MyGuestCare',
+                                                'octorate' => 'Octorate',
                                                 'passepartout' => 'Passepartout',
+                                                'revplus' => 'RevPlus (WebHotelier)',
+                                                'scidoo' => 'Scidoo',
                                                 'simplebooking' => 'Simple booking',
                                                 'verticalbooking' => 'Vertical booking',
                                                 'wubook' => 'WuBook',
@@ -103,6 +108,9 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         //blastness
         include('tab-settings-blastness.php');
 
+        //bookingexpert
+        include('tab-settings-bookingexpert.php');
+
         //datasistemi
         include('tab-settings-datasistemi.php');
 
@@ -112,11 +120,23 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         //iperbooking
         include('tab-settings-iperbooking.php');
 
+        //mews
+        include('tab-settings-mews.php');
+
         //myguestcare
         include('tab-settings-myguestcare.php');
 
+        //octorate
+        include('tab-settings-octorate.php');
+
         //passepartout
         include('tab-settings-passepartout.php');
+
+        //revplus
+        include('tab-settings-revplus.php');
+
+        //scidoo
+        include('tab-settings-scidoo.php');
 
         //simplebooking
         include('tab-settings-simplebooking.php');

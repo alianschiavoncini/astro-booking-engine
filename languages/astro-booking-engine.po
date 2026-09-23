@@ -2,14 +2,14 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Astro Booking Engine 2.1.0\n"
+"Project-Id-Version: Astro Booking Engine 2.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/astro-booking-engine\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-17T07:15:18+00:00\n"
+"POT-Creation-Date: 2026-09-23T09:11:44+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: astro-booking-engine\n"
@@ -90,19 +90,23 @@ msgstr ""
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: astro-booking-engine-common.php:483
+#: astro-booking-engine-admin.php:252
+msgid "Settings saved."
+msgstr ""
+
+#: astro-booking-engine-common.php:682
 msgid "This message is visible only to the site administrator."
 msgstr ""
 
-#: astro-booking-engine-common.php:485
+#: astro-booking-engine-common.php:684
 msgid "No provider has been selected in Astro Booking Engine plugin."
 msgstr ""
 
-#: astro-booking-engine-common.php:487
+#: astro-booking-engine-common.php:686
 msgid "Choose your provider at plugin"
 msgstr ""
 
-#: astro-booking-engine-common.php:489
+#: astro-booking-engine-common.php:688
 msgid "settings page"
 msgstr ""
 
@@ -239,11 +243,16 @@ msgstr ""
 #: includes/tabs/tab-settings-5stelle.php:350
 #: includes/tabs/tab-settings-begenius.php:384
 #: includes/tabs/tab-settings-blastness.php:385
+#: includes/tabs/tab-settings-bookingexpert.php:152
 #: includes/tabs/tab-settings-datasistemi.php:324
 #: includes/tabs/tab-settings-ericsoft.php:383
 #: includes/tabs/tab-settings-iperbooking.php:580
+#: includes/tabs/tab-settings-mews.php:324
 #: includes/tabs/tab-settings-myguestcare.php:355
+#: includes/tabs/tab-settings-octorate.php:415
 #: includes/tabs/tab-settings-passepartout.php:395
+#: includes/tabs/tab-settings-revplus.php:432
+#: includes/tabs/tab-settings-scidoo.php:373
 #: includes/tabs/tab-settings-simplebooking.php:411
 #: includes/tabs/tab-settings-verticalbooking.php:385
 #: includes/tabs/tab-settings-wubook.php:471
@@ -261,11 +270,16 @@ msgstr ""
 #: includes/tabs/tab-settings-5stelle.php:19
 #: includes/tabs/tab-settings-begenius.php:19
 #: includes/tabs/tab-settings-blastness.php:19
+#: includes/tabs/tab-settings-bookingexpert.php:19
 #: includes/tabs/tab-settings-datasistemi.php:19
 #: includes/tabs/tab-settings-ericsoft.php:19
 #: includes/tabs/tab-settings-iperbooking.php:19
+#: includes/tabs/tab-settings-mews.php:19
 #: includes/tabs/tab-settings-myguestcare.php:19
+#: includes/tabs/tab-settings-octorate.php:19
 #: includes/tabs/tab-settings-passepartout.php:19
+#: includes/tabs/tab-settings-revplus.php:19
+#: includes/tabs/tab-settings-scidoo.php:19
 #: includes/tabs/tab-settings-simplebooking.php:19
 #: includes/tabs/tab-settings-verticalbooking.php:19
 #: includes/tabs/tab-settings-wubook.php:19
@@ -279,11 +293,16 @@ msgstr ""
 #: includes/tabs/tab-settings-5stelle.php:43
 #: includes/tabs/tab-settings-begenius.php:44
 #: includes/tabs/tab-settings-blastness.php:77
+#: includes/tabs/tab-settings-bookingexpert.php:75
 #: includes/tabs/tab-settings-datasistemi.php:74
 #: includes/tabs/tab-settings-ericsoft.php:74
 #: includes/tabs/tab-settings-iperbooking.php:43
+#: includes/tabs/tab-settings-mews.php:74
 #: includes/tabs/tab-settings-myguestcare.php:44
+#: includes/tabs/tab-settings-octorate.php:74
 #: includes/tabs/tab-settings-passepartout.php:59
+#: includes/tabs/tab-settings-revplus.php:91
+#: includes/tabs/tab-settings-scidoo.php:61
 #: includes/tabs/tab-settings-simplebooking.php:74
 #: includes/tabs/tab-settings-verticalbooking.php:77
 #: includes/tabs/tab-settings-wubook.php:74
@@ -293,11 +312,16 @@ msgstr ""
 #: includes/tabs/tab-settings-5stelle.php:47
 #: includes/tabs/tab-settings-begenius.php:48
 #: includes/tabs/tab-settings-blastness.php:81
+#: includes/tabs/tab-settings-bookingexpert.php:79
 #: includes/tabs/tab-settings-datasistemi.php:78
 #: includes/tabs/tab-settings-ericsoft.php:78
 #: includes/tabs/tab-settings-iperbooking.php:47
+#: includes/tabs/tab-settings-mews.php:78
 #: includes/tabs/tab-settings-myguestcare.php:48
+#: includes/tabs/tab-settings-octorate.php:78
 #: includes/tabs/tab-settings-passepartout.php:63
+#: includes/tabs/tab-settings-revplus.php:95
+#: includes/tabs/tab-settings-scidoo.php:65
 #: includes/tabs/tab-settings-simplebooking.php:78
 #: includes/tabs/tab-settings-verticalbooking.php:81
 #: includes/tabs/tab-settings-wubook.php:78
@@ -307,11 +331,16 @@ msgstr ""
 #: includes/tabs/tab-settings-5stelle.php:55
 #: includes/tabs/tab-settings-begenius.php:56
 #: includes/tabs/tab-settings-blastness.php:89
+#: includes/tabs/tab-settings-bookingexpert.php:87
 #: includes/tabs/tab-settings-datasistemi.php:86
 #: includes/tabs/tab-settings-ericsoft.php:86
 #: includes/tabs/tab-settings-iperbooking.php:55
+#: includes/tabs/tab-settings-mews.php:86
 #: includes/tabs/tab-settings-myguestcare.php:56
+#: includes/tabs/tab-settings-octorate.php:86
 #: includes/tabs/tab-settings-passepartout.php:71
+#: includes/tabs/tab-settings-revplus.php:103
+#: includes/tabs/tab-settings-scidoo.php:73
 #: includes/tabs/tab-settings-simplebooking.php:86
 #: includes/tabs/tab-settings-verticalbooking.php:89
 #: includes/tabs/tab-settings-wubook.php:86
@@ -321,11 +350,16 @@ msgstr ""
 #: includes/tabs/tab-settings-5stelle.php:56
 #: includes/tabs/tab-settings-begenius.php:57
 #: includes/tabs/tab-settings-blastness.php:90
+#: includes/tabs/tab-settings-bookingexpert.php:88
 #: includes/tabs/tab-settings-datasistemi.php:87
 #: includes/tabs/tab-settings-ericsoft.php:87
 #: includes/tabs/tab-settings-iperbooking.php:56
+#: includes/tabs/tab-settings-mews.php:87
 #: includes/tabs/tab-settings-myguestcare.php:57
+#: includes/tabs/tab-settings-octorate.php:87
 #: includes/tabs/tab-settings-passepartout.php:72
+#: includes/tabs/tab-settings-revplus.php:104
+#: includes/tabs/tab-settings-scidoo.php:74
 #: includes/tabs/tab-settings-simplebooking.php:87
 #: includes/tabs/tab-settings-verticalbooking.php:90
 #: includes/tabs/tab-settings-wubook.php:87
@@ -338,8 +372,12 @@ msgstr ""
 #: includes/tabs/tab-settings-datasistemi.php:115
 #: includes/tabs/tab-settings-ericsoft.php:115
 #: includes/tabs/tab-settings-iperbooking.php:284
+#: includes/tabs/tab-settings-mews.php:115
 #: includes/tabs/tab-settings-myguestcare.php:85
+#: includes/tabs/tab-settings-octorate.php:115
 #: includes/tabs/tab-settings-passepartout.php:99
+#: includes/tabs/tab-settings-revplus.php:132
+#: includes/tabs/tab-settings-scidoo.php:102
 #: includes/tabs/tab-settings-simplebooking.php:115
 #: includes/tabs/tab-settings-verticalbooking.php:118
 #: includes/tabs/tab-settings-wubook.php:115
@@ -349,8 +387,12 @@ msgstr ""
 #: templates/datasistemi.php:69
 #: templates/ericsoft.php:87
 #: templates/iperbooking.php:106
+#: templates/mews.php:73
 #: templates/myguestcare.php:77
+#: templates/octorate.php:70
 #: templates/passepartout.php:80
+#: templates/revplus.php:78
+#: templates/scidoo.php:71
 #: templates/simplebooking.php:72
 #: templates/verticalbooking.php:77
 #: templates/wubook.php:90
@@ -367,6 +409,7 @@ msgstr ""
 #: includes/tabs/tab-settings-blastness.php:121
 #: includes/tabs/tab-settings-blastness.php:209
 #: includes/tabs/tab-settings-blastness.php:297
+#: includes/tabs/tab-settings-bookingexpert.php:126
 #: includes/tabs/tab-settings-datasistemi.php:118
 #: includes/tabs/tab-settings-datasistemi.php:210
 #: includes/tabs/tab-settings-datasistemi.php:298
@@ -377,13 +420,27 @@ msgstr ""
 #: includes/tabs/tab-settings-iperbooking.php:375
 #: includes/tabs/tab-settings-iperbooking.php:463
 #: includes/tabs/tab-settings-iperbooking.php:554
+#: includes/tabs/tab-settings-mews.php:118
+#: includes/tabs/tab-settings-mews.php:210
+#: includes/tabs/tab-settings-mews.php:298
 #: includes/tabs/tab-settings-myguestcare.php:88
 #: includes/tabs/tab-settings-myguestcare.php:179
 #: includes/tabs/tab-settings-myguestcare.php:267
+#: includes/tabs/tab-settings-octorate.php:118
+#: includes/tabs/tab-settings-octorate.php:209
+#: includes/tabs/tab-settings-octorate.php:298
+#: includes/tabs/tab-settings-octorate.php:389
 #: includes/tabs/tab-settings-passepartout.php:102
 #: includes/tabs/tab-settings-passepartout.php:190
 #: includes/tabs/tab-settings-passepartout.php:278
 #: includes/tabs/tab-settings-passepartout.php:370
+#: includes/tabs/tab-settings-revplus.php:135
+#: includes/tabs/tab-settings-revplus.php:227
+#: includes/tabs/tab-settings-revplus.php:316
+#: includes/tabs/tab-settings-revplus.php:404
+#: includes/tabs/tab-settings-scidoo.php:105
+#: includes/tabs/tab-settings-scidoo.php:196
+#: includes/tabs/tab-settings-scidoo.php:285
 #: includes/tabs/tab-settings-simplebooking.php:118
 #: includes/tabs/tab-settings-simplebooking.php:206
 #: includes/tabs/tab-settings-simplebooking.php:294
@@ -408,6 +465,7 @@ msgstr ""
 #: includes/tabs/tab-settings-blastness.php:122
 #: includes/tabs/tab-settings-blastness.php:210
 #: includes/tabs/tab-settings-blastness.php:298
+#: includes/tabs/tab-settings-bookingexpert.php:127
 #: includes/tabs/tab-settings-datasistemi.php:119
 #: includes/tabs/tab-settings-datasistemi.php:211
 #: includes/tabs/tab-settings-datasistemi.php:299
@@ -418,13 +476,27 @@ msgstr ""
 #: includes/tabs/tab-settings-iperbooking.php:376
 #: includes/tabs/tab-settings-iperbooking.php:464
 #: includes/tabs/tab-settings-iperbooking.php:555
+#: includes/tabs/tab-settings-mews.php:119
+#: includes/tabs/tab-settings-mews.php:211
+#: includes/tabs/tab-settings-mews.php:299
 #: includes/tabs/tab-settings-myguestcare.php:89
 #: includes/tabs/tab-settings-myguestcare.php:180
 #: includes/tabs/tab-settings-myguestcare.php:268
+#: includes/tabs/tab-settings-octorate.php:119
+#: includes/tabs/tab-settings-octorate.php:210
+#: includes/tabs/tab-settings-octorate.php:299
+#: includes/tabs/tab-settings-octorate.php:390
 #: includes/tabs/tab-settings-passepartout.php:103
 #: includes/tabs/tab-settings-passepartout.php:191
 #: includes/tabs/tab-settings-passepartout.php:279
 #: includes/tabs/tab-settings-passepartout.php:371
+#: includes/tabs/tab-settings-revplus.php:136
+#: includes/tabs/tab-settings-revplus.php:228
+#: includes/tabs/tab-settings-revplus.php:317
+#: includes/tabs/tab-settings-revplus.php:405
+#: includes/tabs/tab-settings-scidoo.php:106
+#: includes/tabs/tab-settings-scidoo.php:197
+#: includes/tabs/tab-settings-scidoo.php:286
 #: includes/tabs/tab-settings-simplebooking.php:119
 #: includes/tabs/tab-settings-simplebooking.php:207
 #: includes/tabs/tab-settings-simplebooking.php:295
@@ -445,8 +517,12 @@ msgstr ""
 #: includes/tabs/tab-settings-datasistemi.php:140
 #: includes/tabs/tab-settings-ericsoft.php:140
 #: includes/tabs/tab-settings-iperbooking.php:309
+#: includes/tabs/tab-settings-mews.php:140
 #: includes/tabs/tab-settings-myguestcare.php:110
+#: includes/tabs/tab-settings-octorate.php:140
 #: includes/tabs/tab-settings-passepartout.php:124
+#: includes/tabs/tab-settings-revplus.php:157
+#: includes/tabs/tab-settings-scidoo.php:127
 #: includes/tabs/tab-settings-simplebooking.php:140
 #: includes/tabs/tab-settings-verticalbooking.php:143
 #: includes/tabs/tab-settings-wubook.php:140
@@ -459,8 +535,12 @@ msgstr ""
 #: includes/tabs/tab-settings-datasistemi.php:171
 #: includes/tabs/tab-settings-ericsoft.php:171
 #: includes/tabs/tab-settings-iperbooking.php:337
+#: includes/tabs/tab-settings-mews.php:171
 #: includes/tabs/tab-settings-myguestcare.php:141
+#: includes/tabs/tab-settings-octorate.php:171
 #: includes/tabs/tab-settings-passepartout.php:152
+#: includes/tabs/tab-settings-revplus.php:188
+#: includes/tabs/tab-settings-scidoo.php:158
 #: includes/tabs/tab-settings-simplebooking.php:168
 #: includes/tabs/tab-settings-verticalbooking.php:171
 #: includes/tabs/tab-settings-wubook.php:171
@@ -473,8 +553,12 @@ msgstr ""
 #: includes/tabs/tab-settings-datasistemi.php:206
 #: includes/tabs/tab-settings-ericsoft.php:206
 #: includes/tabs/tab-settings-iperbooking.php:372
+#: includes/tabs/tab-settings-mews.php:206
 #: includes/tabs/tab-settings-myguestcare.php:176
+#: includes/tabs/tab-settings-octorate.php:206
 #: includes/tabs/tab-settings-passepartout.php:187
+#: includes/tabs/tab-settings-revplus.php:223
+#: includes/tabs/tab-settings-scidoo.php:193
 #: includes/tabs/tab-settings-simplebooking.php:203
 #: includes/tabs/tab-settings-verticalbooking.php:206
 #: includes/tabs/tab-settings-wubook.php:295
@@ -484,8 +568,12 @@ msgstr ""
 #: templates/datasistemi.php:99
 #: templates/ericsoft.php:112
 #: templates/iperbooking.php:132
+#: templates/mews.php:100
 #: templates/myguestcare.php:107
+#: templates/octorate.php:99
 #: templates/passepartout.php:106
+#: templates/revplus.php:107
+#: templates/scidoo.php:100
 #: templates/simplebooking.php:98
 #: templates/verticalbooking.php:107
 #: templates/wubook.php:140
@@ -498,8 +586,12 @@ msgstr ""
 #: includes/tabs/tab-settings-datasistemi.php:232
 #: includes/tabs/tab-settings-ericsoft.php:232
 #: includes/tabs/tab-settings-iperbooking.php:397
+#: includes/tabs/tab-settings-mews.php:232
 #: includes/tabs/tab-settings-myguestcare.php:201
+#: includes/tabs/tab-settings-octorate.php:231
 #: includes/tabs/tab-settings-passepartout.php:212
+#: includes/tabs/tab-settings-revplus.php:249
+#: includes/tabs/tab-settings-scidoo.php:218
 #: includes/tabs/tab-settings-simplebooking.php:228
 #: includes/tabs/tab-settings-verticalbooking.php:231
 #: includes/tabs/tab-settings-wubook.php:320
@@ -512,8 +604,12 @@ msgstr ""
 #: includes/tabs/tab-settings-datasistemi.php:260
 #: includes/tabs/tab-settings-ericsoft.php:260
 #: includes/tabs/tab-settings-iperbooking.php:425
+#: includes/tabs/tab-settings-mews.php:260
 #: includes/tabs/tab-settings-myguestcare.php:229
+#: includes/tabs/tab-settings-octorate.php:259
 #: includes/tabs/tab-settings-passepartout.php:240
+#: includes/tabs/tab-settings-revplus.php:277
+#: includes/tabs/tab-settings-scidoo.php:246
 #: includes/tabs/tab-settings-simplebooking.php:256
 #: includes/tabs/tab-settings-verticalbooking.php:259
 #: includes/tabs/tab-settings-wubook.php:348
@@ -525,7 +621,9 @@ msgstr ""
 #: includes/tabs/tab-settings-blastness.php:294
 #: includes/tabs/tab-settings-iperbooking.php:460
 #: includes/tabs/tab-settings-myguestcare.php:264
+#: includes/tabs/tab-settings-octorate.php:294
 #: includes/tabs/tab-settings-passepartout.php:275
+#: includes/tabs/tab-settings-scidoo.php:281
 #: includes/tabs/tab-settings-simplebooking.php:291
 #: includes/tabs/tab-settings-verticalbooking.php:294
 msgid "Children age"
@@ -546,13 +644,18 @@ msgstr ""
 #: includes/tabs/tab-settings-5stelle.php:354
 #: includes/tabs/tab-settings-begenius.php:388
 #: includes/tabs/tab-settings-blastness.php:389
+#: includes/tabs/tab-settings-bookingexpert.php:156
 #: includes/tabs/tab-settings-datasistemi.php:328
 #: includes/tabs/tab-settings-ericsoft.php:387
 #: includes/tabs/tab-settings-iperbooking.php:206
 #: includes/tabs/tab-settings-iperbooking.php:260
 #: includes/tabs/tab-settings-iperbooking.php:584
+#: includes/tabs/tab-settings-mews.php:328
 #: includes/tabs/tab-settings-myguestcare.php:359
+#: includes/tabs/tab-settings-octorate.php:419
 #: includes/tabs/tab-settings-passepartout.php:399
+#: includes/tabs/tab-settings-revplus.php:436
+#: includes/tabs/tab-settings-scidoo.php:377
 #: includes/tabs/tab-settings-simplebooking.php:415
 #: includes/tabs/tab-settings-verticalbooking.php:389
 #: includes/tabs/tab-settings-wubook.php:475
@@ -562,11 +665,16 @@ msgstr ""
 #: includes/tabs/tab-settings-5stelle.php:355
 #: includes/tabs/tab-settings-begenius.php:389
 #: includes/tabs/tab-settings-blastness.php:390
+#: includes/tabs/tab-settings-bookingexpert.php:157
 #: includes/tabs/tab-settings-datasistemi.php:329
 #: includes/tabs/tab-settings-ericsoft.php:388
 #: includes/tabs/tab-settings-iperbooking.php:585
+#: includes/tabs/tab-settings-mews.php:329
 #: includes/tabs/tab-settings-myguestcare.php:360
+#: includes/tabs/tab-settings-octorate.php:420
 #: includes/tabs/tab-settings-passepartout.php:400
+#: includes/tabs/tab-settings-revplus.php:437
+#: includes/tabs/tab-settings-scidoo.php:378
 #: includes/tabs/tab-settings-simplebooking.php:416
 #: includes/tabs/tab-settings-verticalbooking.php:390
 #: includes/tabs/tab-settings-wubook.php:476
@@ -576,22 +684,32 @@ msgstr ""
 #: includes/tabs/tab-settings-5stelle.php:358
 #: includes/tabs/tab-settings-begenius.php:392
 #: includes/tabs/tab-settings-blastness.php:393
+#: includes/tabs/tab-settings-bookingexpert.php:160
 #: includes/tabs/tab-settings-datasistemi.php:332
 #: includes/tabs/tab-settings-ericsoft.php:391
 #: includes/tabs/tab-settings-iperbooking.php:588
+#: includes/tabs/tab-settings-mews.php:332
 #: includes/tabs/tab-settings-myguestcare.php:363
+#: includes/tabs/tab-settings-octorate.php:423
 #: includes/tabs/tab-settings-passepartout.php:403
+#: includes/tabs/tab-settings-revplus.php:440
+#: includes/tabs/tab-settings-scidoo.php:381
 #: includes/tabs/tab-settings-simplebooking.php:419
 #: includes/tabs/tab-settings-verticalbooking.php:393
 #: includes/tabs/tab-settings-wubook.php:479
 #: templates/5stelle.php:155
 #: templates/begenius.php:177
 #: templates/blastness.php:170
+#: templates/bookingexpert.php:87
 #: templates/datasistemi.php:148
 #: templates/ericsoft.php:160
 #: templates/iperbooking.php:212
+#: templates/mews.php:146
 #: templates/myguestcare.php:170
+#: templates/octorate.php:180
 #: templates/passepartout.php:187
+#: templates/revplus.php:184
+#: templates/scidoo.php:162
 #: templates/simplebooking.php:182
 #: templates/verticalbooking.php:170
 #: templates/wubook.php:188
@@ -609,6 +727,8 @@ msgstr ""
 #: includes/tabs/tab-settings-begenius.php:289
 #: includes/tabs/tab-settings-blastness.php:319
 #: includes/tabs/tab-settings-myguestcare.php:289
+#: includes/tabs/tab-settings-octorate.php:320
+#: includes/tabs/tab-settings-scidoo.php:307
 #: includes/tabs/tab-settings-simplebooking.php:316
 #: includes/tabs/tab-settings-verticalbooking.php:319
 msgid "Min children age"
@@ -617,14 +737,20 @@ msgstr ""
 #: includes/tabs/tab-settings-begenius.php:320
 #: includes/tabs/tab-settings-blastness.php:350
 #: includes/tabs/tab-settings-myguestcare.php:320
+#: includes/tabs/tab-settings-octorate.php:351
+#: includes/tabs/tab-settings-scidoo.php:338
 #: includes/tabs/tab-settings-simplebooking.php:347
 #: includes/tabs/tab-settings-verticalbooking.php:350
 msgid "Max children age"
 msgstr ""
 
 #: includes/tabs/tab-settings-begenius.php:355
+#: includes/tabs/tab-settings-bookingexpert.php:123
+#: includes/tabs/tab-settings-octorate.php:386
 #: includes/tabs/tab-settings-simplebooking.php:382
 #: templates/begenius.php:160
+#: templates/bookingexpert.php:70
+#: templates/octorate.php:163
 #: templates/simplebooking.php:160
 msgid "Coupon"
 msgstr ""
@@ -644,15 +770,35 @@ msgstr ""
 msgid "id_stile"
 msgstr ""
 
-#: includes/tabs/tab-settings-datasistemi.php:23
-msgid "idstr"
+#: includes/tabs/tab-settings-bookingexpert.php:23
+msgid "layout"
 msgstr ""
 
+#: includes/tabs/tab-settings-bookingexpert.php:24
+msgid "The number after layout= in the booking engine address: https://be.bookingexpert.it/book/home/index?layout=<layout>"
+msgstr ""
+
+#: includes/tabs/tab-settings-bookingexpert.php:41
 #: includes/tabs/tab-settings-datasistemi.php:40
 #: includes/tabs/tab-settings-ericsoft.php:40
+#: includes/tabs/tab-settings-mews.php:40
+#: includes/tabs/tab-settings-octorate.php:40
+#: includes/tabs/tab-settings-revplus.php:57
 #: includes/tabs/tab-settings-simplebooking.php:40
 #: includes/tabs/tab-settings-wubook.php:40
 msgid "Currency"
+msgstr ""
+
+#: includes/tabs/tab-settings-bookingexpert.php:116
+msgid "Guests"
+msgstr ""
+
+#: includes/tabs/tab-settings-bookingexpert.php:117
+msgid "Guests are chosen on the Booking Expert booking engine: their types are numeric codes, different for every property, so the form does not send them."
+msgstr ""
+
+#: includes/tabs/tab-settings-datasistemi.php:23
+msgid "idstr"
 msgstr ""
 
 #: includes/tabs/tab-settings-datasistemi.php:207
@@ -660,7 +806,9 @@ msgid "Children ages cannot be passed to the Data Sistemi booking engine: guests
 msgstr ""
 
 #: includes/tabs/tab-settings-datasistemi.php:295
+#: includes/tabs/tab-settings-mews.php:295
 #: templates/datasistemi.php:129
+#: templates/mews.php:127
 msgid "Promo code"
 msgstr ""
 
@@ -673,15 +821,19 @@ msgid "The age ranges of children and infants depend on the age categories confi
 msgstr ""
 
 #: includes/tabs/tab-settings-ericsoft.php:295
+#: includes/tabs/tab-settings-revplus.php:312
 #: templates/ericsoft.php:137
+#: templates/revplus.php:136
 msgid "Infants"
 msgstr ""
 
 #: includes/tabs/tab-settings-ericsoft.php:320
+#: includes/tabs/tab-settings-revplus.php:338
 msgid "Default Infants"
 msgstr ""
 
 #: includes/tabs/tab-settings-ericsoft.php:348
+#: includes/tabs/tab-settings-revplus.php:366
 msgid "Max Infants"
 msgstr ""
 
@@ -758,8 +910,32 @@ msgstr ""
 msgid "Discount code"
 msgstr ""
 
+#: includes/tabs/tab-settings-mews.php:23
+msgid "Configuration ID"
+msgstr ""
+
+#: includes/tabs/tab-settings-mews.php:24
+msgid "The code at the end of the booking engine address: https://app.mews.com/distributor/<Configuration ID>"
+msgstr ""
+
+#: includes/tabs/tab-settings-mews.php:207
+msgid "Children ages cannot be passed to the Mews booking engine: guests can set them on the booking page."
+msgstr ""
+
 #: includes/tabs/tab-settings-myguestcare.php:23
 msgid "idcliente"
+msgstr ""
+
+#: includes/tabs/tab-settings-octorate.php:23
+msgid "codice"
+msgstr ""
+
+#: includes/tabs/tab-settings-octorate.php:24
+msgid "The number after codice= in the booking engine address: https://book.octorate.com/octobook/site/reservation/index.xhtml?codice=<codice>"
+msgstr ""
+
+#: includes/tabs/tab-settings-octorate.php:295
+msgid "Enable it when the property has children rates by age: Octorate needs the age of each child to show the right rates."
 msgstr ""
 
 #: includes/tabs/tab-settings-passepartout.php:23
@@ -768,6 +944,55 @@ msgstr ""
 
 #: includes/tabs/tab-settings-passepartout.php:39
 msgid "OidPortaleXAlbergo"
+msgstr ""
+
+#: includes/tabs/tab-settings-revplus.php:23
+msgid "Property name"
+msgstr ""
+
+#: includes/tabs/tab-settings-revplus.php:24
+msgid "The name before .reserve-online.net in the booking engine address: https://<Property name>.reserve-online.net/"
+msgstr ""
+
+#: includes/tabs/tab-settings-revplus.php:40
+msgid "property"
+msgstr ""
+
+#: includes/tabs/tab-settings-revplus.php:41
+msgid "Optional: the code of the hotel to open, for accounts with more than one. Empty searches all of them. A wrong code gives a \"page not found\" error."
+msgstr ""
+
+#: includes/tabs/tab-settings-revplus.php:224
+msgid "Enable Children only if your property accepts them: a property for adults only ignores these values, and guests would choose them for nothing. The age ranges are the ones configured in your RevPlus booking engine."
+msgstr ""
+
+#: includes/tabs/tab-settings-revplus.php:313
+msgid "Enable Infants only if your property accepts them: a property for adults only ignores these values, and guests would choose them for nothing. The age ranges are the ones configured in your RevPlus booking engine."
+msgstr ""
+
+#: includes/tabs/tab-settings-revplus.php:401
+#: templates/revplus.php:167
+msgid "Voucher"
+msgstr ""
+
+#: includes/tabs/tab-settings-scidoo.php:23
+msgid "cod"
+msgstr ""
+
+#: includes/tabs/tab-settings-scidoo.php:24
+msgid "The number after cod= in the booking engine address: https://www.scidoo.com/preventivov2/?cod=<cod>"
+msgstr ""
+
+#: includes/tabs/tab-settings-scidoo.php:40
+msgid "IDsotto_struttura"
+msgstr ""
+
+#: includes/tabs/tab-settings-scidoo.php:41
+msgid "Optional: the sub-property to open, for accounts with more than one. Empty or 0 opens all of them."
+msgstr ""
+
+#: includes/tabs/tab-settings-scidoo.php:282
+msgid "Scidoo receives the children as the list of their ages: it must be enabled when Children is enabled."
 msgstr ""
 
 #: includes/tabs/tab-settings-simplebooking.php:23
@@ -888,75 +1113,80 @@ msgstr ""
 msgid "Currently, Astro Booking Engine can be connected to the following booking engine providers (in alphabetic order)."
 msgstr ""
 
-#: includes/tabs/tab-support.php:106
+#: includes/tabs/tab-support.php:111
 msgid "Is your booking engine provider not available in Astro Booking Engine?"
 msgstr ""
 
-#: includes/tabs/tab-support.php:107
-#: includes/tabs/tab-support.php:116
+#: includes/tabs/tab-support.php:112
+#: includes/tabs/tab-support.php:121
 msgid "Write me an email at"
 msgstr ""
 
-#: includes/tabs/tab-support.php:111
+#: includes/tabs/tab-support.php:116
 msgid "FAQs"
 msgstr ""
 
-#: includes/tabs/tab-support.php:112
+#: includes/tabs/tab-support.php:117
 msgid "Do you need support?"
 msgstr ""
 
-#: includes/tabs/tab-support.php:113
+#: includes/tabs/tab-support.php:118
 msgid "Request support at the "
 msgstr ""
 
-#: includes/tabs/tab-support.php:113
+#: includes/tabs/tab-support.php:118
 msgid "plugin support page"
 msgstr ""
 
-#: includes/tabs/tab-support.php:115
+#: includes/tabs/tab-support.php:120
 msgid "Have more questions?"
 msgstr ""
 
-#: includes/tabs/tab-support.php:120
+#: includes/tabs/tab-support.php:125
 msgid "About the author"
 msgstr ""
 
-#: includes/tabs/tab-support.php:122
+#: includes/tabs/tab-support.php:127
 msgid "Creator of Astro Booking Engine and founder of AboutMyHotel."
 msgstr ""
 
-#: includes/tabs/tab-support.php:124
+#: includes/tabs/tab-support.php:129
 msgid "Website:"
 msgstr ""
 
-#: includes/tabs/tab-support.php:125
+#: includes/tabs/tab-support.php:130
 msgid "hotel reputation and market intelligence platform."
 msgstr ""
 
-#: includes/tabs/tab-support.php:126
+#: includes/tabs/tab-support.php:131
 msgid "Bug reports and suggestions:"
 msgstr ""
 
-#: includes/tabs/tab-support.php:128
+#: includes/tabs/tab-support.php:133
 msgid "AboutMyHotel is a separate, commercial service by the same author. It is not required to use this plugin."
 msgstr ""
 
-#: includes/tabs/tab-support.php:132
+#: includes/tabs/tab-support.php:137
 msgid "Plugin data reset"
 msgstr ""
 
-#: includes/tabs/tab-support.php:133
+#: includes/tabs/tab-support.php:138
 msgid "Remove all plugin settings"
 msgstr ""
 
 #: templates/5stelle.php:30
 #: templates/begenius.php:29
 #: templates/blastness.php:37
+#: templates/bookingexpert.php:35
 #: templates/datasistemi.php:29
 #: templates/ericsoft.php:47
 #: templates/iperbooking.php:28
+#: templates/mews.php:33
 #: templates/myguestcare.php:37
+#: templates/octorate.php:32
 #: templates/passepartout.php:40
+#: templates/revplus.php:38
+#: templates/scidoo.php:33
 #: templates/simplebooking.php:30
 #: templates/verticalbooking.php:37
 #: templates/wubook.php:50
@@ -966,11 +1196,16 @@ msgstr ""
 #: templates/5stelle.php:46
 #: templates/begenius.php:44
 #: templates/blastness.php:53
+#: templates/bookingexpert.php:50
 #: templates/datasistemi.php:45
 #: templates/ericsoft.php:63
 #: templates/iperbooking.php:44
+#: templates/mews.php:49
 #: templates/myguestcare.php:53
+#: templates/octorate.php:47
 #: templates/passepartout.php:56
+#: templates/revplus.php:54
+#: templates/scidoo.php:48
 #: templates/simplebooking.php:47
 #: templates/verticalbooking.php:53
 #: templates/wubook.php:66
@@ -982,7 +1217,9 @@ msgstr ""
 #: templates/blastness.php:140
 #: templates/iperbooking.php:161
 #: templates/myguestcare.php:140
+#: templates/octorate.php:131
 #: templates/passepartout.php:135
+#: templates/scidoo.php:132
 #: templates/simplebooking.php:127
 #: templates/verticalbooking.php:140
 msgid "Child Age"

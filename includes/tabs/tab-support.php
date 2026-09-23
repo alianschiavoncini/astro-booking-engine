@@ -93,11 +93,16 @@ do_settings_sections($option_group);
                 <li><a href="https://www.hotelcinquestelle.cloud/en/" target="_blank">5Stelle</a></li>
                 <li><a href="http://www.begenius.it/" target="_blank">BeGenius</a></li>
                 <li><a href="https://www.blastness.com/" target="_blank">Blastness</a></li>
+                <li><a href="https://bookingexpert.com/" target="_blank">Booking Expert</a></li>
                 <li><a href="https://www.datasistemi.eu/" target="_blank">Data Sistemi</a></li>
                 <li><a href="https://www.ericsoft.com/" target="_blank">Ericsoft</a></li>
                 <li><a href="https://www.iperbooking.com/" target="_blank">Iperbooking</a></li>
+                <li><a href="https://www.mews.com/" target="_blank">Mews</a></li>
                 <li><a href="https://www.mycomp.it/" target="_blank">MyGuestCare</a></li>
+                <li><a href="https://www.octorate.com/" target="_blank">Octorate</a></li>
                 <li><a href="https://www.passepartout.net/" target="_blank">Passepartout</a></li>
+                <li><a href="https://www.revplus.com/" target="_blank">RevPlus (WebHotelier)</a></li>
+                <li><a href="https://www.scidoo.com/" target="_blank">Scidoo</a></li>
                 <li><a href="https://www.simplebooking.travel/" target="_blank">Simple Booking</a></li>
                 <li><a href="https://www.verticalbooking.com/en/home/" target="_blank">Vertical Booking</a></li>
                 <li><a href="https://wubook.net/" target="_blank">WuBook</a></li>

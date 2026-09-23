@@ -3,7 +3,7 @@ Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget
 Requires at least: 6.0.1
 Tested up to: 7.1
-Stable tag: 2.1.0
+Stable tag: 2.2.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -43,11 +43,16 @@ Astro Booking Engine is not a booking engine: it needs an active contract with o
     <li><a href="https://www.hotelcinquestelle.cloud/en/">5Stelle</a></li>
     <li><a href="http://www.begenius.it/">BeGenius</a></li>
     <li><a href="https://www.blastness.com/">Blastness</a></li>
+    <li><a href="https://bookingexpert.com/">Booking Expert</a></li>
     <li><a href="https://www.datasistemi.eu/">Data Sistemi</a></li>
     <li><a href="https://www.ericsoft.com/">Ericsoft</a></li>
     <li><a href="https://www.iperbooking.com/">Iperbooking</a></li>
+    <li><a href="https://www.mews.com/">Mews</a></li>
     <li><a href="https://www.mycomp.it/">MyGuestCare</a></li>
+    <li><a href="https://www.octorate.com/">Octorate</a></li>
     <li><a href="https://www.passepartout.net/">Passepartout</a></li>
+    <li><a href="https://www.revplus.com/">RevPlus (WebHotelier)</a></li>
+    <li><a href="https://www.scidoo.com/">Scidoo</a></li>
     <li><a href="https://www.simplebooking.travel/">Simple booking</a></li>
     <li><a href="https://www.verticalbooking.com/en/home/">Vertical booking</a></li>
     <li><a href="https://wubook.net/">WuBook</a></li>
@@ -80,6 +85,15 @@ You can use the <a href="https://wordpress.org/support/plugin/astro-booking-engi
 gsphudo7by90lzwdlihyerqxbzj6jiln
 
 == Changelog ==
+
+= 2.2.0 =
+* Added: Booking Expert provider, with dates and coupon: the guests are chosen on the booking engine, whose guest types are numeric codes different for every property. The layout can also be entered by pasting the whole booking engine address.
+* Added: Mews provider. The Configuration ID can also be entered by pasting the whole booking engine address.
+* Added: Octorate provider. The codice can also be entered by pasting the whole booking engine address.
+* Added: RevPlus (WebHotelier) provider, with adults, children and infants, voucher and optional single hotel of a multi-hotel account. The property name can also be entered by pasting the whole booking engine address.
+* Added: Scidoo provider. The cod can also be entered by pasting the whole booking engine address.
+* Added: the confirmation message "Settings saved." on the plugin settings pages, which were saving without telling it.
+* Compatibility: tested with WordPress 7.1.
 
 = 2.1.0 =
 * Security: the plugin settings are now sanitized when saved and validated again when used, so that a user with access to the settings cannot inject scripts into the site pages through the Layout colors, sizes and custom CSS (relevant on multisite, where site administrators are not allowed to add unfiltered HTML).
@@ -153,6 +167,9 @@ gsphudo7by90lzwdlihyerqxbzj6jiln
 * Initial version.
 
 == Upgrade Notice ==
+
+= 2.2.0 =
+New Booking Expert, Mews, Octorate, RevPlus (WebHotelier) and Scidoo providers. If you are updating from 2.0.0 or earlier it also includes the security fixes released in 2.1.0 (and, from 1.4.0 or earlier, the fix for CVE-2025-10308): updating is recommended.
 
 = 2.1.0 =
 Security release: settings sanitization and escaping hardening, plus the new BeGenius provider and widget and Iperbooking fixes. Updating is recommended. If you are updating from 1.4.0 or earlier it also includes the fix for CVE-2025-10308.
