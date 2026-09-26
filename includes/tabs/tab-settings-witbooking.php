@@ -7,40 +7,23 @@ if( ! is_admin() ) {
 	return;
 }
 
-$provider = 'revplus';
+$provider = 'witbooking';
 ?>
 <!-- <?php echo esc_attr($provider); ?> -->
 <div class="section-wrapper box <?php echo esc_attr($provider); ?>">
     <div class="section-wrapper-inner">
 
-        <h2>RevPlus (WebHotelier)</h2>
+        <h2>Witbooking</h2>
 
         <!-- hotelsettings -->
         <h3 id="hotelsettings"><?php esc_html_e( 'Hotel settings', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 			<?php
 			$field = array(
-				'label' => esc_html__( 'Property name', 'astro-booking-engine' ),
-				'description' => __( 'The name before .reserve-online.net in the booking engine address: https://<Property name>.reserve-online.net/. When the booking engine is on an address of the property, such as book.myhotel.com, that address points to a reserve-online.net one: the property name is the one to enter here.', 'astro-booking-engine' ),
+				'label' => esc_html__( 'Booking engine address', 'astro-booking-engine' ),
+				'description' => __( 'The address of your Witbooking booking engine, as it is: https://engine.witbooking.com/es/hotel/myhotel.com, or the one on your own domain, such as https://reservations.myhotel.com/es/hotel/myhotel. The language of the address is replaced with the one of the page.', 'astro-booking-engine' ),
 				'name' => ASTRO_BE_PREFIX.$provider.'_hotel',
 				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_hotel'),
-				'placeholder' => 'myhotel',
-			);
-			?>
-            <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
-                <td>
-                    <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text" value="<?php echo esc_attr($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" />
-                    <?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php }?>
-                </td>
-            </tr>
-
-			<?php
-			$field = array(
-				'label' => esc_html__( 'property', 'astro-booking-engine' ),
-				'description' => __( 'Optional: the code of the hotel to open, for accounts with more than one. Empty searches all of them. A wrong code gives a "page not found" error.', 'astro-booking-engine' ),
-				'name' => ASTRO_BE_PREFIX.$provider.'_htl_code',
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_htl_code'),
 				'placeholder' => false,
 			);
 			?>
@@ -52,33 +35,26 @@ $provider = 'revplus';
                 </td>
             </tr>
 
+
 			<?php
 			$field = array(
-				'label' => esc_html__( 'Currency', 'astro-booking-engine' ),
-				'description' => false,
-				'name' => ASTRO_BE_PREFIX.$provider.'_currency',
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_currency'),
-				'placeholder' => false
+				'label' => esc_html__( 'Language', 'astro-booking-engine' ),
+				'description' => __( 'Automatic is the right choice when the site has more than one language: the booking engine opens in the language of the page. On a site with one language only, choose a language your property has: when it does not have the one asked for, the booking engine opens in its own.', 'astro-booking-engine' ),
+				'name' => ASTRO_BE_PREFIX.$provider.'_language',
+				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_language'),
+				'placeholder' => false,
 			);
-
-			$arr_currencies = astro_return_currencies();
 			?>
             <tr>
                 <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                 <td>
                     <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
-						<?php
-						foreach ($arr_currencies as $currency) {
-							$selected = '';
-							if ($currency == $field['value']) {
-								$selected = ' selected=selected';
-							}
-							?>
-                            <option value="<?php echo esc_attr($currency); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($currency); ?></option>
-							<?php
-						}
-						?>
+                        <option value=""><?php esc_html_e( 'Automatic: the language of the page', 'astro-booking-engine' ); ?></option>
+						<?php foreach ( astro_be_witbooking_languages() as $astro_be_lang_code => $astro_be_lang_name ) { ?>
+                        <option value="<?php echo esc_attr($astro_be_lang_code); ?>"<?php if ($astro_be_lang_code === $field['value']) { echo ' selected=selected'; } ?>><?php echo esc_html($astro_be_lang_name); ?></option>
+						<?php } ?>
                     </select>
+                    <?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php }?>
                 </td>
             </tr>
 
@@ -221,7 +197,7 @@ $provider = 'revplus';
 
         <!-- children -->
         <h3 id="children"><?php esc_html_e( 'Children', 'astro-booking-engine' ); ?></h3>
-        <p class="description"><?php esc_html_e( 'Enable Children only if your property accepts them: a property for adults only ignores these values, and guests would choose them for nothing. The age ranges are the ones configured in your RevPlus booking engine.', 'astro-booking-engine' ); ?></p>
+        <p class="description"><?php esc_html_e( 'Enable Children only if your property accepts them: the age ranges are the ones configured in your Witbooking booking engine.', 'astro-booking-engine' ); ?></p>
         <table class="form-table">
 			<?php
 			$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
@@ -310,7 +286,7 @@ $provider = 'revplus';
 
         <!-- infants -->
         <h3 id="infants"><?php esc_html_e( 'Infants', 'astro-booking-engine' ); ?></h3>
-        <p class="description"><?php esc_html_e( 'Enable Infants only if your property accepts them: a property for adults only ignores these values, and guests would choose them for nothing. The age ranges are the ones configured in your RevPlus booking engine.', 'astro-booking-engine' ); ?></p>
+        <p class="description"><?php esc_html_e( 'Enable Infants only if your property accepts them: the age ranges are the ones configured in your Witbooking booking engine.', 'astro-booking-engine' ); ?></p>
         <table class="form-table">
 			<?php
 			$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
@@ -397,8 +373,8 @@ $provider = 'revplus';
 
         <hr />
 
-        <!-- voucher -->
-        <h3 id="voucher"><?php esc_html_e( 'Voucher', 'astro-booking-engine' ); ?></h3>
+        <!-- promocode -->
+        <h3 id="promocode"><?php esc_html_e( 'Promo code', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 		<?php
 		$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
@@ -422,7 +398,7 @@ $provider = 'revplus';
         </tr>
 
         </table>
-        <!-- /voucher -->
+        <!-- /promocode -->
 
         <hr />
 

@@ -3,7 +3,7 @@ Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget
 Requires at least: 6.0.1
 Tested up to: 7.1
-Stable tag: 2.2.0
+Stable tag: 2.3.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -40,28 +40,42 @@ Astro Booking Engine is not a booking engine: it needs an active contract with o
 
 <strong>Supported hotel booking engine providers</strong>, in alphabetical order:
 <ul>
-    <li><a href="https://www.hotelcinquestelle.cloud/en/">5Stelle</a></li>
-    <li><a href="http://www.begenius.it/">BeGenius</a></li>
-    <li><a href="https://www.blastness.com/">Blastness</a></li>
-    <li><a href="https://bookingexpert.com/">Booking Expert</a></li>
-    <li><a href="https://www.datasistemi.eu/">Data Sistemi</a></li>
-    <li><a href="https://www.ericsoft.com/">Ericsoft</a></li>
-    <li><a href="https://www.iperbooking.com/">Iperbooking</a></li>
-    <li><a href="https://www.mews.com/">Mews</a></li>
-    <li><a href="https://www.mycomp.it/">MyGuestCare</a></li>
-    <li><a href="https://www.octorate.com/">Octorate</a></li>
-    <li><a href="https://www.passepartout.net/">Passepartout</a></li>
-    <li><a href="https://www.revplus.com/">RevPlus (WebHotelier)</a></li>
-    <li><a href="https://www.scidoo.com/">Scidoo</a></li>
-    <li><a href="https://www.simplebooking.travel/">Simple booking</a></li>
-    <li><a href="https://www.verticalbooking.com/en/home/">Vertical booking</a></li>
-    <li><a href="https://wubook.net/">WuBook</a></li>
+    <li><a href="https://www.hotelcinquestelle.cloud/en/">5Stelle</a> (Italy)</li>
+    <li><a href="https://amadeus-hospitality.com/">Amadeus iHotelier (TravelClick)</a> (Spain)</li>
+    <li><a href="http://www.begenius.it/">BeGenius</a> (Italy)</li>
+    <li><a href="https://www.blastness.com/">Blastness</a> (Italy)</li>
+    <li><a href="https://bookingexpert.com/">Booking Expert</a> (Italy)</li>
+    <li><a href="https://www.cloudbeds.com/">Cloudbeds</a> (United States)</li>
+    <li><a href="https://www.datasistemi.eu/">Data Sistemi</a> (Italy)</li>
+    <li><a href="https://www.d-edge.com/">D-EDGE</a> (France)</li>
+    <li><a href="https://www.ericsoft.com/">Ericsoft</a> (Italy)</li>
+    <li><a href="https://www.guestline.com/">Guestline</a> (United Kingdom)</li>
+    <li><a href="https://hotelnetsolutions.de/en/">HotelNetSolutions (OnePageBooking)</a> (Germany)</li>
+    <li><a href="https://www.iperbooking.com/">Iperbooking</a> (Italy)</li>
+    <li><a href="https://journey.travel/">Journey</a> (United Kingdom)</li>
+    <li><a href="https://www.mews.com/">Mews</a> (Netherlands)</li>
+    <li><a href="https://www.mirai.com/">Mirai</a> (Spain)</li>
+    <li><a href="https://www.mycomp.it/">MyGuestCare</a> (Italy)</li>
+    <li><a href="https://www.octorate.com/">Octorate</a> (Italy)</li>
+    <li><a href="https://www.passepartout.net/">Passepartout</a> (San Marino)</li>
+    <li><a href="https://www.reservit.com/">Reservit</a> (France)</li>
+    <li><a href="https://resnexus.com/">ResNexus</a> (United States)</li>
+    <li><a href="https://www.revplus.com/">RevPlus (WebHotelier)</a> (Greece)</li>
+    <li><a href="https://www.roiback.com/">Roiback</a> (Spain)</li>
+    <li><a href="https://www.sabre.com/products/hospitality/">Sabre SynXis</a> (United States)</li>
+    <li><a href="https://www.scidoo.com/">Scidoo</a> (Italy)</li>
+    <li><a href="https://www.simplebooking.travel/">Simple booking</a> (Italy)</li>
+    <li><a href="https://www.siteminder.com/">SiteMinder</a> (Australia)</li>
+    <li><a href="https://www.thinkreservations.com/">ThinkReservations</a> (United States)</li>
+    <li><a href="https://www.verticalbooking.com/en/home/">Vertical booking</a> (Italy)</li>
+    <li><a href="https://www.witbooking.com/">Witbooking</a> (Spain)</li>
+    <li><a href="https://wubook.net/">WuBook</a> (Italy)</li>
 </ul>
 
 <strong>New booking engine providers are welcome!</strong>
 If your booking engine provider is not on the list, you can request its inclusion by sending an email to <a href="mailto:alian@alian.it">alian@alian.it</a> with any documentation you may have.
 
-This plugin is compatible with translation plugins such as WPML and Loco Translate.
+The plugin interface is translated into Italian, Spanish, French and German. It is also compatible with translation plugins such as WPML and Loco Translate.
 
 <strong>About the author</strong>
 Astro Booking Engine is developed and maintained by Alian Schiavoncini (<a href="https://www.alian.it">www.alian.it</a>), a WordPress developer since 2005 and founder of <a href="https://www.aboutmyhotel.com">AboutMyHotel</a>, a hotel reputation and market intelligence platform. AboutMyHotel is a separate, commercial service by the same author and is not required to use this plugin.
@@ -85,6 +99,26 @@ You can use the <a href="https://wordpress.org/support/plugin/astro-booking-engi
 gsphudo7by90lzwdlihyerqxbzj6jiln
 
 == Changelog ==
+
+= 2.3.0 =
+* Added: ResNexus provider, with adults, children and pets: the numbers of the capacity slots the property uses for the children and for the pets are settings. The property code can also be entered by pasting the whole booking engine address.
+* Added: ThinkReservations provider, with adults and promo code: the children are set on the booking engine, which splits them into age categories configured for every property. The property name can also be entered by pasting the whole booking engine address.
+* Added: Amadeus iHotelier (TravelClick) provider, with adults, children, discount code, currency and the choice of the language of the booking engine. The property code can also be entered by pasting the whole booking engine address.
+* Added: Cloudbeds provider, with adults, children, promo code, currency and the choice of the language of the booking engine. The booking engine address is entered as it is, also the regional one.
+* Added: D-EDGE provider, with adults, children and their ages and promotional code. Both generations of the booking engine are supported, told apart by the address, which is entered as it is.
+* Added: Guestline provider. The site and property codes can also be entered by pasting the whole booking engine address, including the old one.
+* Added: HotelNetSolutions (OnePageBooking) provider, with adults, children and their ages and booking code. The booking engine address is entered as it is.
+* Added: Journey provider. The property name can also be entered by pasting the whole booking engine address.
+* Added: Mirai provider, with adults, children and their ages, promotional code and the currency.
+* Added: Reservit provider, with adults, children and their ages and discount code. The two codes of the property can also be entered by pasting the whole booking engine address.
+* Added: Roiback provider, with adults, children and their ages and promotional code.
+* Added: Sabre SynXis provider, with the children ages. The hotel and chain codes can also be entered by pasting the whole booking engine address.
+* Added: SiteMinder provider, with adults, children and infants and promo code. The property name can also be entered by pasting the whole booking engine address.
+* Added: Witbooking provider, with adults, children and infants, promo code and the choice of the language of the booking engine. The booking engine address is entered as it is, also when it is on the domain of the property.
+* Added: Spanish, French and German translations, complete for the admin screens and the block editor panel.
+* Changed: the providers list of the plugin support page is now a table with the country of each company, and the providers list of this page shows the country next to each name.
+* Fixed: a double horizontal line between the last two sections of the RevPlus (WebHotelier) provider settings.
+* Compatibility: tested with WordPress 7.1.
 
 = 2.2.0 =
 * Added: Booking Expert provider, with dates and coupon: the guests are chosen on the booking engine, whose guest types are numeric codes different for every property. The layout can also be entered by pasting the whole booking engine address.
@@ -167,6 +201,9 @@ gsphudo7by90lzwdlihyerqxbzj6jiln
 * Initial version.
 
 == Upgrade Notice ==
+
+= 2.3.0 =
+Fourteen new booking engine providers and Spanish, French and German translations. Updating from 2.0.0 or earlier also brings the 2.1.0 security fixes (and, from 1.4.0 or earlier, the CVE-2025-10308 fix): recommended.
 
 = 2.2.0 =
 New Booking Expert, Mews, Octorate, RevPlus (WebHotelier) and Scidoo providers. If you are updating from 2.0.0 or earlier it also includes the security fixes released in 2.1.0 (and, from 1.4.0 or earlier, the fix for CVE-2025-10308): updating is recommended.

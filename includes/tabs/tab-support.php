@@ -89,24 +89,58 @@ do_settings_sections($option_group);
 
             <h3 id="support-providers-list" class="title"><?php esc_html_e( 'Providers list', 'astro-booking-engine' ); ?></h3>
             <p><?php esc_html_e( 'Currently, Astro Booking Engine can be connected to the following booking engine providers (in alphabetic order).', 'astro-booking-engine' ); ?></p>
-            <ul>
-                <li><a href="https://www.hotelcinquestelle.cloud/en/" target="_blank">5Stelle</a></li>
-                <li><a href="http://www.begenius.it/" target="_blank">BeGenius</a></li>
-                <li><a href="https://www.blastness.com/" target="_blank">Blastness</a></li>
-                <li><a href="https://bookingexpert.com/" target="_blank">Booking Expert</a></li>
-                <li><a href="https://www.datasistemi.eu/" target="_blank">Data Sistemi</a></li>
-                <li><a href="https://www.ericsoft.com/" target="_blank">Ericsoft</a></li>
-                <li><a href="https://www.iperbooking.com/" target="_blank">Iperbooking</a></li>
-                <li><a href="https://www.mews.com/" target="_blank">Mews</a></li>
-                <li><a href="https://www.mycomp.it/" target="_blank">MyGuestCare</a></li>
-                <li><a href="https://www.octorate.com/" target="_blank">Octorate</a></li>
-                <li><a href="https://www.passepartout.net/" target="_blank">Passepartout</a></li>
-                <li><a href="https://www.revplus.com/" target="_blank">RevPlus (WebHotelier)</a></li>
-                <li><a href="https://www.scidoo.com/" target="_blank">Scidoo</a></li>
-                <li><a href="https://www.simplebooking.travel/" target="_blank">Simple Booking</a></li>
-                <li><a href="https://www.verticalbooking.com/en/home/" target="_blank">Vertical Booking</a></li>
-                <li><a href="https://wubook.net/" target="_blank">WuBook</a></li>
-            </ul>
+            <?php
+			// Provider, sito dell'azienda e paese della sua sede: una riga per provider,
+			// in ordine alfabetico. Il paese passa da __() perche' la tabella e' tradotta.
+			$astro_be_providers = array(
+				array( 'name' => '5Stelle', 'url' => 'https://www.hotelcinquestelle.cloud/en/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'Amadeus iHotelier (TravelClick)', 'url' => 'https://amadeus-hospitality.com/', 'country' => __( 'Spain', 'astro-booking-engine' ) ),
+				array( 'name' => 'BeGenius', 'url' => 'http://www.begenius.it/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'Blastness', 'url' => 'https://www.blastness.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'Booking Expert', 'url' => 'https://bookingexpert.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'Cloudbeds', 'url' => 'https://www.cloudbeds.com/', 'country' => __( 'United States', 'astro-booking-engine' ) ),
+				array( 'name' => 'Data Sistemi', 'url' => 'https://www.datasistemi.eu/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'D-EDGE', 'url' => 'https://www.d-edge.com/', 'country' => __( 'France', 'astro-booking-engine' ) ),
+				array( 'name' => 'Ericsoft', 'url' => 'https://www.ericsoft.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'Guestline', 'url' => 'https://www.guestline.com/', 'country' => __( 'United Kingdom', 'astro-booking-engine' ) ),
+				array( 'name' => 'HotelNetSolutions (OnePageBooking)', 'url' => 'https://hotelnetsolutions.de/en/', 'country' => __( 'Germany', 'astro-booking-engine' ) ),
+				array( 'name' => 'Iperbooking', 'url' => 'https://www.iperbooking.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'Journey', 'url' => 'https://journey.travel/', 'country' => __( 'United Kingdom', 'astro-booking-engine' ) ),
+				array( 'name' => 'Mews', 'url' => 'https://www.mews.com/', 'country' => __( 'Netherlands', 'astro-booking-engine' ) ),
+				array( 'name' => 'Mirai', 'url' => 'https://www.mirai.com/', 'country' => __( 'Spain', 'astro-booking-engine' ) ),
+				array( 'name' => 'MyGuestCare', 'url' => 'https://www.mycomp.it/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'Octorate', 'url' => 'https://www.octorate.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'Passepartout', 'url' => 'https://www.passepartout.net/', 'country' => __( 'San Marino', 'astro-booking-engine' ) ),
+				array( 'name' => 'Reservit', 'url' => 'https://www.reservit.com/', 'country' => __( 'France', 'astro-booking-engine' ) ),
+				array( 'name' => 'ResNexus', 'url' => 'https://resnexus.com/', 'country' => __( 'United States', 'astro-booking-engine' ) ),
+				array( 'name' => 'RevPlus (WebHotelier)', 'url' => 'https://www.revplus.com/', 'country' => __( 'Greece', 'astro-booking-engine' ) ),
+				array( 'name' => 'Roiback', 'url' => 'https://www.roiback.com/', 'country' => __( 'Spain', 'astro-booking-engine' ) ),
+				array( 'name' => 'Sabre SynXis', 'url' => 'https://www.sabre.com/products/hospitality/', 'country' => __( 'United States', 'astro-booking-engine' ) ),
+				array( 'name' => 'Scidoo', 'url' => 'https://www.scidoo.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'Simple booking', 'url' => 'https://www.simplebooking.travel/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'SiteMinder', 'url' => 'https://www.siteminder.com/', 'country' => __( 'Australia', 'astro-booking-engine' ) ),
+				array( 'name' => 'ThinkReservations', 'url' => 'https://www.thinkreservations.com/', 'country' => __( 'United States', 'astro-booking-engine' ) ),
+				array( 'name' => 'Vertical booking', 'url' => 'https://www.verticalbooking.com/en/home/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'Witbooking', 'url' => 'https://www.witbooking.com/', 'country' => __( 'Spain', 'astro-booking-engine' ) ),
+				array( 'name' => 'WuBook', 'url' => 'https://wubook.net/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+			);
+			?>
+            <table class="widefat striped astro_be_providers_table">
+                <thead>
+                    <tr>
+                        <th scope="col"><?php esc_html_e( 'Provider', 'astro-booking-engine' ); ?></th>
+                        <th scope="col"><?php esc_html_e( 'Country of the company', 'astro-booking-engine' ); ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+					<?php foreach ( $astro_be_providers as $astro_be_provider_row ) { ?>
+                    <tr>
+                        <td><a href="<?php echo esc_url( $astro_be_provider_row['url'] ); ?>" target="_blank"><?php echo esc_html( $astro_be_provider_row['name'] ); ?></a></td>
+                        <td><?php echo esc_html( $astro_be_provider_row['country'] ); ?></td>
+                    </tr>
+					<?php } ?>
+                </tbody>
+            </table>
 
             <p><?php esc_html_e( 'Is your booking engine provider not available in Astro Booking Engine?', 'astro-booking-engine' ); ?><br>
 				<?php esc_html_e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:alian@alian.it">alian@alian.it</a>.</p>

@@ -67,3 +67,14 @@ th .description {
     display: inline-block;
     min-width: 70px;
 }
+
+/* Providers table of the support page: as wide as its content, not the whole screen */
+.astro_be_providers_table {
+    width: auto;
+    max-width: 520px;
+}
+
+.astro_be_providers_table th,
+.astro_be_providers_table td {
+    padding-right: 2em;
+}

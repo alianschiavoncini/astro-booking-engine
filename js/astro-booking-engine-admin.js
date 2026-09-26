@@ -333,6 +333,382 @@ jQuery( document ).ready(function( $ ) {
 
         }
 
+        //reservit
+        if($('.box.reservit').css('display') == 'block') {
+
+            var astro_be_reservit_hotel = $.trim($('#astro_be_reservit_hotel').val());
+            if (astro_be_reservit_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!/\/booking\/\d+\/\d+/.test(astro_be_reservit_hotel) && !/[?&](id|custid)=\d+/.test(astro_be_reservit_hotel) && !/^\d+\/\d+$/.test(astro_be_reservit_hotel)) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, such as https://secure.reservit.com/fo/booking/12345/67890/dates\n';
+            }
+
+            //Reservit sends the children as their ages: without them they are not sent at all
+            if ($('#astro_be_reservit_children_enable').is(':checked') && !$("#astro_be_reservit_childage_enable").is(":checked")) {
+                $error_msg += '- children age: it must be enabled when children are enabled.\n';
+            }
+
+            if ($('#astro_be_reservit_childage_enable').is(':checked')) {
+
+                var astro_be_reservit_childage_min = $('#astro_be_reservit_childage_min').length;
+                var astro_be_reservit_childage_max = $('#astro_be_reservit_childage_max').length;
+
+                if (astro_be_reservit_childage_min && astro_be_reservit_childage_max) {
+                    var astro_be_reservit_childage_min_value = parseInt( $("#astro_be_reservit_childage_min option:selected").val() );
+                    var astro_be_reservit_childage_max_value = parseInt( $("#astro_be_reservit_childage_max option:selected").val() );
+
+                    if (astro_be_reservit_childage_min_value > astro_be_reservit_childage_max_value) {
+                        $error_msg += '- children age: min child age value is greater than max value.\n';
+                    }
+                }
+
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Reservit fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //hotelnetsolutions
+        if($('.box.hotelnetsolutions').css('display') == 'block') {
+
+            var astro_be_hns_hotel = $.trim($('#astro_be_hotelnetsolutions_hotel').val());
+            if (astro_be_hns_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!/^(https?:\/\/)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\/[A-Za-z0-9._-]+/.test(astro_be_hns_hotel)) {
+                $error_msg += '- Booking engine address: enter the address of your booking engine, such as https://onepagebooking.com/myhotel\n';
+            }
+
+            if ($('#astro_be_hotelnetsolutions_childage_enable').is(':checked')) {
+
+                var astro_be_hns_childage_min = $('#astro_be_hotelnetsolutions_childage_min').length;
+                var astro_be_hns_childage_max = $('#astro_be_hotelnetsolutions_childage_max').length;
+
+                if (astro_be_hns_childage_min && astro_be_hns_childage_max) {
+                    var astro_be_hns_childage_min_value = parseInt( $("#astro_be_hotelnetsolutions_childage_min option:selected").val() );
+                    var astro_be_hns_childage_max_value = parseInt( $("#astro_be_hotelnetsolutions_childage_max option:selected").val() );
+
+                    if (astro_be_hns_childage_min_value > astro_be_hns_childage_max_value) {
+                        $error_msg += '- children age: min child age value is greater than max value.\n';
+                    }
+                }
+
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'HotelNetSolutions fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //resnexus
+        if($('.box.resnexus').css('display') == 'block') {
+
+            var astro_be_resnexus_hotel = $.trim($('#astro_be_resnexus_hotel').val());
+            if (astro_be_resnexus_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!/\/book\/[A-Fa-f0-9-]{8,}/i.test(astro_be_resnexus_hotel) && !/[?&]uid=[A-Fa-f0-9-]{8,}/i.test(astro_be_resnexus_hotel) && !/^[A-Fa-f0-9-]{8,}$/.test(astro_be_resnexus_hotel)) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, such as https://resnexus.com/resnexus/reservations/book/ABCDEF12-3456-7890-ABCD-EF1234567890\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'ResNexus fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //thinkreservations
+        if($('.box.thinkreservations').css('display') == 'block') {
+
+            var astro_be_tr_hotel = $.trim($('#astro_be_thinkreservations_hotel').val());
+            if (astro_be_tr_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!/secure\.thinkreservations\.com\/[A-Za-z0-9._-]+/i.test(astro_be_tr_hotel) && !/^[A-Za-z0-9._-]+$/.test(astro_be_tr_hotel)) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, such as https://secure.thinkreservations.com/myproperty/reservations\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'ThinkReservations fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //ihotelier
+        if($('.box.ihotelier').css('display') == 'block') {
+
+            var astro_be_ihotelier_hotel = $.trim($('#astro_be_ihotelier_hotel').val());
+            if (astro_be_ihotelier_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!/travelclick\.com\/\d+/i.test(astro_be_ihotelier_hotel) && !/[?&]hotelid=\d+/i.test(astro_be_ihotelier_hotel) && !/^\d+$/.test(astro_be_ihotelier_hotel)) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, such as https://reservations.travelclick.com/12345\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Amadeus iHotelier fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //cloudbeds
+        if($('.box.cloudbeds').css('display') == 'block') {
+
+            var astro_be_cloudbeds_hotel = $.trim($('#astro_be_cloudbeds_hotel').val());
+            if (astro_be_cloudbeds_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!/[a-z0-9.-]+\.cloudbeds\.com\/([a-z]{2}\/)?reservation\/[A-Za-z0-9_-]+/i.test(astro_be_cloudbeds_hotel)) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, such as https://hotels.cloudbeds.com/en/reservation/AbCdEf\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Cloudbeds fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //dedge
+        if($('.box.dedge').css('display') == 'block') {
+
+            var astro_be_dedge_hotel = $.trim($('#astro_be_dedge_hotel').val());
+            if (astro_be_dedge_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!/\/d-edge\/.+\/[a-z]{2}(-[A-Za-z]+)?(-[A-Z]{2})?(\/|$)/.test(astro_be_dedge_hotel) && !/[?&]property=[A-Za-z0-9._-]+/.test(astro_be_dedge_hotel)) {
+                $error_msg += '- Booking engine address: enter the address of your booking engine, such as https://www.secure-hotel-booking.com/d-edge/My-Hotel/ABCD/12345/en-US/DateSelection or https://www.book-secure.com/index.php?s=results&property=abcd12345\n';
+            }
+
+            if ($('#astro_be_dedge_childage_enable').is(':checked')) {
+
+                var astro_be_dedge_childage_min = $('#astro_be_dedge_childage_min').length;
+                var astro_be_dedge_childage_max = $('#astro_be_dedge_childage_max').length;
+
+                if (astro_be_dedge_childage_min && astro_be_dedge_childage_max) {
+                    var astro_be_dedge_childage_min_value = parseInt( $("#astro_be_dedge_childage_min option:selected").val() );
+                    var astro_be_dedge_childage_max_value = parseInt( $("#astro_be_dedge_childage_max option:selected").val() );
+
+                    if (astro_be_dedge_childage_min_value > astro_be_dedge_childage_max_value) {
+                        $error_msg += '- children age: min child age value is greater than max value.\n';
+                    }
+                }
+
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'D-EDGE fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //roiback
+        if($('.box.roiback').css('display') == 'block') {
+
+            var astro_be_roiback_hotel = $.trim($('#astro_be_roiback_hotel').val());
+            if (astro_be_roiback_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!/^(https?:\/\/)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/.test(astro_be_roiback_hotel)) {
+                $error_msg += '- Booking engine address: enter the address of your booking engine, such as https://reservas.myhotel.com\n';
+            }
+
+            var astro_be_roiback_code = $.trim($('#astro_be_roiback_code').val());
+            if (astro_be_roiback_code == '') {
+                $error_msg += '- Hotel code: the field is required.\n';
+            } else if (!/^(hotel_)?[A-Za-z0-9._-]+$/.test(astro_be_roiback_code)) {
+                $error_msg += '- Hotel code: only letters, numbers, dots, hyphens and underscores are allowed.\n';
+            }
+
+            if ($('#astro_be_roiback_childage_enable').is(':checked')) {
+
+                var astro_be_roiback_childage_min = $('#astro_be_roiback_childage_min').length;
+                var astro_be_roiback_childage_max = $('#astro_be_roiback_childage_max').length;
+
+                if (astro_be_roiback_childage_min && astro_be_roiback_childage_max) {
+                    var astro_be_roiback_childage_min_value = parseInt( $("#astro_be_roiback_childage_min option:selected").val() );
+                    var astro_be_roiback_childage_max_value = parseInt( $("#astro_be_roiback_childage_max option:selected").val() );
+
+                    if (astro_be_roiback_childage_min_value > astro_be_roiback_childage_max_value) {
+                        $error_msg += '- children age: min child age value is greater than max value.\n';
+                    }
+                }
+
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Roiback fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //mirai
+        if($('.box.mirai').css('display') == 'block') {
+
+            var astro_be_mirai_hotel = $.trim($('#astro_be_mirai_hotel').val());
+            if (astro_be_mirai_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!/reservation\.mirai\.com\/[A-Za-z0-9_-]+\/.*idtokenprovider=\d+/i.test(astro_be_mirai_hotel) && !/^[A-Za-z0-9_-]+\/\d+$/.test(astro_be_mirai_hotel)) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, the one with idtokenprovider.\n';
+            }
+
+            //Mirai sends the children as their ages
+            if ($('#astro_be_mirai_children_enable').is(':checked') && !$("#astro_be_mirai_childage_enable").is(":checked")) {
+                $error_msg += '- children age: it must be enabled when children are enabled.\n';
+            }
+
+            if ($('#astro_be_mirai_childage_enable').is(':checked')) {
+
+                var astro_be_mirai_childage_min = $('#astro_be_mirai_childage_min').length;
+                var astro_be_mirai_childage_max = $('#astro_be_mirai_childage_max').length;
+
+                if (astro_be_mirai_childage_min && astro_be_mirai_childage_max) {
+                    var astro_be_mirai_childage_min_value = parseInt( $("#astro_be_mirai_childage_min option:selected").val() );
+                    var astro_be_mirai_childage_max_value = parseInt( $("#astro_be_mirai_childage_max option:selected").val() );
+
+                    if (astro_be_mirai_childage_min_value > astro_be_mirai_childage_max_value) {
+                        $error_msg += '- children age: min child age value is greater than max value.\n';
+                    }
+                }
+
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Mirai fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //witbooking
+        if($('.box.witbooking').css('display') == 'block') {
+
+            var astro_be_witbooking_hotel = $.trim($('#astro_be_witbooking_hotel').val());
+            if (astro_be_witbooking_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!/^(https?:\/\/)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\/(([a-z]{2}\/)?hotel\/)?[A-Za-z0-9._-]+/.test(astro_be_witbooking_hotel)) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, such as https://engine.witbooking.com/es/hotel/myhotel.com\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Witbooking fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //journey
+        if($('.box.journey').css('display') == 'block') {
+
+            var astro_be_journey_hotel = $.trim($('#astro_be_journey_hotel').val());
+            if (astro_be_journey_hotel == '') {
+                $error_msg += '- Property name: the field is required.\n';
+            } else if (!/^[a-zA-Z0-9-]+$/.test(astro_be_journey_hotel) && !/^(https?:\/\/)?[a-zA-Z0-9-]+\.onejourney\.travel/.test(astro_be_journey_hotel)) {
+                $error_msg += '- Property name: enter the name before .onejourney.travel in the booking engine address.\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Journey fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //guestline
+        if($('.box.guestline').css('display') == 'block') {
+
+            var astro_be_guestline_site = $.trim($('#astro_be_guestline_site').val());
+            if (astro_be_guestline_site == '') {
+                $error_msg += '- Site code: the field is required.\n';
+            } else if (!/^[a-zA-Z0-9-]+$/.test(astro_be_guestline_site) && !/guestline\.(app|net)/i.test(astro_be_guestline_site)) {
+                $error_msg += '- Site code: enter the code before /availability in the booking engine address.\n';
+            }
+
+            var astro_be_guestline_hotel = $.trim($('#astro_be_guestline_hotel').val());
+            if (astro_be_guestline_hotel == '') {
+                $error_msg += '- hotel: the field is required.\n';
+            } else if (!/^[a-zA-Z0-9-]+$/.test(astro_be_guestline_hotel) && !/[?&]hotel=[a-zA-Z0-9-]+/i.test(astro_be_guestline_hotel)) {
+                $error_msg += '- hotel: enter the code after hotel= in the booking engine address.\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Guestline fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //siteminder
+        if($('.box.siteminder').css('display') == 'block') {
+
+            var astro_be_siteminder_hotel = $.trim($('#astro_be_siteminder_hotel').val());
+            if (astro_be_siteminder_hotel == '') {
+                $error_msg += '- Property name: the field is required.\n';
+            } else if (!/^[a-zA-Z0-9-]+$/.test(astro_be_siteminder_hotel) && !/\/properties\/[a-zA-Z0-9-]+/.test(astro_be_siteminder_hotel)) {
+                $error_msg += '- Property name: enter the last part of the booking engine address, after /properties/.\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'SiteMinder fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //synxis
+        if($('.box.synxis').css('display') == 'block') {
+
+            var astro_be_synxis_codes = [['hotel', 'astro_be_synxis_hotel'], ['chain', 'astro_be_synxis_chain']];
+            for (var s = 0; s < astro_be_synxis_codes.length; s++) {
+                var astro_be_synxis_label = astro_be_synxis_codes[s][0];
+                var astro_be_synxis_value = $.trim($('#' + astro_be_synxis_codes[s][1]).val());
+                if (astro_be_synxis_value == '') {
+                    $error_msg += '- ' + astro_be_synxis_label + ': the field is required.\n';
+                } else if (!/^\d+$/.test(astro_be_synxis_value) && !(new RegExp('[?&]' + astro_be_synxis_label + '=\\d+', 'i')).test(astro_be_synxis_value)) {
+                    $error_msg += '- ' + astro_be_synxis_label + ': enter the number after ' + astro_be_synxis_label + '= in the booking engine address.\n';
+                }
+            }
+
+            if ($('#astro_be_synxis_childage_enable').is(':checked')) {
+
+                var astro_be_synxis_childage_min = $('#astro_be_synxis_childage_min').length;
+                var astro_be_synxis_childage_max = $('#astro_be_synxis_childage_max').length;
+
+                if (astro_be_synxis_childage_min && astro_be_synxis_childage_max) {
+                    var astro_be_synxis_childage_min_value = parseInt( $("#astro_be_synxis_childage_min option:selected").val() );
+                    var astro_be_synxis_childage_max_value = parseInt( $("#astro_be_synxis_childage_max option:selected").val() );
+
+                    if (astro_be_synxis_childage_min_value > astro_be_synxis_childage_max_value) {
+                        $error_msg += '- children age: min child age value is greater than max value.\n';
+                    }
+                }
+
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Sabre SynXis fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
         //scidoo
         if($('.box.scidoo').css('display') == 'block') {
 

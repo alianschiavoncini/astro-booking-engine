@@ -62,20 +62,34 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                                 $options = array(
                                                 '' => '---',
                                                 '5stelle' => '5Stelle',
+                                                'ihotelier' => 'Amadeus iHotelier (TravelClick)',
                                                 'begenius' => 'BeGenius',
                                                 'blastness' => 'Blastness',
                                                 'bookingexpert' => 'Booking Expert',
+                                                'cloudbeds' => 'Cloudbeds',
                                                 'datasistemi' => 'Data Sistemi',
+                                                'dedge' => 'D-EDGE',
                                                 'ericsoft' => 'Ericsoft',
+                                                'guestline' => 'Guestline',
+                                                'hotelnetsolutions' => 'HotelNetSolutions (OnePageBooking)',
                                                 'iperbooking' => 'Iperbooking',
+                                                'journey' => 'Journey',
                                                 'mews' => 'Mews',
+                                                'mirai' => 'Mirai',
                                                 'myguestcare' => 'MyGuestCare',
                                                 'octorate' => 'Octorate',
                                                 'passepartout' => 'Passepartout',
+                                                'reservit' => 'Reservit',
+                                                'resnexus' => 'ResNexus',
                                                 'revplus' => 'RevPlus (WebHotelier)',
+                                                'roiback' => 'Roiback',
+                                                'synxis' => 'Sabre SynXis',
                                                 'scidoo' => 'Scidoo',
                                                 'simplebooking' => 'Simple booking',
+                                                'siteminder' => 'SiteMinder',
+                                                'thinkreservations' => 'ThinkReservations',
                                                 'verticalbooking' => 'Vertical booking',
+                                                'witbooking' => 'Witbooking',
                                                 'wubook' => 'WuBook',
                                                 );
                                 foreach ($options as $k => $v) {
@@ -102,6 +116,9 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         //5stelle
         include('tab-settings-5stelle.php');
 
+        //ihotelier
+        include('tab-settings-ihotelier.php');
+
         //begenius
         include('tab-settings-begenius.php');
 
@@ -111,17 +128,35 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         //bookingexpert
         include('tab-settings-bookingexpert.php');
 
+        //cloudbeds
+        include('tab-settings-cloudbeds.php');
+
         //datasistemi
         include('tab-settings-datasistemi.php');
+
+        //dedge
+        include('tab-settings-dedge.php');
 
         //ericsoft
         include('tab-settings-ericsoft.php');
 
+        //guestline
+        include('tab-settings-guestline.php');
+
+        //hotelnetsolutions
+        include('tab-settings-hotelnetsolutions.php');
+
         //iperbooking
         include('tab-settings-iperbooking.php');
 
+        //journey
+        include('tab-settings-journey.php');
+
         //mews
         include('tab-settings-mews.php');
+
+        //mirai
+        include('tab-settings-mirai.php');
 
         //myguestcare
         include('tab-settings-myguestcare.php');
@@ -132,8 +167,20 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         //passepartout
         include('tab-settings-passepartout.php');
 
+        //reservit
+        include('tab-settings-reservit.php');
+
+        //resnexus
+        include('tab-settings-resnexus.php');
+
         //revplus
         include('tab-settings-revplus.php');
+
+        //roiback
+        include('tab-settings-roiback.php');
+
+        //synxis
+        include('tab-settings-synxis.php');
 
         //scidoo
         include('tab-settings-scidoo.php');
@@ -141,11 +188,21 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         //simplebooking
         include('tab-settings-simplebooking.php');
 
+        //siteminder
+        include('tab-settings-siteminder.php');
+
+        //thinkreservations
+        include('tab-settings-thinkreservations.php');
+
         //verticalbooking
         include('tab-settings-verticalbooking.php');
 
+        //witbooking
+        include('tab-settings-witbooking.php');
+
         //wubook
         include('tab-settings-wubook.php');
+
         ?>
 
         <?php

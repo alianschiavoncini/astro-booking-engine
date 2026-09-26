@@ -100,6 +100,25 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'blastness_submit_label' => ASTRO_BE_PREFIX . 'blastness_submit_label', //optional
 
 				/**
+				 * Cloudbeds
+				 */
+				ASTRO_BE_PREFIX . 'cloudbeds_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'cloudbeds_form_target' => ASTRO_BE_PREFIX . 'cloudbeds_form_target',
+				ASTRO_BE_PREFIX . 'cloudbeds_adults_enable' => ASTRO_BE_PREFIX . 'cloudbeds_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'cloudbeds_adults_n_default' => ASTRO_BE_PREFIX . 'cloudbeds_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'cloudbeds_adults_n_max' => ASTRO_BE_PREFIX . 'cloudbeds_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'cloudbeds_children_enable' => ASTRO_BE_PREFIX . 'cloudbeds_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'cloudbeds_children_n_default' => ASTRO_BE_PREFIX . 'cloudbeds_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'cloudbeds_children_n_max' => ASTRO_BE_PREFIX . 'cloudbeds_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'cloudbeds_coupon' => ASTRO_BE_PREFIX . 'cloudbeds_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'cloudbeds_submit_label' => ASTRO_BE_PREFIX . 'cloudbeds_submit_label', //optional
+
+				//Cloudbeds custom fields
+				ASTRO_BE_PREFIX . 'cloudbeds_hotel' => ASTRO_BE_PREFIX . 'cloudbeds_hotel', //required; host/property
+				ASTRO_BE_PREFIX . 'cloudbeds_language' => ASTRO_BE_PREFIX . 'cloudbeds_language', //optional; empty = page language
+				ASTRO_BE_PREFIX . 'cloudbeds_currency' => ASTRO_BE_PREFIX . 'cloudbeds_currency', //required
+
+				/**
 				 * Data Sistemi
 				 */
 				ASTRO_BE_PREFIX . 'datasistemi_form_method' => esc_attr('get'),
@@ -116,6 +135,26 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'datasistemi_idstr' => ASTRO_BE_PREFIX . 'datasistemi_idstr', //required
 				ASTRO_BE_PREFIX . 'datasistemi_currency' => ASTRO_BE_PREFIX . 'datasistemi_currency', //required
 				ASTRO_BE_PREFIX . 'datasistemi_codpromo' => ASTRO_BE_PREFIX . 'datasistemi_codpromo', //enable/disable
+
+				/**
+				 * D-EDGE
+				 */
+				ASTRO_BE_PREFIX . 'dedge_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'dedge_form_target' => ASTRO_BE_PREFIX . 'dedge_form_target',
+				ASTRO_BE_PREFIX . 'dedge_adults_enable' => ASTRO_BE_PREFIX . 'dedge_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'dedge_adults_n_default' => ASTRO_BE_PREFIX . 'dedge_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'dedge_adults_n_max' => ASTRO_BE_PREFIX . 'dedge_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'dedge_children_enable' => ASTRO_BE_PREFIX . 'dedge_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'dedge_children_n_default' => ASTRO_BE_PREFIX . 'dedge_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'dedge_children_n_max' => ASTRO_BE_PREFIX . 'dedge_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'dedge_childage_enable' => ASTRO_BE_PREFIX . 'dedge_childage_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'dedge_childage_min' => ASTRO_BE_PREFIX . 'dedge_childage_min', //conditional
+				ASTRO_BE_PREFIX . 'dedge_childage_max' => ASTRO_BE_PREFIX . 'dedge_childage_max', //conditional
+				ASTRO_BE_PREFIX . 'dedge_coupon' => ASTRO_BE_PREFIX . 'dedge_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'dedge_submit_label' => ASTRO_BE_PREFIX . 'dedge_submit_label', //optional
+
+				//D-EDGE custom fields
+				ASTRO_BE_PREFIX . 'dedge_hotel' => ASTRO_BE_PREFIX . 'dedge_hotel', //required; booking engine address
 
 				/**
 				 * Ericsoft
@@ -136,6 +175,63 @@ function astro_be_option_names($tab = false) {
 				//Ericsoft custom fields
 				ASTRO_BE_PREFIX . 'ericsoft_idh' => ASTRO_BE_PREFIX . 'ericsoft_idh', //required
 				ASTRO_BE_PREFIX . 'ericsoft_currency' => ASTRO_BE_PREFIX . 'ericsoft_currency', //required
+
+				/**
+				 * Guestline
+				 */
+				ASTRO_BE_PREFIX . 'guestline_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'guestline_form_target' => ASTRO_BE_PREFIX . 'guestline_form_target',
+				ASTRO_BE_PREFIX . 'guestline_adults_enable' => ASTRO_BE_PREFIX . 'guestline_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'guestline_adults_n_default' => ASTRO_BE_PREFIX . 'guestline_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'guestline_adults_n_max' => ASTRO_BE_PREFIX . 'guestline_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'guestline_children_enable' => ASTRO_BE_PREFIX . 'guestline_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'guestline_children_n_default' => ASTRO_BE_PREFIX . 'guestline_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'guestline_children_n_max' => ASTRO_BE_PREFIX . 'guestline_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'guestline_coupon' => ASTRO_BE_PREFIX . 'guestline_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'guestline_submit_label' => ASTRO_BE_PREFIX . 'guestline_submit_label', //optional
+
+				//Guestline custom fields
+				ASTRO_BE_PREFIX . 'guestline_site' => ASTRO_BE_PREFIX . 'guestline_site', //required
+				ASTRO_BE_PREFIX . 'guestline_hotel' => ASTRO_BE_PREFIX . 'guestline_hotel', //required
+
+				/**
+				 * HotelNetSolutions (OnePageBooking)
+				 */
+				ASTRO_BE_PREFIX . 'hotelnetsolutions_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'hotelnetsolutions_form_target' => ASTRO_BE_PREFIX . 'hotelnetsolutions_form_target',
+				ASTRO_BE_PREFIX . 'hotelnetsolutions_adults_enable' => ASTRO_BE_PREFIX . 'hotelnetsolutions_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'hotelnetsolutions_adults_n_default' => ASTRO_BE_PREFIX . 'hotelnetsolutions_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'hotelnetsolutions_adults_n_max' => ASTRO_BE_PREFIX . 'hotelnetsolutions_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'hotelnetsolutions_children_enable' => ASTRO_BE_PREFIX . 'hotelnetsolutions_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'hotelnetsolutions_children_n_default' => ASTRO_BE_PREFIX . 'hotelnetsolutions_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'hotelnetsolutions_children_n_max' => ASTRO_BE_PREFIX . 'hotelnetsolutions_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'hotelnetsolutions_childage_enable' => ASTRO_BE_PREFIX . 'hotelnetsolutions_childage_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'hotelnetsolutions_childage_min' => ASTRO_BE_PREFIX . 'hotelnetsolutions_childage_min', //conditional
+				ASTRO_BE_PREFIX . 'hotelnetsolutions_childage_max' => ASTRO_BE_PREFIX . 'hotelnetsolutions_childage_max', //conditional
+				ASTRO_BE_PREFIX . 'hotelnetsolutions_coupon' => ASTRO_BE_PREFIX . 'hotelnetsolutions_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'hotelnetsolutions_submit_label' => ASTRO_BE_PREFIX . 'hotelnetsolutions_submit_label', //optional
+
+				//HotelNetSolutions custom fields
+				ASTRO_BE_PREFIX . 'hotelnetsolutions_hotel' => ASTRO_BE_PREFIX . 'hotelnetsolutions_hotel', //required; booking engine address
+
+				/**
+				 * Amadeus iHotelier (TravelClick)
+				 */
+				ASTRO_BE_PREFIX . 'ihotelier_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'ihotelier_form_target' => ASTRO_BE_PREFIX . 'ihotelier_form_target',
+				ASTRO_BE_PREFIX . 'ihotelier_adults_enable' => ASTRO_BE_PREFIX . 'ihotelier_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'ihotelier_adults_n_default' => ASTRO_BE_PREFIX . 'ihotelier_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'ihotelier_adults_n_max' => ASTRO_BE_PREFIX . 'ihotelier_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'ihotelier_children_enable' => ASTRO_BE_PREFIX . 'ihotelier_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'ihotelier_children_n_default' => ASTRO_BE_PREFIX . 'ihotelier_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'ihotelier_children_n_max' => ASTRO_BE_PREFIX . 'ihotelier_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'ihotelier_coupon' => ASTRO_BE_PREFIX . 'ihotelier_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'ihotelier_submit_label' => ASTRO_BE_PREFIX . 'ihotelier_submit_label', //optional
+
+				//Amadeus iHotelier custom fields
+				ASTRO_BE_PREFIX . 'ihotelier_hotel' => ASTRO_BE_PREFIX . 'ihotelier_hotel', //required; hotel id
+				ASTRO_BE_PREFIX . 'ihotelier_language' => ASTRO_BE_PREFIX . 'ihotelier_language', //optional; empty = page language
+				ASTRO_BE_PREFIX . 'ihotelier_currency' => ASTRO_BE_PREFIX . 'ihotelier_currency', //required
 
 				/**
 				 * Iperbooking
@@ -164,6 +260,22 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'iperbooking_codiceSconto' => ASTRO_BE_PREFIX . 'iperbooking_codiceSconto', //enable/disable
 
 				/**
+				 * Journey
+				 */
+				ASTRO_BE_PREFIX . 'journey_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'journey_form_target' => ASTRO_BE_PREFIX . 'journey_form_target',
+				ASTRO_BE_PREFIX . 'journey_adults_enable' => ASTRO_BE_PREFIX . 'journey_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'journey_adults_n_default' => ASTRO_BE_PREFIX . 'journey_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'journey_adults_n_max' => ASTRO_BE_PREFIX . 'journey_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'journey_children_enable' => ASTRO_BE_PREFIX . 'journey_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'journey_children_n_default' => ASTRO_BE_PREFIX . 'journey_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'journey_children_n_max' => ASTRO_BE_PREFIX . 'journey_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'journey_submit_label' => ASTRO_BE_PREFIX . 'journey_submit_label', //optional
+
+				//Journey custom fields
+				ASTRO_BE_PREFIX . 'journey_hotel' => ASTRO_BE_PREFIX . 'journey_hotel', //required
+
+				/**
 				 * Mews
 				 */
 				ASTRO_BE_PREFIX . 'mews_form_method' => esc_attr('get'),
@@ -180,6 +292,27 @@ function astro_be_option_names($tab = false) {
 				//Mews custom fields
 				ASTRO_BE_PREFIX . 'mews_configuration_id' => ASTRO_BE_PREFIX . 'mews_configuration_id', //required
 				ASTRO_BE_PREFIX . 'mews_currency' => ASTRO_BE_PREFIX . 'mews_currency', //required
+
+				/**
+				 * Mirai
+				 */
+				ASTRO_BE_PREFIX . 'mirai_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'mirai_form_target' => ASTRO_BE_PREFIX . 'mirai_form_target',
+				ASTRO_BE_PREFIX . 'mirai_adults_enable' => ASTRO_BE_PREFIX . 'mirai_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'mirai_adults_n_default' => ASTRO_BE_PREFIX . 'mirai_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'mirai_adults_n_max' => ASTRO_BE_PREFIX . 'mirai_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'mirai_children_enable' => ASTRO_BE_PREFIX . 'mirai_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'mirai_children_n_default' => ASTRO_BE_PREFIX . 'mirai_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'mirai_children_n_max' => ASTRO_BE_PREFIX . 'mirai_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'mirai_childage_enable' => ASTRO_BE_PREFIX . 'mirai_childage_enable', //required when children are enabled
+				ASTRO_BE_PREFIX . 'mirai_childage_min' => ASTRO_BE_PREFIX . 'mirai_childage_min', //conditional
+				ASTRO_BE_PREFIX . 'mirai_childage_max' => ASTRO_BE_PREFIX . 'mirai_childage_max', //conditional
+				ASTRO_BE_PREFIX . 'mirai_coupon' => ASTRO_BE_PREFIX . 'mirai_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'mirai_submit_label' => ASTRO_BE_PREFIX . 'mirai_submit_label', //optional
+
+				//Mirai custom fields
+				ASTRO_BE_PREFIX . 'mirai_hotel' => ASTRO_BE_PREFIX . 'mirai_hotel', //required; code/property
+				ASTRO_BE_PREFIX . 'mirai_currency' => ASTRO_BE_PREFIX . 'mirai_currency', //required
 
 				/**
 				 * MyGuestCare
@@ -244,8 +377,46 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'passepartout_CodicePromozione' => ASTRO_BE_PREFIX . 'passepartout_CodicePromozione',
 
 				/**
-				 * Scidoo
+				 * Reservit
 				 */
+				ASTRO_BE_PREFIX . 'reservit_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'reservit_form_target' => ASTRO_BE_PREFIX . 'reservit_form_target',
+				ASTRO_BE_PREFIX . 'reservit_adults_enable' => ASTRO_BE_PREFIX . 'reservit_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'reservit_adults_n_default' => ASTRO_BE_PREFIX . 'reservit_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'reservit_adults_n_max' => ASTRO_BE_PREFIX . 'reservit_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'reservit_children_enable' => ASTRO_BE_PREFIX . 'reservit_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'reservit_children_n_default' => ASTRO_BE_PREFIX . 'reservit_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'reservit_children_n_max' => ASTRO_BE_PREFIX . 'reservit_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'reservit_childage_enable' => ASTRO_BE_PREFIX . 'reservit_childage_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'reservit_childage_min' => ASTRO_BE_PREFIX . 'reservit_childage_min', //conditional
+				ASTRO_BE_PREFIX . 'reservit_childage_max' => ASTRO_BE_PREFIX . 'reservit_childage_max', //conditional
+				ASTRO_BE_PREFIX . 'reservit_coupon' => ASTRO_BE_PREFIX . 'reservit_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'reservit_submit_label' => ASTRO_BE_PREFIX . 'reservit_submit_label', //optional
+
+				//Reservit custom fields
+				ASTRO_BE_PREFIX . 'reservit_hotel' => ASTRO_BE_PREFIX . 'reservit_hotel', //required; custid/hotelid
+
+				/**
+				 * ResNexus
+				 */
+				ASTRO_BE_PREFIX . 'resnexus_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'resnexus_form_target' => ASTRO_BE_PREFIX . 'resnexus_form_target',
+				ASTRO_BE_PREFIX . 'resnexus_adults_enable' => ASTRO_BE_PREFIX . 'resnexus_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'resnexus_adults_n_default' => ASTRO_BE_PREFIX . 'resnexus_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'resnexus_adults_n_max' => ASTRO_BE_PREFIX . 'resnexus_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'resnexus_children_enable' => ASTRO_BE_PREFIX . 'resnexus_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'resnexus_children_n_default' => ASTRO_BE_PREFIX . 'resnexus_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'resnexus_children_n_max' => ASTRO_BE_PREFIX . 'resnexus_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'resnexus_pets_enable' => ASTRO_BE_PREFIX . 'resnexus_pets_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'resnexus_pets_n_default' => ASTRO_BE_PREFIX . 'resnexus_pets_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'resnexus_pets_n_max' => ASTRO_BE_PREFIX . 'resnexus_pets_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'resnexus_submit_label' => ASTRO_BE_PREFIX . 'resnexus_submit_label', //optional
+
+				//ResNexus custom fields
+				ASTRO_BE_PREFIX . 'resnexus_hotel' => ASTRO_BE_PREFIX . 'resnexus_hotel', //required; property code
+				ASTRO_BE_PREFIX . 'resnexus_children_capacity' => ASTRO_BE_PREFIX . 'resnexus_children_capacity', //required; capacity slot
+				ASTRO_BE_PREFIX . 'resnexus_pets_capacity' => ASTRO_BE_PREFIX . 'resnexus_pets_capacity', //required; capacity slot
+
 				/**
 				 * RevPlus (WebHotelier)
 				 */
@@ -267,6 +438,70 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'revplus_hotel' => ASTRO_BE_PREFIX . 'revplus_hotel', //required
 				ASTRO_BE_PREFIX . 'revplus_htl_code' => ASTRO_BE_PREFIX . 'revplus_htl_code', //optional; empty = all the hotels
 				ASTRO_BE_PREFIX . 'revplus_currency' => ASTRO_BE_PREFIX . 'revplus_currency', //required
+
+				/**
+				 * Roiback
+				 */
+				ASTRO_BE_PREFIX . 'roiback_form_method' => esc_attr('post'),
+				ASTRO_BE_PREFIX . 'roiback_form_target' => ASTRO_BE_PREFIX . 'roiback_form_target',
+				ASTRO_BE_PREFIX . 'roiback_adults_enable' => ASTRO_BE_PREFIX . 'roiback_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'roiback_adults_n_default' => ASTRO_BE_PREFIX . 'roiback_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'roiback_adults_n_max' => ASTRO_BE_PREFIX . 'roiback_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'roiback_children_enable' => ASTRO_BE_PREFIX . 'roiback_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'roiback_children_n_default' => ASTRO_BE_PREFIX . 'roiback_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'roiback_children_n_max' => ASTRO_BE_PREFIX . 'roiback_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'roiback_childage_enable' => ASTRO_BE_PREFIX . 'roiback_childage_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'roiback_childage_min' => ASTRO_BE_PREFIX . 'roiback_childage_min', //conditional
+				ASTRO_BE_PREFIX . 'roiback_childage_max' => ASTRO_BE_PREFIX . 'roiback_childage_max', //conditional
+				ASTRO_BE_PREFIX . 'roiback_coupon' => ASTRO_BE_PREFIX . 'roiback_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'roiback_submit_label' => ASTRO_BE_PREFIX . 'roiback_submit_label', //optional
+
+				//Roiback custom fields
+				ASTRO_BE_PREFIX . 'roiback_hotel' => ASTRO_BE_PREFIX . 'roiback_hotel', //required; host
+				ASTRO_BE_PREFIX . 'roiback_code' => ASTRO_BE_PREFIX . 'roiback_code', //required
+
+				/**
+				 * Sabre SynXis
+				 */
+				ASTRO_BE_PREFIX . 'synxis_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'synxis_form_target' => ASTRO_BE_PREFIX . 'synxis_form_target',
+				ASTRO_BE_PREFIX . 'synxis_adults_enable' => ASTRO_BE_PREFIX . 'synxis_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'synxis_adults_n_default' => ASTRO_BE_PREFIX . 'synxis_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'synxis_adults_n_max' => ASTRO_BE_PREFIX . 'synxis_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'synxis_children_enable' => ASTRO_BE_PREFIX . 'synxis_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'synxis_children_n_default' => ASTRO_BE_PREFIX . 'synxis_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'synxis_children_n_max' => ASTRO_BE_PREFIX . 'synxis_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'synxis_childage_enable' => ASTRO_BE_PREFIX . 'synxis_childage_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'synxis_childage_min' => ASTRO_BE_PREFIX . 'synxis_childage_min', //conditional
+				ASTRO_BE_PREFIX . 'synxis_childage_max' => ASTRO_BE_PREFIX . 'synxis_childage_max', //conditional
+				ASTRO_BE_PREFIX . 'synxis_coupon' => ASTRO_BE_PREFIX . 'synxis_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'synxis_submit_label' => ASTRO_BE_PREFIX . 'synxis_submit_label', //optional
+
+				//Sabre SynXis custom fields
+				ASTRO_BE_PREFIX . 'synxis_hotel' => ASTRO_BE_PREFIX . 'synxis_hotel', //required
+				ASTRO_BE_PREFIX . 'synxis_chain' => ASTRO_BE_PREFIX . 'synxis_chain', //required
+				ASTRO_BE_PREFIX . 'synxis_currency' => ASTRO_BE_PREFIX . 'synxis_currency', //required
+
+				/**
+				 * SiteMinder
+				 */
+				ASTRO_BE_PREFIX . 'siteminder_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'siteminder_form_target' => ASTRO_BE_PREFIX . 'siteminder_form_target',
+				ASTRO_BE_PREFIX . 'siteminder_adults_enable' => ASTRO_BE_PREFIX . 'siteminder_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'siteminder_adults_n_default' => ASTRO_BE_PREFIX . 'siteminder_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'siteminder_adults_n_max' => ASTRO_BE_PREFIX . 'siteminder_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'siteminder_children_enable' => ASTRO_BE_PREFIX . 'siteminder_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'siteminder_children_n_default' => ASTRO_BE_PREFIX . 'siteminder_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'siteminder_children_n_max' => ASTRO_BE_PREFIX . 'siteminder_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'siteminder_infants_enable' => ASTRO_BE_PREFIX . 'siteminder_infants_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'siteminder_infants_n_default' => ASTRO_BE_PREFIX . 'siteminder_infants_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'siteminder_infants_n_max' => ASTRO_BE_PREFIX . 'siteminder_infants_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'siteminder_coupon' => ASTRO_BE_PREFIX . 'siteminder_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'siteminder_submit_label' => ASTRO_BE_PREFIX . 'siteminder_submit_label', //optional
+
+				//SiteMinder custom fields
+				ASTRO_BE_PREFIX . 'siteminder_hotel' => ASTRO_BE_PREFIX . 'siteminder_hotel', //required
+				ASTRO_BE_PREFIX . 'siteminder_currency' => ASTRO_BE_PREFIX . 'siteminder_currency', //required
 
 				/**
 				 * Scidoo
@@ -310,6 +545,20 @@ function astro_be_option_names($tab = false) {
 
 
 				/**
+				 * ThinkReservations
+				 */
+				ASTRO_BE_PREFIX . 'thinkreservations_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'thinkreservations_form_target' => ASTRO_BE_PREFIX . 'thinkreservations_form_target',
+				ASTRO_BE_PREFIX . 'thinkreservations_adults_enable' => ASTRO_BE_PREFIX . 'thinkreservations_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'thinkreservations_adults_n_default' => ASTRO_BE_PREFIX . 'thinkreservations_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'thinkreservations_adults_n_max' => ASTRO_BE_PREFIX . 'thinkreservations_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'thinkreservations_coupon' => ASTRO_BE_PREFIX . 'thinkreservations_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'thinkreservations_submit_label' => ASTRO_BE_PREFIX . 'thinkreservations_submit_label', //optional
+
+				//ThinkReservations custom fields
+				ASTRO_BE_PREFIX . 'thinkreservations_hotel' => ASTRO_BE_PREFIX . 'thinkreservations_hotel', //required; property name
+
+				/**
 				 * Vertical booking
 				 */
 				ASTRO_BE_PREFIX . 'verticalbooking_form_method' => esc_attr('get'), //required
@@ -328,6 +577,27 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'verticalbooking_childage_min' => ASTRO_BE_PREFIX . 'verticalbooking_childage_min', //conditional
 				ASTRO_BE_PREFIX . 'verticalbooking_childage_max' => ASTRO_BE_PREFIX . 'verticalbooking_childage_max', //conditional
 				ASTRO_BE_PREFIX . 'verticalbooking_submit_label' => ASTRO_BE_PREFIX . 'verticalbooking_submit_label', //optional
+				/**
+				 * Witbooking
+				 */
+				ASTRO_BE_PREFIX . 'witbooking_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'witbooking_form_target' => ASTRO_BE_PREFIX . 'witbooking_form_target',
+				ASTRO_BE_PREFIX . 'witbooking_adults_enable' => ASTRO_BE_PREFIX . 'witbooking_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'witbooking_adults_n_default' => ASTRO_BE_PREFIX . 'witbooking_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'witbooking_adults_n_max' => ASTRO_BE_PREFIX . 'witbooking_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'witbooking_children_enable' => ASTRO_BE_PREFIX . 'witbooking_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'witbooking_children_n_default' => ASTRO_BE_PREFIX . 'witbooking_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'witbooking_children_n_max' => ASTRO_BE_PREFIX . 'witbooking_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'witbooking_infants_enable' => ASTRO_BE_PREFIX . 'witbooking_infants_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'witbooking_infants_n_default' => ASTRO_BE_PREFIX . 'witbooking_infants_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'witbooking_infants_n_max' => ASTRO_BE_PREFIX . 'witbooking_infants_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'witbooking_coupon' => ASTRO_BE_PREFIX . 'witbooking_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'witbooking_submit_label' => ASTRO_BE_PREFIX . 'witbooking_submit_label', //optional
+
+				//Witbooking custom fields
+				ASTRO_BE_PREFIX . 'witbooking_hotel' => ASTRO_BE_PREFIX . 'witbooking_hotel', //required; host/property
+				ASTRO_BE_PREFIX . 'witbooking_language' => ASTRO_BE_PREFIX . 'witbooking_language', //optional; empty = page language
+
 				/**
 				 * WuBook
 				 */
@@ -440,6 +710,16 @@ function astro_be_get_option_sanitize_callback( $option_name ) {
 	if ( preg_match( '/_(n_default|n_max|childage_min|childage_max)$/', $name ) ) {
 		return 'astro_be_sanitize_absint_or_empty';
 	}
+	// Prima della regola generica sui nomi in _language, che serve alle liste di Iperbooking.
+	if ( 'ihotelier_language' === $name ) {
+		return 'astro_be_sanitize_ihotelier_language';
+	}
+	if ( 'cloudbeds_language' === $name ) {
+		return 'astro_be_sanitize_cloudbeds_language';
+	}
+	if ( 'witbooking_language' === $name ) {
+		return 'astro_be_sanitize_witbooking_language';
+	}
 	if ( preg_match( '/_(language|idTrattamento)$/', $name ) ) {
 		return 'astro_be_sanitize_options_list';
 	}
@@ -457,6 +737,60 @@ function astro_be_get_option_sanitize_callback( $option_name ) {
 	}
 	if ( 'revplus_htl_code' === $name ) {
 		return 'astro_be_sanitize_revplus_htl_code';
+	}
+	if ( 'resnexus_hotel' === $name ) {
+		return 'astro_be_sanitize_resnexus_hotel';
+	}
+	if ( 'resnexus_children_capacity' === $name ) {
+		return 'astro_be_sanitize_resnexus_children_capacity';
+	}
+	if ( 'resnexus_pets_capacity' === $name ) {
+		return 'astro_be_sanitize_resnexus_pets_capacity';
+	}
+	if ( 'thinkreservations_hotel' === $name ) {
+		return 'astro_be_sanitize_thinkreservations_hotel';
+	}
+	if ( 'ihotelier_hotel' === $name ) {
+		return 'astro_be_sanitize_ihotelier_hotel';
+	}
+	if ( 'cloudbeds_hotel' === $name ) {
+		return 'astro_be_sanitize_cloudbeds_hotel';
+	}
+	if ( 'reservit_hotel' === $name ) {
+		return 'astro_be_sanitize_reservit_hotel';
+	}
+	if ( 'hotelnetsolutions_hotel' === $name ) {
+		return 'astro_be_sanitize_hotelnetsolutions_hotel';
+	}
+	if ( 'dedge_hotel' === $name ) {
+		return 'astro_be_sanitize_dedge_hotel';
+	}
+	if ( 'roiback_hotel' === $name ) {
+		return 'astro_be_sanitize_roiback_hotel';
+	}
+	if ( 'roiback_code' === $name ) {
+		return 'astro_be_sanitize_roiback_code';
+	}
+	if ( 'mirai_hotel' === $name ) {
+		return 'astro_be_sanitize_mirai_hotel';
+	}
+	if ( 'witbooking_hotel' === $name ) {
+		return 'astro_be_sanitize_witbooking_hotel';
+	}
+	if ( 'journey_hotel' === $name ) {
+		return 'astro_be_sanitize_journey_hotel';
+	}
+	if ( 'guestline_site' === $name ) {
+		return 'astro_be_sanitize_guestline_site';
+	}
+	if ( 'guestline_hotel' === $name ) {
+		return 'astro_be_sanitize_guestline_hotel';
+	}
+	if ( 'siteminder_hotel' === $name ) {
+		return 'astro_be_sanitize_siteminder_hotel';
+	}
+	if ( 'synxis_hotel' === $name || 'synxis_chain' === $name ) {
+		return 'astro_be_sanitize_synxis_' . substr( $name, strlen( 'synxis_' ) );
 	}
 	if ( 'scidoo_cod' === $name ) {
 		return 'astro_be_sanitize_scidoo_cod';
@@ -586,6 +920,568 @@ function astro_be_sanitize_bookingexpert_layout( $value ) {
 	}
 	$value = trim( $value );
 	return preg_match( '/^\d+$/', $value ) ? $value : '';
+}
+
+/**
+ * Sabre SynXis property and chain codes: numbers. The whole booking engine address can be
+ * pasted in either field: the value of its hotel= or chain= parameter is kept.
+ */
+function astro_be_sanitize_synxis_hotel( $value ) {
+	return astro_be_sanitize_synxis_code( $value, 'hotel' );
+}
+
+function astro_be_sanitize_synxis_chain( $value ) {
+	return astro_be_sanitize_synxis_code( $value, 'chain' );
+}
+
+function astro_be_sanitize_synxis_code( $value, $parameter ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+	if ( preg_match( '/[?&]' . $parameter . '=(\d+)/i', $value, $matches ) ) {
+		return $matches[1];
+	}
+	$value = trim( $value );
+	return preg_match( '/^\d+$/', $value ) ? $value : '';
+}
+
+/**
+ * SiteMinder property name: the last part of the booking engine address, part of the form
+ * action. The whole address can be pasted: only the property name is kept.
+ */
+function astro_be_sanitize_siteminder_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+	$value = strtolower( trim( $value ) );
+	if ( preg_match( '#/properties/([a-z0-9-]+)#', $value, $matches ) ) {
+		return $matches[1];
+	}
+	return preg_match( '/^[a-z0-9-]+$/', $value ) ? $value : '';
+}
+
+/**
+ * Guestline site code: part of the form address. The whole booking engine address can be
+ * pasted, both the current one (booking.eu.guestline.app/<site>/availability) and the old one
+ * (<site>.dbm.guestline.net), which the booking engine redirects to the current one.
+ */
+function astro_be_sanitize_guestline_site( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+	$value = trim( $value );
+	if ( preg_match( '#guestline\.app/([A-Za-z0-9-]+)#', $value, $matches ) ) {
+		return $matches[1];
+	}
+	if ( preg_match( '#(?:https?://)?([A-Za-z0-9-]+)\.dbm\.guestline\.net#', $value, $matches ) ) {
+		return strtoupper( $matches[1] );
+	}
+	return preg_match( '/^[A-Za-z0-9-]+$/', $value ) ? $value : '';
+}
+
+/**
+ * Guestline property code: the value of the hotel parameter. The whole booking engine address
+ * can be pasted.
+ */
+function astro_be_sanitize_guestline_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+	$value = trim( $value );
+	if ( preg_match( '/[?&]hotel=([A-Za-z0-9-]+)/i', $value, $matches ) ) {
+		return $matches[1];
+	}
+	return preg_match( '/^[A-Za-z0-9-]+$/', $value ) ? $value : '';
+}
+
+/**
+ * Journey property name: the subdomain of onejourney.travel, part of the form address.
+ * The whole booking engine address can be pasted: only the subdomain is kept.
+ */
+function astro_be_sanitize_journey_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+	$value = strtolower( trim( $value ) );
+	if ( preg_match( '#^(?:https?://)?([a-z0-9-]+)\.onejourney\.travel#', $value, $matches ) ) {
+		return $matches[1];
+	}
+	return preg_match( '/^[a-z0-9-]+$/', $value ) ? $value : '';
+}
+
+/**
+ * Witbooking booking engine address: the host and the property, kept as host/property.
+ * The whole address is pasted by the user, with or without the language segment, and it can be
+ * the one of Witbooking (engine.witbooking.com) or of the property (reservations.myhotel.com).
+ */
+function astro_be_sanitize_witbooking_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$value = trim( $value );
+	$value = preg_replace( '#^https?://#i', '', $value );
+	$value = preg_replace( '#[?\#].*$#', '', $value );
+
+	// host[/lingua]/hotel/struttura, oppure il solo host/struttura.
+	if ( preg_match( '#^([a-z0-9.-]+)/(?:[a-z]{2}/)?hotel/([A-Za-z0-9._-]+)#i', $value, $matches ) ) {
+		return strtolower( $matches[1] ) . '/' . $matches[2];
+	}
+	if ( preg_match( '#^([a-z0-9.-]+\.[a-z]{2,})/([A-Za-z0-9._-]+)$#i', $value, $matches ) ) {
+		return strtolower( $matches[1] ) . '/' . $matches[2];
+	}
+
+	return '';
+}
+
+/**
+ * Witbooking: the languages of the booking engine, as code => name. A language which is not one
+ * of these gives a "page not found", so only these are used in the address.
+ */
+function astro_be_witbooking_languages() {
+	return array(
+		'es' => __( 'Spanish', 'astro-booking-engine' ),
+		'en' => __( 'English', 'astro-booking-engine' ),
+		'it' => __( 'Italian', 'astro-booking-engine' ),
+		'fr' => __( 'French', 'astro-booking-engine' ),
+		'de' => __( 'German', 'astro-booking-engine' ),
+		'pt' => __( 'Portuguese', 'astro-booking-engine' ),
+		'ca' => __( 'Catalan', 'astro-booking-engine' ),
+		'ru' => __( 'Russian', 'astro-booking-engine' ),
+		'nl' => __( 'Dutch', 'astro-booking-engine' ),
+		'ja' => __( 'Japanese', 'astro-booking-engine' ),
+		'zh' => __( 'Chinese', 'astro-booking-engine' ),
+		'eu' => __( 'Basque', 'astro-booking-engine' ),
+		'da' => __( 'Danish', 'astro-booking-engine' ),
+		'sv' => __( 'Swedish', 'astro-booking-engine' ),
+		'ro' => __( 'Romanian', 'astro-booking-engine' ),
+		'hu' => __( 'Hungarian', 'astro-booking-engine' ),
+		'ko' => __( 'Korean', 'astro-booking-engine' ),
+	);
+}
+
+/**
+ * Witbooking: the language chosen in the settings, empty when it follows the page.
+ */
+function astro_be_sanitize_witbooking_language( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+	$value = strtolower( trim( $value ) );
+	return array_key_exists( $value, astro_be_witbooking_languages() ) ? $value : '';
+}
+
+/**
+ * Witbooking: return the language of the booking engine address. The settings can fix one;
+ * otherwise the language of the page is used when the booking engine has it, English otherwise.
+ * The property answers in its own language when it does not have the requested one.
+ */
+function astro_return_witbooking_language() {
+
+	$chosen = astro_be_get_sanitized_option( ASTRO_BE_PREFIX . 'witbooking_language' );
+	if ( $chosen ) {
+		return $chosen;
+	}
+
+	$lang = astro_return_post_language();
+
+	return array_key_exists( $lang, astro_be_witbooking_languages() ) ? $lang : 'en';
+}
+
+/**
+ * Mirai booking engine address: the code of the booking engine and the one of the property,
+ * kept as code/property. The whole address is pasted by the user.
+ */
+function astro_be_sanitize_mirai_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$value = trim( $value );
+
+	if ( preg_match( '#reservation\.mirai\.com/([A-Za-z0-9_-]+)/#', $value, $matches ) ) {
+		$code = $matches[1];
+		if ( preg_match( '/[?&]idtokenprovider=(\d+)/i', $value, $property ) ) {
+			return $code . '/' . $property[1];
+		}
+		return '';
+	}
+
+	// Anche il solo codice/struttura, come lo salva il plugin.
+	if ( preg_match( '#^([A-Za-z0-9_-]+)/(\d+)$#', $value, $matches ) ) {
+		return $matches[1] . '/' . $matches[2];
+	}
+
+	return '';
+}
+
+/**
+ * ResNexus property: the code in the booking engine address, after /book/ or in the UID
+ * parameter of the older addresses. The whole address is pasted by the user, and the code alone
+ * is accepted too. It is the identifier ResNexus gives to the property, letters and numbers with
+ * hyphens.
+ */
+function astro_be_sanitize_resnexus_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$value = trim( $value );
+
+	if ( preg_match( '#/book/([A-Fa-f0-9-]{8,})#i', $value, $matches ) ) {
+		return strtoupper( $matches[1] );
+	}
+	if ( preg_match( '/[?&]uid=([A-Fa-f0-9-]{8,})/i', $value, $matches ) ) {
+		return strtoupper( $matches[1] );
+	}
+
+	return preg_match( '/^[A-Fa-f0-9-]{8,}$/', $value ) ? strtoupper( $value ) : '';
+}
+
+/**
+ * ResNexus pets slot: the same numbered capacity slots of the children, with three as the usual
+ * number of the pets one.
+ */
+function astro_be_sanitize_resnexus_pets_capacity( $value ) {
+	$value = is_scalar( $value ) ? (int) $value : 0;
+
+	return ( $value >= 2 && $value <= 6 ) ? (string) $value : '3';
+}
+
+/**
+ * ResNexus children slot: the guest types after the adults are numbered capacity slots, set by
+ * every property, so the number of the children one is a setting. Two is the usual one.
+ */
+function astro_be_sanitize_resnexus_children_capacity( $value ) {
+	$value = is_scalar( $value ) ? (int) $value : 0;
+
+	return ( $value >= 2 && $value <= 6 ) ? (string) $value : '2';
+}
+
+/**
+ * ThinkReservations property: the name in the booking engine address, between the host and
+ * /reservations. The whole address is pasted by the user, and the name alone is accepted too.
+ */
+function astro_be_sanitize_thinkreservations_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$value = trim( $value );
+	$value = preg_replace( '#^https?://#i', '', $value );
+	$value = preg_replace( '#[?\#].*$#', '', $value );
+
+	if ( preg_match( '#^secure\.thinkreservations\.com/([A-Za-z0-9._-]+)#i', $value, $matches ) ) {
+		return $matches[1];
+	}
+
+	return preg_match( '/^[A-Za-z0-9._-]+$/', $value ) ? $value : '';
+}
+
+/**
+ * Amadeus iHotelier (TravelClick) property: the numeric code of the hotel. The whole address is
+ * pasted by the user, of the reservations or of the bookings host, and the code is also accepted
+ * on its own. It is the same code the address repeats in the HotelId parameter.
+ */
+function astro_be_sanitize_ihotelier_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$value = trim( $value );
+
+	// travelclick.com/<codice> oppure ...?HotelId=<codice>
+	if ( preg_match( '#travelclick\.com/(\d+)#i', $value, $matches ) ) {
+		return $matches[1];
+	}
+	if ( preg_match( '/[?&]hotelid=(\d+)/i', $value, $matches ) ) {
+		return $matches[1];
+	}
+
+	return preg_match( '/^\d+$/', $value ) ? $value : '';
+}
+
+/**
+ * Amadeus iHotelier: the languages of the booking engine, as numeric id => name. The engine takes
+ * the language as a number; an id the property does not have falls back to English without errors.
+ */
+function astro_be_ihotelier_languages() {
+	return array(
+		'1' => __( 'English', 'astro-booking-engine' ),
+		'2' => __( 'Spanish', 'astro-booking-engine' ),
+		'3' => __( 'French', 'astro-booking-engine' ),
+		'7' => __( 'German', 'astro-booking-engine' ),
+		'5' => __( 'Chinese', 'astro-booking-engine' ),
+		'6' => __( 'Japanese', 'astro-booking-engine' ),
+	);
+}
+
+/**
+ * Amadeus iHotelier: the language of the page, as the code the booking engine uses.
+ */
+function astro_be_ihotelier_language_ids() {
+	return array( 'en' => '1', 'es' => '2', 'fr' => '3', 'de' => '7', 'zh' => '5', 'ja' => '6' );
+}
+
+/**
+ * Amadeus iHotelier: the language chosen in the settings, empty when it follows the page.
+ */
+function astro_be_sanitize_ihotelier_language( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+	$value = trim( $value );
+	return array_key_exists( $value, astro_be_ihotelier_languages() ) ? $value : '';
+}
+
+/**
+ * Amadeus iHotelier: return the language id of the booking engine. The settings can fix one;
+ * otherwise the language of the page is used when the booking engine has it, English otherwise.
+ */
+function astro_return_ihotelier_language() {
+
+	$chosen = astro_be_get_sanitized_option( ASTRO_BE_PREFIX . 'ihotelier_language' );
+	if ( $chosen ) {
+		return $chosen;
+	}
+
+	$ids  = astro_be_ihotelier_language_ids();
+	$lang = astro_return_post_language();
+
+	return isset( $ids[ $lang ] ) ? $ids[ $lang ] : '1';
+}
+
+/**
+ * Cloudbeds booking engine address: the host and the property, kept as host/property. The whole
+ * address is pasted by the user, with or without the language segment, and the host can be the
+ * general one (hotels.cloudbeds.com) or a regional one (us2.cloudbeds.com).
+ */
+function astro_be_sanitize_cloudbeds_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$value = trim( $value );
+	$value = preg_replace( '#^https?://#i', '', $value );
+	$value = preg_replace( '#[?\#].*$#', '', $value );
+
+	// host[/lingua]/reservation/<struttura>
+	if ( preg_match( '#^([a-z0-9.-]+\.cloudbeds\.com)/(?:[a-z]{2}/)?reservation/([A-Za-z0-9_-]+)#i', $value, $matches ) ) {
+		return strtolower( $matches[1] ) . '/' . $matches[2];
+	}
+
+	// La forma gia' normalizzata, host/struttura: il valore salvato viene sanificato di nuovo
+	// a ogni lettura, quindi deve passare anche la seconda volta.
+	if ( preg_match( '#^([a-z0-9.-]+\.cloudbeds\.com)/([A-Za-z0-9_-]{3,})/?$#i', $value, $matches ) ) {
+		return strtolower( $matches[1] ) . '/' . $matches[2];
+	}
+
+	return '';
+}
+
+/**
+ * Cloudbeds: the languages of the booking engine, as code => name. A language which is not one
+ * of these gives a 404, so only these are used in the address.
+ */
+function astro_be_cloudbeds_languages() {
+	return array(
+		'en' => __( 'English', 'astro-booking-engine' ),
+		'es' => __( 'Spanish', 'astro-booking-engine' ),
+		'it' => __( 'Italian', 'astro-booking-engine' ),
+		'fr' => __( 'French', 'astro-booking-engine' ),
+		'de' => __( 'German', 'astro-booking-engine' ),
+		'pt' => __( 'Portuguese', 'astro-booking-engine' ),
+		'nl' => __( 'Dutch', 'astro-booking-engine' ),
+		'ru' => __( 'Russian', 'astro-booking-engine' ),
+		'zh' => __( 'Chinese', 'astro-booking-engine' ),
+		'ja' => __( 'Japanese', 'astro-booking-engine' ),
+		'ko' => __( 'Korean', 'astro-booking-engine' ),
+		'pl' => __( 'Polish', 'astro-booking-engine' ),
+		'sv' => __( 'Swedish', 'astro-booking-engine' ),
+		'no' => __( 'Norwegian', 'astro-booking-engine' ),
+		'fi' => __( 'Finnish', 'astro-booking-engine' ),
+		'el' => __( 'Greek', 'astro-booking-engine' ),
+		'tr' => __( 'Turkish', 'astro-booking-engine' ),
+		'he' => __( 'Hebrew', 'astro-booking-engine' ),
+		'hu' => __( 'Hungarian', 'astro-booking-engine' ),
+		'cs' => __( 'Czech', 'astro-booking-engine' ),
+		'ro' => __( 'Romanian', 'astro-booking-engine' ),
+		'th' => __( 'Thai', 'astro-booking-engine' ),
+		'ca' => __( 'Catalan', 'astro-booking-engine' ),
+		'sk' => __( 'Slovak', 'astro-booking-engine' ),
+		'lt' => __( 'Lithuanian', 'astro-booking-engine' ),
+		'et' => __( 'Estonian', 'astro-booking-engine' ),
+	);
+}
+
+/**
+ * Cloudbeds: the language chosen in the settings, empty when it follows the page.
+ */
+function astro_be_sanitize_cloudbeds_language( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+	$value = strtolower( trim( $value ) );
+	return array_key_exists( $value, astro_be_cloudbeds_languages() ) ? $value : '';
+}
+
+/**
+ * Cloudbeds: return the language segment of the booking engine address. The settings can fix one;
+ * otherwise the language of the page is used when the booking engine has it, English otherwise.
+ * A language the booking engine does not have answers with a 404, so it is never used.
+ */
+function astro_return_cloudbeds_language() {
+
+	$chosen = astro_be_get_sanitized_option( ASTRO_BE_PREFIX . 'cloudbeds_language' );
+	if ( $chosen ) {
+		return $chosen;
+	}
+
+	$lang = astro_return_post_language();
+
+	return array_key_exists( $lang, astro_be_cloudbeds_languages() ) ? $lang : 'en';
+}
+
+/**
+ * Reservit booking engine address: the two codes of the property, kept as custid/hotelid.
+ * The whole address is pasted by the user, of the current booking engine
+ * (secure.reservit.com/fo/booking/<custid>/<hotelid>/dates) or of the quick search
+ * (reserhotel.php?id=<custid>&hotelid=<hotelid>), which carry the same two codes.
+ */
+function astro_be_sanitize_reservit_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$value = trim( $value );
+	$value = preg_replace( '#^https?://#i', '', $value );
+
+	// Indirizzo del motore: .../booking/<custid>/<hotelid>/...
+	if ( preg_match( '#/booking/(\d+)/(\d+)#', $value, $matches ) ) {
+		return $matches[1] . '/' . $matches[2];
+	}
+
+	// Ricerca rapida: ...?id=<custid>&hotelid=<hotelid>
+	if ( preg_match( '#\?(.+)$#', $value, $matches ) ) {
+		$query = array();
+		parse_str( $matches[1], $query );
+
+		$custid = isset( $query['id'] ) ? $query['id'] : ( isset( $query['custid'] ) ? $query['custid'] : '' );
+
+		if ( preg_match( '/^\d+$/', (string) $custid ) && isset( $query['hotelid'] ) && preg_match( '/^\d+$/', (string) $query['hotelid'] ) ) {
+			return $custid . '/' . $query['hotelid'];
+		}
+
+		return '';
+	}
+
+	// I soli due codici, separati dalla barra.
+	if ( preg_match( '#^(\d+)/(\d+)/?$#', $value, $matches ) ) {
+		return $matches[1] . '/' . $matches[2];
+	}
+
+	return '';
+}
+
+/**
+ * HotelNetSolutions (OnePageBooking) booking engine address: the host and the property, kept
+ * as host/property. The whole address is pasted by the user, with or without the parameters.
+ */
+function astro_be_sanitize_hotelnetsolutions_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$value = trim( $value );
+	$value = preg_replace( '#^https?://#i', '', $value );
+	$value = preg_replace( '#[?\#].*$#', '', $value );
+
+	if ( preg_match( '#^([a-z0-9.-]+\.[a-z]{2,})/([A-Za-z0-9._-]+)/?$#i', $value, $matches ) ) {
+		return strtolower( $matches[1] ) . '/' . $matches[2];
+	}
+
+	return '';
+}
+
+/**
+ * D-EDGE booking engine address, kept as host and path. The whole address is pasted by the
+ * user and it can be of either generation of the booking engine: the current one, which is
+ * kept up to the language (secure-hotel-booking.com/d-edge/My-Hotel/ABCD/12345/en-US), or the
+ * previous one, of which the host and the property are kept (book-secure.com/abcd12345).
+ * The /d-edge/ path is what tells the two apart when the form is built.
+ */
+function astro_be_sanitize_dedge_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$value = trim( $value );
+	$value = preg_replace( '#^https?://#i', '', $value );
+
+	// Motore attuale: host/d-edge/…/<lingua>[/Pagina].
+	if ( preg_match( '#^([a-z0-9.-]+)/d-edge/([^?\#]+)#i', $value, $matches ) ) {
+		$host     = strtolower( $matches[1] );
+		$segments = array_values( array_filter( explode( '/', $matches[2] ), 'strlen' ) );
+
+		// L'indirizzo si ferma alla lingua: quello che segue è il nome della pagina.
+		for ( $i = count( $segments ) - 1; $i >= 0; $i-- ) {
+			// Stessa forma che il motore riconosce come lingua: en-US, fr-FR, nl.
+			if ( preg_match( '/^[a-z]{2}(-[A-Za-z]+)?(-[A-Z]{2})?$/', $segments[ $i ] ) ) {
+				return $host . '/d-edge/' . implode( '/', array_slice( $segments, 0, $i + 1 ) );
+			}
+		}
+
+		return '';
+	}
+
+	// Motore precedente: host/index.php?…&property=<codice>.
+	if ( preg_match( '#^([a-z0-9.-]+\.[a-z]{2,})/[^?]*\?(.+)$#i', $value, $matches ) ) {
+		$host  = strtolower( $matches[1] );
+		$query = array();
+		parse_str( $matches[2], $query );
+
+		if ( isset( $query['property'] ) && preg_match( '/^[A-Za-z0-9._-]+$/', $query['property'] ) ) {
+			return $host . '/' . $query['property'];
+		}
+
+		return '';
+	}
+
+	// Motore precedente, con il solo codice della struttura: host/<codice>.
+	if ( preg_match( '#^([a-z0-9.-]+\.[a-z]{2,})/([A-Za-z0-9._-]+)/?$#i', $value, $matches ) ) {
+		return strtolower( $matches[1] ) . '/' . $matches[2];
+	}
+
+	return '';
+}
+
+/**
+ * Roiback booking engine address: the host, which is usually the one of the property.
+ * The whole address can be pasted.
+ */
+function astro_be_sanitize_roiback_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+	$value = strtolower( trim( $value ) );
+	$value = preg_replace( '#^https?://#', '', $value );
+	$value = preg_replace( '#[/?\#].*$#', '', $value );
+
+	return preg_match( '/^[a-z0-9.-]+\.[a-z]{2,}$/', $value ) ? $value : '';
+}
+
+/**
+ * Roiback property code: also the value of the hotel field of a booking form is accepted,
+ * which is the code with hotel_ in front of it.
+ */
+function astro_be_sanitize_roiback_code( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+	$value = trim( $value );
+	$value = preg_replace( '/^hotel_/i', '', $value );
+
+	return preg_match( '/^[A-Za-z0-9._-]+$/', $value ) ? $value : '';
 }
 
 /**

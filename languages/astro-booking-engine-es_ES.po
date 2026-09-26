@@ -1,19 +1,20 @@
+# Copyright (C) 2026 Alian Schiavoncini
+# This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Astro Booking Engine\n"
+"Project-Id-Version: Astro Booking Engine 2.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/astro-booking-"
 "engine\n"
 "POT-Creation-Date: 2026-09-25T08:10:31+00:00\n"
-"PO-Revision-Date: 2026-09-03 09:28+0200\n"
-"Last-Translator: admin\n"
-"Language-Team: Italian\n"
-"Language: it-IT\n"
+"PO-Revision-Date: 2026-09-24 18:00+0200\n"
+"Last-Translator: Alian Schiavoncini\n"
+"Language-Team: Spanish (Spain)\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.4; wp-6.2.2\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: astro-booking-engine\n"
 
 #. Plugin Name of the plugin
@@ -33,8 +34,9 @@ msgid ""
 "Hotel booking form via Gutenberg block or shortcode, independent from the "
 "provider: switch booking engine anytime, your form stays the same."
 msgstr ""
-"Modulo di prenotazione hotel via blocco Gutenberg o shortcode, indipendente "
-"dal fornitore: cambi booking engine quando vuoi, il modulo resta uguale."
+"Formulario de reserva de hotel mediante bloque de Gutenberg o shortcode, "
+"independiente del proveedor: cambia de motor de reservas cuando quieras, tu "
+"formulario sigue igual."
 
 #. Author of the plugin
 #: astro-booking-engine.php
@@ -48,7 +50,7 @@ msgstr "https://www.alian.it"
 
 #: astro-booking-engine-admin.php:43
 msgid "Clear"
-msgstr "Annulla"
+msgstr "Borrar"
 
 #: astro-booking-engine-admin.php:44
 #: includes/tabs/tab-settings-iperbooking.php:117
@@ -56,62 +58,61 @@ msgstr "Annulla"
 #: includes/tabs/tab-settings-iperbooking.php:231
 #: includes/tabs/tab-settings-iperbooking.php:264
 msgid "Default"
-msgstr "Predefinito"
+msgstr "Predeterminado"
 
 #: astro-booking-engine-admin.php:45
 msgid "Select Color"
-msgstr "Seleziona Colore"
+msgstr "Seleccionar color"
 
 #: astro-booking-engine-admin.php:46
 msgid "Current Color"
-msgstr "Colore attuale"
+msgstr "Color actual"
 
 #: astro-booking-engine-admin.php:116 astro-booking-engine-admin.php:117
 msgid "Booking engine"
-msgstr "Booking engine"
+msgstr "Motor de reservas"
 
 #: astro-booking-engine-admin.php:218
 msgid "Do you enjoy Astro Booking Engine?"
-msgstr "Ti trovi bene con Astro Booking Engine?"
+msgstr "¿Te gusta Astro Booking Engine?"
 
 #: astro-booking-engine-admin.php:219
 msgid ""
 "You have been using it for a while: a review on WordPress.org would help "
 "other users discover it. Thank you!"
 msgstr ""
-"Lo usi da un po' di tempo: una recensione su WordPress.org aiuterebbe altri "
-"utenti a scoprirlo. Grazie!"
+"Llevas un tiempo usándolo: una reseña en WordPress.org ayudaría a otros "
+"usuarios a descubrirlo. ¡Gracias!"
 
 #: astro-booking-engine-admin.php:222
 msgid "Sure, I'll write a review"
-msgstr "Certo, scrivo una recensione"
+msgstr "Claro, escribiré una reseña"
 
 #: astro-booking-engine-admin.php:223
 msgid "I've already reviewed it"
-msgstr "L'ho già recensito"
+msgstr "Ya lo he valorado"
 
 #: astro-booking-engine-admin.php:224
 msgid "Maybe later"
-msgstr "Magari più tardi"
+msgstr "Quizá más tarde"
 
 #: astro-booking-engine-admin.php:236 includes/tabs/tab-support.php:39
 msgid "You do not have sufficient permissions to access this page."
-msgstr ""
-"Non disponi di autorizzazioni sufficienti per accedere a questa pagina."
+msgstr "No tienes permisos suficientes para acceder a esta página."
 
 #: astro-booking-engine-admin.php:252
 msgid "Settings saved."
-msgstr "Impostazioni salvate."
+msgstr "Ajustes guardados."
 
 #: astro-booking-engine-common.php:1043 astro-booking-engine-common.php:1211
 #: astro-booking-engine-common.php:1289
 msgid "Spanish"
-msgstr "Spagnolo"
+msgstr "Español"
 
 #: astro-booking-engine-common.php:1044 astro-booking-engine-common.php:1210
 #: astro-booking-engine-common.php:1288
 msgid "English"
-msgstr "Inglese"
+msgstr "Inglés"
 
 #: astro-booking-engine-common.php:1045 astro-booking-engine-common.php:1290
 msgid "Italian"
@@ -120,58 +121,58 @@ msgstr "Italiano"
 #: astro-booking-engine-common.php:1046 astro-booking-engine-common.php:1212
 #: astro-booking-engine-common.php:1291
 msgid "French"
-msgstr "Francese"
+msgstr "Francés"
 
 #: astro-booking-engine-common.php:1047 astro-booking-engine-common.php:1213
 #: astro-booking-engine-common.php:1292
 msgid "German"
-msgstr "Tedesco"
+msgstr "Alemán"
 
 #: astro-booking-engine-common.php:1048 astro-booking-engine-common.php:1293
 msgid "Portuguese"
-msgstr "Portoghese"
+msgstr "Portugués"
 
 #: astro-booking-engine-common.php:1049 astro-booking-engine-common.php:1310
 msgid "Catalan"
-msgstr "Catalano"
+msgstr "Catalán"
 
 #: astro-booking-engine-common.php:1050 astro-booking-engine-common.php:1295
 msgid "Russian"
-msgstr "Russo"
+msgstr "Ruso"
 
 #: astro-booking-engine-common.php:1051 astro-booking-engine-common.php:1294
 msgid "Dutch"
-msgstr "Olandese"
+msgstr "Neerlandés"
 
 #: astro-booking-engine-common.php:1052 astro-booking-engine-common.php:1215
 #: astro-booking-engine-common.php:1297
 msgid "Japanese"
-msgstr "Giapponese"
+msgstr "Japonés"
 
 #: astro-booking-engine-common.php:1053 astro-booking-engine-common.php:1214
 #: astro-booking-engine-common.php:1296
 msgid "Chinese"
-msgstr "Cinese"
+msgstr "Chino"
 
 #: astro-booking-engine-common.php:1054
 msgid "Basque"
-msgstr "Basco"
+msgstr "Euskera"
 
 #: astro-booking-engine-common.php:1055
 msgid "Danish"
-msgstr "Danese"
+msgstr "Danés"
 
 #: astro-booking-engine-common.php:1056 astro-booking-engine-common.php:1300
 msgid "Swedish"
-msgstr "Svedese"
+msgstr "Sueco"
 
 #: astro-booking-engine-common.php:1057 astro-booking-engine-common.php:1308
 msgid "Romanian"
-msgstr "Rumeno"
+msgstr "Rumano"
 
 #: astro-booking-engine-common.php:1058 astro-booking-engine-common.php:1306
 msgid "Hungarian"
-msgstr "Ungherese"
+msgstr "Húngaro"
 
 #: astro-booking-engine-common.php:1059 astro-booking-engine-common.php:1298
 msgid "Korean"
@@ -179,19 +180,19 @@ msgstr "Coreano"
 
 #: astro-booking-engine-common.php:1299
 msgid "Polish"
-msgstr "Polacco"
+msgstr "Polaco"
 
 #: astro-booking-engine-common.php:1301
 msgid "Norwegian"
-msgstr "Norvegese"
+msgstr "Noruego"
 
 #: astro-booking-engine-common.php:1302
 msgid "Finnish"
-msgstr "Finlandese"
+msgstr "Finés"
 
 #: astro-booking-engine-common.php:1303
 msgid "Greek"
-msgstr "Greco"
+msgstr "Griego"
 
 #: astro-booking-engine-common.php:1304
 msgid "Turkish"
@@ -199,19 +200,19 @@ msgstr "Turco"
 
 #: astro-booking-engine-common.php:1305
 msgid "Hebrew"
-msgstr "Ebraico"
+msgstr "Hebreo"
 
 #: astro-booking-engine-common.php:1307
 msgid "Czech"
-msgstr "Ceco"
+msgstr "Checo"
 
 #: astro-booking-engine-common.php:1309
 msgid "Thai"
-msgstr "Thailandese"
+msgstr "Tailandés"
 
 #: astro-booking-engine-common.php:1311
 msgid "Slovak"
-msgstr "Slovacco"
+msgstr "Eslovaco"
 
 #: astro-booking-engine-common.php:1312
 msgid "Lithuanian"
@@ -219,58 +220,59 @@ msgstr "Lituano"
 
 #: astro-booking-engine-common.php:1313
 msgid "Estonian"
-msgstr "Estone"
+msgstr "Estonio"
 
 #: astro-booking-engine-common.php:1578
 msgid "This message is visible only to the site administrator."
-msgstr "Questo messaggio è visibile solo all'amministratore del sito."
+msgstr "Este mensaje solo es visible para el administrador del sitio."
 
 #: astro-booking-engine-common.php:1580
 msgid "No provider has been selected in Astro Booking Engine plugin."
-msgstr "Nessun provider è stato selezionato nel plugin Astro Booking Engine."
+msgstr ""
+"No se ha seleccionado ningún proveedor en el plugin Astro Booking Engine."
 
 #: astro-booking-engine-common.php:1582
 msgid "Choose your provider at plugin"
-msgstr "Scegli il tuo provider per il plugin"
+msgstr "Elige tu proveedor en la"
 
 #: astro-booking-engine-common.php:1584
 msgid "settings page"
-msgstr "pagina delle impostazioni"
+msgstr "página de ajustes"
 
 #: astro-booking-engine.php:100 includes/tabs/tab-settings.php:18
 #: includes/tabs/tabs-nav.php:13
 msgid "Settings"
-msgstr "Impostazioni"
+msgstr "Ajustes"
 
 #: astro-booking-engine.php:114 includes/tabs/tab-support.php:74
 #: includes/tabs/tabs-nav.php:15
 msgid "Support"
-msgstr "Supporto"
+msgstr "Soporte"
 
 #: astro-booking-engine.php:115
 msgid "Author website"
-msgstr "Sito dell'autore"
+msgstr "Sitio web del autor"
 
 #: includes/classes/class-astro-booking-engine-widget.php:27
 msgid ""
 "The Astro Booking Engine plugin displays a user friendly and responsive "
 "booking engine form."
 msgstr ""
-"Il plugin Astro Booking Engine mostra un modulo di motore di prenotazione "
-"facile da usare e reattivo."
+"El plugin Astro Booking Engine muestra un formulario de motor de reservas "
+"cómodo y adaptable."
 
 #: includes/classes/class-astro-booking-engine-widget.php:56
 msgid "New title"
-msgstr "Nuovo titolo"
+msgstr "Nuevo título"
 
 #: includes/classes/class-astro-booking-engine-widget.php:61
 msgid "Title"
-msgstr "Titolo"
+msgstr "Título"
 
 #: includes/tabs/tab-layout.php:24 includes/tabs/tabs-nav.php:14
 #: blocks/booking-form/editor.js:39
 msgid "Layout"
-msgstr "Layout"
+msgstr "Diseño"
 
 #: includes/tabs/tab-layout.php:26
 msgid "Widget"
@@ -279,19 +281,19 @@ msgstr "Widget"
 #: includes/tabs/tab-layout.php:30 includes/tabs/tab-layout.php:229
 #: includes/tabs/tab-layout.php:459
 msgid "Background color"
-msgstr "Colore di sfondo"
+msgstr "Color de fondo"
 
 #: includes/tabs/tab-layout.php:46 includes/tabs/tab-layout.php:323
 #: includes/tabs/tab-layout.php:553
 msgid "Border radius"
-msgstr "Raggio del bordo"
+msgstr "Radio del borde"
 
 #: includes/tabs/tab-layout.php:57 includes/tabs/tab-layout.php:110
 #: includes/tabs/tab-layout.php:186 includes/tabs/tab-layout.php:256
 #: includes/tabs/tab-layout.php:334 includes/tabs/tab-layout.php:416
 #: includes/tabs/tab-layout.php:486 includes/tabs/tab-layout.php:564
 msgid "inherit"
-msgstr "ereditato"
+msgstr "heredado"
 
 #: includes/tabs/tab-layout.php:68 includes/tabs/tab-layout.php:121
 #: includes/tabs/tab-layout.php:197 includes/tabs/tab-layout.php:267
@@ -302,48 +304,48 @@ msgstr "px"
 
 #: includes/tabs/tab-layout.php:79
 msgid "Labels"
-msgstr "Etichette"
+msgstr "Etiquetas"
 
 #: includes/tabs/tab-layout.php:83 includes/tabs/tab-layout.php:159
 #: includes/tabs/tab-layout.php:389
 msgid "Font color"
-msgstr "Colore del carattere"
+msgstr "Color de la fuente"
 
 #: includes/tabs/tab-layout.php:99 includes/tabs/tab-layout.php:175
 #: includes/tabs/tab-layout.php:405
 msgid "Font size"
-msgstr "Dimensione del carattere"
+msgstr "Tamaño de la fuente"
 
 #: includes/tabs/tab-layout.php:130 includes/tabs/tab-layout.php:206
 #: includes/tabs/tab-layout.php:436
 msgid "Font weight"
-msgstr "Peso del carattere"
+msgstr "Grosor de la fuente"
 
 #: includes/tabs/tab-layout.php:146 includes/tabs/tab-layout.php:222
 #: includes/tabs/tab-layout.php:452
 msgid "normal"
-msgstr "normale"
+msgstr "normal"
 
 #: includes/tabs/tab-layout.php:147 includes/tabs/tab-layout.php:223
 #: includes/tabs/tab-layout.php:453
 msgid "bold"
-msgstr "grassetto"
+msgstr "negrita"
 
 #: includes/tabs/tab-layout.php:155
 msgid "Fields"
-msgstr "Campi"
+msgstr "Campos"
 
 #: includes/tabs/tab-layout.php:245 includes/tabs/tab-layout.php:475
 msgid "Border width"
-msgstr "Spessore del bordo"
+msgstr "Grosor del borde"
 
 #: includes/tabs/tab-layout.php:276 includes/tabs/tab-layout.php:506
 msgid "Border style"
-msgstr "Stile del bordo"
+msgstr "Estilo del borde"
 
 #: includes/tabs/tab-layout.php:307 includes/tabs/tab-layout.php:537
 msgid "Border color"
-msgstr "Colore del bordo"
+msgstr "Color del borde"
 
 #: includes/tabs/tab-layout.php:354
 msgid "Calendar theme"
@@ -380,15 +382,15 @@ msgstr "Tema del calendario"
 #: includes/tabs/tab-settings-witbooking.php:406
 #: includes/tabs/tab-settings-wubook.php:471
 msgid "Submit button"
-msgstr "Pulsante di invio"
+msgstr "Botón de envío"
 
 #: includes/tabs/tab-layout.php:586
 msgid "Advanced settings"
-msgstr "Impostazioni avanzate"
+msgstr "Ajustes avanzados"
 
 #: includes/tabs/tab-layout.php:590
 msgid "Custom CSS"
-msgstr "CSS personalizzato"
+msgstr "CSS personalizado"
 
 #: includes/tabs/tab-settings-5stelle.php:19
 #: includes/tabs/tab-settings-begenius.php:19
@@ -421,11 +423,11 @@ msgstr "CSS personalizzato"
 #: includes/tabs/tab-settings-witbooking.php:19
 #: includes/tabs/tab-settings-wubook.php:19
 msgid "Hotel settings"
-msgstr "Impostazioni dell'hotel"
+msgstr "Ajustes del hotel"
 
 #: includes/tabs/tab-settings-5stelle.php:23
 msgid "Portal"
-msgstr "Portale"
+msgstr "Portal"
 
 #: includes/tabs/tab-settings-5stelle.php:43
 #: includes/tabs/tab-settings-begenius.php:44
@@ -458,7 +460,7 @@ msgstr "Portale"
 #: includes/tabs/tab-settings-witbooking.php:67
 #: includes/tabs/tab-settings-wubook.php:74
 msgid "Form settings"
-msgstr "Impostazioni del modulo"
+msgstr "Ajustes del formulario"
 
 #: includes/tabs/tab-settings-5stelle.php:47
 #: includes/tabs/tab-settings-begenius.php:48
@@ -491,7 +493,7 @@ msgstr "Impostazioni del modulo"
 #: includes/tabs/tab-settings-witbooking.php:71
 #: includes/tabs/tab-settings-wubook.php:78
 msgid "Target"
-msgstr "Obiettivo"
+msgstr "Destino"
 
 #: includes/tabs/tab-settings-5stelle.php:55
 #: includes/tabs/tab-settings-begenius.php:56
@@ -524,7 +526,7 @@ msgstr "Obiettivo"
 #: includes/tabs/tab-settings-witbooking.php:79
 #: includes/tabs/tab-settings-wubook.php:86
 msgid "New window or tab"
-msgstr "Nuova finestra o scheda"
+msgstr "Ventana o pestaña nueva"
 
 #: includes/tabs/tab-settings-5stelle.php:56
 #: includes/tabs/tab-settings-begenius.php:57
@@ -557,7 +559,7 @@ msgstr "Nuova finestra o scheda"
 #: includes/tabs/tab-settings-witbooking.php:80
 #: includes/tabs/tab-settings-wubook.php:87
 msgid "Same window or tab"
-msgstr "Stessa finestra o scheda"
+msgstr "Misma ventana o pestaña"
 
 #: includes/tabs/tab-settings-5stelle.php:83
 #: includes/tabs/tab-settings-begenius.php:85
@@ -602,7 +604,7 @@ msgstr "Stessa finestra o scheda"
 #: templates/verticalbooking.php:77 templates/witbooking.php:76
 #: templates/wubook.php:90
 msgid "Adults"
-msgstr "Adulti"
+msgstr "Adultos"
 
 #: includes/tabs/tab-settings-5stelle.php:86
 #: includes/tabs/tab-settings-5stelle.php:174
@@ -706,7 +708,7 @@ msgstr "Adulti"
 #: includes/tabs/tab-settings-wubook.php:298
 #: includes/tabs/tab-settings-wubook.php:386
 msgid "Enable"
-msgstr "Attivo"
+msgstr "Activar"
 
 #: includes/tabs/tab-settings-5stelle.php:87
 #: includes/tabs/tab-settings-5stelle.php:175
@@ -810,7 +812,7 @@ msgstr "Attivo"
 #: includes/tabs/tab-settings-wubook.php:299
 #: includes/tabs/tab-settings-wubook.php:387
 msgid "Check to enable"
-msgstr "Seleziona per abilitare"
+msgstr "Marca para activar"
 
 #: includes/tabs/tab-settings-5stelle.php:108
 #: includes/tabs/tab-settings-begenius.php:110
@@ -842,7 +844,7 @@ msgstr "Seleziona per abilitare"
 #: includes/tabs/tab-settings-witbooking.php:133
 #: includes/tabs/tab-settings-wubook.php:140
 msgid "Default Adults"
-msgstr "Predefinito Adulti"
+msgstr "Adultos por defecto"
 
 #: includes/tabs/tab-settings-5stelle.php:136
 #: includes/tabs/tab-settings-begenius.php:141
@@ -874,7 +876,7 @@ msgstr "Predefinito Adulti"
 #: includes/tabs/tab-settings-witbooking.php:164
 #: includes/tabs/tab-settings-wubook.php:171
 msgid "Max Adults"
-msgstr "Massimo Adulti"
+msgstr "Máximo de adultos"
 
 #: includes/tabs/tab-settings-5stelle.php:171
 #: includes/tabs/tab-settings-begenius.php:176
@@ -918,7 +920,7 @@ msgstr "Massimo Adulti"
 #: templates/synxis.php:103 templates/verticalbooking.php:107
 #: templates/witbooking.php:105 templates/wubook.php:140
 msgid "Children"
-msgstr "Bambini"
+msgstr "Niños"
 
 #: includes/tabs/tab-settings-5stelle.php:196
 #: includes/tabs/tab-settings-begenius.php:201
@@ -949,7 +951,7 @@ msgstr "Bambini"
 #: includes/tabs/tab-settings-witbooking.php:225
 #: includes/tabs/tab-settings-wubook.php:320
 msgid "Default children"
-msgstr "Predefinito Bambini"
+msgstr "Niños por defecto"
 
 #: includes/tabs/tab-settings-5stelle.php:224
 #: includes/tabs/tab-settings-begenius.php:229
@@ -980,7 +982,7 @@ msgstr "Predefinito Bambini"
 #: includes/tabs/tab-settings-witbooking.php:253
 #: includes/tabs/tab-settings-wubook.php:348
 msgid "Max children"
-msgstr "Massimo bambini"
+msgstr "Máximo de niños"
 
 #: includes/tabs/tab-settings-5stelle.php:259
 #: includes/tabs/tab-settings-begenius.php:264
@@ -999,19 +1001,19 @@ msgstr "Massimo bambini"
 #: includes/tabs/tab-settings-synxis.php:311
 #: includes/tabs/tab-settings-verticalbooking.php:294
 msgid "Children age"
-msgstr "Età bambini"
+msgstr "Edad de los niños"
 
 #: includes/tabs/tab-settings-5stelle.php:284
 #: includes/tabs/tab-settings-iperbooking.php:485
 #: includes/tabs/tab-settings-passepartout.php:300
 msgid "Min child age"
-msgstr "Età minima del bambino"
+msgstr "Edad mínima del niño"
 
 #: includes/tabs/tab-settings-5stelle.php:315
 #: includes/tabs/tab-settings-iperbooking.php:516
 #: includes/tabs/tab-settings-passepartout.php:331
 msgid "Max child age"
-msgstr "Età massima dei bambini"
+msgstr "Edad máxima del niño"
 
 #: includes/tabs/tab-settings-5stelle.php:354
 #: includes/tabs/tab-settings-begenius.php:388
@@ -1046,7 +1048,7 @@ msgstr "Età massima dei bambini"
 #: includes/tabs/tab-settings-witbooking.php:410
 #: includes/tabs/tab-settings-wubook.php:475
 msgid "Label"
-msgstr "Etichetta"
+msgstr "Etiqueta"
 
 #: includes/tabs/tab-settings-5stelle.php:355
 #: includes/tabs/tab-settings-begenius.php:389
@@ -1079,7 +1081,7 @@ msgstr "Etichetta"
 #: includes/tabs/tab-settings-witbooking.php:411
 #: includes/tabs/tab-settings-wubook.php:476
 msgid "The default value is Search."
-msgstr "Il valore predefinito è Cerca."
+msgstr "El valor por defecto es Buscar."
 
 #: includes/tabs/tab-settings-5stelle.php:358
 #: includes/tabs/tab-settings-begenius.php:392
@@ -1126,20 +1128,20 @@ msgstr "Il valore predefinito è Cerca."
 #: templates/verticalbooking.php:170 templates/witbooking.php:182
 #: templates/wubook.php:188
 msgid "Search"
-msgstr "Cerca"
+msgstr "Buscar"
 
 #: includes/tabs/tab-settings-begenius.php:23
 #: includes/tabs/tab-settings-roiback.php:40
 msgid "Hotel code"
-msgstr "Codice hotel"
+msgstr "Código del hotel"
 
 #: includes/tabs/tab-settings-begenius.php:24
 msgid ""
 "Found in your BeGenius booking engine address: secure.begenius.it/"
 "bookingenius/hotel_web/en/HOTEL-CODE/"
 msgstr ""
-"Si trova nell'indirizzo del tuo booking engine BeGenius: secure.begenius.it/"
-"bookingenius/hotel_web/it/CODICE-HOTEL/"
+"Se encuentra en la dirección de tu motor de reservas BeGenius: "
+"secure.begenius.it/bookingenius/hotel_web/en/HOTEL-CODE/"
 
 #: includes/tabs/tab-settings-begenius.php:289
 #: includes/tabs/tab-settings-blastness.php:319
@@ -1155,7 +1157,7 @@ msgstr ""
 #: includes/tabs/tab-settings-synxis.php:337
 #: includes/tabs/tab-settings-verticalbooking.php:319
 msgid "Min children age"
-msgstr "Età minima dei bambini"
+msgstr "Edad mínima de los niños"
 
 #: includes/tabs/tab-settings-begenius.php:320
 #: includes/tabs/tab-settings-blastness.php:350
@@ -1171,7 +1173,7 @@ msgstr "Età minima dei bambini"
 #: includes/tabs/tab-settings-synxis.php:368
 #: includes/tabs/tab-settings-verticalbooking.php:350
 msgid "Max children age"
-msgstr "Età massima dei bambini"
+msgstr "Edad máxima de los niños"
 
 #: includes/tabs/tab-settings-begenius.php:355
 #: includes/tabs/tab-settings-bookingexpert.php:123
@@ -1186,7 +1188,7 @@ msgstr "Età massima dei bambini"
 #: templates/octorate.php:163 templates/roiback.php:171
 #: templates/simplebooking.php:160
 msgid "Coupon"
-msgstr "Buono sconto"
+msgstr "Cupón"
 
 #: includes/tabs/tab-settings-blastness.php:23
 #: includes/tabs/tab-settings-verticalbooking.php:23
@@ -1212,7 +1214,7 @@ msgid ""
 "The number after layout= in the booking engine address: https://"
 "be.bookingexpert.it/book/home/index?layout=<layout>"
 msgstr ""
-"Il numero dopo layout= nell'indirizzo del booking engine: https://"
+"El número después de layout= en la dirección del motor de reservas: https://"
 "be.bookingexpert.it/book/home/index?layout=<layout>"
 
 #: includes/tabs/tab-settings-bookingexpert.php:41
@@ -1229,20 +1231,20 @@ msgstr ""
 #: includes/tabs/tab-settings-synxis.php:58
 #: includes/tabs/tab-settings-wubook.php:40
 msgid "Currency"
-msgstr "Valuta"
+msgstr "Moneda"
 
 #: includes/tabs/tab-settings-bookingexpert.php:116
 msgid "Guests"
-msgstr "Ospiti"
+msgstr "Huéspedes"
 
 #: includes/tabs/tab-settings-bookingexpert.php:117
 msgid ""
 "Guests are chosen on the Booking Expert booking engine: their types are "
 "numeric codes, different for every property, so the form does not send them."
 msgstr ""
-"Gli ospiti si scelgono sul booking engine Booking Expert: i tipi di ospite "
-"sono codici numerici, diversi per ogni struttura, quindi il modulo non li "
-"invia."
+"Los huéspedes se eligen en el motor de reservas de Booking Expert: sus tipos "
+"son códigos numéricos, distintos en cada alojamiento, por lo que el "
+"formulario no los envía."
 
 #: includes/tabs/tab-settings-cloudbeds.php:23
 #: includes/tabs/tab-settings-dedge.php:23
@@ -1255,7 +1257,7 @@ msgstr ""
 #: includes/tabs/tab-settings-thinkreservations.php:23
 #: includes/tabs/tab-settings-witbooking.php:23
 msgid "Booking engine address"
-msgstr "Indirizzo del booking engine"
+msgstr "Dirección del motor de reservas"
 
 #: includes/tabs/tab-settings-cloudbeds.php:24
 msgid ""
@@ -1264,16 +1266,16 @@ msgid ""
 "as https://us2.cloudbeds.com/reservation/AbCdEf. The language of the address "
 "is replaced with the one of the page."
 msgstr ""
-"L'indirizzo del tuo booking engine Cloudbeds, così com'è: https://"
-"hotels.cloudbeds.com/it/reservation/AbCdEf, oppure quello della tua area, "
-"come https://us2.cloudbeds.com/reservation/AbCdEf. La lingua dell'indirizzo "
-"viene sostituita con quella della pagina."
+"La dirección de tu motor de reservas Cloudbeds, tal cual: https://"
+"hotels.cloudbeds.com/es/reservation/AbCdEf, o la de tu región, como https://"
+"us2.cloudbeds.com/reservation/AbCdEf. El idioma de la dirección se sustituye "
+"por el de la página."
 
 #: includes/tabs/tab-settings-cloudbeds.php:41
 #: includes/tabs/tab-settings-ihotelier.php:41
 #: includes/tabs/tab-settings-witbooking.php:41
 msgid "Language"
-msgstr "Lingua"
+msgstr "Idioma"
 
 #: includes/tabs/tab-settings-cloudbeds.php:42
 msgid ""
@@ -1282,16 +1284,16 @@ msgid ""
 "when Cloudbeds does not have that language. Only the languages of the list "
 "are used, because any other one gives a page not found."
 msgstr ""
-"Automatico è la scelta giusta quando il sito ha più lingue: il booking "
-"engine si apre nella lingua della pagina e ricade sull'inglese quando "
-"Cloudbeds non ha quella lingua. Si usano solo le lingue dell'elenco, perché "
-"qualunque altra dà una pagina non trovata."
+"Automático es la opción correcta cuando el sitio tiene más de un idioma: el "
+"motor de reservas se abre en el idioma de la página y recurre al inglés "
+"cuando Cloudbeds no tiene ese idioma. Solo se usan los idiomas de la lista, "
+"porque cualquier otro da una página no encontrada."
 
 #: includes/tabs/tab-settings-cloudbeds.php:52
 #: includes/tabs/tab-settings-ihotelier.php:52
 #: includes/tabs/tab-settings-witbooking.php:52
 msgid "Automatic: the language of the page"
-msgstr "Automatica: la lingua della pagina"
+msgstr "Automático: el idioma de la página"
 
 #: includes/tabs/tab-settings-cloudbeds.php:231
 msgid ""
@@ -1299,9 +1301,9 @@ msgid ""
 "children is sent, and guests set the ages on the booking engine when the "
 "property uses them."
 msgstr ""
-"Cloudbeds non ha le età dei bambini nell'indirizzo di prenotazione: viene "
-"inviato solo il numero di bambini, e gli ospiti indicano le età sul booking "
-"engine quando la struttura le usa."
+"Cloudbeds no admite edades de niños en la dirección de reserva: solo se "
+"envía el número de niños, y los huéspedes indican las edades en el motor de "
+"reservas cuando el alojamiento las usa."
 
 #: includes/tabs/tab-settings-cloudbeds.php:320
 #: includes/tabs/tab-settings-datasistemi.php:295
@@ -1319,7 +1321,7 @@ msgstr ""
 #: templates/synxis.php:168 templates/thinkreservations.php:106
 #: templates/witbooking.php:165
 msgid "Promo code"
-msgstr "Codice promozionale"
+msgstr "Código promocional"
 
 #: includes/tabs/tab-settings-datasistemi.php:23
 msgid "idstr"
@@ -1330,8 +1332,8 @@ msgid ""
 "Children ages cannot be passed to the Data Sistemi booking engine: guests "
 "can set them on the booking page."
 msgstr ""
-"Le età dei bambini non possono essere passate al booking engine Data "
-"Sistemi: gli ospiti potranno indicarle nella pagina di prenotazione."
+"Las edades de los niños no se pueden pasar al motor de reservas de Data "
+"Sistemi: los huéspedes pueden indicarlas en la página de reserva."
 
 #: includes/tabs/tab-settings-dedge.php:24
 msgid ""
@@ -1340,18 +1342,18 @@ msgid ""
 "en-US/DateSelection or https://www.book-secure.com/index.php?"
 "s=results&property=abcd12345"
 msgstr ""
-"L'indirizzo del tuo booking engine D-EDGE, così com'è. Sono supportate "
-"entrambe le generazioni: https://www.secure-hotel-booking.com/d-edge/My-"
-"Hotel/ABCD/12345/it-IT/DateSelection oppure https://www.book-secure.com/"
-"index.php?s=results&property=abcd12345"
+"La dirección de tu motor de reservas D-EDGE, tal cual. Se admiten ambas "
+"generaciones: https://www.secure-hotel-booking.com/d-edge/My-Hotel/ABCD/"
+"12345/es-ES/DateSelection o https://www.book-secure.com/index.php?"
+"s=results&property=abcd12345"
 
 #: includes/tabs/tab-settings-dedge.php:266
 msgid ""
 "The ages are optional: without them D-EDGE searches for the number of "
 "children only, and asks for the ages when the rates need them."
 msgstr ""
-"Le età sono facoltative: senza, D-EDGE cerca solo per numero di bambini e "
-"chiede le età quando le tariffe ne hanno bisogno."
+"Las edades son opcionales: sin ellas D-EDGE busca solo por número de niños y "
+"las pide cuando las tarifas las necesitan."
 
 #: includes/tabs/tab-settings-ericsoft.php:23
 msgid "idh"
@@ -1362,8 +1364,8 @@ msgid ""
 "The age ranges of children and infants depend on the age categories "
 "configured in your Ericsoft booking engine."
 msgstr ""
-"Le fasce di età di bambini e neonati dipendono dalle categorie di età "
-"configurate nel tuo booking engine Ericsoft."
+"Los rangos de edad de niños y bebés dependen de las categorías de edad "
+"configuradas en tu motor de reservas Ericsoft."
 
 #: includes/tabs/tab-settings-ericsoft.php:295
 #: includes/tabs/tab-settings-revplus.php:312
@@ -1372,25 +1374,25 @@ msgstr ""
 #: templates/revplus.php:136 templates/siteminder.php:131
 #: templates/witbooking.php:134
 msgid "Infants"
-msgstr "Neonati"
+msgstr "Bebés"
 
 #: includes/tabs/tab-settings-ericsoft.php:320
 #: includes/tabs/tab-settings-revplus.php:338
 #: includes/tabs/tab-settings-siteminder.php:322
 #: includes/tabs/tab-settings-witbooking.php:314
 msgid "Default Infants"
-msgstr "Predefinito Neonati"
+msgstr "Bebés por defecto"
 
 #: includes/tabs/tab-settings-ericsoft.php:348
 #: includes/tabs/tab-settings-revplus.php:366
 #: includes/tabs/tab-settings-siteminder.php:350
 #: includes/tabs/tab-settings-witbooking.php:342
 msgid "Max Infants"
-msgstr "Massimo Neonati"
+msgstr "Máximo de bebés"
 
 #: includes/tabs/tab-settings-guestline.php:23
 msgid "Site code"
-msgstr "Codice del sito"
+msgstr "Código del sitio"
 
 #: includes/tabs/tab-settings-guestline.php:24
 msgid ""
@@ -1398,9 +1400,9 @@ msgid ""
 "booking.eu.guestline.app/<Site code>/availability. The whole address can be "
 "pasted, also an old one of the form <code>.dbm.guestline.net."
 msgstr ""
-"Il codice nell'indirizzo del booking engine, prima di /availability: https://"
-"booking.eu.guestline.app/<Codice del sito>/availability. Si può incollare "
-"l'indirizzo intero, anche uno vecchio nella forma <codice>.dbm.guestline.net."
+"El código de la dirección del motor de reservas, antes de /availability: "
+"https://booking.eu.guestline.app/<Site code>/availability. Se puede pegar la "
+"dirección entera, también una antigua con la forma <code>.dbm.guestline.net."
 
 #: includes/tabs/tab-settings-guestline.php:40
 #: includes/tabs/tab-settings-synxis.php:23
@@ -1412,24 +1414,24 @@ msgid ""
 "The code after hotel= in the same address. Both codes are in the booking "
 "link the property already uses on its website."
 msgstr ""
-"Il codice dopo hotel= nello stesso indirizzo. Entrambi i codici sono nel "
-"link di prenotazione che la struttura usa già sul proprio sito."
+"El código después de hotel= en la misma dirección. Ambos códigos están en el "
+"enlace de reserva que el alojamiento ya usa en su web."
 
 #: includes/tabs/tab-settings-guestline.php:194
 msgid ""
 "Guestline has no children ages, infants or number of rooms in the booking "
 "address: guests set them on the booking engine when the property uses them."
 msgstr ""
-"Guestline non ha età dei bambini, neonati o numero di camere nell'indirizzo "
-"di prenotazione: gli ospiti li indicano sul booking engine, quando la "
-"struttura li usa."
+"Guestline no admite edades de niños, bebés ni número de habitaciones en la "
+"dirección de reserva: los huéspedes los indican en el motor de reservas "
+"cuando el alojamiento los usa."
 
 #: includes/tabs/tab-settings-hotelnetsolutions.php:24
 msgid ""
 "The address of your OnePageBooking booking engine, as it is: https://"
 "onepagebooking.com/myhotel"
 msgstr ""
-"L'indirizzo del tuo booking engine OnePageBooking, così com'è: https://"
+"La dirección de tu motor de reservas OnePageBooking, tal cual: https://"
 "onepagebooking.com/myhotel"
 
 #: includes/tabs/tab-settings-hotelnetsolutions.php:266
@@ -1437,8 +1439,8 @@ msgid ""
 "The ages are optional: without them OnePageBooking searches for the number "
 "of children only, and asks for the ages on its own page."
 msgstr ""
-"Le età sono facoltative: senza, OnePageBooking cerca solo per numero di "
-"bambini e chiede le età nella sua pagina."
+"Las edades son opcionales: sin ellas OnePageBooking busca solo por número de "
+"niños y las pide en su propia página."
 
 #: includes/tabs/tab-settings-ihotelier.php:24
 msgid ""
@@ -1446,9 +1448,9 @@ msgid ""
 "reservations.travelclick.com/12345. The number is the code of your property, "
 "the same the address repeats in HotelId."
 msgstr ""
-"L'indirizzo del tuo booking engine iHotelier, così com'è: https://"
-"reservations.travelclick.com/12345. Il numero è il codice della tua "
-"struttura, lo stesso che l'indirizzo ripete in HotelId."
+"La dirección de tu motor de reservas iHotelier, tal cual: https://"
+"reservations.travelclick.com/12345. El número es el código de tu "
+"alojamiento, el mismo que la dirección repite en HotelId."
 
 #: includes/tabs/tab-settings-ihotelier.php:42
 msgid ""
@@ -1456,9 +1458,9 @@ msgid ""
 "booking engine opens in the language of the page. A language your property "
 "does not have opens in English, without errors."
 msgstr ""
-"Automatico è la scelta giusta quando il sito ha più lingue: il booking "
-"engine si apre nella lingua della pagina. Una lingua che la tua struttura "
-"non ha si apre in inglese, senza errori."
+"Automático es la opción correcta cuando el sitio tiene más de un idioma: el "
+"motor de reservas se abre en el idioma de la página. Un idioma que tu "
+"alojamiento no tiene se abre en inglés, sin errores."
 
 #: includes/tabs/tab-settings-ihotelier.php:231
 msgid ""
@@ -1466,9 +1468,9 @@ msgid ""
 "their ages, but the format of that parameter could not be verified, so "
 "guests set the ages on the booking engine."
 msgstr ""
-"Il plugin invia solo il numero di bambini: il booking engine accetta anche "
-"le loro età, ma non è stato possibile verificare il formato di quel "
-"parametro, quindi le età si indicano sul booking engine."
+"El plugin envía solo el número de niños: el motor de reservas también admite "
+"sus edades, pero no se ha podido verificar el formato de ese parámetro, por "
+"lo que las edades se indican en el motor de reservas."
 
 #: includes/tabs/tab-settings-iperbooking.php:23
 msgid "idHotel"
@@ -1476,16 +1478,16 @@ msgstr "idHotel"
 
 #: includes/tabs/tab-settings-iperbooking.php:80
 msgid "Language settings"
-msgstr "Impostazioni della lingua"
+msgstr "Ajustes de idioma"
 
 #: includes/tabs/tab-settings-iperbooking.php:89
 msgid "Language options"
-msgstr "Opzione lingue"
+msgstr "Opciones de idioma"
 
 #: includes/tabs/tab-settings-iperbooking.php:91
 #: includes/tabs/tab-settings-iperbooking.php:109
 msgid "Lang code"
-msgstr "Codice lingua"
+msgstr "Código de idioma"
 
 #: includes/tabs/tab-settings-iperbooking.php:92
 #: includes/tabs/tab-settings-iperbooking.php:113
@@ -1495,95 +1497,95 @@ msgstr "URL"
 #: includes/tabs/tab-settings-iperbooking.php:95
 #: includes/tabs/tab-settings-iperbooking.php:209
 msgid "Add new option"
-msgstr "Aggiungi una nuova opzione"
+msgstr "Añadir nueva opción"
 
 #: includes/tabs/tab-settings-iperbooking.php:106
 #: includes/tabs/tab-settings-iperbooking.php:139
 msgid "Language option"
-msgstr "Opzione lingua"
+msgstr "Opción de idioma"
 
 #: includes/tabs/tab-settings-iperbooking.php:130
 #: includes/tabs/tab-settings-iperbooking.php:244
 msgid "Delete"
-msgstr "Elimina"
+msgstr "Eliminar"
 
 #: includes/tabs/tab-settings-iperbooking.php:170
 msgid "Treatments"
-msgstr "Trattamenti"
+msgstr "Regímenes"
 
 #: includes/tabs/tab-settings-iperbooking.php:173
 msgid "Visible"
-msgstr "Visibile"
+msgstr "Visible"
 
 #: includes/tabs/tab-settings-iperbooking.php:174
 msgid "Check to show"
-msgstr "Spunta per mostrare"
+msgstr "Marca para mostrar"
 
 #: includes/tabs/tab-settings-iperbooking.php:194
 msgid "Treatment options"
-msgstr "Opzioni di trattamento"
+msgstr "Opciones de régimen"
 
 #: includes/tabs/tab-settings-iperbooking.php:203
 msgid "Options"
-msgstr "Opzioni"
+msgstr "Opciones"
 
 #: includes/tabs/tab-settings-iperbooking.php:204
 msgid "Option example"
-msgstr "Esempio di opzione"
+msgstr "Ejemplo de opción"
 
 #: includes/tabs/tab-settings-iperbooking.php:205
 #: includes/tabs/tab-settings-iperbooking.php:256
 msgid "Value"
-msgstr "Valore"
+msgstr "Valor"
 
 #: includes/tabs/tab-settings-iperbooking.php:551
 #: includes/tabs/tab-settings-passepartout.php:367
 #: templates/iperbooking.php:194 templates/passepartout.php:168
 msgid "Discount code"
-msgstr "Codice sconto"
+msgstr "Código de descuento"
 
 #: includes/tabs/tab-settings-journey.php:23
 #: includes/tabs/tab-settings-revplus.php:23
 #: includes/tabs/tab-settings-siteminder.php:23
 msgid "Property name"
-msgstr "Nome della struttura"
+msgstr "Nombre del alojamiento"
 
 #: includes/tabs/tab-settings-journey.php:24
 msgid ""
 "The name before .onejourney.travel in the booking engine address: https://"
 "<Property name>.onejourney.travel/rooms. The whole address can be pasted."
 msgstr ""
-"Il nome prima di .onejourney.travel nell'indirizzo del booking engine: "
-"https://<Nome della struttura>.onejourney.travel/rooms. Si può incollare "
-"l'indirizzo intero."
+"El nombre antes de .onejourney.travel en la dirección del motor de reservas: "
+"https://<Property name>.onejourney.travel/rooms. Se puede pegar la dirección "
+"entera."
 
 #: includes/tabs/tab-settings-journey.php:177
 msgid ""
 "Journey has no children ages in the booking address: only the number of "
 "children is sent."
 msgstr ""
-"Journey non ha le età dei bambini nell'indirizzo di prenotazione: viene "
-"inviato solo il loro numero."
+"Journey no admite edades de niños en la dirección de reserva: solo se envía "
+"el número de niños."
 
 #: includes/tabs/tab-settings-mews.php:23
 msgid "Configuration ID"
-msgstr "ID di configurazione"
+msgstr "ID de configuración"
 
 #: includes/tabs/tab-settings-mews.php:24
 msgid ""
 "The code at the end of the booking engine address: https://app.mews.com/"
 "distributor/<Configuration ID>"
 msgstr ""
-"Il codice alla fine dell'indirizzo del booking engine: https://app.mews.com/"
-"distributor/<ID di configurazione>"
+"El código al final de la dirección del motor de reservas: https://"
+"app.mews.com/distributor/<Configuration ID>"
 
 #: includes/tabs/tab-settings-mews.php:207
 msgid ""
 "Children ages cannot be passed to the Mews booking engine: guests can set "
 "them on the booking page."
 msgstr ""
-"Le età dei bambini non possono essere passate al booking engine Mews: gli "
-"ospiti potranno indicarle nella pagina di prenotazione."
+"Las edades de los niños no se pueden pasar al motor de reservas de Mews: los "
+"huéspedes pueden indicarlas en la página de reserva."
 
 #: includes/tabs/tab-settings-mirai.php:24
 msgid ""
@@ -1591,8 +1593,8 @@ msgid ""
 "reservation.mirai.com/CODE/reservation/miraiFrontDispatcher.htm?"
 "lang=es&idtokenprovider=12345678"
 msgstr ""
-"L'indirizzo del tuo booking engine Mirai, così com'è: https://"
-"reservation.mirai.com/CODICE/reservation/miraiFrontDispatcher.htm?"
+"La dirección de tu motor de reservas Mirai, tal cual: https://"
+"reservation.mirai.com/CODE/reservation/miraiFrontDispatcher.htm?"
 "lang=es&idtokenprovider=12345678"
 
 #: includes/tabs/tab-settings-mirai.php:296
@@ -1600,8 +1602,8 @@ msgid ""
 "Mirai sends the guests as the ages of the children: enable it when Children "
 "is enabled, otherwise the children are not sent."
 msgstr ""
-"Mirai invia gli ospiti indicando le età dei bambini: va attivata quando è "
-"attivata la sezione Bambini, altrimenti i bambini non vengono inviati."
+"Mirai envía los huéspedes como las edades de los niños: actívalas cuando "
+"Niños esté activo, de lo contrario los niños no se envían."
 
 #: includes/tabs/tab-settings-myguestcare.php:23
 msgid "idcliente"
@@ -1616,7 +1618,7 @@ msgid ""
 "The number after codice= in the booking engine address: https://"
 "book.octorate.com/octobook/site/reservation/index.xhtml?codice=<codice>"
 msgstr ""
-"Il numero dopo codice= nell'indirizzo del booking engine: https://"
+"El número después de codice= en la dirección del motor de reservas: https://"
 "book.octorate.com/octobook/site/reservation/index.xhtml?codice=<codice>"
 
 #: includes/tabs/tab-settings-octorate.php:295
@@ -1624,8 +1626,8 @@ msgid ""
 "Enable it when the property has children rates by age: Octorate needs the "
 "age of each child to show the right rates."
 msgstr ""
-"Da attivare quando la struttura ha tariffe per età dei bambini: Octorate ha "
-"bisogno dell'età di ogni bambino per mostrare le tariffe corrette."
+"Actívalo cuando el alojamiento tenga tarifas de niños por edad: Octorate "
+"necesita la edad de cada niño para mostrar las tarifas correctas."
 
 #: includes/tabs/tab-settings-passepartout.php:23
 msgid "Albergo"
@@ -1640,28 +1642,28 @@ msgid ""
 "The address of your Reservit booking engine, as it is: https://"
 "secure.reservit.com/fo/booking/12345/67890/dates?langcode=FR"
 msgstr ""
-"L'indirizzo del tuo booking engine Reservit, così com'è: https://"
-"secure.reservit.com/fo/booking/12345/67890/dates?langcode=IT"
+"La dirección de tu motor de reservas Reservit, tal cual: https://"
+"secure.reservit.com/fo/booking/12345/67890/dates?langcode=ES"
 
 #: includes/tabs/tab-settings-reservit.php:266
 msgid ""
 "Reservit sends the guests as the ages of the children: enable it when "
 "Children is enabled, otherwise the children are not sent."
 msgstr ""
-"Reservit invia gli ospiti come età dei bambini: attivale quando Bambini è "
-"attivo, altrimenti i bambini non vengono inviati."
+"Reservit envía los huéspedes como las edades de los niños: actívalas cuando "
+"Niños esté activo, de lo contrario los niños no se envían."
 
 #: includes/tabs/tab-settings-resnexus.php:24
 msgid ""
 "The address of your ResNexus booking engine, as it is: https://resnexus.com/"
 "resnexus/reservations/book/ABCDEF12-3456-7890-ABCD-EF1234567890"
 msgstr ""
-"L'indirizzo del tuo booking engine ResNexus, così com'è: https://"
+"La dirección de tu motor de reservas ResNexus, tal cual: https://"
 "resnexus.com/resnexus/reservations/book/ABCDEF12-3456-7890-ABCD-EF1234567890"
 
 #: includes/tabs/tab-settings-resnexus.php:41
 msgid "Children capacity number"
-msgstr "Numero di capacità dei bambini"
+msgstr "Número de capacidad de los niños"
 
 #: includes/tabs/tab-settings-resnexus.php:42
 msgid ""
@@ -1670,21 +1672,21 @@ msgid ""
 "adding ?Capacity2=1 to its address and look at which line goes up in the "
 "guests menu; if it is not the children one, try 3 and then 4."
 msgstr ""
-"Nel booking engine i tipi di ospite dopo gli adulti sono numerati: due è il "
-"numero abituale di quello dei bambini. Per esserne certo, apri il tuo "
-"booking engine aggiungendo ?Capacity2=1 al suo indirizzo e guarda quale riga "
-"sale nel menu degli ospiti; se non è quella dei bambini, prova 3 e poi 4."
+"En el motor de reservas los tipos de huésped después de los adultos están "
+"numerados: dos es el número habitual del de los niños. Para asegurarte, abre "
+"tu motor de reservas añadiendo ?Capacity2=1 a su dirección y mira qué línea "
+"sube en el menú de huéspedes; si no es la de los niños, prueba 3 y luego 4."
 
 #: includes/tabs/tab-settings-resnexus.php:73
 msgid "Pets capacity number"
-msgstr "Numero di capacità degli animali"
+msgstr "Número de capacidad de las mascotas"
 
 
 #: includes/tabs/tab-settings-resnexus.php:74
 msgid ""
 "The same numbering as the children: three is the usual number of the pets "
 "one. Leave Pets disabled below if your property does not take them."
-msgstr "La stessa numerazione dei bambini: tre è il numero abituale di quello degli animali. Lascia Animali disattivato qui sotto se la tua struttura non li accetta."
+msgstr "La misma numeración que la de los niños: tres es el número habitual del de las mascotas. Deja Mascotas desactivado más abajo si tu alojamiento no las admite."
 
 
 #: includes/tabs/tab-settings-resnexus.php:242
@@ -1692,22 +1694,22 @@ msgid ""
 "ResNexus has no children ages in the booking address: only the number of "
 "children is sent, in the capacity slot chosen above."
 msgstr ""
-"ResNexus non ha le età dei bambini nell'indirizzo di prenotazione: viene "
-"inviato solo il numero di bambini, nello slot di capacità scelto qui sopra."
+"ResNexus no admite edades de niños en la dirección de reserva: solo se envía "
+"el número de niños, en el espacio de capacidad elegido arriba."
 
 #: includes/tabs/tab-settings-resnexus.php:330 templates/resnexus.php:133
 msgid "Pets"
-msgstr "Animali"
+msgstr "Mascotas"
 
 
 #: includes/tabs/tab-settings-resnexus.php:355
 msgid "Default pets"
-msgstr "Animali predefiniti"
+msgstr "Mascotas por defecto"
 
 
 #: includes/tabs/tab-settings-resnexus.php:383
 msgid "Max pets"
-msgstr "Massimo di animali"
+msgstr "Máximo de mascotas"
 
 
 #: includes/tabs/tab-settings-revplus.php:24
@@ -1717,11 +1719,11 @@ msgid ""
 "address of the property, such as book.myhotel.com, that address points to a "
 "reserve-online.net one: the property name is the one to enter here."
 msgstr ""
-"Il nome prima di .reserve-online.net nell'indirizzo del booking engine: "
-"https://<Nome della struttura>.reserve-online.net/. Quando il booking engine "
-"è su un indirizzo della struttura, come book.miohotel.com, quell'indirizzo "
-"punta a uno di reserve-online.net: il nome della struttura è quello da "
-"inserire qui."
+"El nombre antes de .reserve-online.net en la dirección del motor de "
+"reservas: https://<Property name>.reserve-online.net/. Cuando el motor de "
+"reservas está en una dirección del alojamiento, como book.myhotel.com, esa "
+"dirección apunta a una de reserve-online.net: el nombre del alojamiento es "
+"el que hay que indicar aquí."
 
 #: includes/tabs/tab-settings-revplus.php:40
 msgid "property"
@@ -1732,9 +1734,9 @@ msgid ""
 "Optional: the code of the hotel to open, for accounts with more than one. "
 "Empty searches all of them. A wrong code gives a \"page not found\" error."
 msgstr ""
-"Facoltativo: il codice dell'hotel da aprire, per gli account che ne hanno "
-"più di uno. Vuoto li cerca tutti. Un codice sbagliato dà un errore \"pagina "
-"non trovata\"."
+"Opcional: el código del hotel que se abrirá, para cuentas con más de uno. "
+"Vacío los busca todos. Un código incorrecto da un error de \"página no "
+"encontrada\"."
 
 #: includes/tabs/tab-settings-revplus.php:224
 msgid ""
@@ -1742,9 +1744,9 @@ msgid ""
 "only ignores these values, and guests would choose them for nothing. The age "
 "ranges are the ones configured in your RevPlus booking engine."
 msgstr ""
-"Attiva Bambini solo se la tua struttura li accetta: una struttura per soli "
-"adulti ignora questi valori e gli ospiti li sceglierebbero inutilmente. Le "
-"fasce di età sono quelle impostate nel tuo booking engine RevPlus."
+"Activa Niños solo si tu alojamiento los admite: un alojamiento solo para "
+"adultos ignora estos valores y los huéspedes los elegirían en vano. Los "
+"rangos de edad son los configurados en tu motor de reservas RevPlus."
 
 #: includes/tabs/tab-settings-revplus.php:313
 msgid ""
@@ -1752,21 +1754,21 @@ msgid ""
 "only ignores these values, and guests would choose them for nothing. The age "
 "ranges are the ones configured in your RevPlus booking engine."
 msgstr ""
-"Attiva Neonati solo se la tua struttura li accetta: una struttura per soli "
-"adulti ignora questi valori e gli ospiti li sceglierebbero inutilmente. Le "
-"fasce di età sono quelle impostate nel tuo booking engine RevPlus."
+"Activa Bebés solo si tu alojamiento los admite: un alojamiento solo para "
+"adultos ignora estos valores y los huéspedes los elegirían en vano. Los "
+"rangos de edad son los configurados en tu motor de reservas RevPlus."
 
 #: includes/tabs/tab-settings-revplus.php:401 templates/revplus.php:167
 msgid "Voucher"
-msgstr "Voucher"
+msgstr "Vale"
 
 #: includes/tabs/tab-settings-roiback.php:24
 msgid ""
 "The address of your Roiback booking engine, which is usually on your own "
 "domain: https://reservas.myhotel.com. The whole address can be pasted."
 msgstr ""
-"L'indirizzo del tuo booking engine Roiback, che di solito è sul tuo dominio: "
-"https://reservas.miohotel.com. Si può incollare l'indirizzo intero."
+"La dirección de tu motor de reservas Roiback, que suele estar en tu propio "
+"dominio: https://reservas.myhotel.com. Se puede pegar la dirección entera."
 
 #: includes/tabs/tab-settings-roiback.php:41
 msgid ""
@@ -1774,17 +1776,17 @@ msgid ""
 "website it is the value of the hotel field, after hotel_: in hotel_myhotel "
 "the code is myhotel. Your provider can tell you as well."
 msgstr ""
-"Il codice della struttura nel booking engine. Nel modulo di prenotazione del "
-"tuo sito è il valore del campo hotel, dopo hotel_: in hotel_miohotel il "
-"codice è miohotel. Può dirtelo anche il tuo fornitore."
+"El código del alojamiento en el motor de reservas. En el formulario de "
+"reserva de tu web es el valor del campo hotel, después de hotel_: en "
+"hotel_myhotel el código es myhotel. Tu proveedor también puede indicártelo."
 
 #: includes/tabs/tab-settings-roiback.php:282
 msgid ""
 "Roiback sends the guests with the ages of the children: enable it when "
 "Children is enabled, otherwise the children are sent without their ages."
 msgstr ""
-"Roiback invia gli ospiti con le età dei bambini: va attivata quando è "
-"attivata la sezione Bambini, altrimenti i bambini vengono inviati senza età."
+"Roiback envía los huéspedes con las edades de los niños: actívalas cuando "
+"Niños esté activo, de lo contrario los niños se envían sin sus edades."
 
 #: includes/tabs/tab-settings-scidoo.php:23
 msgid "cod"
@@ -1795,7 +1797,7 @@ msgid ""
 "The number after cod= in the booking engine address: https://www.scidoo.com/"
 "preventivov2/?cod=<cod>"
 msgstr ""
-"Il numero dopo cod= nell'indirizzo del booking engine: https://"
+"El número después de cod= en la dirección del motor de reservas: https://"
 "www.scidoo.com/preventivov2/?cod=<cod>"
 
 #: includes/tabs/tab-settings-scidoo.php:40
@@ -1807,16 +1809,16 @@ msgid ""
 "Optional: the sub-property to open, for accounts with more than one. Empty "
 "or 0 opens all of them."
 msgstr ""
-"Facoltativo: la struttura da aprire, per gli account che ne hanno più di "
-"una. Vuoto o 0 le apre tutte."
+"Opcional: la subestructura que se abrirá, para cuentas con más de una. Vacío "
+"o 0 las abre todas."
 
 #: includes/tabs/tab-settings-scidoo.php:282
 msgid ""
 "Scidoo receives the children as the list of their ages: it must be enabled "
 "when Children is enabled."
 msgstr ""
-"Scidoo riceve i bambini come elenco delle loro età: va attivata quando è "
-"attivata la sezione Bambini."
+"Scidoo recibe los niños como la lista de sus edades: debe estar activo "
+"cuando Niños esté activo."
 
 #: includes/tabs/tab-settings-simplebooking.php:23
 msgid "hid"
@@ -1828,9 +1830,9 @@ msgid ""
 "properties/<Property name>. The whole address can be pasted, also the "
 "app.thebookingbutton.com one."
 msgstr ""
-"L'ultima parte dell'indirizzo del booking engine: https://direct-book.com/"
-"properties/<Nome della struttura>. Si può incollare l'indirizzo intero, "
-"anche quello di app.thebookingbutton.com."
+"La última parte de la dirección del motor de reservas: https://direct-"
+"book.com/properties/<Property name>. Se puede pegar la dirección entera, "
+"también la de app.thebookingbutton.com."
 
 #: includes/tabs/tab-settings-siteminder.php:208
 msgid ""
@@ -1838,9 +1840,9 @@ msgid ""
 "only ignores these values, and guests would choose them for nothing. The age "
 "ranges are the ones configured in your SiteMinder booking engine."
 msgstr ""
-"Attiva Bambini solo se la tua struttura li accetta: una struttura per soli "
-"adulti ignora questi valori e gli ospiti li sceglierebbero inutilmente. Le "
-"fasce di età sono quelle impostate nel tuo booking engine SiteMinder."
+"Activa Niños solo si tu alojamiento los admite: un alojamiento solo para "
+"adultos ignora estos valores y los huéspedes los elegirían en vano. Los "
+"rangos de edad son los configurados en tu motor de reservas SiteMinder."
 
 #: includes/tabs/tab-settings-siteminder.php:297
 msgid ""
@@ -1848,16 +1850,16 @@ msgid ""
 "only ignores these values, and guests would choose them for nothing. The age "
 "ranges are the ones configured in your SiteMinder booking engine."
 msgstr ""
-"Attiva Neonati solo se la tua struttura li accetta: una struttura per soli "
-"adulti ignora questi valori e gli ospiti li sceglierebbero inutilmente. Le "
-"fasce di età sono quelle impostate nel tuo booking engine SiteMinder."
+"Activa Bebés solo si tu alojamiento los admite: un alojamiento solo para "
+"adultos ignora estos valores y los huéspedes los elegirían en vano. Los "
+"rangos de edad son los configurados en tu motor de reservas SiteMinder."
 
 #: includes/tabs/tab-settings-synxis.php:24
 msgid ""
 "The number after hotel= in the booking engine address: https://"
 "be.synxis.com/?hotel=<hotel>&chain=<chain>"
 msgstr ""
-"Il numero dopo hotel= nell'indirizzo del booking engine: https://"
+"El número después de hotel= en la dirección del motor de reservas: https://"
 "be.synxis.com/?hotel=<hotel>&chain=<chain>"
 
 #: includes/tabs/tab-settings-synxis.php:40
@@ -1869,24 +1871,24 @@ msgid ""
 "The number after chain= in the same address. Both codes are given by the "
 "booking engine: the whole address can be pasted in either field."
 msgstr ""
-"Il numero dopo chain= nello stesso indirizzo. Entrambi i codici li fornisce "
-"il booking engine: in ognuno dei due campi si può incollare l'indirizzo "
-"intero."
+"El número después de chain= en la misma dirección. Ambos códigos los da el "
+"motor de reservas: se puede pegar la dirección entera en cualquiera de los "
+"dos campos."
 
 #: includes/tabs/tab-settings-synxis.php:312
 msgid ""
 "Enable it to send the age of each child: without the ages SynXis asks the "
 "guests for them on its own page."
 msgstr ""
-"Da attivare per inviare l'età di ogni bambino: senza le età SynXis le chiede "
-"agli ospiti nella propria pagina."
+"Actívalo para enviar la edad de cada niño: sin las edades SynXis se las pide "
+"a los huéspedes en su propia página."
 
 #: includes/tabs/tab-settings-thinkreservations.php:24
 msgid ""
 "The address of your ThinkReservations booking engine, as it is: https://"
 "secure.thinkreservations.com/myproperty/reservations"
 msgstr ""
-"L'indirizzo del tuo booking engine ThinkReservations, così com'è: https://"
+"La dirección de tu motor de reservas ThinkReservations, tal cual: https://"
 "secure.thinkreservations.com/myproperty/reservations"
 
 #: includes/tabs/tab-settings-witbooking.php:24
@@ -1896,10 +1898,10 @@ msgid ""
 "such as https://reservations.myhotel.com/es/hotel/myhotel. The language of "
 "the address is replaced with the one of the page."
 msgstr ""
-"L'indirizzo del tuo booking engine Witbooking, così com'è: https://"
-"engine.witbooking.com/es/hotel/miohotel.com, oppure quello sul tuo dominio, "
-"per esempio https://reservations.miohotel.com/es/hotel/miohotel. La lingua "
-"dell'indirizzo viene sostituita con quella della pagina."
+"La dirección de tu motor de reservas Witbooking, tal cual: https://"
+"engine.witbooking.com/es/hotel/myhotel.com, o la de tu propio dominio, como "
+"https://reservations.myhotel.com/es/hotel/myhotel. El idioma de la dirección "
+"se sustituye por el de la página."
 
 #: includes/tabs/tab-settings-witbooking.php:42
 msgid ""
@@ -1908,26 +1910,26 @@ msgid ""
 "language only, choose a language your property has: when it does not have "
 "the one asked for, the booking engine opens in its own."
 msgstr ""
-"Automatica è la scelta giusta quando il sito ha più di una lingua: il "
-"booking engine si apre nella lingua della pagina. Su un sito in una lingua "
-"sola, scegli una lingua che la tua struttura ha: quando non ha quella "
-"richiesta, il booking engine si apre nella propria."
+"Automático es la opción correcta cuando el sitio tiene más de un idioma: el "
+"motor de reservas se abre en el idioma de la página. En un sitio con un solo "
+"idioma, elige un idioma que tenga tu alojamiento: cuando no tiene el que se "
+"pide, el motor de reservas se abre en el suyo."
 
 #: includes/tabs/tab-settings-witbooking.php:200
 msgid ""
 "Enable Children only if your property accepts them: the age ranges are the "
 "ones configured in your Witbooking booking engine."
 msgstr ""
-"Attiva Bambini solo se la tua struttura li accetta: le fasce di età sono "
-"quelle impostate nel tuo booking engine Witbooking."
+"Activa Niños solo si tu alojamiento los admite: los rangos de edad son los "
+"configurados en tu motor de reservas Witbooking."
 
 #: includes/tabs/tab-settings-witbooking.php:289
 msgid ""
 "Enable Infants only if your property accepts them: the age ranges are the "
 "ones configured in your Witbooking booking engine."
 msgstr ""
-"Attiva Neonati solo se la tua struttura li accetta: le fasce di età sono "
-"quelle impostate nel tuo booking engine Witbooking."
+"Activa Bebés solo si tu alojamiento los admite: los rangos de edad son los "
+"configurados en tu motor de reservas Witbooking."
 
 #: includes/tabs/tab-settings-wubook.php:23
 msgid "ep"
@@ -1935,35 +1937,35 @@ msgstr "ep"
 
 #: includes/tabs/tab-settings-wubook.php:206 templates/wubook.php:115
 msgid "Teens"
-msgstr "Ragazzi"
+msgstr "Adolescentes"
 
 #: includes/tabs/tab-settings-wubook.php:207
 msgid ""
 "The age ranges of teens, children and babies depend on the age categories "
 "configured in your WuBook booking engine."
 msgstr ""
-"Le fasce di età di ragazzi, bambini e neonati dipendono dalle categorie di "
-"età configurate nel tuo booking engine WuBook."
+"Los rangos de edad de adolescentes, niños y lactantes dependen de las "
+"categorías de edad configuradas en tu motor de reservas WuBook."
 
 #: includes/tabs/tab-settings-wubook.php:232
 msgid "Default Teens"
-msgstr "Predefinito Ragazzi"
+msgstr "Adolescentes por defecto"
 
 #: includes/tabs/tab-settings-wubook.php:260
 msgid "Max Teens"
-msgstr "Massimo Ragazzi"
+msgstr "Máximo de adolescentes"
 
 #: includes/tabs/tab-settings-wubook.php:383 templates/wubook.php:165
 msgid "Babies"
-msgstr "Neonati"
+msgstr "Lactantes"
 
 #: includes/tabs/tab-settings-wubook.php:408
 msgid "Default Babies"
-msgstr "Predefinito Neonati"
+msgstr "Lactantes por defecto"
 
 #: includes/tabs/tab-settings-wubook.php:436
 msgid "Max Babies"
-msgstr "Massimo Neonati"
+msgstr "Máximo de lactantes"
 
 #: includes/tabs/tab-settings.php:24
 msgid ""
@@ -1971,65 +1973,66 @@ msgid ""
 "Booking Engine</strong> block in the editor or the shortcode <strong>[astro-"
 "booking-engine]</strong>."
 msgstr ""
-"Astro Booking Engine mostra il form di prenotazione tramite il blocco "
-"<strong>Astro Booking Engine</strong> nell'editor o lo shortcode "
+"Astro Booking Engine muestra el formulario de reserva mediante el bloque "
+"<strong>Astro Booking Engine</strong> en el editor o el shortcode "
 "<strong>[astro-booking-engine]</strong>."
 
 #: includes/tabs/tab-settings.php:28
 msgid "For installation details, read more at the"
-msgstr "Per i dettagli sull'installazione, vedi la"
+msgstr "Para los detalles de instalación, consulta la"
 
 #: includes/tabs/tab-settings.php:31
 msgid "support page"
-msgstr "pagina di supporto"
+msgstr "página de soporte"
 
 #: includes/tabs/tab-settings.php:46 includes/tabs/tab-support.php:131
 msgid "Provider"
-msgstr "Fornitore"
+msgstr "Proveedor"
 
 #: includes/tabs/tab-settings.php:50
 msgid "Your provider"
-msgstr "Il tuo fornitore"
+msgstr "Tu proveedor"
 
 #: includes/tabs/tab-settings.php:51
 msgid ""
 "Select your provider and configure its settings to enable Astro Booking "
 "Engine."
 msgstr ""
-"Seleziona il tuo provider e configura le sue impostazioni per abilitare "
-"Astro Booking Engine."
+"Selecciona tu proveedor y configura sus ajustes para activar Astro Booking "
+"Engine."
 
 #: includes/tabs/tab-support.php:45
 msgid "Security check failed. Please go back and try again."
-msgstr "Controllo di sicurezza non riuscito. Torna indietro e riprova."
+msgstr ""
+"La comprobación de seguridad ha fallado. Vuelve atrás e inténtalo de nuevo."
 
 #: includes/tabs/tab-support.php:49
 msgid "All the plugin options have deleted."
-msgstr "Tutte le opzioni del plugin sono state eliminate."
+msgstr "Se han eliminado todas las opciones del plugin."
 
 #: includes/tabs/tab-support.php:76
 msgid "How to start with this plugin"
-msgstr "Come iniziare con questo plugin"
+msgstr "Cómo empezar con este plugin"
 
 #: includes/tabs/tab-support.php:78
 msgid ""
 "Get data settings from your booking engine provider; if you don't have one, "
 "you need to adopt one"
 msgstr ""
-"Ottieni le impostazioni dei dati dal fornitore del tuo booking engine; se "
-"non ne hai uno, devi adottarne uno"
+"Pide los datos de configuración a tu proveedor de motor de reservas; si no "
+"tienes uno, tendrás que contratarlo"
 
 #: includes/tabs/tab-support.php:78
 msgid "see the list of currently available providers"
-msgstr "vedi l'elenco dei provider attualmente disponibili"
+msgstr "consulta la lista de proveedores disponibles actualmente"
 
 #: includes/tabs/tab-support.php:79
 msgid "Select the provider name and configure its settings"
-msgstr "Seleziona il nome del provider e configura le sue impostazioni"
+msgstr "Selecciona el nombre del proveedor y configura sus ajustes"
 
 #: includes/tabs/tab-support.php:80
 msgid "Configure the booking form layout (optional)"
-msgstr "Configura il layout del modulo di prenotazione (facoltativo)"
+msgstr "Configura el diseño del formulario de reserva (opcional)"
 
 #: includes/tabs/tab-support.php:81
 msgid ""
@@ -2037,9 +2040,9 @@ msgid ""
 "engine] shortcode in your post/page content, or add the Astro Booking Engine "
 "widget in the widget area."
 msgstr ""
-"Aggiungi il blocco Astro Booking Engine nell'editor, usa lo shortcode [astro-"
-"booking-engine] nel contenuto di articoli/pagine, oppure aggiungi il widget "
-"Astro Booking Engine nell'area widget."
+"Añade el bloque Astro Booking Engine en el editor, usa el shortcode [astro-"
+"booking-engine] en el contenido de tu entrada o página, o añade el widget "
+"Astro Booking Engine en el área de widgets."
 
 #: includes/tabs/tab-support.php:83
 msgid "IMPORTANT"
@@ -2050,37 +2053,38 @@ msgid ""
 "it is mandatory to have the provider data settings and the provider contract "
 "must be active in order to use the Astro Booking Engine."
 msgstr ""
-"è obbligatorio avere le impostazioni dei dati del fornitore e il contratto "
-"del fornitore deve essere attivo per poter utilizzare Astro Booking Engine."
+"es obligatorio disponer de los datos de configuración del proveedor y el "
+"contrato con el proveedor debe estar activo para poder usar Astro Booking "
+"Engine."
 
 #: includes/tabs/tab-support.php:85
 msgid ""
 "The booking engine provider can send you the useful settings to configure "
 "the Astro Booking Engine; we are not a booking engine provider."
 msgstr ""
-"Il fornitore del motore di prenotazione può inviarti le impostazioni utili "
-"per configurare l'Astro Booking Engine; non siamo un fornitore di motori di "
-"prenotazione."
+"El proveedor del motor de reservas puede enviarte los ajustes necesarios "
+"para configurar Astro Booking Engine; nosotros no somos un proveedor de "
+"motores de reservas."
 
 #: includes/tabs/tab-support.php:86
 msgid ""
 "Only after configuring the Astro Booking Engine with the provider's data, "
 "you can you start to use the booking form on your website."
 msgstr ""
-"Solo dopo aver configurato l'Astro Booking Engine con i dati del provider, "
-"potrai iniziare ad utilizzare il modulo di prenotazione sul tuo sito web."
+"Solo después de configurar Astro Booking Engine con los datos del proveedor "
+"podrás empezar a usar el formulario de reserva en tu web."
 
 #: includes/tabs/tab-support.php:90
 msgid "Providers list"
-msgstr "Elenco fornitori"
+msgstr "Lista de proveedores"
 
 #: includes/tabs/tab-support.php:91
 msgid ""
 "Currently, Astro Booking Engine can be connected to the following booking "
 "engine providers (in alphabetic order)."
 msgstr ""
-"Attualmente, Astro Booking Engine può essere collegato ai seguenti fornitori "
-"di motori di prenotazione (in ordine alfabetico)."
+"Actualmente, Astro Booking Engine se puede conectar con los siguientes "
+"proveedores de motores de reservas (por orden alfabético)."
 
 #: includes/tabs/tab-support.php:96 includes/tabs/tab-support.php:98
 #: includes/tabs/tab-support.php:99 includes/tabs/tab-support.php:100
@@ -2095,12 +2099,12 @@ msgstr "Italia"
 #: includes/tabs/tab-support.php:97 includes/tabs/tab-support.php:110
 #: includes/tabs/tab-support.php:117 includes/tabs/tab-support.php:124
 msgid "Spain"
-msgstr "Spagna"
+msgstr "España"
 
 #: includes/tabs/tab-support.php:101 includes/tabs/tab-support.php:115
 #: includes/tabs/tab-support.php:118 includes/tabs/tab-support.php:122
 msgid "United States"
-msgstr "Stati Uniti d'America"
+msgstr "Estados Unidos de América"
 
 #: includes/tabs/tab-support.php:103 includes/tabs/tab-support.php:114
 msgid "France"
@@ -2108,15 +2112,15 @@ msgstr "Francia"
 
 #: includes/tabs/tab-support.php:105 includes/tabs/tab-support.php:108
 msgid "United Kingdom"
-msgstr "Regno Unito"
+msgstr "Reino Unido"
 
 #: includes/tabs/tab-support.php:106
 msgid "Germany"
-msgstr "Germania"
+msgstr "Alemania"
 
 #: includes/tabs/tab-support.php:109
 msgid "Netherlands"
-msgstr "Paesi Bassi"
+msgstr "Países Bajos"
 
 #: includes/tabs/tab-support.php:113
 msgid "San Marino"
@@ -2132,73 +2136,73 @@ msgstr "Australia"
 
 #: includes/tabs/tab-support.php:132
 msgid "Country of the company"
-msgstr "Paese dell'azienda"
+msgstr "País de la empresa"
 
 #: includes/tabs/tab-support.php:145
 msgid "Is your booking engine provider not available in Astro Booking Engine?"
 msgstr ""
-"Il fornitore del tuo motore di prenotazione non è disponibile in Astro "
-"Booking Engine?"
+"¿Tu proveedor de motor de reservas no está disponible en Astro Booking "
+"Engine?"
 
 #: includes/tabs/tab-support.php:146 includes/tabs/tab-support.php:155
 msgid "Write me an email at"
-msgstr "Scrivi una mail a"
+msgstr "Escríbeme un correo a"
 
 #: includes/tabs/tab-support.php:150
 msgid "FAQs"
-msgstr "Domande frequenti"
+msgstr "Preguntas frecuentes"
 
 #: includes/tabs/tab-support.php:151
 msgid "Do you need support?"
-msgstr "Hai bisogno di supporto?"
+msgstr "¿Necesitas ayuda?"
 
 #: includes/tabs/tab-support.php:152
 msgid "Request support at the "
-msgstr "Richiedi supporto a"
+msgstr "Solicita soporte en la "
 
 #: includes/tabs/tab-support.php:152
 msgid "plugin support page"
-msgstr "pagina di supporto del plugin"
+msgstr "página de soporte del plugin"
 
 #: includes/tabs/tab-support.php:154
 msgid "Have more questions?"
-msgstr "Hai altre domande?"
+msgstr "¿Tienes más preguntas?"
 
 #: includes/tabs/tab-support.php:159
 msgid "About the author"
-msgstr "L'autore"
+msgstr "Sobre el autor"
 
 #: includes/tabs/tab-support.php:161
 msgid "Creator of Astro Booking Engine and founder of AboutMyHotel."
-msgstr "Creatore di Astro Booking Engine e fondatore di AboutMyHotel."
+msgstr "Creador de Astro Booking Engine y fundador de AboutMyHotel."
 
 #: includes/tabs/tab-support.php:163
 msgid "Website:"
-msgstr "Sito web:"
+msgstr "Sitio web:"
 
 #: includes/tabs/tab-support.php:164
 msgid "hotel reputation and market intelligence platform."
-msgstr "piattaforma di hotel reputation e market intelligence."
+msgstr "plataforma de reputación hotelera e inteligencia de mercado."
 
 #: includes/tabs/tab-support.php:165
 msgid "Bug reports and suggestions:"
-msgstr "Segnalazioni di bug e suggerimenti:"
+msgstr "Informes de errores y sugerencias:"
 
 #: includes/tabs/tab-support.php:167
 msgid ""
 "AboutMyHotel is a separate, commercial service by the same author. It is not "
 "required to use this plugin."
 msgstr ""
-"AboutMyHotel è un servizio separato e commerciale dello stesso autore. Non è "
-"necessario per usare questo plugin."
+"AboutMyHotel es un servicio comercial independiente del mismo autor. No es "
+"necesario para usar este plugin."
 
 #: includes/tabs/tab-support.php:171
 msgid "Plugin data reset"
-msgstr "Ripristino dei dati del plugin"
+msgstr "Restablecer los datos del plugin"
 
 #: includes/tabs/tab-support.php:172
 msgid "Remove all plugin settings"
-msgstr "Rimuovi tutte le impostazioni del plugin"
+msgstr "Eliminar todos los ajustes del plugin"
 
 #: templates/5stelle.php:30 templates/begenius.php:29
 #: templates/blastness.php:37 templates/bookingexpert.php:35
@@ -2215,7 +2219,7 @@ msgstr "Rimuovi tutte le impostazioni del plugin"
 #: templates/verticalbooking.php:37 templates/witbooking.php:36
 #: templates/wubook.php:50
 msgid "Check-in"
-msgstr "Check-in"
+msgstr "Entrada"
 
 #: templates/5stelle.php:46 templates/begenius.php:44
 #: templates/blastness.php:53 templates/bookingexpert.php:50
@@ -2232,7 +2236,7 @@ msgstr "Check-in"
 #: templates/verticalbooking.php:53 templates/witbooking.php:52
 #: templates/wubook.php:66
 msgid "Check-out"
-msgstr "Check-out"
+msgstr "Salida"
 
 #: templates/5stelle.php:125 templates/begenius.php:128
 #: templates/blastness.php:140 templates/dedge.php:169
@@ -2243,73 +2247,73 @@ msgstr "Check-out"
 #: templates/scidoo.php:132 templates/simplebooking.php:127
 #: templates/synxis.php:136 templates/verticalbooking.php:140
 msgid "Child Age"
-msgstr "Età del bambino"
+msgstr "Edad del niño"
 
 #: templates/iperbooking.php:68
 msgid "Treatment"
-msgstr "Trattamento"
+msgstr "Régimen"
 
 #: blocks/booking-form/editor.js:25
 msgid "Form"
-msgstr "Form"
+msgstr "Formulario"
 
 #: blocks/booking-form/editor.js:29
 msgid "Submit button label"
-msgstr "Etichetta del pulsante di invio"
+msgstr "Texto del botón de envío"
 
 #: blocks/booking-form/editor.js:30
 msgid "Leave empty to use the label from the plugin settings."
-msgstr "Lascia vuoto per usare l'etichetta delle impostazioni del plugin."
+msgstr "Déjalo vacío para usar el texto de los ajustes del plugin."
 
 #: blocks/booking-form/editor.js:43
 msgid "Customize layout for this block"
-msgstr "Personalizza il layout per questo blocco"
+msgstr "Personalizar el diseño de este bloque"
 
 #: blocks/booking-form/editor.js:44
 msgid "When off, the block uses the layout defined in the plugin settings."
 msgstr ""
-"Se disattivato, il blocco usa il layout definito nelle impostazioni del "
+"Si está desactivado, el bloque usa el diseño definido en los ajustes del "
 "plugin."
 
 #: blocks/booking-form/editor.js:51
 msgid "Form container border radius (px)"
-msgstr "Raggio del bordo del contenitore del form (px)"
+msgstr "Radio del borde del contenedor del formulario (px)"
 
 #: blocks/booking-form/editor.js:61
 msgid "Field border radius (px)"
-msgstr "Raggio del bordo dei campi (px)"
+msgstr "Radio del borde de los campos (px)"
 
 #: blocks/booking-form/editor.js:71
 msgid "Submit button border radius (px)"
-msgstr "Raggio del bordo del pulsante di invio (px)"
+msgstr "Radio del borde del botón de envío (px)"
 
 #: blocks/booking-form/editor.js:83
 msgid "Form colors"
-msgstr "Colori del form"
+msgstr "Colores del formulario"
 
 #: blocks/booking-form/editor.js:89
 msgid "Form container background color"
-msgstr "Colore di sfondo del contenitore del form"
+msgstr "Color de fondo del contenedor del formulario"
 
 #: blocks/booking-form/editor.js:97
 msgid "Label text color"
-msgstr "Colore del testo delle etichette"
+msgstr "Color del texto de las etiquetas"
 
 #: blocks/booking-form/editor.js:105
 msgid "Field text color"
-msgstr "Colore del testo dei campi"
+msgstr "Color del texto de los campos"
 
 #: blocks/booking-form/editor.js:113
 msgid "Field background color"
-msgstr "Colore di sfondo dei campi"
+msgstr "Color de fondo de los campos"
 
 #: blocks/booking-form/editor.js:121
 msgid "Submit button text color"
-msgstr "Colore del testo del pulsante di invio"
+msgstr "Color del texto del botón de envío"
 
 #: blocks/booking-form/editor.js:129
 msgid "Submit button background color"
-msgstr "Colore di sfondo del pulsante di invio"
+msgstr "Color de fondo del botón de envío"
 
 #: blocks/booking-form/block.json
 msgctxt "block title"
@@ -2319,12 +2323,12 @@ msgstr "Astro Booking Engine"
 #: blocks/booking-form/block.json
 msgctxt "block description"
 msgid "Display the booking engine form of the configured provider."
-msgstr "Mostra il form del booking engine del provider configurato."
+msgstr "Muestra el formulario del motor de reservas del proveedor configurado."
 
 #: blocks/booking-form/block.json
 msgctxt "block keyword"
 msgid "booking"
-msgstr "booking"
+msgstr "reservas"
 
 #: blocks/booking-form/block.json
 msgctxt "block keyword"
@@ -2334,9 +2338,9 @@ msgstr "hotel"
 #: blocks/booking-form/block.json
 msgctxt "block keyword"
 msgid "reservation"
-msgstr "prenotazione"
+msgstr "reserva"
 
 #: blocks/booking-form/block.json
 msgctxt "block keyword"
 msgid "booking engine"
-msgstr "booking engine"
+msgstr "motor de reservas"

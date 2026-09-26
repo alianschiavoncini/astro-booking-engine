@@ -7,13 +7,13 @@ if( ! is_admin() ) {
 	return;
 }
 
-$provider = 'revplus';
+$provider = 'siteminder';
 ?>
 <!-- <?php echo esc_attr($provider); ?> -->
 <div class="section-wrapper box <?php echo esc_attr($provider); ?>">
     <div class="section-wrapper-inner">
 
-        <h2>RevPlus (WebHotelier)</h2>
+        <h2>SiteMinder</h2>
 
         <!-- hotelsettings -->
         <h3 id="hotelsettings"><?php esc_html_e( 'Hotel settings', 'astro-booking-engine' ); ?></h3>
@@ -21,10 +21,10 @@ $provider = 'revplus';
 			<?php
 			$field = array(
 				'label' => esc_html__( 'Property name', 'astro-booking-engine' ),
-				'description' => __( 'The name before .reserve-online.net in the booking engine address: https://<Property name>.reserve-online.net/. When the booking engine is on an address of the property, such as book.myhotel.com, that address points to a reserve-online.net one: the property name is the one to enter here.', 'astro-booking-engine' ),
+				'description' => __( 'The last part of the booking engine address: https://direct-book.com/properties/<Property name>. The whole address can be pasted, also the app.thebookingbutton.com one.', 'astro-booking-engine' ),
 				'name' => ASTRO_BE_PREFIX.$provider.'_hotel',
 				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_hotel'),
-				'placeholder' => 'myhotel',
+				'placeholder' => 'myhoteldirect',
 			);
 			?>
             <tr>
@@ -35,22 +35,6 @@ $provider = 'revplus';
                 </td>
             </tr>
 
-			<?php
-			$field = array(
-				'label' => esc_html__( 'property', 'astro-booking-engine' ),
-				'description' => __( 'Optional: the code of the hotel to open, for accounts with more than one. Empty searches all of them. A wrong code gives a "page not found" error.', 'astro-booking-engine' ),
-				'name' => ASTRO_BE_PREFIX.$provider.'_htl_code',
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_htl_code'),
-				'placeholder' => false,
-			);
-			?>
-            <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
-                <td>
-                    <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text" value="<?php echo esc_attr($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" />
-                    <?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php }?>
-                </td>
-            </tr>
 
 			<?php
 			$field = array(
@@ -221,7 +205,7 @@ $provider = 'revplus';
 
         <!-- children -->
         <h3 id="children"><?php esc_html_e( 'Children', 'astro-booking-engine' ); ?></h3>
-        <p class="description"><?php esc_html_e( 'Enable Children only if your property accepts them: a property for adults only ignores these values, and guests would choose them for nothing. The age ranges are the ones configured in your RevPlus booking engine.', 'astro-booking-engine' ); ?></p>
+        <p class="description"><?php esc_html_e( 'Enable Children only if your property accepts them: a property for adults only ignores these values, and guests would choose them for nothing. The age ranges are the ones configured in your SiteMinder booking engine.', 'astro-booking-engine' ); ?></p>
         <table class="form-table">
 			<?php
 			$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
@@ -310,7 +294,7 @@ $provider = 'revplus';
 
         <!-- infants -->
         <h3 id="infants"><?php esc_html_e( 'Infants', 'astro-booking-engine' ); ?></h3>
-        <p class="description"><?php esc_html_e( 'Enable Infants only if your property accepts them: a property for adults only ignores these values, and guests would choose them for nothing. The age ranges are the ones configured in your RevPlus booking engine.', 'astro-booking-engine' ); ?></p>
+        <p class="description"><?php esc_html_e( 'Enable Infants only if your property accepts them: a property for adults only ignores these values, and guests would choose them for nothing. The age ranges are the ones configured in your SiteMinder booking engine.', 'astro-booking-engine' ); ?></p>
         <table class="form-table">
 			<?php
 			$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
@@ -398,7 +382,7 @@ $provider = 'revplus';
         <hr />
 
         <!-- voucher -->
-        <h3 id="voucher"><?php esc_html_e( 'Voucher', 'astro-booking-engine' ); ?></h3>
+        <h3 id="promocode"><?php esc_html_e( 'Promo code', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 		<?php
 		$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
@@ -422,7 +406,7 @@ $provider = 'revplus';
         </tr>
 
         </table>
-        <!-- /voucher -->
+        <!-- /promocode -->
 
         <hr />
 

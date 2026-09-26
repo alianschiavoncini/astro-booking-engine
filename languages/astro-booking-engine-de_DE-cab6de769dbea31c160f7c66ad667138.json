@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-03 09:28+0200",
+    "translation-revision-date": "2026-09-24 18:00+0200",
     "generator": "WP-CLI\/2.12.0",
     "source": "blocks\/booking-form\/editor.js",
     "domain": "messages",
@@ -7,56 +7,56 @@
         "messages": {
             "": {
                 "domain": "messages",
-                "lang": "it-IT",
+                "lang": "de_DE",
                 "plural-forms": "nplurals=2; plural=n != 1;"
             },
             "Layout": [
                 "Layout"
             ],
             "Form": [
-                "Form"
+                "Formular"
             ],
             "Submit button label": [
-                "Etichetta del pulsante di invio"
+                "Beschriftung der Absenden-Schaltfl\u00e4che"
             ],
             "Leave empty to use the label from the plugin settings.": [
-                "Lascia vuoto per usare l'etichetta delle impostazioni del plugin."
+                "Leer lassen, um die Beschriftung aus den Plugin-Einstellungen zu verwenden."
             ],
             "Customize layout for this block": [
-                "Personalizza il layout per questo blocco"
+                "Layout f\u00fcr diesen Block anpassen"
             ],
             "When off, the block uses the layout defined in the plugin settings.": [
-                "Se disattivato, il blocco usa il layout definito nelle impostazioni del plugin."
+                "Wenn deaktiviert, verwendet der Block das in den Plugin-Einstellungen festgelegte Layout."
             ],
             "Form container border radius (px)": [
-                "Raggio del bordo del contenitore del form (px)"
+                "Eckenradius des Formularcontainers (px)"
             ],
             "Field border radius (px)": [
-                "Raggio del bordo dei campi (px)"
+                "Eckenradius der Felder (px)"
             ],
             "Submit button border radius (px)": [
-                "Raggio del bordo del pulsante di invio (px)"
+                "Eckenradius der Absenden-Schaltfl\u00e4che (px)"
             ],
             "Form colors": [
-                "Colori del form"
+                "Formularfarben"
             ],
             "Form container background color": [
-                "Colore di sfondo del contenitore del form"
+                "Hintergrundfarbe des Formularcontainers"
             ],
             "Label text color": [
-                "Colore del testo delle etichette"
+                "Textfarbe der Beschriftungen"
             ],
             "Field text color": [
-                "Colore del testo dei campi"
+                "Textfarbe der Felder"
             ],
             "Field background color": [
-                "Colore di sfondo dei campi"
+                "Hintergrundfarbe der Felder"
             ],
             "Submit button text color": [
-                "Colore del testo del pulsante di invio"
+                "Textfarbe der Absenden-Schaltfl\u00e4che"
             ],
             "Submit button background color": [
-                "Colore di sfondo del pulsante di invio"
+                "Hintergrundfarbe der Absenden-Schaltfl\u00e4che"
             ]
         }
     }

@@ -7,40 +7,23 @@ if( ! is_admin() ) {
 	return;
 }
 
-$provider = 'revplus';
+$provider = 'resnexus';
 ?>
 <!-- <?php echo esc_attr($provider); ?> -->
 <div class="section-wrapper box <?php echo esc_attr($provider); ?>">
     <div class="section-wrapper-inner">
 
-        <h2>RevPlus (WebHotelier)</h2>
+        <h2>ResNexus</h2>
 
         <!-- hotelsettings -->
         <h3 id="hotelsettings"><?php esc_html_e( 'Hotel settings', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 			<?php
 			$field = array(
-				'label' => esc_html__( 'Property name', 'astro-booking-engine' ),
-				'description' => __( 'The name before .reserve-online.net in the booking engine address: https://<Property name>.reserve-online.net/. When the booking engine is on an address of the property, such as book.myhotel.com, that address points to a reserve-online.net one: the property name is the one to enter here.', 'astro-booking-engine' ),
+				'label' => esc_html__( 'Booking engine address', 'astro-booking-engine' ),
+				'description' => __( 'The address of your ResNexus booking engine, as it is: https://resnexus.com/resnexus/reservations/book/ABCDEF12-3456-7890-ABCD-EF1234567890', 'astro-booking-engine' ),
 				'name' => ASTRO_BE_PREFIX.$provider.'_hotel',
 				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_hotel'),
-				'placeholder' => 'myhotel',
-			);
-			?>
-            <tr>
-                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
-                <td>
-                    <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text" value="<?php echo esc_attr($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" />
-                    <?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php }?>
-                </td>
-            </tr>
-
-			<?php
-			$field = array(
-				'label' => esc_html__( 'property', 'astro-booking-engine' ),
-				'description' => __( 'Optional: the code of the hotel to open, for accounts with more than one. Empty searches all of them. A wrong code gives a "page not found" error.', 'astro-booking-engine' ),
-				'name' => ASTRO_BE_PREFIX.$provider.'_htl_code',
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_htl_code'),
 				'placeholder' => false,
 			);
 			?>
@@ -52,33 +35,68 @@ $provider = 'revplus';
                 </td>
             </tr>
 
+
 			<?php
 			$field = array(
-				'label' => esc_html__( 'Currency', 'astro-booking-engine' ),
-				'description' => false,
-				'name' => ASTRO_BE_PREFIX.$provider.'_currency',
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_currency'),
-				'placeholder' => false
+				'label' => esc_html__( 'Children capacity number', 'astro-booking-engine' ),
+				'description' => __( 'In the booking engine the guest types after the adults are numbered: two is the usual number of the children one. To make sure, open your booking engine adding ?Capacity2=1 to its address and look at which line goes up in the guests menu; if it is not the children one, try 3 and then 4.', 'astro-booking-engine' ),
+				'name' => ASTRO_BE_PREFIX.$provider.'_children_capacity',
+				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_children_capacity'),
+				'placeholder' => false,
 			);
-
-			$arr_currencies = astro_return_currencies();
 			?>
             <tr>
                 <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                 <td>
                     <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
 						<?php
-						foreach ($arr_currencies as $currency) {
+						if (!($field['value'])) {
+							$field['value'] = 2;
+						}
+						for ($i = 2; $i <= 6; $i++) {
 							$selected = '';
-							if ($currency == $field['value']) {
+							if ($i == $field['value']) {
 								$selected = ' selected=selected';
 							}
 							?>
-                            <option value="<?php echo esc_attr($currency); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($currency); ?></option>
+                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($i); ?></option>
 							<?php
 						}
 						?>
                     </select>
+                    <?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php }?>
+                </td>
+            </tr>
+
+			<?php
+			$field = array(
+				'label' => esc_html__( 'Pets capacity number', 'astro-booking-engine' ),
+				'description' => __( 'The same numbering as the children: three is the usual number of the pets one. Leave Pets disabled below if your property does not take them.', 'astro-booking-engine' ),
+				'name' => ASTRO_BE_PREFIX.$provider.'_pets_capacity',
+				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_pets_capacity'),
+				'placeholder' => false,
+			);
+			?>
+            <tr>
+                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
+                <td>
+                    <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
+						<?php
+						if (!($field['value'])) {
+							$field['value'] = 3;
+						}
+						for ($i = 2; $i <= 6; $i++) {
+							$selected = '';
+							if ($i == $field['value']) {
+								$selected = ' selected=selected';
+							}
+							?>
+                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($i); ?></option>
+							<?php
+						}
+						?>
+                    </select>
+                    <?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php }?>
                 </td>
             </tr>
 
@@ -221,7 +239,7 @@ $provider = 'revplus';
 
         <!-- children -->
         <h3 id="children"><?php esc_html_e( 'Children', 'astro-booking-engine' ); ?></h3>
-        <p class="description"><?php esc_html_e( 'Enable Children only if your property accepts them: a property for adults only ignores these values, and guests would choose them for nothing. The age ranges are the ones configured in your RevPlus booking engine.', 'astro-booking-engine' ); ?></p>
+        <p class="description"><?php esc_html_e( 'ResNexus has no children ages in the booking address: only the number of children is sent, in the capacity slot chosen above.', 'astro-booking-engine' ); ?></p>
         <table class="form-table">
 			<?php
 			$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
@@ -308,14 +326,13 @@ $provider = 'revplus';
 
         <hr />
 
-        <!-- infants -->
-        <h3 id="infants"><?php esc_html_e( 'Infants', 'astro-booking-engine' ); ?></h3>
-        <p class="description"><?php esc_html_e( 'Enable Infants only if your property accepts them: a property for adults only ignores these values, and guests would choose them for nothing. The age ranges are the ones configured in your RevPlus booking engine.', 'astro-booking-engine' ); ?></p>
+        <!-- pets -->
+        <h3 id="pets"><?php esc_html_e( 'Pets', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 			<?php
 			$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
 			$field_description = __('Check to enable', 'astro-booking-engine' );
-			$field_name = ASTRO_BE_PREFIX.$provider.'_infants_enable';
+			$field_name = ASTRO_BE_PREFIX.$provider.'_pets_enable';
 			$field_value = get_option($field_name);
 			?>
             <tr>
@@ -335,10 +352,10 @@ $provider = 'revplus';
 
 			<?php
 			$field = array(
-				'label' => esc_html__( 'Default Infants', 'astro-booking-engine' ),
+				'label' => esc_html__( 'Default pets', 'astro-booking-engine' ),
 				'description' => false,
-				'name' => ASTRO_BE_PREFIX.$provider.'_infants_n_default',
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_infants_n_default'),
+				'name' => ASTRO_BE_PREFIX.$provider.'_pets_n_default',
+				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_pets_n_default'),
 				'placeholder' => false
 			);
 			?>
@@ -361,12 +378,12 @@ $provider = 'revplus';
                 </td>
             </tr>
 
-			<?php
+            <?php
 			$field = array(
-				'label' => esc_html__( 'Max Infants', 'astro-booking-engine' ),
+				'label' => esc_html__( 'Max pets', 'astro-booking-engine' ),
 				'description' => false,
-				'name' => ASTRO_BE_PREFIX.$provider.'_infants_n_max',
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_infants_n_max'),
+				'name' => ASTRO_BE_PREFIX.$provider.'_pets_n_max',
+				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_pets_n_max'),
 				'placeholder' => false
 			);
 			?>
@@ -393,36 +410,9 @@ $provider = 'revplus';
             </tr>
 
         </table>
-        <!-- /infants -->
+        <!-- /pets -->
 
-        <hr />
 
-        <!-- voucher -->
-        <h3 id="voucher"><?php esc_html_e( 'Voucher', 'astro-booking-engine' ); ?></h3>
-        <table class="form-table">
-		<?php
-		$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
-		$field_description = __('Check to enable', 'astro-booking-engine' );
-		$field_name = ASTRO_BE_PREFIX.$provider.'_coupon';
-		$field_value = get_option($field_name);
-		?>
-        <tr>
-            <th scope="row"><label for="<?php echo esc_attr($field_name); ?>"><?php echo esc_html($field_label); ?></label></th>
-            <td>
-                <fieldset>
-                    <legend class="screen-reader-text"><span><?php echo esc_html($field_label); ?></span></legend>
-                    <label for="<?php echo esc_attr($field_name); ?>"><input id="<?php echo esc_attr($field_name); ?>"
-                                                                             name="<?php echo esc_attr($field_name); ?>"
-                                                                             type="checkbox"
-                                                                             value="1" <?php if ($field_value == "1") {
-							echo 'checked="checked"';
-						} ?>><?php echo esc_html($field_description); ?></label>
-                </fieldset>
-            </td>
-        </tr>
-
-        </table>
-        <!-- /voucher -->
 
         <hr />
 
