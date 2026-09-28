@@ -23,6 +23,83 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 
                 <h2 id="layout"><?php esc_html_e( 'Layout', 'astro-booking-engine' ); ?></h2>
 
+                <h3 id="formstyle"><?php esc_html_e( 'Form style', 'astro-booking-engine' ); ?></h3>
+                <table class="form-table">
+					<?php
+					$field = array(
+						'label' => esc_html__( 'Style', 'astro-booking-engine' ),
+						'description' => __( 'Classic keeps the form as it has always been. Modern shows it as a single card, with one calendar for both dates and a guests panel.', 'astro-booking-engine' ),
+						'name' => ASTRO_BE_PREFIX . 'form_style',
+						'value' => astro_be_get_sanitized_option( ASTRO_BE_PREFIX . 'form_style' ),
+					);
+					$arr_styles = array(
+						'classic' => __( 'Classic', 'astro-booking-engine' ),
+						'compact' => __( 'Modern', 'astro-booking-engine' ),
+					);
+					?>
+                    <tr>
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
+                        <td>
+                            <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
+								<?php foreach ($arr_styles as $k => $v) { ?>
+                                    <option value="<?php echo esc_attr($k); ?>"<?php if ($k === $field['value']) { echo ' selected=selected'; } ?>><?php echo esc_html($v); ?></option>
+								<?php } ?>
+                            </select>
+                            <p class="description"><?php echo esc_html($field['description']); ?></p>
+                        </td>
+                    </tr>
+
+					<?php
+					$field = array(
+						'label' => esc_html__( 'Density', 'astro-booking-engine' ),
+						'description' => __( 'Only for the modern style. Roomy gives more space and larger buttons, the size recommended for touch screens.', 'astro-booking-engine' ),
+						'name' => ASTRO_BE_PREFIX . 'form_density',
+						'value' => astro_be_get_sanitized_option( ASTRO_BE_PREFIX . 'form_density' ),
+					);
+					$arr_densities = array(
+						'compact' => __( 'Compact', 'astro-booking-engine' ),
+						'roomy' => __( 'Roomy', 'astro-booking-engine' ),
+					);
+					?>
+                    <tr class="astro_be_row-modern-only">
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
+                        <td>
+                            <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
+								<?php foreach ($arr_densities as $k => $v) { ?>
+                                    <option value="<?php echo esc_attr($k); ?>"<?php if ($k === $field['value']) { echo ' selected=selected'; } ?>><?php echo esc_html($v); ?></option>
+								<?php } ?>
+                            </select>
+                            <p class="description"><?php echo esc_html($field['description']); ?></p>
+                        </td>
+                    </tr>
+
+					<?php
+					$field = array(
+						'label' => esc_html__( 'Width', 'astro-booking-engine' ),
+						'description' => __( 'Only for the modern style. Fit the content keeps the card as wide as its fields need; Full width stretches it to the whole content column, as a booking bar under a cover image.', 'astro-booking-engine' ),
+						'name' => ASTRO_BE_PREFIX . 'form_width',
+						'value' => astro_be_get_sanitized_option( ASTRO_BE_PREFIX . 'form_width' ),
+					);
+					$arr_widths = array(
+						'auto' => __( 'Fit the content', 'astro-booking-engine' ),
+						'full' => __( 'Full width', 'astro-booking-engine' ),
+					);
+					?>
+                    <tr class="astro_be_row-modern-only">
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
+                        <td>
+                            <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
+								<?php foreach ($arr_widths as $k => $v) { ?>
+                                    <option value="<?php echo esc_attr($k); ?>"<?php if ($k === $field['value']) { echo ' selected=selected'; } ?>><?php echo esc_html($v); ?></option>
+								<?php } ?>
+                            </select>
+                            <p class="description"><?php echo esc_html($field['description']); ?></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <hr />
+
                 <h3 id="widget"><?php esc_html_e( 'Widget', 'astro-booking-engine' ); ?></h3>
                 <table class="form-table">
 					<?php
@@ -242,6 +319,44 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                     </tr>
 					<?php
 					$field = array(
+						'label' => esc_html__( 'Hover background color', 'astro-booking-engine' ),
+						'description' => __( 'Modern style only: the background of check-in, check-out, guests and code when the pointer is over them. Empty keeps the default, a very light grey.', 'astro-booking-engine' ),
+						'name' => ASTRO_BE_PREFIX.'field-hover-background-color',
+						'value' => get_option(ASTRO_BE_PREFIX.'field-hover-background-color'),
+						'placeholder' => '#fbfbfb',
+					);
+					?>
+                    <tr class="astro_be_row-modern-only">
+                        <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
+                        <td>
+                            <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text colorpicker" value="<?php echo esc_html($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" />
+							<?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php } ?>
+                        </td>
+                    </tr>
+
+					<?php
+					// Il pannello lascia scegliere qualsiasi colore: qui si dice, senza impedirlo,
+					// quali accostamenti scendono sotto il minimo di leggibilita' delle WCAG.
+					$astro_be_contrasti = astro_be_layout_contrast_warnings();
+					if ( ! empty( $astro_be_contrasti ) ) {
+						?>
+                    <tr>
+                        <td colspan="2">
+                            <div class="notice notice-warning inline">
+                                <p><?php esc_html_e( 'Some of the colors chosen are hard to read. WCAG AA asks for at least 4.5:1 between text and background:', 'astro-booking-engine' ); ?></p>
+                                <ul style="list-style:disc;margin-left:20px">
+									<?php foreach ( $astro_be_contrasti as $astro_be_contrasto ) { ?>
+                                        <li><?php echo esc_html( $astro_be_contrasto ); ?></li>
+									<?php } ?>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+						<?php
+					}
+					?>
+					<?php
+					$field = array(
 						'label' => esc_html__( 'Border width', 'astro-booking-engine' ),
 						'description' => false,
 						'name' => ASTRO_BE_PREFIX.'field-border-width',
@@ -352,13 +467,13 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 					<?php
 					$field = array(
 						'label' => esc_html__( 'Calendar theme', 'astro-booking-engine' ),
-						'description' => false,
+						'description' => __( 'Only for the classic style: the modern one has its own calendar, which follows the colors chosen above.', 'astro-booking-engine' ),
 						'name' => ASTRO_BE_PREFIX.'calendar',
 						'value' => get_option(ASTRO_BE_PREFIX.'calendar'),
 						'placeholder' => false
 					);
 					?>
-                    <tr>
+                    <tr class="astro_be_row-classic-only">
                         <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                         <td>
                             <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">

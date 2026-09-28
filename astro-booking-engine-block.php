@@ -32,6 +32,44 @@ function astro_be_register_block() {
 }
 
 /**
+ * The modern style is built by JavaScript over the classic markup, so the block preview in
+ * the editor would show the classic form even on a site set to Modern. These two hooks put
+ * the skin inside the editor as well: the styles through enqueue_block_assets, which is what
+ * reaches the iframed canvas, and the scripts through enqueue_block_editor_assets.
+ */
+add_action( 'enqueue_block_assets', 'astro_be_block_editor_skin_styles' );
+function astro_be_block_editor_skin_styles() {
+
+	// On the front end the styles are already enqueued by astro_be_enqueue_files().
+	if ( ! is_admin() ) {
+		return;
+	}
+	if ( 'compact' !== astro_be_get_sanitized_option( ASTRO_BE_PREFIX . 'form_style' ) ) {
+		return;
+	}
+
+	wp_enqueue_style( 'astro-booking-engine' );
+	wp_enqueue_style( 'astro-booking-engine-compact' );
+}
+
+add_action( 'enqueue_block_editor_assets', 'astro_be_block_editor_skin_scripts' );
+function astro_be_block_editor_skin_scripts() {
+
+	if ( 'compact' !== astro_be_get_sanitized_option( ASTRO_BE_PREFIX . 'form_style' ) ) {
+		return;
+	}
+
+	wp_enqueue_script( 'astro-booking-engine-compact' );
+	wp_enqueue_script(
+		'astro-booking-engine-block-editor-skin',
+		plugin_dir_url( __FILE__ ) . 'js/astro-booking-engine-block-editor-skin.js',
+		array( 'jquery', 'astro-booking-engine-compact' ),
+		ASTRO_BE_VERSION,
+		true
+	);
+}
+
+/**
  * Keep only values that are safe inside a CSS color declaration.
  */
 function astro_be_block_sanitize_css_color( $value ) {
@@ -152,6 +190,35 @@ function astro_be_block_render( $attributes ) {
 		}
 		if ( ! empty( $submit ) ) {
 			$rules[] = $scope . ' .astro_be_input-submit_button{' . implode( ';', $submit ) . ';}';
+		}
+
+		// Con lo stile moderno la scheda legge le variabili --abe-*: senza ripeterle qui, le
+		// scelte del singolo blocco colpirebbero solo le regole classiche e si vedrebbero a
+		// meta' (per esempio uno sfondo trasparente sopra il colore scelto nel pannello).
+		if ( 'compact' === astro_be_get_sanitized_option( ASTRO_BE_PREFIX . 'form_style' ) ) {
+
+			$vars = array();
+			if ( $widget_background_color ) {
+				$vars[] = '--abe-bg:' . $widget_background_color;
+			}
+			if ( isset( $attributes['widgetBorderRadius'] ) && is_numeric( $attributes['widgetBorderRadius'] ) ) {
+				$vars[] = '--abe-radius:' . absint( $attributes['widgetBorderRadius'] ) . 'px';
+			}
+			if ( $label_font_color ) {
+				$vars[] = '--abe-muted:' . $label_font_color;
+			}
+			if ( $field_font_color ) {
+				$vars[] = '--abe-fg:' . $field_font_color;
+			}
+			if ( $submit_font_color ) {
+				$vars[] = '--abe-accent-fg:' . $submit_font_color;
+			}
+			if ( $submit_background_color ) {
+				$vars[] = '--abe-accent:' . $submit_background_color;
+			}
+			if ( ! empty( $vars ) ) {
+				$rules[] = $scope . ' .astro_be.astro_be--compact{' . implode( ';', $vars ) . ';}';
+			}
 		}
 
 		if ( ! empty( $rules ) ) {

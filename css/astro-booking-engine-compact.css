@@ -1,0 +1,264 @@
+/**
+ * Astro Booking Engine — stile compatto (bozza 2.4.0).
+ *
+ * Si applica solo dentro .astro_be.astro_be--compact: lo stile classico resta intatto.
+ * I colori e le misure passano da variabili, così il personalizzatore del plugin le
+ * imposta una volta sola invece di ripetere i selettori.
+ */
+.astro_be.astro_be--compact {
+    --abe-bg: #ffffff;
+    --abe-fg: #1e1e1e;
+    --abe-muted: #6b7280;
+    --abe-line: #dcdcde;
+    --abe-radius: 10px;
+    --abe-accent: #404040;
+    --abe-hover: #fbfbfb;
+    --abe-accent-fg: #ffffff;
+    /* densita': i valori qui sotto sono quelli della densita' COMPATTA (predefinita).
+       La classe .astro_be--roomy li rialza per la densita' COMODA, piu' adatta al tocco. */
+    --abe-gap: 14px;
+    --abe-field-pad: 6px;
+    --abe-panel-gap: 12px;
+    --abe-stepper-size: 32px;
+    --abe-submit-pad: 13px;
+    --abe-label-size: 12px;
+    --abe-value-size: 17px;
+
+    background: var(--abe-bg);
+    color: var(--abe-fg);
+    border: 1px solid var(--abe-line);
+    border-radius: var(--abe-radius);
+    padding: var(--abe-gap);
+    box-sizing: border-box;
+
+    /* il foglio di stile del plugin mette overflow:hidden su .astro_be: cosi' il
+       pannello degli ospiti verrebbe ritagliato dal bordo della scheda */
+    overflow: visible;
+}
+
+/* Il form classico e' un contenitore flex: in compatto torna a blocco, altrimenti
+   la scheda non occupa tutta la larghezza disponibile. */
+.astro_be--compact .astro_be_form { display: block; }
+
+/* Le righe classiche restano nel DOM — i campi devono continuare a essere inviati —
+   ma non si vedono. Niente display:none sul form: i valori partono lo stesso. */
+.astro_be--compact .astro_be_row { display: none; }
+
+/* densita' comoda: piu' aria e bersagli piu' grandi per il tocco (WCAG 2.5.8) */
+.astro_be.astro_be--compact.astro_be--roomy {
+    --abe-gap: 20px;
+    --abe-field-pad: 11px;
+    --abe-panel-gap: 16px;
+    --abe-stepper-size: 44px;
+    --abe-submit-pad: 17px;
+    --abe-label-size: 13px;
+    --abe-value-size: 18px;
+}
+
+/* I comandi sono <button>, e i temi WordPress ci applicano il proprio stile: sfondo scuro al
+   passaggio, padding e min-width che deformano i cerchi, line-height che scentra il glifo.
+   Qui si azzera tutto, una volta sola, per i pulsanti della pelle compatta. */
+.astro_be--compact .astro_be_compact button,
+.astro_be--compact .astro_be_compact_panel button {
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 0;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.astro_be_compact { display: flex; flex-direction: column; gap: var(--abe-gap); }
+
+.astro_be_compact_group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.astro_be_compact_field {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background: none;
+    border: 0;
+    padding: var(--abe-field-pad) 2px;
+    text-align: left;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.astro_be_compact_field--end { text-align: right; align-items: flex-end; }
+
+.astro_be_compact_field:hover,
+.astro_be_compact_field:focus,
+.astro_be_compact_field:active {
+    background: var(--abe-hover);
+    color: var(--abe-fg);
+}
+
+.astro_be_compact_field:focus-visible {
+    outline: 2px solid var(--abe-accent);
+    outline-offset: 2px;
+}
+
+.astro_be_compact_label {
+    font-size: var(--abe-label-size);
+    line-height: 1.3;
+    color: var(--abe-muted);
+}
+.astro_be_compact_value {
+    color: var(--abe-fg);
+    font-size: var(--abe-value-size);
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.astro_be_compact_arrow { color: var(--abe-muted); flex: 0 0 auto; }
+
+.astro_be_compact_sep { height: 1px; background: var(--abe-line); }
+
+/* pannello ospiti */
+.astro_be_compact_guests { position: relative; }
+.astro_be_compact_panel {
+    position: absolute;
+    z-index: 30;
+    left: 0;
+    right: 0;
+    top: calc(100% + 6px);
+    background: var(--abe-bg);
+    border: 1px solid var(--abe-line);
+    border-radius: var(--abe-radius);
+    padding: var(--abe-gap);
+    box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    display: flex;
+    flex-direction: column;
+    gap: var(--abe-panel-gap);
+}
+.astro_be_compact_panel[hidden] { display: none; }
+
+.astro_be_compact_stepper_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.astro_be_compact_stepper_label { font-size: 15px; }
+.astro_be_compact_stepper_hint { display: block; font-size: 12px; color: var(--abe-muted); }
+
+.astro_be_compact_stepper { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
+.astro_be_compact_stepper button {
+    flex: 0 0 auto;
+    width: var(--abe-stepper-size);
+    height: var(--abe-stepper-size);
+    padding: 0;                       /* il padding del tema deformava il cerchio */
+    display: inline-flex;             /* centratura vera del + e del - */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--abe-line);
+    border-radius: 50%;
+    background: var(--abe-bg);
+    color: var(--abe-fg);
+    font-size: 18px;
+    cursor: pointer;
+}
+.astro_be_compact_stepper button:hover:not(:disabled),
+.astro_be_compact_stepper button:focus:not(:disabled) {
+    background: var(--abe-hover);
+    color: var(--abe-fg);
+}
+.astro_be_compact_stepper button:disabled { opacity: .35; cursor: default; }
+.astro_be_compact_stepper button:focus-visible { outline: 2px solid var(--abe-accent); outline-offset: 2px; }
+.astro_be_compact_stepper output { min-width: 2ch; text-align: center; font-size: 16px; }
+
+.astro_be_compact_ages { display: flex; flex-direction: column; gap: 8px; }
+/* le colonne originali delle eta', spostate dentro il pannello */
+.astro_be_compact_ages [class*="astro_be_column-children_age-"] { display: block; }
+.astro_be_compact_ages .astro_be_column-inner {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.astro_be_compact_ages label { font-size: 14px; }
+.astro_be_compact_ages select { min-width: 84px; }
+
+.astro_be_compact_panel_buttons { display: flex; justify-content: flex-end; gap: 8px; }
+.astro_be_compact_panel_buttons button {
+    border: 1px solid var(--abe-line);
+    background: var(--abe-bg);
+    color: var(--abe-fg);
+    border-radius: 6px;
+    padding: calc(var(--abe-field-pad) + 1px) 14px;
+    font: inherit;
+    cursor: pointer;
+}
+.astro_be_compact_panel_buttons button:hover,
+.astro_be_compact_panel_buttons button:focus {
+    background: var(--abe-hover);
+    color: var(--abe-fg);
+}
+.astro_be_compact_panel_buttons button[data-role="save"],
+.astro_be_compact_panel_buttons button[data-role="save"]:hover,
+.astro_be_compact_panel_buttons button[data-role="save"]:focus {
+    background: var(--abe-accent);
+    color: var(--abe-accent-fg);
+    border-color: var(--abe-accent);
+}
+
+/* codice sconto */
+.astro_be_compact_coupon { display: flex; flex-direction: column; gap: 2px; }
+.astro_be_compact_coupon input {
+    border: 0; padding: 4px 2px; font-size: var(--abe-value-size);
+    background: none; color: inherit; width: 100%; box-sizing: border-box;
+}
+.astro_be_compact_coupon input:focus-visible { outline: 2px solid var(--abe-accent); outline-offset: 2px; }
+
+/* invio */
+.astro_be_compact_submit input[type="submit"] {
+    width: 100%;
+    background: var(--abe-accent);
+    color: var(--abe-accent-fg);
+    border: 0;
+    border-radius: 8px;
+    padding: var(--abe-submit-pad) 16px;
+    font-size: 15px;
+    letter-spacing: .02em;
+    cursor: pointer;
+}
+
+/* da tablet in su le date stanno su una riga con gli ospiti */
+@media (min-width: 720px) {
+
+    /* Larghezza della scheda. Di suo prende lo spazio che le serve: una barra che si allarga
+       a tutta la colonna anche quando ha tre campi sembra vuota. Con .astro_be--full — la
+       scelta "tutta la larghezza" del pannello — torna a occupare l'intera colonna, che e'
+       quello che serve sotto un'immagine di copertina. */
+    .astro_be.astro_be--compact { width: -moz-fit-content; width: fit-content; max-width: 100%; }
+    .astro_be.astro_be--compact.astro_be--full { width: auto; }
+
+    .astro_be_compact { flex-direction: row; align-items: stretch; gap: 0; }
+    .astro_be_compact > * { padding: 0 var(--abe-gap); }
+    .astro_be_compact > *:first-child { padding-left: 0; }
+    .astro_be_compact > *:last-child { padding-right: 0; }
+    .astro_be_compact_sep { width: 1px; height: auto; padding: 0; }
+    /* I campi prendono la larghezza che serve al loro contenuto. Se crescessero fino a
+       riempire la scheda — come facevano con flex:2 e width:100% — su una colonna larga
+       check-in e check-out finirebbero ai due estremi con un vuoto in mezzo, e la scheda
+       sembrerebbe slabbrata invece che compatta. Il pulsante resta appoggiato a destra. */
+    .astro_be_compact_group { flex: 0 1 auto; width: auto; gap: 12px; }
+    .astro_be_compact_field { flex: 0 1 auto; min-width: 104px; }
+    .astro_be_compact_field--end { text-align: left; align-items: flex-start; }
+    .astro_be_compact_guests { flex: 0 1 auto; display: flex; align-items: center; }
+    .astro_be_compact_guests > .astro_be_compact_field { width: auto; min-width: 124px; }
+    .astro_be_compact_coupon { flex: 0 1 auto; min-width: 112px; justify-content: center; }
+    .astro_be_compact_submit { flex: 0 0 auto; display: flex; align-items: center; margin-left: auto; }
+    .astro_be_compact_submit input[type="submit"] { width: auto; }
+    .astro_be_compact_panel { left: auto; right: 0; min-width: 320px; }
+}

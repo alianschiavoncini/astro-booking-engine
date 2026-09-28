@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Astro Booking Engine\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/astro-booking-"
 "engine\n"
-"POT-Creation-Date: 2026-09-25T08:10:31+00:00\n"
+"POT-Creation-Date: 2026-09-25T09:45:01+00:00\n"
 "PO-Revision-Date: 2026-09-03 09:28+0200\n"
 "Last-Translator: admin\n"
 "Language-Team: Italian\n"
@@ -70,11 +70,33 @@ msgstr "Colore attuale"
 msgid "Booking engine"
 msgstr "Booking engine"
 
-#: astro-booking-engine-admin.php:218
+#: astro-booking-engine-admin.php:200
+msgid "A new modern style is available for your booking form."
+msgstr "È disponibile un nuovo stile moderno per il tuo form di prenotazione."
+
+
+#: astro-booking-engine-admin.php:201
+msgid ""
+"It shows the form as a single card, with one calendar for both dates and a guests panel. Nothing has changed on your site: to try it go to Layout > Form style and choose Modern. The colors you have already chosen come along with it, and you can go back to Classic whenever you want."
+msgstr ""
+"Mostra il form come una scheda unica, con un solo calendario per entrambe le date e un pannello per gli ospiti. Sul tuo sito non è cambiato nulla: per provarlo vai in Layout > Stile del form e scegli Moderno. I colori che hai già scelto se lo portano dietro, e puoi tornare a Classico quando vuoi."
+
+
+#: astro-booking-engine-admin.php:203
+msgid "Go to the layout settings"
+msgstr "Vai alle impostazioni del layout"
+
+
+#: astro-booking-engine-admin.php:204
+msgid "No thanks"
+msgstr "No, grazie"
+
+
+#: astro-booking-engine-admin.php:299
 msgid "Do you enjoy Astro Booking Engine?"
 msgstr "Ti trovi bene con Astro Booking Engine?"
 
-#: astro-booking-engine-admin.php:219
+#: astro-booking-engine-admin.php:300
 msgid ""
 "You have been using it for a while: a review on WordPress.org would help "
 "other users discover it. Thank you!"
@@ -82,172 +104,209 @@ msgstr ""
 "Lo usi da un po' di tempo: una recensione su WordPress.org aiuterebbe altri "
 "utenti a scoprirlo. Grazie!"
 
-#: astro-booking-engine-admin.php:222
+#: astro-booking-engine-admin.php:303
 msgid "Sure, I'll write a review"
 msgstr "Certo, scrivo una recensione"
 
-#: astro-booking-engine-admin.php:223
+#: astro-booking-engine-admin.php:304
 msgid "I've already reviewed it"
 msgstr "L'ho già recensito"
 
-#: astro-booking-engine-admin.php:224
+#: astro-booking-engine-admin.php:305
 msgid "Maybe later"
 msgstr "Magari più tardi"
 
-#: astro-booking-engine-admin.php:236 includes/tabs/tab-support.php:39
+#: astro-booking-engine-admin.php:317 includes/tabs/tab-support.php:39
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 "Non disponi di autorizzazioni sufficienti per accedere a questa pagina."
 
-#: astro-booking-engine-admin.php:252
+#: astro-booking-engine-admin.php:333
 msgid "Settings saved."
 msgstr "Impostazioni salvate."
 
-#: astro-booking-engine-common.php:1043 astro-booking-engine-common.php:1211
-#: astro-booking-engine-common.php:1289
+#: astro-booking-engine-common.php:1053 astro-booking-engine-common.php:1221
+#: astro-booking-engine-common.php:1299
 msgid "Spanish"
 msgstr "Spagnolo"
 
-#: astro-booking-engine-common.php:1044 astro-booking-engine-common.php:1210
-#: astro-booking-engine-common.php:1288
+#: astro-booking-engine-common.php:1054 astro-booking-engine-common.php:1220
+#: astro-booking-engine-common.php:1298
 msgid "English"
 msgstr "Inglese"
 
-#: astro-booking-engine-common.php:1045 astro-booking-engine-common.php:1290
+#: astro-booking-engine-common.php:1055 astro-booking-engine-common.php:1300
 msgid "Italian"
 msgstr "Italiano"
 
-#: astro-booking-engine-common.php:1046 astro-booking-engine-common.php:1212
-#: astro-booking-engine-common.php:1291
+#: astro-booking-engine-common.php:1056 astro-booking-engine-common.php:1222
+#: astro-booking-engine-common.php:1301
 msgid "French"
 msgstr "Francese"
 
-#: astro-booking-engine-common.php:1047 astro-booking-engine-common.php:1213
-#: astro-booking-engine-common.php:1292
+#: astro-booking-engine-common.php:1057 astro-booking-engine-common.php:1223
+#: astro-booking-engine-common.php:1302
 msgid "German"
 msgstr "Tedesco"
 
-#: astro-booking-engine-common.php:1048 astro-booking-engine-common.php:1293
+#: astro-booking-engine-common.php:1058 astro-booking-engine-common.php:1303
 msgid "Portuguese"
 msgstr "Portoghese"
 
-#: astro-booking-engine-common.php:1049 astro-booking-engine-common.php:1310
+#: astro-booking-engine-common.php:1059 astro-booking-engine-common.php:1320
 msgid "Catalan"
 msgstr "Catalano"
 
-#: astro-booking-engine-common.php:1050 astro-booking-engine-common.php:1295
+#: astro-booking-engine-common.php:1060 astro-booking-engine-common.php:1305
 msgid "Russian"
 msgstr "Russo"
 
-#: astro-booking-engine-common.php:1051 astro-booking-engine-common.php:1294
+#: astro-booking-engine-common.php:1061 astro-booking-engine-common.php:1304
 msgid "Dutch"
 msgstr "Olandese"
 
-#: astro-booking-engine-common.php:1052 astro-booking-engine-common.php:1215
-#: astro-booking-engine-common.php:1297
+#: astro-booking-engine-common.php:1062 astro-booking-engine-common.php:1225
+#: astro-booking-engine-common.php:1307
 msgid "Japanese"
 msgstr "Giapponese"
 
-#: astro-booking-engine-common.php:1053 astro-booking-engine-common.php:1214
-#: astro-booking-engine-common.php:1296
+#: astro-booking-engine-common.php:1063 astro-booking-engine-common.php:1224
+#: astro-booking-engine-common.php:1306
 msgid "Chinese"
 msgstr "Cinese"
 
-#: astro-booking-engine-common.php:1054
+#: astro-booking-engine-common.php:1064
 msgid "Basque"
 msgstr "Basco"
 
-#: astro-booking-engine-common.php:1055
+#: astro-booking-engine-common.php:1065
 msgid "Danish"
 msgstr "Danese"
 
-#: astro-booking-engine-common.php:1056 astro-booking-engine-common.php:1300
+#: astro-booking-engine-common.php:1066 astro-booking-engine-common.php:1310
 msgid "Swedish"
 msgstr "Svedese"
 
-#: astro-booking-engine-common.php:1057 astro-booking-engine-common.php:1308
+#: astro-booking-engine-common.php:1067 astro-booking-engine-common.php:1318
 msgid "Romanian"
 msgstr "Rumeno"
 
-#: astro-booking-engine-common.php:1058 astro-booking-engine-common.php:1306
+#: astro-booking-engine-common.php:1068 astro-booking-engine-common.php:1316
 msgid "Hungarian"
 msgstr "Ungherese"
 
-#: astro-booking-engine-common.php:1059 astro-booking-engine-common.php:1298
+#: astro-booking-engine-common.php:1069 astro-booking-engine-common.php:1308
 msgid "Korean"
 msgstr "Coreano"
 
-#: astro-booking-engine-common.php:1299
+#: astro-booking-engine-common.php:1309
 msgid "Polish"
 msgstr "Polacco"
 
-#: astro-booking-engine-common.php:1301
+#: astro-booking-engine-common.php:1311
 msgid "Norwegian"
 msgstr "Norvegese"
 
-#: astro-booking-engine-common.php:1302
+#: astro-booking-engine-common.php:1312
 msgid "Finnish"
 msgstr "Finlandese"
 
-#: astro-booking-engine-common.php:1303
+#: astro-booking-engine-common.php:1313
 msgid "Greek"
 msgstr "Greco"
 
-#: astro-booking-engine-common.php:1304
+#: astro-booking-engine-common.php:1314
 msgid "Turkish"
 msgstr "Turco"
 
-#: astro-booking-engine-common.php:1305
+#: astro-booking-engine-common.php:1315
 msgid "Hebrew"
 msgstr "Ebraico"
 
-#: astro-booking-engine-common.php:1307
+#: astro-booking-engine-common.php:1317
 msgid "Czech"
 msgstr "Ceco"
 
-#: astro-booking-engine-common.php:1309
+#: astro-booking-engine-common.php:1319
 msgid "Thai"
 msgstr "Thailandese"
 
-#: astro-booking-engine-common.php:1311
+#: astro-booking-engine-common.php:1321
 msgid "Slovak"
 msgstr "Slovacco"
 
-#: astro-booking-engine-common.php:1312
+#: astro-booking-engine-common.php:1322
 msgid "Lithuanian"
 msgstr "Lituano"
 
-#: astro-booking-engine-common.php:1313
+#: astro-booking-engine-common.php:1323
 msgid "Estonian"
 msgstr "Estone"
 
-#: astro-booking-engine-common.php:1578
+#: astro-booking-engine-common.php:1604
 msgid "This message is visible only to the site administrator."
 msgstr "Questo messaggio è visibile solo all'amministratore del sito."
 
-#: astro-booking-engine-common.php:1580
+#: astro-booking-engine-common.php:1606
 msgid "No provider has been selected in Astro Booking Engine plugin."
 msgstr "Nessun provider è stato selezionato nel plugin Astro Booking Engine."
 
-#: astro-booking-engine-common.php:1582
+#: astro-booking-engine-common.php:1608
 msgid "Choose your provider at plugin"
 msgstr "Scegli il tuo provider per il plugin"
 
-#: astro-booking-engine-common.php:1584
+#: astro-booking-engine-common.php:1610
 msgid "settings page"
 msgstr "pagina delle impostazioni"
 
-#: astro-booking-engine.php:100 includes/tabs/tab-settings.php:18
+#: astro-booking-engine.php:116
+#: includes/tabs/tab-settings-bookingexpert.php:116
+msgid "Guests"
+msgstr "Ospiti"
+
+#: astro-booking-engine.php:117
+msgid "Cancel"
+msgstr "Annulla"
+
+#: astro-booking-engine.php:118
+msgid "Save"
+msgstr "Salva"
+
+#: astro-booking-engine.php:119
+msgid "adult"
+msgstr "adulto"
+
+#: astro-booking-engine.php:120
+msgid "adults"
+msgstr "adulti"
+
+#: astro-booking-engine.php:121
+msgid "child"
+msgstr "bambino"
+
+#: astro-booking-engine.php:122
+msgid "children"
+msgstr "bambini"
+
+#: astro-booking-engine.php:123
+msgid "pet"
+msgstr "animale"
+
+#: astro-booking-engine.php:124
+msgid "pets"
+msgstr "animali"
+
+#: astro-booking-engine.php:157 includes/tabs/tab-settings.php:18
 #: includes/tabs/tabs-nav.php:13
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: astro-booking-engine.php:114 includes/tabs/tab-support.php:74
+#: astro-booking-engine.php:171 includes/tabs/tab-support.php:74
 #: includes/tabs/tabs-nav.php:15
 msgid "Support"
 msgstr "Supporto"
 
-#: astro-booking-engine.php:115
+#: astro-booking-engine.php:172
 msgid "Author website"
 msgstr "Sito dell'autore"
 
@@ -273,83 +332,137 @@ msgid "Layout"
 msgstr "Layout"
 
 #: includes/tabs/tab-layout.php:26
+msgid "Form style"
+msgstr "Stile del form"
+
+#: includes/tabs/tab-layout.php:30
+msgid "Style"
+msgstr "Stile"
+
+#: includes/tabs/tab-layout.php:31
+msgid ""
+"Classic keeps the form as it has always been. Modern shows it as a single "
+"card, with one calendar for both dates and a guests panel."
+msgstr ""
+"Classico mantiene il form com'è sempre stato. Moderno lo mostra come una "
+"scheda unica, con un solo calendario per entrambe le date e un pannello per "
+"gli ospiti."
+
+#: includes/tabs/tab-layout.php:36
+msgid "Classic"
+msgstr "Classico"
+
+#: includes/tabs/tab-layout.php:37 includes/tabs/tab-layout.php:60
+msgid "Compact"
+msgstr "Compatto"
+
+#: includes/tabs/tab-layout.php:54
+msgid "Density"
+msgstr "Densità"
+
+#: includes/tabs/tab-layout.php:55
+msgid ""
+"Only for the modern style. Roomy gives more space and larger buttons, the "
+"size recommended for touch screens."
+msgstr ""
+"Solo per lo stile moderno. Comodo lascia più spazio e ingrandisce i "
+"pulsanti alla dimensione consigliata per gli schermi a sfioramento."
+
+#: includes/tabs/tab-layout.php:61
+msgid "Roomy"
+msgstr "Comodo"
+
+#: includes/tabs/tab-layout.php:79
 msgid "Widget"
 msgstr "Widget"
 
-#: includes/tabs/tab-layout.php:30 includes/tabs/tab-layout.php:229
-#: includes/tabs/tab-layout.php:459
+#: includes/tabs/tab-layout.php:83 includes/tabs/tab-layout.php:282
+#: includes/tabs/tab-layout.php:528
 msgid "Background color"
 msgstr "Colore di sfondo"
 
-#: includes/tabs/tab-layout.php:46 includes/tabs/tab-layout.php:323
-#: includes/tabs/tab-layout.php:553
+#: includes/tabs/tab-layout.php:99 includes/tabs/tab-layout.php:392
+#: includes/tabs/tab-layout.php:622
 msgid "Border radius"
 msgstr "Raggio del bordo"
 
-#: includes/tabs/tab-layout.php:57 includes/tabs/tab-layout.php:110
-#: includes/tabs/tab-layout.php:186 includes/tabs/tab-layout.php:256
-#: includes/tabs/tab-layout.php:334 includes/tabs/tab-layout.php:416
-#: includes/tabs/tab-layout.php:486 includes/tabs/tab-layout.php:564
+#: includes/tabs/tab-layout.php:110 includes/tabs/tab-layout.php:163
+#: includes/tabs/tab-layout.php:239 includes/tabs/tab-layout.php:325
+#: includes/tabs/tab-layout.php:403 includes/tabs/tab-layout.php:485
+#: includes/tabs/tab-layout.php:555 includes/tabs/tab-layout.php:633
 msgid "inherit"
 msgstr "ereditato"
 
-#: includes/tabs/tab-layout.php:68 includes/tabs/tab-layout.php:121
-#: includes/tabs/tab-layout.php:197 includes/tabs/tab-layout.php:267
-#: includes/tabs/tab-layout.php:345 includes/tabs/tab-layout.php:427
-#: includes/tabs/tab-layout.php:497 includes/tabs/tab-layout.php:575
+#: includes/tabs/tab-layout.php:121 includes/tabs/tab-layout.php:174
+#: includes/tabs/tab-layout.php:250 includes/tabs/tab-layout.php:336
+#: includes/tabs/tab-layout.php:414 includes/tabs/tab-layout.php:496
+#: includes/tabs/tab-layout.php:566 includes/tabs/tab-layout.php:644
 msgid "px"
 msgstr "px"
 
-#: includes/tabs/tab-layout.php:79
+#: includes/tabs/tab-layout.php:132
 msgid "Labels"
 msgstr "Etichette"
 
-#: includes/tabs/tab-layout.php:83 includes/tabs/tab-layout.php:159
-#: includes/tabs/tab-layout.php:389
+#: includes/tabs/tab-layout.php:136 includes/tabs/tab-layout.php:212
+#: includes/tabs/tab-layout.php:458
 msgid "Font color"
 msgstr "Colore del carattere"
 
-#: includes/tabs/tab-layout.php:99 includes/tabs/tab-layout.php:175
-#: includes/tabs/tab-layout.php:405
+#: includes/tabs/tab-layout.php:152 includes/tabs/tab-layout.php:228
+#: includes/tabs/tab-layout.php:474
 msgid "Font size"
 msgstr "Dimensione del carattere"
 
-#: includes/tabs/tab-layout.php:130 includes/tabs/tab-layout.php:206
-#: includes/tabs/tab-layout.php:436
+#: includes/tabs/tab-layout.php:183 includes/tabs/tab-layout.php:259
+#: includes/tabs/tab-layout.php:505
 msgid "Font weight"
 msgstr "Peso del carattere"
 
-#: includes/tabs/tab-layout.php:146 includes/tabs/tab-layout.php:222
-#: includes/tabs/tab-layout.php:452
+#: includes/tabs/tab-layout.php:199 includes/tabs/tab-layout.php:275
+#: includes/tabs/tab-layout.php:521
 msgid "normal"
 msgstr "normale"
 
-#: includes/tabs/tab-layout.php:147 includes/tabs/tab-layout.php:223
-#: includes/tabs/tab-layout.php:453
+#: includes/tabs/tab-layout.php:200 includes/tabs/tab-layout.php:276
+#: includes/tabs/tab-layout.php:522
 msgid "bold"
 msgstr "grassetto"
 
-#: includes/tabs/tab-layout.php:155
+#: includes/tabs/tab-layout.php:208
 msgid "Fields"
 msgstr "Campi"
 
-#: includes/tabs/tab-layout.php:245 includes/tabs/tab-layout.php:475
+#: includes/tabs/tab-layout.php:298
+msgid "Hover background color"
+msgstr "Colore di sfondo al passaggio"
+
+#: includes/tabs/tab-layout.php:299
+msgid ""
+"Modern style only: the background of check-in, check-out, guests and code "
+"when the pointer is over them. Empty keeps the default, a very light grey."
+msgstr ""
+"Solo per lo stile moderno: lo sfondo di check-in, check-out, ospiti e "
+"codice quando il puntatore ci passa sopra. Vuoto lascia il valore "
+"predefinito, un grigio chiarissimo."
+
+#: includes/tabs/tab-layout.php:314 includes/tabs/tab-layout.php:544
 msgid "Border width"
 msgstr "Spessore del bordo"
 
-#: includes/tabs/tab-layout.php:276 includes/tabs/tab-layout.php:506
+#: includes/tabs/tab-layout.php:345 includes/tabs/tab-layout.php:575
 msgid "Border style"
 msgstr "Stile del bordo"
 
-#: includes/tabs/tab-layout.php:307 includes/tabs/tab-layout.php:537
+#: includes/tabs/tab-layout.php:376 includes/tabs/tab-layout.php:606
 msgid "Border color"
 msgstr "Colore del bordo"
 
-#: includes/tabs/tab-layout.php:354
+#: includes/tabs/tab-layout.php:423
 msgid "Calendar theme"
 msgstr "Tema del calendario"
 
-#: includes/tabs/tab-layout.php:385 includes/tabs/tab-settings-5stelle.php:350
+#: includes/tabs/tab-layout.php:454 includes/tabs/tab-settings-5stelle.php:350
 #: includes/tabs/tab-settings-begenius.php:384
 #: includes/tabs/tab-settings-blastness.php:385
 #: includes/tabs/tab-settings-bookingexpert.php:152
@@ -382,11 +495,11 @@ msgstr "Tema del calendario"
 msgid "Submit button"
 msgstr "Pulsante di invio"
 
-#: includes/tabs/tab-layout.php:586
+#: includes/tabs/tab-layout.php:655
 msgid "Advanced settings"
 msgstr "Impostazioni avanzate"
 
-#: includes/tabs/tab-layout.php:590
+#: includes/tabs/tab-layout.php:659
 msgid "Custom CSS"
 msgstr "CSS personalizzato"
 
@@ -1231,10 +1344,6 @@ msgstr ""
 msgid "Currency"
 msgstr "Valuta"
 
-#: includes/tabs/tab-settings-bookingexpert.php:116
-msgid "Guests"
-msgstr "Ospiti"
-
 #: includes/tabs/tab-settings-bookingexpert.php:117
 msgid ""
 "Guests are chosen on the Booking Expert booking engine: their types are "
@@ -1679,13 +1788,14 @@ msgstr ""
 msgid "Pets capacity number"
 msgstr "Numero di capacità degli animali"
 
-
 #: includes/tabs/tab-settings-resnexus.php:74
 msgid ""
 "The same numbering as the children: three is the usual number of the pets "
 "one. Leave Pets disabled below if your property does not take them."
-msgstr "La stessa numerazione dei bambini: tre è il numero abituale di quello degli animali. Lascia Animali disattivato qui sotto se la tua struttura non li accetta."
-
+msgstr ""
+"La stessa numerazione dei bambini: tre è il numero abituale di quello degli "
+"animali. Lascia Animali disattivato qui sotto se la tua struttura non li "
+"accetta."
 
 #: includes/tabs/tab-settings-resnexus.php:242
 msgid ""
@@ -1699,16 +1809,13 @@ msgstr ""
 msgid "Pets"
 msgstr "Animali"
 
-
 #: includes/tabs/tab-settings-resnexus.php:355
 msgid "Default pets"
 msgstr "Animali predefiniti"
 
-
 #: includes/tabs/tab-settings-resnexus.php:383
 msgid "Max pets"
 msgstr "Massimo di animali"
-
 
 #: includes/tabs/tab-settings-revplus.php:24
 msgid ""
@@ -2340,3 +2447,69 @@ msgstr "prenotazione"
 msgctxt "block keyword"
 msgid "booking engine"
 msgstr "booking engine"
+
+#: includes/tabs/tab-layout.php:37
+msgid "Modern"
+msgstr "Moderno"
+
+#: includes/tabs/tab-layout.php:424
+msgid ""
+"Only for the classic style: the modern one has its own calendar, which follows the colors chosen above."
+msgstr ""
+"Solo per lo stile classico: quello moderno ha un calendario proprio, che segue i colori scelti qui sopra."
+
+#: astro-booking-engine.php
+msgid "decrease"
+msgstr "diminuisci"
+
+#: astro-booking-engine.php
+msgid "increase"
+msgstr "aumenta"
+
+#: astro-booking-engine.php
+msgid "Calendar"
+msgstr "Calendario"
+
+#: includes/tabs/tab-layout.php:78
+msgid "Width"
+msgstr "Larghezza"
+
+#: includes/tabs/tab-layout.php:84
+msgid "Fit the content"
+msgstr "Adatta al contenuto"
+
+#: includes/tabs/tab-layout.php:85
+msgid "Full width"
+msgstr "Tutta la larghezza"
+
+#: includes/tabs/tab-layout.php:79
+msgid ""
+"Only for the modern style. Fit the content keeps the card as wide as its fields need; Full width stretches it to the whole content column, as a booking bar under a cover image."
+msgstr ""
+"Solo per lo stile moderno. Adatta al contenuto tiene la scheda larga quanto le serve ai suoi campi; Tutta la larghezza la estende a tutta la colonna del contenuto, come una barra di prenotazione sotto un'immagine di copertina."
+
+#: astro-booking-engine-common.php
+msgid "Labels on the form background"
+msgstr "Etichette sullo sfondo del form"
+
+#: astro-booking-engine-common.php
+msgid "Values on the form background"
+msgstr "Valori sullo sfondo del form"
+
+#: astro-booking-engine-common.php
+msgid "Values on the hover background"
+msgstr "Valori sullo sfondo al passaggio del mouse"
+
+#: astro-booking-engine-common.php
+msgid "Submit button text on its background"
+msgstr "Testo del pulsante di invio sul suo sfondo"
+
+#: astro-booking-engine-common.php
+msgid "%1$s: %2$s:1"
+msgstr "%1$s: %2$s:1"
+
+#: includes/tabs/tab-layout.php
+msgid ""
+"Some of the colors chosen are hard to read. WCAG AA asks for at least 4.5:1 between text and background:"
+msgstr ""
+"Alcuni colori scelti sono poco leggibili. Le WCAG AA chiedono almeno 4,5:1 fra testo e sfondo:"

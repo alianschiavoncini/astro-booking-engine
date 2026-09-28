@@ -3,10 +3,10 @@ Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget
 Requires at least: 6.0.1
 Tested up to: 7.1
-Stable tag: 2.3.0
+Stable tag: 2.4.0
 Requires PHP: 7.4
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Hotel booking form via Gutenberg block or shortcode, independent from the provider: switch booking engine anytime, your form stays the same.
 
@@ -77,6 +77,10 @@ If your booking engine provider is not on the list, you can request its inclusio
 
 The plugin interface is translated into Italian, Spanish, French and German. It is also compatible with translation plugins such as WPML and Loco Translate.
 
+<strong>Source code and third-party libraries</strong>
+The source code of the plugin is on GitHub: <a href="https://github.com/alianschiavoncini/astro-booking-engine">github.com/alianschiavoncini/astro-booking-engine</a>.
+The calendar of the modern style is <a href="https://flatpickr.js.org/">flatpickr</a> 4.6.13, released under the MIT license and included in its minified build: its full source code is at <a href="https://github.com/flatpickr/flatpickr">github.com/flatpickr/flatpickr</a>. The themes of the classic calendar come from <a href="https://jqueryui.com/">jQuery UI</a>, also under the MIT license.
+
 <strong>About the author</strong>
 Astro Booking Engine is developed and maintained by Alian Schiavoncini (<a href="https://www.alian.it">www.alian.it</a>), a WordPress developer since 2005 and founder of <a href="https://www.aboutmyhotel.com">AboutMyHotel</a>, a hotel reputation and market intelligence platform. AboutMyHotel is a separate, commercial service by the same author and is not required to use this plugin.
 
@@ -89,16 +93,69 @@ Astro Booking Engine is developed and maintained by Alian Schiavoncini (<a href=
 You can use the <a href="https://wordpress.org/support/plugin/astro-booking-engine/">support forum</a> on WordPress.org or write to <a href="mailto:alian@alian.it">alian@alian.it</a>. Feature requests and bug reports are welcome.
 
 == Screenshots ==
-1. Frontend: booking engine form with calendar
-2. Frontend: booking engine form with child age dropdown
-3. Backend: settings - providers list
-4. Backend: settings - provider config
-5. Backend: layout customization
+1. Modern style: the booking form as a single card.
+2. Modern style: one calendar for both check-in and check-out.
+3. Modern style: the guests panel, with steppers and children ages.
+4. Classic style: the booking form as it has always been.
+5. Backend: the booking engine settings.
+6. Backend: the form style settings, with style, density and width.
 
-== Wordefence vendor verification key ==
+== External services ==
+
+The plugin shows a booking form that takes the visitor to the online booking engine of the hotel. It uses one external service only: the booking engine provider selected in the plugin settings.
+
+Nothing is sent while the page loads, and the plugin does not collect or store any data. When the visitor submits the form, the browser opens the provider's booking engine and sends it the search entered in the form: arrival and departure dates, number of adults and children, children ages and pets when those fields are enabled, the promo code when entered, the language and currency of the page, and the hotel identifiers set in the plugin settings. From that point on, the terms and the privacy policy of the provider apply.
+
+The providers, the address the form is sent to, and their policies:
+
+* 5Stelle (Zucchetti), www.secure-reservation.cloud. Privacy: https://www.zucchetti.it/it/cms/service/privacy.html
+* Amadeus iHotelier (TravelClick), reservations.travelclick.com. Terms: https://www.amadeus-hospitality.com/legal/ Privacy: https://www.amadeus-hospitality.com/privacy-policy
+* BeGenius, secure.begenius.it. The provider does not publish a privacy policy. Website: https://www.begenius.it/
+* Blastness, www.blastnessbooking.com. Privacy: https://www.blastness.com/it/privacy
+* Booking Expert, be.bookingexpert.it. Privacy: https://bookingexpert.com/privacy
+* Cloudbeds, the cloudbeds.com address set in the settings. Terms: https://www.cloudbeds.com/terms/ Privacy: https://www.cloudbeds.com/privacy-policy/
+* Data Sistemi, be.booking-reservations.com. Privacy: https://www.datasistemi.eu/privacy-policy.html
+* D-EDGE, the booking engine address set in the settings. Privacy: https://www.d-edge.com/privacy-policy/
+* Ericsoft (Zucchetti), booking.ericsoft.com. Privacy: https://cms-cdn.ericsoft.com/cms/site/resources/6183/56339/6ac93f723e3ba6560cc846db875ff73e/Informativa%20Privacy%20ENG.pdf
+* Guestline (The Access Group), booking.eu.guestline.app. Privacy: https://www.theaccessgroup.com/en-gb/privacy-notice/
+* HotelNetSolutions (OnePageBooking), the booking engine address set in the settings. Privacy: https://hotelnetsolutions.de/en/privacy-policy/
+* Iperbooking, the booking engine address set in the settings. Privacy: https://www.iperbooking.com/privacy.cfm
+* Journey, <property>.onejourney.travel. Terms: https://journey.travel/terms-policies/terms-of-use Privacy: https://journey.travel/terms-policies/privacy-policy
+* Mews, app.mews.com. Terms: https://www.mews.com/en/legal Privacy: https://www.mews.com/en/legal/privacy-policy
+* Mirai, reservation.mirai.com. Privacy: https://www.mirai.com/privacy-policy/
+* MyGuestCare (MyComp), booking.myguestcare.com. Privacy: https://www.iubenda.com/privacy-policy/57645335
+* Octorate, book.octorate.com. Terms: https://www.octorate.com/terms-and-conditions/ Privacy: https://www.octorate.com/privacy-policy/
+* Passepartout, webhotels.passepartout.cloud. Terms: https://www.passepartout.net/utility/note-legali Privacy: https://privacy.passepartout.net/informativasitiweb
+* Reservit, secure.reservit.com. Privacy: https://www.reservit.com/politique-de-confidentialite/
+* ResNexus, resnexus.com. Terms: https://resnexus.com/TermsofUse.html Privacy: https://resnexus.com/PrivacyPolicy.html
+* RevPlus (WebHotelier), <property>.reserve-online.net. Terms: https://www.revplus.com/terms Privacy: https://www.revplus.com/privacy
+* Roiback, the booking engine address set in the settings. Terms: https://www.roiback.com/legal/aviso-legal Privacy: https://www.roiback.com/legal/politica-de-privacidad
+* Sabre SynXis, be.synxis.com. Privacy: https://www.sabre.com/about/privacy
+* Scidoo, www.scidoo.com. Privacy: https://scidoo.com/preventivov2/privacy_policy.php?cod=27
+* Simple Booking, www.simplebooking.it. Privacy: https://www.simplebooking.travel/privacy-policy
+* SiteMinder, direct-book.com. Terms: https://www.siteminder.com/legal/website-terms/ Privacy: https://www.siteminder.com/legal/privacy/
+* ThinkReservations, secure.thinkreservations.com. Terms: https://www.thinkreservations.com/terms Privacy: https://www.thinkreservations.com/privacy
+* Vertical Booking, reservations.verticalbooking.com. Privacy: https://www.verticalbooking.com/en/privacy-policy/
+* Witbooking, the booking engine address set in the settings. Privacy: https://www.witbooking.com/policy
+* WuBook, wubook.net. Terms: https://wubook.net/page/Termini-Condizioni-14.html Privacy: https://wubook.net/page/privacy-policy-17.html
+
+== Wordfence vendor verification key ==
 gsphudo7by90lzwdlihyerqxbzj6jiln
 
 == Changelog ==
+
+= 2.4.0 =
+* Added: a modern form style, shown as a single card with one calendar for both dates and a guests panel with steppers, children ages and pets. The classic style stays the default on the sites that already use the plugin, and the modern one is the default for new installations.
+* Added: a notice on the plugin pages telling the sites that already use it that the modern style is available, with a button that opens the form style setting. It appears once and goes away as soon as it is dismissed or the style is changed.
+* Added: the hover background color of the modern style, among the layout settings, and the layout settings now drive the modern style too, so the colors already chosen come along with it.
+* Added: the density of the modern style, compact or roomy, with the larger touch targets recommended by the accessibility guidelines.
+* Added: the width of the modern style, fit to the content or full width, for the sites that use the form as a booking bar across the whole content column.
+* Added: the block preview in the editor shows the modern style too, instead of the classic form.
+* Added: the layout settings warn when the colors chosen do not reach the 4.5:1 contrast asked by WCAG AA, without preventing the choice.
+* Fixed: the per block layout overrides now reach the modern style as well, instead of applying only to the classic rules.
+* Fixed: with more than one booking form on the same page, the children ages of the second form were never shown, because the script read the number of children of the first form.
+* Fixed: more than one booking form on the same page produced duplicate element ids, so the labels of the second form pointed at the fields of the first one.
+* Compatibility: tested with WordPress 7.1.
 
 = 2.3.0 =
 * Added: ResNexus provider, with adults, children and pets: the numbers of the capacity slots the property uses for the children and for the pets are settings. The property code can also be entered by pasting the whole booking engine address.
@@ -201,6 +258,9 @@ gsphudo7by90lzwdlihyerqxbzj6jiln
 * Initial version.
 
 == Upgrade Notice ==
+
+= 2.4.0 =
+New modern form style, optional and off by default on existing sites, plus two fixes for pages that show more than one booking form.
 
 = 2.3.0 =
 Fourteen new booking engine providers and Spanish, French and German translations. Updating from 2.0.0 or earlier also brings the 2.1.0 security fixes (and, from 1.4.0 or earlier, the CVE-2025-10308 fix): recommended.

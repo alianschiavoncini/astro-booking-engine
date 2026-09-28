@@ -625,6 +625,10 @@ function astro_be_option_names($tab = false) {
 
 		case 'layout' :
 			$option_names = array(
+				ASTRO_BE_PREFIX . 'form_style' => ASTRO_BE_PREFIX . 'form_style', //classic|compact
+				ASTRO_BE_PREFIX . 'form_density' => ASTRO_BE_PREFIX . 'form_density', //compact|roomy
+				ASTRO_BE_PREFIX . 'form_width' => ASTRO_BE_PREFIX . 'form_width', //auto|full
+
 				ASTRO_BE_PREFIX . 'widget-background-color' => ASTRO_BE_PREFIX . 'widget-background-color',
 				ASTRO_BE_PREFIX . 'widget-border-radius' => ASTRO_BE_PREFIX . 'widget-border-radius',
 
@@ -636,6 +640,7 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'field-font-size' => ASTRO_BE_PREFIX . 'field-font-size',
 				ASTRO_BE_PREFIX . 'field-font-weight' => ASTRO_BE_PREFIX . 'field-font-weight',
 				ASTRO_BE_PREFIX . 'field-background-color' => ASTRO_BE_PREFIX . 'field-background-color',
+				ASTRO_BE_PREFIX . 'field-hover-background-color' => ASTRO_BE_PREFIX . 'field-hover-background-color',
 				ASTRO_BE_PREFIX . 'field-border-width' => ASTRO_BE_PREFIX . 'field-border-width',
 				ASTRO_BE_PREFIX . 'field-border-style' => ASTRO_BE_PREFIX . 'field-border-style',
 				ASTRO_BE_PREFIX . 'field-border-color' => ASTRO_BE_PREFIX . 'field-border-color',
@@ -680,6 +685,15 @@ function astro_be_get_option_sanitize_callback( $option_name ) {
 	// General and layout settings.
 	if ( 'provider' === $name ) {
 		return 'astro_be_sanitize_provider';
+	}
+	if ( 'form_style' === $name ) {
+		return 'astro_be_sanitize_form_style';
+	}
+	if ( 'form_density' === $name ) {
+		return 'astro_be_sanitize_form_density';
+	}
+	if ( 'form_width' === $name ) {
+		return 'astro_be_sanitize_form_width';
 	}
 	if ( 'calendar' === $name ) {
 		return 'astro_be_sanitize_calendar_theme';
@@ -1485,6 +1499,31 @@ function astro_be_sanitize_roiback_code( $value ) {
 }
 
 /**
+ * Form style: the classic layout or the compact one. Empty or unknown means classic, so a
+ * site updating from an earlier version keeps exactly the form it had.
+ */
+function astro_be_sanitize_form_style( $value ) {
+	return ( is_string( $value ) && 'compact' === $value ) ? 'compact' : 'classic';
+}
+
+/**
+ * Form density, for the compact style only: compact or roomy. Roomy gives 44x44 targets,
+ * the size the WCAG recommend for touch.
+ */
+function astro_be_sanitize_form_density( $value ) {
+	return ( is_string( $value ) && 'roomy' === $value ) ? 'roomy' : 'compact';
+}
+
+/**
+ * Form width, for the modern style only: 'auto' makes the card as wide as its fields need,
+ * 'full' stretches it to the whole content column, which is what a booking bar in a hero
+ * section usually wants.
+ */
+function astro_be_sanitize_form_width( $value ) {
+	return ( is_string( $value ) && 'full' === $value ) ? 'full' : 'auto';
+}
+
+/**
  * Form target: new or same window.
  */
 function astro_be_sanitize_form_target( $value ) {
@@ -1634,11 +1673,153 @@ function astro_be_get_provider_form_action_url_language() {
 }
 
 /**
+ * Turn a hex color into an array of RGB components, or false when the value is not a plain
+ * opaque hex: a named color, an rgb() notation or a color with alpha depends on what sits
+ * behind it, so its contrast cannot be computed here.
+ */
+function astro_be_hex_to_rgb( $value ) {
+
+	if ( ! is_string( $value ) ) {
+		return false;
+	}
+	$value = trim( $value );
+	if ( ! preg_match( '/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/', $value ) ) {
+		return false;
+	}
+
+	$hex = substr( $value, 1 );
+	if ( 3 === strlen( $hex ) ) {
+		$hex = $hex[0] . $hex[0] . $hex[1] . $hex[1] . $hex[2] . $hex[2];
+	}
+	if ( 8 === strlen( $hex ) ) {
+		if ( 'ff' !== strtolower( substr( $hex, 6, 2 ) ) ) {
+			return false; // trasparente: il contrasto dipende da cosa c'e' sotto
+		}
+		$hex = substr( $hex, 0, 6 );
+	}
+
+	return array(
+		hexdec( substr( $hex, 0, 2 ) ),
+		hexdec( substr( $hex, 2, 2 ) ),
+		hexdec( substr( $hex, 4, 2 ) ),
+	);
+}
+
+/**
+ * Relative luminance of an RGB triplet, as defined by WCAG 2.x.
+ */
+function astro_be_relative_luminance( $rgb ) {
+
+	$canali = array();
+	foreach ( $rgb as $componente ) {
+		$componente = $componente / 255;
+		$canali[] = ( $componente <= 0.03928 ) ? ( $componente / 12.92 ) : pow( ( $componente + 0.055 ) / 1.055, 2.4 );
+	}
+
+	return ( 0.2126 * $canali[0] ) + ( 0.7152 * $canali[1] ) + ( 0.0722 * $canali[2] );
+}
+
+/**
+ * Contrast ratio between two colors, from 1 to 21, or false when either one cannot be read.
+ */
+function astro_be_contrast_ratio( $primo, $secondo ) {
+
+	$a = astro_be_hex_to_rgb( $primo );
+	$b = astro_be_hex_to_rgb( $secondo );
+	if ( ! $a || ! $b ) {
+		return false;
+	}
+
+	$la = astro_be_relative_luminance( $a );
+	$lb = astro_be_relative_luminance( $b );
+
+	return ( max( $la, $lb ) + 0.05 ) / ( min( $la, $lb ) + 0.05 );
+}
+
+/**
+ * Color pairs of the modern style that do not reach the 4.5:1 asked by WCAG AA.
+ *
+ * Only for the modern style: there the colors left empty fall back to known defaults, while
+ * the classic form inherits them from the theme and there would be nothing to compare.
+ */
+function astro_be_layout_contrast_warnings() {
+
+	if ( 'compact' !== astro_be_get_sanitized_option( ASTRO_BE_PREFIX . 'form_style' ) ) {
+		return array();
+	}
+
+	$scelto = function( $opzione, $predefinito ) {
+		$valore = astro_be_get_sanitized_option( ASTRO_BE_PREFIX . $opzione );
+		return ( is_string( $valore ) && '' !== $valore ) ? $valore : $predefinito;
+	};
+
+	$sfondo = $scelto( 'widget-background-color', '#ffffff' );
+	$testo  = $scelto( 'field-font-color', '#1e1e1e' );
+
+	$coppie = array(
+		array( __( 'Labels on the form background', 'astro-booking-engine' ), $scelto( 'label-font-color', '#6b7280' ), $sfondo ),
+		array( __( 'Values on the form background', 'astro-booking-engine' ), $testo, $sfondo ),
+		array( __( 'Values on the hover background', 'astro-booking-engine' ), $testo, $scelto( 'field-hover-background-color', '#fbfbfb' ) ),
+		array( __( 'Submit button text on its background', 'astro-booking-engine' ), $scelto( 'submit-font-color', '#ffffff' ), $scelto( 'submit-background-color', '#404040' ) ),
+	);
+
+	$avvisi = array();
+	foreach ( $coppie as $coppia ) {
+		$rapporto = astro_be_contrast_ratio( $coppia[1], $coppia[2] );
+		if ( false === $rapporto || $rapporto >= 4.5 ) {
+			continue;
+		}
+		$avvisi[] = sprintf(
+			/* translators: 1: name of the color pair, 2: contrast ratio, e.g. 3.10 */
+			__( '%1$s: %2$s:1', 'astro-booking-engine' ),
+			$coppia[0],
+			number_format_i18n( $rapporto, 2 )
+		);
+	}
+
+	return $avvisi;
+}
+
+/**
  * Return the custom Layout CSS classes.
  */
 function astro_be_get_custom_layout() {
 
 	$arr = array();
+
+	/**
+	 * Stile compatto: invece di ripetere i selettori si impostano le variabili una volta sola
+	 * su .astro_be--compact, e la pelle le usa dove servono. Le opzioni sono le stesse del
+	 * layout classico, cosi' chi passa allo stile nuovo ritrova i colori che aveva scelto.
+	 */
+	$vars = array();
+	$mappa = array(
+		'widget-background-color'     => '--abe-bg',
+		'widget-border-radius'        => '--abe-radius',
+		'label-font-color'            => '--abe-muted',
+		'label-font-size'             => '--abe-label-size',
+		'field-font-color'            => '--abe-fg',
+		'field-font-size'             => '--abe-value-size',
+		'field-border-color'          => '--abe-line',
+		'field-hover-background-color'=> '--abe-hover',
+		'submit-background-color'     => '--abe-accent',
+		'submit-font-color'           => '--abe-accent-fg',
+	);
+	$con_px = array( '--abe-radius', '--abe-label-size', '--abe-value-size' );
+
+	foreach ( $mappa as $opzione => $variabile ) {
+		$valore = astro_be_get_sanitized_option( ASTRO_BE_PREFIX . $opzione );
+		if ( '' === $valore || false === $valore ) {
+			continue;
+		}
+		if ( in_array( $variabile, $con_px, true ) ) {
+			$valore .= 'px';
+		}
+		$vars[] = $variabile . ':' . $valore;
+	}
+	if ( ! empty( $vars ) ) {
+		$arr[] = array( 'class' => '.astro_be.astro_be--compact', 'prop' => implode( ';', $vars ) );
+	}
 
 	//Widget
 	$widget = array();

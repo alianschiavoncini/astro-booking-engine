@@ -124,6 +124,86 @@ if (class_exists('Astro_Plugin_Panel')) {
 }
 
 /**
+ * Compact style notice.
+ *
+ * The compact form is the default only on new installations: a site that was already using the
+ * plugin keeps its form exactly as it was. This notice tells those sites that the new style is
+ * there, without changing anything behind their back. It is shown once, on the plugin pages
+ * only, and it goes away for good as soon as it is dismissed or the style is changed.
+ */
+add_action( 'admin_init', 'astro_be_compact_notice_actions' );
+function astro_be_compact_notice_actions() {
+
+	if ( ! isset( $_GET['astro_be_compact_notice'] ) ) {
+		return;
+	}
+
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
+
+	$astro_be_nonce = isset( $_GET['nonce'] ) ? sanitize_text_field( wp_unslash( $_GET['nonce'] ) ) : '';
+	if ( ! wp_verify_nonce( $astro_be_nonce, 'astro_be_compact_notice' ) ) {
+		return;
+	}
+
+	$action = sanitize_text_field( wp_unslash( $_GET['astro_be_compact_notice'] ) );
+
+	update_option( ASTRO_BE_PREFIX . 'compact_notice_dismissed', 'done' );
+
+	if ( 'try' === $action ) {
+		wp_safe_redirect( admin_url( 'admin.php?page=' . ASTRO_BE_TEXTDOMAIN . '&tab=layout' ) . '#formstyle' );
+		exit;
+	}
+
+	wp_safe_redirect( admin_url( 'admin.php?page=' . ASTRO_BE_TEXTDOMAIN ) );
+	exit;
+}
+
+add_action( 'admin_notices', 'astro_be_compact_notice' );
+function astro_be_compact_notice() {
+
+	// Solo sulle pagine del plugin: nessun avviso sparso per la bacheca.
+	$page = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
+	if ( 0 !== strpos( $page, ASTRO_BE_TEXTDOMAIN ) ) {
+		return;
+	}
+
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
+
+	// Gia' chiuso una volta: non si ripresenta.
+	if ( get_option( ASTRO_BE_PREFIX . 'compact_notice_dismissed' ) ) {
+		return;
+	}
+
+	// Gia' sullo stile nuovo: non c'e' niente da proporre.
+	if ( 'compact' === astro_be_get_sanitized_option( ASTRO_BE_PREFIX . 'form_style' ) ) {
+		return;
+	}
+
+	// Solo a chi usa davvero il plugin: su un'installazione nuova lo stile compatto e' gia'
+	// quello predefinito, e l'avviso sarebbe fuori luogo.
+	if ( ! get_option( ASTRO_BE_PREFIX . 'provider' ) ) {
+		return;
+	}
+
+	$url_try = wp_nonce_url( admin_url( 'admin.php?page=' . ASTRO_BE_TEXTDOMAIN . '&astro_be_compact_notice=try' ), 'astro_be_compact_notice', 'nonce' );
+	$url_no  = wp_nonce_url( admin_url( 'admin.php?page=' . ASTRO_BE_TEXTDOMAIN . '&astro_be_compact_notice=no' ), 'astro_be_compact_notice', 'nonce' );
+	?>
+	<div class="notice notice-info">
+		<p><strong><?php esc_html_e( 'A new modern style is available for your booking form.', 'astro-booking-engine' ); ?></strong></p>
+		<p><?php esc_html_e( 'It shows the form as a single card, with one calendar for both dates and a guests panel. Nothing has changed on your site: to try it go to Layout > Form style and choose Modern. The colors you have already chosen come along with it, and you can go back to Classic whenever you want.', 'astro-booking-engine' ); ?></p>
+		<p>
+			<a href="<?php echo esc_url( $url_try ); ?>" class="button button-primary"><?php esc_html_e( 'Go to the layout settings', 'astro-booking-engine' ); ?></a>
+			<a href="<?php echo esc_url( $url_no ); ?>" class="button"><?php esc_html_e( 'No thanks', 'astro-booking-engine' ); ?></a>
+		</p>
+	</div>
+	<?php
+}
+
+/**
  * Review notice: handle the choice links (nonce + capability), then redirect.
  */
 add_action( 'admin_init', 'astro_be_review_notice_actions' );

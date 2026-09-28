@@ -6,6 +6,18 @@ jQuery( document ).ready(function( $ ) {
     // Color picker
     $('.colorpicker').wpColorPicker();
 
+    // Le opzioni di layout non valgono per entrambi gli stili: densita' e sfondo al passaggio
+    // del mouse riguardano solo il moderno, il tema del calendario solo il classico (il moderno
+    // ha un calendario proprio). Si mostrano quelle che contano, senza toglierle dal form.
+    var $astro_be_form_style = $('#astro_be_form_style');
+    if ($astro_be_form_style.length) {
+        $astro_be_form_style.on('change', function () {
+            var moderno = ($(this).val() === 'compact');
+            $('.astro_be_row-modern-only').toggle(moderno);
+            $('.astro_be_row-classic-only').toggle(!moderno);
+        }).trigger('change');
+    }
+
     // Show/hide the provider panel
     $("#astro_be_provider").change(function(){
         $(this).find("option:selected").each(function(){
