@@ -63,6 +63,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                                                 '' => '---',
                                                 '5stelle' => '5Stelle',
                                                 'ihotelier' => 'Amadeus iHotelier (TravelClick)',
+                                                'beddy' => 'Beddy',
                                                 'begenius' => 'BeGenius',
                                                 'blastness' => 'Blastness',
                                                 'bookingexpert' => 'Booking Expert',
@@ -70,6 +71,7 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                                                 'datasistemi' => 'Data Sistemi',
                                                 'dedge' => 'D-EDGE',
                                                 'ericsoft' => 'Ericsoft',
+                                                'ermeshotels' => 'ErmesHotels',
                                                 'guestline' => 'Guestline',
                                                 'hotelnetsolutions' => 'HotelNetSolutions (OnePageBooking)',
                                                 'iperbooking' => 'Iperbooking',
@@ -119,6 +121,9 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         //ihotelier
         include('tab-settings-ihotelier.php');
 
+        //beddy
+        include('tab-settings-beddy.php');
+
         //begenius
         include('tab-settings-begenius.php');
 
@@ -139,6 +144,9 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 
         //ericsoft
         include('tab-settings-ericsoft.php');
+
+        //ermeshotels
+        include('tab-settings-ermeshotels.php');
 
         //guestline
         include('tab-settings-guestline.php');

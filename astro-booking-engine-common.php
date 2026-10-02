@@ -49,6 +49,27 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . '5stelle_portal' => ASTRO_BE_PREFIX . '5stelle_portal', //required
 
 				/**
+				 * Beddy
+				 */
+				ASTRO_BE_PREFIX . 'beddy_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'beddy_form_target' => ASTRO_BE_PREFIX . 'beddy_form_target',
+				ASTRO_BE_PREFIX . 'beddy_adults_enable' => ASTRO_BE_PREFIX . 'beddy_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'beddy_adults_n_default' => ASTRO_BE_PREFIX . 'beddy_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'beddy_adults_n_max' => ASTRO_BE_PREFIX . 'beddy_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'beddy_children_enable' => ASTRO_BE_PREFIX . 'beddy_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'beddy_children_n_default' => ASTRO_BE_PREFIX . 'beddy_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'beddy_children_n_max' => ASTRO_BE_PREFIX . 'beddy_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'beddy_childage_enable' => ASTRO_BE_PREFIX . 'beddy_childage_enable', //required when children are enabled
+				ASTRO_BE_PREFIX . 'beddy_childage_min' => ASTRO_BE_PREFIX . 'beddy_childage_min', //conditional
+				ASTRO_BE_PREFIX . 'beddy_childage_max' => ASTRO_BE_PREFIX . 'beddy_childage_max', //conditional
+				ASTRO_BE_PREFIX . 'beddy_coupon' => ASTRO_BE_PREFIX . 'beddy_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'beddy_submit_label' => ASTRO_BE_PREFIX . 'beddy_submit_label', //optional
+
+				//Beddy custom fields
+				ASTRO_BE_PREFIX . 'beddy_hotel' => ASTRO_BE_PREFIX . 'beddy_hotel', //required; the subdomain
+				ASTRO_BE_PREFIX . 'beddy_currency' => ASTRO_BE_PREFIX . 'beddy_currency', //required
+
+				/**
 				 * BeGenius
 				 */
 				ASTRO_BE_PREFIX . 'begenius_form_method' => esc_attr('get'),
@@ -175,6 +196,26 @@ function astro_be_option_names($tab = false) {
 				//Ericsoft custom fields
 				ASTRO_BE_PREFIX . 'ericsoft_idh' => ASTRO_BE_PREFIX . 'ericsoft_idh', //required
 				ASTRO_BE_PREFIX . 'ericsoft_currency' => ASTRO_BE_PREFIX . 'ericsoft_currency', //required
+
+				/**
+				 * ErmesHotels
+				 */
+				ASTRO_BE_PREFIX . 'ermeshotels_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'ermeshotels_form_target' => ASTRO_BE_PREFIX . 'ermeshotels_form_target',
+				ASTRO_BE_PREFIX . 'ermeshotels_adults_enable' => ASTRO_BE_PREFIX . 'ermeshotels_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'ermeshotels_adults_n_default' => ASTRO_BE_PREFIX . 'ermeshotels_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'ermeshotels_adults_n_max' => ASTRO_BE_PREFIX . 'ermeshotels_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'ermeshotels_children_enable' => ASTRO_BE_PREFIX . 'ermeshotels_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'ermeshotels_children_n_default' => ASTRO_BE_PREFIX . 'ermeshotels_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'ermeshotels_children_n_max' => ASTRO_BE_PREFIX . 'ermeshotels_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'ermeshotels_childage_enable' => ASTRO_BE_PREFIX . 'ermeshotels_childage_enable', //required when children are enabled
+				ASTRO_BE_PREFIX . 'ermeshotels_childage_min' => ASTRO_BE_PREFIX . 'ermeshotels_childage_min', //conditional
+				ASTRO_BE_PREFIX . 'ermeshotels_childage_max' => ASTRO_BE_PREFIX . 'ermeshotels_childage_max', //conditional
+				ASTRO_BE_PREFIX . 'ermeshotels_coupon' => ASTRO_BE_PREFIX . 'ermeshotels_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'ermeshotels_submit_label' => ASTRO_BE_PREFIX . 'ermeshotels_submit_label', //optional
+
+				//ErmesHotels custom fields
+				ASTRO_BE_PREFIX . 'ermeshotels_hotel' => ASTRO_BE_PREFIX . 'ermeshotels_hotel', //required; hotel/channel
 
 				/**
 				 * Guestline
@@ -785,6 +826,12 @@ function astro_be_get_option_sanitize_callback( $option_name ) {
 	if ( 'roiback_code' === $name ) {
 		return 'astro_be_sanitize_roiback_code';
 	}
+	if ( 'beddy_hotel' === $name ) {
+		return 'astro_be_sanitize_beddy_hotel';
+	}
+	if ( 'ermeshotels_hotel' === $name ) {
+		return 'astro_be_sanitize_ermeshotels_hotel';
+	}
 	if ( 'mirai_hotel' === $name ) {
 		return 'astro_be_sanitize_mirai_hotel';
 	}
@@ -1100,6 +1147,52 @@ function astro_return_witbooking_language() {
 	$lang = astro_return_post_language();
 
 	return array_key_exists( $lang, astro_be_witbooking_languages() ) ? $lang : 'en';
+}
+
+/**
+ * Beddy booking engine address: only the subdomain of the property is kept (terramarinahotel for
+ * https://terramarinahotel.beddy.io/#/(beddy:list)?lang=it). The whole address is pasted by the
+ * user; the subdomain alone, as the plugin saves it, is accepted as well.
+ */
+function astro_be_sanitize_beddy_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$value = strtolower( trim( $value ) );
+
+	if ( preg_match( '#^(?:https?://)?([a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\.beddy\.io(?:[/?\#]|$)#', $value, $matches ) ) {
+		return $matches[1];
+	}
+
+	if ( preg_match( '/^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/', $value ) ) {
+		return $value;
+	}
+
+	return '';
+}
+
+/**
+ * ErmesHotels booking engine address: the code of the hotel and the one of the channel, kept as
+ * hotel/channel (2029/604 for https://book.ermeshotels.com/hotel/2029/channel/604/language/2/rooms).
+ * The whole address is pasted by the user; hotel/channel alone, as the plugin saves it, is accepted.
+ */
+function astro_be_sanitize_ermeshotels_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$value = trim( $value );
+
+	if ( preg_match( '#^(?:https?://)?book\.ermeshotels\.com/hotel/(\d+)/channel/(\d+)(?:[/?\#]|$)#i', $value, $matches ) ) {
+		return $matches[1] . '/' . $matches[2];
+	}
+
+	if ( preg_match( '#^(\d+)/(\d+)$#', $value, $matches ) ) {
+		return $matches[1] . '/' . $matches[2];
+	}
+
+	return '';
 }
 
 /**
@@ -1966,6 +2059,33 @@ function astro_get_post_language() {
 function astro_return_post_language() {
 	$lang = astro_get_post_language();
 	$lang = strtolower($lang);
+
+	return $lang;
+}
+
+/**
+ * ErmesHotels: return the language as the number the booking engine uses in its address.
+ * The languages it does not have fall back to English.
+ */
+function astro_return_ermeshotels_language_id() {
+
+	$ids = array( 'en' => 1, 'it' => 2, 'de' => 3, 'fr' => 4, 'es' => 5, 'zh' => 6, 'ru' => 7, 'pt' => 8 );
+	$lang = astro_return_post_language();
+
+	return isset( $ids[ $lang ] ) ? $ids[ $lang ] : 1;
+}
+
+/**
+ * Beddy: return the language.
+ * The booking engine is translated into these languages only: the others fall back to English.
+ */
+function astro_return_beddy_language() {
+
+	$lang = astro_return_post_language();
+
+	if ( ! in_array( $lang, array( 'it', 'en', 'es', 'fr', 'de', 'ru', 'ja' ), true ) ) {
+		$lang = 'en';
+	}
 
 	return $lang;
 }

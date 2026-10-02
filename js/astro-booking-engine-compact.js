@@ -39,10 +39,14 @@
             // Piu' form nella stessa pagina (contenuto + widget in barra laterale) producono gli
             // stessi id: le <label for> del secondo puntano ai campi del primo. Finche' i template
             // non generano id univoci, li si rende unici qui, sistemando anche le etichette.
+            // Solo gli id puntati da un'etichetta: i campi nascosti li cercano per id gli script
+            // dei provider (form.find('#astro_be_form_<provider>_…')), e rinominarli svuotava
+            // date e ospiti del primo form.
             (function rendiIdUnici() {
                 var token = 'abe' + Math.random().toString(36).slice(2, 7);
                 form.find('[id]').each(function () {
                     var vecchio = this.id;
+                    if (!form.find('label[for="' + vecchio + '"]').length) { return; }
                     if (document.querySelectorAll('[id="' + (window.CSS && CSS.escape ? CSS.escape(vecchio) : vecchio) + '"]').length < 2) { return; }
                     var nuovo = vecchio + '-' + token;
                     form.find('label[for="' + vecchio + '"]').attr('for', nuovo);

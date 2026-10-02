@@ -2517,3 +2517,19 @@ msgid ""
 "Some of the colors chosen are hard to read. WCAG AA asks for at least 4.5:1 between text and background:"
 msgstr ""
 "Algunos de los colores elegidos son poco legibles. Las WCAG AA piden al menos 4,5:1 entre texto y fondo:"
+
+#: includes/tabs/tab-settings-beddy.php:24
+msgid "The address of your Beddy booking engine, as it is: https://yourhotel.beddy.io/"
+msgstr "La dirección de tu motor de reservas Beddy, tal cual: https://tuhotel.beddy.io/"
+
+#: includes/tabs/tab-settings-beddy.php:296
+msgid "Beddy receives the children as the list of their ages: it must be enabled when Children is enabled."
+msgstr "Beddy recibe los niños como la lista de sus edades: debe estar activo cuando Niños esté activo."
+
+#: includes/tabs/tab-settings-ermeshotels.php:24
+msgid "The address of your ErmesHotels booking engine, as it is: https://book.ermeshotels.com/hotel/1234/channel/567/language/2/rooms"
+msgstr "La dirección de tu motor de reservas ErmesHotels, tal cual: https://book.ermeshotels.com/hotel/1234/channel/567/language/2/rooms"
+
+#: includes/tabs/tab-settings-ermeshotels.php:267
+msgid "ErmesHotels receives the children as the list of their ages: it must be enabled when Children is enabled."
+msgstr "ErmesHotels recibe los niños como la lista de sus edades: debe estar activo cuando Niños esté activo."

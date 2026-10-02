@@ -3,7 +3,7 @@ Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget
 Requires at least: 6.0.1
 Tested up to: 7.1
-Stable tag: 2.4.0
+Stable tag: 2.5.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -42,6 +42,7 @@ Astro Booking Engine is not a booking engine: it needs an active contract with o
 <ul>
     <li><a href="https://www.hotelcinquestelle.cloud/en/">5Stelle</a> (Italy)</li>
     <li><a href="https://amadeus-hospitality.com/">Amadeus iHotelier (TravelClick)</a> (Spain)</li>
+    <li><a href="https://www.beddy.io/">Beddy</a> (Italy)</li>
     <li><a href="http://www.begenius.it/">BeGenius</a> (Italy)</li>
     <li><a href="https://www.blastness.com/">Blastness</a> (Italy)</li>
     <li><a href="https://bookingexpert.com/">Booking Expert</a> (Italy)</li>
@@ -49,6 +50,7 @@ Astro Booking Engine is not a booking engine: it needs an active contract with o
     <li><a href="https://www.datasistemi.eu/">Data Sistemi</a> (Italy)</li>
     <li><a href="https://www.d-edge.com/">D-EDGE</a> (France)</li>
     <li><a href="https://www.ericsoft.com/">Ericsoft</a> (Italy)</li>
+    <li><a href="https://ermeshotels.com/">ErmesHotels</a> (Italy)</li>
     <li><a href="https://www.guestline.com/">Guestline</a> (United Kingdom)</li>
     <li><a href="https://hotelnetsolutions.de/en/">HotelNetSolutions (OnePageBooking)</a> (Germany)</li>
     <li><a href="https://www.iperbooking.com/">Iperbooking</a> (Italy)</li>
@@ -106,43 +108,51 @@ The plugin shows a booking form that takes the visitor to the online booking eng
 
 Nothing is sent while the page loads, and the plugin does not collect or store any data. When the visitor submits the form, the browser opens the provider's booking engine and sends it the search entered in the form: arrival and departure dates, number of adults and children, children ages and pets when those fields are enabled, the promo code when entered, the language and currency of the page, and the hotel identifiers set in the plugin settings. From that point on, the terms and the privacy policy of the provider apply.
 
-The providers, the address the form is sent to, and their policies:
+The providers and their policies:
 
-* 5Stelle (Zucchetti), www.secure-reservation.cloud. Privacy: https://www.zucchetti.it/it/cms/service/privacy.html
-* Amadeus iHotelier (TravelClick), reservations.travelclick.com. Terms: https://www.amadeus-hospitality.com/legal/ Privacy: https://www.amadeus-hospitality.com/privacy-policy
-* BeGenius, secure.begenius.it. The provider does not publish a privacy policy. Website: https://www.begenius.it/
-* Blastness, www.blastnessbooking.com. Privacy: https://www.blastness.com/it/privacy
-* Booking Expert, be.bookingexpert.it. Privacy: https://bookingexpert.com/privacy
-* Cloudbeds, the cloudbeds.com address set in the settings. Terms: https://www.cloudbeds.com/terms/ Privacy: https://www.cloudbeds.com/privacy-policy/
-* Data Sistemi, be.booking-reservations.com. Privacy: https://www.datasistemi.eu/privacy-policy.html
-* D-EDGE, the booking engine address set in the settings. Privacy: https://www.d-edge.com/privacy-policy/
-* Ericsoft (Zucchetti), booking.ericsoft.com. Privacy: https://cms-cdn.ericsoft.com/cms/site/resources/6183/56339/6ac93f723e3ba6560cc846db875ff73e/Informativa%20Privacy%20ENG.pdf
-* Guestline (The Access Group), booking.eu.guestline.app. Privacy: https://www.theaccessgroup.com/en-gb/privacy-notice/
-* HotelNetSolutions (OnePageBooking), the booking engine address set in the settings. Privacy: https://hotelnetsolutions.de/en/privacy-policy/
-* Iperbooking, the booking engine address set in the settings. Privacy: https://www.iperbooking.com/privacy.cfm
-* Journey, <property>.onejourney.travel. Terms: https://journey.travel/terms-policies/terms-of-use Privacy: https://journey.travel/terms-policies/privacy-policy
-* Mews, app.mews.com. Terms: https://www.mews.com/en/legal Privacy: https://www.mews.com/en/legal/privacy-policy
-* Mirai, reservation.mirai.com. Privacy: https://www.mirai.com/privacy-policy/
-* MyGuestCare (MyComp), booking.myguestcare.com. Privacy: https://www.iubenda.com/privacy-policy/57645335
-* Octorate, book.octorate.com. Terms: https://www.octorate.com/terms-and-conditions/ Privacy: https://www.octorate.com/privacy-policy/
-* Passepartout, webhotels.passepartout.cloud. Terms: https://www.passepartout.net/utility/note-legali Privacy: https://privacy.passepartout.net/informativasitiweb
-* Reservit, secure.reservit.com. Privacy: https://www.reservit.com/politique-de-confidentialite/
-* ResNexus, resnexus.com. Terms: https://resnexus.com/TermsofUse.html Privacy: https://resnexus.com/PrivacyPolicy.html
-* RevPlus (WebHotelier), <property>.reserve-online.net. Terms: https://www.revplus.com/terms Privacy: https://www.revplus.com/privacy
-* Roiback, the booking engine address set in the settings. Terms: https://www.roiback.com/legal/aviso-legal Privacy: https://www.roiback.com/legal/politica-de-privacidad
-* Sabre SynXis, be.synxis.com. Privacy: https://www.sabre.com/about/privacy
-* Scidoo, www.scidoo.com. Privacy: https://scidoo.com/preventivov2/privacy_policy.php?cod=27
-* Simple Booking, www.simplebooking.it. Privacy: https://www.simplebooking.travel/privacy-policy
-* SiteMinder, direct-book.com. Terms: https://www.siteminder.com/legal/website-terms/ Privacy: https://www.siteminder.com/legal/privacy/
-* ThinkReservations, secure.thinkreservations.com. Terms: https://www.thinkreservations.com/terms Privacy: https://www.thinkreservations.com/privacy
-* Vertical Booking, reservations.verticalbooking.com. Privacy: https://www.verticalbooking.com/en/privacy-policy/
-* Witbooking, the booking engine address set in the settings. Privacy: https://www.witbooking.com/policy
-* WuBook, wubook.net. Terms: https://wubook.net/page/Termini-Condizioni-14.html Privacy: https://wubook.net/page/privacy-policy-17.html
+* 5Stelle (Zucchetti): [privacy](https://www.zucchetti.it/it/cms/service/privacy.html)
+* Amadeus iHotelier (TravelClick): [privacy](https://www.amadeus-hospitality.com/privacy-policy), [terms](https://www.amadeus-hospitality.com/legal/)
+* Beddy (Zucchetti): [privacy](https://www.zucchetti.it/website/cms/privacy.html)
+* BeGenius: no privacy policy published, [website](https://www.begenius.it/)
+* Blastness: [privacy](https://www.blastness.com/it/privacy)
+* Booking Expert: [privacy](https://bookingexpert.com/privacy)
+* Cloudbeds: [privacy](https://www.cloudbeds.com/privacy-policy/), [terms](https://www.cloudbeds.com/terms/)
+* Data Sistemi: [privacy](https://www.datasistemi.eu/privacy-policy.html)
+* D-EDGE: [privacy](https://www.d-edge.com/privacy-policy/)
+* Ericsoft (Zucchetti): [privacy](https://cms-cdn.ericsoft.com/cms/site/resources/6183/56339/6ac93f723e3ba6560cc846db875ff73e/Informativa%20Privacy%20ENG.pdf)
+* ErmesHotels: [privacy](https://ermeshotels.com/informativa-sulla-privacy/)
+* Guestline (The Access Group): [privacy](https://www.theaccessgroup.com/en-gb/privacy-notice/)
+* HotelNetSolutions (OnePageBooking): [privacy](https://hotelnetsolutions.de/en/privacy-policy/)
+* Iperbooking: [privacy](https://www.iperbooking.com/privacy.cfm)
+* Journey: [privacy](https://journey.travel/terms-policies/privacy-policy), [terms](https://journey.travel/terms-policies/terms-of-use)
+* Mews: [privacy](https://www.mews.com/en/legal/privacy-policy), [terms](https://www.mews.com/en/legal)
+* Mirai: [privacy](https://www.mirai.com/privacy-policy/)
+* MyGuestCare (MyComp): [privacy](https://www.iubenda.com/privacy-policy/57645335)
+* Octorate: [privacy](https://www.octorate.com/privacy-policy/), [terms](https://www.octorate.com/terms-and-conditions/)
+* Passepartout: [privacy](https://privacy.passepartout.net/informativasitiweb), [terms](https://www.passepartout.net/utility/note-legali)
+* Reservit: [privacy](https://www.reservit.com/politique-de-confidentialite/)
+* ResNexus: [privacy](https://resnexus.com/PrivacyPolicy.html), [terms](https://resnexus.com/TermsofUse.html)
+* RevPlus (WebHotelier): [privacy](https://www.revplus.com/privacy), [terms](https://www.revplus.com/terms)
+* Roiback: [privacy](https://www.roiback.com/legal/politica-de-privacidad), [terms](https://www.roiback.com/legal/aviso-legal)
+* Sabre SynXis: [privacy](https://www.sabre.com/about/privacy)
+* Scidoo: [privacy](https://scidoo.com/preventivov2/privacy_policy.php?cod=27)
+* Simple Booking: [privacy](https://www.simplebooking.travel/privacy-policy)
+* SiteMinder: [privacy](https://www.siteminder.com/legal/privacy/), [terms](https://www.siteminder.com/legal/website-terms/)
+* ThinkReservations: [privacy](https://www.thinkreservations.com/privacy), [terms](https://www.thinkreservations.com/terms)
+* Vertical Booking: [privacy](https://www.verticalbooking.com/en/privacy-policy/)
+* Witbooking: [privacy](https://www.witbooking.com/policy)
+* WuBook: [privacy](https://wubook.net/page/privacy-policy-17.html), [terms](https://wubook.net/page/Termini-Condizioni-14.html)
 
 == Wordfence vendor verification key ==
 gsphudo7by90lzwdlihyerqxbzj6jiln
 
 == Changelog ==
+
+= 2.5.0 =
+* Added: Beddy provider.
+* Added: ErmesHotels provider.
+* Fixed: with the modern style and more than one booking form on the same page, the first form opened the booking engine without the dates and the guests.
+* Compatibility: tested with WordPress 7.1.
 
 = 2.4.0 =
 * Added: a modern form style, shown as a single card with one calendar for both dates and a guests panel with steppers, children ages and pets. The classic style stays the default on the sites that already use the plugin, and the modern one is the default for new installations.
@@ -258,6 +268,9 @@ gsphudo7by90lzwdlihyerqxbzj6jiln
 * Initial version.
 
 == Upgrade Notice ==
+
+= 2.5.0 =
+Two new providers, Beddy and ErmesHotels, and a fix for the pages that show more than one booking form with the modern style.
 
 = 2.4.0 =
 New modern form style, optional and off by default on existing sites, plus two fixes for pages that show more than one booking form.

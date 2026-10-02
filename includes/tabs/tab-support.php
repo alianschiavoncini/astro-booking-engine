@@ -95,6 +95,7 @@ do_settings_sections($option_group);
 			$astro_be_providers = array(
 				array( 'name' => '5Stelle', 'url' => 'https://www.hotelcinquestelle.cloud/en/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
 				array( 'name' => 'Amadeus iHotelier (TravelClick)', 'url' => 'https://amadeus-hospitality.com/', 'country' => __( 'Spain', 'astro-booking-engine' ) ),
+				array( 'name' => 'Beddy', 'url' => 'https://www.beddy.io/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
 				array( 'name' => 'BeGenius', 'url' => 'http://www.begenius.it/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
 				array( 'name' => 'Blastness', 'url' => 'https://www.blastness.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
 				array( 'name' => 'Booking Expert', 'url' => 'https://bookingexpert.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
@@ -102,6 +103,7 @@ do_settings_sections($option_group);
 				array( 'name' => 'Data Sistemi', 'url' => 'https://www.datasistemi.eu/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
 				array( 'name' => 'D-EDGE', 'url' => 'https://www.d-edge.com/', 'country' => __( 'France', 'astro-booking-engine' ) ),
 				array( 'name' => 'Ericsoft', 'url' => 'https://www.ericsoft.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'ErmesHotels', 'url' => 'https://ermeshotels.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
 				array( 'name' => 'Guestline', 'url' => 'https://www.guestline.com/', 'country' => __( 'United Kingdom', 'astro-booking-engine' ) ),
 				array( 'name' => 'HotelNetSolutions (OnePageBooking)', 'url' => 'https://hotelnetsolutions.de/en/', 'country' => __( 'Germany', 'astro-booking-engine' ) ),
 				array( 'name' => 'Iperbooking', 'url' => 'https://www.iperbooking.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
