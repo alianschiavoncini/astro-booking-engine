@@ -2331,3 +2331,83 @@ msgstr ""
 #: includes/tabs/tab-settings-ermeshotels.php:267
 msgid "ErmesHotels receives the children as the list of their ages: it must be enabled when Children is enabled."
 msgstr ""
+
+#: includes/tabs/tab-settings-bookingdesigner.php:24
+msgid "The address of your Booking Designer booking engine, as it is: https://book.yourhotel.com/en/booking-engine/"
+msgstr ""
+
+#: includes/tabs/tab-settings-bookingdesigner.php:267
+msgid "Booking Designer receives the children as the list of their ages: it must be enabled when Children is enabled."
+msgstr ""
+
+#: includes/tabs/tab-settings-krossbooking.php:24
+msgid "The address of your Kross Booking booking engine, as it is: https://yourhotel.kross.travel/book/step1"
+msgstr ""
+
+#: includes/tabs/tab-settings-krossbooking.php:267
+msgid "Kross Booking receives the children as the list of their ages: it must be enabled when Children is enabled."
+msgstr ""
+
+#: includes/tabs/tab-settings-slope.php:24
+msgid "The address of your Slope booking engine, as it is: https://booking.slope.it/0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d"
+msgstr ""
+
+#: includes/tabs/tab-settings-slope.php:179
+msgid "Slope receives the number of children only: their ages are asked on the booking engine."
+msgstr ""
+
+#: includes/tabs/tab-settings-bedzzle.php:24
+msgid "The address of your Bedzzle booking engine, as it is: https://booking.bedzzle.com/desktop/?apikey=AbCd1234&lang="
+msgstr ""
+
+#: includes/tabs/tab-settings-bedzzle.php:267
+msgid "Bedzzle receives the children as the list of their ages: it must be enabled when Children is enabled."
+msgstr ""
+
+#: includes/tabs/tab-settings-dirs21.php:24
+msgid "The address of your DIRS21 booking engine, as it is: https://reservation.one.dirs21.de/yourhotel"
+msgstr ""
+
+#: includes/tabs/tab-settings-dirs21.php:267
+msgid "DIRS21 receives the children as the list of their ages: it must be enabled when Children is enabled."
+msgstr ""
+
+#: includes/tabs/tab-settings-bookvisit.php:24
+msgid "The address of your Bookvisit booking engine, with the channel code: https://online.bookvisit.com/accommodation/list?channelId=0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d"
+msgstr ""
+
+#: includes/tabs/tab-settings-bookvisit.php:267
+msgid "Bookvisit receives the children as the list of their ages: it must be enabled when Children is enabled."
+msgstr ""
+
+#: includes/tabs/tab-settings-sirvoy.php:24
+msgid "The address of the page of the hotel website where the Sirvoy booking widget is, copied from the browser: the guest lands there with the search filled in. Without the widget on that page the search does not start."
+msgstr ""
+
+#: includes/tabs/tab-settings-sirvoy.php:88
+msgid "Sirvoy receives the number of guests only, without telling adults and children apart."
+msgstr ""
+
+#: includes/tabs/tab-settings-profitroom.php:24
+msgid "The address of your Profitroom booking engine, as it is: https://booking.profitroom.com/en/yourhotel/pricelist/rooms/"
+msgstr ""
+
+#: includes/tabs/tab-settings-profitroom.php:42
+msgid "Children age ranges"
+msgstr ""
+
+#: includes/tabs/tab-settings-profitroom.php:43
+msgid "The age ranges of the children set for the hotel in Profitroom, separated by commas: every child is counted in the range of their age. The default, 0-3,4-14, is the most common one: if the hotel uses other ranges, enter them here, otherwise Profitroom leaves out the children whose range it does not know."
+msgstr ""
+
+#: includes/tabs/tab-settings-profitroom.php:284
+msgid "Profitroom receives the children in the age ranges set for the hotel: it must be enabled when Children is enabled."
+msgstr ""
+
+#: includes/tabs/tab-support.php:104
+msgid "Sweden"
+msgstr ""
+
+#: includes/tabs/tab-support.php:121
+msgid "Poland"
+msgstr ""

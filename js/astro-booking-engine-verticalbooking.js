@@ -1,7 +1,7 @@
 jQuery( document ).ready(function( $ ) {
 
     /**
-     * Vertical booking
+     * Vertical Booking
      */
     $(".astro_be_form_verticalbooking").submit(function(){
 

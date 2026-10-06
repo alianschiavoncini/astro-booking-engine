@@ -64,33 +64,41 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                                                 '5stelle' => '5Stelle',
                                                 'ihotelier' => 'Amadeus iHotelier (TravelClick)',
                                                 'beddy' => 'Beddy',
+                                                'bedzzle' => 'Bedzzle',
                                                 'begenius' => 'BeGenius',
                                                 'blastness' => 'Blastness',
+                                                'bookingdesigner' => 'Booking Designer',
                                                 'bookingexpert' => 'Booking Expert',
+                                                'bookvisit' => 'Bookvisit',
                                                 'cloudbeds' => 'Cloudbeds',
                                                 'datasistemi' => 'Data Sistemi',
                                                 'dedge' => 'D-EDGE',
+                                                'dirs21' => 'DIRS21',
                                                 'ericsoft' => 'Ericsoft',
                                                 'ermeshotels' => 'ErmesHotels',
                                                 'guestline' => 'Guestline',
                                                 'hotelnetsolutions' => 'HotelNetSolutions (OnePageBooking)',
                                                 'iperbooking' => 'Iperbooking',
                                                 'journey' => 'Journey',
+                                                'krossbooking' => 'Kross Booking',
                                                 'mews' => 'Mews',
                                                 'mirai' => 'Mirai',
                                                 'myguestcare' => 'MyGuestCare',
                                                 'octorate' => 'Octorate',
                                                 'passepartout' => 'Passepartout',
+                                                'profitroom' => 'Profitroom',
                                                 'reservit' => 'Reservit',
                                                 'resnexus' => 'ResNexus',
                                                 'revplus' => 'RevPlus (WebHotelier)',
                                                 'roiback' => 'Roiback',
                                                 'synxis' => 'Sabre SynXis',
                                                 'scidoo' => 'Scidoo',
-                                                'simplebooking' => 'Simple booking',
+                                                'simplebooking' => 'Simple Booking',
+                                                'sirvoy' => 'Sirvoy',
                                                 'siteminder' => 'SiteMinder',
+                                                'slope' => 'Slope',
                                                 'thinkreservations' => 'ThinkReservations',
-                                                'verticalbooking' => 'Vertical booking',
+                                                'verticalbooking' => 'Vertical Booking',
                                                 'witbooking' => 'Witbooking',
                                                 'wubook' => 'WuBook',
                                                 );
@@ -124,14 +132,23 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         //beddy
         include('tab-settings-beddy.php');
 
+        //bedzzle
+        include('tab-settings-bedzzle.php');
+
         //begenius
         include('tab-settings-begenius.php');
 
         //blastness
         include('tab-settings-blastness.php');
 
+        //bookingdesigner
+        include('tab-settings-bookingdesigner.php');
+
         //bookingexpert
         include('tab-settings-bookingexpert.php');
+
+        //bookvisit
+        include('tab-settings-bookvisit.php');
 
         //cloudbeds
         include('tab-settings-cloudbeds.php');
@@ -141,6 +158,9 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 
         //dedge
         include('tab-settings-dedge.php');
+
+        //dirs21
+        include('tab-settings-dirs21.php');
 
         //ericsoft
         include('tab-settings-ericsoft.php');
@@ -160,6 +180,9 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         //journey
         include('tab-settings-journey.php');
 
+        //krossbooking
+        include('tab-settings-krossbooking.php');
+
         //mews
         include('tab-settings-mews.php');
 
@@ -174,6 +197,9 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 
         //passepartout
         include('tab-settings-passepartout.php');
+
+        //profitroom
+        include('tab-settings-profitroom.php');
 
         //reservit
         include('tab-settings-reservit.php');
@@ -196,8 +222,14 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         //simplebooking
         include('tab-settings-simplebooking.php');
 
+        //sirvoy
+        include('tab-settings-sirvoy.php');
+
         //siteminder
         include('tab-settings-siteminder.php');
+
+        //slope
+        include('tab-settings-slope.php');
 
         //thinkreservations
         include('tab-settings-thinkreservations.php');

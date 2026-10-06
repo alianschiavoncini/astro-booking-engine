@@ -7,61 +7,50 @@ if( ! is_admin() ) {
 	return;
 }
 
-$provider = 'simplebooking';
+$provider = 'profitroom';
 ?>
 <!-- <?php echo esc_attr($provider); ?> -->
 <div class="section-wrapper box <?php echo esc_attr($provider); ?>">
     <div class="section-wrapper-inner">
 
-        <h2>Simple Booking</h2>
+        <h2>Profitroom</h2>
 
         <!-- hotelsettings -->
         <h3 id="hotelsettings"><?php esc_html_e( 'Hotel settings', 'astro-booking-engine' ); ?></h3>
         <table class="form-table">
 			<?php
 			$field = array(
-				'label' => esc_html__( 'hid', 'astro-booking-engine' ),
-				'description' => false,
-				'name' => ASTRO_BE_PREFIX.$provider.'_hid',
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_hid'),
+				'label' => esc_html__( 'Booking engine address', 'astro-booking-engine' ),
+				'description' => __( 'The address of your Profitroom booking engine, as it is: https://booking.profitroom.com/en/yourhotel/pricelist/rooms/', 'astro-booking-engine' ),
+				'name' => ASTRO_BE_PREFIX.$provider.'_hotel',
+				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_hotel'),
 				'placeholder' => false,
 			);
 			?>
             <tr>
                 <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                 <td>
-                    <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text" value="<?php echo esc_html($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" />
+                    <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text" value="<?php echo esc_attr($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" />
                     <?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php }?>
                 </td>
             </tr>
 
+
+
 			<?php
 			$field = array(
-				'label' => esc_html__( 'Currency', 'astro-booking-engine' ),
-				'description' => false,
-				'name' => ASTRO_BE_PREFIX.$provider.'_currency',
-				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_currency'),
-				'placeholder' => false
+				'label' => esc_html__( 'Children age ranges', 'astro-booking-engine' ),
+				'description' => __( 'The age ranges of the children set for the hotel in Profitroom, separated by commas: every child is counted in the range of their age. The default, 0-3,4-14, is the most common one: if the hotel uses other ranges, enter them here, otherwise Profitroom leaves out the children whose range it does not know.', 'astro-booking-engine' ),
+				'name' => ASTRO_BE_PREFIX.$provider.'_children_ranges',
+				'value' => astro_be_get_sanitized_option(ASTRO_BE_PREFIX.$provider.'_children_ranges'),
+				'placeholder' => ASTRO_BE_PROFITROOM_CHILDREN_RANGES,
 			);
-
-			$arr_currencies = astro_return_currencies();
 			?>
             <tr>
                 <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
                 <td>
-                    <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
-						<?php
-						foreach ($arr_currencies as $currency) {
-							$selected = '';
-							if ($currency == $field['value']) {
-								$selected = ' selected=selected';
-							}
-							?>
-                            <option value="<?php echo esc_attr($currency); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($currency); ?></option>
-							<?php
-						}
-						?>
-                    </select>
+                    <input type="text" id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>" class="regular-text" value="<?php echo esc_attr($field['value']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" />
+                    <?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php }?>
                 </td>
             </tr>
 
@@ -98,7 +87,7 @@ $provider = 'simplebooking';
                             $selected = ' selected=selected';
                         }
                         ?>
-                        <option value="<?php echo esc_attr($k); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($v); ?></option>
+                        <option value="<?php echo esc_attr($k); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($v); ?></option>
                         <?php
                     }
                     ?>
@@ -149,13 +138,16 @@ $provider = 'simplebooking';
                 <td>
                     <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
 						<?php
+						if (!($field['value'])) {
+							$field['value'] = 2;
+						}
 						for ($i = 1; $i <= 10; $i++) {
 							$selected = '';
 							if ($i == $field['value']) {
 								$selected = ' selected=selected';
 							}
 							?>
-                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_html($selected); ?>><?php echo esc_html($i); ?></option>
+                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?></option>
 							<?php
 						}
 						?>
@@ -186,7 +178,7 @@ $provider = 'simplebooking';
 								$selected = ' selected=selected';
 							}
 							?>
-                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_html($selected); ?>><?php echo esc_html($i); ?></option>
+                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?></option>
 							<?php
 						}
 						?>
@@ -243,7 +235,7 @@ $provider = 'simplebooking';
 								$selected = ' selected=selected';
 							}
 							?>
-                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($i); ?></option>
+                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?></option>
 							<?php
 						}
 						?>
@@ -274,7 +266,7 @@ $provider = 'simplebooking';
 								$selected = ' selected=selected';
 							}
 							?>
-                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($i); ?></option>
+                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?></option>
 							<?php
 						}
 						?>
@@ -289,6 +281,7 @@ $provider = 'simplebooking';
 
         <!-- childrenage -->
         <h3 id="childrenage"><?php esc_html_e( 'Children age', 'astro-booking-engine' ); ?></h3>
+        <p class="description"><?php esc_html_e( 'Profitroom receives the children in the age ranges set for the hotel: it must be enabled when Children is enabled.', 'astro-booking-engine' ); ?></p>
         <table class="form-table">
 			<?php
 			$field_label = esc_html__( 'Enable', 'astro-booking-engine' );
@@ -328,13 +321,13 @@ $provider = 'simplebooking';
 						if (!($field['value'])) {
 							$field['value'] = 0;
 						}
-						for ($i = 0; $i <= 18; $i++) {
+						for ($i = 0; $i <= 17; $i++) {
 							$selected = '';
 							if ($i == $field['value']) {
 								$selected = ' selected=selected';
 							}
 							?>
-                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($i); ?></option>
+                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?></option>
 							<?php
 						}
 						?>
@@ -357,15 +350,15 @@ $provider = 'simplebooking';
                     <select name="<?php echo esc_attr($field['name']); ?>" id="<?php echo esc_attr($field['name']); ?>">
 						<?php
 						if (!($field['value'])) {
-							$field['value'] = 12;
+							$field['value'] = 17;
 						}
-						for ($i = 0; $i <= 18; $i++) {
+						for ($i = 0; $i <= 17; $i++) {
 							$selected = '';
 							if ($i == $field['value']) {
 								$selected = ' selected=selected';
 							}
 							?>
-                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_html($i); ?></option>
+                            <option value="<?php echo esc_attr($i); ?>"<?php echo esc_attr($selected); ?>><?php echo esc_attr($i); ?></option>
 							<?php
 						}
 						?>

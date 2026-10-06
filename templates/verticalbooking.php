@@ -1,6 +1,6 @@
 <?php
 /**
- * Vertical booking.
+ * Vertical Booking.
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

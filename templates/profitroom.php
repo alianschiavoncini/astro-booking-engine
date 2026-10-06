@@ -1,36 +1,39 @@
 <?php
 /**
- * Simple Booking.
+ * Profitroom (Upper Booking).
+ * Booking engine at https://booking.profitroom.com/<language>/<hotel>/pricelist/rooms/, which opens on the
+ * rooms of the search (and moves to the domain of the hotel, when it has one): check-in and check-out
+ * (Y-m-d), r1_adults and the children counted in the age ranges set for the hotel, as r1_child3-11=1, and
+ * code. The script adds a field for every range on submit.
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$provider = esc_attr('simplebooking');
+$provider = esc_attr('profitroom');
 $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
+// L'opzione tiene il solo codice della struttura (arcticcityhotel per booking.profitroom.com/en/arcticcityhotel).
+$profitroom_hotel = astro_be_get_sanitized_option($astro_be_prefix.$provider.'_hotel');
 ?>
 <div class="astro_be <?php echo $astro_be_prefix . $provider; ?>">
 
     <form class="astro_be_form astro_be_form<?php echo '_'. esc_attr($provider); ?>"
-          method="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_form_method') ); ?>"
-          action="https://www.simplebooking.it/ibe/hotelbooking/search"
+          method="get"
+          action="<?php echo esc_url( 'https://booking.profitroom.com/' . astro_return_profitroom_language() . '/' . $profitroom_hotel . '/pricelist/rooms/' ); ?>"
           target="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_form_target') ); ?>">
 
-        <input type="hidden" name="hid" value="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_hid') ); ?>" />
-        <input type="hidden" name="cur" value="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_currency') ); ?>" />
-        <input type="hidden" name="lang" value="<?php echo esc_attr( astro_return_post_language() ); ?>" />
-        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_in" name="in" value="" />
-        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_out" name="out" value="" />
-        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_guests" name="guests" value="A" />
+        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_check-in" name="check-in" value="" />
+        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_check-out" name="check-out" value="" />
+        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_r1_adults" name="r1_adults" value="" />
+        <?php //fasce d'eta' dei bambini dell'hotel: il JS aggiunge un campo r1_child<min>-<max> per ogni fascia ?>
+        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_ranges" value="<?php echo esc_attr( astro_be_get_sanitized_option($astro_be_prefix.$provider.'_children_ranges') ); ?>" data-no-submit />
 
         <!-- <?php echo esc_attr(ASTRO_BE_PREFIX); ?>dates -->
         <div class="<?php echo $astro_be_prefix . 'row'; ?> <?php echo $astro_be_prefix . 'dates'; ?>">
             <?php
             $field_class = esc_attr('checkin');
             $field_label = __( 'Check-in', 'astro-booking-engine' );
-            $field_name = 'checkin';
-            //$field_date_format = get_option($astro_be_prefix.$provider.'_checkin_date_format');
-			$field_date_format = astro_print_checkin_checkout_datepicker_format();
+            $field_date_format = astro_print_checkin_checkout_datepicker_format();
             ?>
             <!-- <?php echo $astro_be_prefix.$field_class; ?> -->
             <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?>">
@@ -45,9 +48,7 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
             <?php
             $field_class = esc_attr('checkout');
             $field_label = __( 'Check-out', 'astro-booking-engine' );
-            $field_name = 'checkout';
-            //$field_date_format = get_option($astro_be_prefix.$provider.'_checkout_date_format');
-			$field_date_format = astro_print_checkin_checkout_datepicker_format();
+            $field_date_format = astro_print_checkin_checkout_datepicker_format();
             ?>
             <!-- <?php echo $astro_be_prefix.$field_class; ?> -->
             <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?>">
@@ -70,14 +71,13 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
 
             $field_class = esc_attr('adults');
             $field_label = __( 'Adults', 'astro-booking-engine' );
-            $field_name = 'adults'; //provider field name
             if ($adults_enable) {
-            ?>
+                ?>
                 <!-- <?php echo $astro_be_prefix.$field_class; ?> -->
                 <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?>">
                     <div class="<?php echo $astro_be_prefix . 'column-inner'; ?>">
                         <label for="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
-                        <select id="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'select'; ?> <?php echo $astro_be_prefix . 'select-' . $field_class; ?>" data-no-submit>
+                        <select data-no-submit id="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'select'; ?> <?php echo $astro_be_prefix . 'select-' . $field_class; ?>">
                         <?php for ($i = 1; $i <= $adults_n_max; $i++) { ?>
                             <option value="<?php echo esc_attr($i); ?>" <?php if ($adults_n_default == $i) { echo ' selected=selected'; } ?>><?php echo esc_html($i); ?></option>
                         <?php } ?>
@@ -85,6 +85,10 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
                     </div>
                 </div>
                 <!-- /<?php echo $astro_be_prefix.$field_class; ?> -->
+                <?php
+            }else{
+            ?>
+                <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_adults" value="<?php echo esc_attr( max( 1, $adults_n_default ) ); ?>" />
             <?php
             }
             ?>
@@ -96,14 +100,13 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
 
             $field_class = esc_attr('children');
             $field_label = __( 'Children', 'astro-booking-engine' );
-            $field_name = 'children'; //provider field name
             if ($children_enable) {
-            ?>
+                ?>
                 <!-- <?php echo $astro_be_prefix.$field_class; ?> -->
                 <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?>">
                     <div class="<?php echo $astro_be_prefix . 'column-inner'; ?>">
                         <label for="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
-                        <select id="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'select'; ?> <?php echo $astro_be_prefix . 'select-' . $field_class; ?>" data-no-submit>
+                        <select data-no-submit id="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'select'; ?> <?php echo $astro_be_prefix . 'select-' . $field_class; ?>">
                         <?php for ($i = 0; $i <= $children_n_max; $i++) { ?>
                             <option value="<?php echo esc_attr($i); ?>" <?php if (($children_n_default == $i) && ($children_n_default > 0)) { echo ' selected=selected'; } ?>><?php echo esc_html($i); ?></option>
                         <?php } ?>
@@ -111,6 +114,10 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
                     </div>
                 </div>
                 <!-- /<?php echo $astro_be_prefix.$field_class; ?> -->
+                <?php
+            }else{
+                ?>
+                <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_children" value="0" />
             <?php
             }
             ?>
@@ -125,7 +132,6 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
 
         $field_class = esc_attr('children_age');
         $field_label = __( 'Child Age', 'astro-booking-engine' );
-        $field_name = 'childage'; //provider field name
 
         if ($childage_enable) {
             ?>
@@ -158,22 +164,17 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
         if ($coupon_code_enable) {
             $field_class = esc_attr('coupon');
             $field_label = __( 'Coupon', 'astro-booking-engine' );
-            $field_name = 'coupon'; //provider field name
         ?>
         <!-- <?php echo $astro_be_prefix.$field_class; ?> -->
         <div class="<?php echo $astro_be_prefix . 'row'; ?> <?php echo $astro_be_prefix . $field_class; ?>">
             <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?>">
                 <div class="<?php echo $astro_be_prefix . 'column-inner'; ?>">
                     <label for="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
-                    <input type="text" name="<?php echo esc_attr($field_name); ?>" id="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'input'; ?> <?php echo $astro_be_prefix . 'input-' . $field_class; ?>" size="5" />
+                    <input type="text" id="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'input'; ?> <?php echo $astro_be_prefix . 'input-' . $field_class; ?>" name="code" size="5" />
                 </div>
             </div>
         </div>
         <!-- /<?php echo $astro_be_prefix.$field_class; ?> -->
-        <?php
-        }else{
-        ?>
-            <input type="hidden" name="<?php echo esc_attr($field_name); ?>" value="" />
         <?php
         }
         ?>

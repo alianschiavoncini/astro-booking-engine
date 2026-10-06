@@ -3,7 +3,7 @@ Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget
 Requires at least: 6.0.1
 Tested up to: 7.1
-Stable tag: 2.5.0
+Stable tag: 2.6.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -43,33 +43,41 @@ Astro Booking Engine is not a booking engine: it needs an active contract with o
     <li><a href="https://www.hotelcinquestelle.cloud/en/">5Stelle</a> (Italy)</li>
     <li><a href="https://amadeus-hospitality.com/">Amadeus iHotelier (TravelClick)</a> (Spain)</li>
     <li><a href="https://www.beddy.io/">Beddy</a> (Italy)</li>
+    <li><a href="https://www.bedzzle.com/">Bedzzle</a> (Italy)</li>
     <li><a href="http://www.begenius.it/">BeGenius</a> (Italy)</li>
     <li><a href="https://www.blastness.com/">Blastness</a> (Italy)</li>
+    <li><a href="https://www.bookingdesigner.com/">Booking Designer</a> (Italy)</li>
     <li><a href="https://bookingexpert.com/">Booking Expert</a> (Italy)</li>
+    <li><a href="https://bookvisit.com/">Bookvisit</a> (Sweden)</li>
     <li><a href="https://www.cloudbeds.com/">Cloudbeds</a> (United States)</li>
     <li><a href="https://www.datasistemi.eu/">Data Sistemi</a> (Italy)</li>
     <li><a href="https://www.d-edge.com/">D-EDGE</a> (France)</li>
+    <li><a href="https://www.dirs21.de/">DIRS21</a> (Germany)</li>
     <li><a href="https://www.ericsoft.com/">Ericsoft</a> (Italy)</li>
     <li><a href="https://ermeshotels.com/">ErmesHotels</a> (Italy)</li>
     <li><a href="https://www.guestline.com/">Guestline</a> (United Kingdom)</li>
     <li><a href="https://hotelnetsolutions.de/en/">HotelNetSolutions (OnePageBooking)</a> (Germany)</li>
     <li><a href="https://www.iperbooking.com/">Iperbooking</a> (Italy)</li>
     <li><a href="https://journey.travel/">Journey</a> (United Kingdom)</li>
+    <li><a href="https://www.krossbooking.com/">Kross Booking</a> (Italy)</li>
     <li><a href="https://www.mews.com/">Mews</a> (Netherlands)</li>
     <li><a href="https://www.mirai.com/">Mirai</a> (Spain)</li>
     <li><a href="https://www.mycomp.it/">MyGuestCare</a> (Italy)</li>
     <li><a href="https://www.octorate.com/">Octorate</a> (Italy)</li>
     <li><a href="https://www.passepartout.net/">Passepartout</a> (San Marino)</li>
+    <li><a href="https://www.profitroom.com/">Profitroom</a> (Poland)</li>
     <li><a href="https://www.reservit.com/">Reservit</a> (France)</li>
     <li><a href="https://resnexus.com/">ResNexus</a> (United States)</li>
     <li><a href="https://www.revplus.com/">RevPlus (WebHotelier)</a> (Greece)</li>
     <li><a href="https://www.roiback.com/">Roiback</a> (Spain)</li>
     <li><a href="https://www.sabre.com/products/hospitality/">Sabre SynXis</a> (United States)</li>
     <li><a href="https://www.scidoo.com/">Scidoo</a> (Italy)</li>
-    <li><a href="https://www.simplebooking.travel/">Simple booking</a> (Italy)</li>
+    <li><a href="https://www.simplebooking.travel/">Simple Booking</a> (Italy)</li>
+    <li><a href="https://sirvoy.com/">Sirvoy</a> (Sweden)</li>
     <li><a href="https://www.siteminder.com/">SiteMinder</a> (Australia)</li>
+    <li><a href="https://www.slope.it/">Slope</a> (Italy)</li>
     <li><a href="https://www.thinkreservations.com/">ThinkReservations</a> (United States)</li>
-    <li><a href="https://www.verticalbooking.com/en/home/">Vertical booking</a> (Italy)</li>
+    <li><a href="https://www.verticalbooking.com/en/home/">Vertical Booking</a> (Italy)</li>
     <li><a href="https://www.witbooking.com/">Witbooking</a> (Spain)</li>
     <li><a href="https://wubook.net/">WuBook</a> (Italy)</li>
 </ul>
@@ -113,23 +121,29 @@ The providers and their policies:
 * 5Stelle (Zucchetti): [privacy](https://www.zucchetti.it/it/cms/service/privacy.html)
 * Amadeus iHotelier (TravelClick): [privacy](https://www.amadeus-hospitality.com/privacy-policy), [terms](https://www.amadeus-hospitality.com/legal/)
 * Beddy (Zucchetti): [privacy](https://www.zucchetti.it/website/cms/privacy.html)
+* Bedzzle (Zucchetti): [privacy](https://www.zucchetti.it/website/cms/privacy.html)
 * BeGenius: no privacy policy published, [website](https://www.begenius.it/)
 * Blastness: [privacy](https://www.blastness.com/it/privacy)
+* Booking Designer (I/O NET): [privacy](https://www.bookingdesigner.com/privacy-policy/)
 * Booking Expert: [privacy](https://bookingexpert.com/privacy)
+* Bookvisit (VISIT): [privacy](https://bookvisit.com/privacy-policy/)
 * Cloudbeds: [privacy](https://www.cloudbeds.com/privacy-policy/), [terms](https://www.cloudbeds.com/terms/)
 * Data Sistemi: [privacy](https://www.datasistemi.eu/privacy-policy.html)
 * D-EDGE: [privacy](https://www.d-edge.com/privacy-policy/)
+* DIRS21: [privacy](https://www.dirs21.de/disclaimer/)
 * Ericsoft (Zucchetti): [privacy](https://cms-cdn.ericsoft.com/cms/site/resources/6183/56339/6ac93f723e3ba6560cc846db875ff73e/Informativa%20Privacy%20ENG.pdf)
 * ErmesHotels: [privacy](https://ermeshotels.com/informativa-sulla-privacy/)
 * Guestline (The Access Group): [privacy](https://www.theaccessgroup.com/en-gb/privacy-notice/)
 * HotelNetSolutions (OnePageBooking): [privacy](https://hotelnetsolutions.de/en/privacy-policy/)
 * Iperbooking: [privacy](https://www.iperbooking.com/privacy.cfm)
 * Journey: [privacy](https://journey.travel/terms-policies/privacy-policy), [terms](https://journey.travel/terms-policies/terms-of-use)
+* Kross Booking (Solutions Plus): [privacy](https://www.krossbooking.com/en/privacy)
 * Mews: [privacy](https://www.mews.com/en/legal/privacy-policy), [terms](https://www.mews.com/en/legal)
 * Mirai: [privacy](https://www.mirai.com/privacy-policy/)
 * MyGuestCare (MyComp): [privacy](https://www.iubenda.com/privacy-policy/57645335)
 * Octorate: [privacy](https://www.octorate.com/privacy-policy/), [terms](https://www.octorate.com/terms-and-conditions/)
 * Passepartout: [privacy](https://privacy.passepartout.net/informativasitiweb), [terms](https://www.passepartout.net/utility/note-legali)
+* Profitroom: [privacy](https://profitroom.com/privacy-policy)
 * Reservit: [privacy](https://www.reservit.com/politique-de-confidentialite/)
 * ResNexus: [privacy](https://resnexus.com/PrivacyPolicy.html), [terms](https://resnexus.com/TermsofUse.html)
 * RevPlus (WebHotelier): [privacy](https://www.revplus.com/privacy), [terms](https://www.revplus.com/terms)
@@ -137,7 +151,9 @@ The providers and their policies:
 * Sabre SynXis: [privacy](https://www.sabre.com/about/privacy)
 * Scidoo: [privacy](https://scidoo.com/preventivov2/privacy_policy.php?cod=27)
 * Simple Booking: [privacy](https://www.simplebooking.travel/privacy-policy)
+* Sirvoy: [privacy](https://sirvoy.com/privacy-policy)
 * SiteMinder: [privacy](https://www.siteminder.com/legal/privacy/), [terms](https://www.siteminder.com/legal/website-terms/)
+* Slope: [privacy](https://www.slope.it/privacy/)
 * ThinkReservations: [privacy](https://www.thinkreservations.com/privacy), [terms](https://www.thinkreservations.com/terms)
 * Vertical Booking: [privacy](https://www.verticalbooking.com/en/privacy-policy/)
 * Witbooking: [privacy](https://www.witbooking.com/policy)
@@ -147,6 +163,18 @@ The providers and their policies:
 gsphudo7by90lzwdlihyerqxbzj6jiln
 
 == Changelog ==
+
+= 2.6.0 =
+* Added: Bedzzle provider, with adults, children and their ages and promo code. The property key can also be entered by pasting the whole booking engine address.
+* Added: Booking Designer provider, with adults, children and their ages and promo code. The booking engine address is entered as it is, also the one on the domain of the hotel.
+* Added: Bookvisit provider, also used by Nozio, with adults, children and their ages and promo code. The channel code can also be entered by pasting the whole booking engine address.
+* Added: DIRS21 provider, with adults, children and their ages and promo code: the search opens on the rooms. The property code can also be entered by pasting the whole booking engine address, including the one of the older DIRS21 booking engine.
+* Added: Kross Booking provider, with adults, children and their ages: the guest starts the search on the booking engine, as with the Kross widget. The property code can also be entered by pasting the whole booking engine address.
+* Added: Profitroom (Upper Booking) provider, with adults, children and promo code: the children are counted in the age ranges of the hotel, 0-3 and 4-14 years unless the settings give other ones. The property code can also be entered by pasting the whole booking engine address.
+* Added: Sirvoy provider, with the guests and booking code: the search opens in the Sirvoy widget of a page of the website, whose address is the setting. Sirvoy receives the number of guests only, without telling adults and children apart.
+* Added: Slope provider, with adults and children: Slope asks for the ages of the children on its own pages. The property code can also be entered by pasting the whole booking engine address.
+* Changed: the Italian translation is now the one approved on translate.wordpress.org.
+* Compatibility: tested with WordPress 7.1.
 
 = 2.5.0 =
 * Added: Beddy provider.
@@ -268,6 +296,9 @@ gsphudo7by90lzwdlihyerqxbzj6jiln
 * Initial version.
 
 == Upgrade Notice ==
+
+= 2.6.0 =
+Eight new providers: Bedzzle, Booking Designer, Kross Booking and Slope (Italy), DIRS21, Bookvisit, Sirvoy and Profitroom (Northern and Central Europe), and the Italian translation approved on translate.wordpress.org.
 
 = 2.5.0 =
 Two new providers, Beddy and ErmesHotels, and a fix for the pages that show more than one booking form with the modern style.

@@ -1,36 +1,39 @@
 <?php
 /**
- * Simple Booking.
+ * Slope.
+ * Booking engine at https://booking.slope.it/<property>, where the property is a code such as
+ * 0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d. The search is posted to /widgets/search/<property>, as the Slope
+ * widget does: reservation[stay][arrival] and [departure] (d/m/Y), reservation[guests][adults] and
+ * [children]. The booking engine answers with the choice of the rooms, in the language of the browser;
+ * the ages of the children are asked there.
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$provider = esc_attr('simplebooking');
+$provider = esc_attr('slope');
 $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
+// L'opzione tiene il solo codice della struttura, quello dopo booking.slope.it/.
+$slope_property = astro_be_get_sanitized_option($astro_be_prefix.$provider.'_hotel');
 ?>
 <div class="astro_be <?php echo $astro_be_prefix . $provider; ?>">
 
     <form class="astro_be_form astro_be_form<?php echo '_'. esc_attr($provider); ?>"
-          method="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_form_method') ); ?>"
-          action="https://www.simplebooking.it/ibe/hotelbooking/search"
+          method="post"
+          action="<?php echo esc_url( 'https://booking.slope.it/widgets/search/' . $slope_property ); ?>"
           target="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_form_target') ); ?>">
 
-        <input type="hidden" name="hid" value="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_hid') ); ?>" />
-        <input type="hidden" name="cur" value="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_currency') ); ?>" />
-        <input type="hidden" name="lang" value="<?php echo esc_attr( astro_return_post_language() ); ?>" />
-        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_in" name="in" value="" />
-        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_out" name="out" value="" />
-        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_guests" name="guests" value="A" />
+        <?php //date in d/m/Y: le copia il JS dai campi nascosti in Y-m-d ?>
+        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_arrival" name="reservation[stay][arrival]" value="" />
+        <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_departure" name="reservation[stay][departure]" value="" />
+        <input type="hidden" name="reservation[next]" value="" />
 
         <!-- <?php echo esc_attr(ASTRO_BE_PREFIX); ?>dates -->
         <div class="<?php echo $astro_be_prefix . 'row'; ?> <?php echo $astro_be_prefix . 'dates'; ?>">
             <?php
             $field_class = esc_attr('checkin');
             $field_label = __( 'Check-in', 'astro-booking-engine' );
-            $field_name = 'checkin';
-            //$field_date_format = get_option($astro_be_prefix.$provider.'_checkin_date_format');
-			$field_date_format = astro_print_checkin_checkout_datepicker_format();
+            $field_date_format = astro_print_checkin_checkout_datepicker_format();
             ?>
             <!-- <?php echo $astro_be_prefix.$field_class; ?> -->
             <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?>">
@@ -45,9 +48,7 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
             <?php
             $field_class = esc_attr('checkout');
             $field_label = __( 'Check-out', 'astro-booking-engine' );
-            $field_name = 'checkout';
-            //$field_date_format = get_option($astro_be_prefix.$provider.'_checkout_date_format');
-			$field_date_format = astro_print_checkin_checkout_datepicker_format();
+            $field_date_format = astro_print_checkin_checkout_datepicker_format();
             ?>
             <!-- <?php echo $astro_be_prefix.$field_class; ?> -->
             <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?>">
@@ -70,14 +71,13 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
 
             $field_class = esc_attr('adults');
             $field_label = __( 'Adults', 'astro-booking-engine' );
-            $field_name = 'adults'; //provider field name
             if ($adults_enable) {
-            ?>
+                ?>
                 <!-- <?php echo $astro_be_prefix.$field_class; ?> -->
                 <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?>">
                     <div class="<?php echo $astro_be_prefix . 'column-inner'; ?>">
                         <label for="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
-                        <select id="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'select'; ?> <?php echo $astro_be_prefix . 'select-' . $field_class; ?>" data-no-submit>
+                        <select name="reservation[guests][adults]" id="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'select'; ?> <?php echo $astro_be_prefix . 'select-' . $field_class; ?>">
                         <?php for ($i = 1; $i <= $adults_n_max; $i++) { ?>
                             <option value="<?php echo esc_attr($i); ?>" <?php if ($adults_n_default == $i) { echo ' selected=selected'; } ?>><?php echo esc_html($i); ?></option>
                         <?php } ?>
@@ -85,6 +85,10 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
                     </div>
                 </div>
                 <!-- /<?php echo $astro_be_prefix.$field_class; ?> -->
+                <?php
+            }else{
+            ?>
+                <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_adults" name="reservation[guests][adults]" value="<?php echo esc_attr( max( 1, $adults_n_default ) ); ?>" />
             <?php
             }
             ?>
@@ -96,14 +100,13 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
 
             $field_class = esc_attr('children');
             $field_label = __( 'Children', 'astro-booking-engine' );
-            $field_name = 'children'; //provider field name
             if ($children_enable) {
-            ?>
+                ?>
                 <!-- <?php echo $astro_be_prefix.$field_class; ?> -->
                 <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?>">
                     <div class="<?php echo $astro_be_prefix . 'column-inner'; ?>">
                         <label for="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
-                        <select id="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'select'; ?> <?php echo $astro_be_prefix . 'select-' . $field_class; ?>" data-no-submit>
+                        <select name="reservation[guests][children]" id="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'select'; ?> <?php echo $astro_be_prefix . 'select-' . $field_class; ?>">
                         <?php for ($i = 0; $i <= $children_n_max; $i++) { ?>
                             <option value="<?php echo esc_attr($i); ?>" <?php if (($children_n_default == $i) && ($children_n_default > 0)) { echo ' selected=selected'; } ?>><?php echo esc_html($i); ?></option>
                         <?php } ?>
@@ -111,72 +114,16 @@ $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
                     </div>
                 </div>
                 <!-- /<?php echo $astro_be_prefix.$field_class; ?> -->
+                <?php
+            }else{
+                ?>
+                <input type="hidden" id="astro_be_form<?php echo '_'. esc_attr($provider); ?>_children" name="reservation[guests][children]" value="0" />
             <?php
             }
             ?>
 
         </div>
         <!-- /<?php echo $astro_be_prefix.'occupancy'; ?> -->
-
-        <?php
-        $childage_enable = get_option($astro_be_prefix.$provider.'_childage_enable');
-        $childage_min = (int)get_option($astro_be_prefix.$provider.'_childage_min');
-        $childage_max = (int)get_option($astro_be_prefix.$provider.'_childage_max');
-
-        $field_class = esc_attr('children_age');
-        $field_label = __( 'Child Age', 'astro-booking-engine' );
-        $field_name = 'childage'; //provider field name
-
-        if ($childage_enable) {
-            ?>
-            <!-- <?php echo $astro_be_prefix.$field_class; ?> -->
-            <div class="<?php echo $astro_be_prefix . 'row'; ?> <?php echo $astro_be_prefix . $field_class; ?>">
-                <?php
-                for ($x = 1; $x <= $children_n_max; $x++) {
-                    ?>
-                    <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?> <?php echo $astro_be_prefix . 'column-' . $field_class . '-' . esc_attr($x); ?>">
-                        <div class="<?php echo $astro_be_prefix . 'column-inner'; ?>">
-                            <label for="<?php echo $astro_be_prefix . $provider . '-' . $field_class . '-' . esc_attr($x); ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?> <?php echo esc_html($x); ?></label>
-                            <select id="<?php echo $astro_be_prefix . $provider . '-' . $field_class . '-' . esc_attr($x); ?>" class="<?php echo $astro_be_prefix . 'select'; ?> <?php echo $astro_be_prefix . 'select-' . $field_class; ?>" size="1" data-no-submit>
-                                <?php for ($i = $childage_min; $i <= $childage_max; $i++) { ?>
-                                    <option value="<?php echo esc_attr($i); ?>"><?php echo esc_html($i); ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>
-                    </div>
-                    <?php
-                }
-                ?>
-            </div>
-            <!-- /<?php echo $astro_be_prefix.$field_class; ?> -->
-            <?php
-        }
-        ?>
-
-        <?php
-        $coupon_code_enable = get_option($astro_be_prefix.$provider.'_coupon');
-        if ($coupon_code_enable) {
-            $field_class = esc_attr('coupon');
-            $field_label = __( 'Coupon', 'astro-booking-engine' );
-            $field_name = 'coupon'; //provider field name
-        ?>
-        <!-- <?php echo $astro_be_prefix.$field_class; ?> -->
-        <div class="<?php echo $astro_be_prefix . 'row'; ?> <?php echo $astro_be_prefix . $field_class; ?>">
-            <div class="<?php echo $astro_be_prefix . 'column ' . $astro_be_prefix . 'column-' . $field_class; ?>">
-                <div class="<?php echo $astro_be_prefix . 'column-inner'; ?>">
-                    <label for="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'label'; ?> <?php echo $astro_be_prefix . 'label-' . $field_class; ?>"><?php echo esc_html($field_label); ?></label>
-                    <input type="text" name="<?php echo esc_attr($field_name); ?>" id="<?php echo $astro_be_prefix . $provider . '-' . $field_class; ?>" class="<?php echo $astro_be_prefix . 'input'; ?> <?php echo $astro_be_prefix . 'input-' . $field_class; ?>" size="5" />
-                </div>
-            </div>
-        </div>
-        <!-- /<?php echo $astro_be_prefix.$field_class; ?> -->
-        <?php
-        }else{
-        ?>
-            <input type="hidden" name="<?php echo esc_attr($field_name); ?>" value="" />
-        <?php
-        }
-        ?>
 
         <?php
         $value = __('Search', 'astro-booking-engine' );

@@ -2546,3 +2546,83 @@ msgstr "L'adresse de votre moteur de réservation ErmesHotels, telle quelle : ht
 #: includes/tabs/tab-settings-ermeshotels.php:267
 msgid "ErmesHotels receives the children as the list of their ages: it must be enabled when Children is enabled."
 msgstr "ErmesHotels reçoit les enfants sous forme de liste de leurs âges : cela doit être activé lorsque Enfants est activé."
+
+#: includes/tabs/tab-settings-bookingdesigner.php:24
+msgid "The address of your Booking Designer booking engine, as it is: https://book.yourhotel.com/en/booking-engine/"
+msgstr "L'adresse de votre moteur de réservation Booking Designer, telle quelle : https://book.yourhotel.com/en/booking-engine/"
+
+#: includes/tabs/tab-settings-bookingdesigner.php:267
+msgid "Booking Designer receives the children as the list of their ages: it must be enabled when Children is enabled."
+msgstr "Booking Designer reçoit les enfants sous forme de liste de leurs âges : cela doit être activé lorsque Enfants est activé."
+
+#: includes/tabs/tab-settings-krossbooking.php:24
+msgid "The address of your Kross Booking booking engine, as it is: https://yourhotel.kross.travel/book/step1"
+msgstr "L'adresse de votre moteur de réservation Kross Booking, telle quelle : https://yourhotel.kross.travel/book/step1"
+
+#: includes/tabs/tab-settings-krossbooking.php:267
+msgid "Kross Booking receives the children as the list of their ages: it must be enabled when Children is enabled."
+msgstr "Kross Booking reçoit les enfants sous forme de liste de leurs âges : cela doit être activé lorsque Enfants est activé."
+
+#: includes/tabs/tab-settings-slope.php:24
+msgid "The address of your Slope booking engine, as it is: https://booking.slope.it/0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d"
+msgstr "L'adresse de votre moteur de réservation Slope, telle quelle : https://booking.slope.it/0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d"
+
+#: includes/tabs/tab-settings-slope.php:179
+msgid "Slope receives the number of children only: their ages are asked on the booking engine."
+msgstr "Slope reçoit uniquement le nombre d'enfants : leurs âges sont demandés sur le moteur de réservation."
+
+#: includes/tabs/tab-settings-bedzzle.php:24
+msgid "The address of your Bedzzle booking engine, as it is: https://booking.bedzzle.com/desktop/?apikey=AbCd1234&lang="
+msgstr "L'adresse de votre moteur de réservation Bedzzle, telle quelle : https://booking.bedzzle.com/desktop/?apikey=AbCd1234&lang="
+
+#: includes/tabs/tab-settings-bedzzle.php:267
+msgid "Bedzzle receives the children as the list of their ages: it must be enabled when Children is enabled."
+msgstr "Bedzzle reçoit les enfants sous forme de liste de leurs âges : cela doit être activé lorsque Enfants est activé."
+
+#: includes/tabs/tab-settings-dirs21.php:24
+msgid "The address of your DIRS21 booking engine, as it is: https://reservation.one.dirs21.de/yourhotel"
+msgstr "L'adresse de votre moteur de réservation DIRS21, telle quelle : https://reservation.one.dirs21.de/yourhotel"
+
+#: includes/tabs/tab-settings-dirs21.php:267
+msgid "DIRS21 receives the children as the list of their ages: it must be enabled when Children is enabled."
+msgstr "DIRS21 reçoit les enfants sous forme de liste de leurs âges : cela doit être activé lorsque Enfants est activé."
+
+#: includes/tabs/tab-settings-bookvisit.php:24
+msgid "The address of your Bookvisit booking engine, with the channel code: https://online.bookvisit.com/accommodation/list?channelId=0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d"
+msgstr "L'adresse de votre moteur de réservation Bookvisit, avec le code du canal : https://online.bookvisit.com/accommodation/list?channelId=0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d"
+
+#: includes/tabs/tab-settings-bookvisit.php:267
+msgid "Bookvisit receives the children as the list of their ages: it must be enabled when Children is enabled."
+msgstr "Bookvisit reçoit les enfants sous forme de liste de leurs âges : cela doit être activé lorsque Enfants est activé."
+
+#: includes/tabs/tab-settings-sirvoy.php:24
+msgid "The address of the page of the hotel website where the Sirvoy booking widget is, copied from the browser: the guest lands there with the search filled in. Without the widget on that page the search does not start."
+msgstr "L'adresse de la page du site de l'hôtel où se trouve le widget de réservation Sirvoy, copiée depuis le navigateur : le client y arrive avec la recherche déjà remplie. Sans le widget sur cette page, la recherche ne démarre pas."
+
+#: includes/tabs/tab-settings-sirvoy.php:88
+msgid "Sirvoy receives the number of guests only, without telling adults and children apart."
+msgstr "Sirvoy reçoit uniquement le nombre de personnes, sans distinguer les adultes des enfants."
+
+#: includes/tabs/tab-settings-profitroom.php:24
+msgid "The address of your Profitroom booking engine, as it is: https://booking.profitroom.com/en/yourhotel/pricelist/rooms/"
+msgstr "L'adresse de votre moteur de réservation Profitroom, telle quelle : https://booking.profitroom.com/en/yourhotel/pricelist/rooms/"
+
+#: includes/tabs/tab-settings-profitroom.php:42
+msgid "Children age ranges"
+msgstr "Tranches d'âge des enfants"
+
+#: includes/tabs/tab-settings-profitroom.php:43
+msgid "The age ranges of the children set for the hotel in Profitroom, separated by commas: every child is counted in the range of their age. The default, 0-3,4-14, is the most common one: if the hotel uses other ranges, enter them here, otherwise Profitroom leaves out the children whose range it does not know."
+msgstr "Les tranches d'âge des enfants définies pour l'hôtel dans Profitroom, séparées par des virgules : chaque enfant est compté dans la tranche de son âge. La valeur par défaut, 0-3,4-14, est la plus courante : si l'hôtel utilise d'autres tranches, saisissez-les ici, sinon Profitroom ignore les enfants dont il ne connaît pas la tranche."
+
+#: includes/tabs/tab-settings-profitroom.php:284
+msgid "Profitroom receives the children in the age ranges set for the hotel: it must be enabled when Children is enabled."
+msgstr "Profitroom reçoit les enfants dans les tranches d'âge définies pour l'hôtel : cela doit être activé lorsque Enfants est activé."
+
+#: includes/tabs/tab-support.php:104
+msgid "Sweden"
+msgstr "Suède"
+
+#: includes/tabs/tab-support.php:121
+msgid "Poland"
+msgstr "Pologne"

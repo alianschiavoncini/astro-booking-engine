@@ -1,7 +1,7 @@
 jQuery( document ).ready(function( $ ) {
 
     /**
-     * Simple booking
+     * Simple Booking
      */
     $(".astro_be_form_simplebooking").submit(function(){
 
