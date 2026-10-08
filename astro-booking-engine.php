@@ -3,7 +3,7 @@
  * Plugin Name:       Astro Booking Engine
  * Plugin URI:        https://wordpress.org/plugins/astro-booking-engine
  * Description:       Hotel booking form via Gutenberg block or shortcode, independent from the provider: switch booking engine anytime, your form stays the same.
- * Version:           2.6.0
+ * Version:           2.7.0
  * Requires at least: 6.0.1
  * Requires PHP:      7.4
  * Author:            Alian Schiavoncini
@@ -37,7 +37,7 @@ if ( is_admin() ) {
 /**
  * Plugin constants.
  */
-define('ASTRO_BE_VERSION', '2.6.0');
+define('ASTRO_BE_VERSION', '2.7.0');
 define('ASTRO_BE_PREFIX', 'astro_be_');
 define('ASTRO_BE_TEXTDOMAIN', astro_be_plugin_data('TextDomain'));
 

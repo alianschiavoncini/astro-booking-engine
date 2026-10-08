@@ -757,6 +757,186 @@ jQuery( document ).ready(function( $ ) {
 
         }
 
+        //pegasus
+        if($('.box.pegasus').css('display') == 'block') {
+
+            var astro_be_pegasus_hotel = $.trim($('#astro_be_pegasus_hotel').val());
+            if (astro_be_pegasus_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!/[a-z0-9-]+\.book\.pegsbe\.com/i.test(astro_be_pegasus_hotel) && !/^[a-z0-9-]+$/i.test(astro_be_pegasus_hotel)) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, such as https://yourhotel.book.pegsbe.com/\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Pegasus fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //windsurfer
+        if($('.box.windsurfer').css('display') == 'block') {
+
+            var astro_be_windsurfer_hotel = $.trim($('#astro_be_windsurfer_hotel').val());
+            if (astro_be_windsurfer_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!/[?&]propertyID=\d+/i.test(astro_be_windsurfer_hotel) && !/^\d+$/.test(astro_be_windsurfer_hotel)) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, the one with propertyID.\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Windsurfer CRS fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //arosuite
+        if($('.box.arosuite').css('display') == 'block') {
+
+            var astro_be_arosuite_hotel = $.trim($('#astro_be_arosuite_hotel').val());
+            if (astro_be_arosuite_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!/^(https?:\/\/)?[a-z0-9.-]+\.[a-z0-9-]+\/sites\/[a-z0-9-]+/i.test(astro_be_arosuite_hotel)) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, such as https://reserve31.arosuite.com/sites/your-hotel/availability\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Aro Suite fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //avvio
+        if($('.box.avvio').css('display') == 'block') {
+
+            var astro_be_avvio_hotel = $.trim($('#astro_be_avvio_hotel').val());
+            if (astro_be_avvio_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!/\S/.test(astro_be_avvio_hotel)) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, such as https://fe.avvio.com/convert/site/Your%20Hotel/en/results.php\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Avvio fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //bookassist
+        if($('.box.bookassist').css('display') == 'block') {
+
+            var astro_be_bookassist_hotel = $.trim($('#astro_be_bookassist_hotel').val());
+            if (astro_be_bookassist_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!(/[?&]hotel_id=\d+/i.test(astro_be_bookassist_hotel) || /^\d+(\/\d+)?$/.test(astro_be_bookassist_hotel))) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, the one with hotel_id and guide_id.\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Bookassist fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //misterbooking
+        if($('.box.misterbooking').css('display') == 'block') {
+
+            var astro_be_misterbooking_hotel = $.trim($('#astro_be_misterbooking_hotel').val());
+            if (astro_be_misterbooking_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!(/[?&]id_etab=[a-z0-9_-]+/i.test(astro_be_misterbooking_hotel) || /^[a-z0-9_-]+$/i.test(astro_be_misterbooking_hotel))) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, the one with id_etab.\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Misterbooking fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //netaffinity
+        if($('.box.netaffinity').css('display') == 'block') {
+
+            var astro_be_netaffinity_hotel = $.trim($('#astro_be_netaffinity_hotel').val());
+            if (astro_be_netaffinity_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!/^https?:\/\/[^\s\/]+\.[^\s\/]+/i.test(astro_be_netaffinity_hotel)) {
+                $error_msg += '- Booking engine address: enter the address of the booking page of your website, such as https://www.yourhotel.com/bookings.html\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Net Affinity fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //omnibees
+        if($('.box.omnibees').css('display') == 'block') {
+
+            var astro_be_omnibees_hotel = $.trim($('#astro_be_omnibees_hotel').val());
+            if (astro_be_omnibees_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!(/[?&]q=\d+/i.test(astro_be_omnibees_hotel) || /omnibees\.com\/hotel\/\d+/i.test(astro_be_omnibees_hotel) || /^\d+$/.test(astro_be_omnibees_hotel))) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, such as https://book.omnibees.com/hotelresults?q=12345\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Omnibees fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //secureholiday
+        if($('.box.secureholiday').css('display') == 'block') {
+
+            var astro_be_secureholiday_hotel = $.trim($('#astro_be_secureholiday_hotel').val());
+            if (astro_be_secureholiday_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!(/secureholiday\.net\/[a-z]{2}\/\d+/i.test(astro_be_secureholiday_hotel) || /^\d+$/.test(astro_be_secureholiday_hotel))) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, such as https://reservation.secureholiday.net/it/1234/search/product-list\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Secure Holiday fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //seekda
+        if($('.box.seekda').css('display') == 'block') {
+
+            var astro_be_seekda_hotel = $.trim($('#astro_be_seekda_hotel').val());
+            if (astro_be_seekda_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!(/[a-z0-9-]+\.officialbookings\.com/i.test(astro_be_seekda_hotel) || /ibe\.seekda\.com\/dsr\/[a-z0-9-]+/i.test(astro_be_seekda_hotel) || /^[a-z0-9-]+$/i.test(astro_be_seekda_hotel))) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, such as https://s001234.officialbookings.com/\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Seekda fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
         //slope
         if($('.box.slope').css('display') == 'block') {
 

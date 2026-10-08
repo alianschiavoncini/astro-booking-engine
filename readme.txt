@@ -3,7 +3,7 @@ Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget
 Requires at least: 6.0.1
 Tested up to: 7.1
-Stable tag: 2.6.0
+Stable tag: 2.7.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -42,10 +42,13 @@ Astro Booking Engine is not a booking engine: it needs an active contract with o
 <ul>
     <li><a href="https://www.hotelcinquestelle.cloud/en/">5Stelle</a> (Italy)</li>
     <li><a href="https://amadeus-hospitality.com/">Amadeus iHotelier (TravelClick)</a> (Spain)</li>
+    <li><a href="https://www.arodigitalstrategy.com/">Aro Suite</a> (Ireland)</li>
+    <li><a href="https://www.theaccessgroup.com/en-gb/our-brands/allora-avvio/">Avvio</a> (Ireland)</li>
     <li><a href="https://www.beddy.io/">Beddy</a> (Italy)</li>
     <li><a href="https://www.bedzzle.com/">Bedzzle</a> (Italy)</li>
     <li><a href="http://www.begenius.it/">BeGenius</a> (Italy)</li>
     <li><a href="https://www.blastness.com/">Blastness</a> (Italy)</li>
+    <li><a href="https://bookassist.com/">Bookassist</a> (Ireland)</li>
     <li><a href="https://www.bookingdesigner.com/">Booking Designer</a> (Italy)</li>
     <li><a href="https://bookingexpert.com/">Booking Expert</a> (Italy)</li>
     <li><a href="https://bookvisit.com/">Bookvisit</a> (Sweden)</li>
@@ -62,9 +65,13 @@ Astro Booking Engine is not a booking engine: it needs an active contract with o
     <li><a href="https://www.krossbooking.com/">Kross Booking</a> (Italy)</li>
     <li><a href="https://www.mews.com/">Mews</a> (Netherlands)</li>
     <li><a href="https://www.mirai.com/">Mirai</a> (Spain)</li>
+    <li><a href="https://www.misterbooking.net/">Misterbooking</a> (France)</li>
     <li><a href="https://www.mycomp.it/">MyGuestCare</a> (Italy)</li>
+    <li><a href="https://www.netaffinity.com/">Net Affinity</a> (Ireland)</li>
     <li><a href="https://www.octorate.com/">Octorate</a> (Italy)</li>
+    <li><a href="https://omnibees.com/">Omnibees</a> (Brazil)</li>
     <li><a href="https://www.passepartout.net/">Passepartout</a> (San Marino)</li>
+    <li><a href="https://www.cendyn.com/">Pegasus</a> (United States)</li>
     <li><a href="https://www.profitroom.com/">Profitroom</a> (Poland)</li>
     <li><a href="https://www.reservit.com/">Reservit</a> (France)</li>
     <li><a href="https://resnexus.com/">ResNexus</a> (United States)</li>
@@ -72,12 +79,15 @@ Astro Booking Engine is not a booking engine: it needs an active contract with o
     <li><a href="https://www.roiback.com/">Roiback</a> (Spain)</li>
     <li><a href="https://www.sabre.com/products/hospitality/">Sabre SynXis</a> (United States)</li>
     <li><a href="https://www.scidoo.com/">Scidoo</a> (Italy)</li>
+    <li><a href="https://www.ctoutvert.com/">Secure Holiday</a> (France)</li>
+    <li><a href="https://www.seekda.com/">Seekda</a> (Austria)</li>
     <li><a href="https://www.simplebooking.travel/">Simple Booking</a> (Italy)</li>
     <li><a href="https://sirvoy.com/">Sirvoy</a> (Sweden)</li>
     <li><a href="https://www.siteminder.com/">SiteMinder</a> (Australia)</li>
     <li><a href="https://www.slope.it/">Slope</a> (Italy)</li>
     <li><a href="https://www.thinkreservations.com/">ThinkReservations</a> (United States)</li>
     <li><a href="https://www.verticalbooking.com/en/home/">Vertical Booking</a> (Italy)</li>
+    <li><a href="https://www.theaccessgroup.com/en-gb/our-brands/shr/">Windsurfer CRS</a> (United States)</li>
     <li><a href="https://www.witbooking.com/">Witbooking</a> (Spain)</li>
     <li><a href="https://wubook.net/">WuBook</a> (Italy)</li>
 </ul>
@@ -120,10 +130,13 @@ The providers and their policies:
 
 * 5Stelle (Zucchetti): [privacy](https://www.zucchetti.it/it/cms/service/privacy.html)
 * Amadeus iHotelier (TravelClick): [privacy](https://www.amadeus-hospitality.com/privacy-policy), [terms](https://www.amadeus-hospitality.com/legal/)
+* Aro Suite (Aró Digital Strategy): [privacy](https://www.arodigitalstrategy.com/privacy-policy)
+* Avvio (Allora, The Access Group): [privacy](https://www.theaccessgroup.com/en-gb/privacy-notice/)
 * Beddy (Zucchetti): [privacy](https://www.zucchetti.it/website/cms/privacy.html)
 * Bedzzle (Zucchetti): [privacy](https://www.zucchetti.it/website/cms/privacy.html)
 * BeGenius: no privacy policy published, [website](https://www.begenius.it/)
 * Blastness: [privacy](https://www.blastness.com/it/privacy)
+* Bookassist: [privacy](https://bookassist.com/privacy-policy)
 * Booking Designer (I/O NET): [privacy](https://www.bookingdesigner.com/privacy-policy/)
 * Booking Expert: [privacy](https://bookingexpert.com/privacy)
 * Bookvisit (VISIT): [privacy](https://bookvisit.com/privacy-policy/)
@@ -140,9 +153,13 @@ The providers and their policies:
 * Kross Booking (Solutions Plus): [privacy](https://www.krossbooking.com/en/privacy)
 * Mews: [privacy](https://www.mews.com/en/legal/privacy-policy), [terms](https://www.mews.com/en/legal)
 * Mirai: [privacy](https://www.mirai.com/privacy-policy/)
+* Misterbooking: [privacy](https://www.misterbooking.net/en/privacy-policy/)
 * MyGuestCare (MyComp): [privacy](https://www.iubenda.com/privacy-policy/57645335)
+* Net Affinity: [privacy](https://www.netaffinity.com/privacy/)
 * Octorate: [privacy](https://www.octorate.com/privacy-policy/), [terms](https://www.octorate.com/terms-and-conditions/)
+* Omnibees: [privacy](https://omnibees.com/politica-de-privacidade/)
 * Passepartout: [privacy](https://privacy.passepartout.net/informativasitiweb), [terms](https://www.passepartout.net/utility/note-legali)
+* Pegasus (Cendyn): [privacy](https://www.cendyn.com/privacy-policy)
 * Profitroom: [privacy](https://profitroom.com/privacy-policy)
 * Reservit: [privacy](https://www.reservit.com/politique-de-confidentialite/)
 * ResNexus: [privacy](https://resnexus.com/PrivacyPolicy.html), [terms](https://resnexus.com/TermsofUse.html)
@@ -150,12 +167,15 @@ The providers and their policies:
 * Roiback: [privacy](https://www.roiback.com/legal/politica-de-privacidad), [terms](https://www.roiback.com/legal/aviso-legal)
 * Sabre SynXis: [privacy](https://www.sabre.com/about/privacy)
 * Scidoo: [privacy](https://scidoo.com/preventivov2/privacy_policy.php?cod=27)
+* Secure Holiday (Ctoutvert): [privacy](https://www.ctoutvert.com/en/privacy-policy/)
+* Seekda: [privacy](https://www.seekda.com/en/privacy-policy/)
 * Simple Booking: [privacy](https://www.simplebooking.travel/privacy-policy)
 * Sirvoy: [privacy](https://sirvoy.com/privacy-policy)
 * SiteMinder: [privacy](https://www.siteminder.com/legal/privacy/), [terms](https://www.siteminder.com/legal/website-terms/)
 * Slope: [privacy](https://www.slope.it/privacy/)
 * ThinkReservations: [privacy](https://www.thinkreservations.com/privacy), [terms](https://www.thinkreservations.com/terms)
 * Vertical Booking: [privacy](https://www.verticalbooking.com/en/privacy-policy/)
+* Windsurfer CRS (SHR, The Access Group): [privacy](https://www.theaccessgroup.com/en-gb/privacy-notice/)
 * Witbooking: [privacy](https://www.witbooking.com/policy)
 * WuBook: [privacy](https://wubook.net/page/privacy-policy-17.html), [terms](https://wubook.net/page/Termini-Condizioni-14.html)
 
@@ -163,6 +183,21 @@ The providers and their policies:
 gsphudo7by90lzwdlihyerqxbzj6jiln
 
 == Changelog ==
+
+= 2.7.0 =
+* Added: Pegasus (Cendyn) provider, with adults, children and access code: the search opens on the rooms, and the ages of the children are asked on the booking engine. The property code can also be entered by pasting the whole booking engine address.
+* Added: Windsurfer CRS (SHR Group) provider, with adults, children and promo code: the search starts by itself, and the ages of the children are asked on the booking engine. The property code can also be entered by pasting the whole booking engine address.
+* Added: Avvio (Allora, The Access Group) provider, with adults, children with their ages and promo code: the search opens on the rooms. The site name can also be entered by pasting the whole booking engine address.
+* Added: Net Affinity provider, with the dates: the booking engine runs on the booking page of the hotel website, whose address is the only setting, and the guests are chosen there.
+* Added: Aro Suite provider, with adults, children and promo code: the search opens on the rooms, and the ages of the children are asked on the booking engine. The property code can also be entered by pasting the whole booking engine address.
+* Added: Bookassist provider, with adults and children: the search opens on the rooms, and the ages of the children are asked on the booking engine. The property codes can also be entered by pasting the whole booking engine address.
+* Added: Misterbooking provider, with the dates and the promo code: the guests are chosen on the booking engine. The property key can also be entered by pasting the whole booking engine address.
+* Added: Secure Holiday (Ctoutvert) provider, for campsites and holiday villages, with adults, children with their ages and discount code: the search opens on the accommodations. The property code can also be entered by pasting the whole booking engine address.
+* Added: Seekda provider, with the dates and the promo code: the guests are chosen on the booking engine. The property code can also be entered by pasting the whole booking engine address.
+* Added: Omnibees provider, with adults, children with their ages and promo code: the search opens on the rooms. The hotel code can also be entered by pasting the whole booking engine address.
+* Changed: 50 booking engine providers supported.
+* Fixed: compact style, the label of the promo code sits level with the other labels of the bar.
+* Compatibility: tested with WordPress 7.1.
 
 = 2.6.0 =
 * Added: Bedzzle provider, with adults, children and their ages and promo code. The property key can also be entered by pasting the whole booking engine address.
@@ -296,6 +331,9 @@ gsphudo7by90lzwdlihyerqxbzj6jiln
 * Initial version.
 
 == Upgrade Notice ==
+
+= 2.7.0 =
+Ten new providers, 50 in all: Pegasus and Windsurfer CRS (United States), Avvio, Net Affinity, Aro Suite and Bookassist (Ireland), Misterbooking and Secure Holiday (France), Seekda (Austria) and Omnibees (Brazil).
 
 = 2.6.0 =
 Eight new providers: Bedzzle, Booking Designer, Kross Booking and Slope (Italy), DIRS21, Bookvisit, Sirvoy and Profitroom (Northern and Central Europe), and the Italian translation approved on translate.wordpress.org.
