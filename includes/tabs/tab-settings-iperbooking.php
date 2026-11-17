@@ -97,10 +97,15 @@ $provider = 'iperbooking';
 					$i = 1;
 
 					$check_option = get_option($field['name']);
+					// a value saved by an old version may not be a list: it is ignored
+					if ( ! is_array( $check_option ) ) {
+						$check_option = array();
+					}
 					if ($check_option) {
 						$n_check_option = count($check_option);
                         $default_option = get_option($field['name'].'_default');
 						foreach ($check_option as $option) {
+							$option = is_array( $option ) ? $option + array( 'code' => '', 'url' => '', 'value' => '', 'label' => '' ) : array( 'code' => '', 'url' => '', 'value' => '', 'label' => '' );
 							?>
                             <fieldset class="provider-fieldset provider-fieldset-<?php echo esc_attr($i); ?>">
                                 <legend class="provider-fieldset-legend"><?php esc_html_e( 'Language option', 'astro-booking-engine' ); ?> #<?php echo esc_attr($i); ?></legend>
@@ -211,10 +216,15 @@ $provider = 'iperbooking';
                     $i = 1;
 
                     $check_option = get_option($field['name']);
+					// a value saved by an old version may not be a list: it is ignored
+					if ( ! is_array( $check_option ) ) {
+						$check_option = array();
+					}
                     if ($check_option) {
 						$n_check_option = count($check_option);
                         $default_option = get_option($field['name'].'_default');
                         foreach ($check_option as $option) {
+							$option = is_array( $option ) ? $option + array( 'code' => '', 'url' => '', 'value' => '', 'label' => '' ) : array( 'code' => '', 'url' => '', 'value' => '', 'label' => '' );
                     ?>
                     <fieldset class="provider-fieldset provider-fieldset-<?php echo esc_attr($i); ?>">
                         <legend class="provider-fieldset-legend">Treatment option #<?php echo esc_html($i); ?></legend>

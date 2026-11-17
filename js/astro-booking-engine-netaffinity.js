@@ -13,7 +13,7 @@ jQuery( document ).ready(function( $ ) {
         event.preventDefault();
         var url = form.attr('action').split('#')[0] + '#!/accommodation/search/date/' + form.find('.astro_be_input-checkin-js').val() + '/' + form.find('.astro_be_input-checkout-js').val();
         if (form.attr('target') === '_blank') {
-            window.open(url, '_blank');
+            window.open(url, '_blank', 'noopener');
         } else {
             window.location.href = url;
         }

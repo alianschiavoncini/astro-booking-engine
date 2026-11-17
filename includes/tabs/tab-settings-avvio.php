@@ -21,6 +21,7 @@ $provider = 'avvio';
 			<?php
 			$field = array(
 				'label' => esc_html__( 'Booking engine address', 'astro-booking-engine' ),
+				/* translators: %20 is part of the example address (an encoded space), not a placeholder. */
 				'description' => __( 'The address of your Avvio booking engine, as it is: https://fe.avvio.com/convert/site/Your%20Hotel/en/results.php', 'astro-booking-engine' ),
 				'name' => ASTRO_BE_PREFIX.$provider.'_hotel',
 				'value' => get_option(ASTRO_BE_PREFIX.$provider.'_hotel'),

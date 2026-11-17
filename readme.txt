@@ -3,7 +3,7 @@ Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget
 Requires at least: 6.0.1
 Tested up to: 7.1
-Stable tag: 2.7.0
+Stable tag: 2.8.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -52,12 +52,15 @@ Astro Booking Engine is not a booking engine: it needs an active contract with o
     <li><a href="https://www.bookingdesigner.com/">Booking Designer</a> (Italy)</li>
     <li><a href="https://bookingexpert.com/">Booking Expert</a> (Italy)</li>
     <li><a href="https://bookvisit.com/">Bookvisit</a> (Sweden)</li>
+    <li><a href="https://www.spectra-systems.com/en/products/bookyourstay-online-booking-platform/">BookYourStay</a> (Denmark)</li>
     <li><a href="https://www.cloudbeds.com/">Cloudbeds</a> (United States)</li>
     <li><a href="https://www.datasistemi.eu/">Data Sistemi</a> (Italy)</li>
     <li><a href="https://www.d-edge.com/">D-EDGE</a> (France)</li>
     <li><a href="https://www.dirs21.de/">DIRS21</a> (Germany)</li>
     <li><a href="https://www.ericsoft.com/">Ericsoft</a> (Italy)</li>
     <li><a href="https://ermeshotels.com/">ErmesHotels</a> (Italy)</li>
+    <li><a href="https://eviivo.com/">eviivo</a> (United Kingdom)</li>
+    <li><a href="https://en.freetobook.com/">freetobook</a> (United Kingdom)</li>
     <li><a href="https://www.guestline.com/">Guestline</a> (United Kingdom)</li>
     <li><a href="https://hotelnetsolutions.de/en/">HotelNetSolutions (OnePageBooking)</a> (Germany)</li>
     <li><a href="https://www.iperbooking.com/">Iperbooking</a> (Italy)</li>
@@ -85,6 +88,8 @@ Astro Booking Engine is not a booking engine: it needs an active contract with o
     <li><a href="https://sirvoy.com/">Sirvoy</a> (Sweden)</li>
     <li><a href="https://www.siteminder.com/">SiteMinder</a> (Australia)</li>
     <li><a href="https://www.slope.it/">Slope</a> (Italy)</li>
+    <li><a href="https://www.smartness.com/">Smartness</a> (Italy)</li>
+    <li><a href="https://techotel.dk/">TecHotel (Picasso Online)</a> (Denmark)</li>
     <li><a href="https://www.thinkreservations.com/">ThinkReservations</a> (United States)</li>
     <li><a href="https://www.verticalbooking.com/en/home/">Vertical Booking</a> (Italy)</li>
     <li><a href="https://www.theaccessgroup.com/en-gb/our-brands/shr/">Windsurfer CRS</a> (United States)</li>
@@ -140,12 +145,15 @@ The providers and their policies:
 * Booking Designer (I/O NET): [privacy](https://www.bookingdesigner.com/privacy-policy/)
 * Booking Expert: [privacy](https://bookingexpert.com/privacy)
 * Bookvisit (VISIT): [privacy](https://bookvisit.com/privacy-policy/)
+* BookYourStay (SPECTRA Systems): [privacy](https://www.spectra-systems.com/en/contact/privacy/)
 * Cloudbeds: [privacy](https://www.cloudbeds.com/privacy-policy/), [terms](https://www.cloudbeds.com/terms/)
 * Data Sistemi: [privacy](https://www.datasistemi.eu/privacy-policy.html)
 * D-EDGE: [privacy](https://www.d-edge.com/privacy-policy/)
 * DIRS21: [privacy](https://www.dirs21.de/disclaimer/)
 * Ericsoft (Zucchetti): [privacy](https://cms-cdn.ericsoft.com/cms/site/resources/6183/56339/6ac93f723e3ba6560cc846db875ff73e/Informativa%20Privacy%20ENG.pdf)
 * ErmesHotels: [privacy](https://ermeshotels.com/informativa-sulla-privacy/)
+* eviivo: [privacy](https://eviivo.com/privacy-policy/)
+* freetobook: [privacy](https://en.freetobook.com/guest-privacy-policy/)
 * Guestline (The Access Group): [privacy](https://www.theaccessgroup.com/en-gb/privacy-notice/)
 * HotelNetSolutions (OnePageBooking): [privacy](https://hotelnetsolutions.de/en/privacy-policy/)
 * Iperbooking: [privacy](https://www.iperbooking.com/privacy.cfm)
@@ -173,6 +181,8 @@ The providers and their policies:
 * Sirvoy: [privacy](https://sirvoy.com/privacy-policy)
 * SiteMinder: [privacy](https://www.siteminder.com/legal/privacy/), [terms](https://www.siteminder.com/legal/website-terms/)
 * Slope: [privacy](https://www.slope.it/privacy/)
+* Smartness: [privacy](https://www.iubenda.com/privacy-policy/50108679)
+* TecHotel (Picasso Online): [privacy](https://techotel.dk/privacy-policy/)
 * ThinkReservations: [privacy](https://www.thinkreservations.com/privacy), [terms](https://www.thinkreservations.com/terms)
 * Vertical Booking: [privacy](https://www.verticalbooking.com/en/privacy-policy/)
 * Windsurfer CRS (SHR, The Access Group): [privacy](https://www.theaccessgroup.com/en-gb/privacy-notice/)
@@ -183,6 +193,21 @@ The providers and their policies:
 gsphudo7by90lzwdlihyerqxbzj6jiln
 
 == Changelog ==
+
+= 2.8.0 =
+* Security: the custom CSS of the Layout settings can be changed only by the users allowed to edit the CSS of the site (the edit_css capability of the core Additional CSS): on multisite the site administrators can no longer add arbitrary CSS to the pages.
+* Security: the plugin styles and scripts, the custom CSS included, are loaded on the front end only and no longer on the admin screens; the admin styles and scripts are loaded on the plugin page only.
+* Security: "Remove all plugin settings" is now a form with a confirmation, sent with a nonce to admin-post.php and followed by a redirect: reloading the page or opening it again from the browser history no longer deletes the settings a second time.
+* Security: the numbers of guests and the children ages are read as whole numbers between 0 and 30, so a wrong value stored in the database cannot break the pages with the booking form.
+* Security: the Net Affinity booking page opened in a new tab no longer has access to the page of the hotel website (noopener).
+* Added: Smartness (Smartpms) provider, with adults, children and coupon: the search opens on the rooms, and the ages of the children are asked on the booking engine. The property code can also be entered by pasting the whole booking engine address.
+* Added: eviivo provider, with adults, children and promo code: the search opens on the rooms. The property name can also be entered by pasting the whole booking engine address.
+* Added: freetobook provider, with adults, children with their ages and promo code: the search opens on the rooms. The token can also be entered by pasting the address of the booking button.
+* Added: TecHotel (Picasso Online) provider, with adults, children and campaign code: the booking page of the hotel opens with the rooms and the prices, and the children are counted in the two age ranges of the hotel.
+* Added: BookYourStay provider, with adults, children and promo code: the search opens on the rooms. The hotel code can also be entered by pasting the whole booking engine address.
+* Changed: 55 booking engine providers supported.
+* Fixed: all the values printed by the booking form templates are escaped, the admin fields use the escaping of attributes and text areas, the links that open in a new tab have rel="noopener noreferrer", and an Iperbooking list saved by an old version no longer stops the settings page.
+* Compatibility: tested with WordPress 7.1.
 
 = 2.7.0 =
 * Added: Pegasus (Cendyn) provider, with adults, children and access code: the search opens on the rooms, and the ages of the children are asked on the booking engine. The property code can also be entered by pasting the whole booking engine address.
@@ -331,6 +356,9 @@ gsphudo7by90lzwdlihyerqxbzj6jiln
 * Initial version.
 
 == Upgrade Notice ==
+
+= 2.8.0 =
+Security release: custom CSS limited to the users who can edit CSS, plugin files no longer loaded on the admin screens, safer settings reset. Five new providers, 55 in all: Smartness, eviivo, freetobook, TecHotel and BookYourStay.
 
 = 2.7.0 =
 Ten new providers, 50 in all: Pegasus and Windsurfer CRS (United States), Avvio, Net Affinity, Aro Suite and Bookassist (Ireland), Misterbooking and Secure Holiday (France), Seekda (Austria) and Omnibees (Brazil).

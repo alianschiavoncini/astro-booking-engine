@@ -127,7 +127,7 @@ jQuery( document ).ready(function( $ ) {
      */
     $('form.astro_be_settings_form').submit( function() {
 
-        $error_msg = '';
+        var $error_msg = '';
 
         //5Stelle
         if($('.box.5stelle').css('display') == 'block') {
@@ -931,6 +931,96 @@ jQuery( document ).ready(function( $ ) {
 
             if ($error_msg != '') {
                 $error_msg = 'Seekda fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //bookyourstay
+        if($('.box.bookyourstay').css('display') == 'block') {
+
+            var astro_be_bookyourstay_hotel = $.trim($('#astro_be_bookyourstay_hotel').val());
+            if (astro_be_bookyourstay_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!((/[a-z0-9-]+\.bookyourstay\.eu/i.test(astro_be_bookyourstay_hotel) && /hotelcode=[a-z0-9]+|\/booking\/[a-z0-9]+\//i.test(astro_be_bookyourstay_hotel)) || /^[a-z0-9-]+\/[a-z0-9]+$/i.test(astro_be_bookyourstay_hotel))) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, such as https://yourhotel-bookyourstay.bookyourstay.eu/booking/room?newBooking&HotelCode=ABC\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'BookYourStay fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //eviivo
+        if($('.box.eviivo').css('display') == 'block') {
+
+            var astro_be_eviivo_hotel = $.trim($('#astro_be_eviivo_hotel').val());
+            if (astro_be_eviivo_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!(/via\.eviivo\.com\/[^\s?#]+/i.test(astro_be_eviivo_hotel) || /^[a-z0-9_-]+$/i.test(astro_be_eviivo_hotel))) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, such as https://via.eviivo.com/en-GB/YourHotel\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'eviivo fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //freetobook
+        if($('.box.freetobook').css('display') == 'block') {
+
+            var astro_be_freetobook_hotel = $.trim($('#astro_be_freetobook_hotel').val());
+            if (astro_be_freetobook_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!(/[?&]w_tkn=[a-z0-9]+/i.test(astro_be_freetobook_hotel) || /booking-directly\.com\/widgets\/[a-z0-9]+/i.test(astro_be_freetobook_hotel) || /^[a-z0-9]{20,}$/i.test(astro_be_freetobook_hotel))) {
+                $error_msg += '- Booking engine address: enter the whole address of the booking button of your freetobook account, the one with w_tkn.\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'freetobook fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //smartness
+        if($('.box.smartness').css('display') == 'block') {
+
+            var astro_be_smartness_hotel = $.trim($('#astro_be_smartness_hotel').val());
+            if (astro_be_smartness_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!(/^(https?:\/\/)?[a-z0-9.-]+\.[a-z]{2,}(\/|$)/i.test(astro_be_smartness_hotel))) {
+                $error_msg += '- Booking engine address: enter the whole address of your booking engine, such as https://yourhotel.bookpage.io/it/properties/12345\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'Smartness fields errors:\n' + $error_msg;
+                alert($error_msg);
+                return false;
+            }
+
+        }
+
+        //techotel
+        if($('.box.techotel').css('display') == 'block') {
+
+            var astro_be_techotel_hotel = $.trim($('#astro_be_techotel_hotel').val());
+            if (astro_be_techotel_hotel == '') {
+                $error_msg += '- Booking engine address: the field is required.\n';
+            } else if (!(/^https?:\/\/[^\s\/]+\.[^\s\/]+\/\S+/i.test(astro_be_techotel_hotel))) {
+                $error_msg += '- Booking engine address: enter the address of the booking page of your hotel, such as https://picassoonline.techotel.dk/en/yourhotel/yourhotel/booking/rooms/\n';
+            }
+
+            if ($error_msg != '') {
+                $error_msg = 'TecHotel fields errors:\n' + $error_msg;
                 alert($error_msg);
                 return false;
             }

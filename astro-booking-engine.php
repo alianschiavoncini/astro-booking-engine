@@ -3,7 +3,7 @@
  * Plugin Name:       Astro Booking Engine
  * Plugin URI:        https://wordpress.org/plugins/astro-booking-engine
  * Description:       Hotel booking form via Gutenberg block or shortcode, independent from the provider: switch booking engine anytime, your form stays the same.
- * Version:           2.7.0
+ * Version:           2.8.0
  * Requires at least: 6.0.1
  * Requires PHP:      7.4
  * Author:            Alian Schiavoncini
@@ -37,7 +37,7 @@ if ( is_admin() ) {
 /**
  * Plugin constants.
  */
-define('ASTRO_BE_VERSION', '2.7.0');
+define('ASTRO_BE_VERSION', '2.8.0');
 define('ASTRO_BE_PREFIX', 'astro_be_');
 define('ASTRO_BE_TEXTDOMAIN', astro_be_plugin_data('TextDomain'));
 
@@ -65,7 +65,9 @@ function astro_be_activate() {
 }
 
 /**
- * Enqueue plugin files.
+ * Register the plugin files on init, as the block registered at priority 20 refers to the main
+ * style handle and the editor reuses the modern style handles; enqueue them on the front end only,
+ * so that nothing of the booking form, the custom CSS included, is loaded on the admin screens.
  */
 add_action('init', 'astro_be_enqueue_files');
 function astro_be_enqueue_files() {
@@ -77,37 +79,33 @@ function astro_be_enqueue_files() {
 	// Il calendario di jQuery UI serve al solo stile classico: con quello compatto il
 	// datepicker e' flatpickr, e caricare entrambi sarebbe peso inutile su ogni pagina.
 	if (!$compact) {
-		// jQuery UI - ref. https://code.jquery.com/ui/
-		wp_enqueue_script('jquery-ui-datepicker-js' );
-
 		// UI theme: only the themes shipped with the plugin (the value is part of the stylesheet path)
 		$jquery_ui_theme = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'calendar');
 		if (!$jquery_ui_theme) { $jquery_ui_theme = 'base'; }
 		$jquery_ui_theme_url = plugin_dir_url( __FILE__ ) . 'vendors/jquery-ui-themes/themes/'.$jquery_ui_theme.'/jquery-ui.min.css';
-		wp_enqueue_style('jquery-ui-datepicker-css', $jquery_ui_theme_url, array(), ASTRO_BE_VERSION);
+		astro_be_asset( 'style', 'jquery-ui-datepicker-css', $jquery_ui_theme_url, array(), ASTRO_BE_VERSION );
 	}
 
 	// Enqueue main files
-	wp_register_style( 'astro-booking-engine', plugin_dir_url( __FILE__ ) . 'css/astro-booking-engine.css', array(), $plugin_version );
-	wp_enqueue_style( 'astro-booking-engine' );
+	astro_be_asset( 'style', 'astro-booking-engine', plugin_dir_url( __FILE__ ) . 'css/astro-booking-engine.css', array(), $plugin_version );
 
 	$main_deps = $compact ? array( 'jquery' ) : array( 'jquery', 'jquery-ui-datepicker' );
-	wp_enqueue_script( 'astro-booking-engine', plugin_dir_url( __FILE__ ) . 'js/astro-booking-engine.js', $main_deps, $plugin_version );
+	astro_be_asset( 'script', 'astro-booking-engine', plugin_dir_url( __FILE__ ) . 'js/astro-booking-engine.js', $main_deps, $plugin_version );
 
 	if ($compact) {
-		wp_enqueue_style( 'astro-booking-engine-flatpickr', plugin_dir_url( __FILE__ ) . 'vendors/flatpickr/flatpickr.min.css', array(), $plugin_version );
-		wp_enqueue_style( 'astro-booking-engine-compact', plugin_dir_url( __FILE__ ) . 'css/astro-booking-engine-compact.css', array( 'astro-booking-engine' ), $plugin_version );
+		astro_be_asset( 'style', 'astro-booking-engine-flatpickr', plugin_dir_url( __FILE__ ) . 'vendors/flatpickr/flatpickr.min.css', array(), $plugin_version );
+		astro_be_asset( 'style', 'astro-booking-engine-compact', plugin_dir_url( __FILE__ ) . 'css/astro-booking-engine-compact.css', array( 'astro-booking-engine' ), $plugin_version );
 
-		wp_enqueue_script( 'astro-booking-engine-flatpickr', plugin_dir_url( __FILE__ ) . 'vendors/flatpickr/flatpickr.min.js', array(), $plugin_version, true );
+		astro_be_asset( 'script', 'astro-booking-engine-flatpickr', plugin_dir_url( __FILE__ ) . 'vendors/flatpickr/flatpickr.min.js', array(), $plugin_version, true );
 
 		// localizzazione del calendario: solo se il plugin ha il file della lingua della pagina
 		$lang = astro_return_post_language();
 		$l10n_file = plugin_dir_path( __FILE__ ) . 'vendors/flatpickr/l10n/' . $lang . '.min.js';
 		if ( preg_match( '/^[a-z]{2}$/', $lang ) && file_exists( $l10n_file ) ) {
-			wp_enqueue_script( 'astro-booking-engine-flatpickr-l10n', plugin_dir_url( __FILE__ ) . 'vendors/flatpickr/l10n/' . $lang . '.min.js', array( 'astro-booking-engine-flatpickr' ), $plugin_version, true );
+			astro_be_asset( 'script', 'astro-booking-engine-flatpickr-l10n', plugin_dir_url( __FILE__ ) . 'vendors/flatpickr/l10n/' . $lang . '.min.js', array( 'astro-booking-engine-flatpickr' ), $plugin_version, true );
 		}
 
-		wp_enqueue_script( 'astro-booking-engine-compact', plugin_dir_url( __FILE__ ) . 'js/astro-booking-engine-compact.js', array( 'jquery', 'astro-booking-engine', 'astro-booking-engine-flatpickr' ), $plugin_version, true );
+		astro_be_asset( 'script', 'astro-booking-engine-compact', plugin_dir_url( __FILE__ ) . 'js/astro-booking-engine-compact.js', array( 'jquery', 'astro-booking-engine', 'astro-booking-engine-flatpickr' ), $plugin_version, true );
 
 		wp_localize_script( 'astro-booking-engine-compact', 'astro_be_compact_settings', array(
 			'density' => astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'form_density'),
@@ -144,10 +142,43 @@ function astro_be_enqueue_files() {
 		$provider_deps = array_merge( $main_deps, array( 'astro-booking-engine' ) );
 		$provider_js_path_file = plugin_dir_path( __FILE__ ) . 'js/astro-booking-engine-' . $provider . '.js';
 		if (file_exists($provider_js_path_file)) {
-			wp_enqueue_script( 'astro-booking-engine-' . $provider, plugin_dir_url( __FILE__ ) . 'js/astro-booking-engine-'.$provider.'.js', $provider_deps, $plugin_version );
+			astro_be_asset( 'script', 'astro-booking-engine-' . $provider, plugin_dir_url( __FILE__ ) . 'js/astro-booking-engine-'.$provider.'.js', $provider_deps, $plugin_version );
 		}
 	}
 
+}
+
+/**
+ * Register a style or a script and note it down for the front end.
+ */
+function astro_be_asset( $type, $handle, $src, $deps, $ver, $in_footer = false ) {
+	global $astro_be_front_assets;
+	if ( ! is_array( $astro_be_front_assets ) ) {
+		$astro_be_front_assets = array( 'style' => array(), 'script' => array() );
+	}
+	if ( 'style' === $type ) {
+		wp_register_style( $handle, $src, $deps, $ver );
+	} else {
+		wp_register_script( $handle, $src, $deps, $ver, $in_footer );
+	}
+	$astro_be_front_assets[ $type ][] = $handle;
+}
+
+/**
+ * Enqueue on the front end the files registered by astro_be_enqueue_files().
+ */
+add_action( 'wp_enqueue_scripts', 'astro_be_enqueue_front_files' );
+function astro_be_enqueue_front_files() {
+	global $astro_be_front_assets;
+	if ( ! is_array( $astro_be_front_assets ) ) {
+		return;
+	}
+	foreach ( $astro_be_front_assets['style'] as $handle ) {
+		wp_enqueue_style( $handle );
+	}
+	foreach ( $astro_be_front_assets['script'] as $handle ) {
+		wp_enqueue_script( $handle );
+	}
 }
 
 /**

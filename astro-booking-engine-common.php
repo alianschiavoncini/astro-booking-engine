@@ -223,6 +223,23 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'bookvisit_hotel' => ASTRO_BE_PREFIX . 'bookvisit_hotel', //required; the channel code
 
 				/**
+				 * BookYourStay
+				 */
+				ASTRO_BE_PREFIX . 'bookyourstay_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'bookyourstay_form_target' => ASTRO_BE_PREFIX . 'bookyourstay_form_target',
+				ASTRO_BE_PREFIX . 'bookyourstay_adults_enable' => ASTRO_BE_PREFIX . 'bookyourstay_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'bookyourstay_adults_n_default' => ASTRO_BE_PREFIX . 'bookyourstay_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'bookyourstay_adults_n_max' => ASTRO_BE_PREFIX . 'bookyourstay_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'bookyourstay_children_enable' => ASTRO_BE_PREFIX . 'bookyourstay_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'bookyourstay_children_n_default' => ASTRO_BE_PREFIX . 'bookyourstay_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'bookyourstay_children_n_max' => ASTRO_BE_PREFIX . 'bookyourstay_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'bookyourstay_coupon' => ASTRO_BE_PREFIX . 'bookyourstay_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'bookyourstay_submit_label' => ASTRO_BE_PREFIX . 'bookyourstay_submit_label', //optional
+
+				//BookYourStay custom fields
+				ASTRO_BE_PREFIX . 'bookyourstay_hotel' => ASTRO_BE_PREFIX . 'bookyourstay_hotel', //required; the subdomain and the code of the hotel (yourhotel-bookyourstay/ABC)
+
+				/**
 				 * Blastness
 				 */
 				ASTRO_BE_PREFIX . 'blastness_form_method' => esc_attr('get'),
@@ -357,6 +374,43 @@ function astro_be_option_names($tab = false) {
 
 				//ErmesHotels custom fields
 				ASTRO_BE_PREFIX . 'ermeshotels_hotel' => ASTRO_BE_PREFIX . 'ermeshotels_hotel', //required; hotel/channel
+
+				/**
+				 * eviivo
+				 */
+				ASTRO_BE_PREFIX . 'eviivo_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'eviivo_form_target' => ASTRO_BE_PREFIX . 'eviivo_form_target',
+				ASTRO_BE_PREFIX . 'eviivo_adults_enable' => ASTRO_BE_PREFIX . 'eviivo_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'eviivo_adults_n_default' => ASTRO_BE_PREFIX . 'eviivo_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'eviivo_adults_n_max' => ASTRO_BE_PREFIX . 'eviivo_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'eviivo_children_enable' => ASTRO_BE_PREFIX . 'eviivo_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'eviivo_children_n_default' => ASTRO_BE_PREFIX . 'eviivo_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'eviivo_children_n_max' => ASTRO_BE_PREFIX . 'eviivo_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'eviivo_coupon' => ASTRO_BE_PREFIX . 'eviivo_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'eviivo_submit_label' => ASTRO_BE_PREFIX . 'eviivo_submit_label', //optional
+
+				//eviivo custom fields
+				ASTRO_BE_PREFIX . 'eviivo_hotel' => ASTRO_BE_PREFIX . 'eviivo_hotel', //required; the short name of the property (YourHotel for via.eviivo.com/en-GB/YourHotel)
+
+				/**
+				 * freetobook
+				 */
+				ASTRO_BE_PREFIX . 'freetobook_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'freetobook_form_target' => ASTRO_BE_PREFIX . 'freetobook_form_target',
+				ASTRO_BE_PREFIX . 'freetobook_adults_enable' => ASTRO_BE_PREFIX . 'freetobook_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'freetobook_adults_n_default' => ASTRO_BE_PREFIX . 'freetobook_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'freetobook_adults_n_max' => ASTRO_BE_PREFIX . 'freetobook_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'freetobook_children_enable' => ASTRO_BE_PREFIX . 'freetobook_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'freetobook_children_n_default' => ASTRO_BE_PREFIX . 'freetobook_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'freetobook_children_n_max' => ASTRO_BE_PREFIX . 'freetobook_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'freetobook_childage_enable' => ASTRO_BE_PREFIX . 'freetobook_childage_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'freetobook_childage_min' => ASTRO_BE_PREFIX . 'freetobook_childage_min', //required >= 0
+				ASTRO_BE_PREFIX . 'freetobook_childage_max' => ASTRO_BE_PREFIX . 'freetobook_childage_max', //required >= 0
+				ASTRO_BE_PREFIX . 'freetobook_coupon' => ASTRO_BE_PREFIX . 'freetobook_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'freetobook_submit_label' => ASTRO_BE_PREFIX . 'freetobook_submit_label', //optional
+
+				//freetobook custom fields
+				ASTRO_BE_PREFIX . 'freetobook_hotel' => ASTRO_BE_PREFIX . 'freetobook_hotel', //required; the token of the booking button (w_tkn)
 
 				/**
 				 * Guestline
@@ -886,6 +940,44 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'slope_hotel' => ASTRO_BE_PREFIX . 'slope_hotel', //required; the code of the property
 
 				/**
+				 * Smartness
+				 */
+				ASTRO_BE_PREFIX . 'smartness_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'smartness_form_target' => ASTRO_BE_PREFIX . 'smartness_form_target',
+				ASTRO_BE_PREFIX . 'smartness_adults_enable' => ASTRO_BE_PREFIX . 'smartness_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'smartness_adults_n_default' => ASTRO_BE_PREFIX . 'smartness_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'smartness_adults_n_max' => ASTRO_BE_PREFIX . 'smartness_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'smartness_children_enable' => ASTRO_BE_PREFIX . 'smartness_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'smartness_children_n_default' => ASTRO_BE_PREFIX . 'smartness_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'smartness_children_n_max' => ASTRO_BE_PREFIX . 'smartness_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'smartness_coupon' => ASTRO_BE_PREFIX . 'smartness_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'smartness_submit_label' => ASTRO_BE_PREFIX . 'smartness_submit_label', //optional
+
+				//Smartness custom fields
+				ASTRO_BE_PREFIX . 'smartness_hotel' => ASTRO_BE_PREFIX . 'smartness_hotel', //required; the host and the code of the property (yourhotel.bookpage.io/12345), or the host only
+
+				/**
+				 * TecHotel (Picasso Online)
+				 */
+				ASTRO_BE_PREFIX . 'techotel_form_method' => esc_attr('get'),
+				ASTRO_BE_PREFIX . 'techotel_form_target' => ASTRO_BE_PREFIX . 'techotel_form_target',
+				ASTRO_BE_PREFIX . 'techotel_adults_enable' => ASTRO_BE_PREFIX . 'techotel_adults_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'techotel_adults_n_default' => ASTRO_BE_PREFIX . 'techotel_adults_n_default', //required >= 1
+				ASTRO_BE_PREFIX . 'techotel_adults_n_max' => ASTRO_BE_PREFIX . 'techotel_adults_n_max', //required >= 1
+				ASTRO_BE_PREFIX . 'techotel_children_enable' => ASTRO_BE_PREFIX . 'techotel_children_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'techotel_children_n_default' => ASTRO_BE_PREFIX . 'techotel_children_n_default', //required >= 0
+				ASTRO_BE_PREFIX . 'techotel_children_n_max' => ASTRO_BE_PREFIX . 'techotel_children_n_max', //required >= 0
+				ASTRO_BE_PREFIX . 'techotel_childage_enable' => ASTRO_BE_PREFIX . 'techotel_childage_enable', //enable/disable
+				ASTRO_BE_PREFIX . 'techotel_childage_min' => ASTRO_BE_PREFIX . 'techotel_childage_min', //required >= 0
+				ASTRO_BE_PREFIX . 'techotel_childage_max' => ASTRO_BE_PREFIX . 'techotel_childage_max', //required >= 0
+				ASTRO_BE_PREFIX . 'techotel_coupon' => ASTRO_BE_PREFIX . 'techotel_coupon', //enable/disable
+				ASTRO_BE_PREFIX . 'techotel_submit_label' => ASTRO_BE_PREFIX . 'techotel_submit_label', //optional
+
+				//TecHotel (Picasso Online) custom fields
+				ASTRO_BE_PREFIX . 'techotel_hotel' => ASTRO_BE_PREFIX . 'techotel_hotel', //required; the address of the booking page of the hotel
+				ASTRO_BE_PREFIX . 'techotel_children_ranges' => ASTRO_BE_PREFIX . 'techotel_children_ranges', //optional; the age ranges of the two children fields, in their order, such as 0-4,5-15
+
+				/**
 				 * ThinkReservations
 				 */
 				ASTRO_BE_PREFIX . 'thinkreservations_form_method' => esc_attr('get'),
@@ -1158,6 +1250,24 @@ function astro_be_get_option_sanitize_callback( $option_name ) {
 	if ( 'sirvoy_hotel' === $name ) {
 		return 'astro_be_sanitize_sirvoy_hotel';
 	}
+	if ( 'bookyourstay_hotel' === $name ) {
+		return 'astro_be_sanitize_bookyourstay_hotel';
+	}
+	if ( 'eviivo_hotel' === $name ) {
+		return 'astro_be_sanitize_eviivo_hotel';
+	}
+	if ( 'freetobook_hotel' === $name ) {
+		return 'astro_be_sanitize_freetobook_hotel';
+	}
+	if ( 'smartness_hotel' === $name ) {
+		return 'astro_be_sanitize_smartness_hotel';
+	}
+	if ( 'techotel_hotel' === $name ) {
+		return 'astro_be_sanitize_techotel_hotel';
+	}
+	if ( 'techotel_children_ranges' === $name ) {
+		return 'astro_be_sanitize_techotel_children_ranges';
+	}
 	if ( 'arosuite_hotel' === $name ) {
 		return 'astro_be_sanitize_arosuite_hotel';
 	}
@@ -1242,6 +1352,14 @@ function astro_be_get_option_sanitize_callback( $option_name ) {
  */
 function astro_be_get_sanitized_option( $option_name ) {
 	return call_user_func( astro_be_get_option_sanitize_callback( $option_name ), get_option( $option_name ) );
+}
+
+/**
+ * Number of guests or age limit used by the booking form: always a whole number between 0 and
+ * 30, whatever is stored in the database, as the templates loop up to it to build the menus.
+ */
+function astro_be_get_count_option( $option_name ) {
+	return min( 30, max( 0, (int) get_option( $option_name ) ) );
 }
 
 /**
@@ -1588,6 +1706,150 @@ function astro_be_sanitize_windsurfer_hotel( $value ) {
 	}
 
 	return '';
+}
+
+/**
+ * BookYourStay booking engine address: the subdomain and the code of the hotel are kept, as subdomain/CODE
+ * (yourhotel-bookyourstay/ABC for https://yourhotel-bookyourstay.bookyourstay.eu/booking/room?newBooking&HotelCode=ABC
+ * or https://yourhotel-bookyourstay.bookyourstay.eu/booking/abc/room). The pair alone, as the plugin saves it,
+ * is accepted as well.
+ */
+function astro_be_sanitize_bookyourstay_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	// an address copied from the source of a page may have its & written as &#038; or &amp;
+	$value = str_replace( array( '&#038;', '&amp;' ), '&', trim( $value ) );
+
+	if ( preg_match( '#^([a-z0-9](?:[a-z0-9-]*[a-z0-9])?)/([a-z0-9]+)$#i', $value, $matches ) ) {
+		return strtolower( $matches[1] ) . '/' . $matches[2];
+	}
+
+	if ( ! preg_match( '#^(?:https?://)?([a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\.bookyourstay\.eu(/[^?\#]*)?(\?[^\#]*)?#i', $value, $matches ) ) {
+		return '';
+	}
+
+	$code = '';
+	if ( isset( $matches[3] ) && preg_match( '#[?&]hotelcode=([a-z0-9]+)#i', $matches[3], $code_matches ) ) {
+		$code = $code_matches[1];
+	} elseif ( isset( $matches[2] ) && preg_match( '#^/booking/([a-z0-9]+)/#i', $matches[2], $code_matches ) && ! in_array( strtolower( $code_matches[1] ), array( 'room', 'rate', 'giftcard' ), true ) ) {
+		$code = strtoupper( $code_matches[1] );
+	}
+
+	return '' === $code ? '' : strtolower( $matches[1] ) . '/' . $code;
+}
+
+/**
+ * eviivo booking engine address: only the short name of the property is kept (YourHotel for
+ * https://via.eviivo.com/en-GB/YourHotel, also when the address has the culture or other segments before it).
+ * The short name alone, as the plugin saves it, is accepted as well.
+ */
+function astro_be_sanitize_eviivo_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$value = trim( $value );
+
+	if ( preg_match( '#via\.eviivo\.com/([^?\#]+)#i', $value, $matches ) ) {
+		$segments = array_values( array_filter( explode( '/', $matches[1] ), 'strlen' ) );
+		$value    = $segments ? end( $segments ) : '';
+	}
+
+	return preg_match( '/^[a-z0-9_-]+$/i', $value ) ? $value : '';
+}
+
+/**
+ * freetobook: only the token of the booking button is kept (w_tkn of
+ * https://portal.freetobook.com/reservations?w_id=12345&w_tkn=..., or the token in the address of the booking
+ * page, https://booking-directly.com/widgets/<token>/...). The token alone, as the plugin saves it, is accepted
+ * as well.
+ */
+function astro_be_sanitize_freetobook_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$value = trim( $value );
+
+	if ( preg_match( '#[?&](?:\#038;)?w_tkn=([a-z0-9]+)#i', $value, $matches ) || preg_match( '#booking-directly\.com/widgets/([a-z0-9]+)#i', $value, $matches ) ) {
+		return $matches[1];
+	}
+
+	if ( preg_match( '/^[a-z0-9]{20,}$/i', $value ) ) {
+		return $value;
+	}
+
+	return '';
+}
+
+/**
+ * Smartness booking engine address: the host and the code of the property are kept, as host/code
+ * (yourhotel.bookpage.io/12345 for https://yourhotel.bookpage.io/it/properties/12345); the host alone when the
+ * address is the one of the list of the properties. The value as the plugin saves it is accepted as well.
+ */
+function astro_be_sanitize_smartness_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$value = strtolower( trim( $value ) );
+	$host  = '(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,}';
+
+	if ( preg_match( '#^(' . $host . ')(?:/(\d+))?$#', $value, $matches ) ) {
+		return $matches[1] . ( isset( $matches[2] ) ? '/' . $matches[2] : '' );
+	}
+
+	if ( preg_match( '#^(?:https?://)?(' . $host . ')(?:/[a-z]{2})?(?:/properties(?:/(\d+))?)?(?:[/?\#]|$)#', $value, $matches ) ) {
+		return $matches[1] . ( ! empty( $matches[2] ) ? '/' . $matches[2] : '' );
+	}
+
+	return '';
+}
+
+/**
+ * TecHotel (Picasso Online): the address of the booking page of the hotel
+ * (https://picassoonline.techotel.dk/en/yourhotel/yourhotel/booking/rooms/), without its query and fragment.
+ */
+function astro_be_sanitize_techotel_hotel( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$value = esc_url_raw( trim( $value ), array( 'http', 'https' ) );
+
+	if ( '' === $value ) {
+		return '';
+	}
+
+	$parts = wp_parse_url( $value );
+
+	if ( empty( $parts['host'] ) || empty( $parts['scheme'] ) || empty( $parts['path'] ) || '/' === $parts['path'] ) {
+		return '';
+	}
+
+	return $parts['scheme'] . '://' . $parts['host'] . $parts['path'];
+}
+
+/**
+ * TecHotel: the age ranges of the two children fields of the booking page, in their order (the first range
+ * goes to children1, the second to children2), kept as 0-4,5-15. Ranges written wrong are dropped, and so are
+ * the ones after the second; an empty value means that all the children go to the first field.
+ */
+function astro_be_sanitize_techotel_children_ranges( $value ) {
+	if ( ! is_string( $value ) ) {
+		return '';
+	}
+
+	$kept = array();
+	foreach ( explode( ',', $value ) as $range ) {
+		if ( preg_match( '/^\s*(\d{1,2})\s*-\s*(\d{1,2})\s*$/', $range, $matches ) && (int) $matches[1] <= (int) $matches[2] ) {
+			$kept[] = (int) $matches[1] . '-' . (int) $matches[2];
+		}
+	}
+
+	return implode( ',', array_slice( $kept, 0, 2 ) );
 }
 
 /**
@@ -2470,6 +2732,18 @@ function astro_be_sanitize_custom_css( $value ) {
 }
 
 /**
+ * Custom CSS, when the settings are saved: only users allowed to edit the CSS of the site (the
+ * edit_css capability of the core Additional CSS) can change it. The others, such as the site
+ * administrators of a multisite network, keep the value already saved.
+ */
+function astro_be_sanitize_custom_css_on_save( $value ) {
+	if ( ! current_user_can( 'edit_css' ) ) {
+		return astro_be_sanitize_custom_css( get_option( ASTRO_BE_PREFIX . 'custom-css', '' ) );
+	}
+	return astro_be_sanitize_custom_css( $value );
+}
+
+/**
  * Lists of options with dynamic rows (Iperbooking languages and treatments):
  * array( 'option_N' => array( 'code' => ..., 'url' => ... ) ).
  */
@@ -2997,6 +3271,51 @@ function astro_return_seekda_language() {
 	$lang = astro_return_post_language();
 
 	return preg_match( '/^[a-z]{2}$/', $lang ) ? $lang : 'en';
+}
+
+/**
+ * BookYourStay: return the language, as the booking engine names it (da-DK, en-GB…). The languages it does
+ * not have fall back to British English.
+ */
+function astro_return_bookyourstay_culture() {
+
+	$cultures = array( 'da' => 'da-DK', 'en' => 'en-GB', 'de' => 'de-DE', 'sv' => 'sv-SE', 'nb' => 'nn-NO', 'nn' => 'nn-NO', 'no' => 'nn-NO', 'pt' => 'pt-PT', 'is' => 'is-IS', 'fo' => 'fo-FO' );
+	$lang = astro_return_post_language();
+
+	return isset( $cultures[ $lang ] ) ? $cultures[ $lang ] : 'en-GB';
+}
+
+/**
+ * eviivo: return the culture, a segment of the booking engine address (en-GB, it-IT…). The languages the
+ * booking engine does not have fall back to British English.
+ */
+function astro_return_eviivo_culture() {
+
+	$cultures = array( 'en' => 'en-GB', 'de' => 'de-DE', 'es' => 'es-ES', 'it' => 'it-IT', 'fr' => 'fr-FR', 'pt' => 'pt-PT', 'ca' => 'ca-ES', 'fi' => 'fi-FI' );
+	$lang = astro_return_post_language();
+
+	return isset( $cultures[ $lang ] ) ? $cultures[ $lang ] : 'en-GB';
+}
+
+/**
+ * freetobook: return the language, two letters.
+ */
+function astro_return_freetobook_locale() {
+
+	$lang = astro_return_post_language();
+
+	return preg_match( '/^[a-z]{2}$/', $lang ) ? $lang : 'en';
+}
+
+/**
+ * Smartness: return the language segment of the booking engine address. Only Italian and German have one:
+ * with the other languages the booking engine opens in the main language of the site.
+ */
+function astro_return_smartness_language_path() {
+
+	$lang = astro_return_post_language();
+
+	return in_array( $lang, array( 'it', 'de' ), true ) ? '/' . $lang : '';
 }
 
 /**

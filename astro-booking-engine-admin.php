@@ -13,6 +13,12 @@ if( ! is_admin() ) {
 function astro_be_load_admin_files() {
     if( !is_admin_bar_showing() ) return;
 
+	// Only on the plugin page: the other admin screens do not need any of these files.
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+	if ( ! isset( $_GET['page'] ) || ASTRO_BE_TEXTDOMAIN !== $_GET['page'] ) {
+		return;
+	}
+
 	/**
 	 * Main admin styles and scripts
 	 */
@@ -24,21 +30,9 @@ function astro_be_load_admin_files() {
 	/**
 	 * Include WP Iris color picker.
 	 */
+	// the color picker of the core, already registered with Iris among its dependencies
 	wp_enqueue_style( 'wp-color-picker' );
-	wp_enqueue_script(
-		'iris',
-		admin_url( 'js/iris.min.js' ),
-		array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ),
-		false,
-		1
-	);
-	wp_enqueue_script(
-		'wp-color-picker',
-		admin_url( 'js/color-picker.min.js' ),
-		array( 'iris' ),
-		false,
-		1
-	);
+	wp_enqueue_script( 'wp-color-picker' );
 	$colorpicker_l10n = array(
 		'clear' => __( 'Clear', 'astro-booking-engine' ),
 		'defaultString' => __( 'Default', 'astro-booking-engine' ),
@@ -46,13 +40,53 @@ function astro_be_load_admin_files() {
 		'current' => __( 'Current Color', 'astro-booking-engine' ),
 	);
 	wp_localize_script( 'wp-color-picker', 'wpColorPickerL10n', $colorpicker_l10n );
-
-	/**
-     * Include the plugin navigation.
-     */
-    include(plugin_dir_path(__FILE__) . 'includes/tabs/tabs-nav.php');
 }
 add_action( 'admin_enqueue_scripts', 'astro_be_load_admin_files' );
+
+/**
+ * Include the plugin navigation.
+ */
+include( plugin_dir_path( __FILE__ ) . 'includes/tabs/tabs-nav.php' );
+
+/**
+ * Remove all the plugin settings (Support tab). The request is a POST to admin-post.php with a
+ * nonce and the manage_options capability (CVE-2025-10308), followed by a redirect: reloading
+ * the page or opening it again from the history does not delete the settings a second time.
+ */
+function astro_be_delete_options_prefixed( $prefix ) {
+	global $wpdb;
+
+	// esc_like() neutralizza _ e % nel prefisso; prepare() si occupa del resto.
+	$like = $wpdb->esc_like( $prefix ) . '%';
+
+	$option_names = $wpdb->get_col(
+		$wpdb->prepare( "SELECT option_name FROM {$wpdb->options} WHERE option_name LIKE %s", $like )
+	);
+
+	// delete_option() e non una DELETE diretta: aggiorna anche la cache degli oggetti, altrimenti
+	// con una cache persistente le opzioni cancellate continuerebbero a essere lette.
+	$deleted = 0;
+	foreach ( $option_names as $option_name ) {
+		if ( delete_option( $option_name ) ) {
+			$deleted++;
+		}
+	}
+
+	return $deleted;
+}
+
+add_action( 'admin_post_astro_be_delete_options', 'astro_be_delete_options_action' );
+function astro_be_delete_options_action() {
+	if ( ! current_user_can( 'manage_options' ) ) {
+		wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'astro-booking-engine' ) );
+	}
+	check_admin_referer( 'astro_be_delete_options' );
+
+	astro_be_delete_options_prefixed( ASTRO_BE_PREFIX );
+
+	wp_safe_redirect( add_query_arg( array( 'page' => ASTRO_BE_TEXTDOMAIN, 'tab' => 'support', 'astro_be_reset' => 'done' ), admin_url( 'admin.php' ) ) );
+	exit;
+}
 
 /**
  * Register options settings.
@@ -93,6 +127,11 @@ function astro_be_register_option_group( $option_group, $tab ) {
 		}
 
 		$sanitize_callback = astro_be_get_option_sanitize_callback( $option_name );
+
+		// The custom CSS is checked against the capability of the user who saves it.
+		if ( 'astro_be_sanitize_custom_css' === $sanitize_callback ) {
+			$sanitize_callback = 'astro_be_sanitize_custom_css_on_save';
+		}
 
 		register_setting( $option_group, $option_name, array(
 			'type'              => ( 'astro_be_sanitize_options_list' === $sanitize_callback ) ? 'array' : 'string',

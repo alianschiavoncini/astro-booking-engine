@@ -7,64 +7,15 @@ if( ! is_admin() ) {
 	return;
 }
 
-function astro_be_delete_options_prefixed( $prefix ) {
-	global $wpdb;
-
-	// esc_like() neutralizza _ e % nel prefisso; prepare() si occupa del resto.
-	$like = $wpdb->esc_like( $prefix ) . '%';
-
-	$option_names = $wpdb->get_col(
-		$wpdb->prepare( "SELECT option_name FROM {$wpdb->options} WHERE option_name LIKE %s", $like )
-	);
-
-	// delete_option() e non una DELETE diretta: aggiorna anche la cache degli oggetti, altrimenti
-	// con una cache persistente le opzioni cancellate continuerebbero a essere lette.
-	$deleted = 0;
-	foreach ( $option_names as $option_name ) {
-		if ( delete_option( $option_name ) ) {
-			$deleted++;
-		}
-	}
-
-	return $deleted;
-}
-
-$delete_options = false;
-if ( isset( $_GET['delete_options'] ) && '1' === $_GET['delete_options'] ) {
-
-	// La capability da sola non basta: senza nonce un amministratore autenticato puo
-	// essere indotto a eseguire la cancellazione con una semplice richiesta forgiata
-	// (CVE-2025-10308). Servono entrambi i controlli.
-	if ( ! current_user_can( 'manage_options' ) ) {
-		wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'astro-booking-engine' ) );
-	}
-
-	$astro_be_nonce = isset( $_GET['nonce'] ) ? sanitize_text_field( wp_unslash( $_GET['nonce'] ) ) : '';
-
-	if ( ! wp_verify_nonce( $astro_be_nonce, 'astro_be_delete_options' ) ) {
-		wp_die( esc_html__( 'Security check failed. Please go back and try again.', 'astro-booking-engine' ) );
-	}
-
-	astro_be_delete_options_prefixed( ASTRO_BE_PREFIX );
-	$delete_options = __( 'All the plugin options have deleted.', 'astro-booking-engine' );
-}
-
-// URL del pulsante di reset, con nonce.
-$astro_be_delete_options_url = add_query_arg(
-	array(
-		'page'           => ASTRO_BE_TEXTDOMAIN,
-		'tab'            => 'support',
-		'delete_options' => 1,
-		'nonce'          => wp_create_nonce( 'astro_be_delete_options' ),
-	),
-	admin_url( 'admin.php' )
-);
+// La cancellazione la esegue astro_be_delete_options_action() (admin-post.php, con nonce e
+// capability); qui si mostra solo l'esito, letto dal redirect che la segue.
+// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+$delete_options = ( isset( $_GET['astro_be_reset'] ) && 'done' === $_GET['astro_be_reset'] )
+	? __( 'All the plugin options have deleted.', 'astro-booking-engine' )
+	: false;
 
 $tab = 'support';
 $option_group = ASTRO_BE_PREFIX . $tab;
-
-settings_fields($option_group);
-do_settings_sections($option_group);
 ?>
 <div class="<?php echo esc_attr(ASTRO_BE_PREFIX) . 'wrapper'; ?> <?php echo esc_attr( $option_group ); ?>">
 
@@ -105,12 +56,15 @@ do_settings_sections($option_group);
 				array( 'name' => 'Booking Designer', 'url' => 'https://www.bookingdesigner.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
 				array( 'name' => 'Booking Expert', 'url' => 'https://bookingexpert.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
 				array( 'name' => 'Bookvisit', 'url' => 'https://bookvisit.com/', 'country' => __( 'Sweden', 'astro-booking-engine' ) ),
+				array( 'name' => 'BookYourStay', 'url' => 'https://www.spectra-systems.com/en/products/bookyourstay-online-booking-platform/', 'country' => __( 'Denmark', 'astro-booking-engine' ) ),
 				array( 'name' => 'Cloudbeds', 'url' => 'https://www.cloudbeds.com/', 'country' => __( 'United States', 'astro-booking-engine' ) ),
 				array( 'name' => 'Data Sistemi', 'url' => 'https://www.datasistemi.eu/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
 				array( 'name' => 'D-EDGE', 'url' => 'https://www.d-edge.com/', 'country' => __( 'France', 'astro-booking-engine' ) ),
 				array( 'name' => 'DIRS21', 'url' => 'https://www.dirs21.de/', 'country' => __( 'Germany', 'astro-booking-engine' ) ),
 				array( 'name' => 'Ericsoft', 'url' => 'https://www.ericsoft.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
 				array( 'name' => 'ErmesHotels', 'url' => 'https://ermeshotels.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'eviivo', 'url' => 'https://eviivo.com/', 'country' => __( 'United Kingdom', 'astro-booking-engine' ) ),
+				array( 'name' => 'freetobook', 'url' => 'https://en.freetobook.com/', 'country' => __( 'United Kingdom', 'astro-booking-engine' ) ),
 				array( 'name' => 'Guestline', 'url' => 'https://www.guestline.com/', 'country' => __( 'United Kingdom', 'astro-booking-engine' ) ),
 				array( 'name' => 'HotelNetSolutions (OnePageBooking)', 'url' => 'https://hotelnetsolutions.de/en/', 'country' => __( 'Germany', 'astro-booking-engine' ) ),
 				array( 'name' => 'Iperbooking', 'url' => 'https://www.iperbooking.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
@@ -138,6 +92,8 @@ do_settings_sections($option_group);
 				array( 'name' => 'Sirvoy', 'url' => 'https://sirvoy.com/', 'country' => __( 'Sweden', 'astro-booking-engine' ) ),
 				array( 'name' => 'SiteMinder', 'url' => 'https://www.siteminder.com/', 'country' => __( 'Australia', 'astro-booking-engine' ) ),
 				array( 'name' => 'Slope', 'url' => 'https://www.slope.it/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'Smartness', 'url' => 'https://www.smartness.com/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
+				array( 'name' => 'TecHotel (Picasso Online)', 'url' => 'https://techotel.dk/', 'country' => __( 'Denmark', 'astro-booking-engine' ) ),
 				array( 'name' => 'ThinkReservations', 'url' => 'https://www.thinkreservations.com/', 'country' => __( 'United States', 'astro-booking-engine' ) ),
 				array( 'name' => 'Vertical Booking', 'url' => 'https://www.verticalbooking.com/en/home/', 'country' => __( 'Italy', 'astro-booking-engine' ) ),
 				array( 'name' => 'Windsurfer CRS', 'url' => 'https://www.theaccessgroup.com/en-gb/our-brands/shr/', 'country' => __( 'United States', 'astro-booking-engine' ) ),
@@ -155,7 +111,7 @@ do_settings_sections($option_group);
                 <tbody>
 					<?php foreach ( $astro_be_providers as $astro_be_provider_row ) { ?>
                     <tr>
-                        <td><a href="<?php echo esc_url( $astro_be_provider_row['url'] ); ?>" target="_blank"><?php echo esc_html( $astro_be_provider_row['name'] ); ?></a></td>
+                        <td><a href="<?php echo esc_url( $astro_be_provider_row['url'] ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $astro_be_provider_row['name'] ); ?></a></td>
                         <td><?php echo esc_html( $astro_be_provider_row['country'] ); ?></td>
                     </tr>
 					<?php } ?>
@@ -169,7 +125,7 @@ do_settings_sections($option_group);
 
             <h3 id="support-faqs" class="title"><?php esc_html_e( 'FAQs', 'astro-booking-engine' ); ?></h3>
             <p><span class="support-faq-question"><?php esc_html_e( 'Do you need support?', 'astro-booking-engine' ); ?></span><br>
-                <span class="support-faq-answer"><?php esc_html_e( 'Request support at the ', 'astro-booking-engine' ); ?> <a href="https://wordpress.org/support/plugin/astro-booking-engine/" target="_blank"><?php esc_html_e( 'plugin support page', 'astro-booking-engine' ); ?></a>.</span></p>
+                <span class="support-faq-answer"><?php esc_html_e( 'Request support at the ', 'astro-booking-engine' ); ?> <a href="https://wordpress.org/support/plugin/astro-booking-engine/" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'plugin support page', 'astro-booking-engine' ); ?></a>.</span></p>
 
             <p><span class="support-faq-question"><?php esc_html_e( 'Have more questions?', 'astro-booking-engine' ); ?></span><br>
             <span class="support-faq-answer"><?php esc_html_e( 'Write me an email at', 'astro-booking-engine' ); ?> <a href="mailto:alian@alian.it">alian@alian.it</a>.</span></p>
@@ -189,8 +145,12 @@ do_settings_sections($option_group);
             <hr />
 
             <h3 id="support-data-reset" class="title"><?php esc_html_e( 'Plugin data reset', 'astro-booking-engine' ); ?></h3>
-            <p><a class="button button-primary" href="<?php echo esc_url( $astro_be_delete_options_url ); ?>"><?php esc_html_e( 'Remove all plugin settings', 'astro-booking-engine' ); ?></a></p>
-            <p class="color-red"><?php echo esc_html($delete_options); ?></p>
+            <form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" onsubmit="return window.confirm('<?php echo esc_js( __( 'All the plugin settings will be deleted. Continue?', 'astro-booking-engine' ) ); ?>');">
+                <input type="hidden" name="action" value="astro_be_delete_options" />
+                <?php wp_nonce_field( 'astro_be_delete_options' ); ?>
+                <p><button type="submit" class="button button-primary"><?php esc_html_e( 'Remove all plugin settings', 'astro-booking-engine' ); ?></button></p>
+            </form>
+            <?php if ( $delete_options ) { ?><p class="color-red"><?php echo esc_html( $delete_options ); ?></p><?php } ?>
 
         </div>
     </div>

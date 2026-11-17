@@ -73,12 +73,15 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                                                 'bookingdesigner' => 'Booking Designer',
                                                 'bookingexpert' => 'Booking Expert',
                                                 'bookvisit' => 'Bookvisit',
+                                                'bookyourstay' => 'BookYourStay',
                                                 'cloudbeds' => 'Cloudbeds',
                                                 'datasistemi' => 'Data Sistemi',
                                                 'dedge' => 'D-EDGE',
                                                 'dirs21' => 'DIRS21',
                                                 'ericsoft' => 'Ericsoft',
                                                 'ermeshotels' => 'ErmesHotels',
+                                                'eviivo' => 'eviivo',
+                                                'freetobook' => 'freetobook',
                                                 'guestline' => 'Guestline',
                                                 'hotelnetsolutions' => 'HotelNetSolutions (OnePageBooking)',
                                                 'iperbooking' => 'Iperbooking',
@@ -106,6 +109,8 @@ $option_group = ASTRO_BE_PREFIX . $tab;
                                                 'sirvoy' => 'Sirvoy',
                                                 'siteminder' => 'SiteMinder',
                                                 'slope' => 'Slope',
+                                                'smartness' => 'Smartness',
+                                                'techotel' => 'TecHotel (Picasso Online)',
                                                 'thinkreservations' => 'ThinkReservations',
                                                 'verticalbooking' => 'Vertical Booking',
                                                 'windsurfer' => 'Windsurfer CRS',
@@ -169,6 +174,9 @@ $option_group = ASTRO_BE_PREFIX . $tab;
         //bookvisit
         include('tab-settings-bookvisit.php');
 
+        //bookyourstay
+        include('tab-settings-bookyourstay.php');
+
         //cloudbeds
         include('tab-settings-cloudbeds.php');
 
@@ -186,6 +194,12 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 
         //ermeshotels
         include('tab-settings-ermeshotels.php');
+
+        //eviivo
+        include('tab-settings-eviivo.php');
+
+        //freetobook
+        include('tab-settings-freetobook.php');
 
         //guestline
         include('tab-settings-guestline.php');
@@ -267,6 +281,12 @@ $option_group = ASTRO_BE_PREFIX . $tab;
 
         //slope
         include('tab-settings-slope.php');
+
+        //smartness
+        include('tab-settings-smartness.php');
+
+        //techotel
+        include('tab-settings-techotel.php');
 
         //thinkreservations
         include('tab-settings-thinkreservations.php');
