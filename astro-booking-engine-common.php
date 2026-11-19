@@ -19,7 +19,9 @@ function astro_be_plugin_data($var = false) {
 	if( !function_exists('get_plugin_data') ){
 		require_once(ABSPATH . 'wp-admin/includes/plugin.php');
 	}
-	$get_plugin_data = get_plugin_data( $plugin_file );
+	// Untranslated header: this runs when the plugin is loaded, before init, and translating it
+	// would load the text domain too early (notice "_load_textdomain_just_in_time", WP 6.7+).
+	$get_plugin_data = get_plugin_data( $plugin_file, false, false );
 	if ($var) { $get_plugin_data = $get_plugin_data[$var]; }
 	return $get_plugin_data;
 }

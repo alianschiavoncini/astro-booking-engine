@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Astro Booking Engine 2.8.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/src\n"
-"POT-Creation-Date: 2026-11-17T18:15:46+00:00\n"
+"Project-Id-Version: Astro Booking Engine 2.8.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/astro-booking-engine\n"
+"POT-Creation-Date: 2026-11-18T12:14:49+00:00\n"
 "PO-Revision-Date: 2026-10-02 18:00+0200\n"
 "Last-Translator: admin\n"
 "Language-Team: Italian\n"
@@ -41,71 +41,51 @@ msgstr "Alian Schiavoncini"
 msgid "https://www.alian.it"
 msgstr "https://www.alian.it"
 
-#: astro-booking-engine-admin.php:49
-msgid "Clear"
-msgstr "Pulisci"
-
-#: astro-booking-engine-admin.php:50
-#: includes/tabs/tab-settings-iperbooking.php:122
-#: includes/tabs/tab-settings-iperbooking.php:155
-#: includes/tabs/tab-settings-iperbooking.php:241
-#: includes/tabs/tab-settings-iperbooking.php:274
-msgid "Default"
-msgstr "Predefinito"
-
-#: astro-booking-engine-admin.php:51
-msgid "Select Color"
-msgstr "Seleziona un colore"
-
-#: astro-booking-engine-admin.php:52
-msgid "Current Color"
-msgstr "Colore attuale"
-
-#: astro-booking-engine-admin.php:93 astro-booking-engine-admin.php:367
+#: astro-booking-engine-admin.php:76 astro-booking-engine-admin.php:350
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Non hai i permessi necessari per accedere a questa pagina."
 
-#: astro-booking-engine-admin.php:167 astro-booking-engine-admin.php:168
+#: astro-booking-engine-admin.php:150 astro-booking-engine-admin.php:151
 msgid "Booking engine"
 msgstr "Booking engine"
 
-#: astro-booking-engine-admin.php:247
+#: astro-booking-engine-admin.php:230
 msgid "A new modern style is available for your booking form."
 msgstr "È disponibile un nuovo stile moderno per il tuo modulo di prenotazione."
 
-#: astro-booking-engine-admin.php:248
+#: astro-booking-engine-admin.php:231
 msgid "It shows the form as a single card, with one calendar for both dates and a guests panel. Nothing has changed on your site: to try it go to Layout > Form style and choose Modern. The colors you have already chosen come along with it, and you can go back to Classic whenever you want."
 msgstr "Mostra il modulo come un'unica scheda, con un solo calendario per entrambe le date e un pannello per gli ospiti. Sul tuo sito non è cambiato nulla: per provarlo vai in Layout > Stile del modulo e scegli Moderno. Il nuovo stile usa i colori che hai già scelto e puoi tornare allo stile Classico quando vuoi."
 
-#: astro-booking-engine-admin.php:250
+#: astro-booking-engine-admin.php:233
 msgid "Go to the layout settings"
 msgstr "Vai alle impostazioni del layout"
 
-#: astro-booking-engine-admin.php:251
+#: astro-booking-engine-admin.php:234
 msgid "No thanks"
 msgstr "No, grazie"
 
-#: astro-booking-engine-admin.php:349
+#: astro-booking-engine-admin.php:332
 msgid "Do you enjoy Astro Booking Engine?"
 msgstr "Ti piace Astro Booking Engine?"
 
-#: astro-booking-engine-admin.php:350
+#: astro-booking-engine-admin.php:333
 msgid "You have been using it for a while: a review on WordPress.org would help other users discover it. Thank you!"
 msgstr "Lo usi da un po': una recensione su WordPress.org aiuterebbe altri utenti a scoprirlo. Grazie!"
 
-#: astro-booking-engine-admin.php:353
+#: astro-booking-engine-admin.php:336
 msgid "Sure, I'll write a review"
 msgstr "Certo, scrivo una recensione"
 
-#: astro-booking-engine-admin.php:354
+#: astro-booking-engine-admin.php:337
 msgid "I've already reviewed it"
 msgstr "L'ho già recensito"
 
-#: astro-booking-engine-admin.php:355
+#: astro-booking-engine-admin.php:338
 msgid "Maybe later"
 msgstr "Forse più tardi"
 
-#: astro-booking-engine-admin.php:383
+#: astro-booking-engine-admin.php:366
 msgid "Settings saved."
 msgstr "Impostazioni salvate."
 
@@ -492,7 +472,7 @@ msgstr "Solo per lo stile classico: quello moderno ha un calendario proprio che 
 
 #: includes/tabs/tab-layout.php:500 includes/tabs/tab-settings-5stelle.php:350
 #: includes/tabs/tab-settings-arosuite.php:296
-#: includes/tabs/tab-settings-avvio.php:387
+#: includes/tabs/tab-settings-avvio.php:388
 #: includes/tabs/tab-settings-beddy.php:416
 #: includes/tabs/tab-settings-bedzzle.php:387
 #: includes/tabs/tab-settings-begenius.php:384
@@ -624,7 +604,7 @@ msgstr "Portale"
 
 #: includes/tabs/tab-settings-5stelle.php:43
 #: includes/tabs/tab-settings-arosuite.php:46
-#: includes/tabs/tab-settings-avvio.php:46
+#: includes/tabs/tab-settings-avvio.php:47
 #: includes/tabs/tab-settings-beddy.php:75
 #: includes/tabs/tab-settings-bedzzle.php:46
 #: includes/tabs/tab-settings-begenius.php:44
@@ -682,7 +662,7 @@ msgstr "Impostazioni del modulo"
 
 #: includes/tabs/tab-settings-5stelle.php:47
 #: includes/tabs/tab-settings-arosuite.php:50
-#: includes/tabs/tab-settings-avvio.php:50
+#: includes/tabs/tab-settings-avvio.php:51
 #: includes/tabs/tab-settings-beddy.php:79
 #: includes/tabs/tab-settings-bedzzle.php:50
 #: includes/tabs/tab-settings-begenius.php:48
@@ -740,7 +720,7 @@ msgstr "Destinazione"
 
 #: includes/tabs/tab-settings-5stelle.php:55
 #: includes/tabs/tab-settings-arosuite.php:58
-#: includes/tabs/tab-settings-avvio.php:58
+#: includes/tabs/tab-settings-avvio.php:59
 #: includes/tabs/tab-settings-beddy.php:87
 #: includes/tabs/tab-settings-bedzzle.php:58
 #: includes/tabs/tab-settings-begenius.php:56
@@ -798,7 +778,7 @@ msgstr "Nuova finestra o scheda"
 
 #: includes/tabs/tab-settings-5stelle.php:56
 #: includes/tabs/tab-settings-arosuite.php:59
-#: includes/tabs/tab-settings-avvio.php:59
+#: includes/tabs/tab-settings-avvio.php:60
 #: includes/tabs/tab-settings-beddy.php:88
 #: includes/tabs/tab-settings-bedzzle.php:59
 #: includes/tabs/tab-settings-begenius.php:57
@@ -856,7 +836,7 @@ msgstr "Stessa finestra o scheda"
 
 #: includes/tabs/tab-settings-5stelle.php:83
 #: includes/tabs/tab-settings-arosuite.php:87
-#: includes/tabs/tab-settings-avvio.php:87
+#: includes/tabs/tab-settings-avvio.php:88
 #: includes/tabs/tab-settings-beddy.php:116
 #: includes/tabs/tab-settings-bedzzle.php:87
 #: includes/tabs/tab-settings-begenius.php:85
@@ -937,10 +917,10 @@ msgstr "Adulti"
 #: includes/tabs/tab-settings-arosuite.php:90
 #: includes/tabs/tab-settings-arosuite.php:182
 #: includes/tabs/tab-settings-arosuite.php:270
-#: includes/tabs/tab-settings-avvio.php:90
-#: includes/tabs/tab-settings-avvio.php:181
-#: includes/tabs/tab-settings-avvio.php:270
-#: includes/tabs/tab-settings-avvio.php:361
+#: includes/tabs/tab-settings-avvio.php:91
+#: includes/tabs/tab-settings-avvio.php:182
+#: includes/tabs/tab-settings-avvio.php:271
+#: includes/tabs/tab-settings-avvio.php:362
 #: includes/tabs/tab-settings-beddy.php:119
 #: includes/tabs/tab-settings-beddy.php:210
 #: includes/tabs/tab-settings-beddy.php:299
@@ -1118,10 +1098,10 @@ msgstr "Abilita"
 #: includes/tabs/tab-settings-arosuite.php:91
 #: includes/tabs/tab-settings-arosuite.php:183
 #: includes/tabs/tab-settings-arosuite.php:271
-#: includes/tabs/tab-settings-avvio.php:91
-#: includes/tabs/tab-settings-avvio.php:182
-#: includes/tabs/tab-settings-avvio.php:271
-#: includes/tabs/tab-settings-avvio.php:362
+#: includes/tabs/tab-settings-avvio.php:92
+#: includes/tabs/tab-settings-avvio.php:183
+#: includes/tabs/tab-settings-avvio.php:272
+#: includes/tabs/tab-settings-avvio.php:363
 #: includes/tabs/tab-settings-beddy.php:120
 #: includes/tabs/tab-settings-beddy.php:211
 #: includes/tabs/tab-settings-beddy.php:300
@@ -1295,7 +1275,7 @@ msgstr "Seleziona per abilitare"
 
 #: includes/tabs/tab-settings-5stelle.php:108
 #: includes/tabs/tab-settings-arosuite.php:112
-#: includes/tabs/tab-settings-avvio.php:112
+#: includes/tabs/tab-settings-avvio.php:113
 #: includes/tabs/tab-settings-beddy.php:141
 #: includes/tabs/tab-settings-bedzzle.php:112
 #: includes/tabs/tab-settings-begenius.php:110
@@ -1349,7 +1329,7 @@ msgstr "Adulti predefiniti"
 
 #: includes/tabs/tab-settings-5stelle.php:136
 #: includes/tabs/tab-settings-arosuite.php:143
-#: includes/tabs/tab-settings-avvio.php:143
+#: includes/tabs/tab-settings-avvio.php:144
 #: includes/tabs/tab-settings-beddy.php:172
 #: includes/tabs/tab-settings-bedzzle.php:143
 #: includes/tabs/tab-settings-begenius.php:141
@@ -1403,7 +1383,7 @@ msgstr "Numero massimo di adulti"
 
 #: includes/tabs/tab-settings-5stelle.php:171
 #: includes/tabs/tab-settings-arosuite.php:178
-#: includes/tabs/tab-settings-avvio.php:178
+#: includes/tabs/tab-settings-avvio.php:179
 #: includes/tabs/tab-settings-beddy.php:207
 #: includes/tabs/tab-settings-bedzzle.php:178
 #: includes/tabs/tab-settings-begenius.php:176
@@ -1479,7 +1459,7 @@ msgstr "Bambini"
 
 #: includes/tabs/tab-settings-5stelle.php:196
 #: includes/tabs/tab-settings-arosuite.php:204
-#: includes/tabs/tab-settings-avvio.php:203
+#: includes/tabs/tab-settings-avvio.php:204
 #: includes/tabs/tab-settings-beddy.php:232
 #: includes/tabs/tab-settings-bedzzle.php:203
 #: includes/tabs/tab-settings-begenius.php:201
@@ -1531,7 +1511,7 @@ msgstr "Bambini predefiniti"
 
 #: includes/tabs/tab-settings-5stelle.php:224
 #: includes/tabs/tab-settings-arosuite.php:232
-#: includes/tabs/tab-settings-avvio.php:231
+#: includes/tabs/tab-settings-avvio.php:232
 #: includes/tabs/tab-settings-beddy.php:260
 #: includes/tabs/tab-settings-bedzzle.php:231
 #: includes/tabs/tab-settings-begenius.php:229
@@ -1582,7 +1562,7 @@ msgid "Max children"
 msgstr "Numero massimo di bambini"
 
 #: includes/tabs/tab-settings-5stelle.php:259
-#: includes/tabs/tab-settings-avvio.php:266
+#: includes/tabs/tab-settings-avvio.php:267
 #: includes/tabs/tab-settings-beddy.php:295
 #: includes/tabs/tab-settings-bedzzle.php:266
 #: includes/tabs/tab-settings-begenius.php:264
@@ -1627,7 +1607,7 @@ msgstr "Età massima dei bambini"
 
 #: includes/tabs/tab-settings-5stelle.php:354
 #: includes/tabs/tab-settings-arosuite.php:300
-#: includes/tabs/tab-settings-avvio.php:391
+#: includes/tabs/tab-settings-avvio.php:392
 #: includes/tabs/tab-settings-beddy.php:420
 #: includes/tabs/tab-settings-bedzzle.php:391
 #: includes/tabs/tab-settings-begenius.php:388
@@ -1687,7 +1667,7 @@ msgstr "Etichetta"
 
 #: includes/tabs/tab-settings-5stelle.php:355
 #: includes/tabs/tab-settings-arosuite.php:301
-#: includes/tabs/tab-settings-avvio.php:392
+#: includes/tabs/tab-settings-avvio.php:393
 #: includes/tabs/tab-settings-beddy.php:421
 #: includes/tabs/tab-settings-bedzzle.php:392
 #: includes/tabs/tab-settings-begenius.php:389
@@ -1745,7 +1725,7 @@ msgstr "Il valore predefinito è Cerca."
 
 #: includes/tabs/tab-settings-5stelle.php:358
 #: includes/tabs/tab-settings-arosuite.php:304
-#: includes/tabs/tab-settings-avvio.php:395
+#: includes/tabs/tab-settings-avvio.php:396
 #: includes/tabs/tab-settings-beddy.php:424
 #: includes/tabs/tab-settings-bedzzle.php:395
 #: includes/tabs/tab-settings-begenius.php:392
@@ -1874,7 +1854,7 @@ msgid "Aro receives the number of children only: their ages are asked on the boo
 msgstr "Aro riceve solo il numero dei bambini: le età le chiede il booking engine."
 
 #: includes/tabs/tab-settings-arosuite.php:267
-#: includes/tabs/tab-settings-avvio.php:358
+#: includes/tabs/tab-settings-avvio.php:359
 #: includes/tabs/tab-settings-beddy.php:387
 #: includes/tabs/tab-settings-bedzzle.php:358
 #: includes/tabs/tab-settings-begenius.php:355
@@ -1919,15 +1899,16 @@ msgstr "Aro riceve solo il numero dei bambini: le età le chiede il booking engi
 msgid "Coupon"
 msgstr "Buono sconto"
 
-#: includes/tabs/tab-settings-avvio.php:24
+#. translators: %20 is part of the example address (an encoded space), not a placeholder.
+#: includes/tabs/tab-settings-avvio.php:25
 msgid "The address of your Avvio booking engine, as it is: https://fe.avvio.com/convert/site/Your%20Hotel/en/results.php"
 msgstr "L'indirizzo del tuo booking engine Avvio, così com'è: https://fe.avvio.com/convert/site/Your%20Hotel/en/results.php"
 
-#: includes/tabs/tab-settings-avvio.php:267
+#: includes/tabs/tab-settings-avvio.php:268
 msgid "Avvio receives the children as the list of their ages: it must be enabled when Children is enabled."
 msgstr "Avvio riceve i bambini come elenco delle loro età: va abilitata quando è abilitata la sezione Bambini."
 
-#: includes/tabs/tab-settings-avvio.php:292
+#: includes/tabs/tab-settings-avvio.php:293
 #: includes/tabs/tab-settings-beddy.php:321
 #: includes/tabs/tab-settings-bedzzle.php:292
 #: includes/tabs/tab-settings-begenius.php:289
@@ -1956,7 +1937,7 @@ msgstr "Avvio riceve i bambini come elenco delle loro età: va abilitata quando 
 msgid "Min children age"
 msgstr "Età minima dei bambini"
 
-#: includes/tabs/tab-settings-avvio.php:323
+#: includes/tabs/tab-settings-avvio.php:324
 #: includes/tabs/tab-settings-beddy.php:352
 #: includes/tabs/tab-settings-bedzzle.php:323
 #: includes/tabs/tab-settings-begenius.php:320
@@ -2279,6 +2260,13 @@ msgstr "Aggiungi una nuova opzione"
 #: includes/tabs/tab-settings-iperbooking.php:144
 msgid "Language option"
 msgstr "Opzione lingua"
+
+#: includes/tabs/tab-settings-iperbooking.php:122
+#: includes/tabs/tab-settings-iperbooking.php:155
+#: includes/tabs/tab-settings-iperbooking.php:241
+#: includes/tabs/tab-settings-iperbooking.php:274
+msgid "Default"
+msgstr "Predefinito"
 
 #: includes/tabs/tab-settings-iperbooking.php:135
 #: includes/tabs/tab-settings-iperbooking.php:254

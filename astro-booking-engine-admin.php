@@ -30,16 +30,11 @@ function astro_be_load_admin_files() {
 	/**
 	 * Include WP Iris color picker.
 	 */
-	// the color picker of the core, already registered with Iris among its dependencies
+	// The color picker of the core, already registered with Iris among its dependencies.
+	// Its labels come from the core translations through wp.i18n (WordPress 5.5+): the old
+	// wpColorPickerL10n object is deprecated and is no longer passed.
 	wp_enqueue_style( 'wp-color-picker' );
 	wp_enqueue_script( 'wp-color-picker' );
-	$colorpicker_l10n = array(
-		'clear' => __( 'Clear', 'astro-booking-engine' ),
-		'defaultString' => __( 'Default', 'astro-booking-engine' ),
-		'pick' => __( 'Select Color', 'astro-booking-engine' ),
-		'current' => __( 'Current Color', 'astro-booking-engine' ),
-	);
-	wp_localize_script( 'wp-color-picker', 'wpColorPickerL10n', $colorpicker_l10n );
 }
 add_action( 'admin_enqueue_scripts', 'astro_be_load_admin_files' );
 

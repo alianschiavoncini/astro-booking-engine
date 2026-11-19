@@ -3,7 +3,7 @@ Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget
 Requires at least: 6.0.1
 Tested up to: 7.1
-Stable tag: 2.8.0
+Stable tag: 2.8.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -194,6 +194,13 @@ gsphudo7by90lzwdlihyerqxbzj6jiln
 
 == Changelog ==
 
+= 2.8.1 =
+* Fixed: no more "translation loading triggered too early" notice (WordPress 6.7 and later) when the plugin is loaded: the plugin header is now read without translating it.
+* Fixed: with the compact style, the pages with the booking form no longer show the "datepicker is not a function" error in the browser console.
+* Changed: the color picker of the Layout settings no longer passes the wpColorPickerL10n object, deprecated since WordPress 5.5: its labels come from the WordPress translations.
+* Changed: removed the unused stylesheets jquery-ui.css and theme.css of the 25 calendar themes (about 1.3 MB): the calendar keeps loading the same jquery-ui.min.css.
+* Compatibility: tested with WordPress 7.1.
+
 = 2.8.0 =
 * Security: the custom CSS of the Layout settings can be changed only by the users allowed to edit the CSS of the site (the edit_css capability of the core Additional CSS): on multisite the site administrators can no longer add arbitrary CSS to the pages.
 * Security: the plugin styles and scripts, the custom CSS included, are loaded on the front end only and no longer on the admin screens; the admin styles and scripts are loaded on the plugin page only.
@@ -356,6 +363,9 @@ gsphudo7by90lzwdlihyerqxbzj6jiln
 * Initial version.
 
 == Upgrade Notice ==
+
+= 2.8.1 =
+Maintenance release: deprecated color picker code removed, 1.3 MB of unused calendar styles dropped, no more early translation notice. Updating from a version before 2.8.0? This release also brings the 2.8.0 security fixes.
 
 = 2.8.0 =
 Security release: custom CSS limited to the users who can edit CSS, plugin files no longer loaded on the admin screens, safer settings reset. Five new providers, 55 in all: Smartness, eviivo, freetobook, TecHotel and BookYourStay.

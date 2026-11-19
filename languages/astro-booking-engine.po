@@ -2,16 +2,15 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Astro Booking Engine 2.5.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/src\n"
-"POT-Creation-Date: 2026-11-17T18:15:46+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Project-Id-Version: Astro Booking Engine 2.8.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/astro-booking-engine\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-18T12:14:49+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: astro-booking-engine\n"
 
@@ -41,120 +40,113 @@ msgstr ""
 msgid "https://www.alian.it"
 msgstr ""
 
-#: astro-booking-engine-admin.php:49
-msgid "Clear"
-msgstr ""
-
-#: astro-booking-engine-admin.php:50
-#: includes/tabs/tab-settings-iperbooking.php:122
-#: includes/tabs/tab-settings-iperbooking.php:155
-#: includes/tabs/tab-settings-iperbooking.php:241
-#: includes/tabs/tab-settings-iperbooking.php:274
-msgid "Default"
-msgstr ""
-
-#: astro-booking-engine-admin.php:51
-msgid "Select Color"
-msgstr ""
-
-#: astro-booking-engine-admin.php:52
-msgid "Current Color"
-msgstr ""
-
-#: astro-booking-engine-admin.php:93 astro-booking-engine-admin.php:367
+#: astro-booking-engine-admin.php:76
+#: astro-booking-engine-admin.php:350
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: astro-booking-engine-admin.php:167 astro-booking-engine-admin.php:168
+#: astro-booking-engine-admin.php:150
+#: astro-booking-engine-admin.php:151
 msgid "Booking engine"
 msgstr ""
 
-#: astro-booking-engine-admin.php:247
+#: astro-booking-engine-admin.php:230
 msgid "A new modern style is available for your booking form."
 msgstr ""
 
-#: astro-booking-engine-admin.php:248
+#: astro-booking-engine-admin.php:231
 msgid "It shows the form as a single card, with one calendar for both dates and a guests panel. Nothing has changed on your site: to try it go to Layout > Form style and choose Modern. The colors you have already chosen come along with it, and you can go back to Classic whenever you want."
 msgstr ""
 
-#: astro-booking-engine-admin.php:250
+#: astro-booking-engine-admin.php:233
 msgid "Go to the layout settings"
 msgstr ""
 
-#: astro-booking-engine-admin.php:251
+#: astro-booking-engine-admin.php:234
 msgid "No thanks"
 msgstr ""
 
-#: astro-booking-engine-admin.php:349
+#: astro-booking-engine-admin.php:332
 msgid "Do you enjoy Astro Booking Engine?"
 msgstr ""
 
-#: astro-booking-engine-admin.php:350
+#: astro-booking-engine-admin.php:333
 msgid "You have been using it for a while: a review on WordPress.org would help other users discover it. Thank you!"
 msgstr ""
 
-#: astro-booking-engine-admin.php:353
+#: astro-booking-engine-admin.php:336
 msgid "Sure, I'll write a review"
 msgstr ""
 
-#: astro-booking-engine-admin.php:354
+#: astro-booking-engine-admin.php:337
 msgid "I've already reviewed it"
 msgstr ""
 
-#: astro-booking-engine-admin.php:355
+#: astro-booking-engine-admin.php:338
 msgid "Maybe later"
 msgstr ""
 
-#: astro-booking-engine-admin.php:383
+#: astro-booking-engine-admin.php:366
 msgid "Settings saved."
 msgstr ""
 
-#: astro-booking-engine-common.php:1596 astro-booking-engine-common.php:2397
+#: astro-booking-engine-common.php:1596
+#: astro-booking-engine-common.php:2397
 #: astro-booking-engine-common.php:2475
 msgid "Spanish"
 msgstr ""
 
-#: astro-booking-engine-common.php:1597 astro-booking-engine-common.php:2396
+#: astro-booking-engine-common.php:1597
+#: astro-booking-engine-common.php:2396
 #: astro-booking-engine-common.php:2474
 msgid "English"
 msgstr ""
 
-#: astro-booking-engine-common.php:1598 astro-booking-engine-common.php:2476
+#: astro-booking-engine-common.php:1598
+#: astro-booking-engine-common.php:2476
 msgid "Italian"
 msgstr ""
 
-#: astro-booking-engine-common.php:1599 astro-booking-engine-common.php:2398
+#: astro-booking-engine-common.php:1599
+#: astro-booking-engine-common.php:2398
 #: astro-booking-engine-common.php:2477
 msgid "French"
 msgstr ""
 
-#: astro-booking-engine-common.php:1600 astro-booking-engine-common.php:2399
+#: astro-booking-engine-common.php:1600
+#: astro-booking-engine-common.php:2399
 #: astro-booking-engine-common.php:2478
 msgid "German"
 msgstr ""
 
-#: astro-booking-engine-common.php:1601 astro-booking-engine-common.php:2479
+#: astro-booking-engine-common.php:1601
+#: astro-booking-engine-common.php:2479
 msgid "Portuguese"
 msgstr ""
 
-#: astro-booking-engine-common.php:1602 astro-booking-engine-common.php:2496
+#: astro-booking-engine-common.php:1602
+#: astro-booking-engine-common.php:2496
 msgid "Catalan"
 msgstr ""
 
-#: astro-booking-engine-common.php:1603 astro-booking-engine-common.php:2481
+#: astro-booking-engine-common.php:1603
+#: astro-booking-engine-common.php:2481
 msgid "Russian"
 msgstr ""
 
-#: astro-booking-engine-common.php:1604 astro-booking-engine-common.php:2480
+#: astro-booking-engine-common.php:1604
+#: astro-booking-engine-common.php:2480
 msgid "Dutch"
 msgstr ""
 
-#: astro-booking-engine-common.php:1605 astro-booking-engine-common.php:2401
+#: astro-booking-engine-common.php:1605
+#: astro-booking-engine-common.php:2401
 #: astro-booking-engine-common.php:2483
 msgid "Japanese"
 msgstr ""
 
-#: astro-booking-engine-common.php:1606 astro-booking-engine-common.php:2400
+#: astro-booking-engine-common.php:1606
+#: astro-booking-engine-common.php:2400
 #: astro-booking-engine-common.php:2482
 msgid "Chinese"
 msgstr ""
@@ -167,19 +159,23 @@ msgstr ""
 msgid "Danish"
 msgstr ""
 
-#: astro-booking-engine-common.php:1609 astro-booking-engine-common.php:2486
+#: astro-booking-engine-common.php:1609
+#: astro-booking-engine-common.php:2486
 msgid "Swedish"
 msgstr ""
 
-#: astro-booking-engine-common.php:1610 astro-booking-engine-common.php:2494
+#: astro-booking-engine-common.php:1610
+#: astro-booking-engine-common.php:2494
 msgid "Romanian"
 msgstr ""
 
-#: astro-booking-engine-common.php:1611 astro-booking-engine-common.php:2492
+#: astro-booking-engine-common.php:1611
+#: astro-booking-engine-common.php:2492
 msgid "Hungarian"
 msgstr ""
 
-#: astro-booking-engine-common.php:1612 astro-booking-engine-common.php:2484
+#: astro-booking-engine-common.php:1612
+#: astro-booking-engine-common.php:2484
 msgid "Korean"
 msgstr ""
 
@@ -314,12 +310,14 @@ msgstr ""
 msgid "Calendar"
 msgstr ""
 
-#: astro-booking-engine.php:193 includes/tabs/tab-settings.php:18
+#: astro-booking-engine.php:193
+#: includes/tabs/tab-settings.php:18
 #: includes/tabs/tabs-nav.php:13
 msgid "Settings"
 msgstr ""
 
-#: astro-booking-engine.php:207 includes/tabs/tab-support.php:25
+#: astro-booking-engine.php:207
+#: includes/tabs/tab-support.php:25
 #: includes/tabs/tabs-nav.php:15
 msgid "Support"
 msgstr ""
@@ -340,7 +338,8 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:24 includes/tabs/tabs-nav.php:14
+#: includes/tabs/tab-layout.php:24
+#: includes/tabs/tabs-nav.php:14
 #: blocks/booking-form/editor.js:39
 msgid "Layout"
 msgstr ""
@@ -401,27 +400,37 @@ msgstr ""
 msgid "Widget"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:107 includes/tabs/tab-layout.php:306
+#: includes/tabs/tab-layout.php:107
+#: includes/tabs/tab-layout.php:306
 #: includes/tabs/tab-layout.php:574
 msgid "Background color"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:123 includes/tabs/tab-layout.php:438
+#: includes/tabs/tab-layout.php:123
+#: includes/tabs/tab-layout.php:438
 #: includes/tabs/tab-layout.php:668
 msgid "Border radius"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:134 includes/tabs/tab-layout.php:187
-#: includes/tabs/tab-layout.php:263 includes/tabs/tab-layout.php:371
-#: includes/tabs/tab-layout.php:449 includes/tabs/tab-layout.php:531
-#: includes/tabs/tab-layout.php:601 includes/tabs/tab-layout.php:679
+#: includes/tabs/tab-layout.php:134
+#: includes/tabs/tab-layout.php:187
+#: includes/tabs/tab-layout.php:263
+#: includes/tabs/tab-layout.php:371
+#: includes/tabs/tab-layout.php:449
+#: includes/tabs/tab-layout.php:531
+#: includes/tabs/tab-layout.php:601
+#: includes/tabs/tab-layout.php:679
 msgid "inherit"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:145 includes/tabs/tab-layout.php:198
-#: includes/tabs/tab-layout.php:274 includes/tabs/tab-layout.php:382
-#: includes/tabs/tab-layout.php:460 includes/tabs/tab-layout.php:542
-#: includes/tabs/tab-layout.php:612 includes/tabs/tab-layout.php:690
+#: includes/tabs/tab-layout.php:145
+#: includes/tabs/tab-layout.php:198
+#: includes/tabs/tab-layout.php:274
+#: includes/tabs/tab-layout.php:382
+#: includes/tabs/tab-layout.php:460
+#: includes/tabs/tab-layout.php:542
+#: includes/tabs/tab-layout.php:612
+#: includes/tabs/tab-layout.php:690
 msgid "px"
 msgstr ""
 
@@ -429,27 +438,32 @@ msgstr ""
 msgid "Labels"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:160 includes/tabs/tab-layout.php:236
+#: includes/tabs/tab-layout.php:160
+#: includes/tabs/tab-layout.php:236
 #: includes/tabs/tab-layout.php:504
 msgid "Font color"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:176 includes/tabs/tab-layout.php:252
+#: includes/tabs/tab-layout.php:176
+#: includes/tabs/tab-layout.php:252
 #: includes/tabs/tab-layout.php:520
 msgid "Font size"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:207 includes/tabs/tab-layout.php:283
+#: includes/tabs/tab-layout.php:207
+#: includes/tabs/tab-layout.php:283
 #: includes/tabs/tab-layout.php:551
 msgid "Font weight"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:223 includes/tabs/tab-layout.php:299
+#: includes/tabs/tab-layout.php:223
+#: includes/tabs/tab-layout.php:299
 #: includes/tabs/tab-layout.php:567
 msgid "normal"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:224 includes/tabs/tab-layout.php:300
+#: includes/tabs/tab-layout.php:224
+#: includes/tabs/tab-layout.php:300
 #: includes/tabs/tab-layout.php:568
 msgid "bold"
 msgstr ""
@@ -470,15 +484,18 @@ msgstr ""
 msgid "Some of the colors chosen are hard to read. WCAG AA asks for at least 4.5:1 between text and background:"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:360 includes/tabs/tab-layout.php:590
+#: includes/tabs/tab-layout.php:360
+#: includes/tabs/tab-layout.php:590
 msgid "Border width"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:391 includes/tabs/tab-layout.php:621
+#: includes/tabs/tab-layout.php:391
+#: includes/tabs/tab-layout.php:621
 msgid "Border style"
 msgstr ""
 
-#: includes/tabs/tab-layout.php:422 includes/tabs/tab-layout.php:652
+#: includes/tabs/tab-layout.php:422
+#: includes/tabs/tab-layout.php:652
 msgid "Border color"
 msgstr ""
 
@@ -490,9 +507,10 @@ msgstr ""
 msgid "Only for the classic style: the modern one has its own calendar, which follows the colors chosen above."
 msgstr ""
 
-#: includes/tabs/tab-layout.php:500 includes/tabs/tab-settings-5stelle.php:350
+#: includes/tabs/tab-layout.php:500
+#: includes/tabs/tab-settings-5stelle.php:350
 #: includes/tabs/tab-settings-arosuite.php:296
-#: includes/tabs/tab-settings-avvio.php:387
+#: includes/tabs/tab-settings-avvio.php:388
 #: includes/tabs/tab-settings-beddy.php:416
 #: includes/tabs/tab-settings-bedzzle.php:387
 #: includes/tabs/tab-settings-begenius.php:384
@@ -624,7 +642,7 @@ msgstr ""
 
 #: includes/tabs/tab-settings-5stelle.php:43
 #: includes/tabs/tab-settings-arosuite.php:46
-#: includes/tabs/tab-settings-avvio.php:46
+#: includes/tabs/tab-settings-avvio.php:47
 #: includes/tabs/tab-settings-beddy.php:75
 #: includes/tabs/tab-settings-bedzzle.php:46
 #: includes/tabs/tab-settings-begenius.php:44
@@ -682,7 +700,7 @@ msgstr ""
 
 #: includes/tabs/tab-settings-5stelle.php:47
 #: includes/tabs/tab-settings-arosuite.php:50
-#: includes/tabs/tab-settings-avvio.php:50
+#: includes/tabs/tab-settings-avvio.php:51
 #: includes/tabs/tab-settings-beddy.php:79
 #: includes/tabs/tab-settings-bedzzle.php:50
 #: includes/tabs/tab-settings-begenius.php:48
@@ -740,7 +758,7 @@ msgstr ""
 
 #: includes/tabs/tab-settings-5stelle.php:55
 #: includes/tabs/tab-settings-arosuite.php:58
-#: includes/tabs/tab-settings-avvio.php:58
+#: includes/tabs/tab-settings-avvio.php:59
 #: includes/tabs/tab-settings-beddy.php:87
 #: includes/tabs/tab-settings-bedzzle.php:58
 #: includes/tabs/tab-settings-begenius.php:56
@@ -798,7 +816,7 @@ msgstr ""
 
 #: includes/tabs/tab-settings-5stelle.php:56
 #: includes/tabs/tab-settings-arosuite.php:59
-#: includes/tabs/tab-settings-avvio.php:59
+#: includes/tabs/tab-settings-avvio.php:60
 #: includes/tabs/tab-settings-beddy.php:88
 #: includes/tabs/tab-settings-bedzzle.php:59
 #: includes/tabs/tab-settings-begenius.php:57
@@ -856,7 +874,7 @@ msgstr ""
 
 #: includes/tabs/tab-settings-5stelle.php:83
 #: includes/tabs/tab-settings-arosuite.php:87
-#: includes/tabs/tab-settings-avvio.php:87
+#: includes/tabs/tab-settings-avvio.php:88
 #: includes/tabs/tab-settings-beddy.php:116
 #: includes/tabs/tab-settings-bedzzle.php:87
 #: includes/tabs/tab-settings-begenius.php:85
@@ -904,29 +922,57 @@ msgstr ""
 #: includes/tabs/tab-settings-verticalbooking.php:118
 #: includes/tabs/tab-settings-windsurfer.php:87
 #: includes/tabs/tab-settings-witbooking.php:108
-#: includes/tabs/tab-settings-wubook.php:115 templates/5stelle.php:70
-#: templates/arosuite.php:70 templates/avvio.php:72 templates/beddy.php:75
-#: templates/bedzzle.php:70 templates/begenius.php:67
-#: templates/blastness.php:77 templates/bookassist.php:74
-#: templates/bookingdesigner.php:73 templates/bookvisit.php:73
-#: templates/bookyourstay.php:76 templates/cloudbeds.php:77
-#: templates/datasistemi.php:69 templates/dedge.php:107 templates/dirs21.php:73
-#: templates/ericsoft.php:87 templates/ermeshotels.php:75
-#: templates/eviivo.php:70 templates/freetobook.php:73
-#: templates/guestline.php:71 templates/hotelnetsolutions.php:74
-#: templates/ihotelier.php:75 templates/iperbooking.php:106
-#: templates/journey.php:68 templates/krossbooking.php:77 templates/mews.php:73
-#: templates/mirai.php:80 templates/myguestcare.php:77
-#: templates/octorate.php:70 templates/omnibees.php:75
-#: templates/passepartout.php:80 templates/pegasus.php:71
-#: templates/profitroom.php:73 templates/reservit.php:83
-#: templates/resnexus.php:74 templates/revplus.php:78 templates/roiback.php:78
-#: templates/scidoo.php:71 templates/secureholiday.php:71
-#: templates/simplebooking.php:72 templates/sirvoy.php:90
-#: templates/siteminder.php:73 templates/slope.php:73
-#: templates/smartness.php:71 templates/synxis.php:74 templates/techotel.php:76
-#: templates/thinkreservations.php:75 templates/verticalbooking.php:77
-#: templates/windsurfer.php:74 templates/witbooking.php:76
+#: includes/tabs/tab-settings-wubook.php:115
+#: templates/5stelle.php:70
+#: templates/arosuite.php:70
+#: templates/avvio.php:72
+#: templates/beddy.php:75
+#: templates/bedzzle.php:70
+#: templates/begenius.php:67
+#: templates/blastness.php:77
+#: templates/bookassist.php:74
+#: templates/bookingdesigner.php:73
+#: templates/bookvisit.php:73
+#: templates/bookyourstay.php:76
+#: templates/cloudbeds.php:77
+#: templates/datasistemi.php:69
+#: templates/dedge.php:107
+#: templates/dirs21.php:73
+#: templates/ericsoft.php:87
+#: templates/ermeshotels.php:75
+#: templates/eviivo.php:70
+#: templates/freetobook.php:73
+#: templates/guestline.php:71
+#: templates/hotelnetsolutions.php:74
+#: templates/ihotelier.php:75
+#: templates/iperbooking.php:106
+#: templates/journey.php:68
+#: templates/krossbooking.php:77
+#: templates/mews.php:73
+#: templates/mirai.php:80
+#: templates/myguestcare.php:77
+#: templates/octorate.php:70
+#: templates/omnibees.php:75
+#: templates/passepartout.php:80
+#: templates/pegasus.php:71
+#: templates/profitroom.php:73
+#: templates/reservit.php:83
+#: templates/resnexus.php:74
+#: templates/revplus.php:78
+#: templates/roiback.php:78
+#: templates/scidoo.php:71
+#: templates/secureholiday.php:71
+#: templates/simplebooking.php:72
+#: templates/sirvoy.php:90
+#: templates/siteminder.php:73
+#: templates/slope.php:73
+#: templates/smartness.php:71
+#: templates/synxis.php:74
+#: templates/techotel.php:76
+#: templates/thinkreservations.php:75
+#: templates/verticalbooking.php:77
+#: templates/windsurfer.php:74
+#: templates/witbooking.php:76
 #: templates/wubook.php:90
 msgid "Adults"
 msgstr ""
@@ -937,10 +983,10 @@ msgstr ""
 #: includes/tabs/tab-settings-arosuite.php:90
 #: includes/tabs/tab-settings-arosuite.php:182
 #: includes/tabs/tab-settings-arosuite.php:270
-#: includes/tabs/tab-settings-avvio.php:90
-#: includes/tabs/tab-settings-avvio.php:181
-#: includes/tabs/tab-settings-avvio.php:270
-#: includes/tabs/tab-settings-avvio.php:361
+#: includes/tabs/tab-settings-avvio.php:91
+#: includes/tabs/tab-settings-avvio.php:182
+#: includes/tabs/tab-settings-avvio.php:271
+#: includes/tabs/tab-settings-avvio.php:362
 #: includes/tabs/tab-settings-beddy.php:119
 #: includes/tabs/tab-settings-beddy.php:210
 #: includes/tabs/tab-settings-beddy.php:299
@@ -1118,10 +1164,10 @@ msgstr ""
 #: includes/tabs/tab-settings-arosuite.php:91
 #: includes/tabs/tab-settings-arosuite.php:183
 #: includes/tabs/tab-settings-arosuite.php:271
-#: includes/tabs/tab-settings-avvio.php:91
-#: includes/tabs/tab-settings-avvio.php:182
-#: includes/tabs/tab-settings-avvio.php:271
-#: includes/tabs/tab-settings-avvio.php:362
+#: includes/tabs/tab-settings-avvio.php:92
+#: includes/tabs/tab-settings-avvio.php:183
+#: includes/tabs/tab-settings-avvio.php:272
+#: includes/tabs/tab-settings-avvio.php:363
 #: includes/tabs/tab-settings-beddy.php:120
 #: includes/tabs/tab-settings-beddy.php:211
 #: includes/tabs/tab-settings-beddy.php:300
@@ -1295,7 +1341,7 @@ msgstr ""
 
 #: includes/tabs/tab-settings-5stelle.php:108
 #: includes/tabs/tab-settings-arosuite.php:112
-#: includes/tabs/tab-settings-avvio.php:112
+#: includes/tabs/tab-settings-avvio.php:113
 #: includes/tabs/tab-settings-beddy.php:141
 #: includes/tabs/tab-settings-bedzzle.php:112
 #: includes/tabs/tab-settings-begenius.php:110
@@ -1349,7 +1395,7 @@ msgstr ""
 
 #: includes/tabs/tab-settings-5stelle.php:136
 #: includes/tabs/tab-settings-arosuite.php:143
-#: includes/tabs/tab-settings-avvio.php:143
+#: includes/tabs/tab-settings-avvio.php:144
 #: includes/tabs/tab-settings-beddy.php:172
 #: includes/tabs/tab-settings-bedzzle.php:143
 #: includes/tabs/tab-settings-begenius.php:141
@@ -1403,7 +1449,7 @@ msgstr ""
 
 #: includes/tabs/tab-settings-5stelle.php:171
 #: includes/tabs/tab-settings-arosuite.php:178
-#: includes/tabs/tab-settings-avvio.php:178
+#: includes/tabs/tab-settings-avvio.php:179
 #: includes/tabs/tab-settings-beddy.php:207
 #: includes/tabs/tab-settings-bedzzle.php:178
 #: includes/tabs/tab-settings-begenius.php:176
@@ -1449,37 +1495,62 @@ msgstr ""
 #: includes/tabs/tab-settings-verticalbooking.php:206
 #: includes/tabs/tab-settings-windsurfer.php:178
 #: includes/tabs/tab-settings-witbooking.php:199
-#: includes/tabs/tab-settings-wubook.php:295 templates/5stelle.php:96
-#: templates/arosuite.php:99 templates/avvio.php:101 templates/beddy.php:104
-#: templates/bedzzle.php:99 templates/begenius.php:96
-#: templates/blastness.php:107 templates/bookassist.php:103
-#: templates/bookingdesigner.php:102 templates/bookvisit.php:102
-#: templates/bookyourstay.php:105 templates/cloudbeds.php:106
-#: templates/datasistemi.php:99 templates/dedge.php:136
-#: templates/dirs21.php:102 templates/ericsoft.php:112
-#: templates/ermeshotels.php:104 templates/eviivo.php:99
-#: templates/freetobook.php:102 templates/guestline.php:100
-#: templates/hotelnetsolutions.php:103 templates/ihotelier.php:104
-#: templates/iperbooking.php:132 templates/journey.php:97
-#: templates/krossbooking.php:106 templates/mews.php:100
-#: templates/mirai.php:109 templates/myguestcare.php:107
-#: templates/octorate.php:99 templates/omnibees.php:104
-#: templates/passepartout.php:106 templates/pegasus.php:100
-#: templates/profitroom.php:102 templates/reservit.php:112
-#: templates/resnexus.php:103 templates/revplus.php:107
-#: templates/roiback.php:107 templates/scidoo.php:100
-#: templates/secureholiday.php:100 templates/simplebooking.php:98
-#: templates/siteminder.php:102 templates/slope.php:102
-#: templates/smartness.php:100 templates/synxis.php:103
-#: templates/techotel.php:105 templates/verticalbooking.php:107
-#: templates/windsurfer.php:103 templates/witbooking.php:105
+#: includes/tabs/tab-settings-wubook.php:295
+#: templates/5stelle.php:96
+#: templates/arosuite.php:99
+#: templates/avvio.php:101
+#: templates/beddy.php:104
+#: templates/bedzzle.php:99
+#: templates/begenius.php:96
+#: templates/blastness.php:107
+#: templates/bookassist.php:103
+#: templates/bookingdesigner.php:102
+#: templates/bookvisit.php:102
+#: templates/bookyourstay.php:105
+#: templates/cloudbeds.php:106
+#: templates/datasistemi.php:99
+#: templates/dedge.php:136
+#: templates/dirs21.php:102
+#: templates/ericsoft.php:112
+#: templates/ermeshotels.php:104
+#: templates/eviivo.php:99
+#: templates/freetobook.php:102
+#: templates/guestline.php:100
+#: templates/hotelnetsolutions.php:103
+#: templates/ihotelier.php:104
+#: templates/iperbooking.php:132
+#: templates/journey.php:97
+#: templates/krossbooking.php:106
+#: templates/mews.php:100
+#: templates/mirai.php:109
+#: templates/myguestcare.php:107
+#: templates/octorate.php:99
+#: templates/omnibees.php:104
+#: templates/passepartout.php:106
+#: templates/pegasus.php:100
+#: templates/profitroom.php:102
+#: templates/reservit.php:112
+#: templates/resnexus.php:103
+#: templates/revplus.php:107
+#: templates/roiback.php:107
+#: templates/scidoo.php:100
+#: templates/secureholiday.php:100
+#: templates/simplebooking.php:98
+#: templates/siteminder.php:102
+#: templates/slope.php:102
+#: templates/smartness.php:100
+#: templates/synxis.php:103
+#: templates/techotel.php:105
+#: templates/verticalbooking.php:107
+#: templates/windsurfer.php:103
+#: templates/witbooking.php:105
 #: templates/wubook.php:140
 msgid "Children"
 msgstr ""
 
 #: includes/tabs/tab-settings-5stelle.php:196
 #: includes/tabs/tab-settings-arosuite.php:204
-#: includes/tabs/tab-settings-avvio.php:203
+#: includes/tabs/tab-settings-avvio.php:204
 #: includes/tabs/tab-settings-beddy.php:232
 #: includes/tabs/tab-settings-bedzzle.php:203
 #: includes/tabs/tab-settings-begenius.php:201
@@ -1531,7 +1602,7 @@ msgstr ""
 
 #: includes/tabs/tab-settings-5stelle.php:224
 #: includes/tabs/tab-settings-arosuite.php:232
-#: includes/tabs/tab-settings-avvio.php:231
+#: includes/tabs/tab-settings-avvio.php:232
 #: includes/tabs/tab-settings-beddy.php:260
 #: includes/tabs/tab-settings-bedzzle.php:231
 #: includes/tabs/tab-settings-begenius.php:229
@@ -1582,7 +1653,7 @@ msgid "Max children"
 msgstr ""
 
 #: includes/tabs/tab-settings-5stelle.php:259
-#: includes/tabs/tab-settings-avvio.php:266
+#: includes/tabs/tab-settings-avvio.php:267
 #: includes/tabs/tab-settings-beddy.php:295
 #: includes/tabs/tab-settings-bedzzle.php:266
 #: includes/tabs/tab-settings-begenius.php:264
@@ -1627,7 +1698,7 @@ msgstr ""
 
 #: includes/tabs/tab-settings-5stelle.php:354
 #: includes/tabs/tab-settings-arosuite.php:300
-#: includes/tabs/tab-settings-avvio.php:391
+#: includes/tabs/tab-settings-avvio.php:392
 #: includes/tabs/tab-settings-beddy.php:420
 #: includes/tabs/tab-settings-bedzzle.php:391
 #: includes/tabs/tab-settings-begenius.php:388
@@ -1687,7 +1758,7 @@ msgstr ""
 
 #: includes/tabs/tab-settings-5stelle.php:355
 #: includes/tabs/tab-settings-arosuite.php:301
-#: includes/tabs/tab-settings-avvio.php:392
+#: includes/tabs/tab-settings-avvio.php:393
 #: includes/tabs/tab-settings-beddy.php:421
 #: includes/tabs/tab-settings-bedzzle.php:392
 #: includes/tabs/tab-settings-begenius.php:389
@@ -1745,7 +1816,7 @@ msgstr ""
 
 #: includes/tabs/tab-settings-5stelle.php:358
 #: includes/tabs/tab-settings-arosuite.php:304
-#: includes/tabs/tab-settings-avvio.php:395
+#: includes/tabs/tab-settings-avvio.php:396
 #: includes/tabs/tab-settings-beddy.php:424
 #: includes/tabs/tab-settings-bedzzle.php:395
 #: includes/tabs/tab-settings-begenius.php:392
@@ -1797,33 +1868,62 @@ msgstr ""
 #: includes/tabs/tab-settings-verticalbooking.php:393
 #: includes/tabs/tab-settings-windsurfer.php:304
 #: includes/tabs/tab-settings-witbooking.php:414
-#: includes/tabs/tab-settings-wubook.php:479 templates/5stelle.php:155
-#: templates/arosuite.php:146 templates/avvio.php:183 templates/beddy.php:185
-#: templates/bedzzle.php:180 templates/begenius.php:177
-#: templates/blastness.php:170 templates/bookassist.php:130
-#: templates/bookingdesigner.php:184 templates/bookingexpert.php:87
-#: templates/bookvisit.php:183 templates/bookyourstay.php:152
-#: templates/cloudbeds.php:154 templates/datasistemi.php:148
-#: templates/dedge.php:218 templates/dirs21.php:183 templates/ericsoft.php:160
-#: templates/ermeshotels.php:185 templates/eviivo.php:146
-#: templates/freetobook.php:184 templates/guestline.php:148
-#: templates/hotelnetsolutions.php:185 templates/ihotelier.php:152
-#: templates/iperbooking.php:212 templates/journey.php:126
-#: templates/krossbooking.php:168 templates/mews.php:146
-#: templates/mirai.php:190 templates/misterbooking.php:90
-#: templates/myguestcare.php:170 templates/netaffinity.php:64
-#: templates/octorate.php:180 templates/omnibees.php:186
-#: templates/passepartout.php:187 templates/pegasus.php:147
-#: templates/profitroom.php:183 templates/reservit.php:194
-#: templates/resnexus.php:157 templates/revplus.php:184
-#: templates/roiback.php:188 templates/scidoo.php:162
-#: templates/secureholiday.php:182 templates/seekda.php:87
-#: templates/simplebooking.php:182 templates/sirvoy.php:137
-#: templates/siteminder.php:179 templates/slope.php:129
-#: templates/smartness.php:147 templates/synxis.php:185
-#: templates/techotel.php:187 templates/thinkreservations.php:123
-#: templates/verticalbooking.php:170 templates/windsurfer.php:150
-#: templates/witbooking.php:182 templates/wubook.php:188
+#: includes/tabs/tab-settings-wubook.php:479
+#: templates/5stelle.php:155
+#: templates/arosuite.php:146
+#: templates/avvio.php:183
+#: templates/beddy.php:185
+#: templates/bedzzle.php:180
+#: templates/begenius.php:177
+#: templates/blastness.php:170
+#: templates/bookassist.php:130
+#: templates/bookingdesigner.php:184
+#: templates/bookingexpert.php:87
+#: templates/bookvisit.php:183
+#: templates/bookyourstay.php:152
+#: templates/cloudbeds.php:154
+#: templates/datasistemi.php:148
+#: templates/dedge.php:218
+#: templates/dirs21.php:183
+#: templates/ericsoft.php:160
+#: templates/ermeshotels.php:185
+#: templates/eviivo.php:146
+#: templates/freetobook.php:184
+#: templates/guestline.php:148
+#: templates/hotelnetsolutions.php:185
+#: templates/ihotelier.php:152
+#: templates/iperbooking.php:212
+#: templates/journey.php:126
+#: templates/krossbooking.php:168
+#: templates/mews.php:146
+#: templates/mirai.php:190
+#: templates/misterbooking.php:90
+#: templates/myguestcare.php:170
+#: templates/netaffinity.php:64
+#: templates/octorate.php:180
+#: templates/omnibees.php:186
+#: templates/passepartout.php:187
+#: templates/pegasus.php:147
+#: templates/profitroom.php:183
+#: templates/reservit.php:194
+#: templates/resnexus.php:157
+#: templates/revplus.php:184
+#: templates/roiback.php:188
+#: templates/scidoo.php:162
+#: templates/secureholiday.php:182
+#: templates/seekda.php:87
+#: templates/simplebooking.php:182
+#: templates/sirvoy.php:137
+#: templates/siteminder.php:179
+#: templates/slope.php:129
+#: templates/smartness.php:147
+#: templates/synxis.php:185
+#: templates/techotel.php:187
+#: templates/thinkreservations.php:123
+#: templates/verticalbooking.php:170
+#: templates/windsurfer.php:150
+#: templates/witbooking.php:182
+#: templates/wubook.php:188
 msgid "Search"
 msgstr ""
 
@@ -1874,7 +1974,7 @@ msgid "Aro receives the number of children only: their ages are asked on the boo
 msgstr ""
 
 #: includes/tabs/tab-settings-arosuite.php:267
-#: includes/tabs/tab-settings-avvio.php:358
+#: includes/tabs/tab-settings-avvio.php:359
 #: includes/tabs/tab-settings-beddy.php:387
 #: includes/tabs/tab-settings-bedzzle.php:358
 #: includes/tabs/tab-settings-begenius.php:355
@@ -1902,32 +2002,47 @@ msgstr ""
 #: includes/tabs/tab-settings-sirvoy.php:179
 #: includes/tabs/tab-settings-smartness.php:267
 #: includes/tabs/tab-settings-techotel.php:376
-#: includes/tabs/tab-settings-windsurfer.php:267 templates/arosuite.php:129
-#: templates/avvio.php:166 templates/beddy.php:168 templates/bedzzle.php:163
-#: templates/begenius.php:160 templates/bookingdesigner.php:167
-#: templates/bookingexpert.php:70 templates/bookvisit.php:166
-#: templates/bookyourstay.php:135 templates/dirs21.php:166
-#: templates/ermeshotels.php:168 templates/eviivo.php:129
-#: templates/freetobook.php:167 templates/mirai.php:173
-#: templates/misterbooking.php:73 templates/octorate.php:163
-#: templates/omnibees.php:169 templates/pegasus.php:130
-#: templates/profitroom.php:166 templates/roiback.php:171
-#: templates/secureholiday.php:165 templates/seekda.php:70
-#: templates/simplebooking.php:160 templates/sirvoy.php:120
-#: templates/smartness.php:130 templates/techotel.php:170
+#: includes/tabs/tab-settings-windsurfer.php:267
+#: templates/arosuite.php:129
+#: templates/avvio.php:166
+#: templates/beddy.php:168
+#: templates/bedzzle.php:163
+#: templates/begenius.php:160
+#: templates/bookingdesigner.php:167
+#: templates/bookingexpert.php:70
+#: templates/bookvisit.php:166
+#: templates/bookyourstay.php:135
+#: templates/dirs21.php:166
+#: templates/ermeshotels.php:168
+#: templates/eviivo.php:129
+#: templates/freetobook.php:167
+#: templates/mirai.php:173
+#: templates/misterbooking.php:73
+#: templates/octorate.php:163
+#: templates/omnibees.php:169
+#: templates/pegasus.php:130
+#: templates/profitroom.php:166
+#: templates/roiback.php:171
+#: templates/secureholiday.php:165
+#: templates/seekda.php:70
+#: templates/simplebooking.php:160
+#: templates/sirvoy.php:120
+#: templates/smartness.php:130
+#: templates/techotel.php:170
 #: templates/windsurfer.php:133
 msgid "Coupon"
 msgstr ""
 
-#: includes/tabs/tab-settings-avvio.php:24
+#. translators: %20 is part of the example address (an encoded space), not a placeholder.
+#: includes/tabs/tab-settings-avvio.php:25
 msgid "The address of your Avvio booking engine, as it is: https://fe.avvio.com/convert/site/Your%20Hotel/en/results.php"
 msgstr ""
 
-#: includes/tabs/tab-settings-avvio.php:267
+#: includes/tabs/tab-settings-avvio.php:268
 msgid "Avvio receives the children as the list of their ages: it must be enabled when Children is enabled."
 msgstr ""
 
-#: includes/tabs/tab-settings-avvio.php:292
+#: includes/tabs/tab-settings-avvio.php:293
 #: includes/tabs/tab-settings-beddy.php:321
 #: includes/tabs/tab-settings-bedzzle.php:292
 #: includes/tabs/tab-settings-begenius.php:289
@@ -1956,7 +2071,7 @@ msgstr ""
 msgid "Min children age"
 msgstr ""
 
-#: includes/tabs/tab-settings-avvio.php:323
+#: includes/tabs/tab-settings-avvio.php:324
 #: includes/tabs/tab-settings-beddy.php:352
 #: includes/tabs/tab-settings-bedzzle.php:323
 #: includes/tabs/tab-settings-begenius.php:320
@@ -2118,12 +2233,18 @@ msgstr ""
 #: includes/tabs/tab-settings-siteminder.php:385
 #: includes/tabs/tab-settings-synxis.php:403
 #: includes/tabs/tab-settings-thinkreservations.php:179
-#: includes/tabs/tab-settings-witbooking.php:377 templates/cloudbeds.php:137
-#: templates/datasistemi.php:129 templates/dedge.php:201
-#: templates/guestline.php:131 templates/hotelnetsolutions.php:168
-#: templates/ihotelier.php:135 templates/mews.php:127
-#: templates/reservit.php:177 templates/siteminder.php:162
-#: templates/synxis.php:168 templates/thinkreservations.php:106
+#: includes/tabs/tab-settings-witbooking.php:377
+#: templates/cloudbeds.php:137
+#: templates/datasistemi.php:129
+#: templates/dedge.php:201
+#: templates/guestline.php:131
+#: templates/hotelnetsolutions.php:168
+#: templates/ihotelier.php:135
+#: templates/mews.php:127
+#: templates/reservit.php:177
+#: templates/siteminder.php:162
+#: templates/synxis.php:168
+#: templates/thinkreservations.php:106
 #: templates/witbooking.php:165
 msgid "Promo code"
 msgstr ""
@@ -2163,8 +2284,10 @@ msgstr ""
 #: includes/tabs/tab-settings-ericsoft.php:295
 #: includes/tabs/tab-settings-revplus.php:312
 #: includes/tabs/tab-settings-siteminder.php:296
-#: includes/tabs/tab-settings-witbooking.php:288 templates/ericsoft.php:137
-#: templates/revplus.php:136 templates/siteminder.php:131
+#: includes/tabs/tab-settings-witbooking.php:288
+#: templates/ericsoft.php:137
+#: templates/revplus.php:136
+#: templates/siteminder.php:131
 #: templates/witbooking.php:134
 msgid "Infants"
 msgstr ""
@@ -2280,6 +2403,13 @@ msgstr ""
 msgid "Language option"
 msgstr ""
 
+#: includes/tabs/tab-settings-iperbooking.php:122
+#: includes/tabs/tab-settings-iperbooking.php:155
+#: includes/tabs/tab-settings-iperbooking.php:241
+#: includes/tabs/tab-settings-iperbooking.php:274
+msgid "Default"
+msgstr ""
+
 #: includes/tabs/tab-settings-iperbooking.php:135
 #: includes/tabs/tab-settings-iperbooking.php:254
 msgid "Delete"
@@ -2316,7 +2446,8 @@ msgstr ""
 
 #: includes/tabs/tab-settings-iperbooking.php:561
 #: includes/tabs/tab-settings-passepartout.php:367
-#: templates/iperbooking.php:194 templates/passepartout.php:168
+#: templates/iperbooking.php:194
+#: templates/passepartout.php:168
 msgid "Discount code"
 msgstr ""
 
@@ -2459,7 +2590,8 @@ msgstr ""
 msgid "ResNexus has no children ages in the booking address: only the number of children is sent, in the capacity slot chosen above."
 msgstr ""
 
-#: includes/tabs/tab-settings-resnexus.php:330 templates/resnexus.php:133
+#: includes/tabs/tab-settings-resnexus.php:330
+#: templates/resnexus.php:133
 msgid "Pets"
 msgstr ""
 
@@ -2491,7 +2623,8 @@ msgstr ""
 msgid "Enable Infants only if your property accepts them: a property for adults only ignores these values, and guests would choose them for nothing. The age ranges are the ones configured in your RevPlus booking engine."
 msgstr ""
 
-#: includes/tabs/tab-settings-revplus.php:401 templates/revplus.php:167
+#: includes/tabs/tab-settings-revplus.php:401
+#: templates/revplus.php:167
 msgid "Voucher"
 msgstr ""
 
@@ -2639,7 +2772,8 @@ msgstr ""
 msgid "ep"
 msgstr ""
 
-#: includes/tabs/tab-settings-wubook.php:206 templates/wubook.php:115
+#: includes/tabs/tab-settings-wubook.php:206
+#: templates/wubook.php:115
 msgid "Teens"
 msgstr ""
 
@@ -2655,7 +2789,8 @@ msgstr ""
 msgid "Max Teens"
 msgstr ""
 
-#: includes/tabs/tab-settings-wubook.php:383 templates/wubook.php:165
+#: includes/tabs/tab-settings-wubook.php:383
+#: templates/wubook.php:165
 msgid "Babies"
 msgstr ""
 
@@ -2679,7 +2814,8 @@ msgstr ""
 msgid "support page"
 msgstr ""
 
-#: includes/tabs/tab-settings.php:46 includes/tabs/tab-support.php:107
+#: includes/tabs/tab-settings.php:46
+#: includes/tabs/tab-support.php:107
 msgid "Provider"
 msgstr ""
 
@@ -2743,54 +2879,78 @@ msgstr ""
 msgid "Currently, Astro Booking Engine can be connected to the following booking engine providers (in alphabetic order)."
 msgstr ""
 
-#: includes/tabs/tab-support.php:47 includes/tabs/tab-support.php:51
-#: includes/tabs/tab-support.php:52 includes/tabs/tab-support.php:53
-#: includes/tabs/tab-support.php:54 includes/tabs/tab-support.php:56
-#: includes/tabs/tab-support.php:57 includes/tabs/tab-support.php:61
-#: includes/tabs/tab-support.php:64 includes/tabs/tab-support.php:65
-#: includes/tabs/tab-support.php:70 includes/tabs/tab-support.php:72
-#: includes/tabs/tab-support.php:76 includes/tabs/tab-support.php:78
-#: includes/tabs/tab-support.php:88 includes/tabs/tab-support.php:91
-#: includes/tabs/tab-support.php:94 includes/tabs/tab-support.php:95
-#: includes/tabs/tab-support.php:98 includes/tabs/tab-support.php:101
+#: includes/tabs/tab-support.php:47
+#: includes/tabs/tab-support.php:51
+#: includes/tabs/tab-support.php:52
+#: includes/tabs/tab-support.php:53
+#: includes/tabs/tab-support.php:54
+#: includes/tabs/tab-support.php:56
+#: includes/tabs/tab-support.php:57
+#: includes/tabs/tab-support.php:61
+#: includes/tabs/tab-support.php:64
+#: includes/tabs/tab-support.php:65
+#: includes/tabs/tab-support.php:70
+#: includes/tabs/tab-support.php:72
+#: includes/tabs/tab-support.php:76
+#: includes/tabs/tab-support.php:78
+#: includes/tabs/tab-support.php:88
+#: includes/tabs/tab-support.php:91
+#: includes/tabs/tab-support.php:94
+#: includes/tabs/tab-support.php:95
+#: includes/tabs/tab-support.php:98
+#: includes/tabs/tab-support.php:101
 msgid "Italy"
 msgstr ""
 
-#: includes/tabs/tab-support.php:48 includes/tabs/tab-support.php:74
-#: includes/tabs/tab-support.php:86 includes/tabs/tab-support.php:100
+#: includes/tabs/tab-support.php:48
+#: includes/tabs/tab-support.php:74
+#: includes/tabs/tab-support.php:86
+#: includes/tabs/tab-support.php:100
 msgid "Spain"
 msgstr ""
 
-#: includes/tabs/tab-support.php:49 includes/tabs/tab-support.php:50
-#: includes/tabs/tab-support.php:55 includes/tabs/tab-support.php:77
+#: includes/tabs/tab-support.php:49
+#: includes/tabs/tab-support.php:50
+#: includes/tabs/tab-support.php:55
+#: includes/tabs/tab-support.php:77
 msgid "Ireland"
 msgstr ""
 
-#: includes/tabs/tab-support.php:58 includes/tabs/tab-support.php:92
+#: includes/tabs/tab-support.php:58
+#: includes/tabs/tab-support.php:92
 msgid "Sweden"
 msgstr ""
 
-#: includes/tabs/tab-support.php:59 includes/tabs/tab-support.php:96
+#: includes/tabs/tab-support.php:59
+#: includes/tabs/tab-support.php:96
 msgid "Denmark"
 msgstr ""
 
-#: includes/tabs/tab-support.php:60 includes/tabs/tab-support.php:81
-#: includes/tabs/tab-support.php:84 includes/tabs/tab-support.php:87
-#: includes/tabs/tab-support.php:97 includes/tabs/tab-support.php:99
+#: includes/tabs/tab-support.php:60
+#: includes/tabs/tab-support.php:81
+#: includes/tabs/tab-support.php:84
+#: includes/tabs/tab-support.php:87
+#: includes/tabs/tab-support.php:97
+#: includes/tabs/tab-support.php:99
 msgid "United States"
 msgstr ""
 
-#: includes/tabs/tab-support.php:62 includes/tabs/tab-support.php:75
-#: includes/tabs/tab-support.php:83 includes/tabs/tab-support.php:89
+#: includes/tabs/tab-support.php:62
+#: includes/tabs/tab-support.php:75
+#: includes/tabs/tab-support.php:83
+#: includes/tabs/tab-support.php:89
 msgid "France"
 msgstr ""
 
-#: includes/tabs/tab-support.php:63 includes/tabs/tab-support.php:69
+#: includes/tabs/tab-support.php:63
+#: includes/tabs/tab-support.php:69
 msgid "Germany"
 msgstr ""
 
-#: includes/tabs/tab-support.php:66 includes/tabs/tab-support.php:67
-#: includes/tabs/tab-support.php:68 includes/tabs/tab-support.php:71
+#: includes/tabs/tab-support.php:66
+#: includes/tabs/tab-support.php:67
+#: includes/tabs/tab-support.php:68
+#: includes/tabs/tab-support.php:71
 msgid "United Kingdom"
 msgstr ""
 
@@ -2830,7 +2990,8 @@ msgstr ""
 msgid "Is your booking engine provider not available in Astro Booking Engine?"
 msgstr ""
 
-#: includes/tabs/tab-support.php:122 includes/tabs/tab-support.php:131
+#: includes/tabs/tab-support.php:122
+#: includes/tabs/tab-support.php:131
 msgid "Write me an email at"
 msgstr ""
 
@@ -2890,75 +3051,150 @@ msgstr ""
 msgid "Remove all plugin settings"
 msgstr ""
 
-#: templates/5stelle.php:30 templates/arosuite.php:32 templates/avvio.php:34
-#: templates/beddy.php:37 templates/bedzzle.php:32 templates/begenius.php:29
-#: templates/blastness.php:37 templates/bookassist.php:36
-#: templates/bookingdesigner.php:35 templates/bookingexpert.php:35
-#: templates/bookvisit.php:35 templates/bookyourstay.php:38
-#: templates/cloudbeds.php:39 templates/datasistemi.php:29
-#: templates/dedge.php:69 templates/dirs21.php:35 templates/ericsoft.php:47
-#: templates/ermeshotels.php:37 templates/eviivo.php:32
-#: templates/freetobook.php:35 templates/guestline.php:33
-#: templates/hotelnetsolutions.php:36 templates/ihotelier.php:37
-#: templates/iperbooking.php:28 templates/journey.php:30
-#: templates/krossbooking.php:39 templates/mews.php:33 templates/mirai.php:42
-#: templates/misterbooking.php:34 templates/myguestcare.php:37
-#: templates/netaffinity.php:28 templates/octorate.php:32
-#: templates/omnibees.php:37 templates/passepartout.php:40
-#: templates/pegasus.php:33 templates/profitroom.php:35
-#: templates/reservit.php:45 templates/resnexus.php:36 templates/revplus.php:38
-#: templates/roiback.php:40 templates/scidoo.php:33
-#: templates/secureholiday.php:33 templates/seekda.php:31
-#: templates/simplebooking.php:30 templates/sirvoy.php:52
-#: templates/siteminder.php:33 templates/slope.php:35
-#: templates/smartness.php:33 templates/synxis.php:36 templates/techotel.php:38
-#: templates/thinkreservations.php:37 templates/verticalbooking.php:37
-#: templates/windsurfer.php:36 templates/witbooking.php:36
+#: templates/5stelle.php:30
+#: templates/arosuite.php:32
+#: templates/avvio.php:34
+#: templates/beddy.php:37
+#: templates/bedzzle.php:32
+#: templates/begenius.php:29
+#: templates/blastness.php:37
+#: templates/bookassist.php:36
+#: templates/bookingdesigner.php:35
+#: templates/bookingexpert.php:35
+#: templates/bookvisit.php:35
+#: templates/bookyourstay.php:38
+#: templates/cloudbeds.php:39
+#: templates/datasistemi.php:29
+#: templates/dedge.php:69
+#: templates/dirs21.php:35
+#: templates/ericsoft.php:47
+#: templates/ermeshotels.php:37
+#: templates/eviivo.php:32
+#: templates/freetobook.php:35
+#: templates/guestline.php:33
+#: templates/hotelnetsolutions.php:36
+#: templates/ihotelier.php:37
+#: templates/iperbooking.php:28
+#: templates/journey.php:30
+#: templates/krossbooking.php:39
+#: templates/mews.php:33
+#: templates/mirai.php:42
+#: templates/misterbooking.php:34
+#: templates/myguestcare.php:37
+#: templates/netaffinity.php:28
+#: templates/octorate.php:32
+#: templates/omnibees.php:37
+#: templates/passepartout.php:40
+#: templates/pegasus.php:33
+#: templates/profitroom.php:35
+#: templates/reservit.php:45
+#: templates/resnexus.php:36
+#: templates/revplus.php:38
+#: templates/roiback.php:40
+#: templates/scidoo.php:33
+#: templates/secureholiday.php:33
+#: templates/seekda.php:31
+#: templates/simplebooking.php:30
+#: templates/sirvoy.php:52
+#: templates/siteminder.php:33
+#: templates/slope.php:35
+#: templates/smartness.php:33
+#: templates/synxis.php:36
+#: templates/techotel.php:38
+#: templates/thinkreservations.php:37
+#: templates/verticalbooking.php:37
+#: templates/windsurfer.php:36
+#: templates/witbooking.php:36
 #: templates/wubook.php:50
 msgid "Check-in"
 msgstr ""
 
-#: templates/5stelle.php:46 templates/arosuite.php:47 templates/avvio.php:49
-#: templates/beddy.php:52 templates/bedzzle.php:47 templates/begenius.php:44
-#: templates/blastness.php:53 templates/bookassist.php:51
-#: templates/bookingdesigner.php:50 templates/bookingexpert.php:50
-#: templates/bookvisit.php:50 templates/bookyourstay.php:53
-#: templates/cloudbeds.php:54 templates/datasistemi.php:45
-#: templates/dedge.php:84 templates/dirs21.php:50 templates/ericsoft.php:63
-#: templates/ermeshotels.php:52 templates/eviivo.php:47
-#: templates/freetobook.php:50 templates/guestline.php:48
-#: templates/hotelnetsolutions.php:51 templates/ihotelier.php:52
-#: templates/iperbooking.php:44 templates/journey.php:45
-#: templates/krossbooking.php:54 templates/mews.php:49 templates/mirai.php:57
-#: templates/misterbooking.php:49 templates/myguestcare.php:53
-#: templates/netaffinity.php:43 templates/octorate.php:47
-#: templates/omnibees.php:52 templates/passepartout.php:56
-#: templates/pegasus.php:48 templates/profitroom.php:50
-#: templates/reservit.php:60 templates/resnexus.php:51 templates/revplus.php:54
-#: templates/roiback.php:55 templates/scidoo.php:48
-#: templates/secureholiday.php:48 templates/seekda.php:46
-#: templates/simplebooking.php:47 templates/sirvoy.php:67
-#: templates/siteminder.php:49 templates/slope.php:50
-#: templates/smartness.php:48 templates/synxis.php:51 templates/techotel.php:53
-#: templates/thinkreservations.php:52 templates/verticalbooking.php:53
-#: templates/windsurfer.php:51 templates/witbooking.php:52
+#: templates/5stelle.php:46
+#: templates/arosuite.php:47
+#: templates/avvio.php:49
+#: templates/beddy.php:52
+#: templates/bedzzle.php:47
+#: templates/begenius.php:44
+#: templates/blastness.php:53
+#: templates/bookassist.php:51
+#: templates/bookingdesigner.php:50
+#: templates/bookingexpert.php:50
+#: templates/bookvisit.php:50
+#: templates/bookyourstay.php:53
+#: templates/cloudbeds.php:54
+#: templates/datasistemi.php:45
+#: templates/dedge.php:84
+#: templates/dirs21.php:50
+#: templates/ericsoft.php:63
+#: templates/ermeshotels.php:52
+#: templates/eviivo.php:47
+#: templates/freetobook.php:50
+#: templates/guestline.php:48
+#: templates/hotelnetsolutions.php:51
+#: templates/ihotelier.php:52
+#: templates/iperbooking.php:44
+#: templates/journey.php:45
+#: templates/krossbooking.php:54
+#: templates/mews.php:49
+#: templates/mirai.php:57
+#: templates/misterbooking.php:49
+#: templates/myguestcare.php:53
+#: templates/netaffinity.php:43
+#: templates/octorate.php:47
+#: templates/omnibees.php:52
+#: templates/passepartout.php:56
+#: templates/pegasus.php:48
+#: templates/profitroom.php:50
+#: templates/reservit.php:60
+#: templates/resnexus.php:51
+#: templates/revplus.php:54
+#: templates/roiback.php:55
+#: templates/scidoo.php:48
+#: templates/secureholiday.php:48
+#: templates/seekda.php:46
+#: templates/simplebooking.php:47
+#: templates/sirvoy.php:67
+#: templates/siteminder.php:49
+#: templates/slope.php:50
+#: templates/smartness.php:48
+#: templates/synxis.php:51
+#: templates/techotel.php:53
+#: templates/thinkreservations.php:52
+#: templates/verticalbooking.php:53
+#: templates/windsurfer.php:51
+#: templates/witbooking.php:52
 #: templates/wubook.php:66
 msgid "Check-out"
 msgstr ""
 
-#: templates/5stelle.php:125 templates/avvio.php:133 templates/beddy.php:136
-#: templates/bedzzle.php:131 templates/begenius.php:128
-#: templates/blastness.php:140 templates/bookingdesigner.php:134
-#: templates/bookvisit.php:134 templates/dedge.php:169 templates/dirs21.php:134
-#: templates/ermeshotels.php:136 templates/freetobook.php:134
-#: templates/hotelnetsolutions.php:136 templates/iperbooking.php:161
-#: templates/krossbooking.php:138 templates/mirai.php:141
-#: templates/myguestcare.php:140 templates/octorate.php:131
-#: templates/omnibees.php:136 templates/passepartout.php:135
-#: templates/profitroom.php:134 templates/reservit.php:145
-#: templates/roiback.php:139 templates/scidoo.php:132
-#: templates/secureholiday.php:132 templates/simplebooking.php:127
-#: templates/synxis.php:136 templates/techotel.php:137
+#: templates/5stelle.php:125
+#: templates/avvio.php:133
+#: templates/beddy.php:136
+#: templates/bedzzle.php:131
+#: templates/begenius.php:128
+#: templates/blastness.php:140
+#: templates/bookingdesigner.php:134
+#: templates/bookvisit.php:134
+#: templates/dedge.php:169
+#: templates/dirs21.php:134
+#: templates/ermeshotels.php:136
+#: templates/freetobook.php:134
+#: templates/hotelnetsolutions.php:136
+#: templates/iperbooking.php:161
+#: templates/krossbooking.php:138
+#: templates/mirai.php:141
+#: templates/myguestcare.php:140
+#: templates/octorate.php:131
+#: templates/omnibees.php:136
+#: templates/passepartout.php:135
+#: templates/profitroom.php:134
+#: templates/reservit.php:145
+#: templates/roiback.php:139
+#: templates/scidoo.php:132
+#: templates/secureholiday.php:132
+#: templates/simplebooking.php:127
+#: templates/synxis.php:136
+#: templates/techotel.php:137
 #: templates/verticalbooking.php:140
 msgid "Child Age"
 msgstr ""

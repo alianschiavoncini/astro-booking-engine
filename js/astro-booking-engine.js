@@ -1,5 +1,11 @@
 jQuery( document ).ready(function( $ ) {
 
+    // Compact style: the calendar is flatpickr and jQuery UI datepicker is not loaded, and the
+    // compact script handles the dates and the children ages on its own.
+    if ( ! $.fn.datepicker ) {
+        return;
+    }
+
     /**
      * Datepicker for Check-in and Check-out
      */
