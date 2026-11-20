@@ -271,3 +271,32 @@
     .astro_be_compact_submit input[type="submit"] { width: auto; }
     .astro_be_compact_panel { left: auto; right: 0; min-width: 320px; }
 }
+
+/* Scheda in un contenitore stretto (barra laterale, colonna di un page builder) su uno schermo
+   largo: quando i campi non ci stanno in riga, astro-booking-engine.js aggiunge
+   .astro_be--stacked e la scheda torna alla disposizione in colonna dei telefoni, invece di
+   sporgere dal riquadro. Le regole annullano quelle della media query qui sopra; la
+   specificita' piu' alta le fa valere anche dentro la media query. */
+.astro_be.astro_be--compact.astro_be--stacked { width: auto; }
+.astro_be.astro_be--stacked .astro_be_compact { flex-direction: column; align-items: stretch; gap: var(--abe-gap); }
+.astro_be.astro_be--stacked .astro_be_compact > * { padding: 0; }
+.astro_be.astro_be--stacked .astro_be_compact_sep { width: auto; height: 1px; }
+.astro_be.astro_be--stacked .astro_be_compact_group { width: 100%; gap: 10px; }
+.astro_be.astro_be--stacked .astro_be_compact_field { flex: 1 1 0; min-width: 0; }
+.astro_be.astro_be--stacked .astro_be_compact_field--end { text-align: right; align-items: flex-end; }
+.astro_be.astro_be--stacked .astro_be_compact_guests { display: block; }
+.astro_be.astro_be--stacked .astro_be_compact_guests > .astro_be_compact_field { width: auto; min-width: 0; }
+.astro_be.astro_be--stacked .astro_be_compact_coupon { min-width: 0; padding: var(--abe-field-pad) 2px; }
+.astro_be.astro_be--stacked .astro_be_compact_submit { display: block; margin-left: 0; }
+.astro_be.astro_be--stacked .astro_be_compact_submit input[type="submit"] { width: 100%; }
+.astro_be.astro_be--stacked .astro_be_compact_panel { left: 0; right: 0; min-width: 0; }
+/* Ancora piu' stretto (sotto i 250 px circa): anche le due date, una sotto l'altra. */
+.astro_be.astro_be--narrow .astro_be_compact_group { flex-direction: column; align-items: stretch; gap: 0; }
+.astro_be.astro_be--narrow .astro_be_compact_group .astro_be_compact_field { flex: 0 0 auto; }
+.astro_be.astro_be--narrow .astro_be_compact_arrow { display: none; }
+.astro_be.astro_be--narrow .astro_be_compact_field--end { text-align: left; align-items: flex-start; }
+/* Pannello degli ospiti largo quanto una colonna stretta: le righe vanno a capo invece di sporgere. */
+.astro_be.astro_be--stacked .astro_be_compact_stepper_row,
+.astro_be.astro_be--stacked .astro_be_compact_ages .astro_be_column-inner,
+.astro_be.astro_be--stacked .astro_be_compact_panel_buttons { flex-wrap: wrap; row-gap: 6px; }
+.astro_be.astro_be--stacked .astro_be_compact_stepper_row > :first-child { min-width: 0; }

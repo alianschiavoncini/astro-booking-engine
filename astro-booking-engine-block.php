@@ -40,7 +40,7 @@ function astro_be_register_block() {
 add_action( 'enqueue_block_assets', 'astro_be_block_editor_skin_styles' );
 function astro_be_block_editor_skin_styles() {
 
-	// On the front end the styles are already enqueued by astro_be_enqueue_files().
+	// On the front end the styles are enqueued with the form: see astro_be_enqueue_front_files().
 	if ( ! is_admin() ) {
 		return;
 	}
@@ -118,6 +118,7 @@ function astro_be_block_render( $attributes ) {
 		add_filter( 'pre_option_' . ASTRO_BE_PREFIX . $provider . '_submit_label', $submit_label_filter );
 	}
 
+	// Same output as the shortcode, which also enqueues the files of the form.
 	$form = astro_be_shortcode_output();
 
 	if ( $submit_label_filter ) {

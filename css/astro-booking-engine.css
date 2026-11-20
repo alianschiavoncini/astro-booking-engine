@@ -78,3 +78,13 @@
         justify-content: center;
     }
 }
+/* Narrow containers (a sidebar, a column of a page builder): when the fields do not fit side by
+   side, astro-booking-engine.js adds astro_be--stacked and they go one under the other, as on
+   phones, instead of being cut off by the edge of the box. */
+/* :not(): the compact style hides these rows and draws its own fields. */
+.astro_be.astro_be--stacked:not(.astro_be--compact) .astro_be_form,
+.astro_be.astro_be--stacked:not(.astro_be--compact) .astro_be_dates,
+.astro_be.astro_be--stacked:not(.astro_be--compact) .astro_be_occupancy,
+.astro_be.astro_be--stacked:not(.astro_be--compact) .astro_be_submit_button {
+    display: block;
+}

@@ -2799,7 +2799,8 @@ function astro_be_shortcode_output() {
 	$provider = astro_be_get_sanitized_option(ASTRO_BE_PREFIX.'provider');
 	if (($provider == '') && current_user_can( 'manage_options' )) {
 		$plugin_settings_url = admin_url('admin.php?page=astro-booking-engine');
-		$str = '<div class="astro-error astro-error-no-provider">';
+		$str = astro_be_enqueue_front_files_on_render();
+		$str .= '<div class="astro-error astro-error-no-provider">';
 		$str .= esc_html__( 'This message is visible only to the site administrator.', 'astro-booking-engine' );
 		$str .= '<br />';
 		$str .= esc_html__( 'No provider has been selected in Astro Booking Engine plugin.', 'astro-booking-engine' );
@@ -2818,10 +2819,12 @@ function astro_be_shortcode_output() {
 
 	$template_file = plugin_dir_path(__FILE__) . 'templates/' .$provider.'.php';
 	if (file_exists($template_file)) { // Check if the template file exists.
+		// Files of the form: see astro_be_enqueue_front_files_on_render().
+		$styles = astro_be_enqueue_front_files_on_render();
 		ob_start();
 		include($template_file);
 		$content = ob_get_clean();
-		return $content;
+		return $styles . $content;
 	}
 }
 add_shortcode('astro-booking-engine', 'astro_be_shortcode_output');

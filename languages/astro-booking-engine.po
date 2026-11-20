@@ -2,14 +2,14 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Astro Booking Engine 2.8.1\n"
+"Project-Id-Version: Astro Booking Engine 2.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/astro-booking-engine\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-18T12:14:49+00:00\n"
+"POT-Creation-Date: 2026-11-20T09:37:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: astro-booking-engine\n"
@@ -90,239 +90,239 @@ msgstr ""
 msgid "Settings saved."
 msgstr ""
 
-#: astro-booking-engine-common.php:1596
-#: astro-booking-engine-common.php:2397
-#: astro-booking-engine-common.php:2475
-msgid "Spanish"
-msgstr ""
-
-#: astro-booking-engine-common.php:1597
-#: astro-booking-engine-common.php:2396
-#: astro-booking-engine-common.php:2474
-msgid "English"
-msgstr ""
-
 #: astro-booking-engine-common.php:1598
-#: astro-booking-engine-common.php:2476
-msgid "Italian"
+#: astro-booking-engine-common.php:2399
+#: astro-booking-engine-common.php:2477
+msgid "Spanish"
 msgstr ""
 
 #: astro-booking-engine-common.php:1599
 #: astro-booking-engine-common.php:2398
-#: astro-booking-engine-common.php:2477
-msgid "French"
+#: astro-booking-engine-common.php:2476
+msgid "English"
 msgstr ""
 
 #: astro-booking-engine-common.php:1600
-#: astro-booking-engine-common.php:2399
 #: astro-booking-engine-common.php:2478
-msgid "German"
+msgid "Italian"
 msgstr ""
 
 #: astro-booking-engine-common.php:1601
+#: astro-booking-engine-common.php:2400
 #: astro-booking-engine-common.php:2479
-msgid "Portuguese"
+msgid "French"
 msgstr ""
 
 #: astro-booking-engine-common.php:1602
-#: astro-booking-engine-common.php:2496
-msgid "Catalan"
+#: astro-booking-engine-common.php:2401
+#: astro-booking-engine-common.php:2480
+msgid "German"
 msgstr ""
 
 #: astro-booking-engine-common.php:1603
 #: astro-booking-engine-common.php:2481
-msgid "Russian"
+msgid "Portuguese"
 msgstr ""
 
 #: astro-booking-engine-common.php:1604
-#: astro-booking-engine-common.php:2480
-msgid "Dutch"
+#: astro-booking-engine-common.php:2498
+msgid "Catalan"
 msgstr ""
 
 #: astro-booking-engine-common.php:1605
-#: astro-booking-engine-common.php:2401
 #: astro-booking-engine-common.php:2483
-msgid "Japanese"
+msgid "Russian"
 msgstr ""
 
 #: astro-booking-engine-common.php:1606
-#: astro-booking-engine-common.php:2400
 #: astro-booking-engine-common.php:2482
-msgid "Chinese"
+msgid "Dutch"
 msgstr ""
 
 #: astro-booking-engine-common.php:1607
-msgid "Basque"
+#: astro-booking-engine-common.php:2403
+#: astro-booking-engine-common.php:2485
+msgid "Japanese"
 msgstr ""
 
 #: astro-booking-engine-common.php:1608
-msgid "Danish"
+#: astro-booking-engine-common.php:2402
+#: astro-booking-engine-common.php:2484
+msgid "Chinese"
 msgstr ""
 
 #: astro-booking-engine-common.php:1609
-#: astro-booking-engine-common.php:2486
-msgid "Swedish"
+msgid "Basque"
 msgstr ""
 
 #: astro-booking-engine-common.php:1610
-#: astro-booking-engine-common.php:2494
-msgid "Romanian"
+msgid "Danish"
 msgstr ""
 
 #: astro-booking-engine-common.php:1611
-#: astro-booking-engine-common.php:2492
-msgid "Hungarian"
+#: astro-booking-engine-common.php:2488
+msgid "Swedish"
 msgstr ""
 
 #: astro-booking-engine-common.php:1612
-#: astro-booking-engine-common.php:2484
+#: astro-booking-engine-common.php:2496
+msgid "Romanian"
+msgstr ""
+
+#: astro-booking-engine-common.php:1613
+#: astro-booking-engine-common.php:2494
+msgid "Hungarian"
+msgstr ""
+
+#: astro-booking-engine-common.php:1614
+#: astro-booking-engine-common.php:2486
 msgid "Korean"
 msgstr ""
 
-#: astro-booking-engine-common.php:2485
+#: astro-booking-engine-common.php:2487
 msgid "Polish"
 msgstr ""
 
-#: astro-booking-engine-common.php:2487
+#: astro-booking-engine-common.php:2489
 msgid "Norwegian"
 msgstr ""
 
-#: astro-booking-engine-common.php:2488
+#: astro-booking-engine-common.php:2490
 msgid "Finnish"
 msgstr ""
 
-#: astro-booking-engine-common.php:2489
+#: astro-booking-engine-common.php:2491
 msgid "Greek"
 msgstr ""
 
-#: astro-booking-engine-common.php:2490
+#: astro-booking-engine-common.php:2492
 msgid "Turkish"
 msgstr ""
 
-#: astro-booking-engine-common.php:2491
+#: astro-booking-engine-common.php:2493
 msgid "Hebrew"
 msgstr ""
 
-#: astro-booking-engine-common.php:2493
+#: astro-booking-engine-common.php:2495
 msgid "Czech"
 msgstr ""
 
-#: astro-booking-engine-common.php:2495
+#: astro-booking-engine-common.php:2497
 msgid "Thai"
 msgstr ""
 
-#: astro-booking-engine-common.php:2497
+#: astro-booking-engine-common.php:2499
 msgid "Slovak"
 msgstr ""
 
-#: astro-booking-engine-common.php:2498
+#: astro-booking-engine-common.php:2500
 msgid "Lithuanian"
 msgstr ""
 
-#: astro-booking-engine-common.php:2499
+#: astro-booking-engine-common.php:2501
 msgid "Estonian"
 msgstr ""
 
-#: astro-booking-engine-common.php:2801
+#: astro-booking-engine-common.php:2804
 msgid "This message is visible only to the site administrator."
 msgstr ""
 
-#: astro-booking-engine-common.php:2803
+#: astro-booking-engine-common.php:2806
 msgid "No provider has been selected in Astro Booking Engine plugin."
 msgstr ""
 
-#: astro-booking-engine-common.php:2805
+#: astro-booking-engine-common.php:2808
 msgid "Choose your provider at plugin"
 msgstr ""
 
-#: astro-booking-engine-common.php:2807
+#: astro-booking-engine-common.php:2810
 msgid "settings page"
 msgstr ""
 
-#: astro-booking-engine-common.php:2944
+#: astro-booking-engine-common.php:2949
 msgid "Labels on the form background"
 msgstr ""
 
-#: astro-booking-engine-common.php:2945
+#: astro-booking-engine-common.php:2950
 msgid "Values on the form background"
 msgstr ""
 
-#: astro-booking-engine-common.php:2946
+#: astro-booking-engine-common.php:2951
 msgid "Values on the hover background"
 msgstr ""
 
-#: astro-booking-engine-common.php:2947
+#: astro-booking-engine-common.php:2952
 msgid "Submit button text on its background"
 msgstr ""
 
 #. translators: 1: name of the color pair, 2: contrast ratio, e.g. 3.10
-#: astro-booking-engine-common.php:2958
+#: astro-booking-engine-common.php:2963
 #, php-format
 msgid "%1$s: %2$s:1"
 msgstr ""
 
-#: astro-booking-engine.php:115
+#: astro-booking-engine.php:116
 #: includes/tabs/tab-settings-bookingexpert.php:116
 msgid "Guests"
 msgstr ""
 
-#: astro-booking-engine.php:116
+#: astro-booking-engine.php:117
 msgid "Cancel"
 msgstr ""
 
-#: astro-booking-engine.php:117
+#: astro-booking-engine.php:118
 msgid "Save"
 msgstr ""
 
-#: astro-booking-engine.php:118
+#: astro-booking-engine.php:119
 msgid "adult"
 msgstr ""
 
-#: astro-booking-engine.php:119
+#: astro-booking-engine.php:120
 msgid "adults"
 msgstr ""
 
-#: astro-booking-engine.php:120
+#: astro-booking-engine.php:121
 msgid "child"
 msgstr ""
 
-#: astro-booking-engine.php:121
+#: astro-booking-engine.php:122
 msgid "children"
 msgstr ""
 
-#: astro-booking-engine.php:122
+#: astro-booking-engine.php:123
 msgid "pet"
 msgstr ""
 
-#: astro-booking-engine.php:123
+#: astro-booking-engine.php:124
 msgid "pets"
 msgstr ""
 
-#: astro-booking-engine.php:125
+#: astro-booking-engine.php:126
 msgid "decrease"
 msgstr ""
 
-#: astro-booking-engine.php:126
+#: astro-booking-engine.php:127
 msgid "increase"
 msgstr ""
 
-#: astro-booking-engine.php:127
+#: astro-booking-engine.php:128
 msgid "Calendar"
 msgstr ""
 
-#: astro-booking-engine.php:193
+#: astro-booking-engine.php:300
 #: includes/tabs/tab-settings.php:18
 #: includes/tabs/tabs-nav.php:13
 msgid "Settings"
 msgstr ""
 
-#: astro-booking-engine.php:207
+#: astro-booking-engine.php:314
 #: includes/tabs/tab-support.php:25
 #: includes/tabs/tabs-nav.php:15
 msgid "Support"
 msgstr ""
 
-#: astro-booking-engine.php:208
+#: astro-booking-engine.php:315
 msgid "Author website"
 msgstr ""
 

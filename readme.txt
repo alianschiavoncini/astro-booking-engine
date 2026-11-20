@@ -3,7 +3,7 @@ Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget
 Requires at least: 6.0.1
 Tested up to: 7.1
-Stable tag: 2.8.1
+Stable tag: 2.9.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -114,6 +114,11 @@ Astro Booking Engine is developed and maintained by Alian Schiavoncini (<a href=
 1. Activate the plugin through the **Plugins** screen (**Plugins > Installed Plugins**).
 
 == Frequently Asked Questions ==
+= Are the plugin files loaded on every page? =
+No. Since version 2.9.0 the styles and scripts of the booking form are loaded only on the pages that show it: the posts and pages with the shortcode or the block, and every page when the Astro Booking Engine widget is in an active sidebar. When the form is printed elsewhere, for example by a block widget, by a theme template with do_shortcode() or by a page builder, the files are loaded as soon as the form is printed. If your theme or another plugin needs them on every page, as before version 2.9.0, add this line to the functions.php file of your child theme or to a code snippets plugin:
+
+`add_filter( 'astro_be_load_assets_everywhere', '__return_true' );`
+
 = How can I report a bug or suggest an improvement? =
 You can use the <a href="https://wordpress.org/support/plugin/astro-booking-engine/">support forum</a> on WordPress.org or write to <a href="mailto:alian@alian.it">alian@alian.it</a>. Feature requests and bug reports are welcome.
 
@@ -193,6 +198,13 @@ The providers and their policies:
 gsphudo7by90lzwdlihyerqxbzj6jiln
 
 == Changelog ==
+
+= 2.9.0 =
+* Added: the astro_be_load_assets_everywhere filter, to load the files of the booking form on every page as before (see the FAQ).
+* Fixed: in a sidebar or in a narrow column the booking form is no longer cut off (classic style) and no longer sticks out of its box (compact style): when the fields do not fit side by side, they go one under the other as on phones, and the search button stays visible.
+* Changed: the styles and scripts of the booking form are loaded only on the pages that show it: the posts and pages with the shortcode or the block, the pages with the widget, and the forms printed by block widgets, by the theme or by a page builder. The other pages no longer load up to about 105 KB of plugin files, nor jQuery and the jQuery UI calendar when nothing else needs them.
+* Changed: removed the six unused jQuery UI stylesheets and the images folder in the root of vendors/jquery-ui-themes (about 185 KB): the calendar keeps loading the same theme files.
+* Compatibility: tested with WordPress 7.1.
 
 = 2.8.1 =
 * Fixed: no more "translation loading triggered too early" notice (WordPress 6.7 and later) when the plugin is loaded: the plugin header is now read without translating it.
@@ -363,6 +375,9 @@ gsphudo7by90lzwdlihyerqxbzj6jiln
 * Initial version.
 
 == Upgrade Notice ==
+
+= 2.9.0 =
+The booking form files are now loaded only on the pages that show the form (see the FAQ), and the form fits narrow sidebars. Updating from a version before 2.8.0? This release also brings the 2.8.0 security fixes.
 
 = 2.8.1 =
 Maintenance release: deprecated color picker code removed, 1.3 MB of unused calendar styles dropped, no more early translation notice. Updating from a version before 2.8.0? This release also brings the 2.8.0 security fixes.

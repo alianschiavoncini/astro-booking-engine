@@ -1,3 +1,109 @@
+/**
+ * Narrow containers. From a given screen width the form puts its fields side by side, whatever
+ * the room of the box it is placed in: in a sidebar or in a narrow column they do not fit, and
+ * the classic style cuts them off while the compact one sticks out of the box. When that
+ * happens the box gets astro_be--stacked, and the fields go one under the other as on phones;
+ * astro_be--narrow, in the compact style, also puts the two dates one under the other.
+ * The check is done again when the width of the container changes.
+ */
+(function () {
+
+    function astroBeFits( box ) {
+        // classic style: the fields overflow the box, which cuts them off
+        if ( box.scrollWidth > box.clientWidth + 1 ) {
+            return false;
+        }
+        // compact style: the box is as wide as its fields, and gets wider than its container
+        var container = box.parentElement;
+        if ( container && container.clientWidth ) { // an inline container has no width of its own
+            var style = window.getComputedStyle( container );
+            var room = container.clientWidth - parseFloat( style.paddingLeft ) - parseFloat( style.paddingRight );
+            if ( box.offsetWidth > room + 1 ) {
+                return false;
+            }
+        }
+        // compact style: the values (dates, guests) are cut with an ellipsis before overflowing
+        var values = box.querySelectorAll( '.astro_be_compact_value' );
+        for ( var i = 0; i < values.length; i++ ) {
+            if ( values[ i ].scrollWidth > values[ i ].clientWidth + 1 ) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function astroBeCheck( box ) {
+        if ( ! box.clientWidth ) {
+            return; // hidden, for instance in a closed tab: checked again when it is shown
+        }
+        box.classList.remove( 'astro_be--stacked', 'astro_be--narrow' );
+        if ( astroBeFits( box ) ) {
+            return;
+        }
+        box.classList.add( 'astro_be--stacked' );
+        // very narrow (compact style): the two dates do not fit side by side either
+        if ( ! astroBeFits( box ) ) {
+            box.classList.add( 'astro_be--narrow' );
+        }
+    }
+
+    function astroBeCheckAll() {
+        var boxes = document.querySelectorAll( '.astro_be' );
+        for ( var i = 0; i < boxes.length; i++ ) {
+            astroBeCheck( boxes[ i ] );
+        }
+    }
+
+    function astroBeStart() {
+        var boxes = document.querySelectorAll( '.astro_be' );
+        if ( ! boxes.length ) {
+            return;
+        }
+        window.addEventListener( 'load', astroBeCheckAll );
+        if ( ! window.ResizeObserver ) {
+            window.addEventListener( 'resize', astroBeCheckAll );
+            setTimeout( astroBeCheckAll, 0 );
+            return;
+        }
+        // The container is observed, not the box: the box changes width itself when it is
+        // stacked. Only width changes count, and the check runs in the next frame, outside
+        // the observer callback, so that changing the layout does not notify the observer again.
+        var observer = new ResizeObserver( function ( entries ) {
+            entries.forEach( function ( entry ) {
+                var container = entry.target;
+                var width = Math.round( entry.contentRect.width );
+                if ( container.astroBeWidth === width ) {
+                    return;
+                }
+                container.astroBeWidth = width;
+                window.requestAnimationFrame( function () {
+                    for ( var i = 0; i < container.astroBeBoxes.length; i++ ) {
+                        astroBeCheck( container.astroBeBoxes[ i ] );
+                    }
+                } );
+            } );
+        } );
+        for ( var i = 0; i < boxes.length; i++ ) {
+            var container = boxes[ i ].parentElement;
+            if ( ! container ) {
+                continue;
+            }
+            if ( ! container.astroBeBoxes ) {
+                container.astroBeBoxes = [];
+                observer.observe( container );
+            }
+            container.astroBeBoxes.push( boxes[ i ] );
+        }
+    }
+
+    if ( document.readyState === 'loading' ) {
+        document.addEventListener( 'DOMContentLoaded', astroBeStart );
+    } else {
+        astroBeStart();
+    }
+
+})();
+
 jQuery( document ).ready(function( $ ) {
 
     // Compact style: the calendar is flatpickr and jQuery UI datepicker is not loaded, and the

@@ -3,7 +3,7 @@
  * Plugin Name:       Astro Booking Engine
  * Plugin URI:        https://wordpress.org/plugins/astro-booking-engine
  * Description:       Hotel booking form via Gutenberg block or shortcode, independent from the provider: switch booking engine anytime, your form stays the same.
- * Version:           2.8.1
+ * Version:           2.9.0
  * Requires at least: 6.0.1
  * Requires PHP:      7.4
  * Author:            Alian Schiavoncini
@@ -37,7 +37,7 @@ if ( is_admin() ) {
 /**
  * Plugin constants.
  */
-define('ASTRO_BE_VERSION', '2.8.1');
+define('ASTRO_BE_VERSION', '2.9.0');
 define('ASTRO_BE_PREFIX', 'astro_be_');
 define('ASTRO_BE_TEXTDOMAIN', astro_be_plugin_data('TextDomain'));
 
@@ -67,7 +67,8 @@ function astro_be_activate() {
 /**
  * Register the plugin files on init, as the block registered at priority 20 refers to the main
  * style handle and the editor reuses the modern style handles; enqueue them on the front end only,
- * so that nothing of the booking form, the custom CSS included, is loaded on the admin screens.
+ * so that nothing of the booking form, the custom CSS included, is loaded on the admin screens,
+ * and since version 2.9.0 only on the pages that contain the form.
  */
 add_action('init', 'astro_be_enqueue_files');
 function astro_be_enqueue_files() {
@@ -165,10 +166,9 @@ function astro_be_asset( $type, $handle, $src, $deps, $ver, $in_footer = false )
 }
 
 /**
- * Enqueue on the front end the files registered by astro_be_enqueue_files().
+ * Enqueue the files registered by astro_be_enqueue_files().
  */
-add_action( 'wp_enqueue_scripts', 'astro_be_enqueue_front_files' );
-function astro_be_enqueue_front_files() {
+function astro_be_enqueue_registered_front_files() {
 	global $astro_be_front_assets;
 	if ( ! is_array( $astro_be_front_assets ) ) {
 		return;
@@ -179,6 +179,113 @@ function astro_be_enqueue_front_files() {
 	foreach ( $astro_be_front_assets['script'] as $handle ) {
 		wp_enqueue_script( $handle );
 	}
+}
+
+/**
+ * Whether the page being displayed contains the booking form: shortcode or block in one of
+ * the posts of the main query, or the plugin widget placed in an active sidebar.
+ *
+ * Forms printed elsewhere (theme templates, page builders that keep the content in post meta,
+ * template parts of block themes, block widgets) are not visible from here, on purpose for the
+ * block widgets, as their sidebar may not be shown on every page:
+ * astro_be_enqueue_front_files_on_render() enqueues the files when the form is actually printed.
+ */
+function astro_be_page_has_form() {
+
+	/**
+	 * Filters whether the booking form files are loaded on every front-end page, as before
+	 * version 2.9.0, instead of only on the pages that contain the form.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @param bool $everywhere Default false.
+	 */
+	if ( apply_filters( 'astro_be_load_assets_everywhere', false ) ) {
+		return true;
+	}
+
+	if ( is_active_widget( false, false, 'astro_be' ) ) {
+		return true;
+	}
+
+	global $wp_query;
+	if ( ! ( $wp_query instanceof WP_Query ) || empty( $wp_query->posts ) || ! is_array( $wp_query->posts ) ) {
+		return false;
+	}
+	foreach ( $wp_query->posts as $post ) {
+		if ( ! ( $post instanceof WP_Post ) ) {
+			continue;
+		}
+		if ( has_shortcode( $post->post_content, 'astro-booking-engine' ) || has_block( 'astro-booking-engine/booking-form', $post->post_content ) ) {
+			return true;
+		}
+	}
+	return false;
+}
+
+/**
+ * Enqueue on the front end the files registered by astro_be_enqueue_files(), only on the
+ * pages that contain the booking form.
+ */
+add_action( 'wp_enqueue_scripts', 'astro_be_enqueue_front_files' );
+function astro_be_enqueue_front_files() {
+	global $astro_be_form_rendered;
+
+	if ( ! empty( $astro_be_form_rendered ) || astro_be_page_has_form() ) {
+		astro_be_enqueue_registered_front_files();
+		return;
+	}
+
+	// Classic themes that do not load block styles on demand (WordPress before 6.9, or sites that
+	// opted out) enqueue the style of every registered block on every page, ours included: it is
+	// enqueued again by the block itself if the form turns up later on the page.
+	if ( wp_style_is( 'astro-booking-engine', 'enqueued' ) ) {
+		wp_dequeue_style( 'astro-booking-engine' );
+	}
+}
+
+/**
+ * Enqueue the files while the form is being printed, for the forms that astro_be_page_has_form()
+ * cannot see. Scripts printed after wp_head land in the footer, which is fine as they wait for the
+ * document to be ready. Stylesheets are a different story, as the form would show up unstyled for
+ * a moment: block themes render the template before wp_head, and since WordPress 6.9 classic themes
+ * move the late stylesheets to the head, so in both cases enqueueing is enough; otherwise the
+ * stylesheets are returned here, to be printed right before the form.
+ *
+ * @return string The stylesheet tags to print before the form, or an empty string.
+ */
+function astro_be_enqueue_front_files_on_render() {
+	global $astro_be_form_rendered, $astro_be_front_assets;
+
+	$astro_be_form_rendered = true;
+
+	if ( is_admin() ) {
+		return '';
+	}
+
+	astro_be_enqueue_registered_front_files();
+
+	if ( ! did_action( 'wp_head' ) || doing_action( 'wp_head' ) || ! is_array( $astro_be_front_assets ) ) {
+		return '';
+	}
+	$late_styles_hoisted = did_action( 'wp_template_enhancement_output_buffer_started' )
+		&& false !== has_action( 'wp_template_enhancement_output_buffer_started', 'wp_hoist_late_printed_styles' );
+	if ( $late_styles_hoisted ) {
+		return '';
+	}
+
+	$handles = array();
+	foreach ( $astro_be_front_assets['style'] as $handle ) {
+		if ( ! wp_style_is( $handle, 'done' ) ) {
+			$handles[] = $handle;
+		}
+	}
+	if ( empty( $handles ) ) {
+		return '';
+	}
+	ob_start();
+	wp_print_styles( $handles );
+	return (string) ob_get_clean();
 }
 
 /**
