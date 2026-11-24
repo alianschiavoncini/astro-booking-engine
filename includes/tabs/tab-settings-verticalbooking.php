@@ -68,6 +68,30 @@ $provider = 'verticalbooking';
 					<?php if ($field['description']) { ?><p class="description"><?php echo esc_html($field['description']); ?></p><?php }?>
                 </td>
             </tr>
+
+			<?php
+			$field = array(
+				'label' => esc_html__( 'Booking engine version', 'astro-booking-engine' ),
+				'description' => __( 'Vertical Booking has two booking engines: look at the address of yours. With reservations/index.html it is Advanced, with premium/index.html it is Premium.', 'astro-booking-engine' ),
+				'name' => ASTRO_BE_PREFIX.$provider.'_version',
+				'value' => astro_be_get_sanitized_option(ASTRO_BE_PREFIX.$provider.'_version'),
+			);
+			$arr_versions = array(
+				'advanced' => __( 'Advanced (reservations/index.html)', 'astro-booking-engine' ),
+				'premium'  => __( 'Premium (premium/index.html)', 'astro-booking-engine' ),
+			);
+			?>
+            <tr>
+                <th scope="row"><label for="<?php echo esc_attr($field['name']); ?>"><?php echo esc_html($field['label']); ?></label></th>
+                <td>
+                    <select id="<?php echo esc_attr($field['name']); ?>" name="<?php echo esc_attr($field['name']); ?>">
+						<?php foreach ( $arr_versions as $k => $v ) { ?>
+                        <option value="<?php echo esc_attr($k); ?>"<?php selected( $field['value'], $k ); ?>><?php echo esc_html($v); ?></option>
+						<?php } ?>
+                    </select>
+                    <p class="description"><?php echo esc_html($field['description']); ?></p>
+                </td>
+            </tr>
         </table>
         <!-- /hotelsettings -->
 

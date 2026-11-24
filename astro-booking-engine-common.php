@@ -1001,6 +1001,7 @@ function astro_be_option_names($tab = false) {
 				ASTRO_BE_PREFIX . 'verticalbooking_id_albergo' => ASTRO_BE_PREFIX . 'verticalbooking_id_albergo', //required
 				ASTRO_BE_PREFIX . 'verticalbooking_dc' => ASTRO_BE_PREFIX . 'verticalbooking_dc', //required
 				ASTRO_BE_PREFIX . 'verticalbooking_id_stile' => ASTRO_BE_PREFIX . 'verticalbooking_id_stile',
+				ASTRO_BE_PREFIX . 'verticalbooking_version' => ASTRO_BE_PREFIX . 'verticalbooking_version', //advanced (default) or premium: the two frontends of Vertical Booking
 
 				ASTRO_BE_PREFIX . 'verticalbooking_adults_enable' => ASTRO_BE_PREFIX . 'verticalbooking_adults_enable', //enable/disable
 				ASTRO_BE_PREFIX . 'verticalbooking_adults_n_default' => ASTRO_BE_PREFIX . 'verticalbooking_adults_n_default', //required >= 1
@@ -1191,6 +1192,9 @@ function astro_be_get_option_sanitize_callback( $option_name ) {
 	}
 	if ( preg_match( '/_configuration_id$/', $name ) ) {
 		return 'astro_be_sanitize_uuid';
+	}
+	if ( 'verticalbooking_version' === $name ) {
+		return 'astro_be_sanitize_verticalbooking_version';
 	}
 	if ( 'bookingexpert_layout' === $name ) {
 		return 'astro_be_sanitize_bookingexpert_layout';
@@ -2681,6 +2685,14 @@ function astro_be_sanitize_form_style( $value ) {
 }
 
 /**
+ * Vertical Booking: the frontend of the booking engine, advanced (reservations/index.html, the default and
+ * the only one before 2.9.1) or premium (premium/index.html).
+ */
+function astro_be_sanitize_verticalbooking_version( $value ) {
+	return ( is_string( $value ) && 'premium' === $value ) ? 'premium' : 'advanced';
+}
+
+/**
  * Form density, for the compact style only: compact or roomy. Roomy gives 44x44 targets,
  * the size the WCAG recommend for touch.
  */
@@ -3476,6 +3488,15 @@ function astro_return_scidoo_language() {
  */
 function astro_return_verticalbooking_language() {
 
+	// American English and Brazilian Portuguese have codes of their own: usa and bra.
+	$locale = strtolower( (string) get_bloginfo( 'language' ) );
+	if ( 'en-us' === $locale ) {
+		return 'usa';
+	}
+	if ( 'pt-br' === $locale ) {
+		return 'bra';
+	}
+
 	$lang = astro_get_post_language();
 	$lang = strtolower($lang);
 
@@ -3506,7 +3527,12 @@ function astro_return_verticalbooking_language() {
 		case 'cz' :  $lang = 'cze'; break;
 		case 'da' :  $lang = 'dan'; break;
 		case 'ca' :  $lang = 'cat'; break;
-		default : //'eng', 'usa', 'etn', 'bra'
+		case 'et' :  $lang = 'etn'; break;
+		case 'tr' :  $lang = 'tur'; break;
+		case 'ar' :  $lang = 'ara'; break;
+		case 'hr' :  $lang = 'hrv'; break;
+		case 'cs' :  $lang = 'cze'; break;
+		default : //'eng'
 			$lang = 'eng';
 	}
 

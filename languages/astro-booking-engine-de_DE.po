@@ -2,9 +2,9 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Astro Booking Engine 2.9.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/astro-booking-engine\n"
-"POT-Creation-Date: 2026-11-20T09:37:51+00:00\n"
+"Project-Id-Version: Astro Booking Engine 2.9.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/src\n"
+"POT-Creation-Date: 2026-11-24T20:53:49+00:00\n"
 "PO-Revision-Date: 2026-09-24 18:00+0200\n"
 "Last-Translator: Alian Schiavoncini\n"
 "Language-Team: German\n"
@@ -90,158 +90,158 @@ msgstr "Vielleicht später"
 msgid "Settings saved."
 msgstr "Einstellungen gespeichert."
 
-#: astro-booking-engine-common.php:1598 astro-booking-engine-common.php:2399
-#: astro-booking-engine-common.php:2477
+#: astro-booking-engine-common.php:1602 astro-booking-engine-common.php:2403
+#: astro-booking-engine-common.php:2481
 msgid "Spanish"
 msgstr "Spanisch"
 
-#: astro-booking-engine-common.php:1599 astro-booking-engine-common.php:2398
-#: astro-booking-engine-common.php:2476
+#: astro-booking-engine-common.php:1603 astro-booking-engine-common.php:2402
+#: astro-booking-engine-common.php:2480
 msgid "English"
 msgstr "Englisch"
 
-#: astro-booking-engine-common.php:1600 astro-booking-engine-common.php:2478
+#: astro-booking-engine-common.php:1604 astro-booking-engine-common.php:2482
 msgid "Italian"
 msgstr "Italienisch"
 
-#: astro-booking-engine-common.php:1601 astro-booking-engine-common.php:2400
-#: astro-booking-engine-common.php:2479
+#: astro-booking-engine-common.php:1605 astro-booking-engine-common.php:2404
+#: astro-booking-engine-common.php:2483
 msgid "French"
 msgstr "Französisch"
 
-#: astro-booking-engine-common.php:1602 astro-booking-engine-common.php:2401
-#: astro-booking-engine-common.php:2480
+#: astro-booking-engine-common.php:1606 astro-booking-engine-common.php:2405
+#: astro-booking-engine-common.php:2484
 msgid "German"
 msgstr "Deutsch"
 
-#: astro-booking-engine-common.php:1603 astro-booking-engine-common.php:2481
+#: astro-booking-engine-common.php:1607 astro-booking-engine-common.php:2485
 msgid "Portuguese"
 msgstr "Portugiesisch"
 
-#: astro-booking-engine-common.php:1604 astro-booking-engine-common.php:2498
+#: astro-booking-engine-common.php:1608 astro-booking-engine-common.php:2502
 msgid "Catalan"
 msgstr "Katalanisch"
 
-#: astro-booking-engine-common.php:1605 astro-booking-engine-common.php:2483
+#: astro-booking-engine-common.php:1609 astro-booking-engine-common.php:2487
 msgid "Russian"
 msgstr "Russisch"
 
-#: astro-booking-engine-common.php:1606 astro-booking-engine-common.php:2482
+#: astro-booking-engine-common.php:1610 astro-booking-engine-common.php:2486
 msgid "Dutch"
 msgstr "Niederländisch"
 
-#: astro-booking-engine-common.php:1607 astro-booking-engine-common.php:2403
-#: astro-booking-engine-common.php:2485
+#: astro-booking-engine-common.php:1611 astro-booking-engine-common.php:2407
+#: astro-booking-engine-common.php:2489
 msgid "Japanese"
 msgstr "Japanisch"
 
-#: astro-booking-engine-common.php:1608 astro-booking-engine-common.php:2402
-#: astro-booking-engine-common.php:2484
+#: astro-booking-engine-common.php:1612 astro-booking-engine-common.php:2406
+#: astro-booking-engine-common.php:2488
 msgid "Chinese"
 msgstr "Chinesisch"
 
-#: astro-booking-engine-common.php:1609
+#: astro-booking-engine-common.php:1613
 msgid "Basque"
 msgstr "Baskisch"
 
-#: astro-booking-engine-common.php:1610
+#: astro-booking-engine-common.php:1614
 msgid "Danish"
 msgstr "Dänisch"
 
-#: astro-booking-engine-common.php:1611 astro-booking-engine-common.php:2488
+#: astro-booking-engine-common.php:1615 astro-booking-engine-common.php:2492
 msgid "Swedish"
 msgstr "Schwedisch"
 
-#: astro-booking-engine-common.php:1612 astro-booking-engine-common.php:2496
+#: astro-booking-engine-common.php:1616 astro-booking-engine-common.php:2500
 msgid "Romanian"
 msgstr "Rumänisch"
 
-#: astro-booking-engine-common.php:1613 astro-booking-engine-common.php:2494
+#: astro-booking-engine-common.php:1617 astro-booking-engine-common.php:2498
 msgid "Hungarian"
 msgstr "Ungarisch"
 
-#: astro-booking-engine-common.php:1614 astro-booking-engine-common.php:2486
+#: astro-booking-engine-common.php:1618 astro-booking-engine-common.php:2490
 msgid "Korean"
 msgstr "Koreanisch"
 
-#: astro-booking-engine-common.php:2487
+#: astro-booking-engine-common.php:2491
 msgid "Polish"
 msgstr "Polnisch"
 
-#: astro-booking-engine-common.php:2489
+#: astro-booking-engine-common.php:2493
 msgid "Norwegian"
 msgstr "Norwegisch"
 
-#: astro-booking-engine-common.php:2490
+#: astro-booking-engine-common.php:2494
 msgid "Finnish"
 msgstr "Finnisch"
 
-#: astro-booking-engine-common.php:2491
+#: astro-booking-engine-common.php:2495
 msgid "Greek"
 msgstr "Griechisch"
 
-#: astro-booking-engine-common.php:2492
+#: astro-booking-engine-common.php:2496
 msgid "Turkish"
 msgstr "Türkisch"
 
-#: astro-booking-engine-common.php:2493
+#: astro-booking-engine-common.php:2497
 msgid "Hebrew"
 msgstr "Hebräisch"
 
-#: astro-booking-engine-common.php:2495
+#: astro-booking-engine-common.php:2499
 msgid "Czech"
 msgstr "Tschechisch"
 
-#: astro-booking-engine-common.php:2497
+#: astro-booking-engine-common.php:2501
 msgid "Thai"
 msgstr "Thailändisch"
 
-#: astro-booking-engine-common.php:2499
+#: astro-booking-engine-common.php:2503
 msgid "Slovak"
 msgstr "Slowakisch"
 
-#: astro-booking-engine-common.php:2500
+#: astro-booking-engine-common.php:2504
 msgid "Lithuanian"
 msgstr "Litauisch"
 
-#: astro-booking-engine-common.php:2501
+#: astro-booking-engine-common.php:2505
 msgid "Estonian"
 msgstr "Estnisch"
 
-#: astro-booking-engine-common.php:2804
+#: astro-booking-engine-common.php:2816
 msgid "This message is visible only to the site administrator."
 msgstr "Diese Meldung ist nur für den Website-Administrator sichtbar."
 
-#: astro-booking-engine-common.php:2806
+#: astro-booking-engine-common.php:2818
 msgid "No provider has been selected in Astro Booking Engine plugin."
 msgstr "Im Plugin Astro Booking Engine wurde kein Anbieter ausgewählt."
 
-#: astro-booking-engine-common.php:2808
+#: astro-booking-engine-common.php:2820
 msgid "Choose your provider at plugin"
 msgstr "Wählen Sie Ihren Anbieter auf der"
 
-#: astro-booking-engine-common.php:2810
+#: astro-booking-engine-common.php:2822
 msgid "settings page"
 msgstr "Einstellungsseite"
 
-#: astro-booking-engine-common.php:2949
+#: astro-booking-engine-common.php:2961
 msgid "Labels on the form background"
 msgstr "Beschriftungen auf dem Formularhintergrund"
 
-#: astro-booking-engine-common.php:2950
+#: astro-booking-engine-common.php:2962
 msgid "Values on the form background"
 msgstr "Werte auf dem Formularhintergrund"
 
-#: astro-booking-engine-common.php:2951
+#: astro-booking-engine-common.php:2963
 msgid "Values on the hover background"
 msgstr "Werte auf dem Hintergrund beim Überfahren"
 
-#: astro-booking-engine-common.php:2952
+#: astro-booking-engine-common.php:2964
 msgid "Submit button text on its background"
 msgstr "Text der Absende-Schaltfläche auf ihrem Hintergrund"
 
 #. translators: 1: name of the color pair, 2: contrast ratio, e.g. 3.10
-#: astro-booking-engine-common.php:2963
+#: astro-booking-engine-common.php:2975
 #, php-format
 msgid "%1$s: %2$s:1"
 msgstr "%1$s: %2$s:1"
@@ -522,7 +522,7 @@ msgstr "Nur für den klassischen Stil: Der moderne Stil hat einen eigenen Kalend
 #: includes/tabs/tab-settings-synxis.php:432
 #: includes/tabs/tab-settings-techotel.php:405
 #: includes/tabs/tab-settings-thinkreservations.php:208
-#: includes/tabs/tab-settings-verticalbooking.php:385
+#: includes/tabs/tab-settings-verticalbooking.php:409
 #: includes/tabs/tab-settings-windsurfer.php:296
 #: includes/tabs/tab-settings-witbooking.php:406
 #: includes/tabs/tab-settings-wubook.php:471
@@ -654,7 +654,7 @@ msgstr "Portal"
 #: includes/tabs/tab-settings-synxis.php:92
 #: includes/tabs/tab-settings-techotel.php:64
 #: includes/tabs/tab-settings-thinkreservations.php:45
-#: includes/tabs/tab-settings-verticalbooking.php:77
+#: includes/tabs/tab-settings-verticalbooking.php:101
 #: includes/tabs/tab-settings-windsurfer.php:46
 #: includes/tabs/tab-settings-witbooking.php:67
 #: includes/tabs/tab-settings-wubook.php:74
@@ -712,7 +712,7 @@ msgstr "Formular-Einstellungen"
 #: includes/tabs/tab-settings-synxis.php:96
 #: includes/tabs/tab-settings-techotel.php:68
 #: includes/tabs/tab-settings-thinkreservations.php:49
-#: includes/tabs/tab-settings-verticalbooking.php:81
+#: includes/tabs/tab-settings-verticalbooking.php:105
 #: includes/tabs/tab-settings-windsurfer.php:50
 #: includes/tabs/tab-settings-witbooking.php:71
 #: includes/tabs/tab-settings-wubook.php:78
@@ -770,7 +770,7 @@ msgstr "Ziel"
 #: includes/tabs/tab-settings-synxis.php:104
 #: includes/tabs/tab-settings-techotel.php:76
 #: includes/tabs/tab-settings-thinkreservations.php:57
-#: includes/tabs/tab-settings-verticalbooking.php:89
+#: includes/tabs/tab-settings-verticalbooking.php:113
 #: includes/tabs/tab-settings-windsurfer.php:58
 #: includes/tabs/tab-settings-witbooking.php:79
 #: includes/tabs/tab-settings-wubook.php:86
@@ -828,7 +828,7 @@ msgstr "Neues Fenster oder neuer Tab"
 #: includes/tabs/tab-settings-synxis.php:105
 #: includes/tabs/tab-settings-techotel.php:77
 #: includes/tabs/tab-settings-thinkreservations.php:58
-#: includes/tabs/tab-settings-verticalbooking.php:90
+#: includes/tabs/tab-settings-verticalbooking.php:114
 #: includes/tabs/tab-settings-windsurfer.php:59
 #: includes/tabs/tab-settings-witbooking.php:80
 #: includes/tabs/tab-settings-wubook.php:87
@@ -882,7 +882,7 @@ msgstr "Gleiches Fenster oder gleicher Tab"
 #: includes/tabs/tab-settings-synxis.php:133
 #: includes/tabs/tab-settings-techotel.php:105
 #: includes/tabs/tab-settings-thinkreservations.php:86
-#: includes/tabs/tab-settings-verticalbooking.php:118
+#: includes/tabs/tab-settings-verticalbooking.php:142
 #: includes/tabs/tab-settings-windsurfer.php:87
 #: includes/tabs/tab-settings-witbooking.php:108
 #: includes/tabs/tab-settings-wubook.php:115 templates/5stelle.php:70
@@ -906,7 +906,7 @@ msgstr "Gleiches Fenster oder gleicher Tab"
 #: templates/simplebooking.php:72 templates/sirvoy.php:90
 #: templates/siteminder.php:73 templates/slope.php:73
 #: templates/smartness.php:71 templates/synxis.php:74 templates/techotel.php:76
-#: templates/thinkreservations.php:75 templates/verticalbooking.php:77
+#: templates/thinkreservations.php:75 templates/verticalbooking.php:85
 #: templates/windsurfer.php:74 templates/witbooking.php:76
 #: templates/wubook.php:90
 msgid "Adults"
@@ -1076,9 +1076,9 @@ msgstr "Erwachsene"
 #: includes/tabs/tab-settings-techotel.php:379
 #: includes/tabs/tab-settings-thinkreservations.php:89
 #: includes/tabs/tab-settings-thinkreservations.php:182
-#: includes/tabs/tab-settings-verticalbooking.php:121
-#: includes/tabs/tab-settings-verticalbooking.php:209
-#: includes/tabs/tab-settings-verticalbooking.php:297
+#: includes/tabs/tab-settings-verticalbooking.php:145
+#: includes/tabs/tab-settings-verticalbooking.php:233
+#: includes/tabs/tab-settings-verticalbooking.php:321
 #: includes/tabs/tab-settings-windsurfer.php:90
 #: includes/tabs/tab-settings-windsurfer.php:182
 #: includes/tabs/tab-settings-windsurfer.php:270
@@ -1257,9 +1257,9 @@ msgstr "Aktivieren"
 #: includes/tabs/tab-settings-techotel.php:380
 #: includes/tabs/tab-settings-thinkreservations.php:90
 #: includes/tabs/tab-settings-thinkreservations.php:183
-#: includes/tabs/tab-settings-verticalbooking.php:122
-#: includes/tabs/tab-settings-verticalbooking.php:210
-#: includes/tabs/tab-settings-verticalbooking.php:298
+#: includes/tabs/tab-settings-verticalbooking.php:146
+#: includes/tabs/tab-settings-verticalbooking.php:234
+#: includes/tabs/tab-settings-verticalbooking.php:322
 #: includes/tabs/tab-settings-windsurfer.php:91
 #: includes/tabs/tab-settings-windsurfer.php:183
 #: includes/tabs/tab-settings-windsurfer.php:271
@@ -1321,7 +1321,7 @@ msgstr "Zum Aktivieren ankreuzen"
 #: includes/tabs/tab-settings-synxis.php:158
 #: includes/tabs/tab-settings-techotel.php:130
 #: includes/tabs/tab-settings-thinkreservations.php:111
-#: includes/tabs/tab-settings-verticalbooking.php:143
+#: includes/tabs/tab-settings-verticalbooking.php:167
 #: includes/tabs/tab-settings-windsurfer.php:112
 #: includes/tabs/tab-settings-witbooking.php:133
 #: includes/tabs/tab-settings-wubook.php:140
@@ -1375,7 +1375,7 @@ msgstr "Erwachsene (Standard)"
 #: includes/tabs/tab-settings-synxis.php:189
 #: includes/tabs/tab-settings-techotel.php:161
 #: includes/tabs/tab-settings-thinkreservations.php:142
-#: includes/tabs/tab-settings-verticalbooking.php:171
+#: includes/tabs/tab-settings-verticalbooking.php:195
 #: includes/tabs/tab-settings-windsurfer.php:143
 #: includes/tabs/tab-settings-witbooking.php:164
 #: includes/tabs/tab-settings-wubook.php:171
@@ -1427,7 +1427,7 @@ msgstr "Maximale Erwachsene"
 #: includes/tabs/tab-settings-smartness.php:178
 #: includes/tabs/tab-settings-synxis.php:224
 #: includes/tabs/tab-settings-techotel.php:196
-#: includes/tabs/tab-settings-verticalbooking.php:206
+#: includes/tabs/tab-settings-verticalbooking.php:230
 #: includes/tabs/tab-settings-windsurfer.php:178
 #: includes/tabs/tab-settings-witbooking.php:199
 #: includes/tabs/tab-settings-wubook.php:295 templates/5stelle.php:96
@@ -1452,7 +1452,7 @@ msgstr "Maximale Erwachsene"
 #: templates/secureholiday.php:100 templates/simplebooking.php:98
 #: templates/siteminder.php:102 templates/slope.php:102
 #: templates/smartness.php:100 templates/synxis.php:103
-#: templates/techotel.php:105 templates/verticalbooking.php:107
+#: templates/techotel.php:105 templates/verticalbooking.php:115
 #: templates/windsurfer.php:103 templates/witbooking.php:105
 #: templates/wubook.php:140
 msgid "Children"
@@ -1503,7 +1503,7 @@ msgstr "Kinder"
 #: includes/tabs/tab-settings-smartness.php:204
 #: includes/tabs/tab-settings-synxis.php:249
 #: includes/tabs/tab-settings-techotel.php:221
-#: includes/tabs/tab-settings-verticalbooking.php:231
+#: includes/tabs/tab-settings-verticalbooking.php:255
 #: includes/tabs/tab-settings-windsurfer.php:204
 #: includes/tabs/tab-settings-witbooking.php:225
 #: includes/tabs/tab-settings-wubook.php:320
@@ -1555,7 +1555,7 @@ msgstr "Kinder (Standard)"
 #: includes/tabs/tab-settings-smartness.php:232
 #: includes/tabs/tab-settings-synxis.php:277
 #: includes/tabs/tab-settings-techotel.php:249
-#: includes/tabs/tab-settings-verticalbooking.php:259
+#: includes/tabs/tab-settings-verticalbooking.php:283
 #: includes/tabs/tab-settings-windsurfer.php:232
 #: includes/tabs/tab-settings-witbooking.php:253
 #: includes/tabs/tab-settings-wubook.php:348
@@ -1590,7 +1590,7 @@ msgstr "Maximale Kinder"
 #: includes/tabs/tab-settings-simplebooking.php:291
 #: includes/tabs/tab-settings-synxis.php:311
 #: includes/tabs/tab-settings-techotel.php:284
-#: includes/tabs/tab-settings-verticalbooking.php:294
+#: includes/tabs/tab-settings-verticalbooking.php:318
 msgid "Children age"
 msgstr "Alter der Kinder"
 
@@ -1659,7 +1659,7 @@ msgstr "Höchstalter des Kindes"
 #: includes/tabs/tab-settings-synxis.php:436
 #: includes/tabs/tab-settings-techotel.php:409
 #: includes/tabs/tab-settings-thinkreservations.php:212
-#: includes/tabs/tab-settings-verticalbooking.php:389
+#: includes/tabs/tab-settings-verticalbooking.php:413
 #: includes/tabs/tab-settings-windsurfer.php:300
 #: includes/tabs/tab-settings-witbooking.php:410
 #: includes/tabs/tab-settings-wubook.php:475
@@ -1717,7 +1717,7 @@ msgstr "Beschriftung"
 #: includes/tabs/tab-settings-synxis.php:437
 #: includes/tabs/tab-settings-techotel.php:410
 #: includes/tabs/tab-settings-thinkreservations.php:213
-#: includes/tabs/tab-settings-verticalbooking.php:390
+#: includes/tabs/tab-settings-verticalbooking.php:414
 #: includes/tabs/tab-settings-windsurfer.php:301
 #: includes/tabs/tab-settings-witbooking.php:411
 #: includes/tabs/tab-settings-wubook.php:476
@@ -1775,7 +1775,7 @@ msgstr "Der Standardwert ist Suchen."
 #: includes/tabs/tab-settings-synxis.php:440
 #: includes/tabs/tab-settings-techotel.php:413
 #: includes/tabs/tab-settings-thinkreservations.php:216
-#: includes/tabs/tab-settings-verticalbooking.php:393
+#: includes/tabs/tab-settings-verticalbooking.php:417
 #: includes/tabs/tab-settings-windsurfer.php:304
 #: includes/tabs/tab-settings-witbooking.php:414
 #: includes/tabs/tab-settings-wubook.php:479 templates/5stelle.php:155
@@ -1803,7 +1803,7 @@ msgstr "Der Standardwert ist Suchen."
 #: templates/siteminder.php:179 templates/slope.php:129
 #: templates/smartness.php:147 templates/synxis.php:185
 #: templates/techotel.php:187 templates/thinkreservations.php:123
-#: templates/verticalbooking.php:170 templates/windsurfer.php:150
+#: templates/verticalbooking.php:178 templates/windsurfer.php:150
 #: templates/witbooking.php:182 templates/wubook.php:188
 msgid "Search"
 msgstr "Suchen"
@@ -1934,7 +1934,7 @@ msgstr "Avvio erhält die Kinder als Liste ihrer Altersangaben: Es muss aktivier
 #: includes/tabs/tab-settings-simplebooking.php:316
 #: includes/tabs/tab-settings-synxis.php:337
 #: includes/tabs/tab-settings-techotel.php:310
-#: includes/tabs/tab-settings-verticalbooking.php:319
+#: includes/tabs/tab-settings-verticalbooking.php:343
 msgid "Min children age"
 msgstr "Mindestalter der Kinder"
 
@@ -1963,7 +1963,7 @@ msgstr "Mindestalter der Kinder"
 #: includes/tabs/tab-settings-simplebooking.php:347
 #: includes/tabs/tab-settings-synxis.php:368
 #: includes/tabs/tab-settings-techotel.php:341
-#: includes/tabs/tab-settings-verticalbooking.php:350
+#: includes/tabs/tab-settings-verticalbooking.php:374
 msgid "Max children age"
 msgstr "Höchstalter der Kinder"
 
@@ -2600,6 +2600,22 @@ msgstr "TecHotel erhält die Kinder aufgeteilt in die zwei Altersgruppen des Hot
 msgid "The address of your ThinkReservations booking engine, as it is: https://secure.thinkreservations.com/myproperty/reservations"
 msgstr "Die Adresse Ihrer ThinkReservations-Buchungsmaschine, so wie sie ist: https://secure.thinkreservations.com/myproperty/reservations"
 
+#: includes/tabs/tab-settings-verticalbooking.php:74
+msgid "Booking engine version"
+msgstr "Version der Buchungsmaschine"
+
+#: includes/tabs/tab-settings-verticalbooking.php:75
+msgid "Vertical Booking has two booking engines: look at the address of yours. With reservations/index.html it is Advanced, with premium/index.html it is Premium."
+msgstr "Vertical Booking hat zwei Buchungsmaschinen: Sehen Sie sich die Adresse Ihrer an. Mit reservations/index.html ist es Advanced, mit premium/index.html ist es Premium."
+
+#: includes/tabs/tab-settings-verticalbooking.php:80
+msgid "Advanced (reservations/index.html)"
+msgstr "Advanced (reservations/index.html)"
+
+#: includes/tabs/tab-settings-verticalbooking.php:81
+msgid "Premium (premium/index.html)"
+msgstr "Premium (premium/index.html)"
+
 #: includes/tabs/tab-settings-windsurfer.php:24
 msgid "The address of your Windsurfer booking engine, as it is: https://res.windsurfercrs.com/ibe/index.aspx?propertyID=12345"
 msgstr "Die Adresse Ihrer Windsurfer-Buchungsmaschine, so wie sie ist: https://res.windsurfercrs.com/ibe/index.aspx?propertyID=12345"
@@ -2901,7 +2917,7 @@ msgstr "Alle Plugin-Einstellungen entfernen"
 #: templates/simplebooking.php:30 templates/sirvoy.php:52
 #: templates/siteminder.php:33 templates/slope.php:35
 #: templates/smartness.php:33 templates/synxis.php:36 templates/techotel.php:38
-#: templates/thinkreservations.php:37 templates/verticalbooking.php:37
+#: templates/thinkreservations.php:37 templates/verticalbooking.php:45
 #: templates/windsurfer.php:36 templates/witbooking.php:36
 #: templates/wubook.php:50
 msgid "Check-in"
@@ -2929,7 +2945,7 @@ msgstr "Anreise"
 #: templates/simplebooking.php:47 templates/sirvoy.php:67
 #: templates/siteminder.php:49 templates/slope.php:50
 #: templates/smartness.php:48 templates/synxis.php:51 templates/techotel.php:53
-#: templates/thinkreservations.php:52 templates/verticalbooking.php:53
+#: templates/thinkreservations.php:52 templates/verticalbooking.php:61
 #: templates/windsurfer.php:51 templates/witbooking.php:52
 #: templates/wubook.php:66
 msgid "Check-out"
@@ -2948,7 +2964,7 @@ msgstr "Abreise"
 #: templates/roiback.php:139 templates/scidoo.php:132
 #: templates/secureholiday.php:132 templates/simplebooking.php:127
 #: templates/synxis.php:136 templates/techotel.php:137
-#: templates/verticalbooking.php:140
+#: templates/verticalbooking.php:148
 msgid "Child Age"
 msgstr "Alter des Kindes"
 

@@ -8,18 +8,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $provider = esc_attr('verticalbooking');
 $astro_be_prefix = esc_attr(ASTRO_BE_PREFIX);
+// Vertical Booking has two frontends: advanced (reservations/risultato.html) and premium (premium/index2.html).
+// The premium one reads the guests room by room (adulti1, bambini1), besides the totals.
+$verticalbooking_premium = ( 'premium' === astro_be_get_sanitized_option($astro_be_prefix.$provider.'_version') );
 ?>
 <div class="astro_be <?php echo esc_attr( $astro_be_prefix . $provider ); ?>">
 
 	<form class="astro_be_form astro_be_form<?php echo esc_attr( '_'. esc_attr($provider) ); ?>"
           method="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_form_method') ); ?>"
-          action="https://reservations.verticalbooking.com/reservations/risultato.html"
+          action="<?php echo esc_url( $verticalbooking_premium ? 'https://reservations.verticalbooking.com/premium/index2.html' : 'https://reservations.verticalbooking.com/reservations/risultato.html' ); ?>"
           target="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_form_target') ); ?>">
 
 		<input type="hidden" name="id_albergo" value="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_id_albergo') ); ?>" />
 		<input type="hidden" name="dc" value="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_dc') ); ?>" />
 		<input type="hidden" name="id_stile" value="<?php echo esc_attr( get_option($astro_be_prefix.$provider.'_id_stile') ); ?>" />
 		<input type="hidden" name="tot_camere" value="1" />
+		<?php if ( $verticalbooking_premium ) { ?>
+		<?php //ospiti della camera 1: li copia il JS dai totali ?>
+		<input type="hidden" name="adulti1" class="adulti1" value="" />
+		<input type="hidden" name="bambini1" class="bambini1" value="" />
+		<?php } ?>
 
 		<input type="hidden" name="lingua_int" value="<?php echo esc_attr( astro_return_verticalbooking_language() ); ?>" />
 

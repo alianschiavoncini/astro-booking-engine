@@ -3,7 +3,7 @@ Contributors: alian
 Tags: booking engine, hotel booking, hotel widget, hotel booking engine, booking widget
 Requires at least: 6.0.1
 Tested up to: 7.1
-Stable tag: 2.9.0
+Stable tag: 2.9.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -119,6 +119,9 @@ No. Since version 2.9.0 the styles and scripts of the booking form are loaded on
 
 `add_filter( 'astro_be_load_assets_everywhere', '__return_true' );`
 
+= I use Vertical Booking: Advanced or Premium? =
+Look at the address of your Vertical Booking booking engine. If it contains reservations/index.html, choose Advanced in the Booking engine version setting; if it contains premium/index.html, choose Premium. With Premium, if you enable the children, enable their ages too: the Premium booking engine shows no rooms for a child without age.
+
 = How can I report a bug or suggest an improvement? =
 You can use the <a href="https://wordpress.org/support/plugin/astro-booking-engine/">support forum</a> on WordPress.org or write to <a href="mailto:alian@alian.it">alian@alian.it</a>. Feature requests and bug reports are welcome.
 
@@ -198,6 +201,11 @@ The providers and their policies:
 gsphudo7by90lzwdlihyerqxbzj6jiln
 
 == Changelog ==
+
+= 2.9.1 =
+* Added: Vertical Booking, the Booking engine version setting, to choose between the two booking engines of Vertical Booking: Advanced (reservations/index.html, the default, as in the previous versions) and Premium (premium/index.html). With Premium the search opens on the rooms of the Premium booking engine, with its own style, and also sends the guests of the room (adulti1 and bambini1), as the Vertical Booking guide asks.
+* Changed: Vertical Booking, the sites in American English open the booking engine in American English (usa) and the ones in Brazilian Portuguese in Brazilian Portuguese (bra); Estonian, Turkish, Arabic, Croatian and Czech are passed in their own language too, instead of English.
+* Compatibility: tested with WordPress 7.1.
 
 = 2.9.0 =
 * Added: the astro_be_load_assets_everywhere filter, to load the files of the booking form on every page as before (see the FAQ).
@@ -375,6 +383,9 @@ gsphudo7by90lzwdlihyerqxbzj6jiln
 * Initial version.
 
 == Upgrade Notice ==
+
+= 2.9.1 =
+Vertical Booking: new setting to use the Premium booking engine (premium/index.html) besides the Advanced one, and American English and Brazilian Portuguese for the sites in those languages.
 
 = 2.9.0 =
 The booking form files are now loaded only on the pages that show the form (see the FAQ), and the form fits narrow sidebars. Updating from a version before 2.8.0? This release also brings the 2.8.0 security fixes.

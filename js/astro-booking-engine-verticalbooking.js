@@ -18,6 +18,10 @@ jQuery( document ).ready(function( $ ) {
         $(this).find('input.mmf').val(checkout_date_arr[1]);
         $(this).find('input.aaf').val(checkout_date_arr[0]);
 
+        //premium frontend: the guests of the room as well (adulti1, bambini1), copied from the totals
+        $(this).find('input.adulti1').val($(this).find('[name="tot_adulti"]').val());
+        $(this).find('input.bambini1').val($(this).find('[name="tot_bambini"]').val());
+
     });
 
 });
